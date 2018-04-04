@@ -96,17 +96,6 @@ ERROR_REPORTING(E_ALL);
       </div>
     </header>
 		<div class="wrapper">
-      <?php
-      if($page->id != 1){
-        ?>
-        <div class="breadcrumb">
-          <?php
-          // foreach($page->parents()->append($page) as $parent) {
-          foreach($page->parents() as $parent) {
-            echo "<a href='{$parent->url}'>{$parent->title}</a> ";
-          }
-          ?>
-        </div>
         <?=$page->main?>
 		</div>
     <footer class="footer" role="contentinfo">
