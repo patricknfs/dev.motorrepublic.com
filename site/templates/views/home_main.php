@@ -1,6 +1,6 @@
 <?php
 // home_main.php
-include('inc/functions.inc');
+// include('inc/functions.inc');
 ?>
 <div class="home_content">
 	<div class="feature">
