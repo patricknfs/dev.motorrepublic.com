@@ -44,7 +44,7 @@ if(empty($page->main)) $page->main = $page->body;
     // } else {
     //  $css = 'main.min.css'; 
     // }
-    $css = 'main.min.css';
+    $css = 'css/app.css';
     ?>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/<?=$css?>" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
