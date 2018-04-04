@@ -47,11 +47,7 @@ ERROR_REPORTING(E_ALL);
     <!-- <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/main.min.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" href="https://i.icomoon.io/public/c88de6d4a5/DWSiteGenesis/style.css"> -->
   </head>
-  <body <?php if($page->get("id") == 1){
-    echo "id='home'"; 
-  }
-  ?> 
-  >
+  <body>
    <header class="navigation" role="banner">
       <div class="navigation-wrapper">
         <div id="logoimg">
