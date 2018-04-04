@@ -148,7 +148,7 @@ ERROR_REPORTING(E_ALL);
         </ul>
         <ul>
           <li>
-            <div class="tw">
+<!--             <div class="tw">
               <h3>Latest Tweets</h3>
               <?php
               $options = array(
@@ -160,7 +160,7 @@ ERROR_REPORTING(E_ALL);
               $t = $modules->get('MarkupTwitterFeed'); 
               echo $t->render($options);
               ?>
-            </div>
+            </div> -->
           </li>
         </ul>
       </div>
