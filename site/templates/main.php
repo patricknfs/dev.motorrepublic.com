@@ -115,47 +115,7 @@ if(empty($page->main)) $page->main = $page->body;
           }
           ?>
         </div>
-        <?php
-      }
-      if($page->id == 1){
-        ?>
-        <div>
-          <?php 
-          if($page->main){
-            echo $page->main;
-          }
-          if($page->client){
-            echo $page->client;
-          }
-          ?>
-        </div>
-        <?php
-      }
-      else {
-        ?>
-        <article>
-          <?php 
-          if($page->main){
-            echo $page->main;
-          }
-          if($page->client){
-            echo $page->client;
-          }
-          ?>
-        </article>
-        <aside>
-          <?php
-          include('sidebar.php');
-          if($sidebar){
-            if ($page->id != 1) {
-              echo $sidebar;
-            }
-          }
-          ?>
-        </aside>
-        <?php
-      }
-      ?>
+        <?=$page->main?>
 		</div>
     <footer class="footer" role="contentinfo">
       <div class="footer-logo">
