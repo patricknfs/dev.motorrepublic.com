@@ -1,9 +1,5 @@
 <!-- main.php -->
 <?php 
-if($page->id == '2087'){
-  header('Content-Type: application/pdf');
-  header('Content-Disposition: inline; filename="xrp-catalogue.pdf"');
-}
 ERROR_REPORTING(E_ALL);
 // if($input->get->theme) {
 //  // set the theme
@@ -13,7 +9,7 @@ ERROR_REPORTING(E_ALL);
 //   $css = 'main.min.css'; 
 // }
 // setup defaults when none specified
-if(empty($page->main)) $page->main = $page->body;
+// if(empty($page->main)) $page->main = $page->body;
 ?>
 <!DOCTYPE html>
 <html lang="en">
