@@ -24,7 +24,7 @@ ERROR_REPORTING(E_ALL);
     <title>
       <?php
       if ($page->get("title") == "Home") {
-        echo "Motor Republic Vehicle Leasing";
+        echo " Vehicle Leasing";
       }
       else {
         echo $page->get("title");
@@ -52,7 +52,7 @@ ERROR_REPORTING(E_ALL);
       <div class="navigation-wrapper">
         <div id="logoimg">
           <object data="<?=$config->urls->assets?>graphics/logo.svg" type="image/svg+xml">
-            <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Protec Fuel Pumps" title="Protec Fuel Pumps"/>
+            <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Motor Republic" title="Motor Republic"/>
           </object>
         </div>
         <div class="menu-container">
@@ -101,37 +101,14 @@ ERROR_REPORTING(E_ALL);
     <footer class="footer" role="contentinfo">
       <div class="footer-logo">
         <object data="<?=$config->urls->assets?>graphics/logo_small.svg" type="image/svg+xml">
-          <img src="<?=$config->urls->assets?>graphics/logo_small.png" alt="Protec Fuel Pumps" title="Protec Fuel Pumps"/>
+          <img src="<?=$config->urls->assets?>graphics/logo_small.png" alt="Motor Republic" title="Motor Republic"/>
         </object>
       </div>
       <div class="footer-links">
         <ul>
           <!-- Begin MailChimp Signup Form -->
           <div id="mc_embed_signup">
-          <form action="//protecfuelpumps.us14.list-manage.com/subscribe/post?u=81d0d523bcd6b29cfd3be472b&amp;id=6bfe5a4b78" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-            <h3>Subscribe to our newsletter</h3>
-          <div class="indicates-required"><small><span class="asterisk">*</span> indicates required</small></div>
-          <div class="mc-field-group">
-            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-          </div>
-          <div class="mc-field-group">
-            <label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
-            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-          </div>
-          <div class="mc-field-group">
-            <label for="mce-LNAME">Last Name <span class="asterisk">*</span></label>
-            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-          </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_81d0d523bcd6b29cfd3be472b_6bfe5a4b78" tabindex="-1" value=""></div>
-              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-              </div>
-          </form>
+          
           </div>
           <!--End mc_embed_signup-->
         </ul>
@@ -143,7 +120,7 @@ ERROR_REPORTING(E_ALL);
           <li><a href="/privacy/">Privacy Policy</a></li>
           <li><h3>Follow Us</h3></li>
           <!-- <li><a href="javascript:void(0)">Facebook</a></li> -->
-          <li><a href="https://twitter.com/protecfuelpumps">Twitter</a></li>
+          <li><a href="#">Twitter</a></li>
           <!-- <li><a href="javascript:void(0)">YouTube</a></li> -->
         </ul>
         <ul>
@@ -165,9 +142,6 @@ ERROR_REPORTING(E_ALL);
         </ul>
       </div>
       <hr>
-      <div class="distribution_title">
-        <p>Protec products are also available from these distributors</p>
-      </div>
       <div class="distribution">
         <ul>
           <li><img src="<?=$config->urls->assets?>graphics/logo_premier.png"></li>
@@ -201,7 +175,7 @@ ERROR_REPORTING(E_ALL);
         var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
-          title: 'Protec Fuel Pumps'
+          title: ''
         });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
