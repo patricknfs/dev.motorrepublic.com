@@ -71,7 +71,7 @@ ERROR_REPORTING(E_ALL);
               'show_root' => true,
               'selector' => '',
               'outer_tpl' => '<ul id="" class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown">||',
-              'inner_tpl' => '<ul class="">||</ul>',
+              'inner_tpl' => '<ul class="vertical menu">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
               'list_field_class' => '',
               'item_tpl' => '<a href="{url}">{title}</a>',
