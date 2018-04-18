@@ -193,26 +193,5 @@ ERROR_REPORTING(E_ALL);
     ga('send', 'pageview');
 
   </script>
-  <script type="text/javascript" src="<?=$config->urls->templates?>scripts/built.min.js"></script>
-  <?php
-  if($page->product_images){
-  ?>
-  <script type="text/javascript">
-    $('#open-popup').magnificPopup({
-      items: [
-        <?php
-        foreach ($page->product_images as $gallery_image) {
-          echo "{src: '" . $gallery_image->height(600)->url . "'},";
-        }
-        ?>
-      ],
-      gallery: {
-        enabled: true
-      },
-      type: 'image' // this is default type
-    });
-  </script>
-  <?php
-  }
-  ?>
+  <script type="text/javascript" src="<?=$config->urls->templates?>scripts/app.js"></script>
 </html>
