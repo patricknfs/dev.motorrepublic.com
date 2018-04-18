@@ -1,15 +1,6 @@
 <!-- main.php -->
 <?php 
 ERROR_REPORTING(E_ALL);
-// if($input->get->theme) {
-//  // set the theme
-//  $session->theme = $sanitizer->pageName($input->get->theme); 
-// }
-// else {
-//   $css = 'main.min.css'; 
-// }
-// setup defaults when none specified
-// if(empty($page->main)) $page->main = $page->body;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -156,5 +147,5 @@ ERROR_REPORTING(E_ALL);
     ga('send', 'pageview');
 
   </script>
-  <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/app.js"></script>
+  <script type="text/javascript" src="<?=$config->urls->templates?>/js/foundation.min.js"></script>
 </html>
