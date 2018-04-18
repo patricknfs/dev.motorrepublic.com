@@ -125,19 +125,7 @@ ERROR_REPORTING(E_ALL);
         </ul>
         <ul>
           <li>
-<!--             <div class="tw">
-              <h3>Latest Tweets</h3>
-              <?php
-              $options = array(
-                'limit' => 3, 
-                'cacheSeconds' => 600, // 10 minutes
-                'showDate' => 'before',
-                'dateFormat' => 'F j g:i a - '
-              ); 
-              $t = $modules->get('MarkupTwitterFeed'); 
-              echo $t->render($options);
-              ?>
-            </div> -->
+
           </li>
         </ul>
       </div>
