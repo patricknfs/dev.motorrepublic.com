@@ -156,5 +156,5 @@ ERROR_REPORTING(E_ALL);
     ga('send', 'pageview');
 
   </script>
-  <script type="text/javascript" src="<?=$config->urls->templates?>scripts/main.js"></script>
+  <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/app.js"></script>
 </html>
