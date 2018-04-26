@@ -33,7 +33,7 @@ ERROR_REPORTING(E_ALL);
     // }
     $css = 'css/app.css';
     ?>
-    <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/<?=$css?>" />
+    <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/styles.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
     <!-- <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/main.min.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" href="https://i.icomoon.io/public/c88de6d4a5/DWSiteGenesis/style.css"> -->
