@@ -1,3 +1,4 @@
 <?php
-// home_main.php
+// tools_main.php
 ?>
+<?=$page->body?>
