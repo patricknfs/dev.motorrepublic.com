@@ -47,6 +47,7 @@ ERROR_REPORTING(E_ALL);
           </object>
         </div>
         <nav class="uk-navbar uk-navbar-container" uk-navbar>
+          <div class="uk-navbar-left">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
             $options = array(
