@@ -46,7 +46,7 @@ ERROR_REPORTING(E_ALL);
             <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Motor Republic" title="Motor Republic"/>
           </object>
         </div>
-        <div class="menu-container">
+        <nav class="uk-navbar uk-navbar-container">
           <div class="menu">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
@@ -82,7 +82,7 @@ ERROR_REPORTING(E_ALL);
                 </button>
               </form>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
