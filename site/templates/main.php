@@ -50,7 +50,7 @@ ERROR_REPORTING(E_ALL);
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
             $options = array(
-              'parent_class' => '',
+              'parent_class' => 'uk-parent',
               'current_class' => '',
               'has_children_class' => '',
               'levels' => false,
