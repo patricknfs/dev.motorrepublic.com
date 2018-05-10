@@ -46,8 +46,7 @@ ERROR_REPORTING(E_ALL);
             <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Motor Republic" title="Motor Republic"/>
           </object>
         </div>
-        <nav class="uk-navbar uk-navbar-container">
-          <div class="menu">
+        <nav class="uk-navbar uk-navbar-container" uk-navbar>
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
             $options = array(
@@ -61,8 +60,8 @@ ERROR_REPORTING(E_ALL);
               'collapsed' => false,
               'show_root' => true,
               'selector' => '',
-              'outer_tpl' => '<ul id="" class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown">||',
-              'inner_tpl' => '<ul class="vertical menu">||</ul>',
+              'outer_tpl' => '<ul id="" class="uk-navbar-nav">||',
+              'inner_tpl' => '<ul class="">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
               'list_field_class' => '',
               'item_tpl' => '<a href="{url}">{title}</a>',
@@ -81,7 +80,6 @@ ERROR_REPORTING(E_ALL);
                   <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
                 </button>
               </form>
-            </div>
           </nav>
         </div>
       </div>
