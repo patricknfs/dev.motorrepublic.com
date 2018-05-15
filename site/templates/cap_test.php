@@ -70,4 +70,6 @@ try
         echo $e->getCode(). '<br />'. $e->getMessage();
 
     }
+echo "testing"
+
 ?>
