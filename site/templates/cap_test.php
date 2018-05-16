@@ -38,15 +38,15 @@ function get_soap_client(){
     $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx';
 
     $options = array(
-            'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
-            'style'=>SOAP_RPC,
-            'use'=>SOAP_ENCODED,
-            'soap_version'=>SOAP_1_1,
-            'cache_wsdl'=>WSDL_CACHE_NONE,
-            'connection_timeout'=>15,
-            'trace'=>true,
-            'encoding'=>'UTF-8',
-            'exceptions'=>true,
+        'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
+        'style'=>SOAP_RPC,
+        'use'=>SOAP_ENCODED,
+        'soap_version'=>SOAP_1_1,
+        'cache_wsdl'=>WSDL_CACHE_NONE,
+        'connection_timeout'=>15,
+        'trace'=>true,
+        'encoding'=>'UTF-8',
+        'exceptions'=>true,
     );
 
 
@@ -60,7 +60,7 @@ function get_soap_client(){
 
 try
     {
-        $params = array('GetBulkTechnicalData'); //define your parameters here
+        $params = array(); //define your parameters here
         $client = get_soap_client();
         $response = $client->__soapCall('WSDL',$params);
     }
