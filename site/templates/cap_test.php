@@ -35,7 +35,7 @@ function get_soap_client(){
 
     $username = '173210';
     $password = 'NfS4Je';
-    $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx?WSDL';
+    $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx';
 
     $options = array(
             'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
@@ -62,11 +62,9 @@ try
     {
         $params = array(); //define your parameters here
         $client = get_soap_client();
-        $response = $client->__soapCall('method-name',$params);
+        $response = $client->__soapCall('WSDL',$params);
     }
     catch(Exception $e){ 
         echo $e->getCode(). '<br />'. $e->getMessage();
     }
-    echo "testing"
-
 ?>
