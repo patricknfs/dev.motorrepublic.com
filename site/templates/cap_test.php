@@ -1,4 +1,5 @@
 <?php
+
 function AddWSSUsernameToken($client, $username, $password)
 {
     $wssNamespace = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd";
@@ -51,6 +52,8 @@ function get_soap_client(){
 
 
     $client = new SoapClient($wsdl, $options);
+    $functions = $client->__getFunctions ();
+var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
 
     return $client;    
