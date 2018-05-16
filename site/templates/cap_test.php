@@ -60,7 +60,7 @@ function get_soap_client(){
 
 try
     {
-        $params = array('GetCAPMan'); //define your parameters here
+        $params = array('GetBulkTechnicalData'); //define your parameters here
         $client = get_soap_client();
         $response = $client->__soapCall('WSDL',$params);
     }
