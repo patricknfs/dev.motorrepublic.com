@@ -35,7 +35,7 @@ function get_soap_client(){
 
     $username = '173210';
     $password = 'NfS4Je';
-    $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx';
+    $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx?wsdl';
 
     $options = array(
         'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
@@ -60,7 +60,7 @@ function get_soap_client(){
 
 try
     {
-        $params = array('GetBulkTechnicalData'); //define your parameters here
+        $params = array(); //define your parameters here
         $client = get_soap_client();
         $response = $client->__soapCall('WSDL',$params);
     }
