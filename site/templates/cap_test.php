@@ -36,7 +36,7 @@ function get_soap_client(){
 
     $username = '173210';
     $password = 'NfS4Je';
-    $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx?wsdl';
+    $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx';
 
     $options = array(
         'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
@@ -63,7 +63,7 @@ var_dump ($functions);
 
 try
     {
-        $params = array(); //define your parameters here
+        $params = array('GetCapMan'); //define your parameters here
         $client = get_soap_client();
         $response = $client->__soapCall('WSDL',$params);
     }
