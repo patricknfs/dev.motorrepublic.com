@@ -63,7 +63,7 @@ function get_soap_client(){
 
 try
     {
-        $params = array('GetCapMan'); //define your parameters here
+        $params = array('justCurrentManufacturers'); //define your parameters here
         $client = get_soap_client();
         $response = $client->__soapCall('WSDL',$params);
     }
