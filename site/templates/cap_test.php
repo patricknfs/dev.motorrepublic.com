@@ -52,8 +52,8 @@ function get_soap_client(){
 
 
     $client = new SoapClient($wsdl, $options);
-    $functions = $client->__getFunctions ();
-    var_dump ($functions);
+    // $functions = $client->__getFunctions ();
+    // var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
 
     return $client;    
