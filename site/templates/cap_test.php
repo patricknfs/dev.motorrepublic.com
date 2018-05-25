@@ -60,7 +60,6 @@ function get_soap_client(){
 
 }
 
-
 try
     {
         $params = array('justCurrentManufacturers'); //define your parameters here
