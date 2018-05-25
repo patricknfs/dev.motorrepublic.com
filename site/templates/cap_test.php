@@ -56,7 +56,7 @@ function get_soap_client(){
 
     return $client;    
 
-    print_r($client);
+    // print_r($client);
 }
 
 try
