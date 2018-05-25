@@ -50,22 +50,20 @@ function get_soap_client(){
         'exceptions'=>true,
     );
 
-
     $client = new SoapClient($wsdl, $options);
-    // $functions = $client->__getFunctions ();
-    // var_dump ($functions);
+    $functions = $client->__getFunctions ();
+    var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
 
     return $client;    
-
 }
 
 try
     {
         $params = array(); //define your parameters here
         $client = get_soap_client();
-        $response = $client->__soapCall('WSDL',$params);
-        $test = $response->justCurrentManufacturers;
+        // $response = $client->__soapCall('WSDL',$params);
+        // $test = $response->justCurrentManufacturers;
         echo $test;
     }
     catch(Exception $e){ 
