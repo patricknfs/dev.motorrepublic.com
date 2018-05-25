@@ -41,7 +41,7 @@ function get_soap_client(){
         'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
         'style'=>SOAP_RPC,
         'use'=>SOAP_ENCODED,
-        'soap_version'=>SOAP_1_1,
+        'soap_version'=>SOAP_1_2,
         'cache_wsdl'=>WSDL_CACHE_NONE,
         'connection_timeout'=>15,
         'trace'=>true,
