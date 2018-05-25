@@ -60,7 +60,7 @@ function get_soap_client(){
 try
     {
         $params = array('GetCapMan'); //define your parameters here
-        $client = get_soap_client();
+        $client = get_soap_client($params);
     }
 
     catch(Exception $e){ 
