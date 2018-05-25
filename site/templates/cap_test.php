@@ -33,7 +33,6 @@ function AddWSSUsernameToken($client, $username, $password)
 
 function get_soap_client(){
 
-
     $username = '173210';
     $password = 'NfS4Je';
     $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx';
@@ -56,16 +55,16 @@ function get_soap_client(){
     AddWSSUsernameToken($client, $username, $password);
 
     return $client;    
+
+    print_r($client);
 }
 
 try
     {
         $params = array(); //define your parameters here
         $client = get_soap_client();
-        // $response = $client->__soapCall('WSDL',$params);
-        // $test = $response->justCurrentManufacturers;
-        echo $test;
     }
+
     catch(Exception $e){ 
         echo $e->getCode(). '<br />'. $e->getMessage();
     }
