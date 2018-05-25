@@ -65,6 +65,8 @@ try
         $params = array(); //define your parameters here
         $client = get_soap_client();
         $response = $client->__soapCall('WSDL',$params);
+        $test => $response->justCurrentManufacturers;
+        echo $test;
     }
     catch(Exception $e){ 
         echo $e->getCode(). '<br />'. $e->getMessage();
