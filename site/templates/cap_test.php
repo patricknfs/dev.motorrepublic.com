@@ -38,7 +38,7 @@ function get_soap_client(){
     $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx';
 
     $options = array(
-        // 'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
+        'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
         'style'=>SOAP_RPC,
         'use'=>SOAP_ENCODED,
         'soap_version'=>SOAP_1_1,
@@ -49,7 +49,7 @@ function get_soap_client(){
         'exceptions'=>true,
     );
 
-    $client = new SoapClient($wsdl, array('trace'=>1));
+    $client = new SoapClient($wsdl, $options);
     $functions = $client->__getFunctions ();
     var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
