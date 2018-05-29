@@ -59,9 +59,11 @@ function get_soap_client(){
 
 try
     {
-        $params = array(); //define your parameters here
+        $params = array('justCurrentManufacturers'); //define your parameters here
         $client = get_soap_client();
-        var_dump($client->__GetCapMan);
+        // var_dump($client->__GetCapMan);
+        $client->GetCapMan($params);
+        print_r($client);
     }
 
     catch(Exception $e){ 
