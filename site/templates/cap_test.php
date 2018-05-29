@@ -49,7 +49,7 @@ function get_soap_client(){
         'exceptions'=>true,
     );
 
-    $client = new SoapClient($wsdl, $options, 'subscriberId' => $username, 'password' => $password);
+    $client = new SoapClient($wsdl, $options, array('subscriberId' => $username, 'password' => $password));
     // $functions = $client->__getFunctions (); 
     // var_dump ($functions);
     // AddWSSUsernameToken($client, $username, $password);
