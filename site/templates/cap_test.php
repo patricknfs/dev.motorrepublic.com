@@ -65,9 +65,9 @@ try
         $result = $client->GetCapMan($params);
         var_dump($result);
         // $array = $result->GetCapMan->justCurrentManufacturers;
-        foreach($result AS $name){
-            echo $name . "<br />";
-        }
+        // foreach($result AS $name){
+        //     echo $name . "<br />";
+        // }
 
         // $client->__getLastResponse();
     }
