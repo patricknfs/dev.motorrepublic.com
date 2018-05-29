@@ -47,6 +47,7 @@ function get_soap_client(){
         'trace'=>true,
         'encoding'=>'UTF-8',
         'exceptions'=>true,
+        'subscriberId'=>'173210',
     );
 
     $client = new SoapClient($wsdl, $options);
@@ -64,7 +65,6 @@ try
         print_r($client);
         $client->GetCapMan($params);
         $client->__getLastResponse();
-        
     }
 
     catch(Exception $e){ 
