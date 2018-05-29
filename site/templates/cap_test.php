@@ -58,10 +58,8 @@ function get_soap_client(){
 
 try
     {   
-        $params = array('justCurrentManufacturers'); //define your parameters here
+        $params = array('justCurrentManufacturers', 'subscriberId' => $username ); //define your parameters here
         $client = get_soap_client();
-        $functions = $client->__getFunctions (); 
-    var_dump ($functions);
         $client->GetCapMan($params);
         $client->__getLastResponse();
     }
