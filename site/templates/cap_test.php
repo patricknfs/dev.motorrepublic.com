@@ -83,6 +83,6 @@ $headers = new SoapHeader('http://schemas.xmlsoap.org/soap/envelope/', 'UserCred
 
 // Prepare Soap Client 
 $soapClient->__setSoapHeaders(array($headers)); 
-$params = array('justCurrentManufacturers',$ssh_param);
+$params = array('justCurrentManufacturers',$sh_param);
 $soapClient->GetCapMan($params);
 ?>
