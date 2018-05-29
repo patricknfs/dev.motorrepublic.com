@@ -7,7 +7,7 @@ function AddWSSUsernameToken($client, $username, $password)
     $username = new SoapVar($username, 
         XSD_STRING, 
         null, null, 
-        'subscriberId', 
+        'username', 
         $wssNamespace);
 
     $password = new SoapVar($password, 
@@ -62,9 +62,8 @@ try
         $params = array('justCurrentManufacturers'); //define your parameters here
         $client = get_soap_client();
         // var_dump($client->__GetCapMan);
-        // $client->GetCapMan($params);
-        echo "testy";
-        $requestArray['subscriberId'] = '';
+        $client->GetCapMan($params);
+        // $requestArray['subscriberId'] = '';
         print_r($client);
     }
 
