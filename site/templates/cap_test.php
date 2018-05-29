@@ -59,7 +59,7 @@ function get_soap_client(){
 try
     {   
         $username = '173210';
-        
+        var_dump($client->__getTypes());
         $params = array('justCurrentManufacturers','subscriberId' => $username ); //define your parameters here
         $client = get_soap_client();
         $client->GetCapMan($params);
