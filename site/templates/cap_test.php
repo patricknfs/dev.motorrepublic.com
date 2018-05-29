@@ -61,7 +61,6 @@ try
     {
         $params = array(); //define your parameters here
         $client = get_soap_client();
-        print_r($client->__GetCapMan($a, $b, $c));
         var_dump($client->__GetCapMan);
     }
 
