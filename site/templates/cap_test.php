@@ -53,7 +53,6 @@ function get_soap_client(){
     // $functions = $client->__getFunctions (); 
     // var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
-    var_dump($client->__getTypes());
     return $client;
 }
 
@@ -61,7 +60,7 @@ try
     {   
         $username = '173210';
         
-        $params = array('justCurrentManufacturers','subscriberId' => $username ); //define your parameters here
+        $params = array('justCurrentManufacturers' => true,'subscriberId' => $username ); //define your parameters here
         $client = get_soap_client();
         $client->GetCapMan($params);
         $client->__getLastResponse();
