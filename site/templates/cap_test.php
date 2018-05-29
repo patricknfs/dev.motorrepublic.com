@@ -63,6 +63,7 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username ); //define your parameters here
         $client = get_soap_client();
         $result = $client->GetCapMan($params);
+        return($result);
         var_dump($result);
         $array = $result->GetCapMan->justCurrentManufacturers;
         // foreach($result AS $name){
