@@ -60,7 +60,8 @@ try
     {   
         $params = array('justCurrentManufacturers'); //define your parameters here
         $client = get_soap_client();
-        // print_r($client);
+        // $functions = $client->__getFunctions (); 
+    // var_dump ($functions);
         $client->GetCapMan($params);
         $client->__getLastResponse();
     }
