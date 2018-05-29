@@ -7,7 +7,7 @@ function AddWSSUsernameToken($client, $username, $password)
     $username = new SoapVar($username, 
         XSD_STRING, 
         null, null, 
-        'subscriberId', 
+        'Username', 
         $wssNamespace);
 
     $password = new SoapVar($password, 
