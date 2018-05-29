@@ -64,7 +64,7 @@ try
         $client = get_soap_client();
         $result = $client->GetCapMan($params);
         var_dump($result);
-        // $array = $result->GetCapMan->justCurrentManufacturers;
+        $array = $result->GetCapMan->justCurrentManufacturers;
         // foreach($result AS $name){
         //     echo $name . "<br />";
         // }
