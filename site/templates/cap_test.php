@@ -62,7 +62,7 @@ try
         $params = array('subscriberId' => $username ); //define your parameters here
         $client = get_soap_client();
         $client->GetCapMan($params);
-        $client->__getLastResponse();
+        // $client->__getLastResponse();
     }
 
     catch(Exception $e){ 
