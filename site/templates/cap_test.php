@@ -59,7 +59,7 @@ function get_soap_client(){
 
 try
     {
-        $params = array('justCurrentModels'); //define your parameters here
+        $params = array(); //define your parameters here
         $client = get_soap_client();
         print_r($client->GetCapMan($a, $b, $c));
     }
