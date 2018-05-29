@@ -83,4 +83,6 @@ $headers = new SoapHeader('http://schemas.xmlsoap.org/soap/envelope/', 'UserCred
 
 // Prepare Soap Client 
 $soapClient->__setSoapHeaders(array($headers)); 
+$params = array('justCurrentManufacturers');
+$soapClient->GetCapMan($params);
 ?>
