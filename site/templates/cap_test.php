@@ -47,9 +47,11 @@ function get_soap_client(){
         'trace'=>true,
         'encoding'=>'UTF-8',
         'exceptions'=>true,
+        'subscriberId' => $username,
+        'password' => $password,
     );
 
-    $client = new SoapClient($wsdl, $options, array('subscriberId' => $username, 'password' => $password));
+    $client = new SoapClient($wsdl, $options);
     // $functions = $client->__getFunctions (); 
     // var_dump ($functions);
     // AddWSSUsernameToken($client, $username, $password);
