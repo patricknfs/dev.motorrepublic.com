@@ -51,8 +51,8 @@ function get_soap_client(){
     );
 
     $client = new SoapClient($wsdl, $options);
-    $functions = $client->__getFunctions ();
-    var_dump ($functions);
+    // $functions = $client->__getFunctions ();
+    // var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
     // print_r($client);
     return $client;    
@@ -63,7 +63,7 @@ try
         $params = array('justCurrentManufacturers'); //define your parameters here
         $client = get_soap_client();
         // print_r($client);
-        $client->GetCapMan($params, $options);
+        $client->GetCapMan($params);
         $client->__getLastResponse();
     }
 
