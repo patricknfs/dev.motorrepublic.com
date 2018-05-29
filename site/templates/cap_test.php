@@ -71,7 +71,7 @@
 //     catch(Exception $e){ 
 //         echo $e->getCode(). '<br />'. $e->getMessage();
 //     }
-$soapClient = new SoapClient("https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL"); 
+$client = new SoapClient("https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL"); 
 $username = '173210';
 $password = 'NfS4Je';
 
@@ -82,7 +82,7 @@ $sh_param = array(
 $headers = new SoapHeader('http://schemas.xmlsoap.org/soap/envelope/', 'UserCredentials', $sh_param); 
 
 // Prepare Soap Client 
-$soapClient->__setSoapHeaders(array($headers)); 
+$client->__setSoapHeaders(array($headers)); 
 $params = array('justCurrentManufacturers',$sh_param);
-$soapClient->GetCapMan($params);
+$client->GetCapMan($params);
 ?>
