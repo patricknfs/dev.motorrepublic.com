@@ -31,58 +31,44 @@
 //     $client->__setSoapHeaders($wssUsernameTokenHeader);
 // }
 
-// function get_soap_client(){
+function get_soap_client(){
 
-//     $username = '173210';
-//     $password = 'NfS4Je';
-//     $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL';
+    $username = '173210';
+    $password = 'NfS4Je';
+    $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL';
 
-//     $options = array(
-//         'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
-//         'style'=>SOAP_RPC,
-//         'use'=>SOAP_ENCODED,
-//         'soap_version'=>SOAP_1_2,
-//         'cache_wsdl'=>WSDL_CACHE_NONE,
-//         'connection_timeout'=>15,
-//         'trace'=>true,
-//         'encoding'=>'UTF-8',
-//         'exceptions'=>true,
-//         'subscriberId' => $username,
-//         'password' => $password,
-//     );
+    $options = array(
+        'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
+        'style'=>SOAP_RPC,
+        'use'=>SOAP_ENCODED,
+        'soap_version'=>SOAP_1_2,
+        'cache_wsdl'=>WSDL_CACHE_NONE,
+        'connection_timeout'=>15,
+        'trace'=>true,
+        'encoding'=>'UTF-8',
+        'exceptions'=>true,
+        'subscriberId' => $username,
+        'password' => $password,
+    );
 
-//     $client = new SoapClient($wsdl, $options);
-//     // $functions = $client->__getFunctions (); 
-//     // var_dump ($functions);
-//     // AddWSSUsernameToken($client, $username, $password);
-//     // print_r($client);
-//     return $client;    
-// }
+    $client = new SoapClient($wsdl, $options);
+    // $functions = $client->__getFunctions (); 
+    // var_dump ($functions);
+    // AddWSSUsernameToken($client, $username, $password);
+    // print_r($client);
+    return $client;    
+}
 
-// try
-//     {   
-//         $params = array('justCurrentManufacturers'); //define your parameters here
-//         $client = get_soap_client();
-//         // print_r($client);
-//         $client->GetCapMan($params);
-//         $client->__getLastResponse();
-//     }
+try
+    {   
+        $params = array('justCurrentManufacturers'); //define your parameters here
+        $client = get_soap_client();
+        // print_r($client);
+        $client->GetCapMan($params);
+        $client->__getLastResponse();
+    }
 
-//     catch(Exception $e){ 
-//         echo $e->getCode(). '<br />'. $e->getMessage();
-//     }
-$client = new SoapClient("https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL"); 
-$username = '173210';
-$password = 'NfS4Je';
-
-// Prepare SoapHeader parameters 
-$sh_param = array( 
-            'subscriberId'    =>   $username, 
-            'password'    =>    $password); 
-$headers = new SoapHeader('http://schemas.xmlsoap.org/soap/envelope/', 'UserCredentials', $sh_param); 
-
-// Prepare Soap Client 
-$client->__setSoapHeaders(array($headers)); 
-$params = array('justCurrentManufacturers',$sh_param);
-$client->GetCapMan($params);
+    catch(Exception $e){ 
+        echo $e->getCode(). '<br />'. $e->getMessage();
+    }
 ?>
