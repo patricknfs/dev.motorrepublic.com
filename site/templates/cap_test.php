@@ -1,35 +1,35 @@
 <?php
 
-function AddWSSUsernameToken($client, $username, $password)
-{
-    $wssNamespace = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd";
+// function AddWSSUsernameToken($client, $username, $password)
+// {
+//     $wssNamespace = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd";
 
-    $username = new SoapVar($username, 
-        XSD_STRING, 
-        null, null, 
-        'subscriberId', 
-        $wssNamespace);
+//     $username = new SoapVar($username, 
+//         XSD_STRING, 
+//         null, null, 
+//         'subscriberId', 
+//         $wssNamespace);
 
-    $password = new SoapVar($password, 
-        XSD_STRING, 
-        null, null, 
-        'password', 
-        $wssNamespace);
+//     $password = new SoapVar($password, 
+//         XSD_STRING, 
+//         null, null, 
+//         'password', 
+//         $wssNamespace);
 
-    $usernameToken = new SoapVar(array($username, $password), 
-        SOAP_ENC_OBJECT, 
-        null, null, 'UsernameToken', 
-        $wssNamespace);
+//     $usernameToken = new SoapVar(array($username, $password), 
+//         SOAP_ENC_OBJECT, 
+//         null, null, 'UsernameToken', 
+//         $wssNamespace);
 
-    $usernameToken = new SoapVar(array($usernameToken), 
-        SOAP_ENC_OBJECT, 
-        null, null, null, 
-        $wssNamespace);
+//     $usernameToken = new SoapVar(array($usernameToken), 
+//         SOAP_ENC_OBJECT, 
+//         null, null, null, 
+//         $wssNamespace);
 
-    $wssUsernameTokenHeader = new SoapHeader($wssNamespace, 'Security', $usernameToken);
+//     $wssUsernameTokenHeader = new SoapHeader($wssNamespace, 'Security', $usernameToken);
 
-    $client->__setSoapHeaders($wssUsernameTokenHeader);
-}
+//     $client->__setSoapHeaders($wssUsernameTokenHeader);
+// }
 
 function get_soap_client(){
 
@@ -47,19 +47,18 @@ function get_soap_client(){
         'trace'=>true,
         'encoding'=>'UTF-8',
         'exceptions'=>true,
-        'subscriberId'=>'173210',
     );
 
-    $client = new SoapClient($wsdl, $options);
-    // $functions = $client->__getFunctions ();
+    $client = new SoapClient($wsdl, $options, 'subscriberId' => $username, 'password' => $password);
+    // $functions = $client->__getFunctions (); 
     // var_dump ($functions);
-    AddWSSUsernameToken($client, $username, $password);
+    // AddWSSUsernameToken($client, $username, $password);
     // print_r($client);
     return $client;    
 }
 
 try
-    {
+    {   
         $params = array('justCurrentManufacturers'); //define your parameters here
         $client = get_soap_client();
         // print_r($client);
