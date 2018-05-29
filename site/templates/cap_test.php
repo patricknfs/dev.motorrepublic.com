@@ -33,7 +33,7 @@ function AddWSSUsernameToken($client, $username, $password)
 
 function get_soap_client(){
 
-    $username = '173210';
+    public $username = '173210';
     $password = 'NfS4Je';
     $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL';
 
