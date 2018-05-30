@@ -66,11 +66,11 @@ try
         // return($result);
         var_dump($result);
         $array = $result->GetCapMan->justCurrentManufacturers;
-        // foreach($result AS $name){
-        //     echo $name . "<br />";
-        // }
+        foreach($result AS $name){
+            echo $name . "<br />";
+        }
 
-        // $client->__getLastResponse();
+        $client->__getLastResponse();
     }
 
     catch(Exception $e){ 
