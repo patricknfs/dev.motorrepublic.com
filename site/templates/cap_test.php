@@ -58,7 +58,7 @@ function get_soap_client(){
 
 try
     {   
-        // $username = '173210';
+        $username = '173210';
         
         $params = array('justCurrentManufacturers' => false,'subscriberId' => $username ); //define your parameters here
         $client = get_soap_client();
