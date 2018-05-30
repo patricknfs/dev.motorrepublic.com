@@ -60,7 +60,7 @@ try
     {   
         $username = '173210';
         
-        $params = array('justCurrentManufacturers' => false,'subscriberId' => $username, 'database' => 'car' ); //define your parameters here
+        $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'database' => 'car' ); //define your parameters here
         $client = get_soap_client();
         $result = $client->GetCapMan($params);
         // return($result);
