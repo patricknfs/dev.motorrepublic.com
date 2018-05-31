@@ -67,7 +67,8 @@ try
         var_dump($result);
         // $array = $result->GetCapMan->justCurrentManufacturers;
         foreach($result AS $name){
-            echo $name . "<br />";
+            echo $name->CMan_Code . "<br />";
+            echo $name->CMan_Name;
         }
 
         $client->__getLastResponse();
