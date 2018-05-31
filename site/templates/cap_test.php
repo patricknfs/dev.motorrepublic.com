@@ -87,7 +87,7 @@ try
         // print_r($result);
         // var_dump($result);
         $data = objectToArray($client);
-        foreach($data->name AS $item){
+        foreach$data[5] AS $item){
             echo $item;
         }
     }
