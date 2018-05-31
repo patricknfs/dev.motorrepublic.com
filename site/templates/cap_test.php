@@ -87,9 +87,9 @@ try
         // print_r($result);
         // var_dump($result);
         $data = objectToArray($client);
-        // foreach($data AS $key => $item){
-        //     echo $key . " - " . $item;
-        // }
+        foreach($data AS $item){
+            echo $item;
+        }
     }
 
     catch(Exception $e){ 
