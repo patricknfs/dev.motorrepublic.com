@@ -88,7 +88,7 @@ try
         // var_dump($result);
         $data = objectToArray($client);
         foreach($data AS $item){
-            echo $item;
+            echo $item[1];
         }
     }
 
