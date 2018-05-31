@@ -65,14 +65,12 @@ try
         $result = $client->GetCapMan($params);
         // return($result);
         var_dump($result);
-        // $array = $result->GetCapMan->justCurrentManufacturers;
-        foreach($result AS $key => $value){
+        $data = array();
+        foreach($result AS $item){
+            echo $item->id;
             // print_r($result);
-            echo "$key => $value\n";
+            // $data[] = get_object_vars($item);
         }
-        // foreach ($obj as $key => $value) {
-        //     echo "$key => $value\n";
-        // }
 
         $client->__getLastResponse();
     }
