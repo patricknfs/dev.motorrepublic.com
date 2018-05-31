@@ -89,11 +89,7 @@ try
         $data = objectToArray($client);
         foreach($data AS $key => $item){
             echo $key . " - " . $item;
-            // print_r($result);
-            // $data[] = get_object_vars($item);
         }
-
-        // $client->__getLastResponse();
     }
 
     catch(Exception $e){ 
