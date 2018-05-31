@@ -68,7 +68,7 @@ try
         var_dump($client);
         $data = array();
         foreach($client AS $key => $item){
-            echo $key " - " . $item[0];
+            echo $key . " - " . $item[0];
             // print_r($result);
             // $data[] = get_object_vars($item);
         }
