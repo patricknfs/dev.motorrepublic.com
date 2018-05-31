@@ -1,4 +1,24 @@
 <?php
+function objectToArray($d) {
+    if (is_object($d)) {
+        // Gets the properties of the given object
+        // with get_object_vars function
+        $d = get_object_vars($d);
+    }
+    
+    if (is_array($d)) {
+        /*
+        * Return array converted to object
+        * Using __FUNCTION__ (Magic constant)
+        * for recursive call
+        */
+        return array_map(__FUNCTION__, $d);
+    }
+    else {
+        // Return array
+        return $d;
+    }
+}
 
 function AddWSSUsernameToken($client, $username, $password)
 {
@@ -66,9 +86,9 @@ try
         // return($result);
         // print_r($result);
         var_dump($result);
-        $data = array();
-        foreach($result AS $key => $item){
-            echo $key . " - " . $item[0];
+        $data = objectToArray($result);
+        foreach($data AS $key => $item){
+            echo $key . " - " . $item;
             // print_r($result);
             // $data[] = get_object_vars($item);
         }
