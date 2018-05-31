@@ -62,12 +62,12 @@ try
         $password = 'NfS4Je';
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client = get_soap_client();
-        $client->GetCapMan($params);
+        $result = $client->GetCapMan($params);
         // return($result);
         // print_r($result);
-        var_dump($client);
+        var_dump($result);
         $data = array();
-        foreach($client AS $key => $item){
+        foreach($result AS $key => $item){
             echo $key . " - " . $item[0];
             // print_r($result);
             // $data[] = get_object_vars($item);
