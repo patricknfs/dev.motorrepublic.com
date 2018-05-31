@@ -66,7 +66,7 @@ try
         // return($result);
         print_r($result);
         $data = array();
-        foreach($result AS $item){
+        foreach($result->CMan_Name AS $item){
             echo $item[0];
             // print_r($result);
             // $data[] = get_object_vars($item);
