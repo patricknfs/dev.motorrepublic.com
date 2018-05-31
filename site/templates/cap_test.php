@@ -64,7 +64,8 @@ try
         $client = get_soap_client();
         $result = $client->GetCapMan($params);
         // return($result);
-        print_r(json_decode($result));
+        // print_r($result);
+        var_dump(get_object_vars($result));
         $data = array();
         foreach($result->CMan_Name AS $item){
             echo $item[0];
