@@ -85,7 +85,7 @@ try
         $result = $client->GetCapMan($params);
         // return($result);
         // print_r($result);
-        var_dump($result);
+        // var_dump($result);
         $data = objectToArray($result);
         foreach($data AS $key => $item){
             echo $key . " - " . $item;
