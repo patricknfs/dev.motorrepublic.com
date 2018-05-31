@@ -66,11 +66,13 @@ try
         // return($result);
         var_dump($result);
         // $array = $result->GetCapMan->justCurrentManufacturers;
-        foreach($result AS $name){
+        foreach($result AS $key => $value){
             print_r($result);
-            echo $name->CMan_Code . "<br />";
-            echo $name->CMan_Name;
+            echo $key => $value . "<br />";
         }
+        // foreach ($obj as $key => $value) {
+        //     echo "$key => $value\n";
+        // }
 
         $client->__getLastResponse();
     }
