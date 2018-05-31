@@ -64,9 +64,9 @@ try
         $client = get_soap_client();
         $result = $client->GetCapMan($params);
         // return($result);
-        var_dump($result);
+        print_r($result);
         $data = array();
-        foreach($result AS $item){
+        foreach($result-> AS $item){
             echo $item[0];
             // print_r($result);
             // $data[] = get_object_vars($item);
