@@ -68,7 +68,7 @@ try
         // $array = $result->GetCapMan->justCurrentManufacturers;
         foreach($result AS $key => $value){
             print_r($result);
-            echo $key => $value . "<br />";
+            echo "$key => $value\n";
         }
         // foreach ($obj as $key => $value) {
         //     echo "$key => $value\n";
