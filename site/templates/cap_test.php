@@ -65,7 +65,7 @@ try
         $client->GetCapMan($params);
         // return($result);
         // print_r($result);
-        var_dump(get_object_vars($client));
+        // var_dump(get_object_vars($client));
         $data = array();
         foreach($client AS $item){
             echo $item[0];
@@ -73,7 +73,7 @@ try
             // $data[] = get_object_vars($item);
         }
 
-        $client->__getLastResponse();
+        // $client->__getLastResponse();
     }
 
     catch(Exception $e){ 
