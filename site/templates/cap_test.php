@@ -52,9 +52,8 @@ function AddWSSUsernameToken($client, $username, $password)
 }
 
 function get_soap_client(){
-    global $username;
-    $username = '173210';
-    $password = 'NfS4Je';
+    global $username = '173210';
+    global = $password = 'NfS4Je';
     $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL';
 
     $options = array(
@@ -70,16 +69,14 @@ function get_soap_client(){
     );
 
     $client = new SoapClient($wsdl, $options);
-    // $functions = $client->__getFunctions (); 
-    // var_dump ($functions);
     AddWSSUsernameToken($client, $username, $password);
     return $client;
 }
 
 try
     {   
-        $username = '173210';
-        $password = 'NfS4Je';
+        // $username = '173210';
+        // $password = 'NfS4Je';
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client = get_soap_client();
         $client->GetCapMan($params);
