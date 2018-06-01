@@ -76,8 +76,8 @@ function get_soap_client(){
 
 try
     {   
-        // $username = '173210';
-        // $password = 'NfS4Je';
+        $username = '173210';
+        $password = 'NfS4Je';
         
         $client = get_soap_client();
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
