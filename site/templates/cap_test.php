@@ -87,8 +87,9 @@ try
         // var_dump($result);
         $data = objectToArray($client);
         foreach($data as $item){
-            var_dump($item);
-            echo $item->cman_name;
+            foreach($item as $thing){
+                var_dump($thing);
+            }
         }
     }
 
