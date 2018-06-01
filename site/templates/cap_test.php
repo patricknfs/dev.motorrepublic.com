@@ -78,8 +78,9 @@ try
     {   
         // $username = '173210';
         // $password = 'NfS4Je';
-        $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
+        
         $client = get_soap_client();
+        $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         // return($result);
         // print_r($result);
