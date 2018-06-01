@@ -88,7 +88,7 @@ try
         $data = objectToArray($client);
         foreach($data as $item){
             print_r($item);
-            echo $item;
+            // echo $item;
         }
     }
 
