@@ -84,14 +84,14 @@ try
         $client->GetCapMan($params);
         // $data = $client->__getLastResponse();
         echo "Response:\n" . $client->__getLastResponse() . "\n";
-        var_dump($data);
-        $data_array = objectToArray($data);
-        echo "<pre>";
-            print_r($data_array);
-        echo"</pre>";
-        foreach($data_array as $item){
-            echo $item . " and";
-        }
+        // var_dump($data);
+        // $data_array = objectToArray($data);
+        // echo "<pre>";
+        //     print_r($data_array);
+        // echo"</pre>";
+        // foreach($data_array as $item){
+        //     echo $item . " and";
+        // }
     }
 
     catch(Exception $e){ 
