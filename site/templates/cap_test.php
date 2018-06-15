@@ -92,9 +92,6 @@ try
         echo "<pre>";
             print_r($data);
         echo"</pre>";
-        echo "<pre>";
-            print_r($marques);
-        echo"</pre>";
         foreach($data as $key => $item){
             echo $item[0] . " and";
         }
