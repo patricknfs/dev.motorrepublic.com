@@ -91,7 +91,7 @@ try
         echo"</pre>";
         // $data   = simplexml_load_string($xml);
         $data = new SimpleXMLElement($xml);
-        $marques  = $data->xpath('diffgram/NewDataSet');
+        $marques  = $data->xpath('diffgr/NewDataSet');
         print "We have " . count($marques) . " marques: \n";
         foreach($marques as $key => $item){
             echo $item[0] . " and" . $item[1];
