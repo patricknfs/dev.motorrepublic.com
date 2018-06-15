@@ -96,16 +96,28 @@ try
         foreach($marques as $item){
             echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
             $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-            $client->GetCapRange($range_params);
+            $client->GetCapRange_IncludeOnRunout($range_params);
             $data_range = $client->__getLastResponse();
             $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
-            echo "<pre>";
-                print_r($xml_range);
-            echo"</pre>";
+            // echo "<pre>";
+            //     print_r($xml_range);
+            // echo"</pre>";
             $data_range = new SimpleXMLElement($xml_range);
             $ranges  = $data_range->xpath('//Table');
             foreach($ranges as $range){
                 echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
+                $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'ranCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+                $client->GetCapMod_IncludeOnRunout($mod_params);
+                $data_mod = $client->__getLastResponse();
+                $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
+                echo "<pre>";
+                    print_r($xml_mod);
+                echo"</pre>";
+                $data_mod = new SimpleXMLElement($xml_mod);
+                $models  = $data_mod->xpath('//Table');
+                foreach ($models AS $model){
+                    echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
+                }
             }
         }
     }
