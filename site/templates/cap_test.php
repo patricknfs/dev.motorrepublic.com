@@ -83,16 +83,16 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
-        $xml = simplexml_load_string($data->CMan_Name);
+        $xml = simplexml_load_string($data);
         print_r($xml);
-        $marques = new SimpleXMLElement($data->CMan_Name);
+        $marques = new SimpleXMLElement($data);
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
         echo "<pre>";
             print_r($marques);
         echo"</pre>";
-        foreach($marques as $item){
+        foreach($marques->CMan_Name as $item){
             echo $item . " and";
         }
     }
