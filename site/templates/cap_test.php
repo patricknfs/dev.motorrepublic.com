@@ -91,7 +91,7 @@ try
         echo "<pre>";
             print_r($marques);
         echo"</pre>";
-        foreach($marques->CMan_Name as $item){
+        foreach($marques->Table->CMan_Name as $item){
             echo $item . " and";
         }
     }
