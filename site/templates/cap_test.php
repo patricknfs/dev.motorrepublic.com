@@ -92,7 +92,7 @@ try
         echo "<pre>";
             print_r($data);
         echo"</pre>";
-        foreach($data as $item){
+        foreach($data as $key => $item){
             echo $item[0] . " and";
         }
     }
