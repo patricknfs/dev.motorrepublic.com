@@ -95,7 +95,7 @@ try
         // print "We have " . count($marques) . " marques: \n";
         foreach($marques as $item){
             echo $item->CMan_Code . " and " . $item->CMan_Name . "<br />";
-            $range_params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+            $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
             $client->GetCapRange($range_params);
             $data_range = $client->__getLastResponse();
             $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
