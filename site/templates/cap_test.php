@@ -86,7 +86,7 @@ try
         // print_r($result);
         // var_dump($result);
         $data = objectToArray($client);
-        foreach($data as $item){
+        foreach($data['password'] as $item){
             echo $item . " and";
         }
     }
