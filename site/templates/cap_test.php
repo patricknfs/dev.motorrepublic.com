@@ -86,13 +86,13 @@ try
         $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
         // Wrap into root element to make it standard XML
         // $xml    = "<package>" . $xml . "</package>";
-        echo "<pre>";
-            print_r($xml);
-        echo"</pre>";
+        // echo "<pre>";
+        //     print_r($xml);
+        // echo"</pre>";
         // $data   = simplexml_load_string($xml);
         $data = new SimpleXMLElement($xml);
         $marques  = $data->xpath('//Table');
-        print "We have " . count($marques) . " marques: \n";
+        // print "We have " . count($marques) . " marques: \n";
         foreach($marques as $item){
             echo $item->CMan_Code . " and " . $item->CMan_Name . "<br />";
         }
