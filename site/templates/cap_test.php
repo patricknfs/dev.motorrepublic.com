@@ -84,9 +84,9 @@ try
         $client->GetCapMan($params);
         
         // $data = objectToArray($client);
-        echo "<pre>";
-            print_r($client);
-        echo"</pre>";
+        // echo "<pre>";
+        //     print_r($client);
+        // echo"</pre>";
         foreach($client->__ getLastResponse () as $item){
             echo $item . " and";
         }
