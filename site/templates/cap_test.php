@@ -88,6 +88,7 @@ try
         $data = objectToArray($client);
         foreach($data as $item){
             echo $item[0];
+            var_dump($item);
         }
     }
 
