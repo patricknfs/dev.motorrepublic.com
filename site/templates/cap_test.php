@@ -105,7 +105,7 @@ try
             $data_range = new SimpleXMLElement($xml_range);
             $ranges  = $data->xpath('//Table');
             foreach($ranges as $range){
-                echo $item->CRan_Code . " and " . $item->CRan_Name . "<br />";
+                echo $range->CRan_Code . " and " . $range->CRan_Name . "<br />";
             }
         }
     }
