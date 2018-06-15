@@ -92,8 +92,8 @@ try
         echo "<pre>";
             print_r($data);
         echo"</pre>";
-        foreach($data->CMan_Name as $item){
-            echo $item . " and";
+        foreach($data as $item){
+            echo $item[0] . " and";
         }
     }
 
