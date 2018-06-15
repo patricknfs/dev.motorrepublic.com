@@ -86,7 +86,7 @@ try
         // $xml = simplexml_load_string($data);
         // print_r($xml);
         
-        $marques = new SimpleXMLElement($client);
+        $marques = new SimpleXMLElement($data);
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
