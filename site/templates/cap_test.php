@@ -87,9 +87,9 @@ try
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
-        // echo "<pre>";
-        //     print_r($data_array);
-        // echo"</pre>";
+        echo "<pre>";
+            print_r($marques);
+        echo"</pre>";
         foreach($marques->CMan_Name as $item){
             echo $item . " and";
         }
