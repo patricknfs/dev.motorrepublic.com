@@ -92,7 +92,7 @@ try
         echo "<pre>";
             print_r($data);
         echo"</pre>";
-        foreach($marques->CMan_Name as $item){
+        foreach($data->CMan_Name as $item){
             echo $item . " and";
         }
     }
