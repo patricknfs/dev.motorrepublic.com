@@ -83,7 +83,7 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
-        $xml    = str_replace(array("diffgr:","msdata:"),'', $client);
+        $xml    = str_replace(array("diffgr:","msdata:"),'', $data);
         // Wrap into root element to make it standard XML
         $xml    = "<package>" . $xml . "</package>";
         echo "<pre>";
@@ -93,7 +93,7 @@ try
         $marques  = $data->package->diffgram->NewDataSet->Table;
         print "We have " . count($marques) . " rooms: \n";
         foreach($marques as $key => $item){
-            echo $item[0] . " and" . £item[1];
+            echo $item[0] . " and" . $item[1];
         }
     }
 
