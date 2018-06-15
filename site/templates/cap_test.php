@@ -83,11 +83,11 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
-        // $data = objectToArray($client);
+        $data_array = objectToArray($data);
         // echo "<pre>";
         //     print_r($client);
         // echo"</pre>";
-        foreach($data as $item){
+        foreach($data_array as $item){
             echo $item . " and";
         }
     }
