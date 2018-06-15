@@ -84,14 +84,14 @@ try
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
         $marques = new SimpleXMLElement($data);
-        echo $marques->CMan_Name[0];
+        echo $marques->CMan_Name;
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
         echo "<pre>";
             print_r($marques);
         echo"</pre>";
-        foreach($marques->Table->CMan_Name as $item){
+        foreach($marques->CMan_Name as $item){
             echo $item . " and";
         }
     }
