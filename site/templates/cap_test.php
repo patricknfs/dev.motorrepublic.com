@@ -83,7 +83,7 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
-        $xml = simplexml_load_string($data);
+        $xml = simplexml_load_string($data->CMan_Name);
         print_r($xml);
         $marques = new SimpleXMLElement($data->CMan_Name);
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
