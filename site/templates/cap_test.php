@@ -85,7 +85,7 @@ try
         $data = $client->__getLastResponse();
 
         print $data->asXML()
-        $marques = new SimpleXMLElement($data);
+        // $marques = new SimpleXMLElement($data);
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
