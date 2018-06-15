@@ -95,6 +95,17 @@ try
         // print "We have " . count($marques) . " marques: \n";
         foreach($marques as $item){
             echo $item->CMan_Code . " and " . $item->CMan_Name . "<br />";
+            $client->GetCapRange($params);
+            $data_range = $client->__getLastResponse();
+            $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
+            echo "<pre>";
+                print_r($xml_range);
+            echo"</pre>";
+            $data_range = new SimpleXMLElement($xml_range);
+            $ranges  = $data->xpath('//Table');
+            foreach($ranges as $range){
+                // echo $range->
+            }
         }
     }
 
