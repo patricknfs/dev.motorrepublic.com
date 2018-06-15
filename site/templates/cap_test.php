@@ -85,9 +85,9 @@ try
         $data = $client->__getLastResponse();
         var_dump($data);
         $data_array = objectToArray($data);
-        // echo "<pre>";
-        //     print_r($client);
-        // echo"</pre>";
+        echo "<pre>";
+            print_r($data_array);
+        echo"</pre>";
         foreach($data_array as $item){
             echo $item . " and";
         }
