@@ -82,9 +82,12 @@ try
         $client = get_soap_client();
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
+        
         // $data = objectToArray($client);
-        echo "<pre>";print_r($client);echo"</pre>";
-        foreach($data as $item){
+        echo "<pre>";
+            print_r($client);
+        echo"</pre>";
+        foreach($client->__ getLastResponse () as $item){
             echo $item . " and";
         }
     }
