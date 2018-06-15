@@ -90,7 +90,7 @@ try
         // var_dump($data);
         // $data_array = objectToArray($data);
         echo "<pre>";
-            print_r($marques);
+            print_r($data);
         echo"</pre>";
         foreach($marques->CMan_Name as $item){
             echo $item . " and";
