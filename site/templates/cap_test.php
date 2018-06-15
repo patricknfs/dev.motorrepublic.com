@@ -87,9 +87,9 @@ try
         // var_dump($result);
         $data = objectToArray($client);
         echo "<pre>";print_r($data);echo"</pre>";
-        // foreach($data['password'] as $item){
-        //     echo $item . " and";
-        // }
+        foreach($data[__last_response] as $item){
+            echo $item . " and";
+        }
     }
 
     catch(Exception $e){ 
