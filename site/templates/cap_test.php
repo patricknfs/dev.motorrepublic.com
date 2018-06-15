@@ -86,9 +86,10 @@ try
         // print_r($result);
         // var_dump($result);
         $data = objectToArray($client);
-        foreach($data['subscriberId'] as $item){
-            echo $item . " and";
-        }
+        print_r($data);
+        // foreach($data['password'] as $item){
+        //     echo $item . " and";
+        // }
     }
 
     catch(Exception $e){ 
