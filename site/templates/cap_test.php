@@ -94,7 +94,7 @@ try
         $marques  = $data->xpath('//Table');
         print "We have " . count($marques) . " marques: \n";
         foreach($marques as $item){
-            echo $item->CMan_Code . " and" . $item->CMan_Name;
+            echo $item->CMan_Code . " and " . $item->CMan_Name;
         }
     }
 
