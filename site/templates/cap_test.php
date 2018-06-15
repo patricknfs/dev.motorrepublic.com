@@ -85,14 +85,14 @@ try
         $data = $client->__getLastResponse();
         $xml = simplexml_load_string($data);
         print_r($xml);
-        $marques = new SimpleXMLElement($data);
+        $marques = new SimpleXMLElement($data->CMan_Name);
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
         echo "<pre>";
             print_r($marques);
         echo"</pre>";
-        foreach($marques->CMan_Name as $item){
+        foreach($marques as $item){
             echo $item . " and";
         }
     }
