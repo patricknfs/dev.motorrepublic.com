@@ -83,8 +83,8 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
-        $xml = simplexml_load_string($data);
-        print_r($xml);
+
+        print $data->asXML()
         $marques = new SimpleXMLElement($data);
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
@@ -92,7 +92,7 @@ try
         echo "<pre>";
             print_r($data);
         echo"</pre>";
-        foreach($data['Table'] as $key => $item){
+        foreach($data as $key => $item){
             echo $item[0] . " and";
         }
     }
