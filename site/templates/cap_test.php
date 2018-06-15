@@ -89,8 +89,10 @@ try
         echo "<pre>";
             print_r($xml);
         echo"</pre>";
-        foreach($xml as $key => $item){
-            echo $item[0] . " and";
+        $data   = simplexml_load_string($xml);
+        $marques  = $data->package->diffgram->NewDataSet->Table;
+        foreach($marques as $key => $item){
+            echo $item[0] . " and" . £item[1];
         }
     }
 
