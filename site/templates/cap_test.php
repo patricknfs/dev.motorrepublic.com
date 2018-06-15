@@ -84,7 +84,7 @@ try
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
 
-        $xml = simplexml_load_string($data);
+        $xml = simplexml_load_string($client->__getLastResponse());
         echo "<pre>";
             print_r($xml);
         echo"</pre>";
