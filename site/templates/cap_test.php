@@ -85,10 +85,9 @@ try
         $data = $client->__getLastResponse();
 
         $xml = simplexml_load_string($data);
-        print_r($xml);
-        // echo "Response:\n" . $client->__getLastResponse() . "\n";
-        // var_dump($data);
-        // $data_array = objectToArray($data);
+        echo "<pre>";
+            print_r($xml);
+        echo"</pre>";
         echo "<pre>";
             print_r($data);
         echo"</pre>";
