@@ -84,8 +84,8 @@ try
         $client->GetCapMan($params);
         // return($result);
         // print_r($result);
-        // var_dump($result);
-        $data = objectToArray($client);
+        var_dump($client;
+        // $data = objectToArray($client);
         echo "<pre>";print_r($data);echo"</pre>";
         foreach($data as $item){
             echo $item . " and";
