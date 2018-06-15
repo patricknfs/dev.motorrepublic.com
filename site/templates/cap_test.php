@@ -91,6 +91,7 @@ try
         echo"</pre>";
         $data   = simplexml_load_string($xml);
         $marques  = $data->package->diffgram->NewDataSet->Table;
+        print "We have " . count($marques) . " rooms: \n";
         foreach($marques as $key => $item){
             echo $item[0] . " and" . £item[1];
         }
