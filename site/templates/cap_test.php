@@ -94,14 +94,14 @@ try
         $marques  = $data->xpath('//Table');
         // print "We have " . count($marques) . " marques: \n";
         foreach($marques as $item){
-            echo $item->CMan_Code . " and " . $item->CMan_Name . "<br />";
+            echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
             $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
             $client->GetCapRange($range_params);
             $data_range = $client->__getLastResponse();
             $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
-            // echo "<pre>";
-            //     print_r($xml_range);
-            // echo"</pre>";
+            echo "<pre>";
+                print_r($xml_range);
+            echo"</pre>";
             $data_range = new SimpleXMLElement($xml_range);
             $ranges  = $data_range->xpath('//Table');
             foreach($ranges as $range){
