@@ -86,7 +86,7 @@ try
         // print_r($result);
         var_dump($client);
         // $data = objectToArray($client);
-        echo "<pre>";print_r($data);echo"</pre>";
+        echo "<pre>";print_r($client);echo"</pre>";
         foreach($data as $item){
             echo $item . " and";
         }
