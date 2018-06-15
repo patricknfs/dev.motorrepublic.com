@@ -84,6 +84,7 @@ try
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
         $marques = new SimpleXMLElement($data);
+        echo $marques->CMan_Name[0];
         // echo "Response:\n" . $client->__getLastResponse() . "\n";
         // var_dump($data);
         // $data_array = objectToArray($data);
