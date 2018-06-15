@@ -83,11 +83,13 @@ try
         $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
         $client->GetCapMan($params);
         $data = $client->__getLastResponse();
-
+        $xml    = str_replace(array("diffgr:","msdata:"),'', $data);
+        // Wrap into root element to make it standard XML
+        $xml    = "<package>".$xml."</package>";
         echo "<pre>";
-            print_r($data);
+            print_r($xml);
         echo"</pre>";
-        foreach($data as $key => $item){
+        foreach($xml as $key => $item){
             echo $item[0] . " and";
         }
     }
