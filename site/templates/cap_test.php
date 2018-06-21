@@ -115,9 +115,9 @@ try
                 echo"</pre>";
                 $data_mod = new SimpleXMLElement($xml_mod);
                 $models  = $data_mod->xpath('//Table');
-                foreach ($models AS $model){
-                    echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
-                }
+                // foreach ($models AS $model){
+                //     echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
+                // }
             }
         }
     }
