@@ -106,15 +106,15 @@ try
             $ranges  = $data_range->xpath('//Table');
             foreach($ranges as $range){
                 echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
-                $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => $item->CMan_Code, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-                $client->GetCapMod_IncludeOnRunout($mod_params);
-                $data_mod = $client->__getLastResponse();
-                $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
-                echo "<pre>";
-                    print_r($xml_mod);
-                echo"</pre>";
-                $data_mod = new SimpleXMLElement($xml_mod);
-                $models  = $data_mod->xpath('//Table');
+                // $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => $item->CMan_Code, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+                // $client->GetCapMod_IncludeOnRunout($mod_params);
+                // $data_mod = $client->__getLastResponse();
+                // $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
+                // echo "<pre>";
+                //     print_r($xml_mod);
+                // echo"</pre>";
+                // $data_mod = new SimpleXMLElement($xml_mod);
+                // $models  = $data_mod->xpath('//Table');
                 // foreach ($models AS $model){
                 //     echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
                 // }
