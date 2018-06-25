@@ -89,8 +89,8 @@ try
         echo"</pre>";
         // $data   = simplexml_load_string($xml);
         $data = new SimpleXMLElement($data);
-        $marques  = $data->xpath('//TableProducts');
-        // print "We have " . count($marques) . " marques: \n";
+        $products  = $data->xpath('//Products');
+        print "We have " . count($products) . " marques: \n";
         // foreach($marques as $item){
         //     echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
         //     $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
