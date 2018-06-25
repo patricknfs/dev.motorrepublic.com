@@ -84,10 +84,10 @@ try
       $client->List_AllSubscriberProducts($params);
       $data = $client->__getLastResponse();
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
+      $data = new SimpleXMLElement($data);
       echo "<pre>";
         print_r($data);
       echo"</pre>";
-      $data = new SimpleXMLElement($data);
       $products  = $data->xpath('//Products/*');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
