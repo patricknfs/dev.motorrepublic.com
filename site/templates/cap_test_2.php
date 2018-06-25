@@ -80,7 +80,7 @@ try
         $password = 'NfS4Je';
         
         $client = get_soap_client();
-        $params = array('subscriberId' => $username, 'password' => $password); //define your parameters here
+        $params = array('SubscriberId' => $username, 'Password' => $password); //define your parameters here
         $client->List_AllSubscriberProducts($params);
         $data = $client->__getLastResponse();
         $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
