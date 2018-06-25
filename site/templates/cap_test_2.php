@@ -88,7 +88,7 @@ try
         print_r($data);
       echo"</pre>";
       $data = new SimpleXMLElement($data);
-      $nodes = $xpath->query('//Products/@*');
+      $nodes = $data->query('//Products/@*');
 
       foreach ($nodes as $node) {
           echo $node->nodeName ." :  ". $node->nodeValue ."<br>";
