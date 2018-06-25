@@ -85,19 +85,15 @@ try
         $data = $client->__getLastResponse();
         // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
         echo "<pre>";
-            print_r($data);
+          print_r($data);
         echo"</pre>";
-        // $data   = simplexml_load_string($xml);
+        $data   = simplexml_load_string($data);
         $data = new SimpleXMLElement($data);
         $products  = $data->xpath('//Products');
-        print "We have " . count($products) . " marques: \n";
-        // foreach($marques as $item){
-        //     echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
-        //     $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-        //     $client->GetCapRange_IncludeOnRunout($range_params);
-        //     $data_range = $client->__getLastResponse();
-        //     $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
-        // }
+        print "We have " . count($products) . " products: \n";
+        foreach($products as $item){
+          echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
+        }
     }
 
     catch(Exception $e){ 
