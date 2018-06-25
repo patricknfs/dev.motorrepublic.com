@@ -76,24 +76,25 @@ function get_soap_client(){
 
 try
     {   
-        $username = '173210';
-        $password = 'NfS4Je';
-        
-        $client = get_soap_client();
-        $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
-        $client->List_AllSubscriberProducts($params);
-        $data = $client->__getLastResponse();
-        // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-        echo "<pre>";
-          print_r($data);
-        echo"</pre>";
-        // $data   = simplexml_load_string($data);
-        $data = new SimpleXMLElement($data);
-        $products  = $data->xpath('//Product');
-        print "We have " . count($products) . " products: \n";
-        foreach($products as $item){
-          echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
-        }
+      $username = '173210';
+      $password = 'NfS4Je';
+      
+      $client = get_soap_client();
+      $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
+      $client->List_AllSubscriberProducts($params);
+      $data = $client->__getLastResponse();
+      // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
+      echo "<pre>";
+        print_r($data);
+      echo"</pre>";
+      // $data   = simplexml_load_string($data);
+      $data = new SimpleXMLElement($data);
+      echo $data->asXML();
+      $products  = $data->xpath('//Product');
+      print "We have " . count($products) . " products: \n";
+      foreach($products as $item){
+        echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
+      }
     }
 
     catch(Exception $e){ 
