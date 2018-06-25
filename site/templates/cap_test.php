@@ -105,7 +105,7 @@ try
             $data_range = new SimpleXMLElement($xml_range);
             $ranges  = $data_range->xpath('//Table');
             foreach($ranges as $range){
-                echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
+                // echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
                 $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => true, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
                 $client->GetCapMod_IncludeOnRunout($mod_params);
                 // $data_mod = $client->__getLastResponse();
