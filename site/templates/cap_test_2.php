@@ -89,11 +89,9 @@ try
       echo"</pre>";
       // $data   = simplexml_load_string($data);
       $data = new SimpleXMLElement($data);
-      echo $data->asXML();
       $products  = $data->xpath('//Products');
-      print "We have " . count($products) . " products: \n";
       foreach($data as $item){
-        echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
+        echo "Code: " . $item->ProductID . "<br />";
       }
     }
 
