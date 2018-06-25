@@ -88,7 +88,7 @@ try
         print_r($data);
       echo"</pre>";
       $data = new SimpleXMLElement($data);
-      $products  = $data->xpath('//Products');
+      $products  = $data->xpath('//Products/*');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
         echo "Code: " . $item->ProductID . "<br />";
