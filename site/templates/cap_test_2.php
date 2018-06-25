@@ -88,7 +88,7 @@ try
       echo "<pre>";
         print_r($data);
       echo"</pre>";
-      $products  = $data->xpath('//Products/*');
+      $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
         echo "Code: " . $item->ProductID . "<br />";
