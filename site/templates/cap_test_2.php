@@ -87,8 +87,8 @@ try
       // echo "<pre>";
       //   print_r($data);
       // echo"</pre>";
-      $data   = simplexml_load_string($client);
-      $data = new SimpleXMLElement($data);
+      // $data   = simplexml_load_string($client);
+      $data = new SimpleXMLElement($client);
       $products  = $data->xpath('//Product[ProductID=552]');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
