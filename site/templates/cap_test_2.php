@@ -88,8 +88,10 @@ try
         print_r($data);
       echo"</pre>";
       $data = new SimpleXMLElement($data);
-      while(list( , $node) = each($data)) {
-          echo $node,"\n";
+      $nodes = $xpath->query('//Products/@*');
+
+      foreach ($nodes as $node) {
+          echo $node->nodeName ." :  ". $node->nodeValue ."<br>";
       }
       $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
