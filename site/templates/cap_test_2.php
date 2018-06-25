@@ -82,12 +82,12 @@ try
       $client = get_soap_client();
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $client->List_AllSubscriberProducts($params);
-      $data = $client->__getLastResponse();
+      // $data = $client->__getLastResponse();
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
       echo "<pre>";
         print_r($data);
       echo"</pre>";
-      $data = new SimpleXMLElement($data);
+      $data = new SimpleXMLElement($client);
       $products  = $data->xpath('//Product[ProductID=552]');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
