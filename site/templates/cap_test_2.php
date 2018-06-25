@@ -87,11 +87,10 @@ try
       echo "<pre>";
         print_r($data);
       echo"</pre>";
-      $xml = simplexml_load_file($data);
-echo '<pre>';
-print_r($xml);
-      // $data   = simplexml_load_string($data);
       $data = new SimpleXMLElement($data);
+      while(list( , $node) = each($data)) {
+          echo $node,"\n";
+      }
       $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
