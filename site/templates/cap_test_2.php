@@ -75,7 +75,7 @@ function get_soap_client(){
 }
 
 try
-    {   
+    {
       $username = '173210';
       $password = 'NfS4Je';
       
@@ -87,9 +87,9 @@ try
       echo "<pre>";
         print_r($data);
       echo"</pre>";
-      // $data   = simplexml_load_string($data);
+      $data   = simplexml_load_string($data);
       $data = new SimpleXMLElement($data);
-      $products  = $data->xpath('//Table');
+      $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
         echo "Code: " . $item->ProductID . "<br />";
