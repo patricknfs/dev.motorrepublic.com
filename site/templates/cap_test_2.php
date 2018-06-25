@@ -84,9 +84,9 @@ try
       $client->List_AllSubscriberProducts($params);
       // $data = $client->__getLastResponse();
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      echo "<pre>";
-        print_r($data);
-      echo"</pre>";
+      // echo "<pre>";
+      //   print_r($data);
+      // echo"</pre>";
       $data = new SimpleXMLElement($client);
       $products  = $data->xpath('//Product[ProductID=552]');
       print "We have " . count($products) . " products: \n";
