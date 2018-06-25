@@ -25,9 +25,9 @@ function AddWSSUsernameToken($client, $username, $password)
     $wssNamespace = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd";
 
     $username = new SoapVar($username, 
-        XSD_STRING, 
-        null, null, 
-        'subscriberId', 
+        XSD_STRING,
+        null, null,
+        'subscriberId',
         $wssNamespace);
 
     $password = new SoapVar($password, 
@@ -110,9 +110,9 @@ try
                 $client->GetCapMod_IncludeOnRunout($mod_params);
                 $data_mod = $client->__getLastResponse();
                 $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
-                echo "<pre>";
-                    print_r($xml_mod);
-                echo"</pre>";
+                // echo "<pre>";
+                //     print_r($xml_mod);
+                // echo"</pre>";
                 // $data_mod = new SimpleXMLElement($xml_mod);
                 // $models  = $data_mod->xpath('//Table');
                 // foreach ($models AS $model){
