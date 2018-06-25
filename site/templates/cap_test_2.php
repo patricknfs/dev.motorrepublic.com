@@ -92,7 +92,7 @@ try
       echo $data->asXML();
       $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
-      foreach($products as $item){
+      foreach($data as $item){
         echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
       }
     }
