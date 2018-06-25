@@ -88,7 +88,7 @@ try
             print_r($data);
         echo"</pre>";
         // $data   = simplexml_load_string($xml);
-        $data = new SimpleXMLElement($xml);
+        $data = new SimpleXMLElement($data);
         $marques  = $data->xpath('//TableProducts');
         // print "We have " . count($marques) . " marques: \n";
         // foreach($marques as $item){
