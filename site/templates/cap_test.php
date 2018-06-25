@@ -107,7 +107,7 @@ try
             foreach($ranges as $range){
                 echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
                 $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => $item->CMan_Code, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-                $client->GetCapMod_IncludeOnRunout($mod_params);
+                // $client->GetCapMod_IncludeOnRunout($mod_params);
                 // $data_mod = $client->__getLastResponse();
                 // $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
                 // echo "<pre>";
