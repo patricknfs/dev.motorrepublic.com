@@ -81,7 +81,7 @@ try
         
         $client = get_soap_client();
         $params = array('subscriberId' => $username, 'password' => $password); //define your parameters here
-        $client->GetCapMan($params);
+        $client->List_AllSubscriberProducts($params);
         $data = $client->__getLastResponse();
         $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
         echo "<pre>";
