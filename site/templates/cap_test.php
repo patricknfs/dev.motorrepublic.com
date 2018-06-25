@@ -99,9 +99,9 @@ try
             $client->GetCapRange_IncludeOnRunout($range_params);
             $data_range = $client->__getLastResponse();
             $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
-            // echo "<pre>";
-            //     print_r($xml_range);
-            // echo"</pre>";
+            echo "<pre>";
+                print_r($xml_range);
+            echo"</pre>";
             $data_range = new SimpleXMLElement($xml_range);
             $ranges  = $data_range->xpath('//Table');
             foreach($ranges as $range){
