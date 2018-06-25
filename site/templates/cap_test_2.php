@@ -88,12 +88,11 @@ try
         print_r($data);
       echo"</pre>";
       $data = new SimpleXMLElement($data);
-      // $nodes = $data->query('//Products/@*');
-
-      // foreach ($nodes as $node) {
-      //     echo $node->nodeName ." :  ". $node->nodeValue ."<br>";
-      // }
-      $products  = $data->xpath('//Products/@*');
+      $nodes = $data->query('//Products/@*');
+      foreach ($nodes as $node) {
+          echo $node->nodeName ." :  ". $node->nodeValue ."<br>";
+      }
+      $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
         echo "Code: " . $item->ProductID . "<br />";
