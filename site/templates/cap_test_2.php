@@ -83,13 +83,13 @@ try
         $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
         $client->List_AllSubscriberProducts($params);
         $data = $client->__getLastResponse();
-        $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
+        // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
         echo "<pre>";
-            print_r($xml);
+            print_r($data);
         echo"</pre>";
         // $data   = simplexml_load_string($xml);
         $data = new SimpleXMLElement($xml);
-        $marques  = $data->xpath('//Table');
+        $marques  = $data->xpath('//TableProducts');
         // print "We have " . count($marques) . " marques: \n";
         // foreach($marques as $item){
         //     echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
