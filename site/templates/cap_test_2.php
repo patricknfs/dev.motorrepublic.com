@@ -86,6 +86,7 @@ try
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
       $data = new SimpleXMLElement($result);
+      echo $data->Products->Product[0]->ProductName;
       echo "<pre>";
         var_dump($data);
       echo"</pre>";
