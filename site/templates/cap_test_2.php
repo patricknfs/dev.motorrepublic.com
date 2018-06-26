@@ -90,6 +90,7 @@ try
         var_dump($data);
       echo"</pre>";
       $products  = $data->xpath('//Products');
+      $array = json_decode(json_encode((array)$products), TRUE); 
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
         echo "Code: " . $item->ProductID . "<br />";
