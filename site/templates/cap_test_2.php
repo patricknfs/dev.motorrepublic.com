@@ -89,14 +89,12 @@ try
       echo "<pre>";
         var_dump($data);
       echo"</pre>";
-      $products  = $data->xpath('//Products');
-      print "We have " . count($products) . " products. \n";
-      foreach($products as $key => $item){
+      foreach($data->xpath('//Products') as $key => $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
     }
 
     catch(Exception $e){ 
-        echo $e->getCode(). '<br />'. $e->getMessage();
+      echo $e->getCode(). '<br />'. $e->getMessage();
     }
 ?>
