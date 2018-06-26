@@ -64,7 +64,7 @@ function get_soap_client(){
         'soap_version'=>SOAP_1_2,
         'cache_wsdl'=>WSDL_CACHE_NONE,
         'connection_timeout'=>15,
-        'trace'=>true,
+        'trace'=>1,
         'encoding'=>'UTF-8',
         'exceptions'=>true,
     );
