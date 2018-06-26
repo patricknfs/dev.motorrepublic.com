@@ -89,7 +89,7 @@ try
       echo "<pre>";
         var_dump($data);
       echo"</pre>";
-      $products  = $data->xpath('//Products');
+      $products  = $data->xpath('List_AllSubscriberProductsResponse');
       print "We have " . count($products) . " products: \n";
       foreach($products as $item){
         echo "Code: " . $item->ProductID . "<br />";
