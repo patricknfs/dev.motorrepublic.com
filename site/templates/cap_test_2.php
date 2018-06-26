@@ -83,11 +83,11 @@ try
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $client->List_AllSubscriberProducts($params);
       $result = $client->__getLastResponse();
-    //   echo "Response:\n" . $client->__getLastResponse() . "\n";
+      // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
       $data = simplexml_load_string($result);
       echo "<pre>";
-        print_r($data);
+        var_dump($data);
       echo"</pre>";
       $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
@@ -100,4 +100,3 @@ try
         echo $e->getCode(). '<br />'. $e->getMessage();
     }
 ?>
-mail://99b7cbd17ae512c547653149b81b174b34d4fd55/https://www.diamondbranded.co.uk/component/resetpassword/
