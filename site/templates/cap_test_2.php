@@ -87,7 +87,7 @@ try
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
       $data = new SimpleXMLElement($result);
       echo "<pre>";
-        print_r($result);
+        print_r($data);
       echo"</pre>";
       $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products: \n";
