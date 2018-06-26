@@ -85,7 +85,7 @@ try
       $result = $client->__getLastResponse();
     //   echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($result);
+      $data = new simplexml_load_string($result);
       echo "<pre>";
         print_r($data);
       echo"</pre>";
@@ -100,3 +100,4 @@ try
         echo $e->getCode(). '<br />'. $e->getMessage();
     }
 ?>
+mail://99b7cbd17ae512c547653149b81b174b34d4fd55/https://www.diamondbranded.co.uk/component/resetpassword/
