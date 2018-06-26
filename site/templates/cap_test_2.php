@@ -91,7 +91,7 @@ try
       echo"</pre>";
       $products  = $data->xpath('//Products');
       print "We have " . count($products) . " products. \n";
-      foreach($products as $key, $item){
+      foreach($products as $key => $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
     }
