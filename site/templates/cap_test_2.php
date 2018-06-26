@@ -85,13 +85,13 @@ try
       $result = $client->__getLastResponse();
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($client);
+      $data = new SimpleXMLElement($result);
       print_r($data);
       echo $data->xpath('//Products/Product[0]/ProductName');
       echo "<pre>";
         var_dump($data);
       echo"</pre>";
-      foreach($data->xpath('//Products') as $key => $item){
+      foreach($data->{'Products'} as $key => $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
     }
