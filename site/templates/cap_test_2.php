@@ -90,11 +90,8 @@ try
         var_dump($data);
       echo"</pre>";
       $products  = $data->xpath('//Products');
-      foreach($products->products->product as $key => $product){
-        echo $product->product_name;
-    }
       print "We have " . count($products) . " products. \n";
-      foreach($products as $item){
+      foreach($products as $key, $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
     }
