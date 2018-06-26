@@ -91,7 +91,7 @@ try
       echo"</pre>";
       $products  = $data->xpath('//Products');
       $array = json_decode(json_encode((array)$products), TRUE); 
-      print "We have " . count($products) . " products: \n";
+      print "We have " . count($array) . " products: \n";
       foreach($array as $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
