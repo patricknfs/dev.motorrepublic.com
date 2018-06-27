@@ -83,15 +83,12 @@ try
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $client->List_AllSubscriberProducts($params);
       $result = $client->__getLastResponse();
+      echo "<pre>";
+        var_dump($result);
+      echo"</pre>";
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-    //   $data = new SimpleXMLElement($result);
-      $data = simplexml_load_string($result);
-
-foreach($data->Products as $product) {
-    $id = (string) $product['ProductID'];
-    echo $id;
-}
+      $data = new SimpleXMLElement($result);
       echo "<pre>";
         var_dump($data);
       echo"</pre>";
