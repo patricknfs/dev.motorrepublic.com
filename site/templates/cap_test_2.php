@@ -84,11 +84,11 @@ try
       $clients->List_AllSubscriberProducts($params);
       $result = $clients->__getLastResponse();
       echo "<pre>";
-        var_dump($result);
+        print_r($result);
       echo"</pre>";
       $xml = simplexml_load_string($result);
       echo "<pre>";
-        print_r($result);
+        print_r($xml);
       echo"</pre>";
       foreach($xml->Products as $key => $item){
         echo "Code: " . $item->Productid . "<br />";
