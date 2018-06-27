@@ -87,7 +87,7 @@ try
       echo "<pre>";
         print_r($result);
       echo"</pre>";
-      $xml = simplexml_load_string($result);
+    //   $xml = simplexml_load_string($result);
       libxml_use_internal_errors(true);//load if improperly formatted
       $xml = new DOMDocument();
   if ($xml->load($result))
