@@ -88,8 +88,8 @@ try
       echo"</pre>";
       $xml = simplexml_load_string($result);
       $xml->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
-      foreach($xml->xpath('//r:Products') as $key => $item){
-        echo "Code: " . $item->ProductID . "<br />";
+      foreach($xml->xpath('//r:products') as $key => $item){
+        echo "Code: " . $item->productid . "<br />";
       }
     }
     catch(SoapFault $fault){
