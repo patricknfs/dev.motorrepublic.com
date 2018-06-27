@@ -84,10 +84,8 @@ try
       $client->List_AllSubscriberProducts($params);
       $result = $client->__getLastResponse();
       echo "<pre>";
-        var_dump($result);
+        var_dump(array($result));
       echo"</pre>";
-      // echo "Response:\n" . $client->__getLastResponse() . "\n";
-      // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
       $data = simplexml_load_string($result);
       echo "<pre>";
         var_dump($data->children());
