@@ -91,7 +91,7 @@ try
       
       if ($xml !== false) {
           echo "Successfully loaded the XML" . PHP_EOL;
-          print "Message: " . $xml->products->productID . PHP_EOL;
+          print "Message: " . $xml->products->product->productID . PHP_EOL;
       }
       else{
           echo "Failed loading the XML" . PHP_EOL;
