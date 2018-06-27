@@ -92,7 +92,8 @@ try
       if ($xml !== false) {
           echo "Successfully loaded the XML" . PHP_EOL;
           print "Message: " . $xml->xpath("//products")->product->productid . PHP_EOL;
-      }
+          print_r($xml->children());
+        }
       else{
           echo "Failed loading the XML" . PHP_EOL;
           foreach(libxml_get_errors() as $error) {
