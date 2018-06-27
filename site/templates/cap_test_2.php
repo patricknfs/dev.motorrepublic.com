@@ -86,7 +86,7 @@ try
       libxml_use_internal_errors(true);
 
       $xml = simplexml_load_string($result);
-      var_dump($xml); this will output the xml object just fine
+      var_dump($xml); //this will output the xml object just fine
       
       if ($xml !== false) {
           echo "Successfuly loaded the XML" . PHP_EOL;
