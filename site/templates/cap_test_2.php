@@ -88,6 +88,7 @@ try
         print_r($result);
       echo"</pre>";
       $xml = simplexml_load_string($result);
+      $xml->asXML("out.xml");
       echo "<pre>";
         print_r($xml);
       echo"</pre>";
