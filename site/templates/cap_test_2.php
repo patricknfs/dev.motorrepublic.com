@@ -83,18 +83,33 @@ try
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $clients->List_AllSubscriberProducts($params);
       $result = $clients->__getLastResponse();
-     
-      echo "<pre>";
-        print_r($result);
-      echo"</pre>";
+      libxml_use_internal_errors(true);
+
       $xml = simplexml_load_string($result);
-    //   $xml = $xml->asXML();
-      echo "<pre>";
-        print_r($xml);
-      echo"</pre>";
-      foreach($xml->Products as $key => $item){
-        echo "Code: " . $item->Productid . "<br />";
+      // var_dump($xml); this will output the xml object just fine
+      
+      if ($xml !== false) {
+          echo "Successfuly loaded the XML" . PHP_EOL;
+          print "Message: " . $xml->ResultMessage . PHP_EOL;
+          print "Utility code: " . $xml->UtilityInfo->UtilityCode . PHP_EOL;
+          print "Bill Amount: " . $xml->BillInfo->Bill->Amount . PHP_EOL;
       }
+      else{
+          echo "Failed loading the XML" . PHP_EOL;
+          foreach(libxml_get_errors() as $error) {
+              echo "\t", $error->message;
+          }
+      }
+    //   echo "<pre>";
+    //     print_r($result);
+    //   echo"</pre>";
+    //   $xml = simplexml_load_string($result);
+    //   echo "<pre>";
+    //     print_r($xml);
+    //   echo"</pre>";
+    //   foreach($xml->Products as $key => $item){
+    //     echo "Code: " . $item->Productid . "<br />";
+    //   }
     }
     catch(SoapFault $fault){
         $error      =   "SOAP Fault: (faultcode: {$fault->faultcode}\n" ."faultstring: {$fault->faultstring})"; 
