@@ -85,7 +85,12 @@ try
       $result = $client->__getLastResponse();
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($result);
+    //   $data = new SimpleXMLElement($result);
+      $data = simplexml_load_string($result);
+
+foreach($sxe->Products as $product) {
+    $id = (string) $product['ProductID'];
+}
       echo "<pre>";
         var_dump($data);
       echo"</pre>";
