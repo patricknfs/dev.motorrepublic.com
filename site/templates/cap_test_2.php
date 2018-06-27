@@ -88,9 +88,9 @@ try
       echo"</pre>";
       $xml = simplexml_load_string($result);
       echo "<pre>";
-        print_r($xml);
+        print_r($xml->Products);
       echo"</pre>";
-      foreach($xml->xpath('//products') as $key => $item){
+      foreach($xml->Products as $key => $item){
         echo "Code: " . $item->productid . "<br />";
       }
     }
