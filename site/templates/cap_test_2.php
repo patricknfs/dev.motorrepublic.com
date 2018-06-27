@@ -85,7 +85,7 @@ try
       $result = $clients->__getLastResponse();
       libxml_use_internal_errors(true);
 
-      $xml = simplexml_load_string($result);
+      $xml = simplexml_load_string($clients);
       var_dump($xml); //this will output the xml object just fine
       
       if ($xml !== false) {
