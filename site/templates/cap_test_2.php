@@ -87,7 +87,7 @@ try
 
       $xml = simplexml_load_string($result);
       
-      var_dump($xml->asXML()); //this will output the xml object just fine
+      var_dump($xml; //this will output the xml object just fine
       
       if ($xml !== false) {
           echo "Successfully loaded the XML" . PHP_EOL;
