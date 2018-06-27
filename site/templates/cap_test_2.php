@@ -87,7 +87,7 @@ try
         var_dump($result);
       echo"</pre>";
       $xml = simplexml_load_string($result);
-    //   $xml->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
+      $xml->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
       foreach($xml->xpath('//r:Products') as $key => $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
