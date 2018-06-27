@@ -83,19 +83,20 @@ try
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $clients->List_AllSubscriberProducts($params);
       $result = $clients->__getLastResponse();
-      libxml_use_internal_errors(true);//load if improperly formatted
-        $xml = new DOMDocument();
-    if ($xml->load($result))
-    {
-        $xml->save("out.xml");
-    }
-    else {
-        echo "The return data was not xml";
-    }
+     
       echo "<pre>";
         print_r($result);
       echo"</pre>";
       $xml = simplexml_load_string($result);
+      libxml_use_internal_errors(true);//load if improperly formatted
+      $xml = new DOMDocument();
+  if ($xml->load($result))
+  {
+      $xml->save("out.xml");
+  }
+  else {
+      echo "The return data was not xml";
+  }
       echo "<pre>";
         print_r($xml);
       echo"</pre>";
