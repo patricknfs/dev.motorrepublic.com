@@ -86,8 +86,8 @@ try
       echo "<pre>";
         var_dump($result);
       echo"</pre>";
-      $data->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
-      foreach($data->xpath('//r:Products') as $key => $item){
+      $result->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
+      foreach($result->xpath('//r:Products') as $key => $item){
         echo "Code: " . $item->ProductID . "<br />";
       }
     }
