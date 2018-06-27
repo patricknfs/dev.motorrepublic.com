@@ -94,7 +94,7 @@ try
           print "Message: " . $xml->xpath("//products")->product->productid . PHP_EOL;
           print_r($xml->children());
           foreach($xml->children() AS $thing){
-              print_r $thing;
+              print_r($thing);
           }
         }
       else{
