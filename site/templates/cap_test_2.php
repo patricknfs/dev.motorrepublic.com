@@ -84,11 +84,11 @@ try
       $client->List_AllSubscriberProducts($params);
       $result = $client->__getLastResponse();
       echo "<pre>";
-        var_dump(array($result));
+        var_dump($result);
       echo"</pre>";
       $data = simplexml_load_string($result);
       echo "<pre>";
-        var_dump($data->children());
+        var_dump($data);
       echo"</pre>";
       $data->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
       echo "<pre>";
