@@ -91,7 +91,7 @@ try
         print_r($xml->Products);
       echo"</pre>";
       foreach($xml->Products as $key => $item){
-        echo "Code: " . $item->productid . "<br />";
+        echo "Code: " . $item->Productid . "<br />";
       }
     }
     catch(SoapFault $fault){
