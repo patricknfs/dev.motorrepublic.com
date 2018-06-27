@@ -86,7 +86,7 @@ try
       echo "<pre>";
         var_dump($result);
       echo"</pre>";
-      $xml = simplexml_load_string($result);
+      $xml = simplexml_load_file($result);
     //   $xml->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
       echo "<pre>";
         var_dump($xml->xpath('//products'));
