@@ -79,14 +79,14 @@ try
       $username = '173210';
       $password = 'NfS4Je';
       
-      $client = get_soap_client();
+      $clients = get_soap_client();
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
-      $client->List_AllSubscriberProducts($params);
-      $result = $client->__getLastResponse();
+      $clients->List_AllSubscriberProducts($params);
+      $result = $clients->__getLastResponse();
       echo "<pre>";
         var_dump($result);
       echo"</pre>";
-      $xml = simplexml_load_file($result);
+      $xml = simplexml_load_string($result);
     //   $xml->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
       echo "<pre>";
         var_dump($xml->xpath('//products'));
