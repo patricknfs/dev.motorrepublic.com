@@ -90,7 +90,7 @@ try
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
       $data = simplexml_load_string($result);
       echo "<pre>";
-        var_dump($data);
+        var_dump($data->children());
       echo"</pre>";
       $data->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
       echo "<pre>";
