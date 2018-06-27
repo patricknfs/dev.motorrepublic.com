@@ -88,7 +88,7 @@ try
       echo"</pre>";
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($client->children());
+      $data = new SimpleXMLElement($client);
       echo "<pre>";
         var_dump($data->children());
       echo"</pre>";
