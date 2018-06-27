@@ -82,13 +82,13 @@ try
       $client = get_soap_client();
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $client->List_AllSubscriberProducts($params);
-    //   $result = $client->__getLastResponse();
+      // $result = $client->__getLastResponse();
       echo "<pre>";
         var_dump($result);
       echo"</pre>";
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($client);
+      $data = new SimpleXMLElement($client->children());
       echo "<pre>";
         var_dump($data->children());
       echo"</pre>";
