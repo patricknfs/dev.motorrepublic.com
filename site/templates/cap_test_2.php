@@ -88,7 +88,7 @@ try
       echo"</pre>";
       // echo "Response:\n" . $client->__getLastResponse() . "\n";
       // $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($result);
+      $data = simplexml_load_string($result);
       $data->registerXPathNamespace('r', 'https://soap.cap.co.uk/DataDownload/DataDownload_Webservice.asmx');
       echo "<pre>";
         var_dump($data->xpath('//r:Products'));
