@@ -88,7 +88,7 @@ try
     //   $data = new SimpleXMLElement($result);
       $data = simplexml_load_string($result);
 
-foreach($sxe->Products as $product) {
+foreach($data->Products as $product) {
     $id = (string) $product['ProductID'];
 }
       echo "<pre>";
