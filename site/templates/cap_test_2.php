@@ -93,6 +93,9 @@ try
           echo "Successfully loaded the XML" . PHP_EOL;
           print "Message: " . $xml->xpath("//products")->product->productid . PHP_EOL;
           print_r($xml->children());
+          foreach($xml->children() AS $thing){
+              print_r $thing;
+          }
         }
       else{
           echo "Failed loading the XML" . PHP_EOL;
