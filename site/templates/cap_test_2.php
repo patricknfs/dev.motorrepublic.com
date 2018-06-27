@@ -90,7 +90,7 @@ try
       var_dump($xml); //this will output the xml object just fine
       
       if ($xml !== false) {
-          echo "Successfuly loaded the XML" . PHP_EOL;
+          echo "Successfully loaded the XML" . PHP_EOL;
           print "Message: " . $xml->products->productID . PHP_EOL;
       }
       else{
