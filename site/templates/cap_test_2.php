@@ -84,7 +84,7 @@ try
       $clients->List_AllSubscriberProducts($params);
       $result = $clients->__getLastResponse();
       echo "<pre>";
-        print_r($result[0]);
+        print_r($result[1]);
       echo"</pre>";
       $xml = simplexml_load_string($result);
       echo "<pre>";
