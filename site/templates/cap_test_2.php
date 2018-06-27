@@ -82,12 +82,11 @@ try
       $clients = get_soap_client();
       $params = array('SubscriberID' => $username, 'Password' => $password); //define your parameters here
       $clients->List_AllSubscriberProducts($params);
-      var_dump($response);
       $result = $clients->__getLastResponse();
       libxml_use_internal_errors(true);
 
       $xml = simplexml_load_string($result);
-      var_dump($response);
+      
       var_dump($xml); //this will output the xml object just fine
       
       if ($xml !== false) {
