@@ -100,7 +100,10 @@ try
         echo "Code: " . $item->ProductID . "<br />";
       }
     }
-
+    catch(SoapFault $fault){
+        $error      =   "SOAP Fault: (faultcode: {$fault->faultcode}\n" ."faultstring: {$fault->faultstring})"; 
+        echo $error;
+    }
     catch(Exception $e){ 
       echo $e->getCode(). '<br />'. $e->getMessage();
     }
