@@ -90,6 +90,7 @@ try
 
 foreach($data->Products as $product) {
     $id = (string) $product['ProductID'];
+    echo $id;
 }
       echo "<pre>";
         var_dump($data);
