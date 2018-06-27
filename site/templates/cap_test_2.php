@@ -88,7 +88,7 @@ try
       echo"</pre>";
       $xml = simplexml_load_string($result);
       echo "<pre>";
-        print_r($xml->Products);
+        print_r($xml->list_allsubscriberproductsresult);
       echo"</pre>";
       foreach($xml->Products as $key => $item){
         echo "Code: " . $item->Productid . "<br />";
