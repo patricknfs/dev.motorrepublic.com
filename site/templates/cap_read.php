@@ -14,23 +14,21 @@ $AdminMessage = "MR CSV Upload Report\n";
 // Now open the local file and loop through it.
 $row = 1;
 if (($handle = fopen("/cap_cars.csv", "r")) !== FALSE) {
-    fgets($handle);
+  fgets($handle);
 
-    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    	// print_r($data);
-      $num = count($data);
-      TRUNCATE TABLE `team`.`vehicles`;
-      INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model``description`) VALUES (" . $data[0] . "," . $data[1] . "," . $data[2] . "," . $data[4] . "," . $data[8] . " );
-				$result2->close();
-			}
-			else{
-				$AdminMessage .= "No rows inserted\n";
-			}
-      $row++;
-    }
-    mail($adminEmail,"Dootet - Affilired Commission Monitor",$AdminMessage,"From: Dootet Server");
-    fclose($handle);
-    $AdminMessage .= $num . " rows inserted\n";
+  while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+    // print_r($data);
+    $num = count($data);
+    $truncate = "TRUNCATE TABLE `team`.`vehicles`";
+    $results = mysqli_query($conn, $truncate);
+    $result->close();
+    $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model``description`) VALUES (" . $data[0] . "," . $data[1] . "," . $data[2] . "," . $data[4] . "," . $data[8] . ")";
+    $result2->close();
+    $row++;
+  }
+  $AdminMessage .= $num . " rows inserted\n";
+  mail($adminEmail,"Dootet - Affilired Commission Monitor",$AdminMessage,"From: Dootet Server");
+  fclose($handle);
 }
 else {
 	mail($adminEmail,"Problem - MR cap vehicle csv upload","The csv update has failed for some reason","From: MR Server");
