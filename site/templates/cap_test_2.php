@@ -88,7 +88,7 @@ try
       $xml = simplexml_load_string($result);
       
       var_dump($xml); //this will output the xml object just fine
-      
+      print $data->asXML()
       if ($xml !== false) {
           echo "Successfully loaded the XML" . PHP_EOL;
           print "Message: " . $xml->xpath("//Products")->Product->ProductID . PHP_EOL;
