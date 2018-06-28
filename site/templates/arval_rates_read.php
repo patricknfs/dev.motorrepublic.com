@@ -27,10 +27,10 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     $row++;
   }
   $AdminMessage .= $num . " rows inserted\n";
-  mail($adminEmail,"MR Upload Monitor",$AdminMessage,"From: MR Server");
+  mail($adminEmail,"MR Arval Upload Monitor",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
 else {
-	mail($adminEmail,"Problem - MR cap vehicle csv upload","The csv update has failed for some reason","From: MR Server");
+	mail($adminEmail,"Problem - MR arval rates csv upload","The csv upload has failed for some reason","From: MR Server");
 }
 $conn->close();
