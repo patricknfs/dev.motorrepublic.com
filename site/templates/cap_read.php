@@ -13,7 +13,7 @@ $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR CSV Upload Report\n";
 // Now open the local file and loop through it.
 $row = 1;
-if (($handle = fopen("/cap_cars.csv", "r")) !== FALSE) {
+if (($handle = fopen("cap_cars.csv", "r")) !== FALSE) {
   fgets($handle);
 
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
