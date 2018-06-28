@@ -4,7 +4,7 @@ $http_host = getenv('HTTP_HOST');
 switch($http_host){
   case('dev.motorrepublic.com') :
     define("MR_DB_USERNAME", 'teamplayer');
-    define("MR_DB_PASSWORD", 'Mx664#nn0~');
+    define("MR_DB_PASSWORD", 'Mx446#nn0~');
     define("MR_DB_SERVER", "localhost");
     define("MR_DB_DATABASE", "team");
     define("MR_PATH", "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates");
@@ -12,7 +12,7 @@ switch($http_host){
 
   default :
     define("MR_DB_USERNAME", 'teamplayer');
-    define("MR_DB_PASSWORD", 'Mx664#nn0~');
+    define("MR_DB_PASSWORD", 'Mx446#nn0~');
     define("MR_DB_SERVER", "localhost");
     define("MR_DB_DATABASE", "team");
     define("MR_PATH", "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates");
