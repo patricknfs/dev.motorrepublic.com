@@ -14,7 +14,6 @@ $AdminMessage = "MR CSV Upload Report\n";
 // Now open the local file and loop through it.
 $truncate = "TRUNCATE TABLE `team`.`vehicles`";
 $result = mysqli_query($conn, $truncate);
-$result->close();
 $row = 1;
 if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   fgets($handle);
