@@ -22,6 +22,7 @@ if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
     // print_r($data);
     $num = count($data);
     $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model``description`) VALUES (" . $data[0] . "," . $data[1] . "," . $data[2] . "," . $data[4] . "," . $data[8] . ")";
+    echo $insert . "<br />";
     $result2 = mysqli_query($conn, $insert);
     $conn->close();
     $row++;
