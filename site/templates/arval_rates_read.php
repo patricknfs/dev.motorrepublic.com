@@ -21,9 +21,11 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     print_r($data);
     $num = count($data);
-    $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
-    echo $insert . "<br />";
-    // $result2 = mysqli_query($conn, $insert);
+    if($row > 3){
+      $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
+      echo $insert . "<br />";
+      // $result2 = mysqli_query($conn, $insert);
+    }
     $row++;
   }
   $AdminMessage .= $num . " rows inserted\n";
