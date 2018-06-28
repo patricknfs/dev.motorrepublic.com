@@ -6,7 +6,7 @@ switch($http_host){
     define("MR_DB_USERNAME", 'teamplayer');
     define("MR_DB_PASSWORD", 'Mx664#nn0~');
     define("MR_DB_SERVER", "localhost");
-    define("MR_DB_DATABASE", "vehicles");
+    define("MR_DB_DATABASE", "team");
     define("MR_PATH", "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates");
     break;
 
@@ -14,7 +14,7 @@ switch($http_host){
     define("MR_DB_USERNAME", 'teamplayer');
     define("MR_DB_PASSWORD", 'Mx664#nn0~');
     define("MR_DB_SERVER", "localhost");
-    define("MR_DB_DATABASE", "vehicles");
+    define("MR_DB_DATABASE", "team");
     define("MR_PATH", "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates");
     break;
 }
