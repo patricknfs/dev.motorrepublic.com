@@ -12,22 +12,22 @@ require_once(MR_PATH . "/inc/conn.php");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR CSV Upload Report\n";
 // Now open the local file and loop through it.
-$truncate = "TRUNCATE TABLE `team`.`vehicles`";
-$result = mysqli_query($conn, $truncate);
+$truncate = "TRUNCATE TABLE `team`.`rates_arval`";
+// $result = mysqli_query($conn, $truncate);
 $row = 1;
-if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
+if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fgets($handle);
 
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // print_r($data);
+    print_r($data);
     $num = count($data);
     $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
     // echo $insert . "<br />"
-    $result2 = mysqli_query($conn, $insert);
+    // $result2 = mysqli_query($conn, $insert);
     $row++;
   }
   $AdminMessage .= $num . " rows inserted\n";
-  mail($adminEmail,"Dootet - Affilired Commission Monitor",$AdminMessage,"From: Dootet Server");
+  mail($adminEmail,"MR Upload Monitor",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
 else {
