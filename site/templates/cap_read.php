@@ -9,32 +9,18 @@ require_once(MR_PATH . "/inc/conn.php");
 
 //Open local file to write to
 // $fp = fopen("/var/www/vhosts/dootet.com/stats.dootet.com/data/affilired.csv", "w");
-
+$adminEmail = "patrick.ogorman@nationalfleetservices.net";
+$AdminMessage = "MR CSV Upload Report\n";
 // Now open the local file and loop through it.
 $row = 1;
-if (($handle = fopen("/affilired.csv", "r")) !== FALSE) {
+if (($handle = fopen("/cap_cars.csv", "r")) !== FALSE) {
     fgets($handle);
 
     while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     	// print_r($data);
       $num = count($data);
-      if($data[9] == "Pending"){
-				$query = "UPDATE `brains`.`clicks` SET `trans_date` = '" . ared2mysql($data[5]) . "', `booking_date` = '" . ared2mysql($data[12]) . "', `sale_value` = `sale_value` + " . $data[7] . ", `comm` = `comm` + " . $data[6] . ", `sales_number` = `sales_number`+1 WHERE `id` = '" . $data[4] . "' LIMIT 1";
-				echo $query . "\n\r";
-				$results = mysqli_query($conn, $query);
-			}
-			elseif ($data[9] == "Cancelled") {
-				$select_query = "SELECT `comm` FROM `brains`.`clicks` WHERE `id` = " . $data[4] . " LIMIT 1"; 
-				$result2 = mysqli_query($conn2, $select_query);
-				$value = mysqli_fetch_object($result2);
-				if ($data[6] <= $value->comm) {
-					$query = "UPDATE `brains`.`clicks` SET `trans_date` = '" . ared2mysql($data[10]) . "', `booking_date` = '0000-00-00 00:00:00', `sale_value` = `sale_value` - " . $data[7] . ", `comm` = `comm` - " . $data[6] . ", `sales_number` = `sales_number`-1 WHERE `id` = '" . $data[4] . "' LIMIT 1";
-					echo $query . "\n\r";
-					$results = mysqli_query($conn2, $query);
-				}
-				else{
-					echo "Check click id " . $data[4] . " for correct cancellation information. Should have been ordered and cancelled the same day";
-				}
+      TRUNCATE `team`.`vehicles`;
+      INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model``description`) VALUES (" . $data[0] . "," . $data[1] . "," . $data[2] . "," . $data[4] . "," . $data[8] . " );
 				$result2->close();
 			}
 			else{
@@ -44,7 +30,8 @@ if (($handle = fopen("/affilired.csv", "r")) !== FALSE) {
     }
     mail($adminEmail,"Dootet - Affilired Commission Monitor",$AdminMessage,"From: Dootet Server");
     fclose($handle);
+    $AdminMessage .= $num . " rows inserted\n";
 }
 else {
-	mail($adminEmail,"Problem - Dootet - Affilired Commission Monitor","The commission update has failed for some reason","From: Dootet Server");
+	mail($adminEmail,"Problem - MR cap vehicle csv upload","The csv update has failed for some reason","From: MR Server");
 }
