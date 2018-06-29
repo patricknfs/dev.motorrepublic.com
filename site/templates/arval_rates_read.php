@@ -25,7 +25,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
     if($row > 3){
-      $update = "REPLACE INTO `team`.`rates_arval`
+      $update = "INSERT INTO `team`.`rates_arval`
         (
         `cap_id`,
         `updated`,
