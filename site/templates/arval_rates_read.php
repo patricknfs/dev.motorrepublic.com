@@ -22,7 +22,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     // print_r($data);
     $num = count($data);
     if($row > 3){
-      $insert = "INSERT INTO `team`.`rates_arval`
+      $insert = "REPLACE INTO `team`.`rates_arval`
         (`id`,
         `cap_id`,
         `updated`,
@@ -59,7 +59,6 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         `60_30K_PA_rental`,
         `60_30K_PA_service`)
         VALUES
-        (<{id: }>,
         <{cap_id:" . $data[4] . " }>,
         <{updated: NOW() }>,
         <{24_8K_PA_rental:" . $data[8] . "  }>,
