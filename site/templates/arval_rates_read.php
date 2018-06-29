@@ -93,8 +93,9 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         <{60_20K_PA_service:" . $data[51] . "  }>,
         <{60_30K_PA_rental:" . $data[53] . "  }>,
         <{60_30K_PA_service:" . $data[54] . "  }>)
-        ON DUPLICATE KEY UPDATE
-          `cap_id` = " . $data[4] . ";
+        // ON DUPLICATE KEY UPDATE
+        //   `cap_id` = " . $data[4] . "
+        ;
       ";
       echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
