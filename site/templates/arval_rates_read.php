@@ -18,7 +18,7 @@ $row = 1;
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fgets($handle);
 
-  while ($data = fgetcsv($handle, 0, ",") !== FALSE) {
+  while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
     $num = count($data);
     if($row > 3){
