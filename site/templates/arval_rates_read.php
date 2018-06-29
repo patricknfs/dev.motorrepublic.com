@@ -10,16 +10,16 @@ require_once(MR_PATH . "/inc/conn.php");
 //Open local file to write to
 // $fp = fopen("/var/www/vhosts/dootet.com/stats.dootet.com/data/affilired.csv", "w");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
-$AdminMessage = "MR CSV Upload Report\n";
+$AdminMessage = "MR Arval CSV Upload Report\n";
 // Now open the local file and loop through it.
-$truncate = "TRUNCATE TABLE `team`.`rates_arval`";
+// $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
 // $result = mysqli_query($conn, $truncate);
 $row = 1;
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fgets($handle);
 
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // print_r($data);
+    print_r($data);
     $num = count($data);
     if($row > 3){
       $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
@@ -33,6 +33,6 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fclose($handle);
 }
 else {
-	mail($adminEmail,"Problem - MR arval rates csv upload","The csv upload has failed for some reason","From: MR Server");
+	mail($adminEmail,"Problem - MR Arval rates csv upload","The csv upload has failed for some reason","From: MR Server");
 }
 $conn->close();
