@@ -24,7 +24,6 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     $data = preg_replace('/\s+/', '', $rawdata);
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
-
     if($row > 3){
       $update = "REPLACE INTO `team`.`rates_arval`
         (
@@ -65,38 +64,38 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         VALUES (
         " . $data[4] . ",
         NOW(),
-        " . str_replace('£','',$data[8]) . ",
-        " . str_replace('£','',$data[9]) . ",
-        " . str_replace('£','',$data[11]) . ",
-        " . str_replace('£','',$data[12]) . ",
-        " . str_replace('£','',$data[14]) . ",
-        " . str_replace('£','',$data[15]) . ",
-        " . str_replace('£','',$data[17]) . ",
-        " . str_replace('£','',$data[18]) . ",
-        " . str_replace('£','',$data[20]) . ",
-        " . str_replace('£','',$data[21]) . ",
-        " . str_replace('£','',$data[23]) . ",
-        " . str_replace('£','',$data[24]) . ",
-        " . str_replace('£','',$data[26]) . ",
-        " . str_replace('£','',$data[27]) . ",
-        " . str_replace('£','',$data[29]) . ",
-        " . str_replace('£','',$data[30]) . ",
-        " . str_replace('£','',$data[32]) . ",
-        " . str_replace('£','',$data[33]) . ",
-        " . str_replace('£','',$data[35]) . ",
-        " . str_replace('£','',$data[36]) . ",
-        " . str_replace('£','',$data[38]) . ",
-        " . str_replace('£','',$data[39]) . ",
-        " . str_replace('£','',$data[41]) . ",
-        " . str_replace('£','',$data[42]) . ",
-        " . str_replace('£','',$data[44]) . ",
-        " . str_replace('£','',$data[45]) . ",
-        " . str_replace('£','',$data[47]) . ",
-        " . str_replace('£','',$data[48]) . ",
-        " . str_replace('£','',$data[50]) . ",
-        " . str_replace('£','',$data[51]) . ",
-        " . str_replace('£','',$data[53]) . ",
-        " . str_replace('£','',$data[54]) . ")
+        " . $data[8] . ",
+        " . $data[9] . ",
+        " . $data[11] . ",
+        " . $data[12] . ",
+        " . $data[14] . ",
+        " . $data[15] . ",
+        " . $data[17] . ",
+        " . $data[18] . ",
+        " . $data[20] . ",
+        " . $data[21] . ",
+        " . $data[23] . ",
+        " . $data[24] . ",
+        " . $data[26] . ",
+        " . $data[27] . ",
+        " . $data[29] . ",
+        " . $data[30] . ",
+        " . $data[32] . ",
+        " . $data[33] . ",
+        " . $data[35] . ",
+        " . $data[36] . ",
+        " . $data[38] . ",
+        " . $data[39] . ",
+        " . $data[41] . ",
+        " . $data[42] . ",
+        " . $data[44] . ",
+        " . $data[45] . ",
+        " . $data[47] . ",
+        " . $data[48] . ",
+        " . $data[50] . ",
+        " . $data[51] . ",
+        " . $data[53] . ",
+        " . $data[54] . ")
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[4] . "
         ;
