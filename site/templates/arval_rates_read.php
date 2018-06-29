@@ -12,8 +12,8 @@ require_once(MR_PATH . "/inc/conn.php");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Arval CSV Upload Report\n";
 // Now open the local file and loop through it.
-// $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
-// $result = mysqli_query($conn, $truncate);
+$truncate = "TRUNCATE TABLE `team`.`rates_arval`";
+$result = mysqli_query($conn, $truncate);
 $row = 1;
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fgets($handle);
@@ -22,7 +22,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     // print_r($data);
     $num = count($data);
     if($row > 3){
-      $insert = "REPLACE INTO `team`.`rates_arval`
+      $$update = "REPLACE INTO `team`.`rates_arval`
         (`id`,
         `cap_id`,
         `updated`,
@@ -96,8 +96,8 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         ON DUPLICATE KEY UPDATE
           cap_id = $data[4];
       ";
-      echo $insert . "<br />";
-      // $result2 = mysqli_query($conn, $insert);
+      echo $update . "<br />";
+      $result2 = mysqli_query($conn, $update);
     }
     $row++;
   }
