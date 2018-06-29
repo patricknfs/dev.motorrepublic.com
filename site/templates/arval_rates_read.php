@@ -20,7 +20,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
 
   while ((str_replace('£','',$data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r(str_replace('£','',$data);
-    $num = count(str_replace('£','',$data);
+    $num = count($data);
     if($row > 3){
       $update = "REPLACE INTO `team`.`rates_arval`
         (
