@@ -22,7 +22,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     // print_r($data);
     $num = count($data);
     if($row > 3){
-      $$update = "REPLACE INTO `team`.`rates_arval`
+      $update = "REPLACE INTO `team`.`rates_arval`
         (`id`,
         `cap_id`,
         `updated`,
