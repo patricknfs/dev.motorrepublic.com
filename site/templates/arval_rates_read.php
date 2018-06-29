@@ -94,7 +94,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         <{60_30K_PA_rental:" . $data[53] . "  }>,
         <{60_30K_PA_service:" . $data[54] . "  }>)
         ON DUPLICATE KEY UPDATE
-          cap_id = $data[8];
+          cap_id = $data[4];
       ";
       echo $insert . "<br />";
       // $result2 = mysqli_query($conn, $insert);
