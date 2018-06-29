@@ -65,38 +65,38 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         VALUES (
         " . $data[4] . ",
         NOW(),
-        " . str_replace('£','',$data[8]) . ";
-        " . str_replace('£','',$data[9]) . ";
-        " . str_replace('£','',$data[11]) . ";
-        " . str_replace('£','',$data[12]) . ";
-        " . str_replace('£','',$data[14]) . ";
-        " . str_replace('£','',$data[15]) . ";
-        " . str_replace('£','',$data[17]) . ";
-        " . str_replace('£','',$data[18]) . ";
-        " . str_replace('£','',$data[20]) . ";
-        " . str_replace('£','',$data[21]) . ";
-        " . str_replace('£','',$data[23]) . ";
-        " . str_replace('£','',$data[24]) . ";
-        " . str_replace('£','',$data[26]) . ";
-        " . str_replace('£','',$data[27]) . ";
-        " . str_replace('£','',$data[29]) . ";
-        " . str_replace('£','',$data[30]) . ";
-        " . str_replace('£','',$data[32]) . ";
-        " . str_replace('£','',$data[33]) . ";
-        " . str_replace('£','',$data[35]) . ";
-        " . str_replace('£','',$data[36]) . ";
-        " . str_replace('£','',$data[38]) . ";
-        " . str_replace('£','',$data[39]) . ";
-        " . str_replace('£','',$data[41]) . ";
-        " . str_replace('£','',$data[42]) . ";
-        " . str_replace('£','',$data[44]) . ";
-        " . str_replace('£','',$data[45]) . ";
-        " . str_replace('£','',$data[47]) . ";
-        " . str_replace('£','',$data[48]) . ";
-        " . str_replace('£','',$data[50]) . ";
-        " . str_replace('£','',$data[51]) . ";
-        " . str_replace('£','',$data[53]) . ";
-        " . str_replace('£','',$data[54]) . "')
+        " . str_replace('£','',$data[8]) . ",
+        " . str_replace('£','',$data[9]) . ",
+        " . str_replace('£','',$data[11]) . ",
+        " . str_replace('£','',$data[12]) . ",
+        " . str_replace('£','',$data[14]) . ",
+        " . str_replace('£','',$data[15]) . ",
+        " . str_replace('£','',$data[17]) . ",
+        " . str_replace('£','',$data[18]) . ",
+        " . str_replace('£','',$data[20]) . ",
+        " . str_replace('£','',$data[21]) . ",
+        " . str_replace('£','',$data[23]) . ",
+        " . str_replace('£','',$data[24]) . ",
+        " . str_replace('£','',$data[26]) . ",
+        " . str_replace('£','',$data[27]) . ",
+        " . str_replace('£','',$data[29]) . ",
+        " . str_replace('£','',$data[30]) . ",
+        " . str_replace('£','',$data[32]) . ",
+        " . str_replace('£','',$data[33]) . ",
+        " . str_replace('£','',$data[35]) . ",
+        " . str_replace('£','',$data[36]) . ",
+        " . str_replace('£','',$data[38]) . ",
+        " . str_replace('£','',$data[39]) . ",
+        " . str_replace('£','',$data[41]) . ",
+        " . str_replace('£','',$data[42]) . ",
+        " . str_replace('£','',$data[44]) . ",
+        " . str_replace('£','',$data[45]) . ",
+        " . str_replace('£','',$data[47]) . ",
+        " . str_replace('£','',$data[48]) . ",
+        " . str_replace('£','',$data[50]) . ",
+        " . str_replace('£','',$data[51]) . ",
+        " . str_replace('£','',$data[53]) . ",
+        " . str_replace('£','',$data[54]) . ")
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[4] . "
         ;
