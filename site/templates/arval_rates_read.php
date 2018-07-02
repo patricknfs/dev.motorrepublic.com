@@ -19,10 +19,10 @@ $result = mysqli_query($conn, $truncate);
 $row = 1;
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fgets($handle);
-
+  print_r($handle);
+  $num = count($handle);
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
-    print_r($rawdata);
-    $num = count($rawdata);
+    
     $data = preg_replace('/\s+/', '', $rawdata);
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
