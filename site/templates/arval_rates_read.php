@@ -21,7 +21,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   fgets($handle);
 
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // print_r($data);
+    print_r($data);
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
     $data = str_replace('£','',$data);
