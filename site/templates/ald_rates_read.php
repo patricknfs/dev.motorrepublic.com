@@ -1,10 +1,7 @@
 #!/usr/bin/php
 <?php
 
-// Arval ratebooks are standard 3 up front
-
-// 15K $ 25K need to be calculated. Make sure that values are indicated as nominal in out docs.
-// Calculated by adding rates before and after plus 10, then dividing by 2.
+// ALD ratebooks are standard 3 up front
 
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
@@ -13,12 +10,12 @@ require_once(MR_PATH . "/inc/conn.php");
 //Open local file to write to
 // $fp = fopen("/var/www/vhosts/dootet.com/stats.dootet.com/data/affilired.csv", "w");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
-$AdminMessage = "MR Arval CSV Upload Report\n";
+$AdminMessage = "MR ALD CSV Upload Report\n";
 // Now open the local file and loop through it.
-$truncate = "TRUNCATE TABLE `team`.`rates_arval`";
+$truncate = "TRUNCATE TABLE `team`.`rates_ald`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
+if (($handle = fopen("inc/ald_rates_cars.csv", "r")) !== FALSE) {
   // fgets($handle);
 
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
@@ -28,7 +25,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
     if($row > 3){
-      $update = "INSERT INTO `team`.`rates_arval`
+      $update = "INSERT INTO `team`.`rates_ald`
         (
         `cap_id`,
         `updated`,
@@ -83,18 +80,18 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         VALUES (
         " . $data[4] . ",
         NOW(),
-        " . $data[8]+3.85 . ",
-        " . $data[9]+3.85 . ",
-        " . $data[11]+3.85 . ",
-        " . $data[12]+3.85 . ",
-        " . ($data[11]+$data[14]+10+3.85)/2 . ",
-        " . ($data[12]+$data[15]+10+3.85)/2 . ",
-        " . $data[14]+3.85 . ",
-        " . $data[15]+3.85 . ",
-        " . ($data[14]+$data[17]+10+3.85)/2 . ",
-        " . ($data[15]+$data[18]+10+3.85)/2 . ",
-        " . $data[17]+3.85 . ",
-        " . $data[18]+3.85 . ",
+        " . $data[8] . ",
+        " . $data[9] . ",
+        " . $data[11] . ",
+        " . $data[12] . ",
+        " . ($data[11]+$data[14]+10)/2 . ",
+        " . ($data[12]+$data[15]+10)/2 . ",
+        " . $data[14] . ",
+        " . $data[15] . ",
+        " . ($data[14]+$data[17]+10)/2 . ",
+        " . ($data[15]+$data[18]+10)/2 . ",
+        " . $data[17] . ",
+        " . $data[18] . ",
         # End of 24M
         " . $data[20] . ",
         " . $data[21] . ",
@@ -144,10 +141,10 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
     $row++;
   }
   $AdminMessage .= $num . " rows inserted\n";
-  mail($adminEmail,"MR Arval Upload Monitor",$AdminMessage,"From: MR Server");
+  mail($adminEmail,"MR ALD Upload Monitor",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
 else {
-	mail($adminEmail,"Problem - MR Arval rates csv upload","The csv upload has failed for some reason","From: MR Server");
+	mail($adminEmail,"Problem - MR ALD rates csv upload","The csv upload has failed for some reason","From: MR Server");
 }
 $conn->close();
