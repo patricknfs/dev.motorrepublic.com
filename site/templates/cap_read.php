@@ -15,7 +15,7 @@ $AdminMessage = "MR CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`vehicles`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-// Arval ratebooks are standard 3 up front
+
 if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   fgets($handle);
 
