@@ -82,8 +82,8 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         VALUES (
         " . $data[4] . ",
         NOW(),
-        " . $data[8] . ", // 8K
-        " . $data[9] . ", // 8K
+        " . $data[8] . ",
+        " . $data[9] . ",
         " . $data[11] . ",
         " . $data[12] . ",
         " . ($data[11]+$data[14])/2 . ",
@@ -94,7 +94,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[15]+$data[18])/2 . ",
         " . $data[17] . ",
         " . $data[18] . ",
-        // End of 24M
+        # End of 24M
         " . $data[20] . ",
         " . $data[21] . ",
         " . $data[23] . ",
@@ -107,7 +107,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[27]+$data[30])/2 . ",
         " . $data[29] . ",
         " . $data[30] . ",
-        // End of 36M
+        # End of 36M
         " . $data[32] . ",
         " . $data[33] . ",
         " . $data[35] . ",
@@ -120,7 +120,7 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[39]+$data[42])/2 . ",
         " . $data[41] . ",
         " . $data[42] . ",
-        // End of 48M
+        # End of 48M
         " . $data[44] . ",
         " . $data[45] . ",
         " . $data[47] . ",
