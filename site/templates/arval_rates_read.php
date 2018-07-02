@@ -126,8 +126,8 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . $data[39] . ",
         " . $data[38]+$data[41]/2 . ",
         " . $data[39]+$data[42]/2 . ",
-        " . $data[41]",
-        " . $data[42]",
+        " . $data[41] . ",
+        " . $data[42] . ",
         // End of 48M
         " . $data[44] . ",
         " . $data[45] . ",
