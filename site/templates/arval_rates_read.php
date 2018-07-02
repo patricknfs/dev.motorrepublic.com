@@ -3,7 +3,8 @@
 
 // Arval ratebooks are standard 3 up front
 
-// 12K, 15K $ 25K need to be calculated. Make sure that values are indicated as nominal in out docs.
+// 15K $ 25K need to be calculated. Make sure that values are indicated as nominal in out docs.
+// Calculated by adding rates before and after plus 10, then dividing by 2.
 
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
@@ -86,12 +87,12 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . $data[9] . ",
         " . $data[11] . ",
         " . $data[12] . ",
-        " . ($data[11]+$data[14]+5)/2 . ",
-        " . ($data[12]+$data[15]+5)/2 . ",
+        " . ($data[11]+$data[14]+10)/2 . ",
+        " . ($data[12]+$data[15]+10)/2 . ",
         " . $data[14] . ",
         " . $data[15] . ",
-        " . ($data[14]+$data[17]+5)/2 . ",
-        " . ($data[15]+$data[18]+5)/2 . ",
+        " . ($data[14]+$data[17]+10)/2 . ",
+        " . ($data[15]+$data[18]+10)/2 . ",
         " . $data[17] . ",
         " . $data[18] . ",
         # End of 24M
@@ -99,12 +100,12 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . $data[21] . ",
         " . $data[23] . ",
         " . $data[24] . ",
-        " . ($data[23]+$data[26]+5)/2 . ",
-        " . ($data[24]+$data[27]+5)/2 . ",
+        " . ($data[23]+$data[26]+10)/2 . ",
+        " . ($data[24]+$data[27]+10)/2 . ",
         " . $data[26] . ",
         " . $data[27] . ",
-        " . ($data[26]+$data[29]+5)/2 . ",
-        " . ($data[27]+$data[30]+5)/2 . ",
+        " . ($data[26]+$data[29]+10)/2 . ",
+        " . ($data[27]+$data[30]+10)/2 . ",
         " . $data[29] . ",
         " . $data[30] . ",
         # End of 36M
@@ -112,12 +113,12 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . $data[33] . ",
         " . $data[35] . ",
         " . $data[36] . ",
-        " . ($data[35]+$data[38]+5)/2 . ",
-        " . ($data[36]+$data[39]+5)/2 . ",
+        " . ($data[35]+$data[38]+10)/2 . ",
+        " . ($data[36]+$data[39]+10)/2 . ",
         " . $data[38] . ",
         " . $data[39] . ",
-        " . ($data[38]+$data[41]+5)/2 . ",
-        " . ($data[39]+$data[42]+5)/2 . ",
+        " . ($data[38]+$data[41]+10)/2 . ",
+        " . ($data[39]+$data[42]+10)/2 . ",
         " . $data[41] . ",
         " . $data[42] . ",
         # End of 48M
@@ -125,12 +126,12 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . $data[45] . ",
         " . $data[47] . ",
         " . $data[48] . ",
-        " . ($data[47]+$data[50]+5)/2  . ",
-        " . ($data[48]+$data[51]+5)/2  . ",
+        " . ($data[47]+$data[50]+10)/2  . ",
+        " . ($data[48]+$data[51]+10)/2  . ",
         " . $data[50] . ",
         " . $data[51] . ",
-        " . ($data[50]+$data[53]+5)/2 . ",
-        " . ($data[51]+$data[54]+5)/2 . ",
+        " . ($data[50]+$data[53]+10)/2 . ",
+        " . ($data[51]+$data[54]+10)/2 . ",
         " . $data[53] . ",
         " . $data[54] . ")
         ON DUPLICATE KEY UPDATE
