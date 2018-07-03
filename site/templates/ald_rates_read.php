@@ -37,7 +37,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           WHEN 60 THEN `60_8K_PA_rental` = " . $data[12] . ",`60_8K_PA_service` = " . ($data[12]-$data[11]) . ";
         END CASE)
         ON DUPLICATE KEY UPDATE
-          `cap_id` = " . $data[24] . ";
+          `cap_id` = " . $data[24];
         break;
       }
       echo $update . "<br />";
