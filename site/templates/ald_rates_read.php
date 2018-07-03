@@ -24,124 +24,144 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
-      $update = "INSERT INTO `team`.`rates_ald`
-        (
-        `cap_id`,
-        `updated`,
-        `24_8K_PA_rental`,
-        `24_8K_PA_service`,
-        `24_10K_PA_rental`,
-        `24_10K_PA_service`,
-        `24_15K_PA_rental`,
-        `24_15K_PA_service`,
-        `24_20K_PA_rental`,
-        `24_20K_PA_service`,
-        `24_25K_PA_rental`,
-        `24_25K_PA_service`,
-        `24_30K_PA_rental`,
-        `24_30K_PA_service`,
-        `36_8K_PA_rental`,
-        `36_8K_PA_service`,
-        `36_10K_PA_rental`,
-        `36_10K_PA_service`,
-        `36_15K_PA_rental`,
-        `36_15K_PA_service`,
-        `36_20K_PA_rental`,
-        `36_20K_PA_service`,
-        `36_25K_PA_rental`,
-        `36_25K_PA_service`,
-        `36_30K_PA_rental`,
-        `36_30K_PA_service`,
-        `48_8K_PA_rental`,
-        `48_8K_PA_service`,
-        `48_10K_PA_rental`,
-        `48_10K_PA_service`,
-        `48_15K_PA_rental`,
-        `48_15K_PA_service`,
-        `48_20K_PA_rental`,
-        `48_20K_PA_service`,
-        `48_25K_PA_rental`,
-        `48_25K_PA_service`,
-        `48_30K_PA_rental`,
-        `48_30K_PA_service`,
-        `60_8K_PA_rental`,
-        `60_8K_PA_service`,
-        `60_10K_PA_rental`,
-        `60_10K_PA_service`,
-        `60_15K_PA_rental`,
-        `60_15K_PA_service`,
-        `60_20K_PA_rental`,
-        `60_20K_PA_service`,
-        `60_25K_PA_rental`,
-        `60_25K_PA_service`,
-        `60_30K_PA_rental`,
-        `60_30K_PA_service`)
-        VALUES (
-        " . $data[24] . ",
-        NOW(),
-        " . if ($data[0] == 24){ . "
-          " . if (strpos($csv, '8k') !== false) $data[12] . ", #24_8K_PA_rental
-          " . if (strpos($csv, '8k') !== false) ($data[11]-$data[12]) . ", #24_8K_PA_service
-          " . $data[11] . ",
-          " . $data[12] . ",
-          " . ($data[11]+$data[14]+10)/2 . ",
-          " . ($data[12]+$data[15]+10)/2 . ",
-          " . $data[14] . ",
-          " . $data[15] . ",
-          " . ($data[14]+$data[17]+10)/2 . ",
-          " . ($data[15]+$data[18]+10)/2 . ",
-          " . $data[17] . ",
-          " . $data[18] . ",
-        " . } . "
-        # End of 24M
-        " . if ($data[0] == 36){ . "
-        " . $data[20] . ",
-        " . $data[21] . ",
-        " . $data[23] . ",
-        " . $data[24] . ",
-        " . ($data[23]+$data[26]+10)/2 . ",
-        " . ($data[24]+$data[27]+10)/2 . ",
-        " . $data[26] . ",
-        " . $data[27] . ",
-        " . ($data[26]+$data[29]+10)/2 . ",
-        " . ($data[27]+$data[30]+10)/2 . ",
-        " . $data[29] . ",
-        " . $data[30] . ",
-        " . } . "
-        # End of 36M
-        " . if ($data[0] == 48){ . "
-        " . $data[32] . ",
-        " . $data[33] . ",
-        " . $data[35] . ",
-        " . $data[36] . ",
-        " . ($data[35]+$data[38]+10)/2 . ",
-        " . ($data[36]+$data[39]+10)/2 . ",
-        " . $data[38] . ",
-        " . $data[39] . ",
-        " . ($data[38]+$data[41]+10)/2 . ",
-        " . ($data[39]+$data[42]+10)/2 . ",
-        " . $data[41] . ",
-        " . $data[42] . ",
-        " . } . "
-        # End of 48M
-        " . if ($data[0] == 60){ . "
-        " . $data[44] . ",
-        " . $data[45] . ",
-        " . $data[47] . ",
-        " . $data[48] . ",
-        " . ($data[47]+$data[50]+10)/2  . ",
-        " . ($data[48]+$data[51]+10)/2  . ",
-        " . $data[50] . ",
-        " . $data[51] . ",
-        " . ($data[50]+$data[53]+10)/2 . ",
-        " . ($data[51]+$data[54]+10)/2 . ",
-        " . $data[53] . ",
-        " . $data[54] . ")
-        " . } . "
+      switch($data[1]){
+        case: 8000:
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = $data[24],
+        `updated` = NOW()," .
+        switch($data[1]){
+          case 24:
+          . "`24_8K_PA_rental` = " . $data[12] . ",
+          "`24_8K_PA_service` = " . ($data[12]-$data[11]
+          break;
+          case 36:
+          . "`36_8K_PA_rental` = " . $data[12] . ",
+          "`36_8K_PA_service` = " . ($data[12]-$data[11]
+          break;
+          case 48:
+          . "`48_8K_PA_rental` = " . $data[12] . ",
+          "`48_8K_PA_service` = " . ($data[12]-$data[11]
+          break;
+          case 60:
+          . "`60_8K_PA_rental` = " . $data[12] . ",
+          "`60_8K_PA_service` = " . ($data[12]-$data[11]
+          break;
+        }
         ON DUPLICATE KEY UPDATE
-          `cap_id` = " . $data[4] . "
+          `cap_id` = " . $data[24] . "
         ;
-      ";
+      }
+      // $update = "INSERT INTO `team`.`rates_ald`
+      //   (
+      //   `cap_id`,
+      //   `updated`,
+      //   `24_10K_PA_rental`,
+      //   `24_10K_PA_service`,
+      //   `24_15K_PA_rental`,
+      //   `24_15K_PA_service`,
+      //   `24_20K_PA_rental`,
+      //   `24_20K_PA_service`,
+      //   `24_25K_PA_rental`,
+      //   `24_25K_PA_service`,
+      //   `24_30K_PA_rental`,
+      //   `24_30K_PA_service`,
+      //   `36_10K_PA_rental`,
+      //   `36_10K_PA_service`,
+      //   `36_15K_PA_rental`,
+      //   `36_15K_PA_service`,
+      //   `36_20K_PA_rental`,
+      //   `36_20K_PA_service`,
+      //   `36_25K_PA_rental`,
+      //   `36_25K_PA_service`,
+      //   `36_30K_PA_rental`,
+      //   `36_30K_PA_service`,
+      //   `48_10K_PA_rental`,
+      //   `48_10K_PA_service`,
+      //   `48_15K_PA_rental`,
+      //   `48_15K_PA_service`,
+      //   `48_20K_PA_rental`,
+      //   `48_20K_PA_service`,
+      //   `48_25K_PA_rental`,
+      //   `48_25K_PA_service`,
+      //   `48_30K_PA_rental`,
+      //   `48_30K_PA_service`,
+      //   `60_10K_PA_rental`,
+      //   `60_10K_PA_service`,
+      //   `60_15K_PA_rental`,
+      //   `60_15K_PA_service`,
+      //   `60_20K_PA_rental`,
+      //   `60_20K_PA_service`,
+      //   `60_25K_PA_rental`,
+      //   `60_25K_PA_service`,
+      //   `60_30K_PA_rental`,
+      //   `60_30K_PA_service`)
+      //   VALUES (
+      //   " . $data[24] . ",
+      //   NOW(),
+      //   " . if ($data[0] == 24){ . "
+      //     " . if ($data[1] == 8000) $data[12] . ", #24_8K_PA_rental
+      //     " . if (strpos($csv, '8k') !== false) ($data[11]-$data[12]) . ", #24_8K_PA_service
+      //     " . $data[11] . ",
+      //     " . $data[12] . ",
+      //     " . ($data[11]+$data[14]+10)/2 . ",
+      //     " . ($data[12]+$data[15]+10)/2 . ",
+      //     " . $data[14] . ",
+      //     " . $data[15] . ",
+      //     " . ($data[14]+$data[17]+10)/2 . ",
+      //     " . ($data[15]+$data[18]+10)/2 . ",
+      //     " . $data[17] . ",
+      //     " . $data[18] . ",
+      //   " . } . "
+      //   # End of 24M
+      //   " . if ($data[0] == 36){ . "
+      //   " . $data[20] . ",
+      //   " . $data[21] . ",
+      //   " . $data[23] . ",
+      //   " . $data[24] . ",
+      //   " . ($data[23]+$data[26]+10)/2 . ",
+      //   " . ($data[24]+$data[27]+10)/2 . ",
+      //   " . $data[26] . ",
+      //   " . $data[27] . ",
+      //   " . ($data[26]+$data[29]+10)/2 . ",
+      //   " . ($data[27]+$data[30]+10)/2 . ",
+      //   " . $data[29] . ",
+      //   " . $data[30] . ",
+      //   " . } . "
+      //   # End of 36M
+      //   " . if ($data[0] == 48){ . "
+      //   " . $data[32] . ",
+      //   " . $data[33] . ",
+      //   " . $data[35] . ",
+      //   " . $data[36] . ",
+      //   " . ($data[35]+$data[38]+10)/2 . ",
+      //   " . ($data[36]+$data[39]+10)/2 . ",
+      //   " . $data[38] . ",
+      //   " . $data[39] . ",
+      //   " . ($data[38]+$data[41]+10)/2 . ",
+      //   " . ($data[39]+$data[42]+10)/2 . ",
+      //   " . $data[41] . ",
+      //   " . $data[42] . ",
+      //   " . } . "
+      //   # End of 48M
+      //   " . if ($data[0] == 60){ . "
+      //   " . $data[44] . ",
+      //   " . $data[45] . ",
+      //   " . $data[47] . ",
+      //   " . $data[48] . ",
+      //   " . ($data[47]+$data[50]+10)/2  . ",
+      //   " . ($data[48]+$data[51]+10)/2  . ",
+      //   " . $data[50] . ",
+      //   " . $data[51] . ",
+      //   " . ($data[50]+$data[53]+10)/2 . ",
+      //   " . ($data[51]+$data[54]+10)/2 . ",
+      //   " . $data[53] . ",
+      //   " . $data[54] . ")
+      //   " . } . "
+      //   ON DUPLICATE KEY UPDATE
+      //     `cap_id` = " . $data[4] . "
+      //   ;
+      // ";
       echo $update . "<br />";
       // $result2 = mysqli_query($conn, $update);
     }
