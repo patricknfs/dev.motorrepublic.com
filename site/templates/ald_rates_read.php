@@ -28,8 +28,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 8000:
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = $data[24],
-        `updated` = NOW()," .
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
         switch($data[1]){
           case 24:
           . "`24_8K_PA_rental` = " . $data[12] . ",
