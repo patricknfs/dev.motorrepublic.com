@@ -24,6 +24,7 @@ $AdminMessage = "MR Arval CSV Upload Report\n";
 // $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
 // $result = mysqli_query($conn, $truncate);
 $row = 1;
+
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   // fgets($handle);
 

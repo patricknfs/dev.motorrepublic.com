@@ -1,4 +1,4 @@
 <?php
-// tools_main.php
+// kit_main.php
 ?>
 <?=$page->body?>

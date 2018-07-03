@@ -88,63 +88,12 @@ ERROR_REPORTING(E_ALL);
 		<div class="wrapper">
         <?=$page->main?>
 		</div>
-    <footer class="footer" role="contentinfo">
-      <div class="footer-logo">
-        <object data="<?=$config->urls->assets?>graphics/logo_small.svg" type="image/svg+xml">
-          <img src="<?=$config->urls->assets?>graphics/logo_small.png" alt="Motor Republic" title="Motor Republic"/>
-        </object>
-      </div>
-      <div class="footer-links">
-        <ul>
-          <!-- Begin MailChimp Signup Form -->
-          <div id="mc_embed_signup">
-          
-          </div>
-          <!--End mc_embed_signup-->
-        </ul>
-        <ul>
-          <li><h3>Content</h3></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/all-products/">Products</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><h3>Follow Us</h3></li>
-          <!-- <li><a href="javascript:void(0)">Facebook</a></li> -->
-          <li><a href="#">Twitter</a></li>
-          <!-- <li><a href="javascript:void(0)">YouTube</a></li> -->
-        </ul>
-        <ul>
-          <li>
+    <footer>
 
-          </li>
-        </ul>
-      </div>
-      <hr>
-      <div class="distribution">
-        <ul>
-          <li><img src="<?=$config->urls->assets?>graphics/logo_premier.png"></li>
-          <li><img src="<?=$config->urls->assets?>graphics/logo_asnu.png"></li>
-          <li><img src="<?=$config->urls->assets?>graphics/logo_advanced.png"></li>
-          <li><a href="http://www.isa-racing.com"><img src="<?=$config->urls->assets?>graphics/logo_isa-racing.png"></a></li>
-          <li><a href="http://www.demon-tweeks.co.uk"><img src="<?=$config->urls->assets?>graphics/logo_demon-tweaks.png"></a></li>
-        </ul>
-      </div>
     </footer>
     
     <?php
     
     ?>
 	</body>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-86844698-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-  <script type="text/javascript" src="<?=$config->urls->templates?>/js/foundation.min.js"></script>
 </html>
