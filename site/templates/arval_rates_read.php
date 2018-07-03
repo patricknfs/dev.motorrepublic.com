@@ -22,7 +22,7 @@ $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Arval CSV Upload Report\n";
 // Now open the local file and loop through it.
 // $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
-$result = mysqli_query($conn, $truncate);
+// $result = mysqli_query($conn, $truncate);
 $row = 1;
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
   // fgets($handle);
