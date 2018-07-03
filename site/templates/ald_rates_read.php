@@ -25,7 +25,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
       switch($data[1]){
-        case: 8000:
+        case 8000:
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = $data[24],
