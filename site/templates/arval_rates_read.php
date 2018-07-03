@@ -6,6 +6,12 @@
 // 15K $ 25K need to be calculated. Make sure that values are indicated as nominal in out docs.
 // Calculated by adding rates before and after plus 10, then dividing by 2.
 
+/*
+
+Do not forget to add in an extra £5 for non-maintained agreements. This has not been accounted for yet.
+
+*/
+
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
@@ -15,7 +21,7 @@ require_once(MR_PATH . "/inc/conn.php");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Arval CSV Upload Report\n";
 // Now open the local file and loop through it.
-$truncate = "TRUNCATE TABLE `team`.`rates_arval`";
+// $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
