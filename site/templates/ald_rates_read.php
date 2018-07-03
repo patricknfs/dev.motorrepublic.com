@@ -31,10 +31,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = 'test',
         `updated` = NOW(),
         CASE
-          WHEN 24 THEN `24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11]) . "
-          WHEN 36 THEN `36_8K_PA_rental` = " . $data[12] . ",`36_8K_PA_service` = " . ($data[12]-$data[11]) . "
-          WHEN 48 THEN `48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11]) . "
-          WHEN 60:THEN `60_8K_PA_rental` = " . $data[12] . ",`60_8K_PA_service` = " . ($data[12]-$data[11])
+          WHEN 24 THEN `24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11]) . ";
+          WHEN 36 THEN `36_8K_PA_rental` = " . $data[12] . ",`36_8K_PA_service` = " . ($data[12]-$data[11]) . ";
+          WHEN 48 THEN `48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11]) . ";
+          WHEN 60:THEN `60_8K_PA_rental` = " . $data[12] . ",`60_8K_PA_service` = " . ($data[12]-$data[11]);
         END CASE
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24] . "
