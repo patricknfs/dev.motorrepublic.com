@@ -38,8 +38,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         END CASE)
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24] . ";
+        break;
       }
-      echo $update;
+      echo $update . "<br />";
       // $result2 = mysqli_query($conn, $update);
     }
     $row++;
