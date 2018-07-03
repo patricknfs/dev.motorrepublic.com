@@ -15,16 +15,15 @@ $AdminMessage = "MR ALD CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`rates_ald`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-if (($handle = fopen("inc/ald_rates_cars.csv", "r")) !== FALSE) {
-  // fgets($handle);
-
+$csv = "inc/ald_rates_cars_8k.csv"
+if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
-    if($row > 3){
+    if($row > 2){
       $update = "INSERT INTO `team`.`rates_ald`
         (
         `cap_id`,
@@ -78,21 +77,24 @@ if (($handle = fopen("inc/ald_rates_cars.csv", "r")) !== FALSE) {
         `60_30K_PA_rental`,
         `60_30K_PA_service`)
         VALUES (
-        " . $data[4] . ",
+        " . $data[24] . ",
         NOW(),
-        " . $data[8] . ",
-        " . $data[9] . ",
-        " . $data[11] . ",
-        " . $data[12] . ",
-        " . ($data[11]+$data[14]+10)/2 . ",
-        " . ($data[12]+$data[15]+10)/2 . ",
-        " . $data[14] . ",
-        " . $data[15] . ",
-        " . ($data[14]+$data[17]+10)/2 . ",
-        " . ($data[15]+$data[18]+10)/2 . ",
-        " . $data[17] . ",
-        " . $data[18] . ",
+        " . if ($data[0] == 24){ . "
+          " . if (strpos($csv, '8k') !== false) $data[12] . ", #24_8K_PA_rental
+          " . if (strpos($csv, '8k') !== false) ($data[11]-$data[12]) . ", #24_8K_PA_service
+          " . $data[11] . ",
+          " . $data[12] . ",
+          " . ($data[11]+$data[14]+10)/2 . ",
+          " . ($data[12]+$data[15]+10)/2 . ",
+          " . $data[14] . ",
+          " . $data[15] . ",
+          " . ($data[14]+$data[17]+10)/2 . ",
+          " . ($data[15]+$data[18]+10)/2 . ",
+          " . $data[17] . ",
+          " . $data[18] . ",
+        " . } . "
         # End of 24M
+        " . if ($data[0] == 36){ . "
         " . $data[20] . ",
         " . $data[21] . ",
         " . $data[23] . ",
@@ -105,7 +107,9 @@ if (($handle = fopen("inc/ald_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[27]+$data[30]+10)/2 . ",
         " . $data[29] . ",
         " . $data[30] . ",
+        " . } . "
         # End of 36M
+        " . if ($data[0] == 48){ . "
         " . $data[32] . ",
         " . $data[33] . ",
         " . $data[35] . ",
@@ -118,7 +122,9 @@ if (($handle = fopen("inc/ald_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[39]+$data[42]+10)/2 . ",
         " . $data[41] . ",
         " . $data[42] . ",
+        " . } . "
         # End of 48M
+        " . if ($data[0] == 60){ . "
         " . $data[44] . ",
         " . $data[45] . ",
         " . $data[47] . ",
@@ -131,12 +137,13 @@ if (($handle = fopen("inc/ald_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[51]+$data[54]+10)/2 . ",
         " . $data[53] . ",
         " . $data[54] . ")
+        " . } . "
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[4] . "
         ;
       ";
       echo $update . "<br />";
-      $result2 = mysqli_query($conn, $update);
+      // $result2 = mysqli_query($conn, $update);
     }
     $row++;
   }
