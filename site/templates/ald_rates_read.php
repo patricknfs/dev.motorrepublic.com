@@ -30,6 +30,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `updated` = NOW(),
+        " . 
         switch($data[1]){
           case 24:
           . "`24_8K_PA_rental` = " . $data[12] . ",
