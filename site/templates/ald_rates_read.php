@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $truncate);
 $row = 1;
 $csv = "inc/ald_rates_cars_8k.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
-  while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
+  while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
     $num = count($data);
     if($row > 2){
