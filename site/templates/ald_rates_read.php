@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-echo "test";
+
 // ALD ratebooks are standard 3 up front
 
 date_default_timezone_set('CET');
@@ -40,6 +40,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
           break;
         }
+        
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = 'test',
