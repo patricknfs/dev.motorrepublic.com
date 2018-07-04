@@ -29,17 +29,18 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         switch($data[1]){
           case 24:
           $insert = "24_8K_PA_rental = " . $data[12] . ", 24_8K_PA_service = " . ($data[12]-$data[11]);
-          return;
+          break;
           case 36:
           $insert = "36_8K_PA_rental = " . $data[12] . ", 36_8K_PA_service = " . ($data[12]-$data[11]);
-          return;
+          break;
           case 48:
           $insert = "48_8K_PA_rental = " . $data[12] . ", 48_8K_PA_service = " . ($data[12]-$data[11]);
-          return;
+          b;reak
           case 60:
           $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
-          return;
+          break;
         }
+        return $insert;
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = 'test',
