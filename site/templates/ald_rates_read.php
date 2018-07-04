@@ -53,12 +53,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
-      // echo $update . "<br />";
+      echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
     }
     $row++;
   }
-  $AdminMessage .= $num . " rows inserted\n";
+  echo "number of rows is: " . $row;
+  $AdminMessage .= $row . " rows inserted\n";
   mail($adminEmail,"MR ALD Upload Monitor",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
