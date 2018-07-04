@@ -26,30 +26,29 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       switch($data[1]){
         case 8000:
+        switch($data[1]){
+          case 24:
+          $insert "`24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11];
+          return;
+          case 36:
+          $insert "`36_8K_PA_rental` = " . $data[12] . ", `36_8K_PA_service` = " . ($data[12]-$data[11];
+          return;
+          case 48:
+          $insert "`48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11];
+          return;
+          case 60:
+          $insert "`60_8K_PA_rental` = " . $data[12] . ", `60_8K_PA_service` = " . ($data[12]-$data[11];
+          return;
+        }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = 'test',
         `updated` = NOW(),
-        " .
-        switch($data[1]){
-          case 24:
-          echo "`24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11];
-          break;
-          case 36:
-          echo "`36_8K_PA_rental` = " . $data[12] . ", `36_8K_PA_service` = " . ($data[12]-$data[11];
-          break;
-          case 48:
-          echo "`48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11];
-          break;
-          case 60:
-          echo "`60_8K_PA_rental` = " . $data[12] . ", `60_8K_PA_service` = " . ($data[12]-$data[11];
-          break;
-        }
-        . "
+        " . $insert . "
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
-      echo $update . "<br />";
+      $insert $update . "<br />";
       // $result2 = mysqli_query($conn, $update);
     }
     $row++;
