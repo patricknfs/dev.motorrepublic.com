@@ -39,6 +39,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           case 60:
           $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
           break;
+          default:
+          echo "Nothing matched months parameter";
+          break;
         }
         
         $update = "INSERT INTO `team`.`rates_ald`
