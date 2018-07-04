@@ -26,7 +26,6 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       switch($data[1]){
         case 8000:
-        echo str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
           $insert = "`24_8K_PA_rental` = " . str_replace(',','',$data[12]) . ", `24_8K_PA_service` = " . (str_replace(',','',$data[12])-$data[11]);
@@ -52,8 +51,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
-      echo $update . "<br />";
-      // $result2 = mysqli_query($conn, $update);
+      // echo $update . "<br />";
+      $result2 = mysqli_query($conn, $update);
     }
     $row++;
   }
