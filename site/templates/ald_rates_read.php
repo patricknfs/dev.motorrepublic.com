@@ -28,23 +28,23 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 8000:
         switch($data[1]){
           case 24:
-          $insert = "`24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11] . ";
+          $insert = "24_8K_PA_rental = " . $data[12] . ", 24_8K_PA_service = " . ($data[12]-$data[11];
           return;
           case 36:
-          $insert = "`36_8K_PA_rental` = " . $data[12] . ", `36_8K_PA_service` = " . ($data[12]-$data[11] . ";
+          $insert = "36_8K_PA_rental = " . $data[12] . ", 36_8K_PA_service = " . ($data[12]-$data[11];
           return;
           case 48:
-          $insert = "`48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11] . ";
+          $insert = "48_8K_PA_rental = " . $data[12] . ", 48_8K_PA_service = " . ($data[12]-$data[11];
           return;
           case 60:
-          $insert = "`60_8K_PA_rental` = " . $data[12] . ", `60_8K_PA_service` = " . ($data[12]-$data[11] . ";
+          $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11];
           return;
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = 'test',
         `updated` = NOW(),
-        " . $insert . "
+        " . echo $insert . "
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
