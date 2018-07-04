@@ -30,7 +30,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = 'test',
         `updated` = NOW(),
-        . "
+        " .
         switch($data[1]){
           case 24:
           echo "`24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11];
@@ -45,7 +45,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           echo "`60_8K_PA_rental` = " . $data[12] . ", `60_8K_PA_service` = " . ($data[12]-$data[11];
           break;
         }
-        " .
+        . "
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
