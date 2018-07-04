@@ -17,24 +17,27 @@ $result = mysqli_query($conn, $truncate);
 $row = 1;
 $csv = "inc/ald_rates_cars_8k.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
-  while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+  while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
-    $num = count($data);
+    $num = count($rawdata);
+    $data = preg_replace('/\s+/', '', $rawdata);
+    $data = str_replace('£','',$data);
+    $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
       switch($data[1]){
         case 8000:
         switch($data[0]){
           case 24:
-          $insert = "`24_8K_PA_rental` = " . $data[12] . ", `24_8K_PA_service` = " . ($data[12]-$data[11]);
+          $insert = "`24_8K_PA_rental` = " . int($data[12]) . ", `24_8K_PA_service` = " . ($data[12]-$data[11]);
           break;
           case 36:
-          $insert = "36_8K_PA_rental = " . $data[12] . ", 36_8K_PA_service = " . ($data[12]-$data[11]);
+          $insert = "`36_8K_PA_rental` = " . $data[12] . ", `36_8K_PA_service` = " . ($data[12]-$data[11]);
           break;
           case 48:
-          $insert = "48_8K_PA_rental = " . $data[12] . ", 48_8K_PA_service = " . ($data[12]-$data[11]);
+          $insert = "`48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11]);
           break;
           case 60:
-          $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
+          $insert = "`60_8K_PA_rental` = " . $data[12] . ", `60_8K_PA_service` = " . ($data[12]-$data[11]);
           break;
           default:
           echo "no months defined";
