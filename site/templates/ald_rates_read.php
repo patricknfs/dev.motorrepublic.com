@@ -26,18 +26,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       switch($data[1]){
         case 8000:
+        $data11 = str_replace(',','',$data[11]);
+        $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
-          $insert = "`24_8K_PA_rental` = " . str_replace(',','',$data[12]) . ", `24_8K_PA_service` = " . (str_replace(',','',$data[12])-$data[11]);
+          $insert = "`24_8K_PA_rental` = " . $data12 . ", `24_8K_PA_service` = " . ($data12-($data11);
           break;
           case 36:
-          $insert = "`36_8K_PA_rental` = " . str_replace(',','',$data[12]) . ", `36_8K_PA_service` = " . (str_replace(',','',$data[12])-$data[11]);
+          $insert = "`36_8K_PA_rental` = " . $data12 . ", `36_8K_PA_service` = " . ($data12-($data11);
           break;
           case 48:
-          $insert = "`48_8K_PA_rental` = " . str_replace(',','',$data[12]) . ", `48_8K_PA_service` = " . (str_replace(',','',$data[12])-$data[11]);
+          $insert = "`48_8K_PA_rental` = " . $data12 . ", `48_8K_PA_service` = " . ($data12-($data11);
           break;
           case 60:
-          $insert = "`60_8K_PA_rental` = " . str_replace(',','',$data[12]) . ", `60_8K_PA_service` = " . (str_replace(',','',$data[12])-$data[11]);
+          $insert = "`60_8K_PA_rental` = " . $data12 . ", `60_8K_PA_service` = " . ($data12-($data11);
           break;
           default:
           echo "no months defined";
