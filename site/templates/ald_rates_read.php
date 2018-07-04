@@ -46,7 +46,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = 'test',
+        `cap_id` = " . $data[24] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
