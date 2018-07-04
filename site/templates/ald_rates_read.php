@@ -20,8 +20,6 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
     $num = count($rawdata);
-    $data = preg_replace('/\s+/', '', $rawdata);
-    $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
       switch($data[1]){
         case 8000:
