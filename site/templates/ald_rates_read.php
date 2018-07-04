@@ -44,7 +44,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = 'test',
         `updated` = NOW(),
-        " . echo $insert . "
+        " . $insert . "
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
