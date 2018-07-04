@@ -30,16 +30,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
-          $insert = "`24_8K_PA_rental` = " . $data12 . ", `24_8K_PA_service` = " . ($data12-($data11);
+          $insert = "`24_8K_PA_rental` = " . $data12 . ", `24_8K_PA_service` = " . ($data12-$data11);
           break;
           case 36:
-          $insert = "`36_8K_PA_rental` = " . $data12 . ", `36_8K_PA_service` = " . ($data12-($data11);
+          $insert = "`36_8K_PA_rental` = " . $data12 . ", `36_8K_PA_service` = " . ($data12-$data11);
           break;
           case 48:
-          $insert = "`48_8K_PA_rental` = " . $data12 . ", `48_8K_PA_service` = " . ($data12-($data11);
+          $insert = "`48_8K_PA_rental` = " . $data12 . ", `48_8K_PA_service` = " . ($data12-$data11);
           break;
           case 60:
-          $insert = "`60_8K_PA_rental` = " . $data12 . ", `60_8K_PA_service` = " . ($data12-($data11);
+          $insert = "`60_8K_PA_rental` = " . $data12 . ", `60_8K_PA_service` = " . ($data12-$data11);
           break;
           default:
           echo "no months defined";
