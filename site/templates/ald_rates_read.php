@@ -51,6 +51,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
         " . $insert . ";";
       }
       echo $update . "<br />";
