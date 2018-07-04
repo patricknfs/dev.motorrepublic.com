@@ -51,7 +51,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
-        " . $insert . ";
+        " . $insert . ";";
       }
       echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
