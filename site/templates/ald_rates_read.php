@@ -21,7 +21,6 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // print_r($data);
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
-    $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
       switch($data[1]){
