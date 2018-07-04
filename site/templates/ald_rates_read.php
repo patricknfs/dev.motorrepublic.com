@@ -26,7 +26,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       switch($data[1]){
         case 8000:
-        switch($data[0]){
+        switch($data[1]){
           case 24:
           $insert = "24_8K_PA_rental = " . $data[12] . ", 24_8K_PA_service = " . ($data[12]-$data[11]);
           break;
@@ -39,11 +39,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           case 60:
           $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
           break;
-          default:
-          echo "Nothing matched months parameter";
-          break;
         }
-        
+        return $insert;
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = 'test',
