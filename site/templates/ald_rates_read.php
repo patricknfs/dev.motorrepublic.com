@@ -26,7 +26,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       switch($data[1]){
         case 8000:
-        switch($data[1]){
+        switch($data[0]){
           case 24:
           $insert = "24_8K_PA_rental = " . $data[12] . ", 24_8K_PA_service = " . ($data[12]-$data[11]);
           break;
