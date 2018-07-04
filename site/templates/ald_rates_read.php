@@ -39,8 +39,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           case 60:
           $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
           break;
+          return $insert;
         }
-        return $insert;
+        
         $update = "INSERT INTO `team`.`rates_ald`
         SET
         `cap_id` = 'test',
