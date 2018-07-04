@@ -26,7 +26,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       switch($data[1]){
         case 8000:
-        switch($data[1]){
+        switch($data[0]){
           case 24:
           $insert = "24_8K_PA_rental = " . $data[12] . ", 24_8K_PA_service = " . ($data[12]-$data[11]);
           break;
@@ -39,6 +39,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           case 60:
           $insert = "60_8K_PA_rental = " . $data[12] . ", 60_8K_PA_service = " . ($data[12]-$data[11]);
           break;
+          default:
+          echo "no months defined";
+          break;
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
@@ -48,7 +51,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[24];
       }
-      $update . "<br />";
+      echo $update . "<br />";
       // $result2 = mysqli_query($conn, $update);
     }
     $row++;
