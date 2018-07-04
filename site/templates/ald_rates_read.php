@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-
+echo "test;"
 // ALD ratebooks are standard 3 up front
 
 date_default_timezone_set('CET');
