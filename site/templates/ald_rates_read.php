@@ -38,10 +38,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           case 36:
           echo "`36_8K_PA_rental` = " . $data[12] . ", `36_8K_PA_service` = " . ($data[12]-$data[11];
           break;
-          case 48
+          case 48:
           echo "`48_8K_PA_rental` = " . $data[12] . ", `48_8K_PA_service` = " . ($data[12]-$data[11];
           break;
-          case 60
+          case 60:
           echo "`60_8K_PA_rental` = " . $data[12] . ", `60_8K_PA_service` = " . ($data[12]-$data[11];
           break;
         }
