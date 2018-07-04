@@ -18,7 +18,7 @@ $row = 1;
 $csv = "inc/ald_rates_cars_8k.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
-    print_r($data);
+    print_r($rawsdata);
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
     $data = str_replace('£','',$data);
