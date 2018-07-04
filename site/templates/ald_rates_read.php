@@ -19,7 +19,7 @@ $csv = "inc/ald_rates_cars_8k.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
-    $num = count($rawdata);
+    $num = count($data);
     if($row > 2){
       switch($data[1]){
         case 8000:
