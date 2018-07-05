@@ -131,7 +131,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           default:
           echo "no months defined";
           break;
-          case 25000:
+        }
+        case 25000:
         $data11 = str_replace(',','',$data[11]);
         $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
@@ -150,7 +151,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           default:
           echo "no months defined";
           break;
-          case 30000:
+        }
+        case 30000:
         $data11 = str_replace(',','',$data[11]);
         $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
@@ -179,6 +181,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `updated` = NOW(),
         " . $insert . ";";
         break;
+        default;
+        "Ratebook fault";
       }
       echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
