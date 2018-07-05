@@ -55,8 +55,6 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 10000:
-        $data11 = str_replace(',','',$data[11]);
-        $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
           $insert = "`24_10K_PA_rental` = " . $data12 . ", `24_10K_PA_service` = " . ($data11-$data12);
@@ -84,8 +82,6 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break; 
         case 15000:
-        $data11 = str_replace(',','',$data[11]);
-        $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
           $insert = "`24_15K_PA_rental` = " . $data12 . ", `24_15K_PA_service` = " . ($data11-$data12);
@@ -113,8 +109,6 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 20000:
-        $data11 = str_replace(',','',$data[11]);
-        $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
           $insert = "`24_20K_PA_rental` = " . $data12 . ", `24_20K_PA_service` = " . ($data11-$data12);
@@ -132,9 +126,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           echo "no months defined";
           break;
         }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
+        break;
         case 25000:
-        $data11 = str_replace(',','',$data[11]);
-        $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
           $insert = "`24_25K_PA_rental` = " . $data12 . ", `24_25K_PA_service` = " . ($data11-$data12);
@@ -152,6 +153,15 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           echo "no months defined";
           break;
         }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
+        break;
         case 30000:
         $data11 = str_replace(',','',$data[11]);
         $data12 = str_replace(',','',$data[12]);
@@ -182,7 +192,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         default;
-        "Ratebook fault";
+        echo "Ratebook fault";
       }
       echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
