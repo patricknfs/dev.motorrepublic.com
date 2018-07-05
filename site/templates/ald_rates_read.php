@@ -24,10 +24,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
+      $data11 = str_replace(',','',$data[11]);
+      $data12 = str_replace(',','',$data[12]);
       switch($data[1]){
         case 8000:
-        $data11 = str_replace(',','',$data[11]);
-        $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
           $insert = "`24_8K_PA_rental` = " . $data12 . ", `24_8K_PA_service` = " . ($data11-$data12);
