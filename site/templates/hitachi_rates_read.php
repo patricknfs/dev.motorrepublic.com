@@ -23,9 +23,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = preg_replace('/\s+/', '', $rawdata);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
-    if($row > 2){
-      $data11 = str_replace(',','',$data[11]);
-      $data12 = str_replace(',','',$data[12]);
+    if($row > 1){
       switch($data[1]){
         case 8000:
         switch($data[0]){
@@ -47,7 +45,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
-        `cap_id` = " . $data[24] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -74,7 +72,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
-        `cap_id` = " . $data[24] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -101,7 +99,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
-        `cap_id` = " . $data[24] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -128,7 +126,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
-        `cap_id` = " . $data[24] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -155,7 +153,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
-        `cap_id` = " . $data[24] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -184,7 +182,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
-        `cap_id` = " . $data[24] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
