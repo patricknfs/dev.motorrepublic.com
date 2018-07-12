@@ -411,7 +411,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
   while (($rawdata2 = fgetcsv($handle2, 0, ",")) !== FALSE) {
     $data2 = preg_replace('/\s+/', '', $rawdata2);
     if($row > 1){
-      if($data2[74] != 0)
+      if($data2[74] != 0){
         switch($data2[73]){
           case 24:
           switch($data2[74]){
