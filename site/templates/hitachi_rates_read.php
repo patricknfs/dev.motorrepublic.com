@@ -23,79 +23,84 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = preg_replace('/\s+/', '', $rawdata);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
-    if($row > 1){
-      switch($data[40]){
-        case 24:
-        switch($data[41]){
-          case 16000:
-          $mileage = 8000;
-          break;
-          case 20000:
-          $mileage = 10000;
-          break;
-          case 30000:
-          $mileage = 15000;
-          break;
-          case 40000:
-          $mileage = 20000;
-          break;
-          case 50000:
-          $mileage = 25000;
-          break;
-          case 60000:
-          $mileage = 30000;
-          break;
-          default:
-          echo "This mileage profile is not coded into 24 month mileage specifier";
-        }
-        case 36:
-        switch($data[41]){
-          case 24000:
-          $mileage = 8000;
-          break;
-          case 30000:
-          $mileage = 10000;
-          break;
-          case 45000:
-          $mileage = 15000;
-          break;
-          case 60000:
-          $mileage = 20000;
-          break;
-          case 75000:
-          $mileage = 25000;
-          break;
-          case 90000:
-          $mileage = 30000;
-          break;
-          default:
-          echo "This mileage profile is not coded into 36 month mileage specifier";
-        }
-        case 48:
-        switch($data[41]){
-          case 32000:
-          $mileage = 8000;
-          break;
-          case 40000:
-          $mileage = 10000;
-          break;
-          case 60000:
-          $mileage = 15000;
-          break;
-          case 80000:
-          $mileage = 20000;
-          break;
-          case 100000:
-          $mileage = 25000;
-          break;
-          case 120000:
-          $mileage = 30000;
-          break;
-          default:
-          echo "This mileage profile is not coded into 48 month mileage specifier";
-        }
-        
+    switch($data[40]){
+      case 24:
+      switch($data[41]){
+        case 16000:
+        $mileage = 8000;
+        break;
+        case 20000:
+        $mileage = 10000;
+        break;
+        case 30000:
+        $mileage = 15000;
+        break;
+        case 40000:
+        $mileage = 20000;
+        break;
+        case 50000:
+        $mileage = 25000;
+        break;
+        case 60000:
+        $mileage = 30000;
+        break;
+        default:
+        echo "This mileage profile is not coded into 24 month mileage specifier";
       }
+      break;
+      case 36:
+      switch($data[41]){
+        case 24000:
+        $mileage = 8000;
+        break;
+        case 30000:
+        $mileage = 10000;
+        break;
+        case 45000:
+        $mileage = 15000;
+        break;
+        case 60000:
+        $mileage = 20000;
+        break;
+        case 75000:
+        $mileage = 25000;
+        break;
+        case 90000:
+        $mileage = 30000;
+        break;
+        default:
+        echo "This mileage profile is not coded into 36 month mileage specifier";
+      }
+      break;
+      case 48:
+      switch($data[41]){
+        case 32000:
+        $mileage = 8000;
+        break;
+        case 40000:
+        $mileage = 10000;
+        break;
+        case 60000:
+        $mileage = 15000;
+        break;
+        case 80000:
+        $mileage = 20000;
+        break;
+        case 100000:
+        $mileage = 25000;
+        break;
+        case 120000:
+        $mileage = 30000;
+        break;
+        default:
+        echo "This mileage profile is not coded into 48 month mileage specifier";
+      }
+      break;
+      default:
+      echo "montly profile not coded";
+    }
+    if($row > 1){
+      
       switch($mileage){
         case 8000:
         if($data[43] == 0){
