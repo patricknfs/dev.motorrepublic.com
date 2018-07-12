@@ -790,7 +790,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
   $AdminMessage .= $row . " rows inserted\n";
   $AdminMessage .= "Second pass upload"; 
   mail($adminEmail,"MR Hitachi Upload Monitor",$AdminMessage,"From: MR Server");
-  fclose($handle);
+  fclose($handle2);
 }
 else {
 	mail($adminEmail,"Problem - MR Hitachi rates csv second pass upload","The csv upload has failed for some reason","From: MR Server");
