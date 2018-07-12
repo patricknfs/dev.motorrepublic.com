@@ -397,6 +397,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     }
     $row++;
   }
+  echo "number of rows is: " . $row;
+  $AdminMessage .= $row . " rows inserted\n";
+  $AdminMessage .= "First pass upload"; 
+  mail($adminEmail,"MR Hitachi Upload Monitor",$AdminMessage,"From: MR Server");
+  fclose($handle);
+}
+else {
+	mail($adminEmail,"Problem - MR Hitachi rates csv first pass upload","The csv upload has failed for some reason","From: MR Server");
+}
+if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($rawdata);
     $num = count($rawdata);
@@ -777,10 +787,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
   }
   echo "number of rows is: " . $row;
   $AdminMessage .= $row . " rows inserted\n";
+  $AdminMessage .= "Second pass upload"; 
   mail($adminEmail,"MR Hitachi Upload Monitor",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
 else {
-	mail($adminEmail,"Problem - MR Hitachi rates csv upload","The csv upload has failed for some reason","From: MR Server");
+	mail($adminEmail,"Problem - MR Hitachi rates csv second pass upload","The csv upload has failed for some reason","From: MR Server");
 }
 $conn->close();
