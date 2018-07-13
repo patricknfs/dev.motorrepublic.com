@@ -21,8 +21,8 @@ require_once(MR_PATH . "/inc/conn.php");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Arval CSV Upload Report\n";
 // Now open the local file and loop through it.
-// $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
-// $result = mysqli_query($conn, $truncate);
+$truncate = "TRUNCATE TABLE `team`.`rates_arval`";
+$result = mysqli_query($conn, $truncate);
 $row = 1;
 
 if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
@@ -103,44 +103,44 @@ if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
         " . ($data[19]+3.85) . ",
         " . ($data[17]+5+3.85) . ",
         # End of 24M
-        " . ($data[20]+2.63) . ",
-        " . ($data[21]+2.63) . ",
-        " . ($data[23]+2.63) . ",
-        " . ($data[24]+2.63) . ",
-        " . ($data[23]+$data[26]+10+2.63)/2 . ",
-        " . ($data[24]+$data[27]+10+2.63)/2 . ",
-        " . ($data[26]+2.63) . ",
-        " . ($data[27]+2.63) . ",
-        " . ($data[26]+$data[29]+10+2.63)/2 . ",
-        " . ($data[27]+$data[30]+10+2.63)/2 . ",
-        " . ($data[29]+2.63) . ",
-        " . ($data[30]+2.63) . ",
+        " . ($data[22]+2.63) . ",
+        " . ($data[20]+5+2.63) . ",
+        " . ($data[25]+2.63) . ",
+        " . ($data[23]+5+2.63) . ",
+        " . ((($data[25]+$data[28]+10)/2)+2.63) . ",
+        " . ((($data[23]+$data[26]+10)/2)+5+2.63) . ",
+        " . ($data[28]+2.63) . ",
+        " . ($data[26]+5+2.63) . ",
+        " . ((($data[28]+$data[31]+10)/2)+2.63) . ",
+        " . ((($data[26]+$data[29]+10)/2)+5+2.63). ",
+        " . ($data[31]+2.63) . ",
+        " . ($data[29]+5+2.63) . ",
         # End of 36M
-        " . ($data[32]+2) . ",
-        " . ($data[33]+2) . ",
-        " . ($data[35]+2) . ",
-        " . ($data[36]+2) . ",
-        " . ($data[35]+$data[38]+10+2)/2 . ",
-        " . ($data[36]+$data[39]+10+2)/2 . ",
-        " . ($data[38]+2) . ",
-        " . ($data[39]+2) . ",
-        " . ($data[38]+$data[41]+10+2)/2 . ",
-        " . ($data[39]+$data[42]+10+2)/2 . ",
-        " . ($data[41]+2) . ",
-        " . ($data[42]+2) . ",
+        " . ($data[34]+2) . ",
+        " . ($data[32]+5+2) . ",
+        " . ($data[37]+2) . ",
+        " . ($data[35]+5+2) . ",
+        " . ((($data[37]+$data[40]+10)/2)+2) . ",
+        " . ((($data[35]+$data[38]+10)/2)+5+2) . ",
+        " . ($data[40]+2) . ",
+        " . ($data[38]+5+2) . ",
+        " . ((($data[40]+$data[43]+10)/2)+2) . ",
+        " . ((($data[38]+$data[41]+10)/2)+5+2) . ",
+        " . ($data[43]+2) . ",
+        " . ($data[41]+5+2) . ",
         # End of 48M
-        " . ($data[44]+1.62) . ",
-        " . ($data[45]+1.62) . ",
-        " . ($data[47]+1.62) . ",
-        " . ($data[48]+1.62) . ",
-        " . ($data[47]+$data[50]+10+1.62)/2  . ",
-        " . ($data[48]+$data[51]+10+1.62)/2  . ",
-        " . ($data[50]+1.62) . ",
-        " . ($data[51]+1.62) . ",
-        " . ($data[50]+$data[53]+10+1.62)/2 . ",
-        " . ($data[51]+$data[54]+10+1.62)/2 . ",
-        " . ($data[53]+1.62) . ",
-        " . ($data[54]+1.62) . ")
+        " . ($data[46]+1.62) . ",
+        " . ($data[44]+5+1.62) . ",
+        " . ($data[49]+1.62) . ",
+        " . ($data[47]+5+1.62) . ",
+        " . ((($data[49]+$data[52]+10)/2)+1.62)  . ",
+        " . ((($data[47]+$data[50]+10)/2)+5+1.62)  . ",
+        " . ($data[52]+1.62) . ",
+        " . ($data[50]+5+1.62) . ",
+        " . ((($data[52]+$data[55]+10)/2)+1.62) . ",
+        " . ((($data[50]+$data[53]+10)/2)+5+1.62) . ",
+        " . ($data[55]+1.62) . ",
+        " . ($data[53]+5+1.62) . ")
         ON DUPLICATE KEY UPDATE
           `cap_id` = " . $data[4] . "
         ;
