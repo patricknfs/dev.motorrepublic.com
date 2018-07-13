@@ -25,7 +25,7 @@ $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
 
-if (($handle = fopen("inc/arval_rates_cars.csv", "r")) !== FALSE) {
+if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
   // fgets($handle);
 
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
