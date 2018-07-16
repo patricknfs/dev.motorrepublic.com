@@ -52,7 +52,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
-        " . $insert . ";
+        " . $insert . ";";
         break;
         case 10000:
         switch($data[0]){
