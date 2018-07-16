@@ -16,7 +16,6 @@ $truncate = "TRUNCATE TABLE `team`.`rates_ald`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
 $csv = "inc/ald_rates_all.csv";
-echo $csv;
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($rawdata);
@@ -56,141 +55,141 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 10000:
-        // switch($data[0]){
-        //   case 24:
-        //   $insert = "`24_10K_PA_rental_m` = " . $data12 . ", `24_10K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 36:
-        //   $insert = "`36_10K_PA_rental_m` = " . $data12 . ", `36_10K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 48:
-        //   $insert = "`48_10K_PA_rental_m` = " . $data12 . ", `48_10K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 60:
-        //   $insert = "`60_10K_PA_rental_m` = " . $data12 . ", `60_10K_PA_service_nm` = " . $data11;
-        //   break;
-        //   default:
-        //   echo "no months defined";
-        //   break;
-        // }
-        // $update = "INSERT INTO `team`.`rates_ald`
-        // SET
-        // `cap_id` = " . $data[24] . ",
-        // `updated` = NOW(),
-        // " . $insert . "
-        // ON DUPLICATE KEY UPDATE
-        // `updated` = NOW(),
-        // " . $insert . ";";
-        // break; 
-        // case 15000:
-        // switch($data[0]){
-        //   case 24:
-        //   $insert = "`24_15K_PA_rental_m` = " . $data12 . ", `24_15K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 36:
-        //   $insert = "`36_15K_PA_rental_m` = " . $data12 . ", `36_15K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 48:
-        //   $insert = "`48_15K_PA_rental_m` = " . $data12 . ", `48_15K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 60:
-        //   $insert = "`60_15K_PA_rental_m` = " . $data12 . ", `60_15K_PA_service_nm` = " . $data11;
-        //   break;
-        //   default:
-        //   echo "no months defined";
-        //   break;
-        // }
-        // $update = "INSERT INTO `team`.`rates_ald`
-        // SET
-        // `cap_id` = " . $data[24] . ",
-        // `updated` = NOW(),
-        // " . $insert . "
-        // ON DUPLICATE KEY UPDATE
-        // `updated` = NOW(),
-        // " . $insert . ";";
-        // break;
-        // case 20000:
-        // switch($data[0]){
-        //   case 24:
-        //   $insert = "`24_20K_PA_rental_m` = " . $data12 . ", `24_20K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 36:
-        //   $insert = "`36_20K_PA_rental_m` = " . $data12 . ", `36_20K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 48:
-        //   $insert = "`48_20K_PA_rental_m` = " . $data12 . ", `48_20K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 60:
-        //   $insert = "`60_20K_PA_rental_m` = " . $data12 . ", `60_20K_PA_service_nm` = " . $data11;
-        //   break;
-        //   default:
-        //   echo "no months defined";
-        //   break;
-        // }
-        // $update = "INSERT INTO `team`.`rates_ald`
-        // SET
-        // `cap_id` = " . $data[24] . ",
-        // `updated` = NOW(),
-        // " . $insert . "
-        // ON DUPLICATE KEY UPDATE
-        // `updated` = NOW(),
-        // " . $insert . ";";
-        // break;
-        // case 25000:
-        // switch($data[0]){
-        //   case 24:
-        //   $insert = "`24_25K_PA_rental_m` = " . $data12 . ", `24_25K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 36:
-        //   $insert = "`36_25K_PA_rental_m` = " . $data12 . ", `36_25K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 48:
-        //   $insert = "`48_25K_PA_rental_m` = " . $data12 . ", `48_25K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 60:
-        //   $insert = "`60_25K_PA_rental_m` = " . $data12 . ", `60_25K_PA_service_nm` = " . $data11;
-        //   break;
-        //   default:
-        //   echo "no months defined";
-        //   break;
-        // }
-        // $update = "INSERT INTO `team`.`rates_ald`
-        // SET
-        // `cap_id` = " . $data[24] . ",
-        // `updated` = NOW(),
-        // " . $insert . "
-        // ON DUPLICATE KEY UPDATE
-        // `updated` = NOW(),
-        // " . $insert . ";";
-        // break;
-        // case 30000:
-        // $data11 = str_replace(',','',$data[11]);
-        // $data12 = str_replace(',','',$data[12]);
-        // switch($data[0]){
-        //   case 24:
-        //   $insert = "`24_30K_PA_rental_m` = " . $data12 . ", `24_30K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 36:
-        //   $insert = "`36_30K_PA_rental_m` = " . $data12 . ", `36_30K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 48:
-        //   $insert = "`48_30K_PA_rental_m` = " . $data12 . ", `48_30K_PA_service_nm` = " . $data11;
-        //   break;
-        //   case 60:
-        //   $insert = "`60_30K_PA_rental_m` = " . $data12 . ", `60_30K_PA_service_nm` = " . $data11;
-        //   break;
-        //   default:
-        //   echo "no months defined";
-        //   break;
-        // }
-        // $update = "INSERT INTO `team`.`rates_ald`
-        // SET
-        // `cap_id` = " . $data[24] . ",
-        // `updated` = NOW(),
-        // " . $insert . "
-        // ON DUPLICATE KEY UPDATE
-        // `updated` = NOW(),
-        // " . $insert . ";";
+        switch($data[0]){
+          case 24:
+          $insert = "`24_10K_PA_rental_m` = " . $data12 . ", `24_10K_PA_service_nm` = " . $data11;
+          break;
+          case 36:
+          $insert = "`36_10K_PA_rental_m` = " . $data12 . ", `36_10K_PA_service_nm` = " . $data11;
+          break;
+          case 48:
+          $insert = "`48_10K_PA_rental_m` = " . $data12 . ", `48_10K_PA_service_nm` = " . $data11;
+          break;
+          case 60:
+          $insert = "`60_10K_PA_rental_m` = " . $data12 . ", `60_10K_PA_service_nm` = " . $data11;
+          break;
+          default:
+          echo "no months defined";
+          break;
+        }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
+        break; 
+        case 15000:
+        switch($data[0]){
+          case 24:
+          $insert = "`24_15K_PA_rental_m` = " . $data12 . ", `24_15K_PA_service_nm` = " . $data11;
+          break;
+          case 36:
+          $insert = "`36_15K_PA_rental_m` = " . $data12 . ", `36_15K_PA_service_nm` = " . $data11;
+          break;
+          case 48:
+          $insert = "`48_15K_PA_rental_m` = " . $data12 . ", `48_15K_PA_service_nm` = " . $data11;
+          break;
+          case 60:
+          $insert = "`60_15K_PA_rental_m` = " . $data12 . ", `60_15K_PA_service_nm` = " . $data11;
+          break;
+          default:
+          echo "no months defined";
+          break;
+        }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
+        break;
+        case 20000:
+        switch($data[0]){
+          case 24:
+          $insert = "`24_20K_PA_rental_m` = " . $data12 . ", `24_20K_PA_service_nm` = " . $data11;
+          break;
+          case 36:
+          $insert = "`36_20K_PA_rental_m` = " . $data12 . ", `36_20K_PA_service_nm` = " . $data11;
+          break;
+          case 48:
+          $insert = "`48_20K_PA_rental_m` = " . $data12 . ", `48_20K_PA_service_nm` = " . $data11;
+          break;
+          case 60:
+          $insert = "`60_20K_PA_rental_m` = " . $data12 . ", `60_20K_PA_service_nm` = " . $data11;
+          break;
+          default:
+          echo "no months defined";
+          break;
+        }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
+        break;
+        case 25000:
+        switch($data[0]){
+          case 24:
+          $insert = "`24_25K_PA_rental_m` = " . $data12 . ", `24_25K_PA_service_nm` = " . $data11;
+          break;
+          case 36:
+          $insert = "`36_25K_PA_rental_m` = " . $data12 . ", `36_25K_PA_service_nm` = " . $data11;
+          break;
+          case 48:
+          $insert = "`48_25K_PA_rental_m` = " . $data12 . ", `48_25K_PA_service_nm` = " . $data11;
+          break;
+          case 60:
+          $insert = "`60_25K_PA_rental_m` = " . $data12 . ", `60_25K_PA_service_nm` = " . $data11;
+          break;
+          default:
+          echo "no months defined";
+          break;
+        }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
+        break;
+        case 30000:
+        $data11 = str_replace(',','',$data[11]);
+        $data12 = str_replace(',','',$data[12]);
+        switch($data[0]){
+          case 24:
+          $insert = "`24_30K_PA_rental_m` = " . $data12 . ", `24_30K_PA_service_nm` = " . $data11;
+          break;
+          case 36:
+          $insert = "`36_30K_PA_rental_m` = " . $data12 . ", `36_30K_PA_service_nm` = " . $data11;
+          break;
+          case 48:
+          $insert = "`48_30K_PA_rental_m` = " . $data12 . ", `48_30K_PA_service_nm` = " . $data11;
+          break;
+          case 60:
+          $insert = "`60_30K_PA_rental_m` = " . $data12 . ", `60_30K_PA_service_nm` = " . $data11;
+          break;
+          default:
+          echo "no months defined";
+          break;
+        }
+        $update = "INSERT INTO `team`.`rates_ald`
+        SET
+        `cap_id` = " . $data[24] . ",
+        `updated` = NOW(),
+        " . $insert . "
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
         break;
         default;
         echo "Ratebook fault";
