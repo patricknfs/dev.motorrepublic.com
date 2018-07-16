@@ -195,7 +195,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         echo "Ratebook fault";
       }
       echo $update . "<br />";
-      $result2 = mysqli_query($conn, $update);
+      $result = mysqli_query($conn, $update);
     }
     $row++;
   }
