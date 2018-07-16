@@ -12,8 +12,8 @@ require_once(MR_PATH . "/inc/conn.php");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR ALD CSV Upload Report\n";
 // Now open the local file and loop through it.
-// $truncate = "TRUNCATE TABLE `team`.`rates_ald`";
-// $result = mysqli_query($conn, $truncate);
+$truncate = "TRUNCATE TABLE `team`.`rates_ald`";
+$result = mysqli_query($conn, $truncate);
 $row = 1;
 $csv = "inc/ald_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
