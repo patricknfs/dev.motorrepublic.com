@@ -16,6 +16,7 @@ $truncate = "TRUNCATE TABLE `team`.`rates_ald`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
 $csv = "inc/ald_rates_all.csv";
+echo $csv;
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($rawdata);
