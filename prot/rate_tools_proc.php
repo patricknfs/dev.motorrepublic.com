@@ -11,4 +11,3 @@ if ($result = $conn->query("SELECT * FROM `team`.`rates_arval` WHERE `cap_id` = 
   /* free result set */
   $result->close();
 }
-?>
