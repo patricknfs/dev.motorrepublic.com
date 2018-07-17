@@ -8,25 +8,27 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-    x1.manufacturer AS manufacturer, x1.model AS model, x1.description AS descr, cap_code AS x1.cap_code, x2.rental AS rental
-	 FROM
-    (
+  x1.manufacturer AS manufacturer, x1.model AS model, x1.description AS descr, cap_code AS x1.cap_code, x2.rental AS rental
+  FROM
+  (
     SELECT 
-        `manufacturer`, `model`, `description`, `cap_code`
+      `manufacturer`, `model`, `description`, `cap_code`
     FROM
-        `team`.`vehicles`
+      `team`.`vehicles`
     WHERE
-        cap_id = 83661 ) as x1
-        LEFT JOIN
-    (
+      cap_id = 83661
+  ) AS x1
+  LEFT JOIN
+  (
     SELECT 
-        `24_8K_PA_rental_m` AS rental
+      `24_8K_PA_rental_m` AS rental
     FROM
-        `team`.`rates_arval`
+      `team`.`rates_arval`
     WHERE
-        `cap_id` = 83661
-    ) AS x2 ON x2.cap_id = 83661
-    ORDER BY rental DESC LIMIT 5
+      `cap_id` = 83661
+  ) AS x2
+  ON x2.cap_id = 83661
+  ORDER BY rental DESC LIMIT 5
 ";
 echo $query;
 $result = $conn2->query($query)  or die(mysqli_error());
