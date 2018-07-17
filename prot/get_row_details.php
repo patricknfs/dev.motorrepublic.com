@@ -28,6 +28,16 @@ $query = "SELECT
       `cap_id` = 83661
   ) AS x2
   ON x2.capid = 83661
+  LEFT JOIN
+  (
+    SELECT 
+      `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    FROM
+      `team`.`rates_ald`
+    WHERE
+      `cap_id` = 83661
+  ) AS x2
+  ON x2.capid = 83661
   ORDER BY rental DESC LIMIT 5
 ";
 echo $query;
