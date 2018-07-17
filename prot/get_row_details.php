@@ -8,11 +8,11 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-  x1.man AS `manufacturer`, x1.mod AS `model`, x1.cap_desc AS `descr`, x1.cap_code AS code, x2.rent AS rental
+  x1.man AS `manufacturer`, x1.mod AS `model`, x1.cap_desc AS `descr`, x1.code AS `cap_id`, x2.rent AS `rental`
   FROM
   (
     SELECT 
-      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_code` AS `code`
+      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`
     FROM
       `team`.`vehicles`
     WHERE
