@@ -8,6 +8,6 @@ require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 if ($result = $conn->query("SELECT * FROM `team`.`rates_arval` WHERE `cap_id` = 71163 LIMIT 1")) {
   printf("Select returned %d rows.\n", $result->num_rows);
 
-  /* free result set */
+  /* free the result set */
   $result->close();
 }
