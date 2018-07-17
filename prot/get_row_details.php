@@ -21,13 +21,13 @@ $query = "SELECT
   LEFT JOIN
   (
     SELECT 
-      `24_8K_PA_rental_m` AS rent
+      `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_arval`
     WHERE
-      `cap_id` = 83661
+      `capid` = 83661
   ) AS x2
-  ON x2.cap_id = 83661
+  ON x2.capid = 83661
   ORDER BY rental DESC LIMIT 5
 ";
 echo $query;
