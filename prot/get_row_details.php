@@ -25,7 +25,7 @@ $query = "SELECT
     FROM
       `team`.`rates_arval`
     WHERE
-      `capid` = 83661
+      `cap_id` = 83661
   ) AS x2
   ON x2.capid = 83661
   ORDER BY rental DESC LIMIT 5
