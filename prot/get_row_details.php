@@ -39,10 +39,10 @@ $result = $conn2->query($query)  or die(mysqli_error());
 // iterate over every row
 while ($row = mysqli_fetch_assoc($result)) {
 	// for every field in the result..
-  $row['cap_id'],
-  $row['manufacturer'],
-  $row['model'],
-  $row['descr'],
+  $row['cap_id'];
+  $row['manufacturer'];
+  $row['model'];
+  $row['descr'];
 	$row['rental'];
 
 	$rows[] = $row;
