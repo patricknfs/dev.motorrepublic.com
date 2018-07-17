@@ -19,7 +19,7 @@ $level = $_SESSION['level'];
 // echo $level . "\n";
 $_SESSION['ac'] = inputGet('acfilt');
 $ac = $_SESSION['ac'];
-
+?>
 <script type="text/javascript">
   // 2018 Function for row details
   function format ( d ) {
