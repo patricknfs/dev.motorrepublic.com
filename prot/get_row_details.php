@@ -26,17 +26,17 @@ $query = "SELECT
       `team`.`rates_arval`
     WHERE
       `cap_id` = 83661
-  ) AS x2
-  ON x2.capid = 83661
-  LEFT JOIN
-  (
+    ) AS x2
+    UNION
+    (
     SELECT 
       `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_ald`
     WHERE
       `cap_id` = 83661
-  ) AS x3
+    ) AS x3
+  )
   ON x3.capid = 83661
   ORDER BY rental DESC LIMIT 5
 ";
