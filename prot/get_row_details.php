@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   $row['cap_id'],
   $row['manufacturer'],
   $row['model'],
-  $row['descr']
+  $row['descr'],
 	$row['rental'];
 
 	$rows[] = $row;
