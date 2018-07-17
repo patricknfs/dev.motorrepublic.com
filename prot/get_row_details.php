@@ -8,7 +8,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-  x1.man AS `manufacturer`, x1.mod AS `model`, x1.cap_desc AS `descr`, x1.code AS `cap_id`, x2.rent AS `rental`
+  x2.src AS source , x1.man AS `manufacturer`, x1.mod AS `model`, x1.cap_desc AS `descr`, x1.code AS `cap_id`, x2.rent AS `rental`
   FROM
   (
     SELECT 
@@ -22,7 +22,7 @@ $query = "SELECT
   (
     (
     SELECT 
-      `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_arval`
     WHERE
@@ -31,7 +31,7 @@ $query = "SELECT
     UNION
     (
     SELECT 
-      `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    'ald' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_ald`
     WHERE
@@ -40,7 +40,7 @@ $query = "SELECT
     UNION
     (
     SELECT 
-      `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    'hitachi' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_hitachi`
     WHERE
