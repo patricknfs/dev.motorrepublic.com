@@ -26,7 +26,7 @@ $query = "SELECT
       `team`.`rates_arval`
     WHERE
       `cap_id` = 83661
-    ) AS u1
+    )
     UNION
     (
     SELECT 
@@ -35,9 +35,9 @@ $query = "SELECT
       `team`.`rates_ald`
     WHERE
       `cap_id` = 83661
-    ) AS u2
+    )
   )) AS x2
-  ON x2.capid
+  ON x2.capid = 83661
   ORDER BY rental DESC LIMIT 5
 ";
 echo $query;
