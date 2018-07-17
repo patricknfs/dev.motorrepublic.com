@@ -8,11 +8,11 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-  x1.manufacturer AS manufacturer, x1.model AS model, x1.description AS descr, cap_code AS x1.cap_code, x2.rental AS rental
+  x1.man AS `manufacturer`, x1.mod AS `model`, x1.cap_desc AS `descr`, x1.cap_code AS code, x2.rent AS rental
   FROM
   (
     SELECT 
-      `manufacturer`, `model`, `description`, `cap_code`
+      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_code` AS `code`
     FROM
       `team`.`vehicles`
     WHERE
@@ -21,7 +21,7 @@ $query = "SELECT
   LEFT JOIN
   (
     SELECT 
-      `24_8K_PA_rental_m` AS rental
+      `24_8K_PA_rental_m` AS rent
     FROM
       `team`.`rates_arval`
     WHERE
@@ -31,7 +31,7 @@ $query = "SELECT
   ORDER BY rental DESC LIMIT 5
 ";
 echo $query;
-$result = $conn2->query($query)  or die(mysqli_error());
+$result = $conn->query($query)  or die(mysqli_error());
 
 // iterate over every row
 while ($row = mysqli_fetch_assoc($result)) {
