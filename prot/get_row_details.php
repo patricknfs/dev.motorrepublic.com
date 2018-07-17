@@ -2,7 +2,7 @@
 // get_row_details.php
 
 session_start();
-
+$capid = 83661;
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
@@ -16,7 +16,7 @@ $query = "SELECT
     FROM
       `team`.`vehicles`
     WHERE
-      cap_id = 83661
+      cap_id = $capid
   ) AS x1
   LEFT JOIN
   (
@@ -26,7 +26,7 @@ $query = "SELECT
     FROM
       `team`.`rates_arval`
     WHERE
-      `cap_id` = 83661
+      `cap_id` = $capid
     )
     UNION
     (
@@ -35,7 +35,7 @@ $query = "SELECT
     FROM
       `team`.`rates_ald`
     WHERE
-      `cap_id` = 83661
+      `cap_id` = $capid
     )
     UNION
     (
@@ -44,10 +44,10 @@ $query = "SELECT
     FROM
       `team`.`rates_hitachi`
     WHERE
-      `cap_id` = 83661
+      `cap_id` = $capid
     )
   ) AS x2
-  ON x2.capid = 83661
+  ON x2.capid = $capid
   ORDER BY rental DESC LIMIT 5
 ";
 echo $query;
