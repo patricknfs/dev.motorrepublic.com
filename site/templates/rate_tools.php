@@ -41,7 +41,8 @@ include("./main.php");
     $('#example').DataTable( {
       // "processing": true,
       // "serverSide": true,
-      "ajax": "/prot/get_row_details.php"
+      "dataType": "json",
+      "url": "/prot/get_row_details.php"
     } );
   } );
 </script>
