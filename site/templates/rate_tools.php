@@ -25,6 +25,9 @@ include("./main.php");
       <th>Rental</th>
     </tr>
   </thead>
+  <tbody>
+										
+	</tbody>
   <tfoot>
     <tr>
       <th>Source</th>
