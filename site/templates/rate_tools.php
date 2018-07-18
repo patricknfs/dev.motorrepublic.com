@@ -15,7 +15,7 @@ include("./main.php");
 // // echo $analysis . "\n";
 ?>
 <script type="text/javascript">
-  var oTable = $('#sort_table').DataTable( {
+  $('#sort_table').DataTable( {
     "language": {
       "search": "_INPUT_",
       "searchPlaceholder": "Search..."
