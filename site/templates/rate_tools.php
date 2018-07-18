@@ -14,46 +14,10 @@ include("./main.php");
 // $analysis = $_SESSION['analysis'];
 // // echo $analysis . "\n";
 ?>
-<script type="text/javascript">
-  $.ajax( {
-    "language": {
-      "search": "_INPUT_",
-      "searchPlaceholder": "Search..."
-    },
-    "processing": true,
-    // "serverSide": true,
-    "ajax": {
-      "url": ".'/prot/get_row_details.php",
-      "data": {
-        // "acfilt": $.cookie('acval'),
-      }
-    },
-    "scrollY": "700px",
-    "paging": false,
-    "deferRender": true,
-    "columns": [
-      {
-        "class": 'details-control',
-        "data": null,
-        "defaultContent": '',
-        "width": "3%"
-      },
-      { "data": "status", "width": "6%" },
-      { "data": "ad_provider" },
-      { "data": "campaign", "width": "12%" },
-      { "data": "adgroup", "width": "20%" },
-      { "data": "clicks", "className": "dt-body-right" },
-      { "data": "sales_number", "className": "dt-body-right" },
-      { "data": "sale_value", "className": "dt-body-right" },
-      { "data": "comm", "className": "dt-body-right" },
-      { "data": "ad_cost", "className": "dt-body-right" },
-      { "data": "profit", "className": "dt-body-right" },
-      { "data": "profPCl", "className": "dt-body-right" },
-      { "data": "commPCl", "className": "dt-body-right" },
-      { "data": "costPCl", "className": "dt-body-right" },
-      { "data": "commPSa", "className": "dt-body-right" },
-      { "data": "avgpos", "className": "dt-body-right" },
-      { "data": "qs", "className": "dt-body-center" }
-    ],
-  });
-</script>
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "processing": true,
+        "serverSide": true,
+        "ajax": "scripts/server_processing.php"
+    } );
+} );
