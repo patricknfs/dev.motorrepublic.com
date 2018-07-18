@@ -14,10 +14,12 @@ include("./main.php");
 // $analysis = $_SESSION['analysis'];
 // // echo $analysis . "\n";
 ?>
-$(document).ready(function() {
-    $('#example').DataTable( {
-        "processing": true,
-        "serverSide": true,
-        "ajax": "./prot/get_row_details.php"
-    } );
-} );
+<javascript>
+  $(document).ready(function() {
+      $('#example').DataTable( {
+          "processing": true,
+          "serverSide": true,
+          "ajax": "./prot/get_row_details.php"
+      } );
+  } );
+</javascript>
