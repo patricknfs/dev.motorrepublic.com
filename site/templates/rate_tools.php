@@ -162,5 +162,3 @@ $ac = $_SESSION['ac'];
     });
   });
 </script>
-<?php
-}
