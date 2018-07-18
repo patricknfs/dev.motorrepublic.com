@@ -5,22 +5,14 @@ if(!isset($_SESSION)){
   session_start();
 }
 ob_start();
-include('views/rate_tools_main.php');
+include('views/get_row_details.php');
 // include('views/functions.php');
 $page->main = ob_get_clean();
 include("./main.php");
 
-$_SESSION['analysis'] = $conn->real_escape_string($_POST["analysis"]);
-$analysis = $_SESSION['analysis'];
-// echo $analysis . "\n";
-$_SESSION['since'] = $conn->real_escape_string($_POST["since"]);
-$since = $_SESSION['since'];
-// echo $since . "\n";
-$_SESSION['level'] = $conn->real_escape_string($_POST["level"]);
-$level = $_SESSION['level'];
-// echo $level . "\n";
-$_SESSION['ac'] = $conn->real_escape_string($_POST["acfilt"]);
-$ac = $_SESSION['ac'];
+// $_SESSION['analysis'] = $conn->real_escape_string($_POST["analysis"]);
+// $analysis = $_SESSION['analysis'];
+// // echo $analysis . "\n";
 ?>
 <script type="text/javascript">
   var oTable = $('#sort_table').DataTable( {
