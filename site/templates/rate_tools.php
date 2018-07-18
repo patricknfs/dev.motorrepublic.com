@@ -25,9 +25,9 @@ include("./main.php");
     "ajax": {
       "url": ".'/prot/get_row_details.php",
       "data": {
-        "camfilt": "<?= $camfilt; ?>",
+        // "camfilt": "<?= $camfilt; ?>",
         // "acfilt": $.cookie('acval'),
-        "adpfilt": "<?= $adpfilt; ?>"
+        // "adpfilt": "<?= $adpfilt; ?>"
       }
     },
     "scrollY": "700px",
