@@ -4,20 +4,20 @@ date_default_timezone_set('CET');
 session_start();
 ob_start();
 include('views/rate_tools_main.php');
+// include('views/functions.php');
 $page->main = ob_get_clean();
 include("./main.php");
 
-$_SESSION['analysis'] = inputGet('analysis');
+$_SESSION['analysis'] = $conn->real_escape_string($_POST["analysis"]);
 $analysis = $_SESSION['analysis'];
 // echo $analysis . "\n";
-$_SESSION['since'] = inputGet('since');
+$_SESSION['since'] = $conn->real_escape_string($_POST["since"]);
 $since = $_SESSION['since'];
 // echo $since . "\n";
-$_SESSION['level'] = inputGet('level');
-
+$_SESSION['level'] = $conn->real_escape_string($_POST["level"]);
 $level = $_SESSION['level'];
 // echo $level . "\n";
-$_SESSION['ac'] = inputGet('acfilt');
+$_SESSION['ac'] = $conn->real_escape_string($_POST["acfilt"]);
 $ac = $_SESSION['ac'];
 ?>
 <script type="text/javascript">
