@@ -1,7 +1,9 @@
 <?php
 // rate_tools.php
 date_default_timezone_set('CET');
-session_start();
+if(!isset($_SESSION)){
+  session_start();
+}
 ob_start();
 include('views/rate_tools_main.php');
 // include('views/functions.php');
