@@ -74,9 +74,9 @@ include("./main.php");
           // "render": function ( data, type, row ) {
           //     return '<a href="actual.php?analysis=overall&since=&level=adg&camfilt=' + data + '&adpfilt=' + row.ad_provider + '">' + data + '</a>';
           // },
-          "targets": 2
+          // "targets": 2
         },
-        { "visible": false,  "targets": [ 1 ] }
+        // { "visible": false,  "targets": [ 1 ] }
       ]
 		});	
 	});
