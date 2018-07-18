@@ -72,7 +72,7 @@ include("./main.php");
           // `data` option, which defaults to the column being worked with, in
           // this case `data: 0`.
           // "render": function ( data, type, row ) {
-          //     return '<a href="actual.php?analysis=overall&since=<?= $since; ?>&level=adg&camfilt=' + data + '&adpfilt=' + row.ad_provider + '">' + data + '</a>';
+          //     return '<a href="actual.php?analysis=overall&since=&level=adg&camfilt=' + data + '&adpfilt=' + row.ad_provider + '">' + data + '</a>';
           // },
           "targets": 2
         },
