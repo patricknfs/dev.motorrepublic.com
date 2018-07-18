@@ -14,6 +14,34 @@ include("./main.php");
 // $analysis = $_SESSION['analysis'];
 // // echo $analysis . "\n";
 ?>
+source": "hitachi",
+        "manufacturer": "VOLVO",
+        "model": "XC90 ESTATE",
+        "descr": "2.0 T8 [390] Hybrid Momentum Pro 5dr AWD Gtron",
+        "cap_id": "83661",
+        "rental
+<table id="example" class="display" style="width:100%">
+  <thead>
+      <tr>
+          <th>Source</th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Description</th>
+          <th>Cap ID</th>
+          <th>Rental</th>
+      </tr>
+  </thead>
+  <tfoot>
+      <tr>
+          <th>Source</th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Description</th>
+          <th>Cap ID</th>
+          <th>Rental</th>
+      </tr>
+  </tfoot>
+</table>
 <script type="text/javascript">
   $(document).ready(function() {
       $('#example').DataTable( {
