@@ -16,32 +16,32 @@ include("./main.php");
 ?>
 <table id="example" class="display" style="width:100%">
   <thead>
-      <tr>
-          <th>Source</th>
-          <th>Manufacturer</th>
-          <th>Model</th>
-          <th>Description</th>
-          <th>Cap ID</th>
-          <th>Rental</th>
-      </tr>
+    <tr>
+      <th>Source</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Cap ID</th>
+      <th>Rental</th>
+    </tr>
   </thead>
   <tfoot>
-      <tr>
-          <th>Source</th>
-          <th>Manufacturer</th>
-          <th>Model</th>
-          <th>Description</th>
-          <th>Cap ID</th>
-          <th>Rental</th>
-      </tr>
+    <tr>
+      <th>Source</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Cap ID</th>
+      <th>Rental</th>
+    </tr>
   </tfoot>
 </table>
 <script type="text/javascript">
   $(document).ready(function() {
-      $('#example').DataTable( {
-          "processing": true,
-          "serverSide": true,
-          "ajax": "<?=$config->paths->root?>prot/get_row_details.php"
-      } );
+    $('#example').DataTable( {
+      "processing": true,
+      "serverSide": true,
+      "ajax": "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/prot/get_row_details.php"
+    } );
   } );
 </script>
