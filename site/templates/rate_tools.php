@@ -40,7 +40,7 @@ include("./main.php");
   $(document).ready(function() {
     $('#example').DataTable( {
       // "processing": true,
-      "serverSide": true,
+      // "serverSide": true,
       "ajax": "/prot/get_row_details.php"
     } );
   } );
