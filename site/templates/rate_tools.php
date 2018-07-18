@@ -70,18 +70,6 @@ include("./main.php");
         { "data": "cap_id", "className": "dt-body-right" },
         { "data": "rental", "className": "dt-body-right" },
 	  	]
-	  	// "columnDefs": [
-      //   {
-      //     // The `data` parameter refers to the data for the cell (defined by the
-      //     // `data` option, which defaults to the column being worked with, in
-      //     // this case `data: 0`.
-      //     // "render": function ( data, type, row ) {
-      //     //     return '<a href="actual.php?analysis=overall&since=&level=adg&camfilt=' + data + '&adpfilt=' + row.ad_provider + '">' + data + '</a>';
-      //     // },
-      //     // "targets": 2
-      //   },
-        // { "visible": false,  "targets": [ 1 ] }
-      // ]
 		});	
 	});
 </script>

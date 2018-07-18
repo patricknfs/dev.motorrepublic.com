@@ -52,7 +52,7 @@ $query = "SELECT
   ORDER BY rental DESC LIMIT 5
 ";
 // echo $query;
-$result = $conn->query($query)  or die(mysqli_error());
+$result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
 while ($row = mysqli_fetch_assoc($result)) {
