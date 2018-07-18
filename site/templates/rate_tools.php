@@ -41,7 +41,7 @@ include("./main.php");
       $('#example').DataTable( {
           "processing": true,
           "serverSide": true,
-          "ajax": "<?=$config->paths->root?>/prot/get_row_details.php"
+          "ajax": "<?=$config->paths->root?>prot/get_row_details.php"
       } );
   } );
 </script>
