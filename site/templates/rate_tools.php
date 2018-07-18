@@ -60,6 +60,7 @@ include("./main.php");
         "dataType": "json",
         "dataSrc": ""
 			},
+      "order": [[ 5, "desc" ]],
       "scrollY": "700px",
       "paging": false,
 			"deferRender": true,
