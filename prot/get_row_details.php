@@ -1,4 +1,5 @@
 <?php
+echo $_GET();
 // get_row_details.php
 header('Content-type: application/json; charset=utf-8');
 session_start();
