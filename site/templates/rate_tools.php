@@ -31,7 +31,7 @@ $ac = $_SESSION['ac'];
     "processing": true,
     // "serverSide": true,
     "ajax": {
-      "url": "data/actual_stats_proc.php",
+      "url": ".'/prot/rate_tools_proc.php",
       "data": {
         "camfilt": "<?= $camfilt; ?>",
         // "acfilt": $.cookie('acval'),
@@ -65,17 +65,5 @@ $ac = $_SESSION['ac'];
       { "data": "avgpos", "className": "dt-body-right" },
       { "data": "qs", "className": "dt-body-center" }
     ],
-    "columnDefs": [
-      {
-        // The `data` parameter refers to the data for the cell (defined by the
-        // `data` option, which defaults to the column being worked with, in
-        // this case `data: 0`.
-        "render": function ( data, type, row ) {
-            return '<a href="actual.php?analysis=overall&since=<?= $since; ?>&level=kw&adgfilt=' + data + '&adpfilt=' + row.ad_provider + '">' + data + '</a>';
-          },
-          "targets": [ 4 ]
-      },
-      { "visible": false,  "targets": [ 1 ] }
-    ]
   });
 </script>
