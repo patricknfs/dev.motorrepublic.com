@@ -45,4 +45,39 @@ include("./main.php");
       "url": "/prot/get_row_details.php"
     } );
   } );
+  $(document).ready(function() {
+		var oTable = $('#example').DataTable( {
+			"language": {
+        "search": "_INPUT_",
+        "searchPlaceholder": "Search..."
+	    },
+			"processing": true,
+      "ajax": {
+      	"url": "/prot/get_row_details.php"
+			},
+      "scrollY": "700px",
+      "paging": false,
+			"deferRender": true,
+		  "columns": [
+	  		{ "data": "source" },
+        { "data": "manufacturer" },
+        { "data": "model" },
+        { "data": "description" },
+        { "data": "cap_id", "className": "dt-body-right" },
+        { "data": "rental", "className": "dt-body-right" },
+	  	],
+	  	"columnDefs": [
+        {
+          // The `data` parameter refers to the data for the cell (defined by the
+          // `data` option, which defaults to the column being worked with, in
+          // this case `data: 0`.
+          // "render": function ( data, type, row ) {
+          //     return '<a href="actual.php?analysis=overall&since=<?= $since; ?>&level=adg&camfilt=' + data + '&adpfilt=' + row.ad_provider + '">' + data + '</a>';
+          // },
+          "targets": 2
+        },
+        { "visible": false,  "targets": [ 1 ] }
+      ]
+		});	
+	});
 </script>
