@@ -53,7 +53,8 @@ include("./main.php");
 	    },
 			"processing": true,
       "ajax": {
-      	"url": "/prot/get_row_details.php"
+      	"url": "/prot/get_row_details.php",
+        "dataType": "json"
 			},
       "scrollY": "700px",
       "paging": false,
