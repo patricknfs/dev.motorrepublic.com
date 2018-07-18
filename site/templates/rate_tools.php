@@ -5,7 +5,7 @@ if(!isset($_SESSION)){
   session_start();
 }
 ob_start();
-include('views/get_row_details.php');
+include('views/rate_tools_main.php');
 // include('views/functions.php');
 $page->main = ob_get_clean();
 include("./main.php");
@@ -23,7 +23,7 @@ include("./main.php");
     "processing": true,
     // "serverSide": true,
     "ajax": {
-      "url": ".'/prot/rate_tools_proc.php",
+      "url": ".'/prot/get_row_details.php",
       "data": {
         "camfilt": "<?= $camfilt; ?>",
         // "acfilt": $.cookie('acval'),
