@@ -1,6 +1,6 @@
 <?php
 // get_row_details.php
-
+header('Content-type: application/json; charset=utf-8');
 session_start();
 $capid = 83661;
 date_default_timezone_set('CET');
