@@ -62,7 +62,7 @@ include("./main.php");
 	  		{ "data": "source" },
         { "data": "manufacturer" },
         { "data": "model" },
-        { "data": "description" },
+        { "data": "descr" },
         { "data": "cap_id", "className": "dt-body-right" },
         { "data": "rental", "className": "dt-body-right" },
 	  	],
