@@ -5,6 +5,7 @@ if(!isset($_SESSION)){
   session_start();
 }
 ob_start();
+require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 include('views/rate_tools_main.php');
 // include('views/functions.php');
 $page->main = ob_get_clean();
@@ -41,7 +42,7 @@ include("./main.php");
       $('#example').DataTable( {
           "processing": true,
           "serverSide": true,
-          "ajax": "./prot/get_row_details.php"
+          "ajax": "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/prot/get_row_details.php"
       } );
   } );
 </script>
