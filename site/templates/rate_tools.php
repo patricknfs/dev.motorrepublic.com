@@ -18,6 +18,6 @@ $(document).ready(function() {
     $('#example').DataTable( {
         "processing": true,
         "serverSide": true,
-        "ajax": "scripts/server_processing.php"
+        "ajax": "./prot/get_row_details.php"
     } );
 } );
