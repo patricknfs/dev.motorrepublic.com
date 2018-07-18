@@ -82,8 +82,6 @@ $ac = $_SESSION['ac'];
         '</tr>'+
       '</table>'+
     '</div>';
-  }
-
   
     
     var oTable = $('#sort_table').DataTable( {
