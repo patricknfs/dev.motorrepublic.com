@@ -50,7 +50,7 @@ $query = "SELECT
   ON x2.capid = $capid
   ORDER BY rental DESC LIMIT 5
 ";
-echo $query;
+// echo $query;
 $result = $conn->query($query)  or die(mysqli_error());
 
 // iterate over every row
@@ -64,8 +64,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 	$rows[] = $row;
 }
-print '<pre>'; 
-print_r($rows);
-print '</pre>'; 
+// print '<pre>'; 
+// print_r($rows);
+// print '</pre>'; 
 echo json_encode($rows, JSON_PRETTY_PRINT);
 ?>
