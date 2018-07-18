@@ -14,7 +14,7 @@ include("./main.php");
 // $analysis = $_SESSION['analysis'];
 // // echo $analysis . "\n";
 ?>
-<javascript>
+<script type="text/javascript">
   $(document).ready(function() {
       $('#example').DataTable( {
           "processing": true,
@@ -22,4 +22,4 @@ include("./main.php");
           "ajax": "./prot/get_row_details.php"
       } );
   } );
-</javascript>
+</script>
