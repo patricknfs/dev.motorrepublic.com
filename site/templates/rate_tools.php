@@ -37,14 +37,14 @@ include("./main.php");
   </tfoot>
 </table>
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('#example').DataTable( {
-      // "processing": true,
-      // "serverSide": true,
-      "dataType": "json",
-      "url": "/prot/get_row_details.php"
-    } );
-  } );
+  // $(document).ready(function() {
+  //   $('#example').DataTable( {
+  //     // "processing": true,
+  //     // "serverSide": true,
+  //     "dataType": "json",
+  //     "url": "/prot/get_row_details.php"
+  //   } );
+  // } );
   $(document).ready(function() {
 		var oTable = $('#example').DataTable( {
 			"language": {
