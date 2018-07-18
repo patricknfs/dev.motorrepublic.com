@@ -39,7 +39,7 @@ include("./main.php");
 <script type="text/javascript">
   $(document).ready(function() {
     $('#example').DataTable( {
-      "processing": true,
+      // "processing": true,
       "serverSide": true,
       "ajax": "/prot/get_row_details.php"
     } );
