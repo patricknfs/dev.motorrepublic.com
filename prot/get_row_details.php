@@ -9,7 +9,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-  x2.src AS source , x1.man AS `manufacturer`, x1.mod AS `model`, x1.cap_desc AS `descr`, x1.code AS `cap_id`, x2.rent AS `rental`
+  mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr2.rent AS `rental`
   FROM
   (
     SELECT 
@@ -18,7 +18,7 @@ $query = "SELECT
       `team`.`vehicles`
     
       
-  ) AS x1
+  ) AS mr1
   LEFT JOIN
   (
     (
@@ -47,8 +47,8 @@ $query = "SELECT
     
       
     )
-  ) AS x2
-  ON x2.capid = $capid
+  ) AS mr2
+  ON mr2.capid = $capid
   ORDER BY rental DESC
 ";
 // echo $query;
