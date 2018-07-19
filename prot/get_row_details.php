@@ -16,8 +16,6 @@ $query = "SELECT
       `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`
     FROM
       `team`.`vehicles`
-    
-      
   ) AS mr1
   LEFT JOIN
   (
@@ -45,7 +43,7 @@ $query = "SELECT
   ON mr2.capid = mr1.cap_id
   ORDER BY rental DESC
 ";
-// echo $query;
+echo $query;
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
