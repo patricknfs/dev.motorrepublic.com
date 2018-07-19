@@ -3,7 +3,7 @@
 // get_row_details.php
 header('Content-type: application/json; charset=utf-8');
 session_start();
-$capid = 83661;
+// $capid = 83661;
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
@@ -42,7 +42,7 @@ $query = "SELECT
       `team`.`rates_hitachi`
     )
   ) AS mr2
-  ON mr2.capid = $capid
+  ON mr2.capid = mr1.cap_id
   ORDER BY rental DESC
 ";
 echo $query;
