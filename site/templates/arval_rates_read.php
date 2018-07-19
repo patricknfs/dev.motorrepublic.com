@@ -90,7 +90,7 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
         VALUES (
         " . $data[4] . ",
         NOW(),
-        " . (($data[10]/2)+3.85) . ",
+        " . ($data[10]+3.85) . ",
         " . ($data[8]+5+3.85)/2 . ",
         " . ($data[13]+3.85)/2 . ",
         " . ($data[11]+5+3.85)/2 . ",
