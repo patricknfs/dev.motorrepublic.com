@@ -26,8 +26,6 @@ $query = "SELECT
       'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_arval`
-    
-      
     )
     UNION
     (
@@ -35,8 +33,6 @@ $query = "SELECT
     'ald' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_ald`
-    
-      
     )
     UNION
     (
@@ -44,8 +40,6 @@ $query = "SELECT
     'hitachi' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_hitachi`
-    
-      
     )
   ) AS mr2
   ON mr2.capid = $capid
