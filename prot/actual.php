@@ -71,7 +71,7 @@ include("./main.php");
       "scrollY": "700px",
       "paging": false,
 			"deferRender": true,
-			"order": [[ 5, "desc" ]],
+			
 		  "columns": [
 	  		{ "data": "status" },
         { "data": "ad_provider" },
