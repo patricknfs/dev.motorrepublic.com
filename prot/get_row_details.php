@@ -49,7 +49,7 @@ $query = "SELECT
     )
   ) AS x2
   ON x2.capid = $capid
-  ORDER BY rental DESC LIMIT 5
+  ORDER BY rental DESC
 ";
 // echo $query;
 $result = $conn->query($query) or die(mysqli_error());
