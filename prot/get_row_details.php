@@ -17,7 +17,7 @@ $query = "SELECT
     FROM
       `team`.`vehicles`
     WHERE
-      cap_id = $capid
+      
   ) AS x1
   LEFT JOIN
   (
@@ -27,7 +27,7 @@ $query = "SELECT
     FROM
       `team`.`rates_arval`
     WHERE
-      `cap_id` = $capid
+      
     )
     UNION
     (
@@ -36,7 +36,7 @@ $query = "SELECT
     FROM
       `team`.`rates_ald`
     WHERE
-      `cap_id` = $capid
+      
     )
     UNION
     (
@@ -45,7 +45,7 @@ $query = "SELECT
     FROM
       `team`.`rates_hitachi`
     WHERE
-      `cap_id` = $capid
+      
     )
   ) AS x2
   ON x2.capid = $capid
