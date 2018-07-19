@@ -16,7 +16,7 @@ $query = "SELECT
       `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`
     FROM
       `team`.`vehicles`
-    WHERE
+    
       
   ) AS x1
   LEFT JOIN
@@ -26,7 +26,7 @@ $query = "SELECT
       'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_arval`
-    WHERE
+    
       
     )
     UNION
@@ -35,7 +35,7 @@ $query = "SELECT
     'ald' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_ald`
-    WHERE
+    
       
     )
     UNION
@@ -44,7 +44,7 @@ $query = "SELECT
     'hitachi' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
     FROM
       `team`.`rates_hitachi`
-    WHERE
+    
       
     )
   ) AS x2
