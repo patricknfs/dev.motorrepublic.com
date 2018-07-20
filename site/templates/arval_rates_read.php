@@ -22,8 +22,6 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
   // fgets($handle);
 
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // print_r($data);
-    $num = count($rawdata);
     $data = str_replace(',', '', $rawdata);
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
@@ -143,7 +141,7 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
     }
     $row++;
   }
-  $AdminMessage .= $num . " rows inserted\n";
+  $AdminMessage .= $row . " rows inserted\n";
   mail($adminEmail,"MR Arval Upload Monitor",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
