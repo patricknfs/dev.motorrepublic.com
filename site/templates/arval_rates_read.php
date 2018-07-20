@@ -4,13 +4,6 @@
 // Arval ratebooks are standard 3 up front
 
 // 15K $ 25K need to be calculated. Make sure that values are indicated as nominal in out docs.
-// Calculated by adding rates before and after plus 10, then dividing by 2.
-
-/*
-
-Do not forget to add in an extra £5 for non-maintained agreements. This has not been accounted for yet.
-
-*/
 
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
@@ -31,7 +24,7 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
     $num = count($rawdata);
-    $data = preg_replace('/\s+/', '', $rawdata);
+    $data = str_replace(',', '', $rawdata);
     $data = str_replace('£','',$data);
     $data = str_replace('#N/A',NULL,$data);
     if($row > 3){
