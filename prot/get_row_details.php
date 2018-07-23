@@ -22,13 +22,7 @@ $query = "SELECT
       `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
     FROM
       `team`.`vehicles`
-    <?php 
-    if($_GET){
-      ?>
-      WHERE `manufacturer` = '" . $manufacturer . "'
-      <?php
-    }
-    ?>
+   
   ) AS mr1
   LEFT JOIN
   (
