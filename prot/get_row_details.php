@@ -23,9 +23,9 @@ $query = "SELECT
     FROM
       `team`.`vehicles`
     <?php 
-    if(isset($_GET)){ 
-      echo " WHERE `manufacturer` = '" . $manufacturer . "'";
-    }
+    -- if(isset($_GET)){
+    --   echo " WHERE `manufacturer` = '" . $manufacturer . "'";
+    -- }
     ?>
   ) AS mr1
   LEFT JOIN
