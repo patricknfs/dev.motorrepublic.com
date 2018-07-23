@@ -42,7 +42,7 @@ $query = "SELECT
   ON mr1.code = mr2.capid
   ORDER BY rental DESC
 ";
-// echo $query;
+echo $query;
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
