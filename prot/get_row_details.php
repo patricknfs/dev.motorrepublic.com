@@ -23,7 +23,7 @@ $query = "SELECT
     FROM
       `team`.`vehicles`
     <?php 
-    if(!empty($_GET['manufacturer'])){
+    if(isset($_GET[])){
       echo " WHERE `manufacturer` = '" . $manufacturer . "'";
     }
     ?>
