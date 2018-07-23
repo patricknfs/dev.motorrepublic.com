@@ -9,11 +9,11 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-  mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr2.rent AS `rental`
+  mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code mr2.rent AS `rental`
   FROM
   (
     SELECT 
-      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`
+      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
     FROM
       `team`.`vehicles`
   ) AS mr1
@@ -50,6 +50,7 @@ $result = $conn->query($query) or die(mysqli_error());
 while ($row = mysqli_fetch_assoc($result)) {
 	// for every field in the result..
   $row['cap_id'];
+  $row['cap_code'];
   $row['manufacturer'];
   $row['model'];
   $row['descr'];
