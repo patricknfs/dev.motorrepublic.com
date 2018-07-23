@@ -14,7 +14,7 @@ include("./main.php");
 // $analysis = $_SESSION['analysis'];
 // // echo $analysis . "\n";
 ?>
-<p>form-builder/vehicle_power_search</p>
+<?= $forms->embed('vehicle_power_search'); ?>
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
