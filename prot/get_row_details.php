@@ -1,5 +1,5 @@
 <?php
-// print_r($_GET);
+print_r($_GET);
 // get_row_details.php
 header('Content-type: application/json; charset=utf-8');
 session_start();
@@ -9,7 +9,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php");
 
 $query = "SELECT 
-  mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code mr2.rent AS `rental`
+  mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code, mr2.rent AS `rental`
   FROM
   (
     SELECT 
