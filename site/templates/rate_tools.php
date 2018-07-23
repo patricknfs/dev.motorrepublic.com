@@ -22,6 +22,7 @@ include("./main.php");
       <th>Model</th>
       <th>Description</th>
       <th>Cap ID</th>
+      <th>Cap Code</th>
       <th>Rental</th>
     </tr>
   </thead>
@@ -35,6 +36,7 @@ include("./main.php");
       <th>Model</th>
       <th>Description</th>
       <th>Cap ID</th>
+      <th>Cap Code</th>
       <th>Rental</th>
     </tr>
   </tfoot>
@@ -70,6 +72,7 @@ include("./main.php");
         { "data": "model" },
         { "data": "descr" },
         { "data": "cap_id", "className": "dt-body-right" },
+        { "data": "cap_code", "className": "dt-body-right" },
         { "data": "rental", "className": "dt-body-right" },
 	  	]
 		});	
