@@ -10,7 +10,7 @@ if(isset($_GET)){
   $manufacturer = $_GET['manufacturer'];
 }
 else {
-  $manufacturer = '*';
+  $manufacturer = '%';
 }
 
 // $manufacturer = "ford";
