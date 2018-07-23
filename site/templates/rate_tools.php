@@ -13,8 +13,8 @@ include("./main.php");
 // $_SESSION['analysis'] = $conn->real_escape_string($_POST["analysis"]);
 // $analysis = $_SESSION['analysis'];
 // // echo $analysis . "\n";
+// echo $forms->embed('vehicle_power_search'); 
 ?>
-<?= $forms->embed('vehicle_power_search'); ?>
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
