@@ -13,7 +13,7 @@ else {
   $manufacturer = '%';
 }
 
-$where = " WHERE `manufacturer` = '" . $manufacturer . "';
+$where = " WHERE `manufacturer` = '" . $manufacturer . "' ";
 
 // $manufacturer = "ford";
 $query = "SELECT 
