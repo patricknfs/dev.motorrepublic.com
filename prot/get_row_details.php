@@ -6,7 +6,7 @@ session_start();
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
-if(isset($_GET)){
+if($_GET){
   $manufacturer = $_GET['manufacturer'];
 }
 else {
