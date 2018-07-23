@@ -13,6 +13,8 @@ else {
   $manufacturer = '%';
 }
 
+$where = " WHERE `manufacturer` = '" . $manufacturer . "';
+
 // $manufacturer = "ford";
 $query = "SELECT 
   mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code, mr2.rent AS `rental`
@@ -22,7 +24,7 @@ $query = "SELECT
       `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
     FROM
       `team`.`vehicles`
-   
+        <?php $where ?>
   ) AS mr1
   LEFT JOIN
   (
