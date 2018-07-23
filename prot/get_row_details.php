@@ -24,7 +24,7 @@ $query = "SELECT
       `team`.`vehicles`
     <?php 
     if(isset($_GET)){ 
-      echo "WHERE `manufacturer` = '" . $manufacturer . "'";
+      echo " WHERE `manufacturer` = '" . $manufacturer . "'";
     }
     ?>
   ) AS mr1
