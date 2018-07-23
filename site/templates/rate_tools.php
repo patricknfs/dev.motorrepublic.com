@@ -42,14 +42,6 @@ include("./main.php");
   </tfoot>
 </table>
 <script type="text/javascript">
-  // $(document).ready(function() {
-  //   $('#example').DataTable( {
-  //     // "processing": true,
-  //     // "serverSide": true,
-  //     "dataType": "json",
-  //     "url": "/prot/get_row_details.php"
-  //   } );
-  // } );
   $(document).ready(function() {
 		var oTable = $('#example').DataTable( {
 			"language": {
@@ -62,7 +54,7 @@ include("./main.php");
         "dataType": "json",
         "dataSrc": ""
 			},
-      "order": [[ 5, "asc" ]],
+      "order": [[ 6, "asc" ]],
       "scrollY": "700px",
       "paging": false,
 			"deferRender": true,
