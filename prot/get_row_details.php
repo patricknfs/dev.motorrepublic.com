@@ -1,6 +1,6 @@
 <?php
 // get_row_details.php
-// print_r($_GET);
+print_r($_GET);
 header('Content-type: application/json; charset=utf-8');
 session_start();
 date_default_timezone_set('CET');
