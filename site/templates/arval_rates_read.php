@@ -19,8 +19,6 @@ $result = mysqli_query($conn, $truncate);
 $row = 1;
 
 if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
-  // fgets($handle);
-
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     $data = str_replace(',', '', $rawdata);
     $data = str_replace('£','',$data);
