@@ -25,7 +25,6 @@ $query = "SELECT
       `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
     FROM
       `team`.`vehicles`
-        $where
   ) AS mr1
   LEFT JOIN
   (
