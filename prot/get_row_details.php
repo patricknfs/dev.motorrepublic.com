@@ -12,6 +12,7 @@ if($_GET){
 else {
   $manufacturer = '%';
 }
+echo $manufacturer;
 
 $where = " WHERE `manufacturer` = '" . $manufacturer . "' ";
 
