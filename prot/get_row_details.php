@@ -49,8 +49,8 @@ $query = "SELECT
         `team`.`rates_hitachi`
     )
   ) AS mr2
-  WHERE `source` NOT NULL
   ON mr1.code = mr2.capid
+  WHERE `source` NOT NULL
   ORDER BY rental DESC
 ";
 // echo $query;
