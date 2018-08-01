@@ -15,7 +15,7 @@ else {
 // echo $manufacturer;
 
 // $where = " WHERE `manufacturer` = '" . $manufacturer . "' ";
-$where = " WHERE `source != ''
+$where = " WHERE `source != ''";
 // $manufacturer = "ford";
 $query = "SELECT 
   mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code, mr2.rent AS `rental`
