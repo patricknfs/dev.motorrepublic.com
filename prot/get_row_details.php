@@ -53,7 +53,7 @@ $query = "SELECT
   WHERE source != ''
   ORDER BY rental DESC
 ";
-// echo $query;
+echo $query;
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
