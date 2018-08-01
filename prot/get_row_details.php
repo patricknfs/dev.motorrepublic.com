@@ -15,7 +15,7 @@ else {
 // echo $manufacturer;
 
 // $where = " WHERE `manufacturer` = '" . $manufacturer . "' ";
-$where = " WHERE `source != ''";
+$where = " WHERE `source != ''
 // $manufacturer = "ford";
 $query = "SELECT 
   mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code, mr2.rent AS `rental`
@@ -25,7 +25,6 @@ $query = "SELECT
       `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
     FROM
       `team`.`vehicles`
-    $where
   ) AS mr1
   LEFT JOIN
   (
@@ -34,7 +33,6 @@ $query = "SELECT
         'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_arval`
-        $where
     )
     UNION
     (
@@ -42,7 +40,6 @@ $query = "SELECT
       'ald' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_ald`
-        $where
     )
     UNION
     (
@@ -50,7 +47,6 @@ $query = "SELECT
       'hitachi' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_hitachi`
-        $where
     )
   ) AS mr2
   ON mr1.code = mr2.capid
