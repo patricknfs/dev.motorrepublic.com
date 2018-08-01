@@ -57,7 +57,8 @@ $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
 while ($row = mysqli_fetch_assoc($result)) {
-	// for every field in the result..
+  // for every field in the result..
+  $row['source'];
   $row['cap_id'];
   $row['cap_code'];
   $row['manufacturer'];
