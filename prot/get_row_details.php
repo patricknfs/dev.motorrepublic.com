@@ -29,24 +29,24 @@ $query = "SELECT
   LEFT JOIN
   (
     (
-    SELECT 
-      'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-    FROM
-      `team`.`rates_arval`
+      SELECT 
+        'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      FROM
+        `team`.`rates_arval`
     )
     UNION
     (
-    SELECT 
-    'ald' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-    FROM
-      `team`.`rates_ald`
+      SELECT 
+      'ald' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      FROM
+        `team`.`rates_ald`
     )
     UNION
     (
-    SELECT 
-    'hitachi' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-    FROM
-      `team`.`rates_hitachi`
+      SELECT 
+      'hitachi' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      FROM
+        `team`.`rates_hitachi`
     )
   ) AS mr2
   ON mr1.code = mr2.capid

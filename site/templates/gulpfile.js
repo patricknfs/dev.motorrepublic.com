@@ -25,7 +25,6 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
   return gulp.src([
-    'scripts/jquery.pagepiling.js',
     'scripts/jquery.fullPage.js',
     'scripts/detectmobilebrowser.js',
     'scripts/readmore.js',
