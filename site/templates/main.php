@@ -22,17 +22,6 @@ ERROR_REPORTING(E_ALL);
       }
       ?>
     </title>
-    <?php
-    // if($session->theme == 'white') {
-    //  $css = 'white.min.css';
-    // }
-    // elseif($session->theme == 'grey') {
-    //  $css = 'main.min.css';
-    // } else {
-    //  $css = 'main.min.css'; 
-    // }
-    $css = 'css/app.css';
-    ?>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -45,8 +34,6 @@ ERROR_REPORTING(E_ALL);
 
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/styles.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
-    <!-- <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/main.min.css" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://i.icomoon.io/public/c88de6d4a5/DWSiteGenesis/style.css"> -->
   </head>
   <body>
     <header class="navigation" role="banner">
