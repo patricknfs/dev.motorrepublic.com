@@ -53,8 +53,8 @@ ERROR_REPORTING(E_ALL);
       <div class="navigation-wrapper">
         <div id="logoimg">
           <a class="svg" href="/">
-            <object data="<?=$config->urls->assets?>graphics/logo2.svg" type="image/svg+xml">
-              <img src="<?=$config->urls->assets?>graphics/logo2.png" alt="Charter Hall Asset Finance" title="Charter Hall Asset Finance"/>
+            <object data="<?=$config->urls->assets?>graphics/logo.svg" type="image/svg+xml">
+              <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Motor Republic Vehicle Leasing" title="Motor Republic Vehicle Leasing"/>
             </object>
           </a>
         </div>
