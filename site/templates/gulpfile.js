@@ -25,11 +25,11 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
   return gulp.src([
-    'scripts/jquery.fullPage.js',
-    'scripts/detectmobilebrowser.js',
-    'scripts/readmore.js',
-    'scripts/topbar.js',
-    'scripts/magnific.js',
+    // 'scripts/jquery.fullPage.js',
+    // 'scripts/detectmobilebrowser.js',
+    // 'scripts/readmore.js',
+    // 'scripts/topbar.js',
+    // 'scripts/magnific.js',
     'scripts/main.js'
   ])
   // .pipe(jshint('.jshintrc'))

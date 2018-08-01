@@ -49,21 +49,23 @@ ERROR_REPORTING(E_ALL);
     <!-- <link rel="stylesheet" type="text/css" href="https://i.icomoon.io/public/c88de6d4a5/DWSiteGenesis/style.css"> -->
   </head>
   <body>
-   <header class="navigation" role="banner">
+    <header class="navigation" role="banner">
       <div class="navigation-wrapper">
         <div id="logoimg">
-          <object data="<?=$config->urls->assets?>graphics/logo.svg" type="image/svg+xml">
-            <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Motor Republic" title="Motor Republic"/>
-          </object>
+          <a class="svg" href="/">
+            <object data="<?=$config->urls->assets?>graphics/logo2.svg" type="image/svg+xml">
+              <img src="<?=$config->urls->assets?>graphics/logo2.png" alt="Charter Hall Asset Finance" title="Charter Hall Asset Finance"/>
+            </object>
+          </a>
         </div>
-        <nav class="uk-navbar uk-navbar-container" uk-navbar>
-          <div class="uk-navbar-left">
+        <div class="menu-container">
+          <div class="menu">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
             $options = array(
               'parent_class' => '',
               'current_class' => '',
-              'has_children_class' => 'uk-parent',
+              'has_children_class' => '',
               'levels' => false,
               'levels_prefix' => 'level-',
               'max_levels' => null,
@@ -71,7 +73,7 @@ ERROR_REPORTING(E_ALL);
               'collapsed' => false,
               'show_root' => true,
               'selector' => '',
-              'outer_tpl' => '<ul id="" class="uk-navbar-nav">||',
+              'outer_tpl' => '<ul id="" class="">||',
               'inner_tpl' => '<ul class="">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
               'list_field_class' => '',
@@ -83,15 +85,17 @@ ERROR_REPORTING(E_ALL);
             );
             echo $treeMenu->render($options);
             ?>
-            <div class="navigation-tools">
-            <div class="search-bar">
-              <form action="<?=$config->urls->root?>search/" role="search">
-                <input type="search" placeholder="Enter Search" name="q" />
-                <button type="submit">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-                </button>
-              </form>
-          </nav>
+            <!--<div class="navigation-tools">
+              <div class="search-bar">
+                <form action="<?=$config->urls->root?>search/" role="search">
+                  <input type="search" placeholder="Enter Search" name="q" />
+                  <button type="submit">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                  </button>
+                </form>
+              </div>
+            </div> -->
+          </div>
         </div>
       </div>
     </header>
