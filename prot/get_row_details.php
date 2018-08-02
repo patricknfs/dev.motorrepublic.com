@@ -21,13 +21,6 @@ $query = "SELECT
   mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr1.code AS `cap_id`, mr1.capcode AS cap_code, mr2.rent AS `rental`
   FROM
   (
-    SELECT 
-      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
-    FROM
-      `team`.`vehicles`
-  ) AS mr1
-  LEFT JOIN
-  (
     (
       SELECT 
         'arval' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
@@ -49,8 +42,14 @@ $query = "SELECT
         `team`.`rates_hitachi`
     )
   ) AS mr2
+  LEFT JOIN
+  (
+    SELECT 
+      `manufacturer` AS `man`, `model` AS `mod`, `description` AS `cap_desc`, `cap_id` AS `code`, `cap_code` AS `capcode`
+    FROM
+      `team`.`vehicles`
+  ) AS mr1
   ON mr1.code = mr2.capid
-  -- WHERE source != ''
   ORDER BY rental DESC
 ";
 // echo $query;
