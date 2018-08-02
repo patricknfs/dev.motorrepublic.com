@@ -109,9 +109,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `updated` = NOW(),
         " . $insert . "
-        ON DUPLICATE KEY echo "no months defined";
-        `updated` = NOW(),echo "no months defined";
-        " . $insert . ";";echo "no months defined";
+        ON DUPLICATE KEY UPDATE
+        `updated` = NOW(),
+        " . $insert . ";";
         break;
         case 15000:
         switch($data[7]){
