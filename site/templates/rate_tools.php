@@ -59,11 +59,11 @@ include("./main.php");
       "scrollY": "700px",
       // "paging": false,
 			"deferRender": true,
-      "serverSide": true,
-      "scroller": {
-        "loadingIndicator": true
-      },
-      "stateSave": true,
+      // "serverSide": true,
+      // "scroller": {
+      //   "loadingIndicator": true
+      // },
+      // "stateSave": true,
 		  "columns": [
 	  		{ "data": "source" },
         { "data": "manufacturer" },
