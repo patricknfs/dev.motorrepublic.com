@@ -63,6 +63,7 @@ include("./main.php");
       "scroller": {
         "loadingIndicator": true
       },
+      "stateSave": true,
 		  "columns": [
 	  		{ "data": "source" },
         { "data": "manufacturer" },
