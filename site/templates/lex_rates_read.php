@@ -83,7 +83,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           case 60:
           $insert = "`60_10K_PA_rental_nm` = " . ($data[47]);
           break;
-          default:4 2018] [warn] [client 213.1.208.118] mod_fcgid: stderr: PHP Notice:  Undefined offset: 47
+          default:
           echo "no months defined";
           break;
         }
@@ -109,9 +109,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `updated` = NOW(),
         " . $insert . "
-        ON DUPLICATE KEY UPDATE
-        `updated` = NOW(),
-        " . $insert . ";";
+        ON DUPLICATE KEY Uecho "no months defined";
+        `updated` = NOW(),echo "no months defined";
+        " . $insert . ";";echo "no months defined";
         break;
         case 15000:
         switch($data[7]){
