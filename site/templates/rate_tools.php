@@ -64,6 +64,8 @@ include("./main.php");
       //   "loadingIndicator": true
       // },
       // "stateSave": true,
+      "scrollCollapse": true,
+      "scroller": true,
 		  "columns": [
 	  		{ "data": "source" },
         { "data": "manufacturer" },
