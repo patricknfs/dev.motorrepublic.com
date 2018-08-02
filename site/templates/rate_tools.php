@@ -59,6 +59,7 @@ include("./main.php");
       "scrollY": "700px",
       "paging": false,
 			"deferRender": true,
+      "serverSide": true,
 		  "columns": [
 	  		{ "data": "source" },
         { "data": "manufacturer" },
