@@ -6,7 +6,6 @@
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
-
 //Open local file to write to
 // $fp = fopen("/var/www/vhosts/dootet.com/stats.dootet.com/data/affilired.csv", "w");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
