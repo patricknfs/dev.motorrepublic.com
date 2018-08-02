@@ -50,7 +50,7 @@ $query = "SELECT
     )
   ) AS mr2
   ON mr1.code = mr2.capid
-  -- WHERE source != ''
+  WHERE mr2.rent NOT NULL
   ORDER BY rental DESC
 ";
 echo $query;
