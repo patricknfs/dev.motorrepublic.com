@@ -48,6 +48,13 @@ $query = "SELECT
       FROM
         `team`.`rates_hitachi`
     )
+    UNION
+    (
+      SELECT 
+      'lex' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      FROM
+        `team`.`rates_lex`
+    )
   ) AS mr2
   ON mr1.code = mr2.capid
   WHERE mr2.rent IS NOT NULL
@@ -73,4 +80,3 @@ while ($row = mysqli_fetch_assoc($result)) {
 // print_r($rows);
 // print '</pre>'; 
 echo json_encode($rows, JSON_PRETTY_PRINT);
-?>
