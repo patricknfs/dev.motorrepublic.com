@@ -50,10 +50,10 @@ $query = "SELECT
     )
   ) AS mr2
   ON mr1.code = mr2.capid
+  -- WHERE source != ''
   ORDER BY rental DESC
-  WHERE mr2.rental IS NULL
 ";
-// echo $query;
+echo $query;
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
