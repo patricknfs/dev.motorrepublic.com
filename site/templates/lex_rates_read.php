@@ -109,7 +109,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `updated` = NOW(),
         " . $insert . "
-        ON DUPLICATE KEY Uecho "no months defined";
+        ON DUPLICATE KEY echo "no months defined";
         `updated` = NOW(),echo "no months defined";
         " . $insert . ";";echo "no months defined";
         break;
