@@ -60,6 +60,9 @@ include("./main.php");
       "paging": false,
 			"deferRender": true,
       "serverSide": true,
+      "scroller": {
+          "loadingIndicator": true
+        },
 		  "columns": [
 	  		{ "data": "source" },
         { "data": "manufacturer" },
