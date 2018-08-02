@@ -57,12 +57,12 @@ include("./main.php");
 			},
       "order": [[ 6, "asc" ]],
       "scrollY": "700px",
-      "paging": false,
+      // "paging": false,
 			"deferRender": true,
       "serverSide": true,
       "scroller": {
-          "loadingIndicator": true
-        },
+        "loadingIndicator": true
+      },
 		  "columns": [
 	  		{ "data": "source" },
         { "data": "manufacturer" },
