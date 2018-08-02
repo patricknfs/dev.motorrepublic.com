@@ -50,7 +50,7 @@ $query = "SELECT
     )
   ) AS mr2
   ON mr1.code = mr2.capid
-  WHERE mr2.rent NOT NULL
+  WHERE mr2.rent IS NOT NULL
   ORDER BY rental DESC
 ";
 echo $query;
