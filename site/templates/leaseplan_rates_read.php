@@ -24,7 +24,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 1){
-      switch($mileage){
+      switch($data[13]){
         case 8000:
         switch($data[12]){
           case 24:
@@ -292,7 +292,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         default;
         echo "Ratebook fault";
       }
-      echo $update . "<br />";
+      echo $update;      
       $result2 = mysqli_query($conn, $update);
     }
     $row++;
