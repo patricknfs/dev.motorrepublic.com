@@ -18,12 +18,14 @@ include("./main.php");
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
+      <th>Cap ID</th>
+      <th>Cap Code</th>
       <th>Source</th>
       <th>Manufacturer</th>
       <th>Model</th>
       <th>Description</th>
-      <th>Cap ID</th>
-      <th>Cap Code</th>
+      <th>Term</th>
+      <th>Mileage</th>
       <th>Rental</th>
     </tr>
   </thead>
@@ -32,12 +34,14 @@ include("./main.php");
 	</tbody>
   <tfoot>
     <tr>
+      <th>Cap ID</th>
+      <th>Cap Code</th>
       <th>Source</th>
       <th>Manufacturer</th>
       <th>Model</th>
       <th>Description</th>
-      <th>Cap ID</th>
-      <th>Cap Code</th>
+      <th>Term</th>
+      <th>Mileage</th>
       <th>Rental</th>
     </tr>
   </tfoot>
