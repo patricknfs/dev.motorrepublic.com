@@ -67,12 +67,14 @@ include("./main.php");
       "scrollCollapse": true,
       "scroller": true,
 		  "columns": [
+        { "data": "cap_id", "className": "dt-body-right" },
+        { "data": "cap_code", "className": "dt-body-right" },
 	  		{ "data": "source" },
         { "data": "manufacturer" },
         { "data": "model" },
         { "data": "descr" },
-        { "data": "cap_id", "className": "dt-body-right" },
-        { "data": "cap_code", "className": "dt-body-right" },
+        { "data": "term"},
+        { "data": "mileage" },
         { "data": "rental", "className": "dt-body-right" },
 	  	]
 		});	
