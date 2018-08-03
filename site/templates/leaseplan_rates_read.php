@@ -29,19 +29,19 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         switch($data[12]){
           case 24:
           $insert = "`24_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= "`24_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert .= ",`24_8K_PA_rental_m` = " . ($data[17]+$data[18]);
           break;
           case 36:
           $insert = "`36_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= "`36_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert .= ",`36_8K_PA_rental_m` = " . ($data[17]+$data[18]);
           break;
           case 48:
           $insert = "`48_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= "`48_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert .= ",`48_8K_PA_rental_m` = " . ($data[17]+$data[18]);
           break;
           case 60:
           $insert = "`60_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= "`60_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert .= ",`60_8K_PA_rental_m` = " . ($data[17]+$data[18]);
           break;
           default:
           echo "no months defined";
