@@ -30,84 +30,84 @@ $query = "SELECT
   (
     (
       SELECT 
-        'arval' AS src, '24' AS `term`, '8K' AS `mileage`, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+        'arval' AS src, '24M' AS `term`, '8K' AS `mileage`, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_arval`
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '24' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'ald' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_ald`
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '24' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'hitachi' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_hitachi`
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '24' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'leaseplan' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_leaseplan`
     )
     UNION
     (
       SELECT 
-        'arval' AS src, '36' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+        'arval' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_arval`
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '36' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'ald' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_ald`
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '36' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'hitachi' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_hitachi`
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '36' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'leaseplan' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_leaseplan`
     )
     UNION
     (
       SELECT 
-        'arval' AS src, '48' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+        'arval' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_arval`
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '48' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'ald' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_ald`
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '48' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'hitachi' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_hitachi`
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '48' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'leaseplan' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
         `team`.`rates_leaseplan`
     )
