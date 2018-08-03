@@ -51,9 +51,9 @@ $query = "SELECT
     UNION
     (
       SELECT 
-      'lex' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+      'leaseplan' AS src, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid` 
       FROM
-        `team`.`rates_lex`
+        `team`.`rates_leaseplan`
     )
   ) AS mr2
   ON mr1.code = mr2.capid
