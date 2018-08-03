@@ -48,7 +48,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           echo $data[41] . "mileage profile is not coded into 24 month mileage specifier";
         }
         break;
-        case 36:INSERT INTO `team`.`rates_lex` SET `cap_id` = ABARTH, `updated` = NOW(), `24_10K_PA_rental_m` = 433.22 ON DUPLICATE KEY UPDATE `updated` = NOW(), `24_10K_PA_rental_m` = 433.22;
+        case 36:
         switch($data[41]){
           case 24000:
           $mileage = 8000;
@@ -60,8 +60,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 15000;
           break;
           case 60000:
-          $mileage = 20000;INSERT INTO `team`.`rates_lex` SET `cap_id` = ABARTH, `updated` = NOW(), `24_10K_PA_rental_m` = 433.22 ON DUPLICATE KEY UPDATE `updated` = NOW(), `24_10K_PA_rental_m` = 433.22;
-          break;
+          $mileage = 20000;
           case 75000:
           $mileage = 25000;
           break;
