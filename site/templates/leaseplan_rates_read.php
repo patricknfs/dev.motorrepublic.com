@@ -62,7 +62,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[1] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -106,7 +106,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[1] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -150,7 +150,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[1] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -194,7 +194,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[1] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -238,7 +238,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[1] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -282,7 +282,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[1] . ",
+        `cap_id` = " . $data[0] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
