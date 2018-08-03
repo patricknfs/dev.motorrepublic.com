@@ -18,7 +18,7 @@ else {
 
 // $manufacturer = "ford";
 $query = "SELECT 
-  mr1.cap_id AS `cap_id`, mr1.cap_code AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`
+  mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`
   FROM
   (
     SELECT 
