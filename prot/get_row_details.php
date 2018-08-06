@@ -363,174 +363,174 @@ $query = "SELECT
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
-    UNION
-    (
-      SELECT 
-        'arval' AS src, '24M' AS `term`, '25K' AS `mileage`, `24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_arval` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'ald' AS src, '24M' AS `term`, '25K' AS `mileage`,`24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_ald` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'hitachi' AS src, '24M' AS `term`, '25K' AS `mileage`,`24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_hitachi` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'leaseplan' AS src, '24M' AS `term`, '25K' AS `mileage`,`24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_leaseplan` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-        'arval' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_arval` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'ald' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_ald` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'hitachi' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_hitachi` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'leaseplan' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_leaseplan` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-        'arval' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_arval` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'ald' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_ald` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'hitachi' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_hitachi` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'leaseplan' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_leaseplan` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-        'arval' AS src, '24M' AS `term`, '30K' AS `mileage`, `24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_arval` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'ald' AS src, '24M' AS `term`, '30K' AS `mileage`,`24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_ald` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'hitachi' AS src, '24M' AS `term`, '30K' AS `mileage`,`24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_hitachi` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'leaseplan' AS src, '24M' AS `term`, '30K' AS `mileage`,`24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_leaseplan` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-        'arval' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_arval` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'ald' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_ald` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'hitachi' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_hitachi` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'leaseplan' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_leaseplan` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-        'arval' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_arval` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'ald' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_ald` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'hitachi' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_hitachi` HAVING rent IS NOT NULL
-    )
-    UNION
-    (
-      SELECT 
-      'leaseplan' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
-      FROM
-        `team`.`rates_leaseplan` HAVING rent IS NOT NULL
-    )
+    -- UNION
+    -- (
+    --   SELECT 
+    --     'arval' AS src, '24M' AS `term`, '25K' AS `mileage`, `24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_arval` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'ald' AS src, '24M' AS `term`, '25K' AS `mileage`,`24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_ald` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'hitachi' AS src, '24M' AS `term`, '25K' AS `mileage`,`24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_hitachi` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'leaseplan' AS src, '24M' AS `term`, '25K' AS `mileage`,`24_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_leaseplan` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --     'arval' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_arval` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'ald' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_ald` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'hitachi' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_hitachi` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'leaseplan' AS src, '36M' AS `term`, '25K' AS `mileage`, `36_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_leaseplan` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --     'arval' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_arval` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'ald' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_ald` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'hitachi' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_hitachi` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'leaseplan' AS src, '48M' AS `term`, '25K' AS `mileage`, `48_25K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_leaseplan` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --     'arval' AS src, '24M' AS `term`, '30K' AS `mileage`, `24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_arval` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'ald' AS src, '24M' AS `term`, '30K' AS `mileage`,`24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_ald` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'hitachi' AS src, '24M' AS `term`, '30K' AS `mileage`,`24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_hitachi` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'leaseplan' AS src, '24M' AS `term`, '30K' AS `mileage`,`24_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_leaseplan` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --     'arval' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_arval` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'ald' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_ald` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'hitachi' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_hitachi` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'leaseplan' AS src, '36M' AS `term`, '30K' AS `mileage`, `36_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_leaseplan` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --     'arval' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_arval` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'ald' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_ald` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'hitachi' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_hitachi` HAVING rent IS NOT NULL
+    -- )
+    -- UNION
+    -- (
+    --   SELECT 
+    --   'leaseplan' AS src, '48M' AS `term`, '30K' AS `mileage`, `48_30K_PA_rental_m` AS rent, `cap_id` AS `capid` 
+    --   FROM
+    --     `team`.`rates_leaseplan` HAVING rent IS NOT NULL
+    -- )
   ) AS mr2
   ON mr1.code = mr2.capid
   -- WHERE mr2.rent IS NOT NULL
