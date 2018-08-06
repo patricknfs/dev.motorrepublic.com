@@ -536,7 +536,7 @@ $query = "SELECT
   -- WHERE mr2.rent IS NOT NULL
   ORDER BY rental DESC
 ";
-echo $query; 
+// echo $query; 
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
