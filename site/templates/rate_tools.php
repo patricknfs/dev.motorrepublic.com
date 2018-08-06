@@ -53,7 +53,7 @@ include("./main.php");
         "search": "_INPUT_",
         "searchPlaceholder": "Search..."
 	    },
-			// "processing": true,
+			"processing": true,
       "ajax": {
       	"url": "/prot/get_row_details.php",
         "dataType": "json",
@@ -62,8 +62,8 @@ include("./main.php");
       "order": [[ 8, "asc" ]],
       "scrollY": "700px",
       // "paging": false,
-			// "deferRender": true,
-      "serverSide": true,
+			"deferRender": true,
+      // "serverSide": true,
       // "scroller": {
       //   "loadingIndicator": true
       // },
