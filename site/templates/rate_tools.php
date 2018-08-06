@@ -56,6 +56,7 @@ include("./main.php");
 			// "processing": true,
       "ajax": {
       	"url": "/prot/get_row_details.php",
+        "type": "POST",
         "dataType": "json",
         "dataSrc": ""
 			},
