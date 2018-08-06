@@ -63,7 +63,7 @@ include("./main.php");
       "order": [[ 8, "asc" ]],
       "scrollY": "700px",
       // "paging": false,
-			"deferRender": true,
+			// "deferRender": true,
       "serverSide": true,
       // "scroller": {
       //   "loadingIndicator": true
