@@ -17,6 +17,11 @@ else {
 // $where = " WHERE `manufacturer` = '" . $manufacturer . "' ";
 
 // $manufacturer = "ford";
+
+$truncate = "TRUNCATE TABLE `team`.`rates_combined`";
+$result2 = $conn->query($truncate) or die(mysqli_error());
+
+
 $query = "SELECT 
   mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`
   FROM
@@ -541,8 +546,6 @@ $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
 $row = 1;
-$truncate = "TRUNCATE TABLE `team`.`rates_combined`";
-$result = $conn->query($truncate) or die(mysqli_error());
 
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
