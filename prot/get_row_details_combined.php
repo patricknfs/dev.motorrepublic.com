@@ -542,7 +542,7 @@ $result = $conn->query($query) or die(mysqli_error());
 // iterate over every row
 $row = 1;
 $truncate = "TRUNCATE TABLE `team`.`rates_combined`";
-$result = mysqli_query($conn, $truncate);
+$result = $conn->query($truncate) or die(mysqli_error());
 
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
