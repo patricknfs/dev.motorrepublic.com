@@ -550,6 +550,6 @@ $row = 1;
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "')";
-  $result = $conn->query($insert) or die(mysqli_error());
+  $result3 = $conn->query($insert) or die(mysqli_error());
   $row++;
 }
