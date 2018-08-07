@@ -57,8 +57,7 @@ include("./main.php");
       "ajax": {
       	"url": "/prot/get_row_details.php",
         "type": "POST",
-        "dataType": "json",
-        "dataSrc": ""
+        "dataType": "json"
 			},
       "order": [[ 8, "asc" ]],
       "scrollY": "700px",

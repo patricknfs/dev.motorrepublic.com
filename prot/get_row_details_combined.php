@@ -540,21 +540,13 @@ $query = "SELECT
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row
+$row = 1;
+$truncate = "TRUNCATE TABLE `team`.`rates_combined`";
+$result = mysqli_query($conn, $truncate);
+
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
-  $row['source'];
-  $row['cap_id'];
-  $row['cap_code'];
-  $row['manufacturer'];
-  $row['term'];
-  $row['mileage'];
-  $row['model'];
-  $row['descr'];
-	$row['rental'];
-
-	$rows[] = $row;
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "')";
+  $result = $conn->query($query) or die(mysqli_error());
+  $row++;
 }
-// print '<pre>'; 
-// print_r($rows);
-// print '</pre>'; 
-echo json_encode($rows, JSON_PRETTY_PRINT);
