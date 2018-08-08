@@ -311,12 +311,7 @@ body {
   -ms-transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
   -o-transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
   transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
-  position: relative;
-  -moz-transform: translateX(150px);
-  -o-transform: translateX(150px);
-  -ms-transform: translateX(150px);
-  -webkit-transform: translateX(150px);
-    -webkit-transform-transform: translateX(150px); }
+  position: relative; }
 
 .slide-menu {
   background: #444;
@@ -324,17 +319,7 @@ body {
   width: 150px;
   height: 100%;
   position: absolute;
-  border-right: 1px solid black;
-  -moz-transform: translateX(-150px);
-  -o-transform: translateX(-150px);
-  -ms-transform: translateX(-150px);
-  -webkit-transform: translateX(-150px);
-    -webkit-transform-transform: translateX(-150px);
-  -webkit-transition: 0.25s ease-out all;
-  -moz-transition: 0.25s ease-out all;
-  -ms-transition: 0.25s ease-out all;
-  -o-transition: 0.25s ease-out all;
-  transition: 0.25s ease-out all; }
+  border-right: 1px solid black; }
   .slide-menu ul {
     margin: 0;
     padding: 0;
