@@ -89,7 +89,7 @@ ERROR_REPORTING(E_ALL);
             <p>...</p> -->
           </div>
         </div>
-    <header class="navigation" role="banner">
+    <!-- <header class="navigation" role="banner">
       <div class="navigation-wrapper">
         <div id="logoimg">
           <a class="svg" href="/">
@@ -117,7 +117,7 @@ ERROR_REPORTING(E_ALL);
         </div>
         
       </div>
-    </header>
+    </header> -->
 		<div class="wrapper">
         <?=$page->main?>
 		</div>
