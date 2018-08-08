@@ -11,11 +11,11 @@
 		<div class="feature_text">
 			<?=$page->feature?>
 		</div>
-		<details>
+	</div>
+</div>
+<details>
 			<summary>{{ question }}</summary>
 			<div>
 				{{ answer | markdown }}
 			</div>
 		</details>
-	</div>
-</div>
