@@ -45,12 +45,30 @@ ERROR_REPORTING(E_ALL);
             </object>
           </a>
         </div>
+
+
+        <!-- <div class="page-wrap">
+
+          <div for="toggle" class="handle"></div>
+
+          <div class="content">
+
+            <h1>Mobile Slide-In Menu</h1>
+          
+            <p>SASS-built off-canvas menu</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p> 
+          </div>
+        </div> -->
         <div class="menu-container">
           <div class="menu">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
             $options = array(
-              'parent_class' => '',
+              'parent_class' => 'slide-menu',
               'current_class' => '',
               'has_children_class' => '',
               'levels' => false,
@@ -97,4 +115,9 @@ ERROR_REPORTING(E_ALL);
     
     ?>
 	</body>
+  <script type="text/javascript">
+    $('.handle').click(function() {
+      $('body').toggleClass('slide');
+    });
+  </script>
 </html>
