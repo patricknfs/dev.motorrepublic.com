@@ -45,15 +45,6 @@ ERROR_REPORTING(E_ALL);
             </object>
           </a>
         </div>
-        <div class="slide-menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
 
         <div class="page-wrap">
 
