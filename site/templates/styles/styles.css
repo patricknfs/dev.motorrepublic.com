@@ -7,11 +7,6 @@ body {
 
 body {
   margin-top: 10px;
-  -webkit-transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
-  -moz-transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
-  -ms-transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
-  -o-transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
-  transition: all 0.5s cubic-bezier(0.75, -0.25, 0.25, 0.75);
   position: relative; }
 
 .slide-menu {
