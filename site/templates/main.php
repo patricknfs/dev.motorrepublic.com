@@ -50,7 +50,7 @@ ERROR_REPORTING(E_ALL);
         'collapsed' => false,
         'show_root' => true,
         'selector' => '',
-        'outer_tpl' => '<ul id="" class="">||',
+        'outer_tpl' => '<ul id="" class="header__nav__list">||',
         'inner_tpl' => '<ul class="">||</ul>',
         'list_tpl' => '<li%s>||</li>||</li>',
         'list_field_class' => '',
@@ -62,35 +62,263 @@ ERROR_REPORTING(E_ALL);
       );
       echo $treeMenu->render($options);
       ?>
-      <!--<div class="navigation-tools">
-        <div class="search-bar">
-          <form action="<?=$config->urls->root?>search/" role="search">
-            <input type="search" placeholder="Enter Search" name="q" />
-            <button type="submit">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-            </button>
-          </form>
-        </div>
-      </div> -->
-    </div>
-    <div class="page-wrap">
-      <div for="toggle" class="handle"></div>
-
-      <div class="content">
-        <!-- <h1>Mobile Slide-In Menu</h1>
+    <div class="container">
       
-        <p>SASS-built off-canvas menu</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p> -->
+      <div class="headnav">
+        
+        <header class="header">
+          
+          <div class="header__logo">
+            <img src="https://psmedia.playstation.com/is/image/psmedia/footerpslogo-nhasset?$Footer_Links_Row_Logo$" alt="Logo" />
+          </div>
+          
+          <nav class="header__nav" role="navigation">
+            <ul class="header__nav__list">
+              <li class="header__nav__item">  
+                <a href="#" class="header__nav__item__link">PS4</a>
+              </li>
+              <li class="header__nav__item">  
+                <a href="#" class="header__nav__item__link">Jeux</a>
+              </li>
+              <li class="header__nav__item">  
+                <a href="#" class="header__nav__item__link">PS Plus</a>
+              </li>
+              <li class="header__nav__item">  
+                <a href="#" class="header__nav__item__link">News</a>
+              </li>
+              <li class="header__nav__item">  
+                <a href="#" class="header__nav__item__link">PS Store</a>
+              </li>
+              <li class="header__nav__item">  
+                <a href="#" class="header__nav__item__link">Aide</a>
+              </li>
+              <div class="header__nav__item--icons">
+                <li class="header__nav__item header__nav__item--icon">  
+                  <a href="#" class="header__nav__item__link header__nav__item__link--icon">
+                    <img src="https://www.playstation.com/fr-fr/1.22.03/etc/designs/pdc/clientlibs_base/images/nav/avatar-default-2x.png"/>
+                  </a>
+                </li>
+                <li class="header__nav__item header__nav__item--icon">  
+                  <a href="#" class="header__nav__item__link header__nav__item__link--icon js-nav-search-open">
+                    <img src="https://www.playstation.com/fr-fr/1.22.03/etc/designs/pdc/clientlibs_base/images/searchbox/icon-magnifine-small-white-2x.png"/>
+                  </a>
+                </li>
+              </div>
+            </ul>
+            <div class="header__nav__search js-nav-search">
+              <form action="#" class="header__nav__search__form">
+                <input type="search" placeholder="Search" class="header__nav__search__form__text" autofocus/>
+                <input type="submit" class="header__nav__search__form__submit" value="Rechercher"/>
+              </form>
+              <button class="header__nav__search__close js-nav-search-close"></button>
+            </div>
+          </nav>
+          
+          <button href="#" class="nav-toggle js-nav-toggle" title="navigation menu" aria-label="navigation menu" role="button" aria-controls="navigation" aria-expanded="false">
+            <div class="nav-toggle__content">
+              <div class="nav-toggle__close"></div>
+              <div class="nav-toggle__open">menu</div>
+            </div>
+          </button>
+          
+        </header>
+        
+        <nav class="nav js-nav" role="first navigation">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-ps4-01-eu-15dec15?$Icon$"/>
+                </span>
+                PS4
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-games-01-eu-15dec15?$Icon$"/>
+                </span>
+                Jeux
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-psplus-01-eu-15dec15?$Icon$"/>
+                </span>
+                Playstation Plus
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-news-01-eu-15dec15?$Icon$"/>
+                </span>
+                News
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-ps-store-01-eu-15dec15?$Icon$"/>
+                </span>
+                PS Store
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-help-01-eu-15dec15?$Icon$"/>
+                </span>
+                Aide
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://www.playstation.com/fr-fr/1.22.03/etc/designs/pdc/clientlibs_base/images/main-header/primarynav_icon_account.png"/>
+                </span>
+                Connexion
+              </a>  
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item__wrapper">
+                <span class="nav__item__icon">
+                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-sitemap-01-eu-15dec15?$Icon$"/>
+                </span>
+                Plan du site
+              </a>  
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav--right js-second-nav">
+          <p class="nav--right__content">I display the content of <span class="nav--right__content__child-name"></span></p>
+        </nav>
+        
       </div>
+      
+      <div class="content">
+        <h3>Resize the viewport :)</h3>
+      </div>
+      
     </div>
 	</body>
   <script type="text/javascript">
-    $('.handle').click(function() {
-      $('body').toggleClass('slide');
-    });
+    var FirstCurtainMenu = {
+      $el: $('.js-nav'),
+      $elToggle: $('.js-nav-toggle'),
+      $elSecondCurtain: $('.js-second-nav'),
+      $elChildren: $('.nav__item__wrapper'),
+      isOpened: false,
+      
+      events: function() {
+        var self = this;
+        this.$elToggle.on('click', function() {
+          if (self.isOpened) {
+            self.close();
+          } else {
+            self.open();
+          }
+        });
+        $(document).on('click', function(e) {
+          if (self.isOpened) {
+            var is_menu = $(e.target).closest(self.$el).length;
+            var is_toggle = $(e.target).closest(self.$elToggle).length;
+            var is_secondCurtain = $(e.target).closest(self.$elSecondCurtain).length;
+            if(!is_menu && !is_toggle && !is_secondCurtain) {
+              self.close();
+            }
+          }
+        });
+      },
+      open: function() {
+        this.$el.addClass('is-open');
+        this.$elToggle.addClass('is-active');
+        this.isOpened = true;
+      },
+      close: function() {
+        this.$el.removeClass('is-open');
+        this.$elToggle.removeClass('is-active');
+        this.$elChildren.removeClass('is-selected');
+        this.isOpened = false;
+      },
+      init: function() {
+      this.events();
+      }
+    };
+
+    var SecondCurtainMenu = {
+      $el: $('.js-second-nav'),
+      $elToggle: $('.nav__item__wrapper'),
+      isOpened: false,
+      
+      events: function() {
+        var self = this;
+        this.$elToggle.on('click', function(e) {
+          if (self.isOpened) {
+            self.updateContent(e);
+          } else {
+            self.open(e);
+            self.updateContent(e);
+          }
+        });
+        // Close both curtains when user clicks on the header toggle
+        $('.js-nav-toggle').on('click', function() {
+          if (self.isOpened) {
+            self.close();
+            self.isOpened = false;
+          }
+        });
+      },
+      open: function(e) {
+        this.$el.addClass('is-open');
+        $(e.target).addClass('is-selected');
+        this.isOpened = true;
+      },
+      close: function() {
+        this.$el.removeClass('is-open');
+        this.isOpened = false;
+      },
+      updateContent: function(e) {
+        this.$elToggle.removeClass('is-selected');
+        $(e.target).addClass('is-selected');
+        $('.nav--right__content__child-name').text($(e.target).text());
+      },
+      init: function() {
+      this.events();
+      }
+    };
+
+    var SearchBar = {
+      $el: $('.js-nav-search'),
+      $elToggleOpen: $('.js-nav-search-open'),
+      $elToggleClose: $('.js-nav-search-close'),
+      isOpened: false,
+      
+      events: function() {
+        var self = this;
+        this.$elToggleOpen.on('click', function() {
+          if (!self.isOpened) { self.open(); }
+        });
+        this.$elToggleClose.on('click', function() {
+          if (self.isOpened) { self.close(); }
+        });
+      },
+      open: function() {
+        this.$el.addClass('is-active');
+        this.isOpened = true;
+      },
+      close: function() {
+        this.$el.removeClass('is-active');
+        this.isOpened = false;
+      },
+      init: function() {
+      this.events();
+      }
+    };
+
+    FirstCurtainMenu.init();
+    SecondCurtainMenu.init();
+    SearchBar.init();
   </script>
 </html>
