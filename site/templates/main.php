@@ -36,6 +36,59 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
   <body>
+    <div class="slide-menu">
+      <?php
+      $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+      $options = array(
+        'parent_class' => '',
+        'current_class' => '',
+        'has_children_class' => '',
+        'levels' => false,
+        'levels_prefix' => 'level-',
+        'max_levels' => null,
+        'firstlast' => false,
+        'collapsed' => false,
+        'show_root' => true,
+        'selector' => '',
+        'outer_tpl' => '<ul id="" class="">||',
+        'inner_tpl' => '<ul class="">||</ul>',
+        'list_tpl' => '<li%s>||</li>||</li>',
+        'list_field_class' => '',
+        'item_tpl' => '<a href="{url}">{title}</a>',
+        'item_current_tpl' => '<a href="{url}">{title}</a>',
+        'xtemplates' => '',
+        'xitem_tpl' => '<span>{title}</span>',
+        'xitem_current_tpl' => '<span>{title}</span>'
+      );
+      echo $treeMenu->render($options);
+      ?>
+      <!--<div class="navigation-tools">
+        <div class="search-bar">
+          <form action="<?=$config->urls->root?>search/" role="search">
+            <input type="search" placeholder="Enter Search" name="q" />
+            <button type="submit">
+              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+            </button>
+          </form>
+        </div>
+      </div> -->
+    </div>
+    <div class="page-wrap">
+
+          <div for="toggle" class="handle"></div>
+
+          <div class="content">
+
+            <!-- <h1>Mobile Slide-In Menu</h1>
+          
+            <p>SASS-built off-canvas menu</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p> -->
+          </div>
+        </div>
     <header class="navigation" role="banner">
       <div class="navigation-wrapper">
         <div id="logoimg">
@@ -62,43 +115,7 @@ ERROR_REPORTING(E_ALL);
             <p>...</p> -->
           </div>
         </div>
-        <div class="slide-menu">
-          <?php
-          $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-          $options = array(
-            'parent_class' => '',
-            'current_class' => '',
-            'has_children_class' => '',
-            'levels' => false,
-            'levels_prefix' => 'level-',
-            'max_levels' => null,
-            'firstlast' => false,
-            'collapsed' => false,
-            'show_root' => true,
-            'selector' => '',
-            'outer_tpl' => '<ul id="" class="">||',
-            'inner_tpl' => '<ul class="">||</ul>',
-            'list_tpl' => '<li%s>||</li>||</li>',
-            'list_field_class' => '',
-            'item_tpl' => '<a href="{url}">{title}</a>',
-            'item_current_tpl' => '<a href="{url}">{title}</a>',
-            'xtemplates' => '',
-            'xitem_tpl' => '<span>{title}</span>',
-            'xitem_current_tpl' => '<span>{title}</span>'
-          );
-          echo $treeMenu->render($options);
-          ?>
-          <!--<div class="navigation-tools">
-            <div class="search-bar">
-              <form action="<?=$config->urls->root?>search/" role="search">
-                <input type="search" placeholder="Enter Search" name="q" />
-                <button type="submit">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-                </button>
-              </form>
-            </div>
-          </div> -->
-        </div>
+        
       </div>
     </header>
 		<div class="wrapper">
