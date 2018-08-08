@@ -74,60 +74,19 @@ ERROR_REPORTING(E_ALL);
       </div> -->
     </div>
     <div class="page-wrap">
+      <div for="toggle" class="handle"></div>
 
-          <div for="toggle" class="handle"></div>
-
-          <div class="content">
-
-            <!-- <h1>Mobile Slide-In Menu</h1>
-          
-            <p>SASS-built off-canvas menu</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p> -->
-          </div>
-        </div>
-    <!-- <header class="navigation" role="banner">
-      <div class="navigation-wrapper">
-        <div id="logoimg">
-          <a class="svg" href="/">
-            <object data="<?=$config->urls->assets?>graphics/logo.svg" type="image/svg+xml">
-              <img src="<?=$config->urls->assets?>graphics/logo.png" alt="Motor Republic Vehicle Leasing" title="Motor Republic Vehicle Leasing"/>
-            </object>
-          </a>
-        </div>
-
-        <div class="page-wrap">
-
-          <div for="toggle" class="handle"></div>
-
-          <div class="content">
-
-            <!-- <h1>Mobile Slide-In Menu</h1>
-          
-            <p>SASS-built off-canvas menu</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p> -->
-          </div>
-        </div>
-        
+      <div class="content">
+        <!-- <h1>Mobile Slide-In Menu</h1>
+      
+        <p>SASS-built off-canvas menu</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p> -->
       </div>
-    </header> -->
-		<div class="wrapper">
-        <?=$page->main?>
-		</div>
-    <footer>
-
-    </footer>
-    
-    <?php
-    
-    ?>
+    </div>
 	</body>
   <script type="text/javascript">
     $('.handle').click(function() {
