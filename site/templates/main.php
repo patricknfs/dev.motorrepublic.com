@@ -36,43 +36,38 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
   <body>
-    <div class="slide-menu">
-      <?php
-      $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-      $options = array(
-        'parent_class' => '',
-        'current_class' => '',
-        'has_children_class' => '',
-        'levels' => false,
-        'levels_prefix' => 'level-',
-        'max_levels' => null,
-        'firstlast' => false,
-        'collapsed' => false,
-        'show_root' => true,
-        'selector' => '',
-        'outer_tpl' => '<ul id="" class="header__nav__list">||',
-        'inner_tpl' => '<ul class="">||</ul>',
-        'list_tpl' => '<li%s>||</li>||</li>',
-        'list_field_class' => '',
-        'item_tpl' => '<a href="{url}">{title}</a>',
-        'item_current_tpl' => '<a href="{url}">{title}</a>',
-        'xtemplates' => '',
-        'xitem_tpl' => '<span>{title}</span>',
-        'xitem_current_tpl' => '<span>{title}</span>'
-      );
-      echo $treeMenu->render($options);
-      ?>
     <div class="container">
-      
       <div class="headnav">
-        
         <header class="header">
-          
           <div class="header__logo">
             <img src="https://psmedia.playstation.com/is/image/psmedia/footerpslogo-nhasset?$Footer_Links_Row_Logo$" alt="Logo" />
           </div>
-          
           <nav class="header__nav" role="navigation">
+            <?php
+            $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+            $options = array(
+              'parent_class' => '',
+              'current_class' => '',
+              'has_children_class' => '',
+              'levels' => false,
+              'levels_prefix' => 'level-',
+              'max_levels' => null,
+              'firstlast' => false,
+              'collapsed' => false,
+              'show_root' => true,
+              'selector' => '',
+              'outer_tpl' => '<ul id="" class="header__nav__list">||',
+              'inner_tpl' => '<ul class="">||</ul>',
+              'list_tpl' => '<li%s>||</li>||</li>',
+              'list_field_class' => 'header__nav__item',
+              'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
+              'item_current_tpl' => '<a href="{url}">{title}</a>',
+              'xtemplates' => '',
+              'xitem_tpl' => '<span>{title}</span>',
+              'xitem_current_tpl' => '<span>{title}</span>'
+            );
+            echo $treeMenu->render($options);
+            ?>
             <ul class="header__nav__list">
               <li class="header__nav__item">  
                 <a href="#" class="header__nav__item__link">PS4</a>
