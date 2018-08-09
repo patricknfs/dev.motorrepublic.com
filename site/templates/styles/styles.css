@@ -304,6 +304,8 @@ h1 {
   color: white;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
   text-decoration: none; }
+  .nav__item__wrapper a {
+    color: White; }
   .nav__item__wrapper .nav__item__icon {
     opacity: .5; }
   .nav__item__wrapper:active,
