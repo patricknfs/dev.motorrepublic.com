@@ -87,72 +87,31 @@ ERROR_REPORTING(E_ALL);
         </header>
         
         <nav class="nav js-nav" role="first navigation">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-ps4-01-eu-15dec15?$Icon$"/>
-                </span>
-                PS4
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-games-01-eu-15dec15?$Icon$"/>
-                </span>
-                Jeux
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-psplus-01-eu-15dec15?$Icon$"/>
-                </span>
-                Playstation Plus
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-news-01-eu-15dec15?$Icon$"/>
-                </span>
-                News
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-ps-store-01-eu-15dec15?$Icon$"/>
-                </span>
-                PS Store
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-help-01-eu-15dec15?$Icon$"/>
-                </span>
-                Aide
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://www.playstation.com/fr-fr/1.22.03/etc/designs/pdc/clientlibs_base/images/main-header/primarynav_icon_account.png"/>
-                </span>
-                Connexion
-              </a>  
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__item__wrapper">
-                <span class="nav__item__icon">
-                  <img src="https://psmedia.playstation.com/is/image/psmedia/meganav-icon-mobile-sitemap-01-eu-15dec15?$Icon$"/>
-                </span>
-                Plan du site
-              </a>  
-            </li>
-          </ul>
+          <?php
+            $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+            $options = array(
+              'parent_class' => '',
+              'current_class' => '',
+              'has_children_class' => '',
+              'levels' => false,
+              'levels_prefix' => 'level-',
+              'max_levels' => null,
+              'firstlast' => false,
+              'collapsed' => false,
+              'show_root' => true,
+              'selector' => '',
+              'outer_tpl' => '<ul id="" class="header__nav__list">||',
+              'inner_tpl' => '<ul class="">||</ul>',
+              'list_tpl' => '<li%s>||</li>||</li>',
+              'list_field_class' => 'header__nav__item',
+              'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
+              'item_current_tpl' => '<a href="{url}">{title}</a>',
+              'xtemplates' => '',
+              'xitem_tpl' => '<span>{title}</span>',
+              'xitem_current_tpl' => '<span>{title}</span>'
+            );
+            echo $treeMenu->render($options);
+            ?>
         </nav>
         <nav class="nav--right js-second-nav">
           <p class="nav--right__content">I display the content of <span class="nav--right__content__child-name"></span></p>
