@@ -82,8 +82,8 @@ h1 {
         display: flex; } }
 
 .header__logo {
-  width: 2rem;
-  margin-right: 2rem; }
+  width: 6rem;
+  margin-right: 6rem; }
 
 .header__nav {
   display: none;
