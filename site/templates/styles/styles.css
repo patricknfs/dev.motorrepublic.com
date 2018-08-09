@@ -262,6 +262,38 @@ h1 {
   transition: all cubic-bezier(0.47, 0.07, 0.21, 1.4) 0.2s; }
   .nav__item:nth-child(n+6) {
     border-bottom: 2px solid #353535; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.05s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.25s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s; }
+  .nav__item .nav.is-open:nth-child($i) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.35s; }
 
 .nav__item__wrapper {
   display: flex;
