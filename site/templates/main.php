@@ -68,38 +68,6 @@ ERROR_REPORTING(E_ALL);
             );
             echo $treeMenu->render($options);
             ?>
-            <ul class="header__nav__list">
-              <li class="header__nav__item">  
-                <a href="#" class="header__nav__item__link">PS4</a>
-              </li>
-              <li class="header__nav__item">  
-                <a href="#" class="header__nav__item__link">Jeux</a>
-              </li>
-              <li class="header__nav__item">  
-                <a href="#" class="header__nav__item__link">PS Plus</a>
-              </li>
-              <li class="header__nav__item">  
-                <a href="#" class="header__nav__item__link">News</a>
-              </li>
-              <li class="header__nav__item">  
-                <a href="#" class="header__nav__item__link">PS Store</a>
-              </li>
-              <li class="header__nav__item">  
-                <a href="#" class="header__nav__item__link">Aide</a>
-              </li>
-              <div class="header__nav__item--icons">
-                <li class="header__nav__item header__nav__item--icon">  
-                  <a href="#" class="header__nav__item__link header__nav__item__link--icon">
-                    <img src="https://www.playstation.com/fr-fr/1.22.03/etc/designs/pdc/clientlibs_base/images/nav/avatar-default-2x.png"/>
-                  </a>
-                </li>
-                <li class="header__nav__item header__nav__item--icon">  
-                  <a href="#" class="header__nav__item__link header__nav__item__link--icon js-nav-search-open">
-                    <img src="https://www.playstation.com/fr-fr/1.22.03/etc/designs/pdc/clientlibs_base/images/searchbox/icon-magnifine-small-white-2x.png"/>
-                  </a>
-                </li>
-              </div>
-            </ul>
             <div class="header__nav__search js-nav-search">
               <form action="#" class="header__nav__search__form">
                 <input type="search" placeholder="Search" class="header__nav__search__form__text" autofocus/>
