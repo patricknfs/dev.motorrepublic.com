@@ -40,7 +40,7 @@ ERROR_REPORTING(E_ALL);
       <div class="headnav">
         <header class="header">
           <div class="header__logo">
-            <img src="https://psmedia.playstation.com/is/image/psmedia/footerpslogo-nhasset?$Footer_Links_Row_Logo$" alt="Logo" />
+            <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
           </div>
           <nav class="header__nav" role="navigation">
             <?php
