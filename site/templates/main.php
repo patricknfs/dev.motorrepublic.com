@@ -88,30 +88,30 @@ ERROR_REPORTING(E_ALL);
         
         <nav class="nav js-nav" role="first navigation">
           <?php
-            $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-            $options = array(
-              'parent_class' => '',
-              'current_class' => '',
-              'has_children_class' => '',
-              'levels' => false,
-              'levels_prefix' => 'level-',
-              'max_levels' => null,
-              'firstlast' => false,
-              'collapsed' => false,
-              'show_root' => true,
-              'selector' => '',
-              'outer_tpl' => '<ul id="" class="header__nav__list">||',
-              'inner_tpl' => '<ul class="">||</ul>',
-              'list_tpl' => '<li%s>||</li>||</li>',
-              'list_field_class' => 'header__nav__item',
-              'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
-              'item_current_tpl' => '<a href="{url}">{title}</a>',
-              'xtemplates' => '',
-              'xitem_tpl' => '<span>{title}</span>',
-              'xitem_current_tpl' => '<span>{title}</span>'
-            );
-            echo $treeMenu->render($options);
-            ?>
+          $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+          $options = array(
+            'parent_class' => '',
+            'current_class' => '',
+            'has_children_class' => '',
+            'levels' => false,
+            'levels_prefix' => 'level-',
+            'max_levels' => null,
+            'firstlast' => false,
+            'collapsed' => false,
+            'show_root' => true,
+            'selector' => '',
+            'outer_tpl' => '<ul id="" class="nav__list">||',
+            'inner_tpl' => '<ul class="">||</ul>',
+            'list_tpl' => '<li%s>||</li>||</li>',
+            'list_field_class' => 'nav__item',
+            'item_tpl' => '<a class="nav__item__link" href="{url}">{title}</a>',
+            'item_current_tpl' => '<a href="{url}">{title}</a>',
+            'xtemplates' => '',
+            'xitem_tpl' => '<span>{title}</span>',
+            'xitem_current_tpl' => '<span>{title}</span>'
+          );
+          echo $treeMenu->render($options);
+          ?>
         </nav>
         <nav class="nav--right js-second-nav">
           <p class="nav--right__content">I display the content of <span class="nav--right__content__child-name"></span></p>
