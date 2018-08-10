@@ -21,7 +21,7 @@ $query = "SELECT `cap_id`, `cap_code`, `source`, `manufacturer`, `model`, `descr
   FROM `team`.`rates_combined`
   ORDER BY rental DESC
 ";
-// echo $query; 
+// echo $query;
 $result = $conn->query($query) or die(mysqli_error());
 
 // iterate over every row

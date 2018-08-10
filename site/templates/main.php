@@ -54,7 +54,7 @@ ERROR_REPORTING(E_ALL);
               'max_levels' => null,
               'firstlast' => false,
               'collapsed' => false,
-              'show_root' => true,
+              'show_root' => false,
               'selector' => '',
               'outer_tpl' => '<ul id="" class="header__nav__list">||',
               'inner_tpl' => '<ul class="">||</ul>',
