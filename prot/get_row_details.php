@@ -18,6 +18,7 @@ else {
 
 // $manufacturer = "ford";
 $query = "SELECT `cap_id`, `cap_code`, `source`, `manufacturer`, `model`, `descr`, `term`, `mileage`, `rental`
+  FROM `team`.`rates_combined`
   ORDER BY rental DESC
 ";
 // echo $query; 
