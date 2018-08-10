@@ -168,7 +168,7 @@ h1 {
   width: 100%;
   height: 100%;
   padding: 0 .7rem;
-  color: white;
+  color: #FBFBFB;
   font-size: .8rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -181,7 +181,7 @@ h1 {
     display: block;
     width: 100%;
     height: 5px;
-    background-color: #04ABFF;
+    background-color: #cc0000;
     transform: translateX(-100%);
     animation: hoverOut 0.3s cubic-bezier(0.77, 0, 0.175, 1) both; }
   .header__nav__item__link:hover:after {
