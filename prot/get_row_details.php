@@ -39,6 +39,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 	$rows[] = $row;
 }
+
 // print '<pre>'; 
 // print_r($rows);
 // print '</pre>'; 
