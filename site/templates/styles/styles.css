@@ -256,7 +256,6 @@ h1 {
 .nav__item {
   display: flex;
   width: 100%;
-  opacity: 0;
   transform: translateX(-10px);
   transition: all cubic-bezier(0.47, 0.07, 0.21, 1.4) 0.2s; }
   .nav__item:nth-child(n+6) {
