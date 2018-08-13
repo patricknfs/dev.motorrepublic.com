@@ -37,5 +37,3 @@ gulp.task('watch', function() {
   // Watch javascript files
   gulp.watch(['scripts/*.js'], ['scripts']);
 });
-
-gulp.task('default', ['styles', 'watch'])
