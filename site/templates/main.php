@@ -125,5 +125,5 @@ ERROR_REPORTING(E_ALL);
       
     </div>
 	</body>
-  <script type="text/javascript" src="<?=$config->templates?>/scripts/built.min.js"></script>
+  <script type="text/javascript" src="scripts/built.min.js"></script>
 </html>
