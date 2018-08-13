@@ -300,10 +300,9 @@ h1 {
   padding: 0.5rem 0.8rem;
   width: 100%;
   height: 100%;
+  color: #FBFBFB;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
   text-decoration: none; }
-  .nav__item__wrapper a {
-    color: #FBFBFB; }
   .nav__item__wrapper .nav__item__icon {
     opacity: .5; }
   .nav__item__wrapper:active,
