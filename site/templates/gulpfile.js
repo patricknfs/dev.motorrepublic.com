@@ -29,6 +29,7 @@ gulp.task('scripts', function() {
     // 'scripts/readmore.js',
     // 'scripts/topbar.js',
     // 'scripts/magnific.js',
+    'scripts/chenais_nav.js',
     'scripts/main.js'
   ])
   // .pipe(jshint('.jshintrc'))
