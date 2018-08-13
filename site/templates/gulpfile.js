@@ -1,16 +1,11 @@
 'use strict';
 var gulp = require('gulp'),
-  sourcemaps = require('gulp-sourcemaps'),
   sass = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  cleancss = require('gulp-clean-css'),
   cssnano = require('gulp-cssnano'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
   concat = require('gulp-concat'),
-  notify = require('gulp-notify'),
-  cache = require('gulp-cache'),
-  del = require('del');
+  notify = require('gulp-notify')
 
 
 gulp.task('styles', function () {
