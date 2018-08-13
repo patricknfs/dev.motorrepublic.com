@@ -1,3 +1,4 @@
+'use strict';
 var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   sass = require('gulp-sass'),
@@ -24,26 +25,15 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function() {
   return gulp.src([
-    // 'scripts/jquery.fullPage.js',
-    // 'scripts/detectmobilebrowser.js',
-    // 'scripts/readmore.js',
-    // 'scripts/topbar.js',
-    // 'scripts/magnific.js',
     'scripts/chenais_nav.js',
     'scripts/main.js'
   ])
-  // .pipe(jshint('.jshintrc'))
-  // .pipe(jshint.reporter('default'))
   .pipe(concat('built.js'))
   // .on('error', function(err){ console.log(err.message); })
   .pipe(gulp.dest('scripts/'))
-  // .on('error', function(err){ console.log(err.message); })
   .pipe(rename({suffix: '.min'}))
-  // .on('error', function(err){ console.log(err.message); })
   .pipe(uglify())
-  // .on('error', function(err){ console.log(err.message); })
   .pipe(gulp.dest('scripts/'))
-  // .on('error', function(err){ console.log(err.message); })
   .pipe(notify({ message: 'Scripts task complete' }));
 });
 
