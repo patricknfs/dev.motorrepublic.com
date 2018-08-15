@@ -56,7 +56,7 @@ include("./main.php");
 			// "processing": true,
       "ajax": {
       	"url": "/prot/server_processing.php",
-        "type": "POST",
+        "type": "GET",
         "dataType": "json"
 			},
       "order": [[ 8, "asc" ]],
