@@ -18,9 +18,9 @@ include("./main.php");
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
+      <th>Source</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
-      <th>Source</th>
       <th>Manufacturer</th>
       <th>Model</th>
       <th>Description</th>
@@ -34,9 +34,9 @@ include("./main.php");
 	</tbody>
   <tfoot>
     <tr>
+      <th>Source</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
-      <th>Source</th>
       <th>Manufacturer</th>
       <th>Model</th>
       <th>Description</th>
@@ -69,8 +69,7 @@ include("./main.php");
       // },
       // "stateSave": true,
       "scrollCollapse": true,
-      "scroller": true,
-
+      "scroller": true
 		});	
 	});
 </script>
