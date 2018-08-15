@@ -1,5 +1,5 @@
 <?php
-require_once('/inc/config.php');
+require_once($_SERVER["DOCUMENT_ROOT"] . 'sales/templates/inc/config.php');
 /*
  * DataTables example server-side processing script.
  *
