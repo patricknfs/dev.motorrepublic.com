@@ -29,24 +29,16 @@ $primaryKey = 'id';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-	array( 'db' => 'first_name', 'dt' => 0 ),
-	array( 'db' => 'last_name',  'dt' => 1 ),
-	array( 'db' => 'position',   'dt' => 2 ),
-	array( 'db' => 'office',     'dt' => 3 ),
-	array(
-		'db'        => 'start_date',
-		'dt'        => 4,
-		'formatter' => function( $d, $row ) {
-			return date( 'jS M y', strtotime($d));
-		}
-	),
-	array(
-		'db'        => 'salary',
-		'dt'        => 5,
-		'formatter' => function( $d, $row ) {
-			return '$'.number_format($d);
-		}
-	)
+	array( 'db' => 'cap_id', 'dt' => 0 ),
+	array( 'db' => 'cap_code',	'dt' => 1 ),
+	array( 'db' => 'source',	'dt' => 2 ),
+	array( 'db' => 'manufacturer',	'dt' => 3 ),
+	array( 'db' => 'model',	'dt' => 4 ),
+	array( 'db' => 'descr',	'dt' => 5 ),
+	array( 'db' => 'term',	'dt' => 6 ),
+	array( 'db' => 'mileage',	'dt' => 7 ),
+	array( 'db' => 'rental',	'dt' => 8 ),
+
 );
 
 // SQL server connection information
