@@ -71,6 +71,7 @@ include("./main.php");
       "scrollCollapse": true,
       "scroller": true,
 		  "columns": [
+        { "data": "id", "className": "dt-body-right" },
         { "data": "cap_id", "className": "dt-body-right" },
         { "data": "cap_code", "className": "dt-body-right" },
 	  		{ "data": "source" },
