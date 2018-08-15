@@ -79,7 +79,7 @@ include("./main.php");
         { "data": "descr" },
         { "data": "term"},
         { "data": "mileage" },
-        { "data": "rental", "className": "dt-body-right" },
+        { "data": "rental", "className": "dt-body-right" }
 	  	]
 		});	
 	});
