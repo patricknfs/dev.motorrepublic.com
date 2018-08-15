@@ -1,5 +1,5 @@
 <?php
-require_once(MR_PATH . '/inc/config.php');
+require_once('/inc/config.php');
 /*
  * DataTables example server-side processing script.
  *
