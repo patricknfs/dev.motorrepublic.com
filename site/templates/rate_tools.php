@@ -18,7 +18,6 @@ include("./main.php");
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
-      <th>id</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
       <th>Source</th>
@@ -35,7 +34,6 @@ include("./main.php");
 	</tbody>
   <tfoot>
     <tr>
-      <th>id</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
       <th>Source</th>
@@ -72,18 +70,7 @@ include("./main.php");
       // "stateSave": true,
       "scrollCollapse": true,
       "scroller": true,
-		  "columns": [
-        { "data": "id", "className": "dt-body-right" },
-        { "data": "cap_id", "className": "dt-body-right" },
-        { "data": "cap_code", "className": "dt-body-right" },
-	  		{ "data": "source" },
-        { "data": "manufacturer" },
-        { "data": "model" },
-        { "data": "descr" },
-        { "data": "term"},
-        { "data": "mileage" },
-        { "data": "rental", "className": "dt-body-right" }
-	  	]
+
 		});	
 	});
 </script>
