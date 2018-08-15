@@ -18,6 +18,7 @@ include("./main.php");
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
       <th>Source</th>
@@ -34,6 +35,7 @@ include("./main.php");
 	</tbody>
   <tfoot>
     <tr>
+      <th>ID</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
       <th>Source</th>
