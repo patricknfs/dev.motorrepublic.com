@@ -51,8 +51,8 @@ $columns = array(
 
 // SQL server connection information
 $sql_details = array(
-	'user' => 'MR_DB_USERNAME',
-	'pass' => 'MR_DB_PASSWORD',
+	'user' => MR_DB_USERNAME,
+	'pass' => MR_DB_PASSWORD,
 	'db'   => 'team',
 	'host' => 'localhost'
 );
@@ -63,7 +63,7 @@ $sql_details = array(
  * server-side, there is no need to edit below this line.
  */
 
-require( 'ssp.class.php' );
+require( MR_PATH . '/inc/ssp.class.php' );
 
 echo json_encode(
 	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
