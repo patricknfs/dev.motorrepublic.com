@@ -57,6 +57,6 @@ $sql_details = array(
 require( MR_PATH . '/inc/ssp.class.php' );
 
 echo json_encode(
-	SSP::simple( $columns )
+	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
 );
 
