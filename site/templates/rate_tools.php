@@ -69,7 +69,8 @@ include("./main.php");
       // },
       // "stateSave": true,
       "scrollCollapse": true,
-      "scroller": true
+      "scroller": true,
+      "select": true
 		});	
 	});
 </script>
