@@ -643,5 +643,5 @@ h1 {
   text-transform: uppercase;
   color: white; }
 
-.example_wrapper {
+#example_wrapper {
   padding-top: 5em; }
