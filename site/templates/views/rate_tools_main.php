@@ -1,4 +1,6 @@
-
+<?php
+// rate_tools_main.php
+?>
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
