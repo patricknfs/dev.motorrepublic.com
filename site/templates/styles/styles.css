@@ -642,3 +642,6 @@ h1 {
   height: 80%;
   text-transform: uppercase;
   color: white; }
+
+.example-wrapper {
+  padding-top: 5em; }
