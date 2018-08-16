@@ -156,8 +156,7 @@ class SSP {
 	 *
 	 *  @param  array $request Data sent to server by DataTables
 	 *  @param  array $columns Column information array
-	 *  @param  array $bindings Array of values for PDO bindings, used in the
-	 *    sql_exec() function
+	 *  @param  array $bindings Array of values for PDO bindings, used in the sql_exec() function
 	 *  @return string SQL where clause
 	 */
 	static function filter ( $request, $columns, &$bindings )

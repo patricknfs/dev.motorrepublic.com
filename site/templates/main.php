@@ -37,7 +37,7 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
   <body>
-    <div class="container">
+    <div class="wrapper">
       <div class="headnav">
         <header class="header">
           <div class="header__logo">
@@ -117,13 +117,14 @@ ERROR_REPORTING(E_ALL);
         <nav class="nav--right js-second-nav">
           <p class="nav--right__content">I display the content of <span class="nav--right__content__child-name"></span></p>
         </nav>
-        
       </div>
-      
       <div class="content">
-        <h3>Resize the viewport :)</h3>
+        <?php
+        if($page->main){
+          echo $page->main;
+        }
+        ?>
       </div>
-      
     </div>
 	</body>
   <script type="text/javascript" src="<?=$config->urls->templates?>/scripts/built.min.js"></script>
