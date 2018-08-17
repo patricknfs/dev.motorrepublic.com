@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -155,8 +156,7 @@ class SSP {
 	 *
 	 *  @param  array $request Data sent to server by DataTables
 	 *  @param  array $columns Column information array
-	 *  @param  array $bindings Array of values for PDO bindings, used in the
-	 *    sql_exec() function
+	 *  @param  array $bindings Array of values for PDO bindings, used in the sql_exec() function
 	 *  @return string SQL where clause
 	 */
 	static function filter ( $request, $columns, &$bindings )
@@ -166,25 +166,16 @@ class SSP {
 		$dtColumns = self::pluck( $columns, 'dt' );
 
 		if ( isset($request['search']) && $request['search']['value'] != '' ) {
-			$a = explode(' ', $request['search']['value']);
+			$str = $request['search']['value'];
 
-			for ( $j=0, $jen=count($a) ; $j<$jen ; $j++ ) {
-				$smartSearch = array();
-				$str = $a[$j];
+			for ( $i=0, $ien=count($request['columns']) ; $i<$ien ; $i++ ) {
+				$requestColumn = $request['columns'][$i];
+				$columnIdx = array_search( $requestColumn['data'], $dtColumns );
+				$column = $columns[ $columnIdx ];
 
-				if ( $str ) {
-					for ( $i=0, $ien=count($request['columns']) ; $i<$ien ; $i++ ) {
-						$requestColumn = $request['columns'][$i];
-						$columnIdx = array_search( $requestColumn['data'], $dtColumns );
-						$column = $columns[ $columnIdx ];
-
-						if ( $requestColumn['searchable'] == 'true' ) {
-							$binding = self::bind( $bindings, '%'.$str.'%', PDO::PARAM_STR );
-							$smartSearch[] = "`".$column['db']."` LIKE ".$binding;
-						}
-					}
-
-					$globalSearch[] = '('.implode(' OR ', $smartSearch).')';
+				if ( $requestColumn['searchable'] == 'true' ) {
+					$binding = self::bind( $bindings, '%'.$str.'%', PDO::PARAM_STR );
+					$globalSearch[] = "`".$column['db']."` LIKE ".$binding;
 				}
 			}
 		}
@@ -537,4 +528,3 @@ class SSP {
 		return $a;
 	}
 }
-
