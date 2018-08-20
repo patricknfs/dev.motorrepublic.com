@@ -68,21 +68,6 @@ ERROR_REPORTING(E_ALL);
         );
         echo $treeMenu->render($options);
         ?>
-        <div class="header__nav__search js-nav-search">
-          <form action="#" class="header__nav__search__form">
-            <input type="search" placeholder="Search" class="header__nav__search__form__text" autofocus/>
-            <input type="submit" class="header__nav__search__form__submit" value="Rechercher"/>
-          </form>
-          <button class="header__nav__search__close js-nav-search-close"></button>
-        </div>
-      </nav>
-      
-      <button href="#" class="nav-toggle js-nav-toggle" title="navigation menu" aria-label="navigation menu" role="button" aria-controls="navigation" aria-expanded="false">
-        <div class="nav-toggle__content">
-          <div class="nav-toggle__close"></div>
-          <div class="nav-toggle__open">menu</div>
-        </div>
-      </button>
     </header>
 
     <div class="content">
