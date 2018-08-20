@@ -63,7 +63,7 @@ ERROR_REPORTING(E_ALL);
           'show_root' => false,
           'selector' => '',
           'outer_tpl' => '<ul id="" class="main-nav">||',
-          'inner_tpl' => '<ul class="">||</ul>',
+          'inner_tpl' => '<ul class="sub-menu-block">||</ul>',
           'list_tpl' => '<li%s>||</li>||</li>',
           'list_field_class' => 'top-level-link',
           'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
