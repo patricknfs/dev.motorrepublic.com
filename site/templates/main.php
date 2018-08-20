@@ -38,7 +38,7 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
   <body>
-    <header>
+    <header class="dark">
       <div class="header_logo">
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
       </div>
