@@ -32,8 +32,23 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function() {
-  // Watch style files
-  gulp.watch(['styles/*.scss','styles/*.sass'],  gulp.series('styles'));
-  // Watch javascript files
-  gulp.watch(['scripts/*.js'],  gulp.series('scripts'));
+  const style_watcher = gulp.watch(['styles/*.scss','styles/*.sass'], gulp.series('styles'));
+
+  style_watcher.on('change', function(path, stats) {
+    console.log('File ' + path + ' was changed');
+  });
+
+  style_watcher.on('unlink', function(path) {
+    console.log('File ' + path + ' was removed');
+  });
+
+  const js_watcher = gulp.watch(['scripts/*.js'], gulp.series('scripts'));
+
+  js_watcher.on('change', function(path, stats) {
+    console.log('File ' + path + ' was changed');
+  });
+
+  js_watcher.on('unlink', function(path) {
+    console.log('File ' + path + ' was removed');
+  });
 });
