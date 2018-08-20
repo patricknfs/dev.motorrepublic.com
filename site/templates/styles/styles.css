@@ -380,8 +380,8 @@ h1 {
         display: flex; } }
 
 .header__logo {
-  width: 8rem;
-  margin-right: 8rem; }
+  width: 12rem;
+  margin-right: 12rem; }
 
 .header__nav {
   display: none;
