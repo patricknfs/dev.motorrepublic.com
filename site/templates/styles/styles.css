@@ -339,3 +339,6 @@ header {
   header .header_logo {
     width: 12rem;
     margin-right: 12rem; }
+  header footer {
+    background-color: #333;
+    min-height: 5em; }

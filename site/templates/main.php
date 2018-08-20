@@ -77,6 +77,9 @@ ERROR_REPORTING(E_ALL);
       }
       ?>
     </div>
+    <footer>
+      <p>Test</p>
+    </footer>
 	</body>
   <script type="text/javascript" src="<?=$config->urls->templates?>/scripts/built.min.js"></script>
 </html>
