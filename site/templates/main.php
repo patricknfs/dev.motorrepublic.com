@@ -62,10 +62,10 @@ ERROR_REPORTING(E_ALL);
           'collapsed' => false,
           'show_root' => false,
           'selector' => '',
-          'outer_tpl' => '<ul id="" class="header__nav__list">||',
+          'outer_tpl' => '<ul id="" class="main-nav">||',
           'inner_tpl' => '<ul class="">||</ul>',
           'list_tpl' => '<li%s>||</li>||</li>',
-          'list_field_class' => 'header__nav__item',
+          'list_field_class' => 'top-level-link',
           'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
           'item_current_tpl' => '<a href="{url}">{title}</a>',
           'xtemplates' => '',
@@ -75,7 +75,7 @@ ERROR_REPORTING(E_ALL);
         echo $treeMenu->render($options);
         ?>
       </nav>
-      <nav role="navigation">
+      <!-- <nav role="navigation">
     <a href="javascript:void(0);" class="ic menu">
       <span class="line"></span>
       <span class="line"></span>
@@ -182,7 +182,7 @@ ERROR_REPORTING(E_ALL);
         <a><span>Contact</span></a>      
       </li>
     </ul> 
-  </nav>
+  </nav> -->
     </header>
 
     <div class="content">
