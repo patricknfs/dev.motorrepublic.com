@@ -39,9 +39,9 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body>
     <header class="dark">
-      <div class="header_logo">
+      <!-- <div class="header_logo">
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
-      </div>
+      </div> -->
       <nav role="navigation">
         <a href="javascript:void(0);" class="ic menu">
         <span class="line"></span>
