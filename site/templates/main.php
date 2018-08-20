@@ -38,42 +38,42 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
   <body>
-    <header class="dark">
+    <header class="light">
       <!-- <div class="header_logo">
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
       </div> -->
       <nav role="navigation">
         <a href="javascript:void(0);" class="ic menu">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </a>
-      <a href="javascript:void(0);" class="ic close"></a>
-        <?php
-        $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-        $options = array(
-          'parent_class' => '',
-          'current_class' => '',
-          'has_children_class' => '',
-          'levels' => false,
-          'levels_prefix' => 'level-',
-          'max_levels' => null,
-          'firstlast' => false,
-          'collapsed' => false,
-          'show_root' => false,
-          'selector' => '',
-          'outer_tpl' => '<ul id="" class="main-nav">||',
-          'inner_tpl' => '<ul class="sub-menu-block">||</ul>',
-          'list_tpl' => '<li%s>||</li>||</li>',
-          'list_field_class' => 'top-level-link',
-          'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
-          'item_current_tpl' => '<a href="{url}">{title}</a>',
-          'xtemplates' => '',
-          'xitem_tpl' => '<span>{title}</span>',
-          'xitem_current_tpl' => '<span>{title}</span>'
-        );
-        echo $treeMenu->render($options);
-        ?>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
+        <a href="javascript:void(0);" class="ic close"></a>
+          <?php
+          $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+          $options = array(
+            'parent_class' => '',
+            'current_class' => '',
+            'has_children_class' => '',
+            'levels' => false,
+            'levels_prefix' => 'level-',
+            'max_levels' => null,
+            'firstlast' => false,
+            'collapsed' => false,
+            'show_root' => false,
+            'selector' => '',
+            'outer_tpl' => '<ul id="" class="main-nav">||',
+            'inner_tpl' => '<ul class="sub-menu-block">||</ul>',
+            'list_tpl' => '<li%s>||</li>||</li>',
+            'list_field_class' => 'top-level-link',
+            'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
+            'item_current_tpl' => '<a href="{url}">{title}</a>',
+            'xtemplates' => '',
+            'xitem_tpl' => '<span>{title}</span>',
+            'xitem_current_tpl' => '<span>{title}</span>'
+          );
+          echo $treeMenu->render($options);
+          ?>
       </nav>
       <!-- <nav role="navigation">
     <a href="javascript:void(0);" class="ic menu">
