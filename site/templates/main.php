@@ -39,7 +39,7 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body>
     <header>
-      <div class="header__logo">
+      <div class="header_logo">
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
       </div>
       <nav class="header__nav" role="navigation">
