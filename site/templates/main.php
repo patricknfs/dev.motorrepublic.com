@@ -38,7 +38,7 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body>
     <header>
-      <div class="logoimg">
+      <div id="logoimg">
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
       </div>
       <nav role="navigation">
