@@ -43,146 +43,59 @@ ERROR_REPORTING(E_ALL);
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
       </div> -->
       <nav role="navigation">
-        <a href="javascript:void(0);" class="ic menu">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </a>
-        <a href="javascript:void(0);" class="ic close"></a>
-          <?php
-          $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-          $options = array(
-            'parent_class' => '',
-            'current_class' => '',
-            'has_children_class' => '',
-            'levels' => false,
-            'levels_prefix' => 'level-',
-            'max_levels' => null,
-            'firstlast' => false,
-            'collapsed' => false,
-            'show_root' => false,
-            'selector' => '',
-            'outer_tpl' => '<ul id="" class="main-nav">||',
-            'inner_tpl' => '<ul class="sub-menu-block">||</ul>',
-            'list_tpl' => '<li%s>||</li>||</li>',
-            'list_field_class' => 'top-level-link',
-            'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
-            'item_current_tpl' => '<a href="{url}">{title}</a>',
-            'xtemplates' => '',
-            'xitem_tpl' => '<span>{title}</span>',
-            'xitem_current_tpl' => '<span>{title}</span>'
-          );
-          echo $treeMenu->render($options);
-          ?>
+        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+          <div class="top-bar-left">
+            <?php
+            $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+            $options = array(
+              'parent_class' => '',
+              'current_class' => '',
+              'has_children_class' => '',
+              'levels' => false,
+              'levels_prefix' => 'level-',
+              'max_levels' => null,
+              'firstlast' => false,
+              'collapsed' => false,
+              'show_root' => false,
+              'selector' => '',
+              'outer_tpl' => '<ul id="" class="dropdown menu">||',
+              'inner_tpl' => '<ul class="menu vertical">||</ul>',
+              'list_tpl' => '<li%s>||</li>||</li>',
+              'list_field_class' => 'menu-text',
+              'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
+              'item_current_tpl' => '<a href="{url}">{title}</a>',
+              'xtemplates' => '',
+              'xitem_tpl' => '<span>{title}</span>',
+              'xitem_current_tpl' => '<span>{title}</span>'
+            );
+            echo $treeMenu->render($options);
+            ?>
+          </div>
+        </div>
       </nav>
-      <!-- <nav role="navigation">
-    <a href="javascript:void(0);" class="ic menu">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </a>
-    <a href="javascript:void(0);" class="ic close"></a>
-    <ul class="main-nav">
-      <li class="top-level-link">
-        <a><span>Home</span></a>      
-      </li> 
       
-      <li class="top-level-link">
-        <a class="mega-menu"><span>Products</span></a>
-        <div class="sub-menu-block">
-          <div class="row">
-            <div class="col-md-4 col-lg-4 col-sm-4">
-              <h2 class="sub-menu-head">Clothing</h2>
-              <ul class="sub-menu-lists">
-                <li><a>Mens</a></li>
-                <li><a>Womens</a></li>
-                <li><a>Kids</a></li>
-                <li><a>New Born</a></li>
-                <li><a>View All</a></li>
-              </ul>           
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4">
-              <h2 class="sub-menu-head">Handbags</h2>
-              <ul class="sub-menu-lists">
-                <li><a>Wallets</a></li>
-                <li><a>Athletic bag</a></li>
-                <li><a>Backpack</a></li>
-                <li><a>Bucket Bag</a></li>
-                <li><a>View All</a></li>
+
+      <!-- <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Site Title</li>
+            <li>
+              <a href="#">One</a>
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
               </ul>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4">
-              <h2 class="sub-menu-head">Shoes</h2>
-              <ul class="sub-menu-lists">
-                <li><a>Mens</a></li>
-                <li><a>Womens</a></li>
-                <li><a>Kids</a></li>
-                <li><a>View All</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="row banners-area">
-            <div class="col-md-6 col-lg-6 col-sm-6">
-              <img src="http://devitems.com/tf/teemo-preview/teemo/img/banner/banner-menu1.jpg" width="100%;">
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-6">
-              <img src="http://devitems.com/tf/teemo-preview/teemo/img/banner/banner-menu1.jpg" width="100%;">
-            </div>
-          </div>
-          
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+          </ul>
         </div>
-      </li>
-      <li class="top-level-link">
-        <a><span>Services<span></a>    
-      </li>
-      <li class="top-level-link">
-        <a class="mega-menu"><span>About</span></a>
-        <div class="sub-menu-block">
-          <div class="row">
-            <div class="col-md-4 col-lg-4 col-sm-4">
-              <h2 class="sub-menu-head">Company</h2>
-              <ul class="sub-menu-lists">
-                <li><a>About</a></li>
-                <li><a>Mission</a></li>
-                <li><a>Community</a></li>
-                <li><a>Team</a></li>
-              </ul>           
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4">
-              <h2 class="sub-menu-head">Media</h2>
-              <ul class="sub-menu-lists">
-                <li><a>News</a></li>
-                <li><a>Events</a></li>
-                <li><a>Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4">
-              <h2 class="sub-menu-head">Careers</h2>
-              <ul class="sub-menu-lists">
-                <li><a>New Opportunities</a></li>
-                <li><a>Life @ Company</a></li>
-                <li><a>Why Join Us?</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="row banners-area">
-            <div class="col-md-6 col-lg-6 col-sm-6">
-              <img src="http://devitems.com/tf/teemo-preview/teemo/img/banner/banner-menu1.jpg" width="100%;">
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-6">
-              <img src="http://devitems.com/tf/teemo-preview/teemo/img/banner/banner-menu1.jpg" width="100%;">
-            </div>
-          </div>
-          
-        </div>
-      </li>
-      <li class="top-level-link">
-        <a><span>Contact</span></a>      
-      </li>
-    </ul> 
-  </nav> -->
+      </div> -->
     </header>
 
     <div class="content">
