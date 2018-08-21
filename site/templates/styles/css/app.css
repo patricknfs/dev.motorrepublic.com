@@ -7896,3 +7896,29 @@ footer {
 footer p {
   color: #fff;
 }
+
+.promo {
+  position: relative;
+  overflow: hidden;
+}
+
+.promo #video_bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.promo .row {
+  min-height: 100vh;
+}
+
+.promo #message {
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 1;
+}

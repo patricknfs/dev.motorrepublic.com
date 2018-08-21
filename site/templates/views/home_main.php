@@ -13,7 +13,6 @@
 	</div>
 	<div class="promo">
 		<video autoplay loop muted poster="/assets/img/video-path.jpg" id="video_bg">
-		<source src="/assets/img/video-path.webm" type="video/webm">
 		<source src="<?=$config->urls->assets?>videos/multicolored-particles_zkh9ksnxr__WL.mp4" type="video/mp4">
 		</video>
 		<div class="row align-center align-middle">
