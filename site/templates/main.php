@@ -109,5 +109,5 @@ ERROR_REPORTING(E_ALL);
     </footer>
   </body>
   
-  <script type="text/javascript" src="<?=$config->urls->templates?>styles/scripts/app.js" ></script>
+  <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/app.js" ></script>
 </html>
