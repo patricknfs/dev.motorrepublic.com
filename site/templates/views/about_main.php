@@ -1,4 +1,8 @@
 <?php
 // about_main.php
 ?>
-<?=$page->body?>
+<div class="grid-x">
+  <div class="cell">
+    <?=$page->body?>
+  </div>
+</div>
