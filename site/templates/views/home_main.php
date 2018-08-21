@@ -11,4 +11,16 @@
 			<?=$page->body?>
 		</div>
 	</div>
+	<div class="promo">
+		<video autoplay loop muted poster="/assets/img/video-path.jpg" id="video_bg">
+		<source src="/assets/img/video-path.webm" type="video/webm">
+		<source src="<?=$config->urls->assets?>videos/multicolored-particles_zkh9ksnxr__WL.mp4" type="video/mp4">
+		</video>
+		<div class="row align-center align-middle">
+			<div class="small-8 column text-center" id="message">
+				<h1>Title Goes Here</h1>
+				<h2>Subtitle goes here.</h2>
+			</div>
+		</div>
+	</div>
 </div>
