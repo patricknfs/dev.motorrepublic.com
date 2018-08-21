@@ -7891,3 +7891,7 @@ a.thumbnail image {
 footer {
   background-color: #333;
 }
+
+footer p {
+  color: #fff;
+}
