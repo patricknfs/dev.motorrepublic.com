@@ -86,14 +86,11 @@ ERROR_REPORTING(E_ALL);
         </div>
       </nav>
     </header>
-
-    <div class="grid-container">
       <?php
       if($page->main){
         echo $page->main;
       }
       ?>
-    </div>
     <footer>
       <p>Test</p>
     </footer>
