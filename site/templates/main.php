@@ -61,7 +61,7 @@ ERROR_REPORTING(E_ALL);
               'collapsed' => false,
               'show_root' => false,
               'selector' => '',
-              'outer_tpl' => '<ul id="" class="dropdown menu">||',
+              'outer_tpl' => '<ul id="" class="dropdown menu" data-dropdown-menu>||',
               'inner_tpl' => '<ul class="menu vertical">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
               'list_field_class' => 'menu-text',
