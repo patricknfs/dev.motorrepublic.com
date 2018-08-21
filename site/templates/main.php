@@ -38,10 +38,10 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body>
     <header>
-      <div>
-      <div id="logoimg">
-        <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
-      </div> 
+      <div class="grid-x">
+        <div class="cell" id="logoimg">
+          <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
+        </div> 
       </div>
       <nav role="navigation">
         <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
