@@ -38,16 +38,18 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body>
     <header>
-      
+      <div>
+      <div id="logoimg">
+        <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
+      </div> 
+      </div>
       <nav role="navigation">
         <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
           <div class="title-bar-title">Menu</div>
         </div>
         <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
-          <div id="logoimg">
-            <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
-          </div>  
+           
           <div class="top-bar-left">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
