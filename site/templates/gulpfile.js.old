@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('styles', function () {
-  gulp.src('styles/styles.scss')
+  gulp.src('styles/**/*.css')
   .pipe(sass())
   .pipe(gulp.dest('styles'))
   .pipe(cssnano())
@@ -32,7 +32,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function() {
-  const style_watcher = gulp.watch(['styles/*.scss','styles/*.sass'], gulp.series('styles'));
+  const style_watcher = gulp.watch(['styles/**/*.css'], gulp.series('styles'));
 
   style_watcher.on('change', function(path, stats) {
     console.log('File ' + path + ' was changed');
