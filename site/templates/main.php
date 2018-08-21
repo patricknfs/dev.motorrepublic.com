@@ -76,8 +76,6 @@ ERROR_REPORTING(E_ALL);
           </div>
         </div>
       </nav>
-      
-
       <!-- <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu>
@@ -108,6 +106,6 @@ ERROR_REPORTING(E_ALL);
       <p>Test</p>
     </footer>
   </body>
-  
+  <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/foundation.min.js" ></script>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/app.js" ></script>
 </html>
