@@ -38,10 +38,10 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
   <body>
-    <header class="light">
-      <!-- <div class="header_logo">
+    <header>
+      <div class="header_logo">
         <img src="<?=$config->urls->assets?>/graphics/logo.svg" alt="Logo" />
-      </div> -->
+      </div>
       <nav role="navigation">
         <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
