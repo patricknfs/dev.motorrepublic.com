@@ -87,7 +87,7 @@ ERROR_REPORTING(E_ALL);
       </nav>
     </header>
 
-    <div class="content">
+    <div class="grid-container">
       <?php
       if($page->main){
         echo $page->main;
