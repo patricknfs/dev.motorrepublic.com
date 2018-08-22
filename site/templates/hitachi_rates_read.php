@@ -411,10 +411,10 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
   while (($rawdata2 = fgetcsv($handle2, 0, ",")) !== FALSE) {
     $data2 = preg_replace('/\s+/', '', $rawdata2);
     if($row > 1){
-      if($data2[74] != 0){
-        switch($data2[73]){
+      if($data2[68] != 0){
+        switch($data2[67]){
           case 24:
-          switch($data2[74]){
+          switch($data2[68]){
             case 16000:
             $mileage2 = 8000;
             break;
@@ -434,11 +434,11 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             $mileage2 = 30000;
             break;
             default:
-            echo $data2[74] . "mileage profile is not coded into 24 month mileage specifier";
+            echo $data2[68] . "mileage profile is not coded into 24 month mileage specifier";
           }
           break;
           case 36:
-          switch($data2[74]){
+          switch($data2[68]){
             case 24000:
             $mileage2 = 8000;
             break;
@@ -458,11 +458,11 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             $mileage2 = 30000;
             break;
             default:
-            echo $data2[74] . "mileage profile is not coded into 36 month mileage specifier";
+            echo $data2[68] . "mileage profile is not coded into 36 month mileage specifier";
           }
           break;
           case 48:
-          switch($data2[74]){
+          switch($data2[68]){
             case 32000:
             $mileage2 = 8000;
             break;
@@ -482,16 +482,16 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             $mileage2 = 30000;
             break;
             default:
-            echo $data2[74] . "mileage profile is not coded into 48 month mileage specifier";
+            echo $data2[68] . "mileage profile is not coded into 48 month mileage specifier";
           }
           break;
           default:
-          echo $data2[73] . "monthly profile not coded";
+          echo $data2[67] . "monthly profile not coded";
         }
         switch($mileage2){
           case 8000:
-          if($data2[43] == 0){
-            switch($data2[73]){
+          if($data2[70] == 0){
+            switch($data2[67]){
               case 24:
               $insert = "`24_8K_PA_rental_nm` = " . ($data2[47]);
               break;
@@ -510,7 +510,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             }
           }
           else {
-            switch($data2[73]){
+            switch($data2[67]){
               case 24:
               $insert = "`24_8K_PA_rental_m` = " . $data2[47];
               break;
@@ -538,8 +538,8 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . ";";
           break;
           case 10000:
-          if($data2[43] == 0){
-            switch($data2[73]){
+          if($data2[70] == 0){
+            switch($data2[67]){
               case 24:
               $insert = "`24_10K_PA_rental_nm` = " . ($data2[47]);
               break;
@@ -558,7 +558,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             }
           }
           else {
-            switch($data2[73]){
+            switch($data2[67]){
               case 24:
               $insert = "`24_10K_PA_rental_m` = " . $data2[47];
               break;
@@ -586,8 +586,8 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . ";";
           break;
           case 15000:
-          if($data2[43] == 0){
-            switch($data2[73]){
+          if($data2[70] == 0){
+            switch($data2[67]){
               case 24:
               $insert = "`24_15K_PA_rental_nm` = " . ($data2[47]);
               break;
@@ -606,7 +606,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             }
           }
           else {
-            switch($data2[73]){
+            switch($data2[67]){
               case 24:
               $insert = "`24_15K_PA_rental_m` = " . $data2[47];
               break;
@@ -634,8 +634,8 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . ";";
           break;
           case 20000:
-          if($data2[43] == 0){
-            switch($data2[73]){
+          if($data2[70] == 0){
+            switch($data2[67]){
               case 24:
               $insert = "`24_20K_PA_rental_nm` = " . ($data2[47]);
               break;
@@ -654,7 +654,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             }
           }
           else {
-            switch($data2[73]){
+            switch($data2[67]){
               case 24:
               $insert = "`24_20K_PA_rental_m` = " . $data2[47];
               break;
@@ -682,8 +682,8 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . ";";
           break;
           case 25000:
-          if($data2[43] == 0){
-            switch($data2[73]){
+          if($data2[70] == 0){
+            switch($data2[67]){
               case 24:
               $insert = "`24_25K_PA_rental_nm` = " . ($data2[47]);
               break;
@@ -702,7 +702,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             }
           }
           else {
-            switch($data2[73]){
+            switch($data2[67]){
               case 24:
               $insert = "`24_25K_PA_rental_m` = " . $data2[47];
               break;
@@ -730,8 +730,8 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . ";";
           break;
           case 30000:
-          if($data2[43] == 0){
-            switch($data2[73]){
+          if($data2[70] == 0){
+            switch($data2[67]){
               case 24:
               $insert = "`24_30K_PA_rental_nm` = " . ($data2[47]);
               break;
@@ -750,7 +750,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
             }
           }
           else {
-            switch($data2[73]){
+            switch($data2[67]){
               case 24:
               $insert = "`24_30K_PA_rental_m` = " . $data2[47];
               break;
