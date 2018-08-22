@@ -13,7 +13,6 @@ $row = 1;
 $row2 = 1;
 
 if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
-  fgets($handle);
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     if($data[11] == "Y"){
       $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
@@ -31,7 +30,6 @@ else {
 }
 
 if (($handle2 = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
-  fgets($handle2);
   while (($data2 = fgetcsv($handle2, 0, ",")) !== FALSE) {
     if($data2[11] == "Y"){
       $insert2 = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
