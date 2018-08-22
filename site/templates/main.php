@@ -49,7 +49,6 @@ ERROR_REPORTING(E_ALL);
           <div class="title-bar-title">Menu</div>
         </div>
         <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
-           
           <div class="top-bar-left">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
