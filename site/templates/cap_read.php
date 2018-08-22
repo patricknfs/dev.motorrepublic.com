@@ -14,11 +14,7 @@ $row2 = 1;
 
 if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   fgets($handle);
-
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // print_r($data);
-    // $num = count($data);
-    // echo "car rows count is " . $num ."\n";
     if($data[11] == "Y"){
       $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
       // echo $insert . "<br />"
@@ -27,7 +23,6 @@ if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
     }
   }
   echo $row . " inserted\n";
-  $AdminMessage .= $num . " rows inserted\n";
   mail($adminEmail,"CAP cars upload",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
@@ -37,11 +32,7 @@ else {
 
 if (($handle2 = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
   fgets($handle);
-
   while (($data2 = fgetcsv($handle2, 0, ",")) !== FALSE) {
-    // print_r($data);
-    // $num2 = count($data2);
-    // echo "van rows count is " . $num2 ."\n";
     if($data2[11] == "Y"){
       $insert2 = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
       // echo $insert . "<br />"
@@ -50,11 +41,11 @@ if (($handle2 = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
     }
   }
   echo $row2 . " inserted\n";
-  $AdminMessage .= $row+$row2 . " rows inserted\n";
   mail($adminEmail,"CAP LCV\'s upload",$AdminMessage,"From: MR Server");
   fclose($handle2);
 }
 else {
 	mail($adminEmail,"Problem - MR cap lcvs csv upload","The csv update has failed for some reason","From: MR Server");
 }
+$AdminMessage .= $row+$row2 . " rows inserted\n";
 $conn->close();
