@@ -28,7 +28,11 @@ if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   mail($adminEmail,"CAP cars upload",$AdminMessage,"From: MR Server");
   fclose($handle);
 }
-elseif (($handle = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
+else {
+	mail($adminEmail,"Problem - MR cap cars csv upload","The csv update has failed for some reason","From: MR Server");
+}
+
+if (($handle = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
   fgets($handle);
 
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
@@ -46,6 +50,6 @@ elseif (($handle = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
   fclose($handle);
 }
 else {
-	mail($adminEmail,"Problem - MR cap vehicle csv upload","The csv update has failed for some reason","From: MR Server");
+	mail($adminEmail,"Problem - MR cap lcvs csv upload","The csv update has failed for some reason","From: MR Server");
 }
 $conn->close();
