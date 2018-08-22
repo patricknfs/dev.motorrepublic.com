@@ -10,6 +10,7 @@ $AdminMessage = "MR CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`vehicles`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
+$row2 = 1;
 
 if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   fgets($handle);
@@ -17,12 +18,14 @@ if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
     $num = count($data);
+    echo "car rows count is " . $num;
     if($data[11] == "Y"){
       $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
       // echo $insert . "<br />"
       $result2 = mysqli_query($conn, $insert);
-      $row++;
+      $rows++;
     }
+    echo $rows . " inserted";
   }
   $AdminMessage .= $num . " rows inserted\n";
   mail($adminEmail,"CAP cars upload",$AdminMessage,"From: MR Server");
@@ -37,13 +40,15 @@ if (($handle = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
 
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($data);
-    $num = count($data);
+    $num2 = count($data);
+    echo "van rows count is " . $num2;
     if($data[11] == "Y"){
       $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
       // echo $insert . "<br />"
       $result2 = mysqli_query($conn, $insert);
-      $row++;
+      $row2++;
     }
+    echo $rows2 . " inserted";
   }
   $AdminMessage .= $num . " rows inserted\n";
   mail($adminEmail,"CAP LCV\'s upload",$AdminMessage,"From: MR Server");
