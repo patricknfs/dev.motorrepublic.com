@@ -22,7 +22,7 @@ if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
     if($data[11] == "Y"){
       $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
       // echo $insert . "<br />"
-      $result2 = mysqli_query($conn, $insert);
+      $result = mysqli_query($conn, $insert);
       $rows++;
     }
     echo $rows . " inserted";
@@ -35,24 +35,24 @@ else {
 	mail($adminEmail,"Problem - MR cap cars csv upload","The csv update has failed for some reason","From: MR Server");
 }
 
-if (($handle = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
+if (($handle2 = fopen("inc/cap_lcvs.csv", "r")) !== FALSE) {
   fgets($handle);
 
-  while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+  while (($data2 = fgetcsv($handle2, 0, ",")) !== FALSE) {
     // print_r($data);
-    $num2 = count($data);
+    $num2 = count($data2);
     echo "van rows count is " . $num2;
-    if($data[11] == "Y"){
-      $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
+    if($data2[11] == "Y"){
+      $insert2 = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
       // echo $insert . "<br />"
-      $result2 = mysqli_query($conn, $insert);
+      $result2 = mysqli_query($conn, $insert2);
       $row2++;
     }
     echo $rows2 . " inserted";
   }
   $AdminMessage .= $num . " rows inserted\n";
   mail($adminEmail,"CAP LCV\'s upload",$AdminMessage,"From: MR Server");
-  fclose($handle);
+  fclose($handle2);
 }
 else {
 	mail($adminEmail,"Problem - MR cap lcvs csv upload","The csv update has failed for some reason","From: MR Server");
