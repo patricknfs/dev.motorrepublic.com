@@ -27,6 +27,10 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
       $update = "INSERT INTO `team`.`rates_arval`
         (
         `cap_id`,
+        `CO2`,
+        `vehicle_list_price`,
+        `vehicle_otr_price`,
+        `p11d_price`,
         `updated`,
         `24_8K_PA_rental_m`,
         `24_8K_PA_rental_nm`,
@@ -78,6 +82,10 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
         `60_30K_PA_rental_nm`)
         VALUES (
         " . $data[4] . ",
+        " . $data[56] . ",
+        " . $data[10] . ",
+        " . $data[10] . ",
+        " . $data[6] . ",
         NOW(),
         " . ($data[10]+3.85) . ",
         " . ($data[8]+5+3.85) . ",
