@@ -37,8 +37,8 @@ $columns = array(
 	array( 'db' => 'descr',	'dt' => 5 ),
 	array( 'db' => 'vehicle_list',	'dt' => 6 ),
 	array( 'db' => 'vehicle_otr',	'dt' => 7 ),
-	array( 'db' => 'CO2_no', 'dt' => 8 ),
-	array( 'db' => 'p11d', 'dt' => 9 ),
+	array( 'db' => 'p11d', 'dt' => 8 ),
+	array( 'db' => 'CO2_no', 'dt' => 9 ),
 	array( 'db' => 'term',	'dt' => 10 ),
 	array( 'db' => 'mileage',	'dt' => 11 ),
 	array( 'db' => 'rental',	'dt' => 12 )
