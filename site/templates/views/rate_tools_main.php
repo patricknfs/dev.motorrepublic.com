@@ -65,23 +65,23 @@
         "type": "GET",
         "dataType": "json"
 			},
-      "columns": [
-        {
-          "className":      'details-control',
-          "orderable":      false,
-          "data":           null,
-          "defaultContent": ''
-        },
-        { "data": "source" },
-        { "data": "cap_id" },
-        { "data": "cap_code" },
-        { "data": "manufacturer" },
-        { "data": "model" },
-        { "data": "descr" },
-        { "data": "term" },
-        { "data": "mileage" },
-        { "data": "rental" }
-      ],
+      // "columns": [
+      //   {
+      //     "className":      'details-control',
+      //     "orderable":      false,
+      //     "data":           null,
+      //     "defaultContent": ''
+      //   },
+      //   { "data": "source" },
+      //   { "data": "cap_id" },
+      //   { "data": "cap_code" },
+      //   { "data": "manufacturer" },
+      //   { "data": "model" },
+      //   { "data": "descr" },
+      //   { "data": "term" },
+      //   { "data": "mileage" },
+      //   { "data": "rental" }
+      // ],
       "order": [[ 8, "asc" ]],
       "scrollY": "700px",
       // "paging": false,
