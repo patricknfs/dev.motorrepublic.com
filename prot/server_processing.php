@@ -35,13 +35,13 @@ $columns = array(
 	array( 'db' => 'manufacturer',	'dt' => 3 ),
 	array( 'db' => 'model',	'dt' => 4 ),
 	array( 'db' => 'descr',	'dt' => 5 ),
-	array( 'db' => 'vehicle_list',	'dt' => 5 ),
-	array( 'db' => 'vehicle_otr',	'dt' => 5 ),
-	array( 'db' => 'CO2_no', 'dt' => 6 ),
-	array( 'db' => 'p11d', 'dt' => 7),
-	array( 'db' => 'term',	'dt' => 6 ),
-	array( 'db' => 'mileage',	'dt' => 7 ),
-	array( 'db' => 'rental',	'dt' => 8 )
+	array( 'db' => 'vehicle_list',	'dt' => 6 ),
+	array( 'db' => 'vehicle_otr',	'dt' => 7 ),
+	array( 'db' => 'CO2_no', 'dt' => 8 ),
+	array( 'db' => 'p11d', 'dt' => 9 ),
+	array( 'db' => 'term',	'dt' => 10 ),
+	array( 'db' => 'mileage',	'dt' => 11 ),
+	array( 'db' => 'rental',	'dt' => 12 )
 );
 
 // SQL server connection information
