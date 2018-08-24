@@ -52,7 +52,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[0] . ",
         `CO2` = " . $data[9] . ",
         `vehicle_list_price` = " . $data[10] . ",
-        `vehicle_otr_price` = " . $data[?] . ",
+        `vehicle_otr_price` = " . $data[] . ",
         `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
@@ -87,7 +87,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[0] . ",
         `CO2` = " . $data[9] . ",
         `vehicle_list_price` = " . $data[10] . ",
-        `vehicle_otr_price` = " . $data[?] . ",
+        `vehicle_otr_price` = " . $data[] . ",
         `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
@@ -122,7 +122,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[0] . ",
         `CO2` = " . $data[9] . ",
         `vehicle_list_price` = " . $data[10] . ",
-        `vehicle_otr_price` = " . $data[?] . ",
+        `vehicle_otr_price` = " . $data[] . ",
         `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
@@ -157,7 +157,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[0] . ",
         `CO2` = " . $data[9] . ",
         `vehicle_list_price` = " . $data[10] . ",
-        `vehicle_otr_price` = " . $data[?] . ",
+        `vehicle_otr_price` = " . $data[] . ",
         `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
@@ -192,7 +192,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[0] . ",
         `CO2` = " . $data[9] . ",
         `vehicle_list_price` = " . $data[10] . ",
-        `vehicle_otr_price` = " . $data[?] . ",
+        `vehicle_otr_price` = " . $data[] . ",
         `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
@@ -227,7 +227,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[0] . ",
         `CO2` = " . $data[9] . ",
         `vehicle_list_price` = " . $data[10] . ",
-        `vehicle_otr_price` = " . $data[?] . ",
+        `vehicle_otr_price` = " . $data[] . ",
         `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
