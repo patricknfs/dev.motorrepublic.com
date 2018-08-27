@@ -37,11 +37,11 @@ $columns = array(
 	array( 'db' => 'descr',	'dt' => 5 ),
 	array( 'db' => 'term',	'dt' => 6 ),
 	array( 'db' => 'mileage',	'dt' => 7 ),
-	array( 'db' => 'rental',	'dt' => 8 ),
-	array( 'db' => 'vehicle_list_price' ),
-	array( 'db' => 'vehicle_otr_price' ),
-	array( 'db' => 'p11d_price' ),
-	array( 'db' => 'CO2' )
+	array( 'db' => 'rental',	'dt' => 8 )
+	// array( 'db' => 'vehicle_list_price' ),
+	// array( 'db' => 'vehicle_otr_price' ),
+	// array( 'db' => 'p11d_price' ),
+	// array( 'db' => 'CO2' )
 );
 
 // SQL server connection information
