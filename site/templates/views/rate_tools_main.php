@@ -43,13 +43,13 @@
             '<td width="50%"><strong>CO2:</strong></td>'+
             '<td width="50%">'+d.CO2+'</td>'+
             '<td><strong>P11d:</strong></td>'+
-            '<td>'+d.p11d_price+'</td>'+
+            '<td><p>'+d.p11d_price+'</p></td>'+
         '</tr>'+
         '<tr>'+
             '<td width="50%"><p><strong>List Price:</strong></p></td>'+
-            '<td width="50%">'+d.vehicle_list_price+'</td>'+
+            '<td width="50%"><p>'+d.vehicle_list_price+'</p></td>'+
             '<td><p><strong>Funder OTR Price (Not to be used with other funders):</strong></p></td>'+
-            '<td>'+d.vehicle_otr_price+'</td>'+
+            '<td><p>'+d.vehicle_otr_price+'</p></td>'+
         '</tr>'+
     '</table>';
   };
