@@ -37,7 +37,7 @@ $columns = array(
 	array( 'db' => 'descr',	'dt' => 'descr' ),
 	array( 'db' => 'term',	'dt' => 'term' ),
 	array( 'db' => 'mileage',	'dt' => 'mileage' ),
-	array( 'db' => 'rental',	'dt' => 'rental' )
+	array( 'db' => 'rental',	'dt' => 'rental' ),
 	array( 'db' => 'vehicle_list_price', 'dt' => 'vehicle_list_price' ),
 	array( 'db' => 'vehicle_otr_price', 'dt' => 'vehicle_otr_price' ),
 	array( 'db' => 'p11d_price', 'dt' => 'p11d_price' ),
