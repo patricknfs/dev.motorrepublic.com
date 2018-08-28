@@ -4,6 +4,7 @@
 <table id="example" class="display" style="width:100%">
   <thead>
     <tr>
+      <th></th>
       <th>Source</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
@@ -20,6 +21,7 @@
 	</tbody>
   <tfoot>
     <tr>
+      <th></th>
       <th>Source</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
