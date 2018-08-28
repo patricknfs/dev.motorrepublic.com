@@ -40,15 +40,15 @@
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
-            '<td width="50%"><b>CO2:</b></td>'+
+            '<td width="50%"><strong>CO2:</strong></td>'+
             '<td width="50%">'+d.CO2+'</td>'+
-            '<td><b>P11d:</b></td>'+
+            '<td><strong>P11d:</strong></td>'+
             '<td>'+d.p11d_price+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td width="50%"><b>List Price:</b></td>'+
+            '<td width="50%"><strong>List Price:</strong></td>'+
             '<td width="50%">'+d.vehicle_list_price+'</td>'+
-            '<td><b>Funder OTR Price (Not to be used with other funders):</b></td>'+
+            '<td><strong>Funder OTR Price (Not to be used with other funders):</strong></td>'+
             '<td>'+d.vehicle_otr_price+'</td>'+
         '</tr>'+
     '</table>';
