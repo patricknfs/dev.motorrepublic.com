@@ -103,7 +103,7 @@ $query = "SELECT
     )
   ) AS mr2
   ON mr1.code = mr2.capid
-  -- WHERE mr2.rent IS NOT NULL
+  WHERE mr1.code = mr2.capid
   ORDER BY rental DESC
 ";
 // echo $query; 
