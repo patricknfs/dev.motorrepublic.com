@@ -52,7 +52,7 @@
             '<td>'+d.vehicle_list_price+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>OTR Price:</td>'+
+            '<td>Funder OTR Price (Not to be used with other finders):</td>'+
             '<td>'+d.vehicle_otr_price+'</td>'+
         '</tr>'+
     '</table>';
