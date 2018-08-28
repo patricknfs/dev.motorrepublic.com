@@ -7890,12 +7890,12 @@ a.thumbnail image {
 }
 
 td.details-control {
-  background: url("<?=$config->urls->assets?>graphics/details_open.png") no-repeat center center;
+  background: url("./site/assets/graphics/details_open.png") no-repeat center center;
   cursor: pointer;
 }
 
 tr.shown td.details-control {
-  background: url("<?=$config->urls->assets?>graphics/details_close.png") no-repeat center center;
+  background: url("/site/assets/graphics/details_close.png") no-repeat center center;
 }
 
 footer {
