@@ -82,7 +82,7 @@
         { "data": "mileage" },
         { "data": "rental" }
       ],
-      "order": [[ 8, "asc" ]],
+      "order": [[ 9, "asc" ]],
       "scrollY": "700px",
       // "paging": false,
 			// "deferRender": true,
