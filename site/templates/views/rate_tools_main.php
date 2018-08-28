@@ -46,9 +46,9 @@
             '<td>'+d.p11d_price+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td width="50%"><strong>List Price:</strong></td>'+
+            '<td width="50%"><p><strong>List Price:</strong></p></td>'+
             '<td width="50%">'+d.vehicle_list_price+'</td>'+
-            '<td><strong>Funder OTR Price (Not to be used with other funders):</strong></td>'+
+            '<td><p><strong>Funder OTR Price (Not to be used with other funders):</strong></p></td>'+
             '<td>'+d.vehicle_otr_price+'</td>'+
         '</tr>'+
     '</table>';
