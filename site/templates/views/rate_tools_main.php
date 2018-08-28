@@ -1,7 +1,7 @@
 <?php
 // rate_tools_main.php
 ?>
-<table id="example" class="display" style="width:100%">
+<table id="mr_rates" class="display" style="width:100%">
   <thead>
     <tr>
       <th></th>
@@ -41,11 +41,11 @@
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
             '<td>Full name:</td>'+
-            '<td>'+d.co2+'</td>'+
+            '<td>'+d.CO2+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Extension number:</td>'+
-            '<td>'+d.p11d+'</td>'+
+            '<td>'+d.p11d_price+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Extra info:</td>'+
@@ -54,7 +54,7 @@
     '</table>';
   };
   $(document).ready(function() {
-		var oTable = $('#example').DataTable( {
+		var oTable = $('#mr_rates').DataTable( {
 			"language": {
         "search": "_INPUT_",
         "searchPlaceholder": "Search..."
@@ -96,7 +96,7 @@
       "select": true
 		});
     // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'td.details-control', function () {
+    $('#mr_rates tbody').on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
       var row = table.row( tr );
 
