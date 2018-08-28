@@ -54,7 +54,7 @@
     '</table>';
   };
   $(document).ready(function() {
-		var oTable = $('#mr_rates').DataTable( {
+		var table = $('#mr_rates').DataTable( {
 			"language": {
         "search": "_INPUT_",
         "searchPlaceholder": "Search..."
