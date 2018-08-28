@@ -42,17 +42,13 @@
         '<tr>'+
             '<td>CO2:</td>'+
             '<td>'+d.CO2+'</td>'+
-        '</tr>'+
-        '<tr>'+
             '<td>P11d:</td>'+
             '<td>'+d.p11d_price+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>List Price:</td>'+
             '<td>'+d.vehicle_list_price+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Funder OTR Price (Not to be used with other finders):</td>'+
+            '<td>Funder OTR Price (Not to be used with other funders):</td>'+
             '<td>'+d.vehicle_otr_price+'</td>'+
         '</tr>'+
     '</table>';
