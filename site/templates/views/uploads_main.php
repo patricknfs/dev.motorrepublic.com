@@ -3,7 +3,7 @@
 ?>
 <div class="grid-container">
   <div class="grid-x">
-    <div class="cell">
+    <div class="cell medium-6">
       <h1><?php echo $page->title; ?></h1>
       <?php echo $forms->embed('specials_upload');?>
       </div>
