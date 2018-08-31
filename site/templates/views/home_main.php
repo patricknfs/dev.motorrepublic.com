@@ -4,7 +4,7 @@
 ?>
 <div class="grid-x">
 	<video autoplay loop muted poster="/assets/img/video-path.jpg" id="video_bg">
-	<source src="<?=$config->urls->assets?>videos/videoblocks-animated-car-dashboard-start-engine_hubtnue___WL.mp4" type="video/mp4">
+		<source src="<?=$config->urls->assets?>videos/videoblocks-animated-car-dashboard-start-engine_hubtnue___WL.mp4" type="video/mp4">
 	</video>
 	<div class="cell small-8" id="message">
 		<h1>Title Goes Here</h1>
