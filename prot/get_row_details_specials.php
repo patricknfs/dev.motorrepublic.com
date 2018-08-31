@@ -10,7 +10,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 // iterate over every row
 $row = 1;
 
-foreach($form->entries AS $entry){
+foreach($form->entries() AS $entry){
   print_r($entry);
 }
   // for every field in the result..
