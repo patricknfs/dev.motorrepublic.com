@@ -10,9 +10,15 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 // iterate over every row
 $row = 1;
 
-foreach($form->entries() AS $entry){
-  print_r($entry);
+$entries = array();
+foreach($form->entries()->find("sort=created") as $entry) {﻿
+  $entries[] = $entry;
 }
+
+foreach($entries as $entry){
+  echo "<p>$entry[something_name]</p>";
+}
+
   // for every field in the result..
 //   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "')";
 //   $result3 = $conn->query($insert) or die(mysqli_error($conn));
