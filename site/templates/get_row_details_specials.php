@@ -11,8 +11,10 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 $row = 1;
 
 $entries = array();
-foreach($forms->entries()->find("sort=created") as $entry) {
-  $entries[] = $entry;
+foreach($form->entries()->find("sort=created") as $entry) {
+  if($entry['id'] == 3.2) {
+    $entries[] = $entry;
+  }
 }
 
 foreach($entries as $entry){
