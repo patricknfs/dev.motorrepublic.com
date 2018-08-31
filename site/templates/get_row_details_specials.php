@@ -12,7 +12,7 @@ $row = 1;
 
 $entries = array();
 foreach($form->entries()->find("sort=created") as $entry) {
-  if($entry['id'] == 3.2) {
+  if($entry['id'] == 3) {
     $entries[] = $entry;
   }
 }
