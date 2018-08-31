@@ -11,7 +11,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 $row = 1;
 
 $entries = array();
-foreach($form->entries()->find("sort=created") as $entry) {
+foreach($forms->entries()->find("sort=created") as $entry) {
   $entries[] = $entry;
 }
 
