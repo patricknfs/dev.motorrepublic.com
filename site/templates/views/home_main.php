@@ -4,8 +4,10 @@
 <section id="promo">
 	<div class="overlay"></div>
 	<div class="grid-x grid-margin-x grid-margin-y">
-		<div id="hero_form" class="cell small-12 medium-4">
-			<?php echo $forms->embed('vehicle_power_search'); ?>
+		<div class="cell small-12 medium-4">
+			<div id="hero_form"> 
+				<?php echo $forms->embed('vehicle_power_search'); ?>
+			</div>
 		</div>
 		<div class="cell small-12 medium-4">
 		

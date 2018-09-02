@@ -7935,6 +7935,8 @@ section#promo .row {
 
 section#promo #hero_form {
   background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  margin: 2rem;
 }
 
 section#promo #message {
