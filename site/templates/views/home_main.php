@@ -4,7 +4,7 @@
 <section id="promo">
 	<div class="overlay"></div>
 	<div class="grid-x">
-		<div class="hero_form cell small-12 medium-6">
+		<div id="hero_form" class="cell small-12 medium-6">
 			<?php echo $forms->embed('vehicle_power_search'); ?>
 		</div>
 		<div class="cell small-12 medium-6">
