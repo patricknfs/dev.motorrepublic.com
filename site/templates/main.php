@@ -67,7 +67,7 @@ ERROR_REPORTING(E_ALL);
               'inner_tpl' => '<ul class="menu vertical">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
               'list_field_class' => 'menu-text',
-              'item_tpl' => '<a class="header__nav__item__link" href="{url}">{title}</a>',
+              'item_tpl' => '<a class="nav_link" href="{url}">{title}</a>',
               'item_current_tpl' => '<a href="{url}">{title}</a>',
               'xtemplates' => '',
               'xitem_tpl' => '<span>{title}</span>',

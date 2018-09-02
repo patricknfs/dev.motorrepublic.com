@@ -7889,6 +7889,10 @@ a.thumbnail image {
   float: left;
 }
 
+.nav_link {
+  color: #fff;
+}
+
 td.details-control {
   background: url("/site/assets/graphics/details_open.png") no-repeat center center;
   cursor: pointer;
