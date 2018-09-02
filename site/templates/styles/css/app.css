@@ -2966,13 +2966,13 @@ blockquote {
 
 blockquote, blockquote p {
   line-height: 1.6;
-  color: #8a8a8a;
+  color: #444444;
 }
 
 cite {
   display: block;
   font-size: 0.8125rem;
-  color: #8a8a8a;
+  color: #444444;
 }
 
 cite:before {
@@ -3011,7 +3011,7 @@ kbd {
   margin-bottom: 0.5rem;
   font-weight: normal;
   line-height: 1.4;
-  color: #8a8a8a;
+  color: #444444;
 }
 
 .lead {
@@ -3131,7 +3131,7 @@ ul.no-bullet, ol.no-bullet {
   }
   pre,
   blockquote {
-    border: 1px solid #8a8a8a;
+    border: 1px solid #444444;
     page-break-inside: avoid;
   }
   thead {
@@ -3614,7 +3614,7 @@ textarea {
 [type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #444444;
   background-color: #fefefe;
   box-shadow: 0 0 5px #cacaca;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -3824,7 +3824,7 @@ select {
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2868, 68, 68%29'></polygon></svg>");
   background-origin: content-box;
   background-position: right -1rem center;
   background-repeat: no-repeat;
@@ -3841,7 +3841,7 @@ select {
 
 select:focus {
   outline: none;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #444444;
   background-color: #fefefe;
   box-shadow: 0 0 5px #cacaca;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -4395,7 +4395,7 @@ select[multiple] {
 
 .close-button {
   position: absolute;
-  color: #8a8a8a;
+  color: #444444;
   cursor: pointer;
 }
 
@@ -4729,8 +4729,8 @@ select[multiple] {
 }
 
 .menu-icon.dark:hover::after {
-  background: #8a8a8a;
-  box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
+  background: #444444;
+  box-shadow: 0 7px 0 #444444, 0 14px 0 #444444;
 }
 
 .is-drilldown {
@@ -5863,11 +5863,11 @@ select[multiple] {
 }
 
 .orbit-bullets button:hover {
-  background-color: #8a8a8a;
+  background-color: #444444;
 }
 
 .orbit-bullets button.is-active {
-  background-color: #8a8a8a;
+  background-color: #444444;
 }
 
 .pagination {
@@ -6661,7 +6661,7 @@ a.thumbnail image {
 .has-tip {
   position: relative;
   display: inline-block;
-  border-bottom: dotted 1px #8a8a8a;
+  border-bottom: dotted 1px #444444;
   font-weight: bold;
   cursor: help;
 }
@@ -6794,7 +6794,7 @@ a.thumbnail image {
 
 .top-bar,
 .top-bar ul {
-  background-color: #8a8a8a;
+  background-color: #444444;
 }
 
 .top-bar input {
