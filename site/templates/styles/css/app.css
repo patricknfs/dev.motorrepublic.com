@@ -7898,20 +7898,30 @@ tr.shown td.details-control {
   background: url("/site/assets/graphics/details_close.png") no-repeat center center;
 }
 
-video {
-  position: fixed;
-  top: 50%;
+.promo {
+  position: relative;
+  overflow: hidden;
+}
+
+.promo #video_bg {
+  position: absolute;
   left: 50%;
+  top: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-  background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.promo .row {
+  min-height: 100vh;
+}
+
+.promo #message {
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 1;
 }
 
 .stopfade {
