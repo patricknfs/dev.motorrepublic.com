@@ -7939,6 +7939,10 @@ section#promo #hero_form {
   margin: 2rem;
 }
 
+section#promo #hero_form label {
+  color: #fff;
+}
+
 section#promo #message {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
