@@ -7909,7 +7909,7 @@ tr.shown td.details-control {
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 2;
+  z-index: -5;
   background: green;
   opacity: 0.5;
 }
