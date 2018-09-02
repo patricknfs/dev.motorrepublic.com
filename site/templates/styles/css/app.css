@@ -7919,16 +7919,6 @@ tr.shown td.details-control {
 }
 
 .promo #message {
-  color: #fff;
-  text-transform: uppercase;
-  z-index: 1;
-}
-
-.stopfade {
-  opacity: .5;
-}
-
-#deal {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
   background: rgba(255, 255, 255, 0.5);
