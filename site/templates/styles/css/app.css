@@ -7945,6 +7945,11 @@ footer {
   background-color: #333;
 }
 
-footer p {
+p {
+  color: #fff;
+}
+
+ul {
+  display: inline-block;
   color: #fff;
 }
