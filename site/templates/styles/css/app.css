@@ -7902,12 +7902,12 @@ tr.shown td.details-control {
   background: url("/site/assets/graphics/details_close.png") no-repeat center center;
 }
 
-.promo {
+section.promo {
   position: relative;
   overflow: hidden;
 }
 
-.promo .overlay {
+section.promo .overlay {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -7918,7 +7918,7 @@ tr.shown td.details-control {
   opacity: 0.7;
 }
 
-.promo #video_bg {
+section.promo #video_bg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -7929,11 +7929,11 @@ tr.shown td.details-control {
   z-index: -10;
 }
 
-.promo .row {
+section.promo .row {
   min-height: 100vh;
 }
 
-.promo #message {
+section.promo #message {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
   background: rgba(255, 255, 255, 0.8);
@@ -7945,8 +7945,12 @@ tr.shown td.details-control {
   font-size: 1.2rem;
 }
 
-.promo #message img {
+section.promo #message img {
   margin-bottom: 1em;
+}
+
+section.block_one {
+  margin-top: 1em;
 }
 
 footer {
