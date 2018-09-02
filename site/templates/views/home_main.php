@@ -3,11 +3,14 @@
 ?>
 <section id="promo">
 	<div class="overlay"></div>
-	<div class="grid-x">
-		<div id="hero_form" class="cell small-12 medium-6">
+	<div class="grid-x grid-margin-x">
+		<div id="hero_form" class="cell small-12 medium-4">
 			<?php echo $forms->embed('vehicle_power_search'); ?>
 		</div>
-		<div class="cell small-12 medium-6">
+		<div class="cell small-12 medium-4">
+		
+		</div>
+		<div class="cell small-12 medium-4">
 			<div id="message">
 				<h1>Deal of the Day</h1>
 				<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
