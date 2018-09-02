@@ -7952,10 +7952,10 @@ video {
   opacity: .5;
 }
 
-#polina {
+#deal {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   color: white;
   padding: 2rem;
   width: 33%;
@@ -7971,7 +7971,7 @@ h1 {
   letter-spacing: .3rem;
 }
 
-#polina button {
+#deal button {
   display: block;
   width: 80%;
   padding: .4rem;
@@ -7985,7 +7985,7 @@ h1 {
   transition: .3s background;
 }
 
-#polina button:hover {
+#deal button:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
