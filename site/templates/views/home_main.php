@@ -1,7 +1,7 @@
 <?php
 // home_main.php
 ?>
-<section class="promo">
+<section id="promo">
 	<div class="overlay"></div>
 	<div id="message">
 		<h1>Deal of the Day</h1>
@@ -14,7 +14,7 @@
 		<source src="<?=$config->urls->assets?>videos/videoblocks-animated-car-dashboard-start-engine_hubtnue___WL.mp4" type="video/mp4">
 	</video>
 </section>
-<section>
+<section id="block_one">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-4">
