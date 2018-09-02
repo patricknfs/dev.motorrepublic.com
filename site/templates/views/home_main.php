@@ -12,7 +12,7 @@
 	</video>
 </section>
 <section>
-	<div class="row">
+	<div class="grid-container">
 		<div class="grid-x">
 			<div class="cell small-12 medium-4">
 				<h3>We happy?</h3>
