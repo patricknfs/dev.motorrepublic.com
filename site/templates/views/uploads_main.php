@@ -7,8 +7,8 @@
       <h1><?php echo $page->title; ?></h1>
       <?php echo $forms->embed('specials_upload');?>
     </div>
-      <div class="cell medium-6">
+    <div class="cell medium-6">
       test
-      </div>
     </div>
+  </div>
 </div>
