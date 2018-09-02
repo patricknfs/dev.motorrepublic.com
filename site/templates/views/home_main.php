@@ -3,13 +3,21 @@
 ?>
 <section id="promo">
 	<div class="overlay"></div>
-	<div id="message">
-		<h1>Deal of the Day</h1>
-		<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
-		<h4>THE ALL NEW FIESTA ST2</h4>
-		<p>Available in stock now from £215.99 inc. VAT</p>
-		<p><a href="#">More details...</a></p>
+	<div class="grid-x">
+		<div class="hero_form cell small-12 medium-6">
+
+		</div>
+		<div class="cell small-12 medium-6">
+			<div id="message">
+				<h1>Deal of the Day</h1>
+				<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
+				<h4>THE ALL NEW FIESTA ST2</h4>
+				<p>Available in stock now from £215.99 inc. VAT</p>
+				<p><a href="#">More details...</a></p>
+			</div>
+		</div>
 	</div>
+	
 	<video autoplay loop muted poster="/assets/img/video-path.jpg" id="video_bg">
 		<source src="<?=$config->urls->assets?>videos/videoblocks-animated-car-dashboard-start-engine_hubtnue___WL.mp4" type="video/mp4">
 	</video>
