@@ -91,7 +91,18 @@ ERROR_REPORTING(E_ALL);
       }
       ?>
     <footer>
-      <p>Test</p>
+      <ul>Talk To Us
+        <li>T: 0121 794 9073</li>
+        <li>E: sales@motorrepublic.com</li>
+        <li></li>
+      </ul>
+      <ul>Where we are
+        <li>Motor Republic</li>
+        <li>5 The Croft</li>
+        <li>Buntsford Drive</li>
+        <li>Bromsgrove</li>
+        <li>B60 4JE</li>
+      </ul>
     </footer>
   </body>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/foundation.min.js" ></script>
