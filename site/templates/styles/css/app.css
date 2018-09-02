@@ -7933,6 +7933,10 @@ section#promo .row {
   min-height: 100vh;
 }
 
+section#promo #hero_form {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 section#promo #message {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
