@@ -7898,32 +7898,6 @@ tr.shown td.details-control {
   background: url("/site/assets/graphics/details_close.png") no-repeat center center;
 }
 
-.promo {
-  position: relative;
-  overflow: hidden;
-}
-
-.promo #video_bg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-.promo .row {
-  min-height: 100vh;
-}
-
-.promo #message {
-  color: #fff;
-  text-transform: uppercase;
-  z-index: 1;
-}
-
 video {
   position: fixed;
   top: 50%;
@@ -7954,17 +7928,6 @@ video {
   margin: 2rem;
   float: right;
   font-size: 1.2rem;
-}
-
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-
-a:hover {
-  background: rgba(0, 0, 0, 0.9);
 }
 
 footer {
