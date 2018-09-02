@@ -7903,6 +7903,17 @@ tr.shown td.details-control {
   overflow: hidden;
 }
 
+.promo .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: green;
+  opacity: 0.5;
+}
+
 .promo #video_bg {
   position: absolute;
   left: 50%;
