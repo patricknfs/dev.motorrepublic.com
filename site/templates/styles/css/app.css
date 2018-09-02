@@ -7898,14 +7898,6 @@ tr.shown td.details-control {
   background: url("/site/assets/graphics/details_close.png") no-repeat center center;
 }
 
-footer {
-  background-color: #333;
-}
-
-footer p {
-  color: #fff;
-}
-
 .promo {
   position: relative;
   overflow: hidden;
@@ -7971,15 +7963,14 @@ h1 {
   letter-spacing: .3rem;
 }
 
-a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  background: rgba(0, 0, 0, 0.5);
-  padding: .5rem;
-  transition: .6s background;
-}
-
 a:hover {
   background: rgba(0, 0, 0, 0.9);
+}
+
+footer {
+  background-color: #333;
+}
+
+footer p {
+  color: #fff;
 }
