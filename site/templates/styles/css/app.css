@@ -7945,6 +7945,10 @@ tr.shown td.details-control {
   font-size: 1.2rem;
 }
 
+.promo #message img {
+  margin-bottom: 2em;
+}
+
 footer {
   background-color: #222;
 }
