@@ -91,18 +91,27 @@ ERROR_REPORTING(E_ALL);
       }
       ?>
     <footer>
-      <ul>Talk To Us
-        <li>T: 0121 794 9073</li>
-        <li>E: sales@motorrepublic.com</li>
-        <li></li>
-      </ul>
-      <ul>Where we are
-        <li>Motor Republic</li>
-        <li>5 The Croft</li>
-        <li>Buntsford Drive</li>
-        <li>Bromsgrove</li>
-        <li>B60 4JE</li>
-      </ul>
+      <div class="grid-x">
+        <div class="cell small-6 medium-4">
+        <ul>Talk To Us
+          <li>T: 0121 794 9073</li>
+          <li>E: sales@motorrepublic.com</li>
+          <li></li>
+        </ul>
+        </div>
+        <div class="cell small-6 medium-4">
+          <ul>Where we are
+            <li>Motor Republic</li>
+            <li>5 The Croft</li>
+            <li>Buntsford Drive</li>
+            <li>Bromsgrove</li>
+            <li>B60 4JE</li>
+          </ul>
+        </div>
+        <div class="cell small-6 medium-4"></div>
+      </div>
+      
+
     </footer>
   </body>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/foundation.min.js" ></script>
