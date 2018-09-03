@@ -94,14 +94,14 @@ ERROR_REPORTING(E_ALL);
       <div class="grid-container">
         <div class="grid-x">
           <div class="cell small-6 medium-4">
-          <ul>Talk To Us
+          <ul><h3>Talk To Us</h3>
             <li>T: 0121 794 9073</li>
             <li>E: sales@motorrepublic.com</li>
             <li></li>
           </ul>
           </div>
           <div class="cell small-6 medium-4">
-            <ul>Where we are
+            <ul><h3>Where we are</h3>
               <li>Motor Republic</li>
               <li>5 The Croft</li>
               <li>Buntsford Drive</li>
