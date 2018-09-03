@@ -7976,6 +7976,10 @@ footer ul {
   color: #fff;
 }
 
+footer ul li {
+  list-style: none;
+}
+
 section#block_two {
   background: url(/site/assets/images/tesla_1200.jpg) no-repeat center center fixed;
   background-size: cover;
