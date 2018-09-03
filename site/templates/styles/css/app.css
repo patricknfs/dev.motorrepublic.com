@@ -7964,8 +7964,11 @@ section#block_one {
 
 footer {
   background-color: #222;
-  padding-top: 2em p;
-  padding-top-color: #fff;
+  padding-top: 2em;
+}
+
+footer p {
+  color: #fff;
 }
 
 footer ul {
