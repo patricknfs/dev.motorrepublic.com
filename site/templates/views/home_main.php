@@ -51,3 +51,6 @@
 		</div>
 	</div>
 </section>
+<section id="block_two">
+	<div></div>
+</section>
