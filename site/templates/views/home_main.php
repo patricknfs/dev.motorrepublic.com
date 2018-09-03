@@ -22,7 +22,6 @@
 			</div>
 		</div>
 	</div>
-	
 	<video autoplay loop muted poster="/assets/img/video-path.jpg" id="video_bg">
 		<source src="<?=$config->urls->assets?>videos/videoblocks-animated-car-dashboard-start-engine_hubtnue___WL.mp4" type="video/mp4">
 	</video>
@@ -61,6 +60,5 @@
 			</div>
 			<div class="cell small-12 medium-6"></div>
 		</div>
-	
 	</div>
 </section>

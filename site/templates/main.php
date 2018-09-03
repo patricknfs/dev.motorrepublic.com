@@ -43,12 +43,12 @@ ERROR_REPORTING(E_ALL);
           <img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" />
         </div> 
       </div>
-      <nav role="navigation">
+      <nav role="navigation" data-sticky-container>
         <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
           <div class="title-bar-title">Menu</div>
         </div>
-        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out"  data-sticky data-margin-top="0">
           <div class="top-bar-left">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
