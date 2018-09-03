@@ -97,7 +97,6 @@ ERROR_REPORTING(E_ALL);
           <ul><h3>Talk To Us</h3>
             <li>T: 0121 794 9073</li>
             <li>E: sales@motorrepublic.com</li>
-            <li></li>
           </ul>
           </div>
           <div class="cell small-6 medium-4">
@@ -109,7 +108,8 @@ ERROR_REPORTING(E_ALL);
               <li>B60 4JE</li>
             </ul>
           </div>
-          <div class="cell small-6 medium-4"></div>
+          <div class="cell small-6 medium-4">
+          </div>
         </div>
       </div>
     </footer>
