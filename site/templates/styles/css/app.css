@@ -7981,6 +7981,6 @@ section#block_two {
   background-size: cover;
 }
 
-section#block_two p {
+section#block_two h1, section#block_two p {
   color: #fff;
 }
