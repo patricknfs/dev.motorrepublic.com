@@ -55,7 +55,7 @@
 	<div class="grid-container">
 		<div class="grid-x">
 			<div class="cell small-12 medium-6">
-				<h1>Yeah, and if you were the pope they'd be all, "Straighten your pope hat." And "Put on your good vestments."</h1>
+				<h1>Yeah, and if you were the pope they'd be all</h1>
 				<p>It's a T. It goes "tuh". We're rescuing ya. You've killed me! Oh, you've killed me! I had more, but you go ahead.</p>
 				<p>When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought "Why should I? " Then later, Leela made the film. <strong> But if I did make it, you can bet there would have been more topless women on motorcycles.</strong> <em> Roll film!</em> Why would a robot need to drink?</p>
 			</div>
