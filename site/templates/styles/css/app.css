@@ -7977,5 +7977,6 @@ footer ul {
 }
 
 section#block_two {
-  background: url(/site/assets/images/tesla_1200.jpg) cover;
+  background: url(/site/assets/images/tesla_1200.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
