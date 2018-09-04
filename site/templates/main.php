@@ -121,7 +121,9 @@ ERROR_REPORTING(E_ALL);
               <p>Registered in England & Wales with company number : 03247145 | Data Protection No : Z5088418 | VAT No : 695548379 | BVRLA Registration Number : 1463</p>
               <p>Registered Office : 5 The Croft, Buntsford Drive, Bromsgrove, B60 4JE</p>
               <p>Copyright &copy; <?php echo date("Y"); ?> Motor Republic, All rights reserved.</div>
-            <div class="cell-small-12 medium-5"></div>
+            <div class="cell-small-12 medium-5">
+              <p>* All offers are subject to change at any time, you must be 18 or over and finance is subject to status, vehicle availability and terms and conditions apply. We can introduce you to a limited number of finance companies, a commission may be received. Failure to maintain payments may result in termination of your agreement and the vehicle being returned, this could affect your credit rating and make it more difficult to obtain credit in the future. All prices correct at time of publication. All vehicle images and car descriptions on this site are for illustration and reference purposes only and are not necessarily an accurate representation of the vehicle on offer. VAT at 20% may be payable. You should try and estimate the distance you will travel as accurately as possible to try and avoid excess mileage charges at the end of your contract. Only regulated business will fall under the jurisdiction of the Financial Conduct Authority.</p>
+            </div>
             <div class="cell-small-12 medium-2"></div>
           </div>
         </div>
