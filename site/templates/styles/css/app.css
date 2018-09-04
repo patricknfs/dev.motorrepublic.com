@@ -501,7 +501,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Fira Sans", Roboto, Arial, sans-serif;
+  font-family: "Noto Sans", Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -2817,7 +2817,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Alegreya";
+  font-family: "Fjalla One";
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -7953,7 +7953,7 @@ section#promo #slogan {
       justify-content: center;
 }
 
-section#promo #slogan div h1, section#promo #slogan div h2, section#promo #slogan div h3 {
+section#promo #slogan div h1, section#promo #slogan div h2 {
   color: #fff;
   text-shadow: 1px 1px #000;
 }
