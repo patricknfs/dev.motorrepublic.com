@@ -9,9 +9,9 @@
 				<?php echo $forms->embed('vehicle_power_search'); ?>
 			</div>
 		</div>
-		<div class="cell small-12 medium-4">
-			<h2>Local Knowledge</h2>
-			<h3>National Buying Power</h3>
+		<div id="slogan" class="cell small-12 medium-4">
+			<h1>Local Knowledge</h2>
+			<h2>National Buying Power</h3>
 		</div>
 		<div class="cell small-12 medium-4">
 			<div id="message">

@@ -7943,6 +7943,14 @@ section#promo .InputfieldHeader {
   color: #fff;
 }
 
+section#promo #slogan {
+  text-align: center;
+}
+
+section#promo #slogan h1, section#promo #slogan h2, section#promo #slogan h3 {
+  color: #fff;
+}
+
 section#promo #message {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight: 100;
