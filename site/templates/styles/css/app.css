@@ -7962,6 +7962,15 @@ section#block_one {
   margin-top: 1em;
 }
 
+section#block_two {
+  background: url(/site/assets/images/tesla_1200.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+section#block_two h1, section#block_two p {
+  color: #fff;
+}
+
 footer {
   background-color: #222;
   padding-top: 2em;
@@ -7980,11 +7989,6 @@ footer ul li {
   list-style: none;
 }
 
-section#block_two {
-  background: url(/site/assets/images/tesla_1200.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
-section#block_two h1, section#block_two p {
-  color: #fff;
+footer #governance {
+  background-color: #000;
 }
