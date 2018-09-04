@@ -114,7 +114,12 @@ ERROR_REPORTING(E_ALL);
       </div>
       <div class="grid-container">
         <div class="grid-x">
-          <div class="cell-small-12 medium-5"></div>
+          <div class="cell-small-12 medium-5">
+            <p>Motor Republic is a trading style of National Fleet Services Limited.</p>
+            <p>Motor Republic are a credit broker and not a lender, we are authorised and regulated by the Financial Conduct Authority. Registered No : 680691</p>
+            <p>Registered in England & Wales with company number : 03247145 | Data Protection No : Z5088418 | VAT No : 695548379 | BVRLA Registration Number : 1463</p>
+            <p>Registered Office : 5 The Croft, Buntsford Drive, Bromsgrove, B60 4JE</p>
+            <p>Copyright &copy; <?php echo date("Y"); ?> Motor Republic, All rights reserved.</div>
           <div class="cell-small-12 medium-5"></div>
           <div class="cell-small-12 medium-2"></div>
         </div>
