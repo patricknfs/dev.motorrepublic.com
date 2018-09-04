@@ -10,8 +10,10 @@
 			</div>
 		</div>
 		<div id="slogan" class="cell small-12 medium-4">
-			<h1>Local Knowledge</h2>
-			<h2>National Buying Power</h3>
+			<div>
+				<h1>Local Knowledge</h2>
+				<h2>National Buying Power</h3>
+			</div>
 		</div>
 		<div class="cell small-12 medium-4">
 			<div id="message">
