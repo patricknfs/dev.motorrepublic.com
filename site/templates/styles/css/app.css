@@ -7944,7 +7944,12 @@ section#promo .InputfieldHeader {
 }
 
 section#promo #slogan {
-  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 section#promo #slogan h1, section#promo #slogan h2, section#promo #slogan h3 {
