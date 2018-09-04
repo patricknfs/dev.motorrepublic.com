@@ -112,7 +112,7 @@ ERROR_REPORTING(E_ALL);
           </div>
         </div>
       </div>
-      <div class="grid-container">
+      <div class="grid-container governance">
         <div class="grid-x">
           <div class="cell-small-12 medium-5">
             <p>Motor Republic is a trading style of National Fleet Services Limited.</p>
