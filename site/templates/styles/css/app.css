@@ -7945,9 +7945,6 @@ section#promo .InputfieldHeader {
 
 section#promo #slogan {
   text-align: center;
-}
-
-section#promo #slogan div {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
