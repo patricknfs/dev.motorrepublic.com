@@ -92,7 +92,7 @@ ERROR_REPORTING(E_ALL);
       ?>
     <footer>
       <div class="grid-container">
-        <div class="grid-x grid-margin-x">
+        <div class="grid-x">
           <div class="cell small-6 medium-4">
           <ul><h3>Talk To Us</h3>
             <li>T: 0121 794 9073</li>
@@ -114,7 +114,7 @@ ERROR_REPORTING(E_ALL);
       </div>
       <section id="governance">
         <div class="grid-container">
-          <div class="grid-x">
+          <div class="grid-x grid-margin-x">
             <div class="cell-small-12 medium-5">
               <p>Motor Republic is a trading style of National Fleet Services Limited.</p>
               <p>Motor Republic are a credit broker and not a lender, we are authorised and regulated by the Financial Conduct Authority. Registered No : 680691</p>
