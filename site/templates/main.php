@@ -92,7 +92,7 @@ ERROR_REPORTING(E_ALL);
       ?>
     <footer>
       <div class="grid-container">
-        <div class="grid-x">
+        <div class="grid-x grid-margin-x">
           <div class="cell small-6 medium-4">
           <ul><h3>Talk To Us</h3>
             <li>T: 0121 794 9073</li>
