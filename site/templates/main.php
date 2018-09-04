@@ -100,7 +100,7 @@ ERROR_REPORTING(E_ALL);
           </ul>
           </div>
           <div class="cell small-6 medium-4">
-            <ul><h3>Where we are</h3>
+            <ul><h3>Where We Are</h3>
               <li>Motor Republic</li>
               <li>5 The Croft</li>
               <li>Buntsford Drive</li>
