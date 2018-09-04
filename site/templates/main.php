@@ -112,6 +112,13 @@ ERROR_REPORTING(E_ALL);
           </div>
         </div>
       </div>
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell-small-12 medium-5"></div>
+          <div class="cell-small-12 medium-5"></div>
+          <div class="cell-small-12 medium-2"></div>
+        </div>
+      </div>
     </footer>
   </body>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/foundation.min.js" ></script>
