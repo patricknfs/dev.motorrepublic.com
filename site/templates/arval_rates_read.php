@@ -142,7 +142,7 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
           `cap_id` = " . $data[4] . "
         ;
       ";
-      echo $update . "<br />";
+      // echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
     }
     $row++;
