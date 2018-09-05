@@ -10,6 +10,8 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 // iterate over every row
 $row = 1;
 
+$form = $forms->get('specials_upload');﻿
+
 $entries = array();
 foreach($form->entries()->find("sort=created") as $entry) {
   $entries[] = $entry;
