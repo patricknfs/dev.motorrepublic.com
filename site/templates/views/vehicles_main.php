@@ -20,12 +20,10 @@
           'upscaling' => false       
         ); 
         ?>
-		
+			
 			<div class="prod_panel callout">
 				<h6 class="text-center" itemprop="name">
-					<?php
-					 	
-					?>
+					<?=$vehicle->Manufacturer?> <?=$vehicle->model?>
 				</h6>
 			</div>
 		</div>
