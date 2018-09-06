@@ -17,8 +17,8 @@ $pagination = $products->renderPager(array(
     'linkMarkup' => "<a href='{url}'><span>{out}</span></a>"  
 ));
 ?>
-<div class="row">
-	<div class="small-12 columns">
+<div class="grid-x">
+	<div class="small-12">
 		<div class="callout text-center">
 			<h3><?=$page->title?></h3>
 			<?=$page->body_no_editor?>
