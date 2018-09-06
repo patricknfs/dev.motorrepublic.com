@@ -1,12 +1,12 @@
 <div class="grid-x">
-	<div class="small-12">
+	<div class="cell small-12">
 		<div class="callout text-center">
 			<h3><?=$page->title?></h3>
 			<?=$page->body_no_editor?>
 		</div>
 	</div>
-	<div class="small-12 columns">
-		<?=$pagination?>
+	<div class="cell small-12">
+		<!-- <?=$pagination?> -->
 	</div>
 </div>
 <div class="grid-x">
@@ -36,6 +36,6 @@
 </div>
 <div class="grid-x">
 	<div class="cell small-12">
-		<?=$pagination?>
+		<!-- <?=$pagination?> -->
 	</div>
 </div>
