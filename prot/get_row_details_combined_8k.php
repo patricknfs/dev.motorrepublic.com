@@ -23,7 +23,7 @@ $truncate = "TRUNCATE TABLE `team`.`rates_combined`";
 $result2 = $conn->query($truncate) or die(mysqli_error());
 
 $query = "SELECT 
-  mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`, `notes` AS `deal_notes`
+  mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`
   FROM
   (
     SELECT 
@@ -35,84 +35,84 @@ $query = "SELECT
   (
     (
       SELECT 
-        'arval' AS src, '24M' AS `term`, '8K' AS `mileage`, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+        'arval' AS src, '24M' AS `term`, '8K' AS `mileage`, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'ald' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_ald` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'hitachi' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_hitachi` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'leaseplan' AS src, '24M' AS `term`, '8K' AS `mileage`,`24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-        'arval' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+        'arval' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'ald' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_ald` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'hitachi' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_hitachi` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'leaseplan' AS src, '36M' AS `term`, '8K' AS `mileage`, `36_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-        'arval' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+        'arval' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `cap_id`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'ald' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `cap_id`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_ald` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `cap_id`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'hitachi' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `cap_id`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_hitachi` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `cap_id`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `deal_notes` AS `notes`, `deal_notes` AS `notes`
+      'leaseplan' AS src, '48M' AS `term`, '8K' AS `mileage`, `48_8K_PA_rental_m` AS rent, `cap_id` AS `cap_id`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
