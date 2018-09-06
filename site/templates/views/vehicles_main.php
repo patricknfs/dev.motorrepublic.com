@@ -20,11 +20,11 @@
           'upscaling' => false       
         ); 
         ?>
-			<!-- <a href="<?= $vehicle->url ?>"><img src="<?= $vehicle->images->first()->width(330,$options)->url ?>" itemprop="image"></a> -->
+		
 			<div class="prod_panel callout">
 				<h6 class="text-center" itemprop="name">
 					<?php
-					 	// echo $vehicle->title;
+					 	
 					?>
 				</h6>
 			</div>
