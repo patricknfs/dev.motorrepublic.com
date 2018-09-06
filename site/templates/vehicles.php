@@ -1,13 +1,9 @@
 <?php
 // vehicles.php
-$type = $page->name;
-// echo $type;
 
-$selector = "template=fabric,collection=" . $type;
-// echo $selector;
-$products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
+// $products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
 
-$pagination = $products->renderPager(array(
+// $pagination = $products->renderPager(array(
   'nextItemLabel' => "Next",
   'previousItemLabel' => "Prev",
   'listMarkup' => "<ul class='MarkupPagerNav pagination text-center'role='navigation' aria-label='Pagination'>{out}</ul>",
