@@ -9,11 +9,11 @@
 		<?=$pagination?>
 	</div>
 </div>
-<div class="row">
+<div class="grid-x">
 	<?php
-	foreach($products AS $product) {
+	foreach($result AS $vehicle) {
 	    ?>
-	    <div class="small-6 medium-3 columns" itemscope itemtype="http://schema.org/Product">
+	    <div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
 	    	<?php
 	    	$options = array(
           'quality' => 80,
@@ -34,8 +34,8 @@
 	?>
 	<div class="clearer">&nbsp</div>
 </div>
-<div class="row">
-	<div class="small-12 columns">
+<div class="grid-x">
+	<div class="cell small-12">
 		<?=$pagination?>
 	</div>
 </div>
