@@ -18,10 +18,6 @@ $query = "SELECT * FROM team.vehicles";
 // echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
 
-// iterate over every row
-$row = 1;
-
-
 ob_start();
 include('views/vehicles_main.php');
 $page->main = ob_get_clean();

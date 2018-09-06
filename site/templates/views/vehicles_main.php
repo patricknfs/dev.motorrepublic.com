@@ -2,7 +2,7 @@
 	<div class="cell small-12">
 		<div class="callout text-center">
 			<h3><?=$page->title?></h3>
-			<?=$page->body_no_editor?>
+			<!-- <?=$page->body_no_editor?> -->
 		</div>
 	</div>
 	<div class="cell small-12">
