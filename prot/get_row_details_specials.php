@@ -12,8 +12,13 @@ $row = 1;
 
 $form = $forms->get('specials_upload');
 
-$entries = array();
-foreach($form->entries()->find("sort=created") as $entry) {
+// $entries = array();
+// foreach($form->entries()->find("sort=created") as $entry) {
+//   $entries[] = $entry;
+// }
+
+$entries = $forms->get('myForm')->entries()->find('sort=id');
+foreach($entries as $entry) {
   $entries[] = $entry;
 }
 
