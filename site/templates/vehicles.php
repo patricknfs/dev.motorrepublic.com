@@ -9,12 +9,12 @@ $selector = "template=fabric,collection=" . $type;
 $products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
 
 $pagination = $products->renderPager(array(
-    'nextItemLabel' => "Next",
-    'previousItemLabel' => "Prev",
-    'listMarkup' => "<ul class='MarkupPagerNav pagination text-center'role='navigation' aria-label='Pagination'>{out}</ul>",
-    'currentItemClass' => "current",
-    'itemMarkup' => "<li class='{class}'>{out}</li>",
-    'linkMarkup' => "<a href='{url}'><span>{out}</span></a>"  
+  'nextItemLabel' => "Next",
+  'previousItemLabel' => "Prev",
+  'listMarkup' => "<ul class='MarkupPagerNav pagination text-center'role='navigation' aria-label='Pagination'>{out}</ul>",
+  'currentItemClass' => "current",
+  'itemMarkup' => "<li class='{class}'>{out}</li>",
+  'linkMarkup' => "<a href='{url}'><span>{out}</span></a>"  
 ));
 ?>
 <div class="grid-x">
