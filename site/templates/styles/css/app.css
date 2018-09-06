@@ -7979,6 +7979,7 @@ section#block_one {
 
 section#block_two {
   background: url(/site/assets/images/tesla_1900.jpg) no-repeat center center fixed;
+  background-size: contain;
   min-width: 100vw;
   padding-top: 2em;
   padding-bottom: 2em;
