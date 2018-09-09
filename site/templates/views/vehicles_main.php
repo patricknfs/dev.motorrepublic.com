@@ -11,7 +11,7 @@
 </div>
 <div class="grid-x">
 	<?php
-	print_r($result);
+	var_dump($result);
 	foreach($result AS $vehicle) {
 		?>
 		<div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
