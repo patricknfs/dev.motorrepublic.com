@@ -49,8 +49,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="grid-x grid-padding-x small-up-2 medium-up-3">
     <div class="cell">
       <div class="card">
         <img src="assets/img/generic/rectangle-1.jpg">
