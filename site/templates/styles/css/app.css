@@ -7997,6 +7997,14 @@ section#block_two h1, section#block_two p {
   color: #fff;
 }
 
+#intro {
+  padding: 2em 0;
+}
+
+#intro h3 {
+  color: #fff;
+}
+
 footer {
   background-color: #222;
   padding-top: 2em;
