@@ -10,6 +10,7 @@
       <div class="cell small-4 medium-3">
         <h3><?php echo $page->title; ?></h3>
         <img src="<?=$page->profile_image->url?>" alt="<?=$page->profile_image->description?>" />
+        <h4><?=$page->franchisee_name?></h4>
         <p>Phone: <?=$page->franchisee_telno?></p>
         <p>Mobile: <?=$page->franchisee_mobno?></p>
         <p>Email: <?=$page->franchisee_email?></p>

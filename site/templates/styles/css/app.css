@@ -8001,9 +8001,13 @@ section#block_two h1, section#block_two p {
   padding: 2em 0;
 }
 
-#intro h3 {
+#intro h3, #intro h4 {
   color: #fff;
   text-shadow: 1px 1px #000;
+}
+
+#intro p {
+  color: #fff;
 }
 
 footer {
