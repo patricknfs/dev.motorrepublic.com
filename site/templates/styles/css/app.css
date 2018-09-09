@@ -4372,7 +4372,7 @@ select[multiple] {
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
-  background: #e6e6e6;
+  background: #cc1000;
 }
 
 .card-divider > :last-child {
