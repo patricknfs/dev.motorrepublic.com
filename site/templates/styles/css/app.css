@@ -8029,6 +8029,10 @@ section#block_two h1, section#block_two p {
   color: #cc1000;
 }
 
+#content {
+  padding-top: 2em;
+}
+
 footer {
   background-color: #222;
   padding-top: 2em;
