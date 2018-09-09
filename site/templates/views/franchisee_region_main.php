@@ -4,7 +4,7 @@
 <div class="grid-container">
   <div class="grid-x">
     <div class="cell">
-      <h4><?php echo $page->title; ?></h4>
+      <h3><?php echo $page->title; ?></h3>
       <?=$page->body?>
       </div>
   </div>
