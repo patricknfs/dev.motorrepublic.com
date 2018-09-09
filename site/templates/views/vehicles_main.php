@@ -11,16 +11,16 @@
 </div>
 <div class="grid-x">
 	<?php
+	print_r($result);
 	foreach($result AS $vehicle) {
-	    ?>
-	    <div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
-	    	<?php
-	    	$options = array(
-          'quality' => 80,
-          'upscaling' => false       
-        ); 
-        ?>
-			
+		?>
+		<div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
+			<?php
+			$options = array(
+				'quality' => 80,
+				'upscaling' => false       
+			); 
+			?>
 			<div class="prod_panel callout">
 				<h6 class="text-center" itemprop="name">
 					<?=$vehicle->manufacturer?> <?=$vehicle->model?>
