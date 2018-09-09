@@ -8010,6 +8010,10 @@ section#block_two h1, section#block_two p {
   color: #fff;
 }
 
+#intro img {
+  margin-bottom: 1em;
+}
+
 footer {
   background-color: #222;
   padding-top: 2em;
