@@ -1,7 +1,7 @@
 <?php
 // basic-page_main.php
 ?>
-<section id="intro" style="background: url(<?=$config->urls->assets?>images/banner_bg.jpg)">
+<section id="intro" style="background: url(<?=$config->urls->assets?>images/banner_bg.jpg); width: 100%;">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-8 medium-9">
