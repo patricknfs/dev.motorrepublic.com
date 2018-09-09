@@ -37,8 +37,11 @@
         <div class="card">
           <img src="assets/img/generic/rectangle-1.jpg">
           <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          <h4>BMW 440D</h4>
+            <p>This is a quick description.</p>
+          </div>
+          <div class="card-divider">
+            £240/mth 15k 3+25 profile 
           </div>
         </div>
       </div>
@@ -46,35 +49,48 @@
         <div class="card">
           <img src="assets/img/generic/rectangle-1.jpg">
           <div class="card-section">
-            <h4>This is a card.</h4>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          <h4>BMW 440D</h4>
+            <p>This is a quick description.</p>
+          </div>
+          <div class="card-divider">
+            £240/mth 15k 3+25 profile 
           </div>
         </div>
       </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a row of cards.</h4>
-          <p>This row of cards is embedded in an Flex Block Grid.</p>
+      <div class="cell">
+        <div class="card">
+          <img src="assets/img/generic/rectangle-1.jpg">
+          <div class="card-section">
+          <h4>BMW 440D</h4>
+            <p>This is a quick description.</p>
+          </div>
+          <div class="card-divider">
+            £240/mth 15k 3+25 profile 
+          </div>
         </div>
       </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      <div class="cell">
+        <div class="card">
+          <img src="assets/img/generic/rectangle-1.jpg">
+          <div class="card-section">
+          <h4>BMW 440D</h4>
+            <p>This is a quick description.</p>
+          </div>
+          <div class="card-divider">
+            £240/mth 15k 3+25 profile 
+          </div>
         </div>
       </div>
-    </div>
-    <div class="cell">
-      <div class="card">
-        <img src="assets/img/generic/rectangle-1.jpg">
-        <div class="card-section">
-          <h4>This is a card.</h4>
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      <div class="cell">
+        <div class="card">
+          <img src="assets/img/generic/rectangle-1.jpg">
+          <div class="card-section">
+          <h4>BMW 440D</h4>
+            <p>This is a quick description.</p>
+          </div>
+          <div class="card-divider">
+            £240/mth 15k 3+25 profile 
+          </div>
         </div>
       </div>
     </div>
