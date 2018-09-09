@@ -8015,6 +8015,14 @@ section#block_two h1, section#block_two p {
   margin-bottom: 1em;
 }
 
+#intro a {
+  color: #fff;
+}
+
+#intro a:hover {
+  color: #cc1000;
+}
+
 footer {
   background-color: #222;
   padding-top: 2em;
