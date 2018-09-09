@@ -16,7 +16,21 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 $query = "SELECT * FROM `team`.`vehicles` LIMIT 12";
 // echo $query; 
-$result = $conn->query($query) or die(mysqli_error($conn));
+// $result = $conn->query($query) or die(mysqli_error($conn));
+
+$result = $conn->query($query);
+    if (!$result)
+    {
+     ... 
+    }
+    else if (is_object($result))
+    {
+        $sqlRowCount = $result->num_rows;
+    }
+    else
+    {
+        $sqlRowCount = 0;
+    }
 
 ob_start();
 include('views/vehicles_main.php');
