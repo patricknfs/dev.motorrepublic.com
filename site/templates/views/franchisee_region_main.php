@@ -13,7 +13,7 @@
         <h4><?=$page->franchisee_name?></h4>
         <p>Phone: <?=$page->franchisee_telno?></p>
         <p>Mobile: <?=$page->franchisee_mobno?></p>
-        <p><a href="mail:<?=$page->franchisee_email?>">Email: <?=$page->franchisee_email?></a></p>
+        <p><a href="mailto:<?=$page->franchisee_email?>">Email: <?=$page->franchisee_email?></a></p>
         </div>
     </div>
   </div>
