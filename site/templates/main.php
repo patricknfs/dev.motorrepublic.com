@@ -132,7 +132,7 @@ ERROR_REPORTING(E_ALL);
               <p>Only regulated business will fall under the jurisdiction of the Financial Conduct Authority.</p>
             </div>
             <div class="cell small-12 medium-2">
-              <img src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
+              <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
             </div>
           </div>
         </div>
