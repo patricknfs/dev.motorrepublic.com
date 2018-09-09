@@ -11,21 +11,6 @@
 </div>
 <div class="grid-x">
 	<?php
-	$result = $conn->query($query);
-	if (!$result)
-	{
-	 echo "sorry no results";
-	}
-	else if (is_object($result))
-	{
-			$sqlRowCount = $result->num_rows;
-			echo "row count is: " .  $sqlRowCount;
-	}
-	else
-	{
-			$sqlRowCount = 0;
-			echo "row count is: " . $sqlRowCount;
-	}
 	foreach($result AS $vehicle) {
 		?>
 		<div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
