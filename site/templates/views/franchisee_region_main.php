@@ -3,7 +3,7 @@
 ?>
 <div class="grid-container">
   <div class="grid-x">
-    <div class="cell">
+    <div class="cell small-6 medium-4">
       <h3><?php echo $page->title; ?></h3>
       <img src="<?=$page->profile_image->url?>" alt="<?=$page->profile_image->description?>" />
       <?=$page->body?>
