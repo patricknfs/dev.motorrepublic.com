@@ -1,5 +1,5 @@
 #!/usr/bin/php
-<?php namespace ProcessWire;
+<?php
 // get_row_details_specials.php
 // print_r($_GET);
 // header('Content-type: application/json; charset=utf-8');
