@@ -8008,6 +8008,7 @@ section#block_two h1, section#block_two p {
 
 #intro p {
   color: #fff;
+  text-shadow: 0.5px 0.5px #000;
 }
 
 #intro img {
