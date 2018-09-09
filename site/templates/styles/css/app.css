@@ -7883,6 +7883,10 @@ a.thumbnail image {
   animation-delay: 700ms !important;
 }
 
+#logorow {
+  background-color: #fff;
+}
+
 #logoimg {
   width: 16em;
   margin: 0.7em 0 0.5em 2.4em;

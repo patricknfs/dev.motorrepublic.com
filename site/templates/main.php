@@ -38,7 +38,7 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">
-      <div class="grid-x">
+      <div id="logorow" class="grid-x">
         <div class="cell" id="logoimg">
           <img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" />
         </div> 
