@@ -7883,6 +7883,12 @@ a.thumbnail image {
   animation-delay: 700ms !important;
 }
 
+@media screen and (max-width: 39.9375em) {
+  nav {
+    z-index: 5;
+  }
+}
+
 .sticky {
   z-index: 5;
 }
