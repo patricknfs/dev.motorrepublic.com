@@ -36,19 +36,19 @@ ERROR_REPORTING(E_ALL);
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
   </head>
-  <body>
-    <header>
+  <body  data-sticky-container>
+    <header data-sticky data-margin-top="0">
       <div class="grid-x">
         <div class="cell" id="logoimg">
           <img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" />
         </div> 
       </div>
-      <nav role="navigation" data-sticky-container>
+      <nav role="navigation">
         <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle></button>
           <div class="title-bar-title">Menu</div>
         </div>
-        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out"  data-sticky data-margin-top="0">
+        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
           <div class="top-bar-left">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
