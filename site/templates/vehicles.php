@@ -21,7 +21,7 @@ $query = "SELECT * FROM `team`.`vehicles` LIMIT 12";
 $result = $conn->query($query);
     if (!$result)
     {
-     ... 
+     echo "sorry no results";
     }
     else if (is_object($result))
     {
