@@ -7910,6 +7910,7 @@ header {
 #header_tel {
   padding-top: 0.3em;
   text-align: right;
+  padding-right: 3em;
 }
 
 .nav_link {
