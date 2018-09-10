@@ -41,7 +41,7 @@
 				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
 			</div>
 			<div class="cell small-12 medium-4">
-				<h3>Regional Focus?</h3>
+				<h3>Regional Strength?</h3>
 				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 	<div class="grid-container">
 		<div class="grid-x">
 			<div class="cell small-12 medium-6">
-				<h1>Yeah, and if you were the pope they'd be all</h1>
+				<h1>Focus on the Tesla phenomenon</h1>
 				<p>It's a T. It goes "tuh". We're rescuing ya. You've killed me! Oh, you've killed me! I had more, but you go ahead.</p>
 				<p>When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought "Why should I? " Then later, Leela made the film. <strong> But if I did make it, you can bet there would have been more topless women on motorcycles.</strong> <em> Roll film!</em> Why would a robot need to drink?</p>
 			</div>
