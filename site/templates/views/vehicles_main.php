@@ -13,7 +13,7 @@
 	<?php
 	foreach($result AS $vehicle) {
 		$rates_query = "SELECT `rental` FROM `team`.`rates_combined` WHERE `cap_id` = " . $vehicle['cap_id'] . " AND term = '24M' AND `mileage` = '8K' ORDER BY `rental` ASC LIMIT 1";
-		$rental = $conn->query($rates_query) or die(mysqli_error($conn);
+		$rental = $conn->query($rates_query) or die(mysqli_error($conn));
 		// print_r($vehicle);
 		?>
 		<div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
