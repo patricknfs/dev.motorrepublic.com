@@ -7,30 +7,27 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid-x">
+	<div class="grid-x grid-padding-x small-up-2 medium-up-3">
 		<?php
 		foreach($result AS $vehicle) {
+			$options = array(
+				'quality' => 80,
+				'upscaling' => false       
+			); 
 			?>
-			<div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
-				<?php
-				$options = array(
-					'quality' => 80,
-					'upscaling' => false       
-				); 
-				?>
-				<div>
-					<?=$vehicle['cap_id']?>
-					<h6>
-						<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
-					</h6>
-					<p><?=$vehicle['descr']?></p>
-					<h4><?=$vehicle['rental']?></h4>
+			<div class="cell">
+				<div class="card">
+				<?=$vehicle['cap_id']?>
+				<h6>
+					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
+				</h6>
+				<p><?=$vehicle['descr']?></p>
+				<h4><?=$vehicle['rental']?></h4>
 				</div>
 			</div>
-			<?php
+		<?php
 		}
 		?>
-		<div class="clearer">&nbsp</div>
 	</div>
 	<div class="grid-x">
 		<div class="cell small-12">
