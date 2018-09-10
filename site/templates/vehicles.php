@@ -16,10 +16,10 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 print_r($_POST);
 if( isset($_POST['manufacturer']) ) {
-  $manuf = filter_var($POST['manufacturer'], FILTER_SANITIZE_STRING);
-  $model = filter_var($POST['model'], FILTER_SANITIZE_STRING);
-  $mileage = filter_var($POST['mileage'], FILTER_SANITIZE_STRING);
-  $months = filter_var($POST['months'], FILTER_SANITIZE_STRING);
+  $manuf = filter_var($_POST['manufacturer'], FILTER_SANITIZE_STRING);
+  $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
+  $mileage = filter_var($_POST['mileage'], FILTER_SANITIZE_STRING);
+  $months = filter_var($_POST['months'], FILTER_SANITIZE_STRING);
   $query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` = '" . $model . "' AND `term` = '" . $months . "' AND `mileage` = '" . $mileage . "'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
 }
 else {
