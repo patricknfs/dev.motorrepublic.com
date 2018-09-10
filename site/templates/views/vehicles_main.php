@@ -7,7 +7,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="grid-x grid-padding-x small-up-2 medium-up-3">
+	<div class="grid-x grid-padding-x small-up-2 medium-up-4">
 		<?php
 		foreach($result AS $vehicle) {
 			$options = array(
