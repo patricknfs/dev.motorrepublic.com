@@ -12,6 +12,8 @@
 <div class="grid-x">
 	<?php
 	foreach($result AS $vehicle) {
+		$rates_query = "SELECT `rental` FROM `team`.`rates_combined` WHERE `cap_id` = " . $vehicle['cap_id'] . " AND term = '24M' AND `mileage` = '8K' ORDER BY `rental` ASC LIMIT 1";
+		$rental = $conn->rates_query or die(mysqli_error($conn);
 		// print_r($vehicle);
 		?>
 		<div class="cell small-6 medium-3" itemscope itemtype="http://schema.org/Product">
@@ -23,7 +25,7 @@
 			?>
 			<div class="prod_panel callout">
 				<h6 class="text-center" itemprop="name">
-					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
+					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?><br /><?=$rental?>
 				</h6>
 			</div>
 		</div>
