@@ -14,7 +14,7 @@
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
-$query = "SELECT * FROM `team`.`rates_combined` WHERE term = '24M' AND `mileage` = '8K'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
+$query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE term = '24M' AND `mileage` = '8K'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
 // echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
 
