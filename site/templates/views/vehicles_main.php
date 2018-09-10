@@ -2,7 +2,7 @@
 	<div class="grid-x">
 		<div class="cell small-12">
 			<div class="text-center">
-				<h3><?=$page->title?></h3>
+				<!-- <h3><?=$page->title?></h3> -->
 				<?php echo $forms->embed('vehicle_power_search'); ?>
 			</div>
 		</div>
