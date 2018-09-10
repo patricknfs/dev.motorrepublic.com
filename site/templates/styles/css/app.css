@@ -7907,6 +7907,10 @@ header {
   float: left;
 }
 
+#header_tel {
+  padding-top: 0.3em;
+}
+
 .nav_link {
   color: #fff;
 }
