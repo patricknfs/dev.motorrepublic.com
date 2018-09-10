@@ -1,13 +1,9 @@
 <div class="grid-container">
 	<div class="grid-x">
 		<div class="cell small-12">
-			<div class="callout text-center">
+			<div class="text-center">
 				<h3><?=$page->title?></h3>
-				
 			</div>
-		</div>
-		<div class="cell small-12">
-			
 		</div>
 	</div>
 	<div class="grid-x">
