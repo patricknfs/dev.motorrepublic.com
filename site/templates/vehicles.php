@@ -25,7 +25,7 @@ else {
   $query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE `term` = '24M' AND `mileage` = '8K'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
 }
 
-// echo $query; 
+echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
 
 ob_start();
