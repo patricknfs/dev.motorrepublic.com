@@ -7909,6 +7909,7 @@ header {
 
 #header_tel {
   padding-top: 0.3em;
+  text-align: right;
 }
 
 .nav_link {
