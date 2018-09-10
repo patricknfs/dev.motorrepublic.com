@@ -17,12 +17,14 @@
 			?>
 			<div class="cell">
 				<div class="card">
-				<!-- <?=$vehicle['cap_id']?> -->
-				<h6>
-					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
-				</h6>
-				<p><?=$vehicle['descr']?></p>
-				<h4><?=$vehicle['rental']?></h4>
+					<!-- <?=$vehicle['cap_id']?> -->
+					<div class="card-section">
+					<h6>
+						<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
+					</h6>
+					<p><?=$vehicle['descr']?></p>
+					<h4><?=$vehicle['rental']?></h4>
+					</div>
 				</div>
 			</div>
 		<?php
