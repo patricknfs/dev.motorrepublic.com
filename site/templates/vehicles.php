@@ -14,7 +14,7 @@
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
-print_r($_POST);
+// print_r($_POST);
 if( isset($_POST['manufacturer']) ) {
   $manuf = filter_var($_POST['manufacturer'], FILTER_SANITIZE_STRING);
   $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
