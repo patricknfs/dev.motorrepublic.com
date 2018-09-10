@@ -43,7 +43,7 @@ ERROR_REPORTING(E_ALL);
           <img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" />
         </div>
         <div class="cell small-12 medium-3">
-          <h2>Call: 0121 45 45 645</h2>
+          <h3>Call: 0121 45 45 645</h3>
         </div>
       </div>
       <nav role="navigation">
