@@ -24,7 +24,7 @@
 				<h6>
 					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 				</h6>
-				<p><?=$vehicle['description']?></p>
+				<p><?=$vehicle['descr']?></p>
 				<h4><?=$vehicle['rental']?></h4>
 			</div>
 		</div>
