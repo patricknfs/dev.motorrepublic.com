@@ -14,7 +14,7 @@
 				'quality' => 80,
 				'upscaling' => false       
 			); 
-			$rental = (($vehicle['rental'] * $vehicle['months']) + 300) / $vehicle['months'];
+			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			?>
 			<div class="cell">
 				<div class="card">
