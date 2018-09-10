@@ -12,7 +12,7 @@
 <div class="grid-x">
 	<?php
 	foreach($result AS $vehicle) {
-		$rental = $mysqli->query("SELECT `rental` FROM `team`.`rates_combined` WHERE `cap_id` = " . $vehicle['cap_id'] . " AND term = '24M' AND `mileage` = '8K' ORDER BY `rental` ASC LIMIT 1")->fetch_object()->rental;
+		$rental = $conn->query("SELECT `rental` FROM `team`.`rates_combined` WHERE `cap_id` = " . $vehicle['cap_id'] . " AND term = '24M' AND `mileage` = '8K' ORDER BY `rental` ASC LIMIT 1")->fetch_object()->rental;
 		// $rates_query = "SELECT `rental` FROM `team`.`rates_combined` WHERE `cap_id` = " . $vehicle['cap_id'] . " AND term = '24M' AND `mileage` = '8K' ORDER BY `rental` ASC LIMIT 1";
 		// $rates_result = $conn->query($rates_query) or die(mysqli_error($conn));
 		// $r = $rates_result->fetch_assoc();
