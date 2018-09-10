@@ -17,7 +17,7 @@
 			?>
 			<div class="cell">
 				<div class="card">
-				<?=$vehicle['cap_id']?>
+				<!-- <?=$vehicle['cap_id']?> -->
 				<h6>
 					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 				</h6>
