@@ -22,9 +22,9 @@ if( isset($_POST['manufacturer']) ) {
   $months = filter_var($_POST['months'], FILTER_SANITIZE_STRING);
   $query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $model . "%' AND `term` = '" . $months . "' AND `mileage` = '" . $mileage . "'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
 }
-else {
-  $query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE `term` = '24M' AND `mileage` = '8K'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
-}
+// else {
+//   $query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE `term` = '24M' AND `mileage` = '8K'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
+// }
 
 echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
