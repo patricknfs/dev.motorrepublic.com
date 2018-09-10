@@ -21,6 +21,7 @@
 			); 
 			?>
 			<div>
+				<?=$vehicle['cap_id']?>
 				<h6>
 					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 				</h6>
