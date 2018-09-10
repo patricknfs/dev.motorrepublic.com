@@ -14,6 +14,7 @@
 				'quality' => 80,
 				'upscaling' => false       
 			); 
+			$rental = (($vehicle['rental'] * $vehicle['months']) + 300) / $vehicle['months'];
 			?>
 			<div class="cell">
 				<div class="card">
@@ -23,7 +24,7 @@
 						<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 					</h6>
 					<p><?=$vehicle['descr']?></p>
-					<h4><?=$vehicle['rental']?></h4>
+					<h4><?=$rental?></h4>
 					</div>
 				</div>
 			</div>
