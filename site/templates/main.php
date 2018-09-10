@@ -40,7 +40,7 @@ ERROR_REPORTING(E_ALL);
     <header data-sticky data-margin-top="0">
       <div id="logorow" class="grid-x align-justify">
         <div class="cell small-12 medium-3" id="logoimg">
-          <img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" />
+          <a href="/"><img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" /></a>
         </div>
         <div class="cell small-12 medium-3"id="header_tel">
           <h3>Call: 0121 45 45 645</h3>
