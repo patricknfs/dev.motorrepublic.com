@@ -20,7 +20,7 @@
 </section>
 <section id="content">
   <div class="grid-container">
-    <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+    <div class="grid-x grid-padding-x small-up-2 medium-up-4">
       <div class="cell">
         <div class="card">
           <img src="assets/img/generic/rectangle-1.jpg">
