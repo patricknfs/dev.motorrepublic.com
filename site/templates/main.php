@@ -38,10 +38,13 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">
-      <div id="logorow" class="grid-x">
-        <div class="cell" id="logoimg">
+      <div id="logorow" class="grid-x align-justify">
+        <div class="cell small-12 medium-3" id="logoimg">
           <img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" />
-        </div> 
+        </div>
+        <div class="cell small-12 medium-3">
+          <h2>Call: 0121 45 45 645</h2>
+        </div>
       </div>
       <nav role="navigation">
         <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
