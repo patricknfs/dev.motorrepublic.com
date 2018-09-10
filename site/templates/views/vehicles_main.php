@@ -23,7 +23,7 @@
 			?>
 			<div class="prod_panel callout">
 				<h6 class="text-center" itemprop="name">
-					<?=$vehicle->manufacturer?> <?=$vehicle->model?>
+					<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 				</h6>
 			</div>
 		</div>
