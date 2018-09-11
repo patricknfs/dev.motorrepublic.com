@@ -18,11 +18,13 @@
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
 			$imagefile = $vehicle['cap_id'];
 			// Get cURL resource
-			// $ch = curl_init();
-			// curl_setopt($ch, CURLOPT_URL, "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . strtoupper($hashcode) . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=");
+			$headers[] = 'Accept: image/gif, image/x-bitmap, image/jpeg, image/pjpeg';              
+			$headers[] = 'Connection: Keep-Alive';         
+			$headers[] = 'Content-type: application/x-www-form-urlencoded;charset=UTF-8';
 			function gets($url){
 				$userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36';
 				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
 				curl_setopt($ch, CURLOPT_HEADER, 0);
 				curl_setopt($ch, CURLOPT_VERBOSE, 0);
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -33,7 +35,7 @@
 				return $output;
 		}
 		$img = "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . strtoupper($hashcode) . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=";
-		header('Content-type: image/jpeg');
+		// header('Content-type: image/jpeg');
 		echo gets($img);
 			?>
 			<div class="cell">
