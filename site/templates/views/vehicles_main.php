@@ -23,6 +23,7 @@
 			curl_setopt_array($curl, array(
 				CURLOPT_URL => "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . strtoupper($hashcode) . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=",
 				CURLOPT_RETURNTRANSFER => 1,
+				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.91 Safari/537.36 OPR/27.0.1689.54')
 			));
 			// Send the request & save response to $resp
 			$rawdata = curl_exec($curl);
