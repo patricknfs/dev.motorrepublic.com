@@ -21,7 +21,7 @@
 			// Set some options - we are passing in a useragent too here
 			curl_setopt_array($curl, array(
 					CURLOPT_RETURNTRANSFER => 1,
-					CURLOPT_URL => "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . $hashcode . "=CAR&CAPID=64851&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=",
+					CURLOPT_URL => "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . $hashcode . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=",
 					CURLOPT_USERAGENT => 'User Agent X'
 			));
 			// Send the request & save response to $resp
