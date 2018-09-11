@@ -21,6 +21,7 @@
 			$headers[] = 'Accept: image/gif, image/x-bitmap, image/jpeg, image/pjpeg';              
 			$headers[] = 'Connection: Keep-Alive';         
 			$headers[] = 'Content-type: application/x-www-form-urlencoded;charset=UTF-8';
+			print_r($headers);
 			function gets($url){
 				$userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36';
 				$ch = curl_init();
