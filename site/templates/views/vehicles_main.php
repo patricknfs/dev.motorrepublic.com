@@ -17,7 +17,7 @@
 			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			?>
 			<div class="cell">
-				<a href="<?=$config->urls->templates?>vehicle.php">
+				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['id']?>">
 					<div class="card">
 						<!-- <?=$vehicle['cap_id']?> -->
 						<img src="https://via.placeholder.com/500x500">
