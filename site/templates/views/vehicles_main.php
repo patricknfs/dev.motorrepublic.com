@@ -18,7 +18,7 @@
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
 			$imagefile = $vehicle['cap_id'];
 			// Get cURL resource
-			$curl = curl_init();
+			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
