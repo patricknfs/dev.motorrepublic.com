@@ -20,7 +20,7 @@
 			$headers[] = 'Accept: image/gif, image/x-bitmap, image/jpeg, image/pjpeg';              
 			$headers[] = 'Connection: Keep-Alive';         
 			$headers[] = 'Content-type: application/x-www-form-urlencoded;charset=UTF-8';   
-			$userAgent = 'php';
+			$useragent = 'php';
 			// Get cURL resource
 			$curl = curl_init();
 			// Set some options - we are passing in a useragent too here
