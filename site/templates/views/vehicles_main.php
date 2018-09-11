@@ -22,11 +22,12 @@
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
-$rawdata=curl_exec ($ch);
+$output = curl_exec ($ch);
 curl_close ($ch);
-$fp = fopen($imagefile . ".jpg",'w');
-fwrite($fp, $rawdata);
-fclose($fp);
+echo $output;
+// $fp = fopen($imagefile . ".jpg",'w');
+// fwrite($fp, $rawdata);
+// fclose($fp);
 
 readfile($imagefile . ".jpg");
 			?>
