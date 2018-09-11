@@ -34,7 +34,7 @@
 					CURLOPT_HEADER => 0
 			));
 			// Send the request & save response to $resp
-			$image = curl_exec($curl);
+			$rawdata = curl_exec($curl);
 			// Close request to clear up some resources
 			// print_r($image);
 			curl_close($curl);
