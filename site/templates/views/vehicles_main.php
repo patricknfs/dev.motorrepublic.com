@@ -19,18 +19,16 @@
 			$imagefile = $vehicle['cap_id'];
 			// Get cURL resource
 			$curl = curl_init();
-			// Set some options - we are passing in a useragent too here
-			curl_setopt_array($curl, array(
-				CURLOPT_URL => "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . strtoupper($hashcode) . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=",
-				CURLOPT_RETURNTRANSFER => 1,
-				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.91 Safari/537.36 OPR/27.0.1689.54'
-			));
-			// Send the request & save response to $resp
-			$rawdata = curl_exec($curl);
-			// Close request to clear up some resources
-			// print_r($image);
-			curl_close($curl);
-			$fp = file_put_contents($imagefile . ".jpg",$rawdata);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
+$rawdata=curl_exec ($ch);
+curl_close ($ch);
+$fp = fopen($imagefile . ".jpg",'w');
+fwrite($fp, $rawdata);
+fclose($fp);
+header ("Content-Type: image/jpg");
+readfile($imagefile . ".jpg");
 			?>
 			<div class="cell">
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
