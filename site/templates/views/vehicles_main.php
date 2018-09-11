@@ -22,12 +22,13 @@
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
+curl_setopt($ch, CURLOPT_HEADERS,"Content-Type: image/jpg");
 $rawdata=curl_exec ($ch);
 curl_close ($ch);
 $fp = fopen($imagefile . ".jpg",'w');
 fwrite($fp, $rawdata);
 fclose($fp);
-header ("Content-Type: image/jpg");
+
 readfile($imagefile . ".jpg");
 			?>
 			<div class="cell">
