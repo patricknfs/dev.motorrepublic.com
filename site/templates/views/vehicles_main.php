@@ -25,18 +25,13 @@
 			curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
 			$output = curl_exec ($ch);
 			curl_close ($ch);
-			echo $output;
-			// $fp = fopen($imagefile . ".jpg",'w');
-			// fwrite($fp, $rawdata);
-			// fclose($fp);
-
-			readfile($imagefile . ".jpg");
+			// echo $output;
 			?>
 			<div class="cell">
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
 						<!-- <?=$vehicle['cap_id']?> -->
-						<img src="<?=$imagefile . ".jpg"?>">
+						<img src="<?=$output?>">
 						<div class="card-section">
 							<h6>
 								<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
