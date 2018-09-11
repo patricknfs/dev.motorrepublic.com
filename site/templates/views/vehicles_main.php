@@ -16,7 +16,7 @@
 			); 
 			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
-			echo $hashcode;
+			// echo $hashcode;
 			// Get cURL resource
 			$curl = curl_init();
 			// Set some options - we are passing in a useragent too here
@@ -28,7 +28,7 @@
 			// Send the request & save response to $resp
 			$image = curl_exec($curl);
 			// Close request to clear up some resources
-			print_r($image);
+			// print_r($image);
 			curl_close($curl);
 			?>
 			<div class="cell">
