@@ -28,7 +28,7 @@
 							<p><?=$vehicle['descr']?></p>
 						</div>
 						<div class="card-divider">
-							<h4>&#stg;<?=$rental?></h4>
+							<h4>£<?=$rental?></h4>
 						</div>
 					</div>
 				</a>
