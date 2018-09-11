@@ -22,7 +22,6 @@
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
-curl_setopt($ch, CURLOPT_HEADERS,"Content-Type: image/jpg");
 $rawdata=curl_exec ($ch);
 curl_close ($ch);
 $fp = fopen($imagefile . ".jpg",'w');
@@ -35,7 +34,7 @@ readfile($imagefile . ".jpg");
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
 						<!-- <?=$vehicle['cap_id']?> -->
-						<img src="<?=$fp?>">
+						<img src="<?=$imagefile . ".jpg"?>">
 						<div class="card-section">
 							<h6>
 								<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
