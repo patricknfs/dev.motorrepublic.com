@@ -16,6 +16,7 @@
 			); 
 			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
+			$imagefile = $vehicle['cap_id'];
 			// header("Content-Type: image/jpeg");
 			$headers = array(
 				'Content-Type: image/jpeg'
@@ -37,12 +38,16 @@
 			// Close request to clear up some resources
 			// print_r($image);
 			curl_close($curl);
+
+			$fp = fopen($imagefile . ".jpg",'w');
+			fwrite($fp, $rawdata); 
+			fclose($fp);
 			?>
 			<div class="cell">
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
 						<!-- <?=$vehicle['cap_id']?> -->
-						<img src="<?=$image?>">
+						<img src="<?=$fp?>">
 						<div class="card-section">
 							<h6>
 								<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
