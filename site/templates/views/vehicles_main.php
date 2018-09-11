@@ -16,7 +16,7 @@
 			); 
 			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
-			header("Content-Type: image/jpeg");
+			// header("Content-Type: image/jpeg");
 			// echo $hashcode;
 			// Get cURL resource
 			$curl = curl_init();
