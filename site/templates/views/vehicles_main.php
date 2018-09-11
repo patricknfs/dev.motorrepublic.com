@@ -17,11 +17,15 @@
 			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
 			// header("Content-Type: image/jpeg");
+			$headers = array(
+				'Content-Type: image/jpeg'
+			);
 			// echo $hashcode;
 			// Get cURL resource
 			$curl = curl_init();
 			// Set some options - we are passing in a useragent too here
 			curl_setopt_array($curl, array(
+					CURLOPT_HTTPHEADER => $headers,
 					CURLOPT_RETURNTRANSFER => 1,
 					CURLOPT_URL => "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . strtoupper($hashcode) . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=",
 					CURLOPT_USERAGENT => 'User Agent X',
