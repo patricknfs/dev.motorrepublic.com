@@ -16,6 +16,7 @@
 			); 
 			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
+			echo $hashcode;
 			// Get cURL resource
 			$curl = curl_init();
 			// Set some options - we are passing in a useragent too here
