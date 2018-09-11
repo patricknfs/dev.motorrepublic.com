@@ -18,6 +18,7 @@
 			$hashcode = md5("173210NfS4JeCAR" . $vehicle['cap_id']);
 			$imagefile = $vehicle['cap_id'];
 			// Get cURL resource
+			$headers = array();
 			$headers[] = 'Accept: image/gif, image/x-bitmap, image/jpeg, image/pjpeg';              
 			$headers[] = 'Connection: Keep-Alive';         
 			$headers[] = 'Content-type: application/x-www-form-urlencoded;charset=UTF-8';
