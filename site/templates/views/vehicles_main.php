@@ -32,7 +32,8 @@
 				CURLOPT_TIMEOUT => 30,
 				CURLOPT_RETURNTRANSFER => 1,
 				CURLOPT_BINARYTRANSFER => 1,
-				CURLOPT_FOLLOWLOCATION => 1
+				CURLOPT_FOLLOWLOCATION => 1,
+				CURLOPT_SSL_VERIFYPEER => 0
 			));
 			// Send the request & save response to $resp
 			$rawdata = curl_exec($curl);
