@@ -9,8 +9,8 @@
 	</div>
 	<div class="grid-x grid-padding-x">
 		<?php
-		$bch = (($data['rental'] * $data['term'] + 300) / $data['term']);
-		$pch = ((($data['rental'] * $data['term']) + 300) / $data['term'])*1.2;
+		$bch = round((($data['rental'] * $data['term'] + 300) / $data['term']),2);
+		$pch = round(((($data['rental'] * $data['term']) + 300) / $data['term'])*1.2,2);
 		$hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
 		?>
 		<div class="cell small-12 medium-8">
@@ -22,10 +22,10 @@
 					<h3><?=$data['manufacturer']?> <?=$data['model']?></h3>
 					<p><?=$data['descr']?></p>
 					<hr>
-						<h6>Business Clients - *From <span class="price">£<?=round($bch, 2)?></span></h6>
-						<h6>Personal Clients - *From <span class="price">£<?=round($pch, 2)?></span></h6>
+						<h6>Business Clients - *From <span class="price">£<?=$bch?></span></h6>
+						<h6>Personal Clients - *From <span class="price">£<?=$pch?></span></h6>
 					<hr>
-						<small>*Based on an initial rental of £<?=$bch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$bch?></small>
+					<small>*Based on an initial rental of £<?=$bch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$bch?></small>
 				</div>
 			</div>
 		</div>
