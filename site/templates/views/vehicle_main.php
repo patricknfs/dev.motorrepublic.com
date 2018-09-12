@@ -19,9 +19,7 @@
 		<div class="cell small-12 medium-4">
 			<div class="card">
 				<div class="card-section">
-					<h6>
-						<?=$data['manufacturer']?> <?=$data['model']?>
-					</h6>
+					<h6><?=$data['manufacturer']?> <?=$data['model']?></h6>
 					<p><?=$data['descr']?></p>
 					<h6>Business Clients £<?=round($bch, 2)?></h6>
 					<h6>Personal Clients £<?=round($pch, 2)?></h6>
