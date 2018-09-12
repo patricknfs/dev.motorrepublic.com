@@ -14,7 +14,8 @@
 				'quality' => 80,
 				'upscaling' => false       
 			); 
-			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
+			$bch = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
+			$pch = ((($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'])*1.2;
 			$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 			?>
 			<div class="cell">
@@ -29,7 +30,10 @@
 							<p><?=$vehicle['descr']?></p>
 						</div>
 						<div class="card-divider">
-							<h4>£<?=$rental?></h4>
+							<h4>£<?=$bch?></h4>
+						</div>
+						<div class="card-divider">
+							<h4>£<?=$pch?></h4>
 						</div>
 					</div>
 				</a>
