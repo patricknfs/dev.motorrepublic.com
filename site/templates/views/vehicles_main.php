@@ -41,8 +41,8 @@
 			<div class="cell">
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
-						<!-- <?=$vehicle['cap_id']?> -->
-						<!-- <img src="<?=gets($img)?>"> -->
+						<?=gets($img)?>
+						// <!-- <img src="<?=gets($img)?>"> -->
 						<?=gets($img)?>
 						<div class="card-section">
 							<h6>
