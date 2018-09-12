@@ -15,14 +15,14 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 // print_r($_POST);
-if( isset($input->urlSegment1)) {
+if(isset($input->urlSegment1)) {
   $query = "SELECT *, min(rental) FROM `team`.`rates_combined` WHERE `cap_id` = " . $input->urlSegment1 . " LIMIT 1";
 }
 else {
   echo "<p>Vehicle not available. Please contact the team</p>";
 }
 
-echo $query;
+// echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
 
 ob_start();

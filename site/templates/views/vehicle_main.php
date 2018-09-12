@@ -16,9 +16,9 @@
 		<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$input->urlSegment1;?>&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=&VIEWPOINT=">
 		<div class="card-section">
 			<h6>
-				<?=$result->manufacturer?> <?=$result->model?>
+				<?=$result['manufacturer']?> <?=$result['model']?>
 			</h6>
-			<p><?=$vehicle['descr']?></p>
+			<p><?=$result['descr']?></p>
 		</div>
 		<div class="card-divider">
 		<h6>Business Clients £<?=$bch?></h6>
