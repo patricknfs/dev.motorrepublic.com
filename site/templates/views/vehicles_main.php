@@ -33,7 +33,7 @@
 							<h4>£<?=$bch?></h4>
 						</div>
 						<div class="card-divider">
-							<h4>£<?=$pch?></h4>
+							<h4>£<?=round($pch, 2)?></h4>
 						</div>
 					</div>
 				</a>
