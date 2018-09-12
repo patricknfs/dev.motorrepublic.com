@@ -39,7 +39,7 @@
 		}
 		$img = "https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=" . strtoupper($hashcode) . "&DB=CAR&CAPID=" . $vehicle['cap_id'] . "&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=test&VIEWPOINT=";
 		// header('Content-type: image/jpeg');
-		echo gets($img);
+		// echo gets($img);
 			?>
 			<div class="cell">
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
