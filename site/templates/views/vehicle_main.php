@@ -22,7 +22,7 @@
 		</div>
 		<div class="card-divider">
 		<h6>Business Clients £<?=$bch?></h6>
-							<h6>Personal Clients £<?=round($pch, 2)?></h6>
+		<h6>Personal Clients £<?=round($pch, 2)?></h6>
 		</div>
 	</div>
 	<div class="grid-x">
