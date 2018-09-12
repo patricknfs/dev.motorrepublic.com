@@ -8072,3 +8072,7 @@ footer #governance {
 .card-divider-2 {
   background-color: #cc1000;
 }
+
+.price {
+  color: #cc0000;
+}
