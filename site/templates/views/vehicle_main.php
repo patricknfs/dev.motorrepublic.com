@@ -26,7 +26,7 @@
 						<h6>Personal Clients - From <span class="price">£<?=$pch?></span> **</h6>
 					<hr>
 					<small>*Based on an initial rental of £<?=$bch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$bch?></small>
-					<small>*Based on an initial rental of £<?=$pch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$pch?></small>
+					<br /><small>*Based on an initial rental of £<?=$pch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$pch?></small>
 				</div>
 			</div>
 		</div>
