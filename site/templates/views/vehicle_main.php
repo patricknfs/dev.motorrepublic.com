@@ -21,8 +21,8 @@
 				<div class="card-section">
 					<h3><?=$data['manufacturer']?> <?=$data['model']?></h3>
 					<p><?=$data['descr']?></p>
-					<h6>Business Clients £<?=round($bch, 2)?></h6>
-					<h6>Personal Clients £<?=round($pch, 2)?></h6>
+					<h6>Business Clients <span class="price">£<?=round($bch, 2)?></span></h6>
+					<h6>Personal Clients <span class="price">£<?=round($pch, 2)?></span></h6>
 				</div>
 			</div>
 		</div>
