@@ -22,10 +22,11 @@
 					<h3><?=$data['manufacturer']?> <?=$data['model']?></h3>
 					<p><?=$data['descr']?></p>
 					<hr>
-						<h6>Business Clients - *From <span class="price">£<?=$bch?></span></h6>
-						<h6>Personal Clients - *From <span class="price">£<?=$pch?></span></h6>
+						<h6>Business Clients - From <span class="price">£<?=$bch?></span> *</h6>
+						<h6>Personal Clients - From <span class="price">£<?=$pch?></span> **</h6>
 					<hr>
 					<small>*Based on an initial rental of £<?=$bch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$bch?></small>
+					<small>*Based on an initial rental of £<?=$pch*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$pch?></small>
 				</div>
 			</div>
 		</div>
