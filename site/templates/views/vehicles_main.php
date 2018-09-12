@@ -32,7 +32,7 @@
 						<div class="card-divider">
 							<h4>£<?=$bch?></h4>
 						</div>
-						<div class="card-divider">
+						<div class="card-divider-2 card-divider">
 							<h4>£<?=round($pch, 2)?></h4>
 						</div>
 					</div>
