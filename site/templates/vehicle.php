@@ -24,6 +24,7 @@ else {
 
 // echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
+$data = $result->fetch_assoc();
 
 ob_start();
 include('views/vehicle_main.php');
