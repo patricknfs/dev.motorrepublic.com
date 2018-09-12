@@ -9,31 +9,21 @@
 	</div>
 	<div class="grid-x grid-padding-x small-up-2 medium-up-4">
 		<?php
-		foreach($result AS $vehicle) {
-			$options = array(
-				'quality' => 80,
-				'upscaling' => false       
-			); 
-			$rental = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
-			?>
-			<div class="cell">
-				<div class="card">
-					<!-- <?=$vehicle['cap_id']?> -->
-					<img src="https://via.placeholder.com/500x500">
-					<div class="card-section">
-						<h6>
-							<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
-						</h6>
-						<p><?=$vehicle['descr']?></p>
-					</div>
-					<div class="card-divider">
-						<h4><?=$rental?></h4>
-					</div>
-				</div>
-			</div>
-		<?php
-		}
+		$bch = (($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'];
+		$pch = ((($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'])*1.2;
+		$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 		?>
+		<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$input->urlSegment1;?>&DATE=2018/09/11&WIDTH=1024&HEIGHT=768&IMAGETEXT=&VIEWPOINT=">
+		<div class="card-section">
+			<h6>
+				<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
+			</h6>
+			<p><?=$vehicle['descr']?></p>
+		</div>
+		<div class="card-divider">
+		<h6>Business Clients £<?=$bch?></h6>
+							<h6>Personal Clients £<?=round($pch, 2)?></h6>
+		</div>
 	</div>
 	<div class="grid-x">
 		<div class="cell small-12">
