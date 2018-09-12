@@ -22,6 +22,7 @@
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($ch, CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_USERAGENT, $userAgent);
+			curl_setopt($ch, CURLOPT_ENCODING, '');
 			$output = curl_exec($ch);
 			curl_close($ch);
 			return $output;
