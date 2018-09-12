@@ -38,6 +38,9 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">
+      <div id="primenav" class="grid-x">
+        <small>cars</small> | <small>vans & lcv's</small>
+      </div>
       <div id="logorow" class="grid-x align-justify">
         <div class="cell small-12 medium-3" id="logoimg">
           <a href="/"><img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" /></a>

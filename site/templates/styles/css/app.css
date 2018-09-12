@@ -7887,6 +7887,10 @@ header {
   border-bottom: 3px solid #333;
 }
 
+#primenav {
+  background-color: #000;
+}
+
 @media screen and (max-width: 39.9375em) {
   nav {
     z-index: 5;
