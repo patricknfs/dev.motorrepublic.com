@@ -21,19 +21,16 @@
 			<div class="cell">
 				<a href="<?=$config->urls->templates?>vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
-						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
-						
 						<div class="card-section">
 							<h6>
 								<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 							</h6>
 							<p><?=$vehicle['descr']?></p>
 						</div>
-						<div class="card-divider">
-							<h4>£<?=$bch?></h4>
-						</div>
-						<div class="card-divider-2 card-divider">
-							<h4>£<?=round($pch, 2)?></h4>
+						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+						<div class="card-section">
+							<h6>£<?=$bch?></h6>
+							<h6>£<?=round($pch, 2)?></h6>
 						</div>
 					</div>
 				</a>
