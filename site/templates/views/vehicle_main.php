@@ -25,7 +25,7 @@
 						<h6>Business Clients - *From <span class="price">£<?=round($bch, 2)?></span></h6>
 						<h6>Personal Clients - *From <span class="price">£<?=round($pch, 2)?></span></h6>
 					<hr>
-						<small>*Based on an initial rental of £<?=$data['rental']*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of <?=$data['rental']?></small>
+						<small>*Based on an initial rental of £<?=$data['rental']*3?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$data['rental']?></small>
 				</div>
 			</div>
 		</div>
