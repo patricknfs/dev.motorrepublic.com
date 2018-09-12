@@ -22,7 +22,7 @@ else {
   echo "<p>Vehicle not available. Please contact the team</p>";
 }
 
-// echo $query;
+echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
 $data = $result->fetch_assoc();
 
