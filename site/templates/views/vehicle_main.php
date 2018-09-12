@@ -22,8 +22,8 @@
 					<h3><?=$data['manufacturer']?> <?=$data['model']?></h3>
 					<p><?=$data['descr']?></p>
 					<hr>
-					<h6>Business Clients <span class="price">£<?=round($bch, 2)?></span></h6>
-					<h6>Personal Clients <span class="price">£<?=round($pch, 2)?></span></h6>
+					<h6>Business Clients - From <span class="price">£<?=round($bch, 2)?>*</span></h6>
+					<h6>Personal Clients - From <span class="price">£<?=round($pch, 2)?>*</span></h6>
 				</div>
 			</div>
 		</div>
