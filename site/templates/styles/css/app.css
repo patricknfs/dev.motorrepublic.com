@@ -8073,6 +8073,10 @@ footer #governance {
   background-color: #cc1000;
 }
 
+.card-2 {
+  border: none;
+}
+
 .price {
   color: #cc0000;
 }
