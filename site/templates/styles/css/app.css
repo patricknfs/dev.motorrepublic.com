@@ -4354,7 +4354,7 @@ select[multiple] {
   -ms-flex-positive: 1;
       flex-grow: 1;
   margin-bottom: 1rem;
-  border: 1px solid #444444;
+  border: 1px solid #e6e6e6;
   border-radius: 0;
   background: #fefefe;
   box-shadow: none;
@@ -4372,7 +4372,7 @@ select[multiple] {
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
-  background: #e6e6e6;
+  background: #444444;
 }
 
 .card-divider > :last-child {
@@ -8064,4 +8064,8 @@ footer ul li {
 footer #governance {
   background-color: #000;
   padding-top: 2em;
+}
+
+.card-divider-2 {
+  background-color: #cc1000;
 }
