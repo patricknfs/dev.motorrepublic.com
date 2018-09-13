@@ -10,9 +10,9 @@
 	<div class="grid-x grid-padding-x">
 		<?php
 		// $rental = number_format((float)$data['rental'], 2, '.', '');
-		$bch = (($data['rental'] * $data['term'] + 300) / $data['term']);
+		$bch = ((($data['rental'] * $data['term']) + 300) / ($data['term']+2);
 
-		$pch = ((($data['rental']* $data['term']) + 300) / $data['term'])*1.2;
+		$pch = ((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2;
 		$hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
 		?>
 		<div class="cell small-12 medium-8">
@@ -29,7 +29,7 @@
 					<hr>
 					<small>* Based on an initial rental of £<?=number_format(($bch), 2, '.', ',')?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$bch?> and <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
 					<br /><small>** Based on an initial rental of £<?=number_format(($pch*3), 2, '.', ',')?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$pch?> and <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
-				</div>number_format($number, 2, '.', ',')
+				</div>
 			</div>
 		</div>
 	</div>
