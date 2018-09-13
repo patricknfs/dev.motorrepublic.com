@@ -39,7 +39,23 @@ ERROR_REPORTING(E_ALL);
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">
       <div id="primenav" class="grid-x">
-        <small>cars</small> | <small>vans & lcv's</small>
+        <div class="cell small-12 medium-6">
+          <small>cars</small> | <small>vans & lcv's</small>
+        </div>
+        <div class="cell small-12 medium-6">
+          <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="#"></a>
+            <a class="social-button twitter" href="#"></a>
+            <a class="social-button linkedin" href="#"></a>
+            <a class="social-button youtube" href="#"></a>
+            <a class="social-button instagram" href="#"></a>
+            <a class="social-button pinterest" href="#"></a>
+            <a class="social-button google-plus" href="#"></a>
+            <a class="social-button github" href="#"></a>
+            <a class="social-button tumblr" href="#"></a>
+          </div>
+        </div>
+        
       </div>
       <div id="logorow" class="grid-x align-justify">
         <div class="cell small-12 medium-3" id="logoimg">
