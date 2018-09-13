@@ -26,6 +26,14 @@ echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
 $data = $result->fetch_assoc();
 
+// $rental = number_format((float)$data['rental'], 2, '.', '');
+$bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)), 2, '.', ',');
+$pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2), 2, '.', ',');
+$bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2))*3), 2, '.', ',');
+$pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2)*3), 2, '.', ',');
+
+$hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
+
 ob_start();
 include('views/vehicle_main.php');
 $page->main = ob_get_clean();
