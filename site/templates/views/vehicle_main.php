@@ -28,7 +28,7 @@
 						<h6>Personal Clients - From <span class="price">£<?=$pch?></span> **</h6>
 					<hr>
 					<small>* Based on an initial rental of £<?=number_format((float)($bch*3), 2, '.', '')?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$bch?> and <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
-					<br /><small>** Based on an initial rental of £<?=number_format((float)($pch*3)), 2, '.', '')?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$pch?> and <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
+					<br /><small>** Based on an initial rental of £<?=number_format((float)($pch*3), 2, '.', '')?> followed by <?=str_replace("M", '', $data['term'])-1?> rentals of £<?=$pch?> and <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
 				</div>
 			</div>
 		</div>
