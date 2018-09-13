@@ -9,7 +9,7 @@
 	</div>
 	<div class="grid-x grid-padding-x">
 		<?php
-		$rental = number_format((float)$rental, 2, '.', '');
+		$rental = number_format((float)$data['rental'], 2, '.', '');
 		$bch = round((($rental * $data['term'] + 300) / $data['term']),2);
 
 		$pch = round(((($rental * $data['term']) + 300) / $data['term'])*1.2,2);
