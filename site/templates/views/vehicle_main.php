@@ -9,10 +9,10 @@
 	</div>
 	<div class="grid-x grid-padding-x">
 		<?php
-		$rental = number_format((float)$data['rental'], 2, '.', '');
-		$bch = (($rental * $data['term'] + 300) / $data['term']);
+		// $rental = number_format((float)$data['rental'], 2, '.', '');
+		$bch = (($data['rental'] * $data['term'] + 300) / $data['term']);
 
-		$pch = ((($rental * $data['term']) + 300) / $data['term'])*1.2;
+		$pch = ((($data['rental']* $data['term']) + 300) / $data['term'])*1.2;
 		$hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
 		?>
 		<div class="cell small-12 medium-8">
