@@ -22,7 +22,6 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 $truncate = "TRUNCATE TABLE `team`.`rates_combined`";
 $result2 = $conn->query($truncate) or die(mysqli_error());
 
-
 $query = "SELECT 
   mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`, `notes` AS `deal_notes`
   FROM
