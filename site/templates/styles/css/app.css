@@ -14,6 +14,20 @@
   }
 }
 
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.4.3
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+@media print, screen and (min-width: 40em) {
+  .reveal, .reveal.tiny, .reveal.small, .reveal.large {
+    right: auto;
+    left: auto;
+    margin: 0 auto;
+  }
+}
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -8125,16 +8139,16 @@ footer #governance {
   border-color: #3b5998;
 }
 
-.rounded-social-buttons .social-button.twitter {
+.rounded-social-buttons .social-button .twitter {
   background: #55acee;
 }
 
-.rounded-social-buttons .social-button.twitter:before {
+.rounded-social-buttons .social-button .twitter:before {
   font-family: "FontAwesome";
   content: "";
 }
 
-.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+.rounded-social-buttons .social-button .twitter:hover, .rounded-social-buttons .social-button .twitter:focus {
   color: #55acee;
   background: #fefefe;
   border-color: #55acee;
