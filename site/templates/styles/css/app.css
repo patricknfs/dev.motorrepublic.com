@@ -20,7 +20,6 @@
  */
 .fa,
 .fas,
-.user,
 .far,
 .fal,
 .fab,
@@ -34,7 +33,7 @@
   line-height: 1;
 }
 
-.user, .twitter {
+.twitter {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -138,7 +137,6 @@
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.fa-pull-left.user,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
@@ -148,7 +146,6 @@
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.fa-pull-right.user,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
@@ -13113,10 +13110,6 @@ footer #governance {
 
 .price {
   color: #cc0000;
-}
-
-.user:before {
-  content: "\f007";
 }
 
 .twitter:before {
