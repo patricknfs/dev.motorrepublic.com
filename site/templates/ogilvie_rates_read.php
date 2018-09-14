@@ -17,14 +17,9 @@ $row = 1;
 $csv = "inc/ogilvie_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // print_r($rawdata);
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
-    // $data = str_replace('£','',$data);
-    // $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
-      // $data[10] = str_replace(',','',$data[11]);
-      // $data[11] = str_replace(',','',$data[12]);
       switch($data[23]){
         case 8000:
         switch($data[22]){
