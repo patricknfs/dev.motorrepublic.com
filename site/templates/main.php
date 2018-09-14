@@ -46,13 +46,13 @@ ERROR_REPORTING(E_ALL);
           <div class="rounded-social-buttons">
             <a class="facebook" href="#"></a>
             <a class="twitter" href="#"></a>
-            <a class="social-button linkedin" href="#"></a>
-            <a class="social-button youtube" href="#"></a>
-            <a class="social-button instagram" href="#"></a>
-            <a class="social-button pinterest" href="#"></a>
-            <a class="social-button google-plus" href="#"></a>
-            <a class="social-button github" href="#"></a>
-            <a class="social-button tumblr" href="#"></a>
+            <a class="linkedin" href="#"></a>
+            <a class="youtube" href="#"></a>
+            <a class="instagram" href="#"></a>
+            <a class="pinterest" href="#"></a>
+            <a class="google-plus" href="#"></a>
+            <a class="github" href="#"></a>
+            <a class="tumblr" href="#"></a>
           </div>
         </div>
         
