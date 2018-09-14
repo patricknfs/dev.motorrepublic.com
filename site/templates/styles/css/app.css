@@ -23,6 +23,7 @@
 .far,
 .fal,
 .fab,
+.facebook,
 .twitter {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +34,7 @@
   line-height: 1;
 }
 
-.twitter {
+.facebook, .twitter {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -140,6 +141,7 @@
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
+.fa-pull-left.facebook,
 .fa-pull-left.twitter {
   margin-right: .3em;
 }
@@ -149,6 +151,7 @@
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
+.fa-pull-right.facebook,
 .fa-pull-right.twitter {
   margin-left: .3em;
 }
@@ -5041,7 +5044,7 @@ readers do not read off random characters that represent icons */
   src: url("../css/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../css/webfonts/fa-brands-400.woff2") format("woff2"), url("../css/webfonts/fa-brands-400.woff") format("woff"), url("../css/webfonts/fa-brands-400.ttf") format("truetype"), url("../css/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
-.fab, .twitter {
+.fab, .facebook, .twitter {
   font-family: 'Font Awesome 5 Brands';
 }
 
@@ -13112,16 +13115,16 @@ footer #governance {
   color: #cc0000;
 }
 
-.twitter {
-  color: #55acee;
+.facebook {
+  color: #3b5998;
 }
 
-.twitter:before {
+.facebook:before {
   content: "\f099";
 }
 
 .twitter {
-  color: #3b5998;
+  color: #55acee;
 }
 
 .twitter:before {
