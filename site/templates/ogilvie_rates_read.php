@@ -16,8 +16,8 @@ $result = mysqli_query($conn, $truncate);
 $row = 1;
 $csv = "inc/ogilvie_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
-  while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
-    $num = count($rawdata);
+  while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+    $num = count($data);
     // $data = preg_replace('/\s+/', '', $rawdata);
     switch($data[22]){
       case 24:
