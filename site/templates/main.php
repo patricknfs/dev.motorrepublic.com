@@ -45,7 +45,7 @@ ERROR_REPORTING(E_ALL);
         <div class="cell small-12 medium-6">
           <div class="rounded-social-buttons">
             <a class="social-button facebook" href="#"></a>
-            <a class="social-button twitter" href="#"></a>
+            <a class="twitter" href="#"></a>
             <a class="social-button linkedin" href="#"></a>
             <a class="social-button youtube" href="#"></a>
             <a class="social-button instagram" href="#"></a>
