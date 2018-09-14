@@ -13112,6 +13112,10 @@ footer #governance {
   color: #cc0000;
 }
 
-.twitter:before {
+.twitter {
+  color: #55acee .twitter;
+}
+
+.twitter :before {
   content: "\f099";
 }
