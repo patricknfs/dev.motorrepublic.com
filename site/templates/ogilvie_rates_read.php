@@ -25,9 +25,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       // $data[10] = str_replace(',','',$data[11]);
       // $data[11] = str_replace(',','',$data[12]);
-      switch($data[1]){
+      switch($data[23]){
         case 8000:
-        switch($data[23]){
+        switch($data[22]){
           case 24:
           $insert = "`24_8K_PA_rental_m` = " . $data[11] . ", `24_8K_PA_rental_nm` = " . $data[10];
           break;
@@ -58,7 +58,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 10000:
-        switch($data[23]){
+        switch($data[22]){
           case 24:
           $insert = "`24_10K_PA_rental_m` = " . $data[11] . ", `24_10K_PA_rental_nm` = " . $data[10];
           break;
@@ -89,7 +89,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break; 
         case 15000:
-        switch($data[23]){
+        switch($data[22]){
           case 24:
           $insert = "`24_15K_PA_rental_m` = " . $data[11] . ", `24_15K_PA_rental_nm` = " . $data[10];
           break;
@@ -120,7 +120,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 20000:
-        switch($data[23]){
+        switch($data[22]){
           case 24:
           $insert = "`24_20K_PA_rental_m` = " . $data[11] . ", `24_20K_PA_rental_nm` = " . $data[10];
           break;
@@ -151,7 +151,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 25000:
-        switch($data[23]){
+        switch($data[22]){
           case 24:
           $insert = "`24_25K_PA_rental_m` = " . $data[11] . ", `24_25K_PA_rental_nm` = " . $data[10];
           break;
@@ -184,7 +184,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 30000:
         $data[10] = str_replace(',','',$data[11]);
         $data[11] = str_replace(',','',$data[12]);
-        switch($data[23]){
+        switch($data[22]){
           case 24:
           $insert = "`24_30K_PA_rental_m` = " . $data[11] . ", `24_30K_PA_rental_nm` = " . $data[10];
           break;
