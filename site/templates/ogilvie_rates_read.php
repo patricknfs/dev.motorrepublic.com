@@ -93,7 +93,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       }
       break;
       default:
-      echo $data[40] . "monthly profile not coded";
+      echo $data[22] . "monthly profile not coded";
     }
     if($row > 2){
       switch($mileage){
