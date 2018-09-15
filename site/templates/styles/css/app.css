@@ -23,6 +23,7 @@
 .far,
 .fal,
 .fab,
+.facebook,
 .twitter,
 .linkedin,
 .youtube {
@@ -35,7 +36,7 @@
   line-height: 1;
 }
 
-.twitter, .linkedin, .youtube {
+.facebook, .twitter, .linkedin, .youtube {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -142,6 +143,7 @@
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
+.fa-pull-left.facebook,
 .fa-pull-left.twitter,
 .fa-pull-left.linkedin,
 .fa-pull-left.youtube {
@@ -153,6 +155,7 @@
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
+.fa-pull-right.facebook,
 .fa-pull-right.twitter,
 .fa-pull-right.linkedin,
 .fa-pull-right.youtube {
@@ -5047,7 +5050,7 @@ readers do not read off random characters that represent icons */
   src: url("../css/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../css/webfonts/fa-brands-400.woff2") format("woff2"), url("../css/webfonts/fa-brands-400.woff") format("woff"), url("../css/webfonts/fa-brands-400.ttf") format("truetype"), url("../css/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
-.fab, .twitter, .linkedin, .youtube {
+.fab, .facebook, .twitter, .linkedin, .youtube {
   font-family: 'Font Awesome 5 Brands';
 }
 
@@ -13145,6 +13148,14 @@ footer #governance {
 .social-button:hover, .social-button:focus {
   -ms-transform: rotate(360deg);
       transform: rotate(360deg);
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.facebook:before {
+  content: "\f09a";
 }
 
 .twitter {
