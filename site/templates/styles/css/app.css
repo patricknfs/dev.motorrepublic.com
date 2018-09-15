@@ -23,9 +23,9 @@
 .far,
 .fal,
 .fab,
-.rounded-social-buttons .social-button .twitter,
-.rounded-social-buttons .social-button .linkedin,
-.rounded-social-buttons .social-button .youtube {
+.twitter,
+.linkedin,
+.youtube {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -35,7 +35,7 @@
   line-height: 1;
 }
 
-.rounded-social-buttons .social-button .twitter, .rounded-social-buttons .social-button .linkedin, .rounded-social-buttons .social-button .youtube {
+.twitter, .linkedin, .youtube {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -142,9 +142,9 @@
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
-.rounded-social-buttons .social-button .fa-pull-left.twitter,
-.rounded-social-buttons .social-button .fa-pull-left.linkedin,
-.rounded-social-buttons .social-button .fa-pull-left.youtube {
+.fa-pull-left.twitter,
+.fa-pull-left.linkedin,
+.fa-pull-left.youtube {
   margin-right: .3em;
 }
 
@@ -153,9 +153,9 @@
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
-.rounded-social-buttons .social-button .fa-pull-right.twitter,
-.rounded-social-buttons .social-button .fa-pull-right.linkedin,
-.rounded-social-buttons .social-button .fa-pull-right.youtube {
+.fa-pull-right.twitter,
+.fa-pull-right.linkedin,
+.fa-pull-right.youtube {
   margin-left: .3em;
 }
 
@@ -5047,7 +5047,7 @@ readers do not read off random characters that represent icons */
   src: url("../css/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../css/webfonts/fa-brands-400.woff2") format("woff2"), url("../css/webfonts/fa-brands-400.woff") format("woff"), url("../css/webfonts/fa-brands-400.ttf") format("truetype"), url("../css/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
-.fab, .rounded-social-buttons .social-button .twitter, .rounded-social-buttons .social-button .linkedin, .rounded-social-buttons .social-button .youtube {
+.fab, .twitter, .linkedin, .youtube {
   font-family: 'Font Awesome 5 Brands';
 }
 
@@ -13122,7 +13122,7 @@ footer #governance {
   text-align: center;
 }
 
-.rounded-social-buttons .social-button {
+.social-button {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -13142,31 +13142,31 @@ footer #governance {
   margin-bottom: 0.25rem;
 }
 
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+.social-button:hover, .social-button:focus {
   -ms-transform: rotate(360deg);
       transform: rotate(360deg);
 }
 
-.rounded-social-buttons .social-button .twitter {
+.twitter {
   color: #55acee;
 }
 
-.rounded-social-buttons .social-button .twitter:before {
+.twitter:before {
   content: "\f099";
 }
 
-.rounded-social-buttons .social-button .linkedin {
+.linkedin {
   color: #007bb5;
 }
 
-.rounded-social-buttons .social-button .linkedin:before {
+.linkedin:before {
   content: "\f08c";
 }
 
-.rounded-social-buttons .social-button .youtube {
+.youtube {
   color: #bb0000;
 }
 
-.rounded-social-buttons .social-button .youtube:before {
+.youtube:before {
   content: "\f167";
 }
