@@ -42,7 +42,7 @@ ERROR_REPORTING(E_ALL);
         <div class="cell small-12 medium-6">
           <small>cars</small> | <small>vans & lcv's</small>
         </div>
-        <div class="cell small-12 medium-6 right">
+        <div class="cell small-12 medium-6 .align-right">
           <div class="rounded-social-buttons">
             <a class="social-button facebook" href="#"></a>
             <a class="social-button twitter" href="#"></a>
