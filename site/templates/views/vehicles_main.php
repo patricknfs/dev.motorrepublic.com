@@ -12,11 +12,11 @@
 		<ul class="pagination text-center">
 			<li><a href="?pageno=1">First</a></li>
 			<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
-					<a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Previous <span class="show-for-sr">page</span></a>
+				<a href="<?php $pageno <= 1 ? echo '#' : echo "?pageno=".($pageno - 1) ?>">Previous <span class="show-for-sr">page</span></a>
 			</li>
 			<li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
 			<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-					<a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo '?pageno='.($pageno + 1); } ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
+				<a href="<?php $pageno >= $total_pages ? echo '#' : echo '?pageno=' . ($pageno + 1); ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
 			</li>
 			<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
 		<ul>
