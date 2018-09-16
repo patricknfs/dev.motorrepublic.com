@@ -13124,7 +13124,7 @@ footer #governance {
 .rounded-social-buttons {
   text-align: right;
   margin-right: 1em;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.3em;
 }
 
 .social-button {
@@ -13139,7 +13139,7 @@ footer #governance {
   color: #fefefe;
   font-size: 1.6rem;
   font-weight: normal;
-  line-height: 2em;
+  line-height: 1.6em;
   border-radius: 1.6875rem;
   transition: all 0.5s ease;
   margin-right: 0.25rem;
