@@ -11,7 +11,7 @@ require_once(MR_PATH . "/inc/conn.php");
 
 // iterate over every row
 $row = 1;
-$forms = $wire('forms');
+$forms = wire('forms');
 $form = $forms->get('Specials_upload');
 
 $entries = array();
