@@ -11,7 +11,7 @@
 // iterate over every row
 $row = 1;
 
-$form = $forms->get('specials_upload');
+$form = $forms->get('Specials_upload');
 
 $entries = array();
 foreach($form->entries()->find("sort=created") as $entry) {
