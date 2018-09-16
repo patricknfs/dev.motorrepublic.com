@@ -20,8 +20,8 @@
 					<h3><?=$data['manufacturer']?> <?=$data['model']?></h3>
 					<p><?=$data['descr']?></p>
 					<hr>
-						<h6>Business Clients - From <span class="price">£<?=$bch_rental?></span> *</h6>
-						<h6>Personal Clients - From <span class="price">£<?=$pch_rental?></span> **</h6>
+						<h6>Business Clients - From <span class="price">£<?=$bch_rental?></span> * EXC> VAT</h6>
+						<h6>Personal Clients - From <span class="price">£<?=$pch_rental?></span> ** INC. VAT</h6>
 					<hr>
 					<small>* Based on an initial rental of £<?=$bch_initial?> followed by <?=str_replace("M", '', $data['term'])-1?> monthly rentals of £<?=$bch_rental?> and covering <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
 					<br /><small>** Based on an initial rental of £<?=$pch_initial?> followed by <?=str_replace("M", '', $data['term'])-1?> monthly rentals of £<?=$pch_rental?> and covering <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>

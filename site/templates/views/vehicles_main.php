@@ -31,8 +31,8 @@
 						</div>
 						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
 						<div class="card-section">
-							<h6>Business Clients <span>£<?=$bch_rental?></span></h6>
-							<h6>Personal Clients <span>£<?=$pch_rental?></span></h6>
+							<h6>Business Clients <span>£<?=$bch_rental?></span> EXC. VAT</h6>
+							<h6>Personal Clients <span>£<?=$pch_rental?></span> INC. VAT</h6>
 						</div>
 					</div>
 				</a>
