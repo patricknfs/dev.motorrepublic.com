@@ -9,7 +9,7 @@
 	</div>
 	<div class="grid-x grid-padding-x small-up-2 medium-up-4">
 		<?php
-		foreach($result AS $vehicle) {
+		foreach($data AS $vehicle) {
 			$options = array(
 				'quality' => 80,
 				'upscaling' => false       
