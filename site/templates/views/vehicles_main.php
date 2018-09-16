@@ -10,18 +10,15 @@
 	<div class="grid-x">
 	<nav aria-label="Pagination">
 		<ul class="pagination text-center">
-		<li><a href="?pageno=1">First</a></li>
-        <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
-        </li>
-				<?php
-				// echo "pageno is: " . $pageno;
-				// echo "total pages is: " . $total_pages;
-				?>
-        <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
-        </li>
-        <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+			<li><a href="?pageno=1">First</a></li>
+			<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
+					<a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Previous <span class="show-for-sr">page</span></a>
+			</li>
+			<li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+			<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+					<a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo '?pageno='.($pageno + 1); } ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
+			</li>
+			<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
 		<ul>
 	</nav>
 	</div>
