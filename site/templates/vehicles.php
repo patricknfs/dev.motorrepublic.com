@@ -14,12 +14,7 @@
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
-// print_r($_POST);
-// $total_pages_sql = "SELECT COUNT(*) FROM table";
-// $result = mysqli_query($conn,$total_pages_sql);
-// $total_rows = mysqli_fetch_array($result)[0];
-// $total_pages = ceil($total_rows / $no_of_records_per_page);
-print_r($_GET);
+
 if (isset($_GET['pageno'])) {
   $pageno = $_GET['pageno'];
 } else {
@@ -30,8 +25,8 @@ $offset = ($pageno-1) * $no_of_records_per_page;
 
 if( isset($_POST['manufacturer']) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $model . "%' AND `term` = '" . $months . "' AND `mileage` = '" . $mileage . "'  GROUP BY `cap_id` ";
-  $count = $conn->query($total_pages_sql);
-  $total_rows = $count->num_rows;
+  $countres = $conn->query($total_pages_sql);
+  $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   $manuf = filter_var($_POST['manufacturer'], FILTER_SANITIZE_STRING);
   $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
@@ -43,17 +38,12 @@ else {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` GROUP BY `cap_id` ";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
-  // print_r($total_rows);
-  // echo "total_rows is " . $total_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
-  // echo "total pages is: " . $total_pages;
   $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
 }
 
 echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
-
-// $data = $result->fetch_assoc();
 
 ob_start();
 include('views/vehicles_main.php');
