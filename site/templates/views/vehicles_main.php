@@ -15,8 +15,8 @@
             <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
         </li>
 				<?php
-				echo "pageno is: " . $pageno;
-				echo "total pages is: " . $total_pages;
+				// echo "pageno is: " . $pageno;
+				// echo "total pages is: " . $total_pages;
 				?>
         <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
             <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
