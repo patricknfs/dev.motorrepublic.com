@@ -15,6 +15,19 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 // print_r($_POST);
+// $total_pages_sql = "SELECT COUNT(*) FROM table";
+// $result = mysqli_query($conn,$total_pages_sql);
+// $total_rows = mysqli_fetch_array($result)[0];
+// $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+if (isset($_GET['pageno'])) {
+  $pageno = $_GET['pageno'];
+} else {
+  $pageno = 1;
+}
+$no_of_records_per_page = 12;
+$offset = ($pageno-1) * $no_of_records_per_page;
+
 if( isset($_POST['manufacturer']) ) {
   $manuf = filter_var($_POST['manufacturer'], FILTER_SANITIZE_STRING);
   $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
@@ -28,6 +41,10 @@ else {
 
 echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
+
+$total_rows = mysqli_fetch_array($result)[0];
+$total_pages = ceil($total_rows / $no_of_records_per_page);
+
 // $data = $result->fetch_assoc();
 
 ob_start();

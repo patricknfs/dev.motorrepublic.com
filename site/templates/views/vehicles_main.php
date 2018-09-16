@@ -7,6 +7,20 @@
 			</div>
 		</div>
 	</div>
+	<div class="grid-x">
+	<nav aria-label="Pagination">
+		<ul class="pagination">
+		<li><a href="?pageno=1">First</a></li>
+        <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+        </li>
+        <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
+        </li>
+        <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+		<ul>
+	</nav>
+	</div>
 	<div class="grid-x grid-padding-x small-up-2 medium-up-4">
 		<?php
 		foreach($result AS $vehicle) {
