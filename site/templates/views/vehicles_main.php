@@ -9,7 +9,7 @@
 	</div>
 	<div class="grid-x">
 	<nav aria-label="Pagination">
-		<ul class="pagination">
+		<ul class="pagination text-center">
 		<li><a href="?pageno=1">First</a></li>
         <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
             <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
