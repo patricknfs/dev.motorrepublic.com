@@ -30,8 +30,8 @@ $offset = ($pageno-1) * $no_of_records_per_page;
 
 if( isset($_POST['manufacturer']) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $model . "%' AND `term` = '" . $months . "' AND `mileage` = '" . $mileage . "'  GROUP BY `cap_id` ";
-  $count = mysqli_query($conn,$total_pages_sql);
-  $total_rows = mysqli_fetch_array($count)[0];
+  $count = $conn->query($total_pages_sql);
+  $total_rows = $count->fetch_array(MYSQLI_NUM);
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   $manuf = filter_var($_POST['manufacturer'], FILTER_SANITIZE_STRING);
   $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
@@ -41,8 +41,8 @@ if( isset($_POST['manufacturer']) ) {
 }
 else {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` GROUP BY `cap_id` ";
-  $count = mysqli_query($conn,$total_pages_sql);
-  $total_rows = mysqli_fetch_array($count)[0];
+  $count = $conn->query($total_pages_sql);
+  $total_rows = $count->fetch_array(MYSQLI_NUM);
   echo "total_rows is " . $total_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   echo "total pages is: " . $total_pages;
