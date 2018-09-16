@@ -33,10 +33,10 @@ if( isset($_POST['manufacturer']) ) {
   $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
   $mileage = filter_var($_POST['mileage'], FILTER_SANITIZE_STRING);
   $months = filter_var($_POST['months'], FILTER_SANITIZE_STRING);
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $model . "%' AND `term` = '" . $months . "' AND `mileage` = '" . $mileage . "'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $model . "%' AND `term` = '" . $months . "' AND `mileage` = '" . $mileage . "'  GROUP BY `cap_id` ORDER BY `rental` ASC";
 }
 else {
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 12";
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` GROUP BY `cap_id` ORDER BY `rental` ASC";
 }
 
 echo $query;
