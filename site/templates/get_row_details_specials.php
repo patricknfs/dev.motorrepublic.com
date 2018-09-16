@@ -4,14 +4,14 @@
 // print_r($_GET);
 // header('Content-type: application/json; charset=utf-8');
 // session_start();
-// date_default_timezone_set('CET');
-// require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
-// require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
+date_default_timezone_set('CET');
+require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
+require_once(MR_PATH . "/inc/conn.php");
 
 // iterate over every row
 $row = 1;
-
-$form = wire('forms')->get('Specials_upload');
+$forms = wire('forms');
+$form = $forms->get('Specials_upload');
 
 $entries = array();
 foreach($form->entries()->find("sort=created") as $entry) {
@@ -19,7 +19,7 @@ foreach($form->entries()->find("sort=created") as $entry) {
 }
 
 foreach($entries as $entry){
-  echo "<p>$entry[something_name]</p>";
+  echo "<p>$entry[cap_id]</p>";
 }
 
   // for every field in the result..
