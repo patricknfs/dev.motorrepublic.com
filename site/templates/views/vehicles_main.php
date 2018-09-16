@@ -13,9 +13,13 @@
 			$options = array(
 				'quality' => 80,
 				'upscaling' => false       
-			); 
-			$bch = round((($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'],2);
-			$pch = round(((($vehicle['rental'] * $vehicle['term']) + 300) / $vehicle['term'])*1.2,2);
+			);
+			
+			$bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)), 2, '.', ',');
+			$pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2), 2, '.', ',');
+			$bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2))*3), 2, '.', ',');
+			$pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2)*3), 2, '.', ',');
+
 			$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 			?>
 			<div class="cell">
@@ -29,8 +33,8 @@
 						</div>
 						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
 						<div class="card-section">
-							<h6>Business Clients £<?=$bch?></h6>
-							<h6>Personal Clients £<?=$pch?></h6>
+							<h6>Business Clients <span>£<?=$bch_rental?></span></h6>
+							<h6>Personal Clients <span>£<?=$pch_rental?></span></h6>
 						</div>
 					</div>
 				</a>
