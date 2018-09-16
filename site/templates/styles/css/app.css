@@ -13130,14 +13130,14 @@ footer #governance {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 2rem;
+  height: 2rem;
   border: 0.125rem solid transparent;
   padding: 0;
   text-decoration: none;
   text-align: center;
   color: #fefefe;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: normal;
   line-height: 2em;
   border-radius: 1.6875rem;
