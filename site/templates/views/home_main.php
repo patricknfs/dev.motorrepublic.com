@@ -48,7 +48,7 @@
 			?>
 			<div class="cell">
 				<a href="/vehicle/<?=$vehicle['cap_id']?>">
-					<div class="card">
+					<div class="home_deals card">
 						<div class="card-section">
 							<h6>
 								<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
