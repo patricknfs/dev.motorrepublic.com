@@ -9,14 +9,14 @@
 	</div>
 	<div class="grid-x grid-padding-x small-up-2 medium-up-4">
 		<?php
-		foreach($data AS $vehicle) {
+		foreach($result AS $vehicle) {
 			$options = array(
 				'quality' => 80,
 				'upscaling' => false       
 			);
 
-			$bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)), 2, '.', ',');
-			$pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2), 2, '.', ',');
+			$bch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+2)), 2, '.', ',');
+			$pch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+2)*1.2), 2, '.', ',');
 
 			$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 			?>
