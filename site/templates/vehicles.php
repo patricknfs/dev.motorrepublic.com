@@ -41,8 +41,8 @@ if( isset($_POST['manufacturer']) ) {
 }
 else {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` GROUP BY `cap_id` ";
-  $result = mysqli_query($conn,$total_pages_sql);
-  $total_rows = mysqli_fetch_array($result)[0];
+  $count = mysqli_query($conn,$total_pages_sql);
+  $total_rows = mysqli_fetch_array($count)[0];
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
 }
