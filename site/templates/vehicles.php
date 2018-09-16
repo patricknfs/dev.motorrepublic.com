@@ -42,7 +42,7 @@ if( isset($_POST['manufacturer']) ) {
 else {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` GROUP BY `cap_id` ";
   $count = $conn->query($total_pages_sql);
-  $total_rows = $count->fetch_array(MYSQLI_NUM);
+  $total_rows = $count->fetch_array(0);
   echo "total_rows is " . $total_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   echo "total pages is: " . $total_pages;
