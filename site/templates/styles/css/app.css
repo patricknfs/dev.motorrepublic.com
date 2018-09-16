@@ -13109,6 +13109,10 @@ footer #governance {
   padding-top: 2em;
 }
 
+.home_deals img {
+  text-align: center;
+}
+
 .card-divider-2 {
   background-color: #cc1000;
 }
