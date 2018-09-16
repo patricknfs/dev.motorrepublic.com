@@ -44,7 +44,7 @@ else {
   $count = $conn->query($total_pages_sql);
   $total_rows = $count->fetch_array(MYSQLI_NUM);
   print_r($total_rows);
-  echo "total_rows is " . $total_rows;
+  // echo "total_rows is " . $total_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   echo "total pages is: " . $total_pages;
   $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
