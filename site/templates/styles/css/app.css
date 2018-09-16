@@ -12937,6 +12937,7 @@ nav {
 }
 
 .nav_pagination {
+  z-index: 0;
   border-top: none;
 }
 
