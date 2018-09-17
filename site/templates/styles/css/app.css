@@ -12934,6 +12934,7 @@ header {
 
 #primenav ul li {
   display: inline-block;
+  margin: auto 2em 0;
 }
 
 #primenav ul li:not(:first-child):before {
