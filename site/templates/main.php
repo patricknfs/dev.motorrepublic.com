@@ -40,7 +40,9 @@ ERROR_REPORTING(E_ALL);
     <header data-sticky data-margin-top="0">
       <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
-          <p><small>cars</small> | <small>vans & lcv's</small></p>
+          <ul>
+            <li>cars</li>
+            <li>vans & lcv's</li>
         </div>
         <div class="cell small-12 medium-6 .align-right">
           <div class="rounded-social-buttons">
