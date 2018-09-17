@@ -36,4 +36,4 @@ $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
 ob_start();
 include('views/vehicle_main.php');
 $page->main = ob_get_clean();
-include("./main.php"); 
+include("./main.php");
