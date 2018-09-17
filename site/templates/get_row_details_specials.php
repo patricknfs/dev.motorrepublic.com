@@ -11,7 +11,7 @@ require_once(MR_PATH . "/inc/conn.php");
 // iterate over every row
 $row = 1;
 $forms = wire('forms');
-$form = $forms->get('Specials_upload');
+$form = $forms->get('specials_upload');
 
 $entries = array();
 foreach($form->entries()->find("sort=created") as $entry) {
