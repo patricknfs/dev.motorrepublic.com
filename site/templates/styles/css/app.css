@@ -12932,6 +12932,10 @@ header {
   color: #fff;
 }
 
+#primenav ul {
+  display: inline-block;
+}
+
 nav {
   z-index: 5;
   border-top: 1px solid #cc0000;
