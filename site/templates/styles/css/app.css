@@ -12932,7 +12932,7 @@ header {
   color: #fff;
 }
 
-#primenav ul {
+#primenav ul li {
   display: inline-block;
 }
 
