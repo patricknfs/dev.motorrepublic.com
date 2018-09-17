@@ -17,9 +17,9 @@ foreach($form->entries()->find("sort=created") as $entry) {
   $entries[] = $entry;
 }
 
-foreach($entries as $entry){
-  echo "<p>$entry[cap_id]</p>";
-}
+// foreach($entries as $entry){
+//   echo "<p>$entry[cap_id]</p>";
+// }
 
 foreach($entries as $entry){
   // for every field in the result..
