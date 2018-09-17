@@ -41,7 +41,7 @@ ERROR_REPORTING(E_ALL);
       <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
           <ul>
-            <li>cars</li>
+            <li>new cars</li>
             <li>vans & lcv's</li>
         </div>
         <div class="cell small-12 medium-6 .align-right">
