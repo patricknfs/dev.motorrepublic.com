@@ -12936,6 +12936,10 @@ header {
   display: inline-block;
 }
 
+#primenav ul li:not(:first-child):before {
+  content: " | ";
+}
+
 nav {
   z-index: 5;
   border-top: 1px solid #cc0000;
