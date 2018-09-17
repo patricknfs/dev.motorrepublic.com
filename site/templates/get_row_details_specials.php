@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php namespace ProcessWire;
 // get_row_details_specials.php
 // print_r($_GET);
