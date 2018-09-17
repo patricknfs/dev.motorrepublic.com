@@ -25,6 +25,6 @@ foreach($entries as $entry){
   // for every field in the result..
   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['description_1'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list_price'] . "', '" . $entry['vehicle_otr_price'] . "', '" . $entry['p11d_price'] . "', '" . $entry['co2'] . "','')";
   echo $insert;
-  // $result3 = $conn->query($insert) or die(mysqli_error($conn));
+  $result = $conn->query($insert) or die(mysqli_error($conn));
   $entry++;
 }
