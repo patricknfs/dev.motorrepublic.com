@@ -6,9 +6,9 @@
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
-
+include("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/index.php"); 
 // iterate over every row
-$row = 1;
+$entry = 1;
 // $forms = wire('forms');
 $form = $forms->get('specials_upload');
 
@@ -21,8 +21,10 @@ foreach($entries as $entry){
   echo "<p>$entry[cap_id]</p>";
 }
 
+foreach($entries as $entry){
   // for every field in the result..
-//   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "')";
-//   $result3 = $conn->query($insert) or die(mysqli_error($conn));
-//   $row++;
-// }
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['descr'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list'] . "', '" . $entry['vehicle_otr'] . "', '" . $entry['p11d'] . "', '" . $entry['CO2_no'] . "','')";
+  echo $insert;
+  // $result3 = $conn->query($insert) or die(mysqli_error($conn));
+  $entry++;
+}
