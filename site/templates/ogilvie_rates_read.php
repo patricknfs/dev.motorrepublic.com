@@ -151,8 +151,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[2] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[7] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_otr_price` = "",
+        `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -182,8 +182,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[2] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[7] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_otr_price` = "",
+        `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -213,8 +213,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[2] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[7] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_otr_price` = "",
+        `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -244,8 +244,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[2] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[7] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_otr_price` = "",
+        `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
@@ -277,8 +277,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[2] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_otr_price` = "",
+        `p11d_price` = " . $data[8] . ",
         `updated` = NOW(),
         " . $insert . "
         ON DUPLICATE KEY UPDATE
