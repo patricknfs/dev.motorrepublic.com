@@ -47,7 +47,7 @@
 						<div class="card-section">
 							<h6>Business Clients<br /><span class="price">£<?=$bch_rental?></span> excl. VAT</h6>
 							<h6>Personal Clients<br /><span class="price">£<?=$pch_rental?></span> inc. VAT</h6>
-							<small>click for more details...</p>
+							<small>click for more details...</small>
 						</div>
 					</div>
 				</a>
