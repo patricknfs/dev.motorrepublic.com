@@ -128,7 +128,7 @@ $query = "SELECT
   ORDER BY rental DESC
 ";
 echo $query; 
-// $result = $conn->query($query) or die(mysqli_error($conn));
+$result = $conn->query($query) or die(mysqli_error($conn));
 
 // iterate over every row
 $row = 1;
