@@ -127,7 +127,7 @@ $query = "SELECT
   WHERE mr1.code = mr2.capid
   ORDER BY rental DESC
 ";
-echo $query; 
+// echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
 
 // iterate over every row
@@ -136,7 +136,7 @@ $row = 1;
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "'.'')";
-  echo $insert;
-  // $result3 = $conn->query($insert) or die(mysqli_error($conn));
+  // echo $insert;
+  $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
 }
