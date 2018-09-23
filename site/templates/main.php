@@ -1,6 +1,7 @@
 <!-- main.php -->
 <?php 
 ERROR_REPORTING(E_ALL);
+include_once($config->urls->templates . "/inc/functions.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
