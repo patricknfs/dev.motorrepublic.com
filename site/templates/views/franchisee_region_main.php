@@ -64,11 +64,25 @@
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 medium-12">
-        <blockquote><h3><?=$testimonial->title?></h3>
+        <!-- In this container, add blockquote-left or blockquote-right to make the blockquote left / -->
+        <div class="blockquote-container">
+          <div class="callout">
+            <h4 class="blockquote-title"><?=$testimonial->title?></h4>
+            <blockquote>
+              <span class="blockquote-content"><?=$testimonial_blurb?>... <a href="<?=$testimonial->url?>">more details</a></i></span>
+            </blockquote>
+          </div>
+          <div class="sig">
+          <cite><?=$testimonial->sig?></cite>
+        </div>
+        </div>
+
+
+        <!-- <blockquote><h3><?=$testimonial->title?></h3>
         <i><?=$testimonial_blurb?>... <a href="<?=$testimonial->url?>">more details</a></i></blockquote>
         <div class="sig">
           <cite><?=$testimonial->sig?></cite>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
