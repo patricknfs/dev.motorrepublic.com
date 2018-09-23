@@ -74,7 +74,7 @@
 </section>
 <?php
 $testimonial = $pages->find("template=testimonial, sort=random, limit=1");
-print_r($testimonial);
+var_dump(get_object_vars($testimonial));
 ?>
 <section id="testimonial">
   <div class="grid-container">
