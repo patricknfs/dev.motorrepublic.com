@@ -83,12 +83,12 @@
           <!-- content slide 1 -->
           <li class="is-active orbit-slide">
             <div class="testimonial-slide row">
-              <div class="small-12 large-9 column">
+              <div class="cell small-12 large-9">
                 <div class="row align-middle testimonial-slide-content">
-                  <div class="small-12 medium-4 column hide-for-small-only profile-pic">
+                  <div class="cell small-12 medium-4 hide-for-small-only profile-pic">
                     <img src="https://placeimg.com/300/300/nature">
                   </div>
-                  <div class="small-12 medium-8 column testimonial-slide-text">
+                  <div class="cell small-12 medium-8 testimonial-slide-text">
                     <p class="testimonial-slide-quotation">Hide when guests come over instantly break out into full speed gallop across the house for no reason mrow touch water with paw then recoil in horror.</p>
                     <div class="testimonial-slide-author-container">
                       <div class="small-profile-pic show-for-small-only">
@@ -104,12 +104,12 @@
           <!--content slide 2 -->
           <li class="orbit-slide">
             <div class="testimonial-slide row">
-              <div class="small-12 large-9 column">
+              <div class="cell small-12 large-9">
                 <div class="row align-middle testimonial-slide-content">
-                  <div class="small-12 medium-4 column hide-for-small-only profile-pic">
+                  <div class="cell small-12 medium-4 hide-for-small-only profile-pic">
                     <img src="https://placeimg.com/300/300/architecture">
                   </div>
-                  <div class="small-12 medium-8 column testimonial-slide-text">
+                  <div class="cell small-12 medium-8 testimonial-slide-text">
                     <p class="testimonial-slide-quotation">Hide when guests come over instantly break out into full speed gallop across the house for no reason mrow touch water with paw then recoil in horror.</p>
                     <div class="testimonial-slide-author-container">
                       <div class="small-profile-pic show-for-small-only">
@@ -125,12 +125,12 @@
           <!-- content slide 3 -->
           <li class="orbit-slide">
             <div class="testimonial-slide row">
-              <div class="small-12 large-9 column">
+              <div class="cell small-12 large-9">
                 <div class="row align-middle testimonial-slide-content">
-                  <div class="small-12 medium-4 column hide-for-small-only profile-pic">
+                  <div class="cell small-12 medium-4 hide-for-small-only profile-pic">
                     <img src="https://placeimg.com/300/300/animals">
                   </div>
-                  <div class="small-12 medium-8 column testimonial-slide-text">
+                  <div class="cell small-12 medium-8 testimonial-slide-text">
                     <p class="testimonial-slide-quotation">Hide when guests come over instantly break out into full speed gallop across the house for no reason mrow touch water with paw then recoil in horror.</p>
                     <div class="testimonial-slide-author-container">
                       <div class="small-profile-pic show-for-small-only">
@@ -146,12 +146,12 @@
           <!-- content slide 4 -->
           <li class="orbit-slide">
             <div class="testimonial-slide row">
-              <div class="small-12 large-9 column">
+              <div class="cell small-12 large-9">
                 <div class="row align-middle testimonial-slide-content">
-                  <div class="small-12 medium-4 column hide-for-small-only profile-pic">
+                  <div class="cell small-12 medium-4 hide-for-small-only profile-pic">
                     <img src="https://placeimg.com/300/300/any">
                   </div>
-                  <div class="small-12 medium-8 column testimonial-slide-text">
+                  <div class="cell small-12 medium-8 testimonial-slide-text">
                     <p class="testimonial-slide-quotation">Hide when guests come over instantly break out into full speed gallop across the house for no reason mrow touch water with paw then recoil in horror.</p>
                     <div class="testimonial-slide-author-container">
                       <div class="small-profile-pic show-for-small-only">
