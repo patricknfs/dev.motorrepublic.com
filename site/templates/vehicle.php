@@ -40,7 +40,7 @@ try
         $password = 'NfS4Je';
         
         $client = get_soap_client();
-        $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => date("Y/m/d"), 'justCurrent' => true ); //define your parameters here
+        $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date->format('c'), 'justCurrent' => true ); //define your parameters here
         $client->GetStandardEquipment($params);
         $data = $client->__getLastResponse();
         $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
