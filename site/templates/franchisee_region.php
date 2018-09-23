@@ -1,5 +1,9 @@
 <?php
-// about.php
+// frnachisee_region.php
+ 
+$testimonial_blurb = truncateText($testimonial->body);
+echo $testimonial_blurb;
+
 ob_start();
 include('views/franchisee_region_main.php');
 $page->main = ob_get_clean();
