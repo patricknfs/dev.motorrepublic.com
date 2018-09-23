@@ -80,7 +80,7 @@ print_r($testimonial);
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 medium-12">
-        <h1><?php echo $testimonial->title; ?></h1>
+        <h1><?=$testimonial->title?></h1>
         <?=$testimonial->body?>
         <div class="sig">
           <?=$testimonial->sig?>
