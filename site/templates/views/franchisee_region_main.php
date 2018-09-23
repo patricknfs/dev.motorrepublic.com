@@ -72,10 +72,6 @@
     </div>
   </div>
 </section>
-<?php
-$testimonial = $pages->get("template=testimonial, sort=random, limit=1");
-// var_dump(get_object_vars($testimonial));
-?>
 <section id="testimonial">
   <div class="grid-container">
     <div class="grid-x">
