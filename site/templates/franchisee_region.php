@@ -8,7 +8,7 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 
-$query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `manufacturer` LIKE '%mercedes%' OR '%jaguar$' OR '%bmw%'  GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT 4";
+$query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `manufacturer` LIKE '%mercedes%' OR '%jaguar$' OR '%bmw%'  GROUP BY `cap_id` ORDER BY RAND() ASC LIMIT 4";
 
 // echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
