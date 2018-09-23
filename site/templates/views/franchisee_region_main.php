@@ -74,14 +74,14 @@
 </section>
 <?php
 $testimonial = $pages->get("template=testimonial, sort=random, limit=1");
-var_dump(get_object_vars($testimonial));
+// var_dump(get_object_vars($testimonial));
 ?>
 <section id="testimonial">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 medium-12">
-        <h1><?=$testimonial->title?></h1>
-        <?=$testimonial->body?>
+        <h3><?=$testimonial->title?></h3>
+        <?=truncateText($testimonial->body)?>
         <div class="sig">
           <?=$testimonial->sig?>
         </div>
