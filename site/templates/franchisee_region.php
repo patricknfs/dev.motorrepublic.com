@@ -1,6 +1,5 @@
 <?php
-// frnachisee_region.php
- 
+// franchisee_region.php
 $testimonial_blurb = truncateText($testimonial->body);
 
 ob_start();
