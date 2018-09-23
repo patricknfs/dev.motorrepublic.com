@@ -20,8 +20,9 @@
 </section>
 <section id="content">
   <div class="grid-container">
+    <h2>My Favourite Deals</h2>
     <div class="grid-x grid-padding-x small-up-2 medium-up-4">
-      <h2>My Favourite Deals</h2>
+     
       <?php
 		foreach($result AS $vehicle) {
 			$options = array(
