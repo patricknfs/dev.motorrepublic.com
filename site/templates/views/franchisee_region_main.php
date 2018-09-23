@@ -79,7 +79,7 @@
         <h3><?=$testimonial->title?></h3>
         <blockquote><i><?=$testimonial_blurb?></i></blockquote>
         <div class="sig">
-          <blockquote><?=$testimonial->sig?>
+          <cite><?=$testimonial->sig?></cite>
         </div>
       </div>
     </div>
