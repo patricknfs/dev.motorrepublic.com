@@ -1,7 +1,7 @@
 <!-- main.php -->
 <?php 
 ERROR_REPORTING(E_ALL);
-include_once("inc/functions.php");
+include "inc/functions.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
