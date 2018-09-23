@@ -288,5 +288,4 @@ function truncateText($text, $maxlength) {
   }
   return trim($text); 
 }
-echo "functions included";
 ?>
