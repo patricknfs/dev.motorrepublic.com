@@ -73,8 +73,7 @@
   </div>
 </section>
 <?php
-$max_testimonials = 1;
-$testimonial = $pages->find("template=testimonial, sort=random, limit=' . $max_testimonials . '");
+$testimonial = $pages->find("template=testimonial, sort=random, limit=1");
 ?>
 <section id="testimonial">
   <div class="grid-container">
