@@ -40,19 +40,12 @@ try
         $password = 'NfS4Je';
         
         $client = get_soap_client();
-        $params = array('justCurrentManufacturers' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'bodyStyleFilter' => '' ); //define your parameters here
-        $client->GetCapMan($params);
+        $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => date("Y/m/d"), 'justCurrent' => true ); //define your parameters here
+        $client->GetStandardEquipmentn($params);
         $data = $client->__getLastResponse();
         $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-        // Wrap into root element to make it standard XML
-        // $xml    = "<package>" . $xml . "</package>";
-        // echo "<pre>";
-        //     print_r($xml);
-        // echo"</pre>";
-        // $data   = simplexml_load_string($xml);
         $data = new SimpleXMLElement($xml);
         $marques  = $data->xpath('//Table');
-        // print "We have " . count($marques) . " marques: \n";
         foreach($marques as $item){
             echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
             $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
