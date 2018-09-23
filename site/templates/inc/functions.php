@@ -278,7 +278,7 @@ function format_number($str,$decimal_places='2',$decimal_padding="0"){
         return (float) $number[0].'.'.$decimal;
 }
 
-function truncateText($text, $maxlength = 200) {
+function truncateText($text, $maxlength = 150) {
     // truncate to max length
     $text = substr(strip_tags($text), 0, $maxlength);
     // check if we've truncated to a spot that needs further truncation

@@ -81,7 +81,9 @@ $testimonial = $pages->get("template=testimonial, sort=random, limit=1");
     <div class="grid-x">
       <div class="cell small-12 medium-12">
         <h3><?=$testimonial->title?></h3>
-        <?=truncateText($testimonial->body)?>
+        <?php 
+          echo truncateText($testimonial->body);
+        ?>
         <div class="sig">
           <?=$testimonial->sig?>
         </div>
