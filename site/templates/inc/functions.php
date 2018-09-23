@@ -345,7 +345,7 @@ function get_soap_client(){
     global  $username, $password;
     $username = '173210';
     $password = 'NfS4Je';
-    $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL';
+    $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx?WSDL';
 
     $options = array(
         'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
