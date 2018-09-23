@@ -76,8 +76,8 @@
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 medium-12">
-        <h3><?=$testimonial->title?></h3>
-        <blockquote><i><?=$testimonial_blurb?></i></blockquote>
+        <blockquote><h3><?=$testimonial->title?></h3>
+        <i><?=$testimonial_blurb?></i></blockquote>
         <div class="sig">
           <cite><?=$testimonial->sig?></cite>
         </div>
