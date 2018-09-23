@@ -65,7 +65,7 @@
     <div class="grid-x">
       <div class="cell small-12 medium-12">
         <blockquote><h3><?=$testimonial->title?></h3>
-        <i><?=$testimonial_blurb?>... <a href="<?php$testimonial->url?>">more details</a></i></blockquote>
+        <i><?=$testimonial_blurb?>... <a href="<?=$testimonial->url?>">more details</a></i></blockquote>
         <div class="sig">
           <cite><?=$testimonial->sig?></cite>
         </div>
