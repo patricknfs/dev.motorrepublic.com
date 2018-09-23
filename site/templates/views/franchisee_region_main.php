@@ -69,9 +69,10 @@
           <div class="callout">
             <h4 class="blockquote-title"><?=$testimonial->title?></h4>
             <blockquote>
-              <span class="blockquote-content"><?=$testimonial_blurb?></span>
-              ... <a href="<?=$testimonial->url?>">more details</a></i>
+              <span class="blockquote-content"><?=$testimonial_blurb?>... </span>
+              
             </blockquote>
+            <a href="<?=$testimonial->url?>">more details</a></i>
             <div class="sig">
               <cite><?=$testimonial->sig?></cite>
             </div>
