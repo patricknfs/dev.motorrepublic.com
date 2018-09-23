@@ -13106,6 +13106,7 @@ section#block_two h1, section#block_two p {
 
 footer {
   background-color: #404040;
+  margin-top: 2em;
   padding-top: 2em;
 }
 
