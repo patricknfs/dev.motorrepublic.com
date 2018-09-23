@@ -73,7 +73,7 @@
   </div>
 </section>
 <?php
-$testimonial = $pages->find("template=testimonial, sort=random, limit=1");
+$testimonial = $pages->get("template=testimonial, sort=random, limit=1");
 var_dump(get_object_vars($testimonial));
 ?>
 <section id="testimonial">
