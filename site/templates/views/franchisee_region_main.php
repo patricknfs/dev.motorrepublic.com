@@ -72,10 +72,20 @@
     </div>
   </div>
 </section>
+<?php
+$max_testimonials = 1;
+$testimonial = $pages->find("template=testimonial, sort=random, limit=' . $max_testimonials . '");
+?>
 <section id="testimonial">
   <div class="grid-container">
     <div class="grid-x">
-      
+      <div class="cell small-12 medium-12">
+        <h1><?php echo $testimonial->title; ?></h1>
+        <?=$testimonial->body?>
+        <div class="sig">
+          <?=$testimonial->sig?>
+        </div>
+      </div>
     </div>
   </div>
 </section>
