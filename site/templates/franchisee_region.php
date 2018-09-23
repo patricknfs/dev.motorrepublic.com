@@ -4,6 +4,9 @@ include "inc/functions.php";
 $testimonial = $pages->get("template=testimonial, sort=random, limit=1");
 $testimonial_blurb = truncateText($testimonial->body, 250);
 
+date_default_timezone_set('CET');
+require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
+require_once(MR_PATH . "/inc/conn.php");
 if (isset($_GET['pageno'])) {
   $pageno = $_GET['pageno'];
 } else {
