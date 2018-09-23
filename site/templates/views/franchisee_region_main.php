@@ -71,10 +71,10 @@
             <blockquote>
               <span class="blockquote-content"><?=$testimonial_blurb?>... <a href="<?=$testimonial->url?>">more details</a></i></span>
             </blockquote>
+            <div class="sig">
+              <cite><?=$testimonial->sig?></cite>
+            </div>
           </div>
-          <div class="sig">
-          <cite><?=$testimonial->sig?></cite>
-        </div>
         </div>
 
 
