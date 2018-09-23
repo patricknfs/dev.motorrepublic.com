@@ -4,6 +4,11 @@ include "inc/functions.php";
 $testimonial = $pages->get("template=testimonial, sort=random, limit=1");
 $testimonial_blurb = truncateText($testimonial->body, 250);
 
+if (isset($_GET['pageno'])) {
+  $pageno = $_GET['pageno'];
+} else {
+  $pageno = 1;
+}
 $no_of_records_per_page = 4;
 $offset = ($pageno-1) * $no_of_records_per_page;
 $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` GROUP BY `cap_id` ";
