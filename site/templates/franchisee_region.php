@@ -2,7 +2,7 @@
 // franchisee_region.php
 include "inc/functions.php";
 $testimonial = $pages->get("template=testimonial, sort=random, limit=1");
-$testimonial_blurb = truncateText($testimonial->body);
+$testimonial_blurb = truncateText($testimonial->body, 250);
 
 ob_start();
 include('views/franchisee_region_main.php');
