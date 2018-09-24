@@ -13259,3 +13259,7 @@ footer #governance {
 section#vehicle_details {
   margin-top: 1em;
 }
+
+.tabs-panel {
+  list-style-type: none;
+}
