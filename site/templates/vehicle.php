@@ -42,13 +42,16 @@ try
   $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
   $client->GetStandardEquipment($params);
   $data = $client->__getLastResponse();
-  $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
+  echo "<pre>";
+    print_r($data);
+  echo"</pre>";
+  $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
   echo "<pre>";
     print_r($xml);
   echo"</pre>";
   $data = new SimpleXMLElement($xml);
   $marques  = $data->xpath('//Table');
-  echo "Description is: " . $data->Do_Description;
+  echo "Description is: " . $data->Do_Description . "<br />";
   // foreach($marques as $item){
   //   echo "ManCode: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
   //   $range_params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
