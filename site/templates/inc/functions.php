@@ -386,5 +386,4 @@ function get_soap_client_2(){
     AddWSSUsernameToken($client, $username, $password);
     return $client;
 }
-
 ?>
