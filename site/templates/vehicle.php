@@ -50,6 +50,8 @@ try
   //   print_r($xml);
   // echo"</pre>";
   $data = new SimpleXMLElement($xml);
+  $groups = $data->xpath('//SE/Dc_Description')
+  print_r($groups);
   $equipment = $data->xpath('//SE');
  
 
