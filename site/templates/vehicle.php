@@ -26,7 +26,7 @@ else {
 echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
 $data = $result->fetch_assoc();
-var_dump($data);
+
 
 $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)), 2, '.', ',');
 $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2), 2, '.', ',');
