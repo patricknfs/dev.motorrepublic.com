@@ -44,6 +44,7 @@
 					foreach($groups AS $group){
 						echo $group;
 						foreach($equipment as $item){
+							echo $item->Dc_Description;
 							if($item->Dc_Description == $group){
 								echo $item->Do_Description . "<br />";
 							}
