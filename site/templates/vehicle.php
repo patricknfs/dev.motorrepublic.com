@@ -32,10 +32,6 @@ try
     $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
   }
 }
-catch(Exception $e){ 
-  echo $e->getCode(). '<br />'. $e->getMessage();
-  echo "We 're out of umbrellas, but the drink itself is fine";
-}
 
 try
 {
