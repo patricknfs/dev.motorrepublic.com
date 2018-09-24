@@ -42,9 +42,9 @@
 					<div class="tabs-panel is-active" id="panel1">
 					<?php
 					foreach($groups AS $group){
-						echo $group;
+						echo "Group is: " . $group . "<br />";
 						foreach($equipment as $item){
-							echo $item->Dc_Description;
+							echo "Item is: " . $item->Dc_Description . "<br />";
 							if($item->Dc_Description == $group){
 								echo $item->Do_Description . "<br />";
 							}
