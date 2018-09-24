@@ -53,7 +53,7 @@ try
   $data2 = $client->__getLastResponse();
   $xml2 = str_replace(array("diffgr:","msdata:"),'', trim($data2));
   $data2 = new SimpleXMLElement($xml2);
-  $groups2 = array_unique($data2->xpath('//Tech/DT_LongDescription'));
+  $groups2 = array_unique($data2->xpath('//Tech/Dc_Description'));
   $tech_data = $data2->xpath('//Tech');
 
   if(isset($input->urlSegment1)) {

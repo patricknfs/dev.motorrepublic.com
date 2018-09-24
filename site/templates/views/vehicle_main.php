@@ -45,8 +45,8 @@
 							echo "<ul><strong>" . $group . "</strong>";
 							foreach($equipment as $item){
 								// echo $item->Dc_Description . " = " . $group . "<br />";
-								if(trim($item->Dc_Description) === trim($group)){
-									echo "<li>" . $item->Do_Description . "</li>";
+								if(trim($item->Do_Description) === trim($group)){
+									echo "<li>" . $item->Dc_Description . "</li>";
 								}
 							}
 							echo "</ul>";
