@@ -54,6 +54,7 @@ try
   foreach($equipment as $item){
     echo "Standard Equipment is: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
   }
+  
   if(isset($input->urlSegment1)) {
     $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
     // echo $query;
@@ -72,10 +73,9 @@ try
   }
 
 }
-
-    catch(Exception $e){ 
-        echo $e->getCode(). '<br />'. $e->getMessage();
-    }
+catch(Exception $e){ 
+    echo $e->getCode(). '<br />'. $e->getMessage();
+}
 
 ob_start();
 include('views/vehicle_main.php');

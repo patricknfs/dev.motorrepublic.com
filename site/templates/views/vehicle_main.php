@@ -40,7 +40,11 @@
 				</ul>
 				<div class="tabs-content" data-tabs-content="example-tabs">
 					<div class="tabs-panel is-active" id="panel1">
-						<p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+					<?php
+					foreach($equipment as $item){
+						echo "Standard Equipment is: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
+					}
+					?>
 					</div>
 					<div class="tabs-panel" id="panel2">
 						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
