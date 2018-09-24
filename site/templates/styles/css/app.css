@@ -13255,3 +13255,7 @@ footer #governance {
   display: inline;
   color: #0a0a0a;
 }
+
+section#vehicle_details {
+  margin-top: 1em;
+}
