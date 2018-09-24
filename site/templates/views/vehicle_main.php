@@ -44,11 +44,11 @@
 					<?php
 					foreach($groups AS $group){
 						echo "<li>" . $group;
-						// foreach($equipment as $item){
-							if($equipment->Dc_Description = $group){
-								echo $equipment->Do_Description;
+						foreach($equipment as $item){
+							if($item->Dc_Description = $group){
+								echo $item->Do_Description;
 							}
-						// }
+						}
 						echo "</li>";
 					}
 					?>
