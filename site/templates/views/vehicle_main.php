@@ -40,17 +40,19 @@
 				</ul>
 				<div class="tabs-content" data-tabs-content="example-tabs">
 					<div class="tabs-panel is-active" id="panel1">
+					<ul>
 					<?php
 					foreach($groups AS $group){
-						echo "<ul>" . $group;
+						echo "<li>" . $group;
 						foreach($equipment as $item){
 							if($item->Dc_Description = $group){
 								echo $item->Do_Description;
 							}
 						}
-						echo "</ul>";
+						echo "</li>";
 					}
 					?>
+					</ul>
 					</div>
 					<div class="tabs-panel" id="panel2">
 						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
