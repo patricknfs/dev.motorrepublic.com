@@ -41,9 +41,15 @@
 				<div class="tabs-content" data-tabs-content="example-tabs">
 					<div class="tabs-panel is-active" id="panel1">
 					<?php
-					foreach($equipment as $item){
-						echo $item->Do_Description . "<br />";
+					foreach($groups AS $group){
+						echo $group;
+						foreach($equipment as $item){
+							if($item=>Dc_Description == $group){
+								echo $item->Do_Description . "<br />";
+							}
+						}
 					}
+					
 					?>
 					</div>
 					<div class="tabs-panel" id="panel2">
