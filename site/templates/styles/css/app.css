@@ -13260,6 +13260,6 @@ section#vehicle_details {
   margin-top: 1em;
 }
 
-.tabs-panel {
+.tabs-panel li {
   list-style-type: none;
 }
