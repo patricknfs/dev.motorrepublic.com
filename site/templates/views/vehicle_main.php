@@ -40,23 +40,18 @@
 				</ul>
 				<div class="tabs-content" data-tabs-content="example-tabs">
 					<div class="tabs-panel is-active" id="panel1">
-					<ul>
-					<?php
-					foreach($groups AS $group){
-						echo "<li>" . $group;
-						foreach($equipment as $item){
-							// echo $item->Dc_Description . " = " . $group . "<br />";
-							if(trim($item->Dc_Description) === trim($group)){
-								echo $item->Do_Description;
+						<?php
+						foreach($groups AS $group){
+							echo "<ul>" . $group;
+							foreach($equipment as $item){
+								// echo $item->Dc_Description . " = " . $group . "<br />";
+								if(trim($item->Dc_Description) === trim($group)){
+									echo "<li>" . $item->Do_Description . "</li>";
+								}
 							}
-							// else {
-							// 	echo "The categories do not match";
-							// }
+							echo "</ul>";
 						}
-						echo "</li>";
-					}
-					?>
-					</ul>
+						?>
 					</div>
 					<div class="tabs-panel" id="panel2">
 						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
