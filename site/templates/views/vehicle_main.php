@@ -45,7 +45,7 @@
 						echo "<ul>" . $group;
 						foreach($equipment as $item){
 							if($item->Dc_Description = $group){
-								echo item->Do_Description;
+								echo $item->Do_Description;
 							}
 						}
 						echo "</ul>";
