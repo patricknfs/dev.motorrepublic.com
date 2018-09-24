@@ -341,7 +341,30 @@ function AddWSSUsernameToken($client, $username, $password)
     $client->__setSoapHeaders($wssUsernameTokenHeader);
 }
 
-function get_soap_client(){
+function get_soap_client_1(){
+    global  $username, $password;
+    $username = '173210';
+    $password = 'NfS4Je';
+    $wsdl = 'https://soap.cap.co.uk/Vehicles/CapVehicles.asmx?WSDL';
+
+    $options = array(
+        'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
+        'style'=>SOAP_RPC,
+        'use'=>SOAP_ENCODED,
+        'soap_version'=>SOAP_1_2,
+        'cache_wsdl'=>WSDL_CACHE_NONE,
+        'connection_timeout'=>15,
+        'trace'=>true,
+        'encoding'=>'UTF-8',
+        'exceptions'=>true,
+    );
+
+    $client = new SoapClient($wsdl, $options);
+    AddWSSUsernameToken($client, $username, $password);
+    return $client;
+}
+
+function get_soap_client_2(){
     global  $username, $password;
     $username = '173210';
     $password = 'NfS4Je';

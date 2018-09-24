@@ -39,7 +39,7 @@ try
         $username = '173210';
         $password = 'NfS4Je';
         $date = date('c');
-        $client = get_soap_client();
+        $client = get_soap_client_2();
         $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
         $client->GetStandardEquipment($params);
         $data = $client->__getLastResponse();
