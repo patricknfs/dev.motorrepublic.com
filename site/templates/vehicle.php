@@ -43,36 +43,39 @@ try
   $client->GetStandardEquipment($params);
   $data = $client->__getLastResponse();
   $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
+  echo "<pre>";
+    print_r($xml);
+  echo"</pre>";
   $data = new SimpleXMLElement($xml);
   $marques  = $data->xpath('//Table');
   echo "Description is: " . $data->Do_Description;
-  foreach($marques as $item){
-    echo "ManCode: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
-    $range_params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-    $client->GetStandardEquipment($range_params);
-    $data_range = $client->__getLastResponse();
-    $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
-    echo "<pre>";
-        print_r($xml_range);
-    echo"</pre>";
-    // $data_range = new SimpleXMLElement($xml_range);
-    // $ranges  = $data_range->xpath('//Table');
-    // foreach($ranges as $range){
-    //   echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
-    //   $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => false, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-    //   // $client->GetCapMod_IncludeOnRunout($mod_params);
-    //   // $data_mod = $client->__getLastResponse();
-    //   // $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
-    //   // echo "<pre>";
-    //   //   print_r($xml_mod);
-    //   // echo"</pre>";
-    //   // $data_mod = new SimpleXMLElement($xml_mod);
-    //   // $models  = $data_mod->xpath('//Table');
-    //   // foreach ($models AS $model){
-    //   //   echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
-    //   // }
-    // }
-  }
+  // foreach($marques as $item){
+  //   echo "ManCode: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
+  //   $range_params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+  //   $client->GetStandardEquipment($range_params);
+  //   $data_range = $client->__getLastResponse();
+  //   $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
+  //   // echo "<pre>";
+  //   //     print_r($xml_range);
+  //   // echo"</pre>";
+  //   $data_range = new SimpleXMLElement($xml_range);
+  //   $ranges  = $data_range->xpath('//Table');
+  //   foreach($ranges as $range){
+  //     echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
+  //     $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => false, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+  //     // $client->GetCapMod_IncludeOnRunout($mod_params);
+  //     // $data_mod = $client->__getLastResponse();
+  //     // $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
+  //     // echo "<pre>";
+  //     //   print_r($xml_mod);
+  //     // echo"</pre>";
+  //     // $data_mod = new SimpleXMLElement($xml_mod);
+  //     // $models  = $data_mod->xpath('//Table');
+  //     // foreach ($models AS $model){
+  //     //   echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
+  //     // }
+  //   }
+  // }
   if(isset($input->urlSegment1)) {
     $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
     echo $query;
