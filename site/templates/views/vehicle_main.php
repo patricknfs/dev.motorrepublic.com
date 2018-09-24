@@ -49,6 +49,9 @@
 							if($item->Dc_Description == $group){
 								echo $item->Do_Description;
 							}
+							else {
+								echo "The categories do not match";
+							}
 						}
 						echo "</li>";
 					}
