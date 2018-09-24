@@ -42,7 +42,7 @@
 					<div class="tabs-panel is-active" id="panel1">
 					<?php
 					foreach($equipment as $item){
-						echo "Standard Equipment is: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
+						echo $item->Do_Description . "<br />";
 					}
 					?>
 					</div>
