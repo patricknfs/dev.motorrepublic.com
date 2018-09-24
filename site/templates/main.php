@@ -50,8 +50,8 @@ ERROR_REPORTING(E_ALL);
             <a class="social-button twitter" href="#"></a>
             <a class="social-button linkedin" href="#"></a>
             <a class="social-button youtube" href="#"></a>
-            <!-- <a class="social-button instagram" href="#"></a>
-            <a class="social-button pinterest" href="#"></a>
+            <a class="social-button instagram" href="#"></a>
+            <!-- <a class="social-button pinterest" href="#"></a>
             <a class="social-button google-plus" href="#"></a>
             <a class="social-button github" href="#"></a>
             <a class="social-button tumblr" href="#"></a> -->
