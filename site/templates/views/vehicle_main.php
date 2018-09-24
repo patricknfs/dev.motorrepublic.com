@@ -45,8 +45,8 @@
 							echo "<ul><strong>" . $group . "</strong>";
 							foreach($equipment as $item){
 								// echo $item->Dc_Description . " = " . $group . "<br />";
-								if(trim($item->Do_Description) === trim($group)){
-									echo "<li>" . $item->Dc_Description . "</li>";
+								if(trim($item->Dc_Description) === trim($group)){
+									echo "<li>" . $item->Do_Description . "</li>";
 								}
 							}
 							echo "</ul>";
@@ -55,16 +55,16 @@
 					</div>
 					<div class="tabs-panel" id="panel2">
 					<?php
-						foreach($groups2 AS $group2){
-							echo "<ul><strong>" . $group2 . "</strong>";
-							foreach($tech_data as $item2){
-								// echo $item->Dc_Description . " = " . $group . "<br />";
-								if(trim($item2->DT_LongDescription) === trim($group2)){
-									echo "<li><label>" . $item2->Dc_Description . "</label>".  $item2->tech_value_string . "</li>";
-								}
-							}
-							echo "</ul>";
-						}
+						// foreach($groups2 AS $group2){
+						// 	echo "<ul><strong>" . $group2 . "</strong>";
+						// 	foreach($tech_data as $item2){
+						// 		// echo $item->Dc_Description . " = " . $group . "<br />";
+						// 		if(trim($item2->Dc_Description) === trim($group2)){
+						// 			echo "<li><label>" . $item2->DT_LongDescription . "</label>".  $item2->tech_value_string . "</li>";
+						// 		}
+						// 	}
+						// 	echo "</ul>";
+						// }
 						?>
 					</div>
 				</div>
