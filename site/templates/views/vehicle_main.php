@@ -36,7 +36,7 @@
 			<div class="cell small-12">
 				<ul class="tabs" data-tabs id="example-tabs">
 					<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Standard Equipment</a></li>
-					<li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+					<li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Technical Data</a></li>
 				</ul>
 				<div class="tabs-content" data-tabs-content="example-tabs">
 					<div class="tabs-panel is-active" id="panel1">
@@ -54,7 +54,18 @@
 						?>
 					</div>
 					<div class="tabs-panel" id="panel2">
-						<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+					<?php
+						foreach($groups2 AS $group2){
+							echo "<ul><strong>" . $group2 . "</strong>";
+							foreach($tech_data as $item2){
+								// echo $item->Dc_Description . " = " . $group . "<br />";
+								if(trim($item2->DT_LongDescription) === trim($group2)){
+									echo "<li><label>" . $item2->Dc_Description . "</label>".  $item2->tech_value_string . "</li>";
+								}
+							}
+							echo "</ul>";
+						}
+						?>
 					</div>
 				</div>
 			</div>
