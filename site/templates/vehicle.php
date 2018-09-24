@@ -35,50 +35,73 @@ $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($dat
 
 $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
 
-// try
-//     {   
-//         $username = '173210';
-//         $password = 'NfS4Je';
-//         $date = date('c');
-//         $client = get_soap_client_2();
-//         $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
-//         $client->GetStandardEquipment($params);
-//         $data = $client->__getLastResponse();
-//         $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
-//         $data = new SimpleXMLElement($xml);
-//         $marques  = $data->xpath('//Table');
-//         foreach($marques as $item){
-//             echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
-//             $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-//             $client->GetCapRange_IncludeOnRunout($range_params);
-//             $data_range = $client->__getLastResponse();
-//             $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
-//             // echo "<pre>";
-//             //     print_r($xml_range);
-//             // echo"</pre>";
-//             $data_range = new SimpleXMLElement($xml_range);
-//             $ranges  = $data_range->xpath('//Table');
-//             foreach($ranges as $range){
-//                 echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
-//                 $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => false, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
-//                 // $client->GetCapMod_IncludeOnRunout($mod_params);
-//                 // $data_mod = $client->__getLastResponse();
-//                 // $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
-//                 // echo "<pre>";
-//                 //     print_r($xml_mod);
-//                 // echo"</pre>";
-//                 // $data_mod = new SimpleXMLElement($xml_mod);
-//                 // $models  = $data_mod->xpath('//Table');
-//                 // foreach ($models AS $model){
-//                 //     echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
-//                 // }
-//             }
-//         }
-//     }
+function get_soap_client_2(){
+  global  $username, $password;
+  $username = '173210';
+  $password = 'NfS4Je';
+  $wsdl = 'https://soap.cap.co.uk/Nvd/CapNvd.asmx?WSDL';
 
-//     catch(Exception $e){ 
-//         echo $e->getCode(). '<br />'. $e->getMessage();
-//     }
+  $options = array(
+      'uri'=>'http://schemas.xmlsoap.org/soap/envelope/',
+      'style'=>SOAP_RPC,
+      'use'=>SOAP_ENCODED,
+      'soap_version'=>SOAP_1_2,
+      'cache_wsdl'=>WSDL_CACHE_NONE,
+      'connection_timeout'=>15,
+      'trace'=>true,
+      'encoding'=>'UTF-8',
+      'exceptions'=>true,
+  );
+
+  $client = new SoapClient($wsdl, $options);
+  AddWSSUsernameToken($client, $username, $password);
+  return $client;
+}
+
+try
+    {   
+        $username = '173210';
+        $password = 'NfS4Je';
+        $date = date('c');
+        $client = get_soap_client_2();
+        $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
+        $client->GetStandardEquipment($params);
+        $data = $client->__getLastResponse();
+        $xml    = str_replace(array("diffgr:","msdata:"),'', trim($data));
+        $data = new SimpleXMLElement($xml);
+        $marques  = $data->xpath('//Table');
+        foreach($marques as $item){
+            echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
+            $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+            $client->GetCapRange_IncludeOnRunout($range_params);
+            $data_range = $client->__getLastResponse();
+            $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
+            // echo "<pre>";
+            //     print_r($xml_range);
+            // echo"</pre>";
+            $data_range = new SimpleXMLElement($xml_range);
+            $ranges  = $data_range->xpath('//Table');
+            foreach($ranges as $range){
+                echo "RangeCode: " . $range->CRan_Code . " Range: " . $item->CMan_Name . " " . $range->CRan_Name . "<br />";
+                $mod_params = array('justCurrentModels' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manRanCodeIsMan' => false, 'manRanCode' => $range->CRan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+                // $client->GetCapMod_IncludeOnRunout($mod_params);
+                // $data_mod = $client->__getLastResponse();
+                // $xml_mod    = str_replace(array("diffgr:","msdata:"),'', trim($data_mod));
+                // echo "<pre>";
+                //     print_r($xml_mod);
+                // echo"</pre>";
+                // $data_mod = new SimpleXMLElement($xml_mod);
+                // $models  = $data_mod->xpath('//Table');
+                // foreach ($models AS $model){
+                //     echo "ModCode: " . $range->CRan_Code . " Model: " . $item->CMan_Name . " " . $range->CRan_Name . " " . $model->CMod_Name . "<br />";
+                // }
+            }
+        }
+    }
+
+    catch(Exception $e){ 
+        echo $e->getCode(). '<br />'. $e->getMessage();
+    }
 
 ob_start();
 include('views/vehicle_main.php');
