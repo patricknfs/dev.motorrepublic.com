@@ -18,18 +18,19 @@ include "inc/functions.php";
 // print_r($_POST);
 try
 {
-if(isset($input->urlSegment1)) {
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
-  echo $query;
-  $result = $conn->query($query) or die(mysqli_error($conn));
-  $data = $result->fetch_assoc();
+  if(isset($input->urlSegment1)) {
+    $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
+    echo $query;
+    $result = $conn->query($query) or die(mysqli_error($conn));
+    $data = $result->fetch_assoc();
 
-  $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)), 2, '.', ',');
-  $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2), 2, '.', ',');
-  $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2))*3), 2, '.', ',');
-  $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2)*3), 2, '.', ',');
+    $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)), 2, '.', ',');
+    $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2), 2, '.', ',');
+    $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2))*3), 2, '.', ',');
+    $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+2)*1.2)*3), 2, '.', ',');
 
-  $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
+    $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
+  }
 }
 catch(Exception $e){ 
   echo $e->getCode(). '<br />'. $e->getMessage();
