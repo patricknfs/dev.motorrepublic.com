@@ -53,7 +53,7 @@ try
   $groups = array_unique($data->xpath('//SE/Dc_Description'));
   // print_r(array_unique($groups));
   $equipment = $data->xpath('//SE');
-  print_r($equipment);
+  // print_r($equipment);
 
   if(isset($input->urlSegment1)) {
     $query = "SELECT `id`,`cap_id`,`cap_code`,`source`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`deal_notes` FROM `team`.`rates_combined` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
