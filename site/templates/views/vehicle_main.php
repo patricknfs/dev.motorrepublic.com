@@ -45,13 +45,13 @@
 					foreach($groups AS $group){
 						echo "<li>" . $group;
 						foreach($equipment as $item){
-							echo $item->Dc_Description . " = " . $group . "<br />";
+							// echo $item->Dc_Description . " = " . $group . "<br />";
 							if(trim($item->Dc_Description) === trim($group)){
 								echo $item->Do_Description;
 							}
-							else {
-								echo "The categories do not match";
-							}
+							// else {
+							// 	echo "The categories do not match";
+							// }
 						}
 						echo "</li>";
 					}
