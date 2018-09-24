@@ -50,9 +50,9 @@ try
   //   print_r($xml);
   // echo"</pre>";
   $data = new SimpleXMLElement($xml);
-  $equipment = $data->xpath('//Table');
+  $equipment = $data->xpath('//SE');
   foreach($equipment as $item){
-    echo "Standard Equipment is: " . $item->SE->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
+    echo "Standard Equipment is: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
     $range_params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
     $client->GetStandardEquipment($range_params);
     $data_range = $client->__getLastResponse();
