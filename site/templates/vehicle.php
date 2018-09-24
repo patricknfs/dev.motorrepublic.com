@@ -46,8 +46,8 @@ try
   $data = new SimpleXMLElement($xml);
   $marques  = $data->xpath('//Table');
   foreach($marques as $item){
-    echo "ManCode: " . $item->CMan_Code . " and Manufacturer: " . $item->CMan_Name . "<br />";
-    $range_params = array('justCurrentRanges' => true,'subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
+    echo "ManCode: " . $item->Do_Description . " and Manufacturer: " . $item->CMan_Name . "<br />";
+    $range_params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'manCode' => $item->CMan_Code, 'bodyStyleFilter' => '' ); //define your parameters here
     $client->GetCapRange_IncludeOnRunout($range_params);
     $data_range = $client->__getLastResponse();
     $xml_range    = str_replace(array("diffgr:","msdata:"),'', trim($data_range));
