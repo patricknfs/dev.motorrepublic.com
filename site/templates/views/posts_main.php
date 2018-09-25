@@ -3,7 +3,7 @@
 ?>
 <div class="grid-container" itemscope itemtype="http://schema.org/Blog">
 	<div class="grid-x small-12">
-		<h1>Our latest blog posts</h1>
+		<h1>The Latest News from Motor Republic Gravesend</h1>
 	</div>
 	<div class="grid-x small-12">
 		<?php
