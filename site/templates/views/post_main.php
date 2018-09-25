@@ -10,11 +10,13 @@
         echo "<p><small>" . $page->date . "</small></p>";
       }
       ?>
-      <div class="cell small-6">
-        <img src="<?=$page->images->first()->url?>" />
-      </div>
-      <div class="cell small-6">
-        <span itemprop='articleBody'><?=$page->body?></span>
+      <div class="grid-x">
+        <div class="cell small-6">
+          <img src="<?=$page->images->first()->url?>" />
+        </div>
+        <div class="cell small-6">
+          <span itemprop='articleBody'><?=$page->body?></span>
+        </div>
       </div>
     </div>
     <?php 
