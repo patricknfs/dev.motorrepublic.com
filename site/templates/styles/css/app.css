@@ -13274,3 +13274,7 @@ section#vehicle_details {
 .tabs-panel ul li {
   list-style-type: none;
 }
+
+section#post {
+  margin-top: 2em;
+}
