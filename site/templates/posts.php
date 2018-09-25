@@ -1,7 +1,7 @@
 <?php
 //posts.php template
 include("inc/functions.php"); 
-$articles = $pages->get("/blog/, limit=10, sort=-date")->children;
+$articles = $pages->get("/regions/gravesend/blog/, limit=10, sort=-date")->children;
 print_r($articles);
 wire()->addHook("Page::wordLimiter", null, "wordLimiter");
 ob_start();
