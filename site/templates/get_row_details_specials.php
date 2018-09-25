@@ -23,7 +23,7 @@ foreach($form->entries()->find("sort=created") as $entry) {
 
 foreach($entries as $entry){
   // for every field in the result..
-  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['description_1'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list_price'] . "', '" . $entry['vehicle_otr_price'] . "', '" . $entry['p11d_price'] . "', '" . $entry['co2'] . "','')";
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['description_1'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list_price'] . "', '" . $entry['vehicle_otr_price'] . "', '" . $entry['p11d_price'] . "', '" . $entry['co2'] . "','" . $entry['deal_notes'] . "')";
   echo $insert;
   $result = $conn->query($insert) or die(mysqli_error($conn));
   $entry++;
