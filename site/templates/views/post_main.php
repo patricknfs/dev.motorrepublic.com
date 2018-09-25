@@ -4,14 +4,18 @@
 <div class="grid-container">
   <div class="grid-x">
     <div class="cell small-12 blog" itemscope itemtype="http://schema.org/BlogPosting">
+      <h1 itemprop='name'><?=$page->title?></h1>
       <?php
       if($page->date){
         echo "<p><small>" . $page->date . "</small></p>";
       }
       ?>
-      <h1 itemprop='name'><?=$page->title?></h1>
-      <img class="floatright" src="<?=$page->images->first()->url?>" />
-      <span itemprop='articleBody'><?=$page->body?></span>
+      <div class="cell small-6">
+        <img src="<?=$page->images->first()->url?>" />
+      </div>
+      <div class="cell small-6">
+        <span itemprop='articleBody'><?=$page->body?></span>
+      </div>
     </div>
     <?php 
     if(count($page->images) > 1){
