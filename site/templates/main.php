@@ -35,6 +35,7 @@ ERROR_REPORTING(E_ALL);
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
+    <link rel='stylesheet' type='text/css' href='<?=$config->urls->FieldtypeComments?>comments.css' />
   </head>
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">

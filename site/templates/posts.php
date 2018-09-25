@@ -1,6 +1,6 @@
 <?php
 //posts.php template
-include("inc/functions.inc"); 
+include("inc/functions.php"); 
 $articles = $pages->get("/blog/, limit=10, sort=-date")->children;
 wire()->addHook("Page::wordLimiter", null, "wordLimiter");
 ob_start();
