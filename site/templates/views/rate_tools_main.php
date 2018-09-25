@@ -44,7 +44,7 @@
             '<td width="30%">'+d.CO2+'</td>'+
             '<td><strong>P11d:</strong></td>'+
             '<td><p>'+d.p11d_price+'</p></td>'+
-            '<td width="40%" rowspan="2"><p>'+d.deal_notes+'</p></td>'+
+            '<td rowspan="2"><p>'+d.notes+'</p></td>'+
         '</tr>'+
         '<tr>'+
             '<td width="30%"><p><strong>List Price:</strong></p></td>'+
