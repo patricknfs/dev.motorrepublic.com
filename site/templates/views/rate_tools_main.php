@@ -68,9 +68,9 @@
 			},
       "columns": [
         {
-          "className": 'details-control',
-          "orderable": false,
-          "data": null,
+          "className":      'details-control',
+          "orderable":      false,
+          "data":           null,
           "defaultContent": ''
         },
         { "data": "source" },
