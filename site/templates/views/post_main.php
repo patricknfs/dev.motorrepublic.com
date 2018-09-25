@@ -10,7 +10,7 @@
         echo "<p><small>" . $page->date . "</small></p>";
       }
       ?>
-      <div class="grid-x">
+      <div class="grid-x grid-margin-x">
         <div class="cell small-6">
           <img src="<?=$page->images->first()->url?>" />
         </div>
