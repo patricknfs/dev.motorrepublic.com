@@ -14,6 +14,7 @@ $AdminMessage = "MR Lex CSV Upload Report\n";
 // Now open the local file and loop through it.
 $truncate = "TRUNCATE TABLE `team`.`rates_lex`";
 $result = mysqli_query($conn, $truncate);
+
 $row = 1;
 $csv = "inc/lex_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
@@ -26,6 +27,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       $data22 = str_replace(',','',$data[22]);
       $data9 = str_replace(',','',$data[9]);
+      $cap_query = "SELECT `cap_id FROM `team`.`vehicles` WHERE `cap_code` == " . $data[0] . " LIMIT 1";
+      $cap_result = mysqli_query($conn, $cap_query);
+      $cap_row = mysqli_fetch_assoc($cap_result);
+      $capid = $cap_row['cap_id'];
+
       switch($data[8]){
         case 8000:
         switch($data[7]){
@@ -47,6 +53,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
+        `cap_id` = " . $capid . ",
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[15] . ",
         `p11d_price` = " . $data[6] . ",
@@ -76,6 +83,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
+        `cap_id` = " . $capid . ",
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[15] . ",
         `p11d_price` = " . $data[6] . ",
@@ -105,6 +113,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
+        `cap_id` = " . $capid . ",
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
@@ -134,6 +143,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
+        `cap_id` = " . $capid . ",
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
@@ -163,6 +173,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
+        `cap_id` = " . $capid . ",
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
@@ -194,6 +205,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
+        `cap_id` = " . $capid . ",
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
