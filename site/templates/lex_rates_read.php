@@ -30,7 +30,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` == " . $data[0] . " LIMIT 1";
       echo $cap_query . "</n>";
       $cap_result = mysqli_query($conn, $cap_query);
-      print_r($cap_result);
+      echo "print_r is: " . print_r($cap_result);
       $cap_row = mysqli_fetch_assoc($cap_result);
       $capid = $cap_row['cap_id'];
 
