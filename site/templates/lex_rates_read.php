@@ -27,9 +27,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 2){
       $data22 = str_replace(',','',$data[22]);
       $data9 = str_replace(',','',$data[9]);
-      $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` == '" . $data[0] . "' LIMIT 1";
+      $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` == " . $data[0] . " LIMIT 1";
       echo $cap_query . "</n>";
       $cap_result = mysqli_query($conn, $cap_query);
+      print_r($cap_result);
       $cap_row = mysqli_fetch_assoc($cap_result);
       $capid = $cap_row['cap_id'];
 
