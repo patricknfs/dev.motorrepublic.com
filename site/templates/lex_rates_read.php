@@ -22,7 +22,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // print_r($rawdata);
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
-    $data = $rawdata;
+    $data = trim($rawdata);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 2){
