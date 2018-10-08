@@ -55,6 +55,13 @@ $query = "SELECT
     UNION
     (
       SELECT 
+      'lex' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      FROM
+        `team`.`rates_lex` HAVING rent IS NOT NULL
+    )
+    UNION
+    (
+      SELECT 
         'arval' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
@@ -90,6 +97,13 @@ $query = "SELECT
     UNION
     (
       SELECT 
+      'lex' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      FROM
+        `team`.`rates_lex` HAVING rent IS NOT NULL
+    )
+    UNION
+    (
+      SELECT 
         'arval' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
@@ -121,6 +135,13 @@ $query = "SELECT
       'ogilvie' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
       FROM
         `team`.`rates_ogilvie` HAVING rent IS NOT NULL
+    )
+    UNION
+    (
+      SELECT 
+      'lex' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      FROM
+        `team`.`rates_lex` HAVING rent IS NOT NULL
     )
   ) AS mr2
   ON mr1.code = mr2.capid
