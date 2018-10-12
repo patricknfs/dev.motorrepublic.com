@@ -98,12 +98,12 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         break;
         default:
-        echo $data[40] . "monthly profile not coded";
+        echo $data[23] . "monthly profile not coded";
       }
       switch($mileage){
         case 8000:
         if($data[22] == 0){
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_8K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -122,7 +122,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_8K_PA_rental_m` = " . $data[47];
             break;
@@ -151,7 +151,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         break;
         case 10000:
         if($data[22] == 0){
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_10K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -170,7 +170,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_10K_PA_rental_m` = " . $data[47];
             break;
@@ -199,7 +199,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         break;
         case 15000:
         if($data[22] == 0){
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_15K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -218,7 +218,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_15K_PA_rental_m` = " . $data[47];
             break;
@@ -247,7 +247,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         break;
         case 20000:
         if($data[22] == 0){
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_20K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -266,7 +266,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_20K_PA_rental_m` = " . $data[47];
             break;
@@ -295,7 +295,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         break;
         case 25000:
         if($data[22] == 0){
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_25K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -314,7 +314,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_25K_PA_rental_m` = " . $data[47];
             break;
@@ -343,7 +343,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         break;
         case 30000:
         if($data[22] == 0){
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_30K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -362,7 +362,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[23]){
             case 24:
             $insert = "`24_30K_PA_rental_m` = " . $data[47];
             break;
