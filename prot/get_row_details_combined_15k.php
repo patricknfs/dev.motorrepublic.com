@@ -59,6 +59,7 @@ $query = "SELECT
       FROM
         `team`.`rates_lex` HAVING rent IS NOT NULL
     )
+    UNION
     (
       SELECT 
       'alphabet' AS src, '24M' AS `term`, '15K' AS `mileage`,`24_15K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
