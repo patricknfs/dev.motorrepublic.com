@@ -25,9 +25,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('#N/A',NULL,$data);
     echo "Raw mileage is: " . $data[23] . "\n";
     if($row > 1){
-      switch($data[23]){
+      switch($data[22]){
         case 24:
-        switch($data[22]){
+        switch($data[23]){
           case 16000:
           $mileage = 8000;
           break;
@@ -51,7 +51,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         break;
         case 36:
-        switch($data[22]){
+        switch($data[23]){
           case 24000:
           $mileage = 8000;
           break;
@@ -75,7 +75,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         break;
         case 48:
-        switch($data[22]){
+        switch($data[23]){
           case 32000:
           $mileage = 8000;
           break;
@@ -99,7 +99,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         break;
         default:
-        echo $data[23] . "monthly profile not coded";
+        echo $data[22] . "monthly profile not coded";
       }
       echo "Mileage is: " . $mileage . "<br />";
       switch($mileage){
