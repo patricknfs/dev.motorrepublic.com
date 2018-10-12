@@ -102,7 +102,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       }
       switch($mileage){
         case 8000:
-        if($data[43] == 0){
+        if($data[22] == 0){
           switch($data[40]){
             case 24:
             $insert = "`24_8K_PA_rental_nm` = " . ($data[47]);
@@ -150,7 +150,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 10000:
-        if($data[43] == 0){
+        if($data[22] == 0){
           switch($data[40]){
             case 24:
             $insert = "`24_10K_PA_rental_nm` = " . ($data[47]);
@@ -198,7 +198,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 15000:
-        if($data[43] == 0){
+        if($data[22] == 0){
           switch($data[40]){
             case 24:
             $insert = "`24_15K_PA_rental_nm` = " . ($data[47]);
@@ -246,7 +246,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 20000:
-        if($data[43] == 0){
+        if($data[22] == 0){
           switch($data[40]){
             case 24:
             $insert = "`24_20K_PA_rental_nm` = " . ($data[47]);
@@ -294,7 +294,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 25000:
-        if($data[43] == 0){
+        if($data[22] == 0){
           switch($data[40]){
             case 24:
             $insert = "`24_25K_PA_rental_nm` = " . ($data[47]);
@@ -342,7 +342,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 30000:
-        if($data[43] == 0){
+        if($data[22] == 0){
           switch($data[40]){
             case 24:
             $insert = "`24_30K_PA_rental_nm` = " . ($data[47]);
