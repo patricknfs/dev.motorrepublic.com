@@ -23,6 +23,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = preg_replace('/\s+/', '', $rawdata);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
+    echo "Raw mileage is: " . $data[23] . "\n";
     if($row > 1){
       switch($data[23]){
         case 24:
