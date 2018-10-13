@@ -1,7 +1,8 @@
 #!/usr/bin/php
 <?php
 
-// Oguilvie ratebooks are standard 3 up front
+// Ogilvie ratebooks are standard 3 up front
+// Ratebooks are sent by email from Craig Gillepsie craig.gillespie@Ogilvie.co.uk
 
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
