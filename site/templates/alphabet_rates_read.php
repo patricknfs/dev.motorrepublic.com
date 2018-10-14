@@ -23,48 +23,48 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 7){
       if($data[33] == 0){
-        $insert = "`24_8K_PA_rental_nm` = " . ($data[8]);
-        $insert .= ",`36_8K_PA_rental_nm` = " . ($data[36]);
-        $insert .= ",`48_8K_PA_rental_nm` = " . ($data[64]);
-        $insert .= ",`60_8K_PA_rental_nm` = " . ($data[92]);
-        $insert .= ",`24_10K_PA_rental_nm` = " . ($data[12]);
-        $insert .= ",`36_10K_PA_rental_nm` = " . ($data[40]);
-        $insert .= ",`48_10K_PA_rental_nm` = " . ($data[68]);
-        $insert .= ",`60_10K_PA_rental_nm` = " . ($data[96]);
-        $insert .= ",`24_15K_PA_rental_nm` = " . ($data[20]);
-        $insert .= ",`36_15K_PA_rental_nm` = " . ($data[48]);
-        $insert .= ",`48_15K_PA_rental_nm` = " . ($data[76]);
-        $insert .= ",`60_15K_PA_rental_nm` = " . ($data[104]);
-        $insert .= ",`24_20K_PA_rental_nm` = " . ($data[24]);
-        $insert .= ",`36_20K_PA_rental_nm` = " . ($data[52]);
-        $insert .= ",`48_20K_PA_rental_nm` = " . ($data[80]);
-        $insert .= ",`60_20K_PA_rental_nm` = " . ($data[108]);
-        $insert .= ",`24_30K_PA_rental_nm` = " . ($data[28]);
-        $insert .= ",`36_30K_PA_rental_nm` = " . ($data[56]);
-        $insert .= ",`48_30K_PA_rental_nm` = " . ($data[84]);
-        $insert .= ",`60_30K_PA_rental_nm` = " . ($data[112]);
+        $insert = "`24_8K_PA_rental_nm` = " . (str_replace('£','',$data[8]));
+        $insert .= ",`36_8K_PA_rental_nm` = " . (str_replace('£','',$data[36]));
+        $insert .= ",`48_8K_PA_rental_nm` = " . (str_replace('£','',$data[64]));
+        $insert .= ",`60_8K_PA_rental_nm` = " . (str_replace('£','',$data[92]));
+        $insert .= ",`24_10K_PA_rental_nm` = " . (str_replace('£','',$data[12]));
+        $insert .= ",`36_10K_PA_rental_nm` = " . (str_replace('£','',$data[40]));
+        $insert .= ",`48_10K_PA_rental_nm` = " . (str_replace('£','',$data[68]));
+        $insert .= ",`60_10K_PA_rental_nm` = " . (str_replace('£','',$data[96]));
+        $insert .= ",`24_15K_PA_rental_nm` = " . (str_replace('£','',$data[20]));
+        $insert .= ",`36_15K_PA_rental_nm` = " . (str_replace('£','',$data[48]));
+        $insert .= ",`48_15K_PA_rental_nm` = " . (str_replace('£','',$data[76]));
+        $insert .= ",`60_15K_PA_rental_nm` = " . (str_replace('£','',$data[104]));
+        $insert .= ",`24_20K_PA_rental_nm` = " . (str_replace('£','',$data[24]));
+        $insert .= ",`36_20K_PA_rental_nm` = " . (str_replace('£','',$data[52]));
+        $insert .= ",`48_20K_PA_rental_nm` = " . (str_replace('£','',$data[80]));
+        $insert .= ",`60_20K_PA_rental_nm` = " . (str_replace('£','',$data[108]));
+        $insert .= ",`24_30K_PA_rental_nm` = " . (str_replace('£','',$data[28]));
+        $insert .= ",`36_30K_PA_rental_nm` = " . (str_replace('£','',$data[56]));
+        $insert .= ",`48_30K_PA_rental_nm` = " . (str_replace('£','',$data[84]));
+        $insert .= ",`60_30K_PA_rental_nm` = " . (str_replace('£','',$data[112]));
       }
       else {
-        $insert .= ",`24_8K_PA_rental_m` = " . $data[10];
-        $insert .= ",`36_8K_PA_rental_m` = " . $data[38];
-        $insert .= ",`48_8K_PA_rental_m` = " . $data[66];
-        $insert .= ",`60_8K_PA_rental_m` = " . $data[94];
-        $insert .= ",`24_10K_PA_rental_m` = " . $data[14];
-        $insert .= ",`36_10K_PA_rental_m` = " . $data[42];
-        $insert .= ",`48_10K_PA_rental_m` = " . $data[70];
-        $insert .= ",`60_10K_PA_rental_m` = " . $data[98];
-        $insert .= ",`24_15K_PA_rental_m` = " . $data[22];
-        $insert .= ",`36_15K_PA_rental_m` = " . $data[50];
-        $insert .= ",`48_15K_PA_rental_m` = " . $data[78];
-        $insert .= ",`60_15K_PA_rental_m` = " . $data[106];
-        $insert .= ",`24_20K_PA_rental_m` = " . $data[26];
-        $insert .= ",`36_20K_PA_rental_m` = " . $data[54];
-        $insert .= ",`48_20K_PA_rental_m` = " . $data[82];
-        $insert .= ",`60_20K_PA_rental_m` = " . $data[110];
-        $insert .= ",`24_30K_PA_rental_m` = " . $data[30];
-        $insert .= ",`36_30K_PA_rental_m` = " . $data[58];
-        $insert .= ",`48_30K_PA_rental_m` = " . $data[86];
-        $insert .= ",`60_30K_PA_rental_m` = " . $data[114];
+        $insert .= ",`24_8K_PA_rental_m` = " . str_replace('£','',$data[10];
+        $insert .= ",`36_8K_PA_rental_m` = " . str_replace('£','',$data[38];
+        $insert .= ",`48_8K_PA_rental_m` = " . str_replace('£','',$data[66];
+        $insert .= ",`60_8K_PA_rental_m` = " . str_replace('£','',$data[94];
+        $insert .= ",`24_10K_PA_rental_m` = " . str_replace('£','',$data[14];
+        $insert .= ",`36_10K_PA_rental_m` = " . str_replace('£','',$data[42];
+        $insert .= ",`48_10K_PA_rental_m` = " . str_replace('£','',$data[70];
+        $insert .= ",`60_10K_PA_rental_m` = " . str_replace('£','',$data[98];
+        $insert .= ",`24_15K_PA_rental_m` = " . str_replace('£','',$data[22];
+        $insert .= ",`36_15K_PA_rental_m` = " . str_replace('£','',$data[50];
+        $insert .= ",`48_15K_PA_rental_m` = " . str_replace('£','',$data[78];
+        $insert .= ",`60_15K_PA_rental_m` = " . str_replace('£','',$data[106];
+        $insert .= ",`24_20K_PA_rental_m` = " . str_replace('£','',$data[26];
+        $insert .= ",`36_20K_PA_rental_m` = " . str_replace('£','',$data[54];
+        $insert .= ",`48_20K_PA_rental_m` = " . str_replace('£','',$data[82];
+        $insert .= ",`60_20K_PA_rental_m` = " . str_replace('£','',$data[110];
+        $insert .= ",`24_30K_PA_rental_m` = " . str_replace('£','',$data[30];
+        $insert .= ",`36_30K_PA_rental_m` = " . str_replace('£','',$data[58];
+        $insert .= ",`48_30K_PA_rental_m` = " . str_replace('£','',$data[86];
+        $insert .= ",`60_30K_PA_rental_m` = " . str_replace('£','',$data[114];
       }
       $update = "INSERT INTO `team`.`rates_alphabet`
       SET
