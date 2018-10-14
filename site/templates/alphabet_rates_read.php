@@ -22,6 +22,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 7){
+      $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` = '" . trim($data[0]) . "' LIMIT 1";
+      // echo $cap_query . "</n>";
+      $cap_result = mysqli_query($conn, $cap_query);
+      $cap_row = mysqli_fetch_assoc($cap_result);
+      $capid = $cap_row['cap_id']
       if($data[33] == 0){
         $insert = "`24_8K_PA_rental_nm` = " . (str_replace('£','',$data[8]));
         $insert .= ",`36_8K_PA_rental_nm` = " . (str_replace('£','',$data[36]));
@@ -68,11 +73,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       }
       $update = "INSERT INTO `team`.`rates_alphabet`
       SET
-      `cap_id` = " . $data[1] . ",
+      `cap_id` = " . $capid  . ",
       `CO2` = " . $data[15] . ",
-      `vehicle_list_price` = " . $data[23] . ",
-      `vehicle_otr_price` = " . $data[32] . ",
-      `p11d_price` = " . $data[35] . ",
+      `p11d_price` = " . str_replace('£','',$data[3]) . ",
       `updated` = NOW(),
       " . $insert . "
       ON DUPLICATE KEY UPDATE
