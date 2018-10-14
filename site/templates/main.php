@@ -101,12 +101,12 @@ ERROR_REPORTING(E_ALL);
             echo $treeMenu->render($options);
             ?>
           </div>
-          <div class="top-bar-right">
+          <!-- <div class="top-bar-right">
             <ul class="menu">
               <li><input type="search" placeholder="Search"></li>
               <li><button type="button" class="button">Search</button></li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </nav>
     </header>
