@@ -49,7 +49,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $insert .= "`24_30K_PA_rental_nm` = '" . $data[28] . "',";
         $insert .= "`36_30K_PA_rental_nm` = '" . $data[56] . "',";
         $insert .= "`48_30K_PA_rental_nm` = '" . $data[84] . "',";
-        $insert .= "`60_30K_PA_rental_nm` = '" . $data[112] . "',";
+        $insert .= "`60_30K_PA_rental_nm` = '" . $data[112] . "'";
       }
       else {
         $insert .= "`24_8K_PA_rental_m` = '" . $data[10] . "',";
@@ -82,7 +82,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       " . $insert . "
       ON DUPLICATE KEY UPDATE
       `updated` = NOW(),
-      " . $insert . " LIMIT 1;";
+      " . $insert . ";";
       echo $update . "\n";
       $result2 = mysqli_query($conn, $update);
     }
