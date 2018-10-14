@@ -18,7 +18,7 @@ $row = 1;
 $csv = "inc/alphabet_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // $data = preg_replace('/\s+/', '', $rawdata);
+    $data = preg_replace('/\s+/', '', $data);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 7){
