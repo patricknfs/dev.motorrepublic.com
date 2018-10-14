@@ -86,6 +86,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       $result2 = mysqli_query($conn, $update);
     }
     $row++;
+    unset($insert);
   }
   echo "number of rows is: " . $row;
   $AdminMessage .= $row . " rows inserted\n";
