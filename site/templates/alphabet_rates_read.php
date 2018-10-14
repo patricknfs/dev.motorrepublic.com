@@ -26,7 +26,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       // echo $cap_query . "</n>";
       $cap_result = mysqli_query($conn, $cap_query);
       $cap_row = mysqli_fetch_assoc($cap_result);
-      $capid = $cap_row['cap_id']
+      $capid = $cap_row['cap_id'];
       if($data[33] == 0){
         $insert = "`24_8K_PA_rental_nm` = " . (str_replace('£','',$data[8]));
         $insert .= ",`36_8K_PA_rental_nm` = " . (str_replace('£','',$data[36]));
