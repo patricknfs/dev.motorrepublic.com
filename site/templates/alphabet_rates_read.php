@@ -75,9 +75,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       }
       $update = "INSERT INTO `team`.`rates_alphabet`
       SET
-      `cap_id` = " . $capid  . ",
-      `CO2` = '" . $data[15] . ",
-      `p11d_price` = " . str_replace('£','',$data[3]) . ",
+      `cap_id` = '" . $capid  . "',
+      `CO2` = '" . $data[15] . "',
+      `p11d_price` = '" . str_replace('£','',$data[3]) . "',
       `updated` = NOW(),
       " . $insert . "
       ON DUPLICATE KEY UPDATE
