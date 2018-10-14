@@ -82,7 +82,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       " . $insert . "
       ON DUPLICATE KEY UPDATE
       `updated` = NOW(),
-      " . $insert . ";";
+      " . $insert . " LIMIT 1;";
       echo $update . "\n";
       $result2 = mysqli_query($conn, $update);
     }
