@@ -28,8 +28,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       $cap_result = mysqli_query($conn, $cap_query);
       $cap_row = mysqli_fetch_assoc($cap_result);
       $capid = $cap_row['cap_id'] . "'";
+      $insert ='';
       if($data[33] == 0){
-        $insert = "`24_8K_PA_rental_nm` = '" . $data[8] . "'";
+        $insert .= "`24_8K_PA_rental_nm` = '" . $data[8] . "'";
         $insert .= ",`36_8K_PA_rental_nm` = '" . $data[36] . "'";
         $insert .= ",`48_8K_PA_rental_nm` = '" . $data[64] . "'";
         $insert .= ",`60_8K_PA_rental_nm` = '" . $data[92] . "'";
