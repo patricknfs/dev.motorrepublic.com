@@ -56,19 +56,6 @@
 <li><input type="checkbox" value="16" name="group[21][16]" id="mce-group[21]-21-4"><label for="mce-group[21]-21-4">By Post</label></li>
 </ul>
 </div>
-<div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
-    <div class="content__gdpr">
-        <label>Marketing Permissions</label>
-        <p>Motor Republic will use the information you provide on this form to be in touch with you and to provide updates and marketing. Please let us know all the ways you would like to hear from us:</p>
-        <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
-		<label class="checkbox subfield" for="gdpr_13"><input type="checkbox" id="gdpr_13" name="gdpr[13]" value="Y" class="av-checkbox "><span>Email</span> </label><label class="checkbox subfield" for="gdpr_17"><input type="checkbox" id="gdpr_17" name="gdpr[17]" value="Y" class="av-checkbox "><span>Direct Mail</span> </label><label class="checkbox subfield" for="gdpr_21"><input type="checkbox" id="gdpr_21" name="gdpr[21]" value="Y" class="av-checkbox "><span>Customized online advertising</span> </label>
-        </fieldset>
-        <p>You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from us, or by contacting us at sales@motorrepublic.com. We will treat your information with respect. For more information about our privacy practices please visit our website. By clicking below, you agree that we may process your information in accordance with these terms.</p>
-    </div>
-    <div class="content__gdprLegal">
-        <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. Learn more about Mailchimp's privacy practices <a href="https://mailchimp.com/legal/" target="_blank">here</a>.</p>
-    </div>
-</div>
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
