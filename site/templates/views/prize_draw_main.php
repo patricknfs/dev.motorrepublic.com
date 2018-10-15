@@ -48,13 +48,13 @@
 	<input type="text" value="" name="COMPANY" class="" id="mce-COMPANY">
 </div>
 <div class="mc-field-group input-group">
-    <strong>I would like to be contacted </strong>
-    <ul><li><input type="checkbox" value="1" name="group[21][1]" id="mce-group[21]-21-0"><label for="mce-group[21]-21-0">Weekly Offers By Email</label></li>
-<li><input type="checkbox" value="2" name="group[21][2]" id="mce-group[21]-21-1"><label for="mce-group[21]-21-1">Monthly News Email</label></li>
-<li><input type="checkbox" value="4" name="group[21][4]" id="mce-group[21]-21-2"><label for="mce-group[21]-21-2">By Phone</label></li>
-<li><input type="checkbox" value="8" name="group[21][8]" id="mce-group[21]-21-3"><label for="mce-group[21]-21-3">By SMS</label></li>
-<li><input type="checkbox" value="16" name="group[21][16]" id="mce-group[21]-21-4"><label for="mce-group[21]-21-4">By Post</label></li>
-</ul>
+  <p><strong>I would like to be contacted </strong></p>
+  <ul><li><input type="checkbox" value="1" name="group[21][1]" id="mce-group[21]-21-0"><label for="mce-group[21]-21-0">Weekly Offers By Email</label></li>
+  <li><input type="checkbox" value="2" name="group[21][2]" id="mce-group[21]-21-1"><label for="mce-group[21]-21-1">Monthly News Email</label></li>
+  <li><input type="checkbox" value="4" name="group[21][4]" id="mce-group[21]-21-2"><label for="mce-group[21]-21-2">By Phone</label></li>
+  <li><input type="checkbox" value="8" name="group[21][8]" id="mce-group[21]-21-3"><label for="mce-group[21]-21-3">By SMS</label></li>
+  <li><input type="checkbox" value="16" name="group[21][16]" id="mce-group[21]-21-4"><label for="mce-group[21]-21-4">By Post</label></li>
+  </ul>
 </div>
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
