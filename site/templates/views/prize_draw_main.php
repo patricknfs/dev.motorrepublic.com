@@ -1,5 +1,5 @@
 <?php
-// basic-page_main.php
+// prize draw_main.php
 ?>
 <div class="grid-container">
   <div class="grid-x">
