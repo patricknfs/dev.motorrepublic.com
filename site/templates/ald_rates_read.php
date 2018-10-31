@@ -49,9 +49,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `CO2` = " . $data[10] . ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_list_price` = " . str_replace(',','',$data[15]) . ",
+        `vehicle_otr_price` = " . str_replace(',','',$data[15]) . ",
+        `p11d_price` = " . str_replace(',','',$data[5]) . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -81,9 +81,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `CO2` = " . $data[10] . ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_list_price` = " . str_replace(',','',$data[15]) . ",
+        `vehicle_otr_price` = " . str_replace(',','',$data[15]) . ",
+        `p11d_price` = " . str_replace(',','',$data[5]) . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -113,9 +113,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `CO2` = " . $data[10] . ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_list_price` = " . str_replace(',','',$data[15]) . ",
+        `vehicle_otr_price` = " . str_replace(',','',$data[15]) . ",
+        `p11d_price` = " . str_replace(',','',$data[5]) . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -145,9 +145,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `CO2` = " . $data[10] . ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_list_price` = " . str_replace(',','',$data[15]) . ",
+        `vehicle_otr_price` = " . str_replace(',','',$data[15]) . ",
+        `p11d_price` = " . str_replace(',','',$data[5]) . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -177,9 +177,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `CO2` = " . $data[10] . ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_list_price` = " . str_replace(',','',$data[15]) . ",
+        `vehicle_otr_price` = " . str_replace(',','',$data[15]) . ",
+        `p11d_price` = " . str_replace(',','',$data[5]) . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -211,9 +211,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         SET
         `cap_id` = " . $data[24] . ",
         `CO2` = " . $data[10] . ",
-        `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[5] . ",
+        `vehicle_list_price` = " . str_replace(',','',$data[15]) . ",
+        `vehicle_otr_price` = " . str_replace(',','',$data[15]) . ",
+        `p11d_price` = " . str_replace(',','',$data[5]) . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
         " . $insert . "
