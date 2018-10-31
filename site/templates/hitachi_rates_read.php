@@ -148,6 +148,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `vehicle_otr_price` = " . $data[32] . ",
         `p11d_price` = " . $data[35] . ",
         `updated` = NOW(),
+        `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -200,6 +201,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `vehicle_otr_price` = " . $data[32] . ",
         `p11d_price` = " . $data[35] . ",
         `updated` = NOW(),
+        `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -252,6 +254,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `vehicle_otr_price` = " . $data[32] . ",
         `p11d_price` = " . $data[35] . ",
         `updated` = NOW(),
+        `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -304,6 +307,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `vehicle_otr_price` = " . $data[32] . ",
         `p11d_price` = " . $data[35] . ",
         `updated` = NOW(),
+        `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -356,6 +360,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `vehicle_otr_price` = " . $data[32] . ",
         `p11d_price` = " . $data[35] . ",
         `updated` = NOW(),
+        `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -408,6 +413,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `vehicle_otr_price` = " . $data[32] . ",
         `p11d_price` = " . $data[35] . ",
         `updated` = NOW(),
+        `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -560,6 +566,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[32] . ",
           `p11d_price` = " . $data2[35] . ",
           `updated` = NOW(),
+          `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -612,6 +619,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[32] . ",
           `p11d_price` = " . $data2[35] . ",
           `updated` = NOW(),
+          `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -664,6 +672,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[32] . ",
           `p11d_price` = " . $data2[35] . ",
           `updated` = NOW(),
+          `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -716,6 +725,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[32] . ",
           `p11d_price` = " . $data2[35] . ",
           `updated` = NOW(),
+          `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -771,6 +781,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
+          `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
           " . $insert . ";";
           break;
           case 30000:
@@ -820,6 +831,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[32] . ",
           `p11d_price` = " . $data2[35] . ",
           `updated` = NOW(),
+          `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
