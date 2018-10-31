@@ -138,9 +138,6 @@ if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
         " . ((($data[50]+$data[53]+10)/2)+5+1.62) . ",
         " . ($data[55]+1.62) . ",
         " . ($data[53]+5+1.62) . ")
-        ON DUPLICATE KEY UPDATE
-          `cap_id` = " . $data[4] . "
-        ;
       ";
       // echo $update . "<br />";
       $result2 = mysqli_query($conn, $update);
