@@ -15,7 +15,7 @@ $row2 = 1;
 if (($handle = fopen("inc/cap_cars.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     if($data[11] == "Y"){
-      $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "')";
+      $insert = "INSERT INTO `team`.`vehicles` (`cap_code`,`cap_id`,`manufacturer`,`model`,`description`.`lcv`) VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[4] . "','" . $data[8] . "',0)";
       $result = mysqli_query($conn, $insert);
       $row++;
     }
