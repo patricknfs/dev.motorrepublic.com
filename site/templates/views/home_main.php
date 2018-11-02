@@ -51,6 +51,7 @@
 
 					$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 				?>
+				<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
 				<a href="/vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
@@ -69,6 +70,7 @@
 						</div>
 					</div>
 				</a>
+			</div>
 			</div>
 		<?php
 		}
