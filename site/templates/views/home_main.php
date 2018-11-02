@@ -38,8 +38,9 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
+			<h3>Top Mercedes Deals</h3>
 			<div class="grid-x grid-margin-x">
-				<h3>Top Mercedes Deals</h3>
+				
 				<?php
 				foreach($result AS $vehicle) {
 					$options = array(
