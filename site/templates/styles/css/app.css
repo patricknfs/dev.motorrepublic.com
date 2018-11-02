@@ -13000,10 +13000,6 @@ tr.shown td.details-control {
 }
 
 section#promo {
-  background: url(/site/assets/files/1173/adobestock_80868279_preview.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -13061,6 +13057,10 @@ section#promo #message {
 
 section#promo #message img {
   margin-bottom: 1em;
+}
+
+section#search_block {
+  margin-top: 1em;
 }
 
 section#block_one {
