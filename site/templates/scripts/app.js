@@ -1,5 +1,5 @@
 $(document).foundation();
-
+// ttt
 /*global $ */
 $(document).ready(function() {
 
@@ -38,5 +38,4 @@ $(document).ready(function() {
     e.preventDefault();
   });
   //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
-
 });
