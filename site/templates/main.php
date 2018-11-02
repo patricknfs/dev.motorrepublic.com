@@ -91,8 +91,8 @@ ERROR_REPORTING(E_ALL);
               'outer_tpl' => '<ul id="" class="dropdown menu" data-dropdown-menu>||',
               'inner_tpl' => '<ul class="menu vertical">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
-              'list_field_class' => 'mega-menu',
-              'item_tpl' => '<a data-toggle="mega-menu" href="{url}">{title}</a>',
+              'list_field_class' => 'menu-text',
+              'item_tpl' => '<a class="nav_link" href="{url}">{title}</a>',
               'item_current_tpl' => '<a href="{url}">{title}</a>',
               'xtemplates' => '',
               'xitem_tpl' => '<span>{title}</span>',
@@ -109,10 +109,6 @@ ERROR_REPORTING(E_ALL);
           </div> -->
         </div>
       </nav>
-
-
-
-
     </header>
       <?php
       if($page->main){
