@@ -13092,8 +13092,8 @@ section#block_two h1, section#block_two p {
 }
 
 footer {
-  background-image: url("/site/assets/graphics/mr_footer_red.jpg");
-  background-color: #404040;
+  background: url(/site/assets/graphics/mr_footer_red.jpg) no-repeat center center fixed;
+  background-size: cover;
   margin-top: 2em;
   padding-top: 2em;
 }
