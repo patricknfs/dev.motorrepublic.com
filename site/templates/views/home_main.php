@@ -10,9 +10,9 @@
 			</div>
 		</div>
 		<div class="cell small-12 medium-4">
-			<div id="hero_form"> 
+			<!-- <div id="hero_form"> 
 				<?php echo $forms->embed('vehicle_power_search'); ?>
-			</div>
+			</div> -->
 		</div>
 		<div class="cell small-12 medium-4">
 			<div id="message">
@@ -20,6 +20,11 @@
 				<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
 				<h4>THE ALL NEW FIESTA ST2</h4>
 				<p>Available in stock now from £215.99 inc. VAT</p>
+				<p><a href="#">More details...</a></p>
+				<p><a href="#">More details...</a></p>
+				<p><a href="#">More details...</a></p>
+				<p><a href="#">More details...</a></p>
+				<p><a href="#">More details...</a></p>
 				<p><a href="#">More details...</a></p>
 			</div>
 		</div>
