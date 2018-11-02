@@ -70,13 +70,6 @@ ERROR_REPORTING(E_ALL);
       </div>
       <header class="navigation" role="banner">
       <div class="navigation-wrapper">
-        <div id="logoimg">
-          <a class="svg" href="/">
-            <object data="<?=$config->urls->assets?>graphics/logo2.svg" type="image/svg+xml">
-              <img src="<?=$config->urls->assets?>graphics/logo2.png" alt="Charter Hall Asset Finance" title="Charter Hall Asset Finance"/>
-            </object>
-          </a>
-        </div>
         <div class="menu-container">
           <div class="menu">
             <?php
