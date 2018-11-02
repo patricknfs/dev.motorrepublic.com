@@ -24,8 +24,12 @@
 	</div>
 </section>
 <section id="search_block">
-	<div id="hero_form"> 
-		<?php echo $forms->embed('vehicle_power_search'); ?>
+	<div class="grid-x grid-margin-x grid-margin-y">
+		<div id="slogan" class="cell small-12">
+			<div id="hero_form"> 
+				<?php echo $forms->embed('vehicle_power_search'); ?>
+			</div>
+		</div>
 	</div>
 </section>
 <section id="block_one">
