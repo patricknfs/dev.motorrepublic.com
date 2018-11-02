@@ -13138,6 +13138,11 @@ header {
   content: " | ";
 }
 
+nav {
+  z-index: 5;
+  border-top: 1px solid #cc0000;
+}
+
 .sticky {
   z-index: 5;
 }
