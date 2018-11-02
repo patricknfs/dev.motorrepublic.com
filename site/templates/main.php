@@ -68,8 +68,8 @@ ERROR_REPORTING(E_ALL);
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-      <header class="navigation" role="banner">
-      <div class="navigation-wrapper">
+      <!-- <header class="navigation" role="banner">
+      <div class="navigation-wrapper"> -->
         <div class="menu-container">
           <div class="menu">
             <?php
@@ -109,8 +109,8 @@ ERROR_REPORTING(E_ALL);
             </div> -->
           </div>
         </div>
-      </div>
-    </header>
+      <!-- </div>
+    </header> -->
       </nav>
     </header>
       <?php
