@@ -13000,30 +13000,12 @@ tr.shown td.details-control {
 }
 
 section#promo {
+  background: url(/site/assets/files/1173/adobestock_80868279_preview.jpg) no-repeat center center fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   position: relative;
   overflow: hidden;
-}
-
-section#promo .overlay {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -5;
-  background: #fff;
-  opacity: 0.6;
-}
-
-section#promo #video_bg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: -10;
 }
 
 section#promo .row {
