@@ -13138,41 +13138,6 @@ header {
   content: " | ";
 }
 
-nav {
-  z-index: 5;
-  border-top: 1px solid #cc0000;
-}
-
-.nav_pagination {
-  z-index: 0;
-  border-top: none;
-}
-
-.mega-menu .dropdown-pane {
-  width: 100%;
-  max-width: 85rem;
-  margin: 0 auto !important;
-  left: 0% !important;
-  right: 0% !important;
-}
-
-.mega-menu .menu {
-  background: none;
-}
-
-.mega-menu > a::after {
-  display: block;
-  width: 0;
-  height: 0;
-  border: inset 6px;
-  content: '';
-  border-bottom-width: 0;
-  border-top-style: solid;
-  border-color: #1779ba transparent transparent;
-  margin-left: 10px;
-  margin-top: 11%;
-}
-
 .sticky {
   z-index: 5;
 }
