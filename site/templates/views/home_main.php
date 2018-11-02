@@ -51,7 +51,7 @@
 
 					$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 				?>
-			<div class="cell">
+			<div class="cell small-12 medium-6">
 				<a href="/vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
 						<div class="card-section">
