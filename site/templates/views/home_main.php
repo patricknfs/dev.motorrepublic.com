@@ -10,9 +10,7 @@
 			</div>
 		</div>
 		<div class="cell small-12 medium-4">
-			<!-- <div id="hero_form"> 
-				<?php echo $forms->embed('vehicle_power_search'); ?>
-			</div> -->
+		
 		</div>
 		<div class="cell small-12 medium-4">
 			<div id="message">
@@ -77,6 +75,9 @@
 			<div class="cell small-12 medium-4">
 				<h3>Regional Strength?</h3>
 				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+				<div id="hero_form"> 
+				<?php echo $forms->embed('vehicle_power_search'); ?>
+			</div>
 			</div>
 		</div>
 	</div>
