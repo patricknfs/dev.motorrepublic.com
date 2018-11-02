@@ -38,6 +38,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
+			<div class="grid-x grid-margin-x">
 				<h3>Top Mercedes Deals</h3>
 				<?php
 				foreach($result AS $vehicle) {
@@ -51,8 +52,8 @@
 
 					$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 				?>
-				<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-5">
+				
+			<div class="cell small-12 medium-6">
 				<a href="/vehicle/<?=$vehicle['cap_id']?>">
 					<div class="card">
 						<div class="card-section">
@@ -71,10 +72,11 @@
 					</div>
 				</a>
 			</div>
-			</div>
+
 		<?php
 		}
 		?>
+					</div>
 			</div>
 			<div class="cell small-12 medium-4">
 				<h3>Magazine Article</h3>
