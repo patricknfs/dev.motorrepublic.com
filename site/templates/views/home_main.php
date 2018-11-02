@@ -19,11 +19,6 @@
 				<h4>THE ALL NEW FIESTA ST2</h4>
 				<p>Available in stock now from £215.99 inc. VAT</p>
 				<p><a href="#">More details...</a></p>
-				<p><a href="#">More details...</a></p>
-				<p><a href="#">More details...</a></p>
-				<p><a href="#">More details...</a></p>
-				<p><a href="#">More details...</a></p>
-				<p><a href="#">More details...</a></p>
 			</div>
 		</div>
 	</div>
