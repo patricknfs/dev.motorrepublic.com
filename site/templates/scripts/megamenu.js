@@ -1,5 +1,3 @@
-$(document).foundation();
-
 /*global $ */
 $(document).ready(function() {
 
