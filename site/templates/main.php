@@ -91,8 +91,8 @@ ERROR_REPORTING(E_ALL);
               'outer_tpl' => '<ul id="" class="dropdown menu" data-dropdown-menu>||',
               'inner_tpl' => '<ul class="menu vertical">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
-              'list_field_class' => 'menu-text',
-              'item_tpl' => '<a class="nav_link" href="{url}">{title}</a>',
+              'list_field_class' => 'mega-menu',
+              'item_tpl' => '<a data-toggle="mega-menu" href="{url}">{title}</a>',
               'item_current_tpl' => '<a href="{url}">{title}</a>',
               'xtemplates' => '',
               'xitem_tpl' => '<span>{title}</span>',
@@ -109,6 +109,53 @@ ERROR_REPORTING(E_ALL);
           </div> -->
         </div>
       </nav>
+
+
+
+      <li class="mega-menu">
+        <a data-toggle="mega-menu" href="#">One</a>
+
+        <div class="dropdown-pane bottom" id="mega-menu" data-dropdown data-options="closeOnClick:true; hover: true; hoverPane: true; vOffset:11">
+
+          <div class="row expanded">
+            <div class="column">
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+
+
     </header>
       <?php
       if($page->main){
