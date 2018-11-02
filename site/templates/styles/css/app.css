@@ -13001,9 +13001,9 @@ tr.shown td.details-control {
 
 section#promo {
   background: url(/site/assets/files/1173/adobestock_80868279_preview.jpg) no-repeat center center fixed;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   position: relative;
   overflow: hidden;
 }
