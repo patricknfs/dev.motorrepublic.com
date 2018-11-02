@@ -68,13 +68,17 @@ ERROR_REPORTING(E_ALL);
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-      <nav role="navigation">
-        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle></button>
-          <div class="title-bar-title">Menu</div>
+      <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <div id="logoimg">
+          <a class="svg" href="/">
+            <object data="<?=$config->urls->assets?>graphics/logo2.svg" type="image/svg+xml">
+              <img src="<?=$config->urls->assets?>graphics/logo2.png" alt="Charter Hall Asset Finance" title="Charter Hall Asset Finance"/>
+            </object>
+          </a>
         </div>
-        <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
-          <div class="top-bar-left">
+        <div class="menu-container">
+          <div class="menu">
             <?php
             $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
             $options = array(
@@ -86,13 +90,13 @@ ERROR_REPORTING(E_ALL);
               'max_levels' => null,
               'firstlast' => false,
               'collapsed' => false,
-              'show_root' => false,
+              'show_root' => true,
               'selector' => '',
-              'outer_tpl' => '<ul id="" class="dropdown menu" data-dropdown-menu>||',
-              'inner_tpl' => '<ul class="menu vertical">||</ul>',
+              'outer_tpl' => '<ul id="" class="">||',
+              'inner_tpl' => '<ul class="">||</ul>',
               'list_tpl' => '<li%s>||</li>||</li>',
-              'list_field_class' => 'menu-text',
-              'item_tpl' => '<a class="nav_link" href="{url}">{title}</a>',
+              'list_field_class' => '',
+              'item_tpl' => '<a href="{url}">{title}</a>',
               'item_current_tpl' => '<a href="{url}">{title}</a>',
               'xtemplates' => '',
               'xitem_tpl' => '<span>{title}</span>',
@@ -100,14 +104,20 @@ ERROR_REPORTING(E_ALL);
             );
             echo $treeMenu->render($options);
             ?>
+            <!--<div class="navigation-tools">
+              <div class="search-bar">
+                <form action="<?=$config->urls->root?>search/" role="search">
+                  <input type="search" placeholder="Enter Search" name="q" />
+                  <button type="submit">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                  </button>
+                </form>
+              </div>
+            </div> -->
           </div>
-          <!-- <div class="top-bar-right">
-            <ul class="menu">
-              <li><input type="search" placeholder="Search"></li>
-              <li><button type="button" class="button">Search</button></li>
-            </ul>
-          </div> -->
         </div>
+      </div>
+    </header>
       </nav>
     </header>
       <?php
