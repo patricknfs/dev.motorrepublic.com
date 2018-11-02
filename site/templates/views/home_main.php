@@ -1,7 +1,7 @@
 <?php
 // home_main.php
 ?>
-<section id="promo">
+<section id="promo" style="background: url(site/assets/files/1173/adobestock_80868279_preview.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 	<!-- <div class="overlay"></div> -->
 	<div class="grid-x grid-margin-x grid-margin-y">
 		<div id="slogan" class="cell small-12 medium-4">
