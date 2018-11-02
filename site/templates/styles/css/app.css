@@ -13008,6 +13008,17 @@ section#promo {
   overflow: hidden;
 }
 
+section#promo .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -5;
+  background: #fff;
+  opacity: 0.6;
+}
+
 section#promo .row {
   min-height: 100vh;
 }
