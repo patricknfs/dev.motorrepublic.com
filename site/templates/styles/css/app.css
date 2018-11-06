@@ -11946,6 +11946,10 @@ nav {
   z-index: 5;
 }
 
+.menu a {
+  color: #fff;
+}
+
 #logorow {
   background-color: #fff;
 }
