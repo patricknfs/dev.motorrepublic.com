@@ -14,8 +14,9 @@
 </section>
 <section id="promo" style="background: url(site/assets/files/1173/adobestock_80868279_preview.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 	<!-- <div class="overlay"></div> -->
-	<h3>Top Mercedes Deals</h3>
-				<div class="grid-x grid-margin-x">
+	<div class="grid-container">
+				<h3>Top Mercedes Deals</h3>
+				<div class="grid-x grid-margin-x grid-margin-y">
 					<?php
 					foreach($result AS $vehicle) {
 						$options = array(
@@ -50,6 +51,7 @@
 					<?php
 					}
 					?>
+				</div>
 				</div>
 </section>
 
