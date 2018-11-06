@@ -77,14 +77,14 @@
 }
 
 .menu > ul > li a {
-  color: #fff;
+  color: #cc1000;
   text-decoration: none;
   padding: 1em 1em;
   display: block;
 }
 
 .menu > ul > li:hover {
-  background: #f0f0f0;
+  background: transparent;
 }
 
 .menu > ul > li > ul {
