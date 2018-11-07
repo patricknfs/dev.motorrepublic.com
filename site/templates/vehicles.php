@@ -23,6 +23,12 @@ if (isset($_GET['pageno'])) {
 $no_of_records_per_page = 12;
 $offset = ($pageno-1) * $no_of_records_per_page;
 
+$wire->addHookAfter('InputfieldPage::getSelectablePages', function($event) {
+  if($event->object->name == 'manufacturer') {
+    $event->return = $event->pages->find('select');
+  }
+});
+
 if( isset($_POST['manufacturer']) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $_POST['manufacturer'] . "' AND `model` LIKE '%" . $_POST['model'] . "%' GROUP BY `cap_id` ";
   $countres = $conn->query($total_pages_sql);
@@ -47,4 +53,4 @@ $result = $conn->query($query) or die(mysqli_error($conn));
 ob_start();
 include('views/vehicles_main.php');
 $page->main = ob_get_clean();
-include("./main.php"); 
+include("./main.php");
