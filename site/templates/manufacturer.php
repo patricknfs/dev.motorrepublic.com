@@ -10,8 +10,8 @@ print_r($result);
 ?>
 <ul>
 <?php
-foreach($result AS $manufacturer){
-  echo "<li>" . $manufacturer->title . "</li>";
+while ($row = mysqli_fetch_assoc($result)) {
+  echo "<li>" . $manufacturer['title'] . "</li>";
 }
 ?>
 </ul>
