@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $query);
 <ul>
 <?php
 foreach($result AS $manufacturer){
-  echo "<li>" . $manufacturer . "</li>";
+  echo "<li>" . $manufacturer->title . "</li>";
 }
 ?>
 </ul>
