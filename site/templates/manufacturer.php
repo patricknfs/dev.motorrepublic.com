@@ -6,6 +6,7 @@ require_once(MR_PATH . "/inc/conn.php");
 
 $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
 $result = mysqli_query($conn, $query);
+print_r($result);
 ?>
 <ul>
 <?php
