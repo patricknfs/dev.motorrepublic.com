@@ -11,7 +11,8 @@ print_r($result);
 <ul>
 <?php
 while ($row = mysqli_fetch_assoc($result)) {
-  echo "<li>" . $row['manufacturer'] . "</li>";
+  // echo "<li>" . $row['manufacturer'] . "</li>";
+  return $row['manufacturer'];
 }
 ?>
 </ul>
