@@ -1,7 +1,15 @@
 <?php
 //posts.php template
 include("inc/functions.php"); 
-$articles = $pages->get("/regions/gravesend/blog/, limit=10, sort=-date")->children;
+switch($page->parent){
+  case "motor-republic-cardiff":
+  $region = "cardiff";
+  break;
+  case "motor-republic-bristol":
+    $region = "cardiff";
+    break;
+}
+$articles = $pages->get("/regions/' . $region . '/blog/, limit=10, sort=-date")->children;
 wire()->addHook("Page::wordLimiter", null, "wordLimiter");
 ob_start();
 include('views/posts_main.php');
