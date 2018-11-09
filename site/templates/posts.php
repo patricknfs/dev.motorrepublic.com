@@ -7,8 +7,8 @@ switch($page->parent->name){
   $region = "cardiff";
   break;
   case "motor-republic-bristol":
-    $region = "cardiff";
-    break;
+  $region = "cardiff";
+  break;
 }
 $articles = $pages->get("/regions/' . $region . '/blog/, limit=10, sort=-date")->children;
 wire()->addHook("Page::wordLimiter", null, "wordLimiter");
