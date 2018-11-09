@@ -4,7 +4,7 @@
 <section id="posts">
   <div class="grid-container" itemscope itemtype="http://schema.org/Blog">
     <div class="grid-x small-12">
-      <h1>The Latest News from Motor Republic Gravesend</h1>
+      <h1>The Latest News from <?=$page->parent->title?></h1>
     </div>
     <div class="grid-x small-12">
       <?php
