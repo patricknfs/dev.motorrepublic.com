@@ -1,8 +1,8 @@
 <?php
 //posts.php template
 include("inc/functions.php"); 
-echo $page->parent->title;
-switch($page->parent){
+echo $page->parent->name;
+switch($page->parent->name){
   case "motor-republic-cardiff":
   $region = "cardiff";
   break;
