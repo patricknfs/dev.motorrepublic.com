@@ -33,7 +33,8 @@ switch($page->parent->name){
   case "motor-republic-sheffield-north":
   $region = "sheffield-north";
   break;
-
+  default: 
+  $region = "No are defined";
 }
 $articles = $pages->get("/regions/' . $region . '/blog/, limit=10, sort=-date")->children;
 wire()->addHook("Page::wordLimiter", null, "wordLimiter");
