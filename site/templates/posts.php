@@ -1,7 +1,7 @@
 <?php
 //posts.php template
 include("inc/functions.php"); 
-echo $page->parent();
+echo $page->parent->title;
 switch($page->parent){
   case "motor-republic-cardiff":
   $region = "cardiff";
