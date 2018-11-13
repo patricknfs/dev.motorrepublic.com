@@ -3,8 +3,8 @@
 $image = $page->images->first();
 ?>
 <section id="whatwedo">
-  <div class="hero">
-    <div class="grid-container" style="background: url('<?=$image->url?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+  <div style="background: url('<?=$image->url?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="grid-container hero">
       <div class="grid-x hero">
         <div class="cell small-12 medium-6">
           <h1><?=$page->title?></h1>  
