@@ -210,7 +210,7 @@
     margin-top: 20px;
   }
   .menu > ul > li > ul > li:first-child {
-    margin: 0;
+    margin: 1em 0 0 0;
   }
   .menu > ul > li > ul > li > ul {
     position: relative;
