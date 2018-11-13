@@ -3,8 +3,8 @@
 $image = $page->images->first();
 ?>
 <section id="whatwedo">
-  <div style="background: url('<?=$image->url?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-    <div class="grid-container hero">
+  <div class="hero" style="background: url('<?=$image->url?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="grid-container">
       <div class="grid-x hero">
         <div class="cell small-12 medium-6">
           <div class="hero_overlay">
@@ -17,7 +17,7 @@ $image = $page->images->first();
         </div>
       </div>
     </div>
-</div>
+  </div>
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
