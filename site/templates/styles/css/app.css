@@ -16,7 +16,7 @@
 
 .menu-container {
   width: 100%;
-  margin: 1em 0 0 0 auto;
+  margin: 0 auto;
   background: #3e505d;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .menu > ul {
-  margin: 1em 0 0 0 auto;
+  margin: 0 auto;
   width: 100%;
   list-style: none;
   padding: 0 1.8em;
@@ -73,7 +73,7 @@
 .menu > ul > li {
   float: left;
   padding: 0;
-  margin: 1em 0 0 0;
+  margin: 0;
 }
 
 .menu > ul > li a {
@@ -96,7 +96,7 @@
   position: absolute;
   z-index: 99;
   left: 0;
-  margin: 1em 0 0 0;
+  margin: 0;
   list-style: none;
   box-sizing: border-box;
 }
@@ -111,7 +111,7 @@
 }
 
 .menu > ul > li > ul > li {
-  margin: 1em 0 0 0;
+  margin: 0;
   padding-bottom: 0;
   list-style: none;
   width: 25%;
@@ -148,7 +148,7 @@
   float: left;
   width: 100%;
   padding: 10px 0;
-  margin: 1em 0 0 0;
+  margin: 0;
   font-size: .8em;
 }
 
@@ -210,7 +210,7 @@
     margin-top: 20px;
   }
   .menu > ul > li > ul > li:first-child {
-    margin: 1em 0 0 0;
+    margin: 0;
   }
   .menu > ul > li > ul > li > ul {
     position: relative;
