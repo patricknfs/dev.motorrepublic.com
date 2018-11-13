@@ -8,7 +8,7 @@
       <?php
       $image = $page->images->first();
       ?>
-      <img src="<?=$images->url?>" />
+      <img src="<?=$image->url?>" />
       <?=$page->body?>
       </div>
   </div>
