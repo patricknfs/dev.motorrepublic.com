@@ -47,8 +47,8 @@
   cursor: pointer;
   float: right;
   padding: 0.3em 0.8em;
-  background: #fff;
-  color: #333;
+  background: #3e505d;
+  color: #fff;
 }
 
 .menu > ul {
