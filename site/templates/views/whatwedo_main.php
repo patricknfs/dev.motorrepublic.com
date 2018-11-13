@@ -3,7 +3,7 @@
 $image = $page->images->first();
 ?>
 <section id="whatwedo">
-  <div class="grid-container full" style="background-image: url('<?=$image->url?>)">
+  <div class="grid-container full" style="background-image: url('<?=$image->url?>) cover no-repeat">
   <h1><?=$page->title?></h1>  
   <?=$page->summary?>
   </div>
