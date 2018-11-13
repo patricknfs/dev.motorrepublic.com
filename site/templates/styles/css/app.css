@@ -11949,6 +11949,16 @@ nav {
   z-index: 5;
 }
 
+.floatright {
+  float: right;
+  margin-left: 1em;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 1em;
+}
+
 #logorow {
   background-color: #fff;
 }
