@@ -12076,6 +12076,10 @@ section#whatwedo {
   color: #fff;
 }
 
+.hero_overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 #intro {
   padding: 2em 0;
 }

@@ -7,8 +7,10 @@ $image = $page->images->first();
     <div class="grid-container hero">
       <div class="grid-x hero">
         <div class="cell small-12 medium-6">
-          <h1><?=$page->title?></h1>  
-          <?=$page->summary?>
+          <div class="hero_overlay">
+            <h1><?=$page->title?></h1>  
+            <?=$page->summary?>
+          </div>
         </div>
         <div class="cell small-12 medium-6">
         
