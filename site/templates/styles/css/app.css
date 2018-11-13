@@ -12069,7 +12069,11 @@ section#block_two h1, section#block_two p {
 }
 
 section#whatwedo {
-  margin-top: 2em;
+  margin-top: section;
+}
+
+.hero {
+  color: #fff;
 }
 
 #intro {
