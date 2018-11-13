@@ -1,7 +1,7 @@
 <?php
 // whatwedo_main.php
 ?>
-<section>
+<section id="whatwedo">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">

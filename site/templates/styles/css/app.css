@@ -12068,6 +12068,10 @@ section#block_two h1, section#block_two p {
   color: #fff;
 }
 
+section#whatwedo {
+  margin-top: 1em;
+}
+
 #intro {
   padding: 2em 0;
 }
