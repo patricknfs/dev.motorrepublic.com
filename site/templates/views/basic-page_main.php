@@ -5,7 +5,10 @@
   <div class="grid-x">
     <div class="cell">
       <h1><?=$page->title; ?></h1>
-      <img src="<?=$page->images->first()->width(600)?>" />
+      <?php
+      $image = $page->images->first();
+      ?>
+      <img src="<?=$images->url?>" />
       <?=$page->body?>
       </div>
   </div>
