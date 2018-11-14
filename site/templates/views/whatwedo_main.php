@@ -19,7 +19,7 @@ $image = $page->images->first();
     </div>
   </div>
   <div class="grid-container">
-    <div class="grid-x">
+    <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-6">
         <?=$page->body2?>
       </div>
