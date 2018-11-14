@@ -20,9 +20,15 @@ $image = $page->images->first();
   </div>
   <div class="grid-container">
     <div class="grid-x">
-      <div class="cell">
+      <div class="cell small-12 medium-6">
         <?=$page->body?>
-        </div>
+      </div>
+      <div class="cell small-12 medium-6">
+        <?=$page->body1?>
+      </div>
+      <div class="cell">
+        <?=$page->body2?>
+      </div>
     </div>
   </div>
 </section>
