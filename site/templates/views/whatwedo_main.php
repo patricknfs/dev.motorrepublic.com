@@ -21,13 +21,13 @@ $image = $page->images->first();
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 medium-6">
-        <?=$page->body?>
+        <?=$page->body2?>
       </div>
       <div class="cell small-12 medium-6">
-        <?=$page->body1?>
+        <?=$page->body3?>
       </div>
       <div class="cell">
-        <?=$page->body2?>
+        <?=$page->body?>
       </div>
     </div>
   </div>
