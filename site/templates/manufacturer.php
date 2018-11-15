@@ -14,6 +14,6 @@ print_r($result);
     // echo "<li>" . $row['manufacturer'] . "</li>";
     return $man = $row['manufacturer'];
   }
-  var_dump($man);
+  // var_dump($man);
   ?>
 </ul>
