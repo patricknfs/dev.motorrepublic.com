@@ -1,7 +1,7 @@
 <?php
 $forms->addHookBefore('InputfieldForm::render', function($e) {
   $processor = $e->object;
-  $form = $e->arguments('vehicle_power_search');
+  $form = $e->arguments('form');
   echo $form->children();
   if($processor->formName == 'vehicle_power_search') {
     $f = $form->getChildByName('manufacturer');
