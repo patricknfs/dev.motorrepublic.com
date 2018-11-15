@@ -1,5 +1,5 @@
 <?php
-$forms->addHookBefore('InputfieldForm::render', function($E) {
+$forms->addHookBefore('InputfieldForm::render', function($e) {
   $processor = $e->object;
   $form = $e->arguments('vehicle_power_search');
   if($processor->formName == 'vehicle_power_search') {
