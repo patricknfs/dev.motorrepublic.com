@@ -2,8 +2,8 @@
 $forms->addHookBefore('InputfieldForm::render', function($e) {
   $processor = $e->object;
   $form = $e->arguments('form');
-  echo $form->children();
   if($processor->formName == 'vehicle_power_search') {
+    echo $form->children();
     $f = $form->getChildByName('manufacturer');
     if($f) $f->addOption('testing hook'); 
     // return "testing hook";
