@@ -17,6 +17,7 @@
 
 $forms->addHookBefore('FormBuilderProcessor::render', function($e) {
   if ($e->object->name != 'vehicle_power_search') return; // quick exit if form name doesn't match
+  print_r($e->object->name);
   $processor = $e->object;
   $form = $processor->getInputfieldsForm();
   if($form->name == 'vehicle_power_search') {
