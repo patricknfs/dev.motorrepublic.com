@@ -6,6 +6,7 @@ $forms->addHookBefore('InputfieldForm::render', function($e) {
   $form = $e->arguments('form');
   if($processor->formName == 'vehicle_power_search') { //form name
     $f = $form->getChildByName('manufacturer'); //form field name
+    print_r($f);
     $options = ['red', 'blue', 'green']; // replace with your dynamic options -->
     foreach($options as $option) {
       $f->addOption($option);
