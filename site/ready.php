@@ -1,6 +1,6 @@
 <?php
 $forms->addHookBefore('InputfieldForm::render', function($e) {
-  if ($e->object->name != 'manufacturer') return; // quick exit if fieldname doesn't match
+  // if ($e->object->name != 'manufacturer') return; // quick exit if fieldname doesn't match
   $processor = $e->object;
   $form = $e->arguments('form');
   if($processor->formName == 'vehicle_power_search') { //form name
