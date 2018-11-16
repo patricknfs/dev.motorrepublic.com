@@ -8,14 +8,14 @@
 //   }
 // });
 
-$forms->addHookBefore('FormBuilderProcessor::render', function($event) {
-  $processor = $event->object;
+$forms->addHookBefore('FormBuilderProcessor::render', function($e) {
+  $processor = $e->object;
   $form = $processor->getInputfieldsForm();
   if($form->name == 'vehicle_power_search') {
-      $my_select = $form->getChildByName('manufacturer');
-      $options = ['red', 'blue', 'green']; // replace with your dynamic options
-      foreach($options as $option) {
-          $my_select->addOption($option);
-      }
+    $my_select = $form->getChildByName('manufacturer');
+    $options = ['red', 'blue', 'green']; // replace with your dynamic options
+    foreach($options as $option) {
+      $my_select->addOption($option);
+    }
   }
-}); 
+});
