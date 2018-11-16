@@ -16,12 +16,12 @@
 // });
 
 $forms->addHookBefore('FormBuilderProcessor::render', function($e) {
-  if ($e->object->name != 'vehicle_power_search') return; // quick exit if fieldname doesn't match
+  if ($e->object->name != 'vehicle_power_search') return; // quick exit if form name doesn't match
   $processor = $e->object;
   $form = $processor->getInputfieldsForm();
   if($form->name == 'vehicle_power_search') {
     $my_select = $form->getChildByName('manufacturer');
-    print_r($my_select);
+    print_r($form->getChildByName());
     $options = ['red', 'blue', 'green']; // replace with your dynamic options
     foreach($options as $option) {
       $my_select->addOption($option);
