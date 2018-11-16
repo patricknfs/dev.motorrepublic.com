@@ -9,6 +9,7 @@
 // });
 
 $forms->addHookBefore('FormBuilderProcessor::render', function($e) {
+  if ($e->object->name != 'manufacturer') return; // quick exit if fieldname doesn't match
   $processor = $e->object;
   $form = $processor->getInputfieldsForm();
   if($form->name == 'vehicle_power_search') {
