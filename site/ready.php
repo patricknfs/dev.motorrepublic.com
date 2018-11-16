@@ -8,7 +8,7 @@ $forms->addHookBefore('InputfieldForm::render', function($e) {
     $f = $form->getChildByName('manufacturer'); //form field name
     $options = ['red', 'blue', 'green']; // replace with your dynamic options -->
     foreach($options as $option) {
-      $my_select->addOption($option);
+      $f->addOption($option);
     }
   }
 });
