@@ -1,10 +1,10 @@
 <?php
 $forms->addHookBefore('InputfieldForm::render', function($e) {
   print_r($e->object->name);
-  if ($e->object->name != 'vehicle_power_search') return; // quick exit if fieldname doesn't match
+  if ($e->object->name != 'vehicle_power_search') return; // quick exit if form name doesn't match
   $processor = $e->object;
   $form = $e->arguments('form');
-  if($processor->formName == 'vehicle_power_search') { //form name
+  if($processor->name == 'vehicle_power_search') { //form name
     $f = $form->getChildByName('manufacturer'); //form field name
     $options = ['red', 'blue', 'green']; // replace with your dynamic options -->
     foreach($options as $option) {
