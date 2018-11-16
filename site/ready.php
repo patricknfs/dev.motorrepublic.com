@@ -3,7 +3,8 @@ $forms->addHookBefore('InputfieldForm::render', function($e) {
   // print_r($e->object->name);
   // if ($e->object->name != 'vehicle_power_search') return; // quick exit if form name doesn't match
   $processor = $e->object;
-  $form = $e->arguments('form');
+  $form = $e->arguments('vehicle_power_search');
+
   if($processor->formName == 'vehicle_power_search') { //form name
     $f = $form->getChildByName('manufacturer'); //form field name
     echo "form is " . $f;
