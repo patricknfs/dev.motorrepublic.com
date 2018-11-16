@@ -12,7 +12,7 @@ $forms->addHookBefore('FormBuilderProcessor::render', function($event) {
   $processor = $event->object;
   $form = $processor->getInputfieldsForm();
   if($form->name == 'vehicle_power_search') {
-      $my_select = $form->get('manufacturer');
+      $my_select = $form->getChildByName('manufacturer');
       $options = ['red', 'blue', 'green']; // replace with your dynamic options
       foreach($options as $option) {
           $my_select->addOption($option);
