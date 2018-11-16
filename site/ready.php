@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 $forms->addHookBefore('InputfieldForm::render', function($e) {
   if ($e->object->name != 'manufacturer') return; // quick exit if fieldname doesn't match
   $processor = $e->object;
