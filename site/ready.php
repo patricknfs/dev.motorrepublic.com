@@ -28,7 +28,7 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   while ($row = mysqli_fetch_assoc($result)) {
-    $f->options = [$row['manufacturer'] => $row['manufacturer']],
+    $f->options = [$row['manufacturer'] => $row['manufacturer']];
   }
   // $f->options = [
 
