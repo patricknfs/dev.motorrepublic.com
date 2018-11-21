@@ -23,7 +23,7 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $f->options = [
     // 'manufacturer1' => 'Manufacturer 1',
     // 'manufacturer2' => 'Manufacturer 2', 
-    $man;
+    $man,
   ];
 });
 
