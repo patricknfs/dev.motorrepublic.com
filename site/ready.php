@@ -19,7 +19,6 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
   $page = $e->arguments('page');
-  $page->of(false);
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   $templates = ['vehicle', 'vehicles', 'home']; //array of templates where this hook should run
