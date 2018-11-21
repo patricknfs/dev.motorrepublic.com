@@ -21,8 +21,9 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   $f->options = [
-    'manufacturer1' => 'Manufacturer 1',
-    'manufacturer2' => 'Manufacturer 2', 
+    // 'manufacturer1' => 'Manufacturer 1',
+    // 'manufacturer2' => 'Manufacturer 2', 
+    $man
   ];
 });
 
