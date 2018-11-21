@@ -13,7 +13,7 @@ $man = array();
   <?php
   while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>" . $row['manufacturer'] . "</li>";
-    return $man .= $row['manufacturer'];
+    // return $man .= $row['manufacturer'];
   }
   // var_dump($man);
   ?>
