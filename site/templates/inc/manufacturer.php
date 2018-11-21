@@ -7,12 +7,13 @@ require_once MR_PATH . '/inc/conn.php';
 $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
 $result = mysqli_query($conn, $query);
 print_r($result);
+$man = array();
 ?>
 <ul>
   <?php
   while ($row = mysqli_fetch_assoc($result)) {
     // echo "<li>" . $row['manufacturer'] . "</li>";
-    return $man = $row['manufacturer'];
+    return $man .= $row['manufacturer'];
   }
   // var_dump($man);
   ?>
