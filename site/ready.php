@@ -14,13 +14,6 @@
 //     }
 //   }
 // });
-date_default_timezone_set('CET');
-require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
-require_once(MR_PATH . "/inc/conn.php");
-// include "inc/functions.php";
-
-$man_query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
-$man_result = mysqli_query($conn, $man_query);
 
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
