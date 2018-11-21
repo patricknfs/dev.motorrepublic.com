@@ -19,16 +19,16 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 // include "inc/functions.php";
 
-$query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
-$result = mysqli_query($conn, $query);
+$man_query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
+$man_result = mysqli_query($conn, $man_query);
 
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
-  while ($row = mysqli_fetch_assoc($result)) {
-    $f->options = [$row['manufacturer'] => $row['manufacturer']];
+  while ($man_row = mysqli_fetch_assoc($man_result)) {
+    $f->options = [$man_row['manufacturer'] => $man_row['manufacturer']];
   }
   // $f->options = [
 
