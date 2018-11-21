@@ -1,5 +1,5 @@
 <?php
-require_once(MR_PATH . '/inc/config.php');
+require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 
 $conn = new mysqli("localhost", MR_DB_USERNAME, MR_DB_PASSWORD);
 
