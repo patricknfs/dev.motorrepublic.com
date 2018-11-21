@@ -20,14 +20,10 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $form = $e->arguments(0);
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
-  while ($man_row = mysqli_fetch_assoc($man_result)) {
-    $f->options = [$man_row['manufacturer'] => $man_row['manufacturer']];
-  }
-  // $f->options = [
-
-  //   // 'manufacturer1' => 'Manufacturer 1',
-  //   // 'manufacturer2' => 'Manufacturer 2', 
-  // ];
+  $f->options = [
+    'manufacturer1' => 'Manufacturer 1',
+    'manufacturer2' => 'Manufacturer 2', 
+  ];
 });
 
 // $forms->addHookBefore('FormBuilderProcessor::render', function($e) {
