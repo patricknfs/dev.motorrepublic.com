@@ -13,7 +13,7 @@ $man = array();
   <?php
   while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>" . $row['manufacturer'] . "</li>";
-    $man = $row['manufacturer'];
+    array_push($man, $row['manufacturer']);
   }
   echo '<pre>'; print_r($man); echo '</pre>';
   ?>
