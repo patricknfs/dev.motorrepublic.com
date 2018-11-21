@@ -15,16 +15,26 @@
 //   }
 // });
 
+date_default_timezone_set('CET');
+require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
+require_once(MR_PATH . "/inc/conn.php");
+
+$query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
+$result = mysqli_query($conn, $query);
+
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   $f->options = [
+    while ($row = mysqli_fetch_assoc($result)) {
+      $row['manufacturer'] => $row['manufacturer'],
+    }
     'manufacturer1' => 'Manufacturer 1',
     'manufacturer2' => 'Manufacturer 2', 
   ];
-}); 
+});
 
 // $forms->addHookBefore('FormBuilderProcessor::render', function($e) {
 //   if ($e->object->name != 'manufacturer') return; // quick exit if fieldname doesn't match
