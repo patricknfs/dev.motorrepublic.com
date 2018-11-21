@@ -16,7 +16,7 @@
 //   }
 // });
 // require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
-include MR_PATH . '/inc/manufacturer.php';
+include '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/manufacturer.php';
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
