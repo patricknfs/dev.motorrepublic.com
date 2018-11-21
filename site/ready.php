@@ -24,9 +24,10 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $f = $form->getChildByName('manufacturer');
   $templates = ['vehicle', 'vehicles']; //array of templates where this hook should run
   $f->options = [
-    // 'manufacturer1' => 'Manufacturer 1',
-    // 'manufacturer2' => 'Manufacturer 2', 
-    $man,
+    foreach ($man as $manufacturer) {
+      $manufacturer => $manufacturer,
+    }
+    // $man,
   ];
 });
 
