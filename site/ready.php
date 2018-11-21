@@ -1,4 +1,5 @@
 <?php
+
 // $forms->addHookBefore('InputfieldForm::render', function($e) {
 //   print_r($e);
 //   print_r($e->object->name);
@@ -14,7 +15,7 @@
 //     }
 //   }
 // });
-
+include "inc/manufacturer.php";
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
