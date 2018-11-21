@@ -15,7 +15,7 @@
 //     }
 //   }
 // });
-include "inc/manufacturer.php";
+include MR_PATH . 'inc/manufacturer.php';
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
