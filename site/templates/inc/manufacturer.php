@@ -15,6 +15,6 @@ $man = array();
     echo "<li>" . $row['manufacturer'] . "</li>";
     $man .= $row['manufacturer'];
   }
-  var_dump($man);
+  print_r($man);
   ?>
 </ul>
