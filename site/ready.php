@@ -23,12 +23,7 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   $templates = ['vehicle', 'vehicles']; //array of templates where this hook should run
-  $f->options = [
-    foreach ($man as $manufacturer) {
-      $manufacturer => $manufacturer,
-    }
-    // $man,
-  ];
+  $f->options = object ($man);
 });
 
 // $forms->addHookBefore('FormBuilderProcessor::render', function($e) {
