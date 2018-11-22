@@ -1,9 +1,9 @@
 <?php
-$mans = $this->wire('manufs');
-var_dump($mans);
-foreach($mans AS $man){
-  echo $man;
-}
+// $mans = $this->wire('manufs');
+// var_dump($mans);
+// foreach($mans AS $man){
+//   echo $man;
+// }
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
