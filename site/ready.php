@@ -4,7 +4,7 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $form = $e->arguments(0);
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
-  $mans = $form->wire('manufs');
+  $mans = $this->wire('manufs');
   print_r($mans);
   foreach($mans AS $man){
     echo $man;
