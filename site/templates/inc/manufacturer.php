@@ -8,13 +8,12 @@ $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manuf
 $result = mysqli_query($conn, $query);
 
 $man = array();
+
+while ($row = mysqli_fetch_assoc($result)) {
+  array_push($man, $row['manufacturer']);
+}
+
+$this->wire('manufs', $man);
+
+// echo '<pre>'; print_r($man); echo '</pre>';
 ?>
-<ul>
-  <?php
-  while ($row = mysqli_fetch_assoc($result)) {
-    // echo "<li>" . $row['manufacturer'] . "</li>";
-    array_push($man, $row['manufacturer']);
-  }
-  // echo '<pre>'; print_r($man); echo '</pre>';
-  ?>
-</ul>
