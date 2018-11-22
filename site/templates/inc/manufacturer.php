@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 $this->wire('manufs', $man);
 
-global $mans = $this->wire('manufs');
+$mans = $this->wire('manufs');
 print_r($mans);
 // echo '<pre>'; print_r($man); echo '</pre>';
 ?>
