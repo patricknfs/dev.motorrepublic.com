@@ -4,7 +4,7 @@
 // foreach($mans AS $man){
 //   echo $man;
 // }
-
+include "inc/manufacturer.php";
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $processor = $e->object;
   $form = $e->arguments(0);
