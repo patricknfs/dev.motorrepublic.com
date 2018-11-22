@@ -5,6 +5,7 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   $mans = $form->wire('manufs');
+  print_r($mans);
   foreach($mans AS $man){
     echo $man;
   }
