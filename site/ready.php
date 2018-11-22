@@ -1,6 +1,5 @@
 <?php
 $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
-  print_r($e);
   $processor = $e->object;
   $form = $e->arguments(0);
   if($processor->formName != 'vehicle_power_search') return;
