@@ -4,6 +4,6 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   $form = $e->arguments(0);
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
-  $mans = $this->wire($man);
+  $mans = $this->wire('manufs');
   $f->options = (object) $mans;
 });
