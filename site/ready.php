@@ -11,7 +11,7 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   if($processor->formName != 'vehicle_power_search') return;
   $f = $form->getChildByName('manufacturer');
   $f->options = $this->manufs;
-  echo "Manufs is: " . $this->manufs;
+  echo "Manufs is: " . $this->wire('manufs');
   // $f->options = $this->wire('manufs');
   echo "Options are: " . $f->options;
   // $f->options = $mans;
