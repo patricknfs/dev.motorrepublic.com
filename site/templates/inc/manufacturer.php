@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
 
-$this->wire('manufs', $man);
+$wire->wire('manufs', $man);
 
 $mans = $this->wire('manufs');
 print_r($mans);
