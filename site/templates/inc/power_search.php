@@ -21,7 +21,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 ob_start();
 ?>
 <form>
-  <div class="grid-x">
+  <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
       <select placeholder="manufacturer"></select>
     </div>
