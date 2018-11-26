@@ -23,7 +23,15 @@ ob_start();
 <form>
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
-      <select placeholder="manufacturer">Manufacturer</select>
+      <select placeholder="manufacturer">Manufacturer
+        <?php
+        foreach ($man as $manufacturer) {
+          ?>
+          <option value="<?=$manufacturer?>"><?=$manufacturer?></option>
+          <?php
+        }
+        ?>
+      </select>
     </div>
     <div class="cell small-12 medium-4">
       <select placeholder="model">Model</select>
