@@ -37,7 +37,7 @@ ob_start();
 <form>
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
-      <select placeholder="manufacturer" id="first_choice">
+      <select placeholder="manufacturer" id="first-choice">
         <option value="">Manufacturer</option>
         <?php
         foreach ($man as $manufacturer) {
@@ -49,11 +49,13 @@ ob_start();
       </select>
     </div>
     <div class="cell small-12 medium-4">
-      <script type="text/javascript">
-        $("#first-choice").change(function() {
-          $("#second-choice").load("power_search.php?choice=" + $("#first-choice").val());
-        });
-      </script>
+      <select placeholder="model" id="second-choice">
+        <script type="text/javascript">
+          $("#first-choice").change(function() {
+            $("#second-choice").load("power_search.php?choice=" + $("#first-choice").val());
+          });
+        </script>
+      </select>
     </div>
     <div class="cell small-12 medium-4">
       <input type="submit" class="button" value="Find Your Deal">
