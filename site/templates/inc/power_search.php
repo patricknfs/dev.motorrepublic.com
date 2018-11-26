@@ -29,7 +29,7 @@ ob_start();
       <select placeholder="model"></select>
     </div>
     <div class="cell small-12 medium-4">
-      <input type="submit" class="button" value="Submit">
+      <input type="submit" class="button" value="Find YOur Deals">
     </div>
   </form>
 </div>
