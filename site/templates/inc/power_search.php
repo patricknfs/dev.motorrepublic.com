@@ -21,16 +21,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 ob_start();
 ?>
 <form>
-  <div class="row">
-    <div class="cell small-12 medium-4">
-        <input type="text" placeholder="manufacturer" />
-    </div>
-    <div class="cell small-12 medium-4">
-        <input type="select" placeholder="model" />
-    </div>
-    <div class="cell small-12 medium-4">
-        <input type="submit" text="submit" />
-    </div>
+  <div class="cell small-12 medium-4">
+      <input type="text" placeholder="manufacturer" />
+  </div>
+  <div class="cell small-12 medium-4">
+      <input type="select" placeholder="model" />
+  </div>
+  <div class="cell small-12 medium-4">
+      <input type="submit" text="submit" />
+  </div>
 </form>
 <?php
 $out = ob_get_clean();
