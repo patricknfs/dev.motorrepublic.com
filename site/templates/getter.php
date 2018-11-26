@@ -11,7 +11,7 @@ $choice = $_GET['choice'] ?? '';
 $choice = $conn->real_escape_string($choice);
   
 $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . strtoupper($choice) . "' ORDER BY `model` ASC";
-echo $query2;
+// echo $query2;
 $result2 = mysqli_query($conn, $query2);
   
 while ($row = mysqli_fetch_array($result2)) {
