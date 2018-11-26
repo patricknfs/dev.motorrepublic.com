@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $query);
 $choice = $_GET['choice'] ?? '';
 $choice = $conn->real_escape_string($choice);
   
-$query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `model` = "BMW" ORDER BY `model` ASC";
+$query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `model` = 'BMW' ORDER BY `model` ASC";
 $result2 = mysqli_query($conn, $query2);
   
 while ($row = mysqli_fetch_array($result2)) {
