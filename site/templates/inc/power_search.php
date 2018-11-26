@@ -42,7 +42,7 @@ ob_start();
         <option>Model (choose manufacturer first)</option>
         <script type="text/javascript">
           $("#first-choice").change(function() {
-            $("#second-choice").load("getter.php?choice=" + $(" #first-choice").val());
+            $("#second-choice").load("getter.php?choice=" + $("#first-choice").val());
           });
         </script>
       </select>
