@@ -5,9 +5,7 @@
 				<div class="text-center">
 					<!-- <h3><?=$page->title?></h3> -->
 					<!-- <?php echo $forms->embed('vehicle_power_search'); ?> -->
-					<?php
-					include "inc/power_search.php";
-					?>
+					<?=$out?>
 				</div>
 			</div>
 		</div>
