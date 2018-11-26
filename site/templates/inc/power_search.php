@@ -23,10 +23,10 @@ ob_start();
 <form>
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
-      <select placeholder="manufacturer"></select>
+      <select placeholder="manufacturer">Manufacturer</select>
     </div>
     <div class="cell small-12 medium-4">
-      <select placeholder="model"></select>
+      <select placeholder="model">Model</select>
     </div>
     <div class="cell small-12 medium-4">
       <input type="submit" class="button" value="Find Your Deal">
