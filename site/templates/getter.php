@@ -7,8 +7,8 @@ $result = mysqli_query($conn, $query);
 
 // second query
 $choice = "Mercedes";
-$choice = $_GET['choice'] ?? '';
-$choice = $conn->real_escape_string($choice);
+// $choice = $_GET['choice'] ?? '';
+// $choice = $conn->real_escape_string($choice);
   
 $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $choice . "' ORDER BY `model` ASC";
 echo $query2;
