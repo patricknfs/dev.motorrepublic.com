@@ -6,11 +6,11 @@ $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manuf
 $result = mysqli_query($conn, $query);
 
 // second query
-$choice = "MERCEDES";
-// $choice = $_GET['choice'] ?? '';
-// $choice = $conn->real_escape_string($choice);
+// $choice = "MERCEDES";
+$choice = $_GET['choice'] ?? '';
+$choice = $conn->real_escape_string($choice);
   
-$query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $choice . "' ORDER BY `model` ASC";
+$query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . strtoupper($choice) . "' ORDER BY `model` ASC";
 echo $query2;
 $result2 = mysqli_query($conn, $query2);
   
