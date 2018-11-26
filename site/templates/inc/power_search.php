@@ -15,17 +15,6 @@ while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
 
-// second query
-if ($_GET['choice']) {
-  $choice = $conn->real_escape_string($_GET['choice']);
-    
-  $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `model` = " . $choice . " ORDER BY `model` ASC";
-  $result2 = mysqli_query($conn, $query2);
-    
-  while ($row = mysqli_fetch_array($result2)) {
-      echo "<option>" . $row{'model'} . "</option>";
-  }
-}
 
 // $wire->wire('manufs', $man);
 
@@ -52,7 +41,7 @@ ob_start();
       <select placeholder="model" id="second-choice">
         <script type="text/javascript">
           $("#first-choice").change(function() {
-            $("#second-choice").load("power_search.php?choice=" + $("#first-choice").val());
+            $("#second-choice").load("getter.php?choice=" + $("#first-choice").val());
           });
         </script>
       </select>
