@@ -16,4 +16,3 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
   echo "Options are: " . $f->options;
   // $f->options = $mans;
 });
-echo "Manufs is: " . wire('manufs');
