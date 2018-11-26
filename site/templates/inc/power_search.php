@@ -4,6 +4,8 @@ date_default_timezone_set('CET');
 // require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 // require_once MR_PATH . '/inc/conn.php';
 
+// first query
+
 $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
 $result = mysqli_query($conn, $query);
 
@@ -12,6 +14,8 @@ $man = array();
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
+
+// second query
 
 $choice = mysqli_real_escape_string($_GET['choice']);
 	
@@ -46,7 +50,7 @@ ob_start();
     <div class="cell small-12 medium-4">
       <script type="text/javascript">
         $("#first-choice").change(function() {
-          $("#second-choice").load("getter.php?choice=" + $("#first-choice").val());
+          $("#second-choice").load("power_search.php?choice=" + $("#first-choice").val());
         });
       </script>
     </div>
