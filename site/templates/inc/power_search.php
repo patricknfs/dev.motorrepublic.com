@@ -13,6 +13,15 @@ while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
 
+$choice = mysql_real_escape_string($_GET['choice']);
+	
+$query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `model` = " . $choice . " ORDER BY `model` ASC";
+$result2 = mysqli_query($conn, $query2);
+  
+while ($row = mysql_fetch_array($result2)) {
+    echo "<option>" . $row{'model'} . "</option>";
+}
+
 // $wire->wire('manufs', $man);
 
 // $mans = $this->wire('manufs');
@@ -23,7 +32,7 @@ ob_start();
 <form>
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
-      <select placeholder="manufacturer">
+      <select placeholder="manufacturer" id="first_choice">
         <option value="">Manufacturer</option>
         <?php
         foreach ($man as $manufacturer) {
@@ -35,7 +44,11 @@ ob_start();
       </select>
     </div>
     <div class="cell small-12 medium-4">
-      <select placeholder="model">Model</select>
+      <script type="text/javascript">
+        $("#first-choice").change(function() {
+          $("#second-choice").load("getter.php?choice=" + $("#first-choice").val());
+        });
+      </script>
     </div>
     <div class="cell small-12 medium-4">
       <input type="submit" class="button" value="Find Your Deal">
