@@ -40,11 +40,10 @@ ob_start();
     <div class="cell small-12 medium-4">
       <select placeholder="model" id="second-choice">
         <option>Model (choose manufacturer first)</option>
-        <script type="text/javascript">
+      
           $("#first-choice").change(function() {
             $("#second-choice").load("getter.php?choice=" + $("#first-choice").val());
           });
-        </script>
       </select>
     </div>
     <div class="cell small-12 medium-4">
