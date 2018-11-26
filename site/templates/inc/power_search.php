@@ -23,13 +23,13 @@ ob_start();
 <form>
   <div class="grid-x">
     <div class="cell small-12 medium-4">
-        <input type="text" placeholder="manufacturer" />
+      <select placeholder="manufacturer"></select>
     </div>
     <div class="cell small-12 medium-4">
-        <input type="select" placeholder="model" />
+      <select placeholder="model"></select>
     </div>
     <div class="cell small-12 medium-4">
-        <input type="submit" text="submit" />
+      <input type="submit" text="submit" />
     </div>
   </form>
 </div>
