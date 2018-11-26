@@ -23,19 +23,13 @@ ob_start();
 <form>
   <div class="row">
     <div class="small-12 medium-4 columns">
-      <label>Input Label
         <input type="text" placeholder="manufacturer" />
-      </label>
     </div>
     <div class="small-12 medium-4 columns"">
-      <label>Input Label
         <input type="select" placeholder="model" />
-      </label>
     </div>
     <div class="small-12 medium-4 columns"">
-      <label>Input Label
         <input type="submit" text="submit" />
-      </label>
     </div>
 </form>
 <?php
