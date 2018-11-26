@@ -10,8 +10,9 @@ $choice = $_GET['choice'] ?? '';
 $choice = $conn->real_escape_string($choice);
   
 $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `model` = 'BMW' ORDER BY `model` ASC";
+echo $query2;
 $result2 = mysqli_query($conn, $query2);
   
 while ($row = mysqli_fetch_array($result2)) {
-    echo "<option>" . $row{'model'} . "</option>";
+  echo "<option>" . $row{'model'} . "</option>";
 }
