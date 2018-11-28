@@ -12,6 +12,8 @@ $man = array();
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
+wire('session')->set('manufs', $man);
+$mans = wire('session')->get('manufs');
 
 // $mans = wire('session')->get('manufs');
 print_r($mans);
