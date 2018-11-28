@@ -538,8 +538,6 @@ $query = "SELECT
     )
   ) AS mr2
   ON mr1.code = mr2.capid
-  -- WHERE mr2.rent IS NOT NULL
-  ORDER BY rental DESC
 ";
 // echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
