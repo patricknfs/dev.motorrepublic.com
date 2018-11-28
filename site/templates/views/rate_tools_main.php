@@ -73,7 +73,7 @@
           "data":           null,
           "defaultContent": ''
         },
-        { "data": "source" },
+        { "data": "src" },
         { "data": "cap_id" },
         { "data": "cap_code" },
         { "data": "manufacturer" },

@@ -29,7 +29,7 @@ $primaryKey = 'id';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-	array( 'db' => 'source',	'dt' => 'source' ),
+	array( 'db' => 'src',	'dt' => 'src' ),
 	array( 'db' => 'cap_id', 'dt' => 'cap_id' ),
 	array( 'db' => 'cap_code',	'dt' => 'cap_code' ),
 	array( 'db' => 'manufacturer',	'dt' => 'manufacturer' ),
