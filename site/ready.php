@@ -14,5 +14,5 @@ $forms->addHookBefore('FormBuilderProcessor::renderReady', function($e) {
 
   // // $f->options = $this->wire('manufs');
   // echo "Options are: " . $f->options;
-  // $f->options = $mans;
+  $f->options = wire('session')->get('manufs');
 });
