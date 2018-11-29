@@ -65,8 +65,8 @@ try
   
     $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
     $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
-    $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*3), 2, '.', ',');
-    $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*3), 2, '.', ',');
+    $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
+    $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
   
     $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
   }
