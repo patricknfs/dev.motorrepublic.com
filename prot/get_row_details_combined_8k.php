@@ -192,7 +192,7 @@ $row = 1;
 
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
-  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "','')";
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "')";
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
 }
