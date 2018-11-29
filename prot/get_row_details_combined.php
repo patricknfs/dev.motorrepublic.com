@@ -541,7 +541,7 @@ $query = "SELECT
 ";
 // echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
-
+mysqli_free_result($result);
 // iterate over every row
 $row = 1;
 
@@ -552,5 +552,5 @@ while ($row = mysqli_fetch_assoc($result)) {
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
 }
-
+mysqli_free_result($result3);
 mysqli_close($conn);
