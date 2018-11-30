@@ -20,10 +20,10 @@ while ($row = mysqli_fetch_assoc($result)) {
   // while ($row = mysqli_fetch_array($result2)) {
   //   array_push($models, $row['model']);
   // }
-  // print_r($models);
+  
 
   $models = array('200|200','300|300','400|400');
-
+  print_r($models);
 ob_start();
 ?>
 <form>
