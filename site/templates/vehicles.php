@@ -51,6 +51,8 @@ else {
 // echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
 
+unset($manuf);
+unset($mdl);
 ob_start();
 include('views/vehicles_main.php');
 $page->main = ob_get_clean();
