@@ -208,9 +208,6 @@ ERROR_REPORTING(E_ALL);
           var optionArray = <?php echo json_encode($models); ?>;
         } else if(s1.value == "Dodge"){
           var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
-        } else if(s1.value == "Ford"){
-          var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
-        }
         for(var option in optionArray){
           var pair = optionArray[option].split("|");
           var newOption = document.createElement("option");
