@@ -29,7 +29,7 @@ echo $manuf;
 $mdl = $sanitizer->text($input->post->slct2);
 echo $mdl;
 
-if( isset($manuf) ) {
+if( !empty($manuf) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' GROUP BY `cap_id` ";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
