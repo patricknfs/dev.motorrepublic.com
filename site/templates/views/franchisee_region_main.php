@@ -76,13 +76,6 @@
             </div>
           </div>
         </div>
-
-
-        <!-- <blockquote><h3><?=$testimonial->title?></h3>
-        <i><?=$testimonial_blurb?>... <a href="<?=$testimonial->url?>">more details</a></i></blockquote>
-        <div class="sig">
-          <cite><?=$testimonial->sig?></cite>
-        </div> -->
       </div>
     </div>
   </div>

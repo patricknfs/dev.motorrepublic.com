@@ -11941,8 +11941,7 @@ header {
 }
 
 nav {
-  z-index: 5;
-  border-top: 1px solid #cc0000;
+  z-index: 999;
 }
 
 .sticky {
