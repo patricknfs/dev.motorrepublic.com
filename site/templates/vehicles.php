@@ -41,7 +41,7 @@ else {
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined_terse` GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
-  echo "else " . $query;
+  // echo "else " . $query;
 }
 
 // echo $query;
