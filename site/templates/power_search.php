@@ -8,6 +8,7 @@ $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manuf
 $result = mysqli_query($conn, $query);
 
 $man = array();
+$man2 = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
