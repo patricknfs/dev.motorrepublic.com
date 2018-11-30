@@ -5,8 +5,8 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12">
-				<div id="hero_form"> 
-					<?php echo $forms->embed('vehicle_power_search'); ?>
+				<div class="text-center">
+					<?=$form_out?>
 				</div>
 			</div>
 		</div>
