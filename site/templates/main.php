@@ -39,7 +39,7 @@ ERROR_REPORTING(E_ALL);
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
         s2.innerHTML = "";
-        if(s1.value == "MERECEDES-BENZ"){
+        if(s1.value == "MERCEDES-BENZ"){
           var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
         } else if(s1.value == "Dodge"){
           var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
