@@ -34,27 +34,6 @@ ERROR_REPORTING(E_ALL);
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
-    <script>
-      function populate(s1,s2){
-        var s1 = document.getElementById(s1);
-        var s2 = document.getElementById(s2);
-        s2.innerHTML = "";
-        if(s1.value == "MERCEDES-BENZ"){
-          var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
-        } else if(s1.value == "Dodge"){
-          var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
-        } else if(s1.value == "Ford"){
-          var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
-        }
-        for(var option in optionArray){
-          var pair = optionArray[option].split("|");
-          var newOption = document.createElement("option");
-          newOption.value = pair[0];
-          newOption.innerHTML = pair[1];
-          s2.options.add(newOption);
-        }
-      }
-    </script>
     <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
@@ -220,4 +199,25 @@ ERROR_REPORTING(E_ALL);
     drift.load('zr8i59c3d6dv');
   </script>
   <!-- End of Async Drift Code -->
+  <script>
+      function populate(s1,s2){
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+        s2.innerHTML = "";
+        if(s1.value == "MERCEDES-BENZ"){
+          var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
+        } else if(s1.value == "Dodge"){
+          var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
+        } else if(s1.value == "Ford"){
+          var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
+        }
+        for(var option in optionArray){
+          var pair = optionArray[option].split("|");
+          var newOption = document.createElement("option");
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          s2.options.add(newOption);
+        }
+      }
+    </script>
 </html>
