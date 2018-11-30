@@ -206,7 +206,6 @@ ERROR_REPORTING(E_ALL);
         s2.innerHTML = "";
         if(s1.value == "MERCEDES-BENZ"){
           var optionArray = <?php echo json_encode($models); ?>;
-          document.write (optionArray);
         } else if(s1.value == "Dodge"){
           var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
         for(var option in optionArray){
