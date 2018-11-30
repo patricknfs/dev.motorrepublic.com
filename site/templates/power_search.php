@@ -13,6 +13,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
   //  model query
   $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = " . $row['manufacturer'] . " ORDER BY `model` ASC";
+  echo $query2;
   $result2 = mysqli_query($conn, $query2);
     
   while ($row = mysqli_fetch_array($result2)) {
