@@ -17,7 +17,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 while ($row2 = mysqli_fetch_assoc($result)) {
   array_push($man2, $row2['manufacturer'] . "|" . $row2['manufacturer']);
 }
-
+print_r($man2);
 ob_start();
 ?>
 <form>
