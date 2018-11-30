@@ -1,7 +1,7 @@
 <?php
-// testimonials.php
+// testimonial.php
 ob_start();
-include('views/testimonials_main.php');
+include('views/testimonial_main.php');
 $page->main = ob_get_clean();
 include("./main.php"); 
 ?>
