@@ -26,8 +26,11 @@ $no_of_records_per_page = 12;
 $offset = ($pageno-1) * $no_of_records_per_page;
 $manuf = $sanitizer->text($input->post->slct1);
 echo $manuf;
+$mdl = $sanitizer->text($input->post->slct2);
+echo $mdl;
+
 if( isset($manuf) ) {
-  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $_POST['manufacturer'] . "' AND `model` LIKE '%" . $_POST['model'] . "%' GROUP BY `cap_id` ";
+  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' GROUP BY `cap_id` ";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
