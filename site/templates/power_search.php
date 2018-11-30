@@ -12,7 +12,7 @@ $man = array();
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
-$selector = "template=vehicle";
+$selector = "template=vehicles";
 ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="POST">
