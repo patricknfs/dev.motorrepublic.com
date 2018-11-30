@@ -12,9 +12,10 @@ $man = array();
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
 }
+$selector = "template=vehicle";
 ob_start();
 ?>
-<form action="<?=$page->url;?>"method="POST">
+<form action="<?=$pages->get($selector)->url;?>"method="POST">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
       <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
