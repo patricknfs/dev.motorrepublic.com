@@ -26,7 +26,7 @@ ob_start();
 <form>
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-4">
-      <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+      <select placeholder="manufacturer" id="first-choice">
         <option value="">Manufacturer</option>
         <?php
         foreach ($man as $manufacturer) {
@@ -38,7 +38,14 @@ ob_start();
       </select>
     </div>
     <div class="cell small-12 medium-4">
-      <select id="slct2" name="slct2">>Model (choose manufacturer first)</select>
+      <select placeholder="model" id="second-choice">
+        <option>Model (choose manufacturer first)</option>
+        <script type="text/javascript">
+          $("#first-choice").change(function() {
+            $("#second-choice").load("getter.php?choice=" + $("#first-choice").val());
+          });
+        </script>
+      </select>
     </div>
     <div class="cell small-12 medium-4">
       <input type="submit" class="button" value="Find Your Deal">
