@@ -205,9 +205,12 @@ ERROR_REPORTING(E_ALL);
         var s2 = document.getElementById(s2);
         s2.innerHTML = "";
         if(s1.value == "MERCEDES-BENZ"){
-          var optionArray = <?php echo json_encode($models); ?>;
+          var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
         } else if(s1.value == "Dodge"){
           var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
+        } else if(s1.value == "Ford"){
+          var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
+        }
         for(var option in optionArray){
           var pair = optionArray[option].split("|");
           var newOption = document.createElement("option");
