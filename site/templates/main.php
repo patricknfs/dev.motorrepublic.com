@@ -199,6 +199,7 @@ ERROR_REPORTING(E_ALL);
     drift.load('zr8i59c3d6dv');
   </script>
   <!-- End of Async Drift Code -->
+  <?php echo json_encode($man2); ?>
   <script>
       function populate(s1,s2){
         var s1 = document.getElementById(s1);
