@@ -1,23 +1,25 @@
 <?php
-// manufacturer.php
+// power_search.php
 date_default_timezone_set('CET');
 
-// first query
-
+// manufacturer query
 $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
 $result = mysqli_query($conn, $query);
 
 $man = array();
-$man2 = array();
+$models - array();
 
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
+  //  model query
+  $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = " . $row['manufacturer'] . " ORDER BY `model` ASC";
+  $result2 = mysqli_query($conn, $query2);
+    
+  while ($row = mysqli_fetch_array($result2)) {
+    array_push($models, $row['model']);
+  }
 }
 
-while ($row2 = mysqli_fetch_assoc($result)) {
-  array_push($man2, $row2['manufacturer'] . "|" . $row2['manufacturer']);
-}
-print_r($man2);
 ob_start();
 ?>
 <form>

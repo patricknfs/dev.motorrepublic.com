@@ -199,14 +199,13 @@ ERROR_REPORTING(E_ALL);
     drift.load('zr8i59c3d6dv');
   </script>
   <!-- End of Async Drift Code -->
-  <?php echo json_encode($man2); ?>
   <script>
       function populate(s1,s2){
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
         s2.innerHTML = "";
         if(s1.value == "MERCEDES-BENZ"){
-          var optionArray = <?php echo json_encode($man2); ?>;
+          var optionArray = <?php echo json_encode($models); ?>;
         } else if(s1.value == "Dodge"){
           var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
         } else if(s1.value == "Ford"){
