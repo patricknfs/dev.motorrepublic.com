@@ -214,7 +214,7 @@ ERROR_REPORTING(E_ALL);
         while ($row = mysqli_fetch_assoc($result)) {
           echo "else if(s1.value == '" . $row['manufacturer'] . "'){
             var optionArray = ['|',";
-            $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = " . $row['manufacturer'] . " ORDER BY `model` ASC";
+            $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
             echo $query2;
             $result2 = mysqli_query($conn, $query2);
             while ($row2 = mysqli_fetch_array($result2)) {
