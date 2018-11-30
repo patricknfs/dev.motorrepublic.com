@@ -49,5 +49,5 @@ ob_start();
   </form>
 </div>
 <?php
-$out = ob_get_clean();
+$form_out = ob_get_clean();
 ?>
