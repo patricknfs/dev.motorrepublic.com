@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $query);
 $man = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-  array_push($man, $row['manufacturer']);
+  array_push($man, $row['manufacturer'] . "|" . $row['manufacturer']);
 }
 ob_start();
 ?>
