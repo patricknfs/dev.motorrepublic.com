@@ -218,7 +218,7 @@ ERROR_REPORTING(E_ALL);
             // echo $query2;
             $result2 = mysqli_query($conn, $query2);
             while ($row2 = mysqli_fetch_array($result2)) {
-              echo "$row2['model'] . "|" . $row2['model'];
+              echo "$row2['model'] . "|" . $row2['model']";
             }
           echo "}";
         }
