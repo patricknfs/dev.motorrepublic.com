@@ -57,7 +57,7 @@
 				}
 			}
 			else {
-				echo "Woah!!! No Vehicles! PLease try another search above.";
+				echo "<h4>This vehicle is a special purchase. Please call the number above or use live chat to speak to an expert.</h4>";
 			}
 			?>
 		</div>
