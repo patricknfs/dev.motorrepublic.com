@@ -204,13 +204,19 @@ ERROR_REPORTING(E_ALL);
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
         s2.innerHTML = "";
-        if(s1.value == "MERCEDES-BENZ"){
+        if(s1.value == ""){
           var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
-        } else if(s1.value == "Dodge"){
-          var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
-        } else if(s1.value == "Ford"){
-          var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
         }
+        <?php
+        $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
+        $result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo "else if(s1.value == '" . $row['manufacturer'] . "'){
+            var optionArray = ['|','avenger|Avenger','challenger|Challenger','charger|Charger'];
+          }";
+        }
+        ?> 
         for(var option in optionArray){
           var pair = optionArray[option].split("|");
           var newOption = document.createElement("option");
