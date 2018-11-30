@@ -24,8 +24,9 @@ if (isset($_GET['pageno'])) {
 }
 $no_of_records_per_page = 12;
 $offset = ($pageno-1) * $no_of_records_per_page;
-
-if( isset($_POST['manufacturer']) ) {
+$manuf = $sanitizer->text($input->post->slct1);
+echo $manuf;
+if( isset($manuf) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $_POST['manufacturer'] . "' AND `model` LIKE '%" . $_POST['model'] . "%' GROUP BY `cap_id` ";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
@@ -41,7 +42,7 @@ else {
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined_terse` GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
-  // echo "else " . $query;
+  echo "else " . $query;
 }
 
 // echo $query;
