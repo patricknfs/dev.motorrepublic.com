@@ -204,7 +204,7 @@ ERROR_REPORTING(E_ALL);
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
         s2.innerHTML = "";
-        if(s1.value == ""){
+        if(s1.value == "Choose Manufacturer First"){
           var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
         }
         <?php
