@@ -57,7 +57,7 @@
 				}
 			}
 			else {
-				echo "<h4>This vehicle is a special purchase. Please call the number above or use live chat to speak to an expert.</h4>";
+				echo "<h4>This vehicle is either a special purchase or not currently available. Please call the number above or use live chat to speak to an expert.</h4>";
 			}
 			?>
 		</div>
