@@ -10,8 +10,13 @@ $result = mysqli_query($conn, $query);
 $man = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-  array_push($man, $row['manufacturer'] . "|" . $row['manufacturer']);
+  array_push($man, $row['manufacturer']);
 }
+
+while ($row2 = mysqli_fetch_assoc($result)) {
+  array_push($man2, $row2['manufacturer'] . "|" . $row2['manufacturer']);
+}
+
 ob_start();
 ?>
 <form>

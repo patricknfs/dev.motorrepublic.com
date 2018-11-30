@@ -205,7 +205,7 @@ ERROR_REPORTING(E_ALL);
         var s2 = document.getElementById(s2);
         s2.innerHTML = "";
         if(s1.value == "MERCEDES-BENZ"){
-          var optionArray = <?php echo json_encode($man); ?>;
+          var optionArray = <?php echo json_encode($man2); ?>;
         } else if(s1.value == "Dodge"){
           var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
         } else if(s1.value == "Ford"){
