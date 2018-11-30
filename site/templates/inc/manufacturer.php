@@ -14,8 +14,4 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 wire('session')->set('manufs', $man);
 $mans = wire('session')->get('manufs');
-
-// $mans = wire('session')->get('manufs');
-print_r($mans);
-// echo '<pre>'; print_r($man); echo '</pre>';
 ?>
