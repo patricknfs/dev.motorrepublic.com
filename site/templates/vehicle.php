@@ -1,6 +1,6 @@
 <?php
-// vehicles.php
-
+// vehicle.php
+include "power_search.php";
 // $products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
 
 // $pagination = $products->renderPager(array(
