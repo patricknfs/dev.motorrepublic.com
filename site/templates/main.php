@@ -220,7 +220,7 @@ ERROR_REPORTING(E_ALL);
             while ($row2 = mysqli_fetch_array($result2)) {
               echo "'" . $row2['model'] . "|" . $row2['model'] . "',";
             }
-          echo "}";
+          echo "]}";
         }
         ?> 
         for(var option in optionArray){
