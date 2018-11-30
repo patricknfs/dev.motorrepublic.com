@@ -1,7 +1,7 @@
 <?php
 $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
 $result = mysqli_query($conn, $query);
-
+echo $_GET['choice'];
 // second query
 if ($_GET['choice']) {
   $choice = $conn->real_escape_string($_GET['choice']);
