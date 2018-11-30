@@ -215,6 +215,7 @@ ERROR_REPORTING(E_ALL);
           echo "else if(s1.value == '" . $row['manufacturer'] . "'){
             var optionArray = ['|',";
             $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = " . $row['manufacturer'] . " ORDER BY `model` ASC";
+            echo $query2;
             $result2 = mysqli_query($conn, $query2);
             while ($row2 = mysqli_fetch_array($result2)) {
               echo "$row2[model]";
