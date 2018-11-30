@@ -11,15 +11,18 @@ $man = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $row['manufacturer']);
-  //  model query
-  $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
-  $result2 = mysqli_query($conn, $query2);
-  $models = array();
-  while ($row = mysqli_fetch_array($result2)) {
-    array_push($models, $row['model']);
-  }
-  print_r($models);
 }
+
+  //  model query
+  // $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
+  // $result2 = mysqli_query($conn, $query2);
+  // $models = array();
+  // while ($row = mysqli_fetch_array($result2)) {
+  //   array_push($models, $row['model']);
+  // }
+  // print_r($models);
+
+  $models = array('200','300','400');
 
 ob_start();
 ?>
