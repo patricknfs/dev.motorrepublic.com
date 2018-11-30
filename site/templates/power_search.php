@@ -22,7 +22,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   // }
   // print_r($models);
 
-  $models = array('200','300','400');
+  $models = array('200|200','300|300','400|400');
 
 ob_start();
 ?>
