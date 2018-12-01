@@ -41,8 +41,8 @@ include "power_search.php";
     <link rel='stylesheet' type='text/css' href='<?=$config->urls->FieldtypeComments?>comments.css' />
   </head>
   <body  data-sticky-container>
+  <div class="sharethis-inline-share-buttons"></div>
     <header data-sticky data-margin-top="0">
-      <div class="sharethis-inline-share-buttons"></div>
       <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
           <ul>
@@ -50,7 +50,6 @@ include "power_search.php";
             <li>vans & lcv's</li>
         </div>
         <div class="cell small-12 medium-6 .align-right">
-        <div class="sharethis-inline-share-buttons"></div>
         </div>
         
       </div>
