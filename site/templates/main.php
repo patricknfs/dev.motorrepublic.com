@@ -35,7 +35,7 @@ ERROR_REPORTING(E_ALL);
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c0241f50624ce0011ee8859&product='inline-share-buttons' async='async'></script>
-    <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
     <link rel='stylesheet' type='text/css' href='<?=$config->urls->FieldtypeComments?>comments.css' />
