@@ -40,6 +40,13 @@ ERROR_REPORTING(E_ALL);
     <link rel='stylesheet' type='text/css' href='<?=$config->urls->FieldtypeComments?>comments.css' />
   </head>
   <body  data-sticky-container>
+  <div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
     <header data-sticky data-margin-top="0">
       <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
@@ -70,8 +77,6 @@ ERROR_REPORTING(E_ALL);
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-      <!-- <header class="navigation" role="banner">
-      <div class="navigation-wrapper"> -->
         <div class="menu-container">
           <div class="menu">
             <?php
@@ -111,8 +116,6 @@ ERROR_REPORTING(E_ALL);
             </div> -->
           </div>
         </div>
-      <!-- </div>
-    </header> -->
       </nav>
     </header>
       <?php
