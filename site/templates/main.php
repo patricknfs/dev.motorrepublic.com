@@ -100,7 +100,7 @@ include "power_search.php";
           </div> -->
         </div>
       </div>
-      <div class="grid-x"><?=$form_out?></div>
+      <div class="grid-container"><?=$form_out?></div>
     </header>
       <?php
       if($page->main){
