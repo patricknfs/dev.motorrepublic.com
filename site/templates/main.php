@@ -34,7 +34,6 @@ ERROR_REPORTING(E_ALL);
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c0241f50624ce0011ee8859&product=inline-share-buttons' async='async'></script>
     <!-- <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
@@ -155,6 +154,7 @@ ERROR_REPORTING(E_ALL);
         </div>
     </section>
     </footer>
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c0241f50624ce0011ee8859&product=inline-share-buttons' async='async'></script>
   </body>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/foundation.min.js" ></script>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/app.js" ></script>
