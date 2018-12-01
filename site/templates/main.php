@@ -41,6 +41,7 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">
+    <div class="sharethis-inline-share-buttons"></div>
       <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
           <ul>
