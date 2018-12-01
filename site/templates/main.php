@@ -41,7 +41,7 @@ ERROR_REPORTING(E_ALL);
   </head>
   <body  data-sticky-container>
     <header data-sticky data-margin-top="0">
-    <div class="sharethis-inline-share-buttons"></div>
+      <div class="sharethis-inline-share-buttons"></div>
       <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
           <ul>
@@ -61,46 +61,46 @@ ERROR_REPORTING(E_ALL);
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-        <div class="menu-container">
-          <div class="menu">
-            <?php
-            $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-            $options = array(
-              'parent_class' => '',
-              'current_class' => '',
-              'has_children_class' => '',
-              'levels' => false,
-              'levels_prefix' => 'level-',
-              'max_levels' => null,
-              'firstlast' => false,
-              'collapsed' => false,
-              'show_root' => true,
-              'selector' => '',
-              'outer_tpl' => '<ul id="" class="">||',
-              'inner_tpl' => '<ul class="">||</ul>',
-              'list_tpl' => '<li%s>||</li>||</li>',
-              'list_field_class' => '',
-              'item_tpl' => '<a href="{url}">{title}</a>',
-              'item_current_tpl' => '<a href="{url}">{title}</a>',
-              'xtemplates' => '',
-              'xitem_tpl' => '<span>{title}</span>',
-              'xitem_current_tpl' => '<span>{title}</span>'
-            );
-            echo $treeMenu->render($options);
-            ?>
-            <!--<div class="navigation-tools">
-              <div class="search-bar">
-                <form action="<?=$config->urls->root?>search/" role="search">
-                  <input type="search" placeholder="Enter Search" name="q" />
-                  <button type="submit">
-                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-                  </button>
-                </form>
-              </div>
-            </div> -->
-          </div>
+      <div class="menu-container">
+        <div class="menu">
+          <?php
+          $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+          $options = array(
+            'parent_class' => '',
+            'current_class' => '',
+            'has_children_class' => '',
+            'levels' => false,
+            'levels_prefix' => 'level-',
+            'max_levels' => null,
+            'firstlast' => false,
+            'collapsed' => false,
+            'show_root' => true,
+            'selector' => '',
+            'outer_tpl' => '<ul id="" class="">||',
+            'inner_tpl' => '<ul class="">||</ul>',
+            'list_tpl' => '<li%s>||</li>||</li>',
+            'list_field_class' => '',
+            'item_tpl' => '<a href="{url}">{title}</a>',
+            'item_current_tpl' => '<a href="{url}">{title}</a>',
+            'xtemplates' => '',
+            'xitem_tpl' => '<span>{title}</span>',
+            'xitem_current_tpl' => '<span>{title}</span>'
+          );
+          echo $treeMenu->render($options);
+          ?>
+          <!--<div class="navigation-tools">
+            <div class="search-bar">
+              <form action="<?=$config->urls->root?>search/" role="search">
+                <input type="search" placeholder="Enter Search" name="q" />
+                <button type="submit">
+                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                </button>
+              </form>
+            </div>
+          </div> -->
         </div>
-      </nav>
+      </div>
+      <div><?=$form_out?></div>
     </header>
       <?php
       if($page->main){
