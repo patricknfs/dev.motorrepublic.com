@@ -16,7 +16,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
-				<h3>Top Mercedes Deals</h3>
+				<h3>Check OUt Our Specials</h3>
 				<div class="grid-x grid-margin-x">
 					<?php
 					foreach($result AS $vehicle) {
