@@ -56,7 +56,7 @@
 			</div>
 			<div class="cell small-12 medium-4">
 				<div id="message">
-					<h1>Deal of the Day</h1>
+					<h2>Deal of the Day</h2>
 					<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
 					<h4>THE ALL NEW FIESTA ST2</h4>
 					<p>Available in stock now from £215.99 inc. VAT</p>
