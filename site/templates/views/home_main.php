@@ -3,8 +3,10 @@
 ?>
 <section id="promo" style="background: url(<?=$config->urls->assets?>/files/1/istock-528474010_super_1200_80.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 	<!-- <div class="overlay"></div> -->
-	<div id="hero-title" class="cell small-12 medium-4">
-		<h1>Driving the Best Deals to You</h1>
+	<div class="grid-container">
+		<div id="hero-title" class="cell small-12 medium-3">
+			<h1>Driving the Best Deals to You</h1>
+		</div>
 	</div>
 </section>
 
