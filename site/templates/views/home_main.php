@@ -5,7 +5,7 @@
 	<!-- <div class="overlay"></div> -->
 	<div class="grid-container">
 		<div class="grid-x">
-			<div id="hero-title" class="cell small-12 medium-3">
+			<div id="hero-title" class="cell small-12 medium-4">
 				<h1>Driving the Best Deals to You</h1>
 			</div>
 		</div>
