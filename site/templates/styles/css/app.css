@@ -11948,6 +11948,10 @@ nav {
   z-index: 5;
 }
 
+.searchrow {
+  background-color: #32506d;
+}
+
 .floatright {
   float: right;
   margin-left: 1em;
