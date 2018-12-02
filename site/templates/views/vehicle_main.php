@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="cell small-12 medium-4">
-				<p>form-builder/vehicle_quick_contact</p>
+				<?php echo $forms->embed('vehicle_quick_contact'); ?>
 			</div>
 		</div>
 	</div>
