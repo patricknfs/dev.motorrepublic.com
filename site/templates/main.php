@@ -43,7 +43,7 @@ include "power_search.php";
   <body  data-sticky-container>
   <div class="sharethis-inline-share-buttons"></div>
     <header data-sticky data-margin-top="0">
-      <div id="primenav" class="grid-x">
+      <!-- <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
           <ul>
             <li>new cars</li>
@@ -52,7 +52,7 @@ include "power_search.php";
         <div class="cell small-12 medium-6 .align-right">
         </div>
         
-      </div>
+      </div> -->
       <div id="logorow" class="grid-x align-justify">
         <div class="cell small-12 medium-3" id="logoimg">
           <a href="/"><img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" /></a>
