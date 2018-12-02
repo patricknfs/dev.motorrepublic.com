@@ -21,6 +21,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="cell small-12 medium-4">
+				<p>form-builder/vehicle_quick_contact</p>
+			</div>
 		</div>
 	</div>
 	<section id="vehicle_details">
