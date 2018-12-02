@@ -2,14 +2,10 @@
 // home_main.php
 ?>
 <section id="promo" style="background: url(<?=$config->urls->assets?>/files/1/istock-528474010_super_1200_80.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-	<div class="overlay"></div>
-	<div id="message">
-					<h1>Deal of the Day</h1>
-					<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
-					<h4>THE ALL NEW FIESTA ST2</h4>
-					<p>Available in stock now from £215.99 inc. VAT</p>
-					<p><a href="#">More details...</a></p>
-				</div>
+	<!-- <div class="overlay"></div> -->
+	<div class="hero-title">
+		<h1>Driving the Best Deals to You<h1>
+	</div>
 </section>
 
 <section id="block_one">
@@ -55,6 +51,13 @@
 				</div>
 			</div>
 			<div class="cell small-12 medium-4">
+				<div id="message">
+					<h1>Deal of the Day</h1>
+					<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
+					<h4>THE ALL NEW FIESTA ST2</h4>
+					<p>Available in stock now from £215.99 inc. VAT</p>
+					<p><a href="#">More details...</a></p>
+				</div>
 				<h3>Magazine Article</h3>
 				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
 				<h3>Regional Strength?</h3>
