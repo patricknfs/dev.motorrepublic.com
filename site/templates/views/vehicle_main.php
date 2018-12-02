@@ -21,7 +21,9 @@
 					</div>
 				</div>
 				<div class="cell small-12 medium-4">
-				<?php echo $forms->embed('vehicle_quick_contact'); ?>
+					<div class="card card-2">
+						<?php echo $forms->embed('vehicle_quick_contact'); ?>
+					</div>
 			</div>
 			</div>
 		</div>
