@@ -11992,20 +11992,24 @@ tr.shown td.details-control {
   background: url("/site/assets/graphics/details_close.png") no-repeat center center;
 }
 
+#hero-title h1 {
+  color: #ffffff;
+}
+
 section#promo {
   position: relative;
   overflow: hidden;
 }
 
-section#promo .overlay {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -5;
-  background: #fff;
-  opacity: 0.6;
+section#promo #hero-title {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+section#promo #hero-title h1 {
+  color: #ffffff;
 }
 
 section#promo .row {
