@@ -17,6 +17,9 @@ ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="POST">
   <div class="grid-x grid-margin-x">
+    <div class="cell small-12 medium-2">
+      <h4>Quick Search</h4>
+    </div>
     <div class="cell small-12 medium-4">
       <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
         <option value="">Manufacturer</option>
@@ -32,7 +35,7 @@ ob_start();
     <div class="cell small-12 medium-4">
       <select id="slct2" name="slct2">>Model (choose manufacturer first)</select>
     </div>
-    <div class="cell small-12 medium-4">
+    <div class="cell small-12 medium-2">
       <input type="submit" class="button" value="Find Your Deal">
     </div>
   </form>
