@@ -1,7 +1,7 @@
 <?php
 // home_main.php
 ?>
-<section id="promo" style="background: url(site/assets/files/1/istock-528474010_super_1200_80.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+<section id="promo" style="background: url(<?=$config->urls->assets?>/files/1/istock-528474010_super_1200_80.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 	<!-- <div class="overlay"></div> -->
 	<div class="grid-container">
 				<h3>Top Mercedes Deals</h3>
