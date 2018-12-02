@@ -18,7 +18,7 @@ ob_start();
 <form action="<?=$pages->get($selector)->url;?>" method="POST">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-2">
-      <h5 style+"color: #ffffff;">Quick Search</h5>
+      <h5 style="color: #ffffff;">Quick Search</h5>
     </div>
     <div class="cell small-12 medium-4">
       <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
