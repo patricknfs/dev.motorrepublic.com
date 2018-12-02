@@ -16,7 +16,7 @@ require_once(MR_PATH . "/inc/conn.php");
 include "inc/functions.php";
 include "inc/manufacturer.php";
 include "power_search.php";
-$_GET['vid'] = $input->urlSegment1;
+$_GET['vid'] = $input->urlSegment1 . " - " . $data['manufacturer'] . " " .$data['model'];
 try
 {
   $username = '173210';
