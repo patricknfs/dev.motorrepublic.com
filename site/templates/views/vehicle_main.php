@@ -66,7 +66,7 @@
 					<div class="card card-2">
 						<div class="card-section">
 							<h4 style="color:#cc1000">More Info</h4>
-							<p>Fill out the form below and we will contact you back. Or, use the live chat option bottom right</p>
+							<p>Fill out the form below and we will contact you back, or, use the live chat option bottom right</p>
 							<?php echo $forms->embed('vehicle_quick_contact'); ?>
 						</div>
 					</div>
