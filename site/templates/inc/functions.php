@@ -387,31 +387,31 @@ function get_soap_client_2(){
     return $client;
 }
 
-function treeMenu(Page $page = null, $depth = 1, $id = null) {
+// function treeMenu(Page $page = null, $depth = 1, $id = null) {
 
-    $depth -= 1;
+//     $depth -= 1;
     
-    if(is_null($page)) $page = wire('page');
-    if(!is_null($id)) $id = " id='$id'";
+//     if(is_null($page)) $page = wire('page');
+//     if(!is_null($id)) $id = " id='$id'";
 
-    $out = "\n<ul$id>";
+//     $out = "\n<ul$id>";
 
-    $parents = $page->parents;
+//     $parents = $page->parents;
 
-    // This is where we get pages we want. You could just say template!=news-item 
-    foreach($page->children() as $child) {
-            $class = "level-" . count($child->parents);
-            $s = '';
-            if($child->numChildren && $depth > 0 ) {
-                    $s = str_replace("\n", "\n\t\t", treeMenu($child, $depth));
-            }
+//     // This is where we get pages we want. You could just say template!=news-item 
+//     foreach($page->children() as $child) {
+//             $class = "level-" . count($child->parents);
+//             $s = '';
+//             if($child->numChildren && $depth > 0 ) {
+//                     $s = str_replace("\n", "\n\t\t", treeMenu($child, $depth));
+//             }
 
-            $class .= " page-{$child->id}";
-            $class = " class='$class'";
-            $out .= "\n\t<li$class>\n\t\t<a$class href='{$child->url}'>{$child->title}</a>$s\n\t</li>";
-    }
-    $out .= "\n</ul>";
+//             $class .= " page-{$child->id}";
+//             $class = " class='$class'";
+//             $out .= "\n\t<li$class>\n\t\t<a$class href='{$child->url}'>{$child->title}</a>$s\n\t</li>";
+//     }
+//     $out .= "\n</ul>";
 
-    return $out;
-}
+//     return $out;
+// }
 ?>
