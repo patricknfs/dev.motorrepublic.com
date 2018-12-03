@@ -5,7 +5,8 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 include "power_search.php";
 $manuf = $page->top_deal_manuf;
-$query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined` WHERE `manufacturer` = '" . strtoupper($manuf) . "' GROUP BY `model` ORDER BY `rental` ASC LIMIT 6";
+// $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined` WHERE `manufacturer` = '" . strtoupper($manuf) . "' GROUP BY `model` ORDER BY `rental` ASC LIMIT 6";
+$query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined` WHERE `special` = true GROUP BY `model` ORDER BY `rental` ASC LIMIT 6";
 $result = $conn->query($query) or die(mysqli_error($conn));
 $data = $result->fetch_assoc();
 // echo $query;
