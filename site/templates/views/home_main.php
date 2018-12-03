@@ -24,8 +24,8 @@
 							'quality' => 80,
 							'upscaling' => false       
 						);
-						$bch_rental = number_format($vehicle['rental'], 2, '.', ',');
-						$pch_rental = number_format($vehicle['rental'] * 1.2), 2, '.', ',');
+						$bch_rental = $vehicle['rental'];
+						$pch_rental = $vehicle['rental'] * 1.2);
 
 						$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 					?>
