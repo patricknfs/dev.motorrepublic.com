@@ -24,7 +24,6 @@
 							'quality' => 80,
 							'upscaling' => false       
 						);
-						print_r()
 						$bch_rental = number_format($vehicle['rental'], 2, '.', ',');
 						$pch_rental = number_format($vehicle['rental'] * 1.2), 2, '.', ',');
 
