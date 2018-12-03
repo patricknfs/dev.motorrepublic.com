@@ -26,7 +26,7 @@
 						);
 
 						$bch_rental = number_format($data['rental'], 2, '.', ',');
-						$pch_rental = number_format($data['rental'], *1.2), 2, '.', ',');
+						$pch_rental = number_format(($data['rental'] * 1.2), 2, '.', ',');
 
 						$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
 					?>
