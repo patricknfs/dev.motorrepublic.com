@@ -25,7 +25,7 @@
 							'upscaling' => false       
 						);
 
-						$bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
+						$bch_rental = number_format($data['rental'], 2, '.', ',');
 						$pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
 
 						$hashcode = strtoupper(md5("173210NfS4JeCAR" . $vehicle['cap_id']));
