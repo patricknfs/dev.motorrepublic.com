@@ -79,6 +79,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       `CO2` = '" . $data[15] . "',
       `p11d_price` = '" . str_replace('£','',$data[3]) . "',
       `updated` = NOW(),
+      `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
       " . $insert . "
       ON DUPLICATE KEY UPDATE
       `updated` = NOW(),
