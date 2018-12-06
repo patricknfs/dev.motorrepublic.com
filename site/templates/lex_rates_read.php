@@ -25,7 +25,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = $rawdata;
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
-    if($row > 2){
+    if($row >= 2){
       $data22 = str_replace(',','',$data[22]);
       $data9 = str_replace(',','',$data[9]);
       $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` = '" . trim($data[0]) . "' LIMIT 1";
@@ -226,7 +226,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         default;
         echo "Ratebook fault";
       }
-      // echo $update . "<br />";
+      echo $update . "<br />";
       $result = mysqli_query($conn, $update);
     }
     $row++;
