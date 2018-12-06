@@ -25,9 +25,9 @@ if (isset($_GET['pageno'])) {
 $no_of_records_per_page = 12;
 $offset = ($pageno-1) * $no_of_records_per_page;
 $manuf = $sanitizer->text($input->post->slct1);
-echo $manuf;
+// echo $manuf;
 $mdl = $sanitizer->text($input->post->slct2);
-echo $mdl;
+// echo $mdl;
 
 if( !empty($manuf) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' GROUP BY `cap_id` ";
