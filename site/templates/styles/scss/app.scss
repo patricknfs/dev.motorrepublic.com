@@ -1,0 +1,523 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300');
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import 'megamenu';
+@import 'fontawesome';
+// @import 'brands';
+
+@include foundation-global-styles;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+// @include foundation-menu;
+// @include foundation-menu-icon;
+// @include foundation-drilldown-menu;
+@include foundation-dropdown;
+// @include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+// @include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+header {
+  border-bottom: 3px solid #3e505d;
+}
+
+#primenav {
+  background-color: #1d2b35;
+  color: #fff;
+}
+
+#primenav ul {
+  margin: 0.4m 0 0.3em 2.2em;
+}
+
+#primenav ul li {
+  display: inline-block;
+}
+
+#primenav ul li:not(:first-child):before {
+  content: " | ";
+}
+
+nav {
+  z-index: 999;
+}
+
+.sticky {
+  z-index: 5;
+}
+
+.searchbar {
+  background-color: #475b69;
+  padding-top: 1.2em;
+}
+
+.floatright {
+  float: right;
+  margin-left: 1em;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 1em;
+}
+
+#logorow {
+  background-color: #fff;
+}
+
+#logoimg {
+  width: 16em;
+  margin: 1em 0 1em 2.4em;
+  float: left;
+}
+
+#header_tel {
+  padding-top: 0.5em;
+  text-align: right;
+  padding-right: 3em;
+}
+
+.nav_link {
+  color: #fff;
+}
+
+td.details-control {
+  background: url('/site/assets/graphics/details_open.png') no-repeat center center;
+  cursor: pointer;
+}
+
+tr.shown td.details-control {
+  background: url('/site/assets/graphics/details_close.png') no-repeat center center;
+}
+
+#hero-title h1 {
+  color: #ffffff;
+}
+
+section#promo {
+  position: relative;
+  overflow: hidden;
+
+  #hero-title {
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+    padding: 1.2rem;
+    margin: 6rem 0;
+  }
+  
+  #hero-title h1 {
+    color: #fff;
+  }
+
+  // .overlay {
+  //   height: 100%;
+  //   width: 100%;
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   z-index: -5;
+  //   background: #fff;
+  //   opacity: 0.6;
+
+  // h1
+  //   color: #ffffff;
+  // }
+
+  // #video_bg {
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 50%;
+  //   min-width: 100%;
+  //   min-height: 100%;
+  //   -webkit-transform: translate(-50%,-50%);
+  //   -moz-transform: translate(-50%,-50%);
+  //   -ms-transform: translate(-50%,-50%);
+  //   transform: translate(-50%,-50%);
+  //   z-index: -10;
+  // }
+
+  .row {
+    min-height: 100vh;
+  }
+
+  #hero_form {
+    background: rgba(0,0,0,0.6);
+    padding: 1.5rem;
+    margin: 6rem;
+  }
+
+  .InputfieldHeader {
+    color: #fff;
+  }
+
+  #slogan {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+      h1,h2 {
+        color: #fff;
+        text-shadow: 1px 1px #000;
+      }
+    }
+  }
+}
+
+  
+#message { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  background: #a8ddfd;
+  color: #333;
+  padding: 2rem;
+  margin: 1rem 0;
+  float: right;
+  font-size: 1.2rem;
+
+  img {
+    margin-bottom: 1em;
+  }
+}
+
+section#search_block {
+  margin-top: 1em;
+}
+
+section#block_one {
+  margin-top: 1em;
+}
+
+section#block_two {
+  background: url(/site/assets/images/tesla_1900.jpg) no-repeat center center fixed; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  min-width: 100vw;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  h1, p {
+    color: #fff;
+  }
+}
+
+section#whatwedo {
+  margin-top: section;
+}
+
+.hero {
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+.hero_overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 2em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+// Franchisee sections
+#intro {
+  padding: 2em 0;
+  h3, h4 {
+    color: #fff;
+    text-shadow: 1px 1px #000;
+  }
+  p {
+    color: #fff;
+    text-shadow: 0.5px 0.5px #000;
+  }
+  img {
+    margin-bottom: 1em;
+  }
+  a {
+    color: #fff;
+  }
+  a:hover {
+    color: #cc1000;
+  }
+}
+
+#content {
+  padding-top: 2em;
+}
+
+footer {
+  background: url(/site/assets/graphics/mr_footer_red.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 2em;
+  padding-top: 2em;
+  p {
+    color: #fff;
+  }
+
+  ul {
+    display: inline-block;
+    color: #fff;
+    li {
+      list-style: none;
+    }
+  }
+
+  #governance {
+    background-color: #333;
+    padding-top: 2em;
+  }
+}
+
+// Home page
+
+.home_deals {
+  text-align: center;
+}
+
+// Product pages
+
+.card-divider-2 {
+  background-color: #cc1000;
+}
+
+.card-2 {
+  border: none;
+  background-color: #e4e4e4;
+  color: #666666;
+  h4 {
+    color: #cc1000;
+  } 
+}
+
+.price {
+  color: #cc1000;
+}
+
+$social-button-size: 2rem;
+$social-button-border-width: 0.125rem;
+$social-button-font-size: 1.6rem;
+$social-button-line-height: 1.6em;
+$social-button-border-radius: 1.6875rem;
+$social-button-transition: all 0.5s ease;
+$social-button-margin: 0.25rem;
+
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-linkedin: #007bb5;
+$social-brand-youtube: #bb0000;
+$social-brand-instagram: #125688;
+$social-brand-pinterest: #cb2027;
+$social-brand-google-plus: #dd4b39;
+$social-brand-github: #000000;
+$social-brand-tumblr: #32506d;
+
+@mixin social-button($brand-color, $brand-icon) {
+  background: $brand-color;
+
+  &:before {
+    font-family: "FontAwesome";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: $white;
+    border-color: $brand-color;
+  }
+}
+
+.rounded-social-buttons {
+  text-align: right;
+  margin-right: 1em;
+  margin-bottom: 0.3em
+}
+
+.social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: $social-button-size;
+  height: $social-button-size;
+  // border: $social-button-border-width solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+  font-size: $social-button-font-size;
+  font-weight: normal;
+  line-height: $social-button-line-height;
+  border-radius: $social-button-border-radius;
+  transition: $social-button-transition;
+  margin-right: $social-button-margin;
+  margin-bottom: $social-button-margin;
+
+  &:hover,
+  &:focus {
+    transform: rotate(360deg);
+  }
+}
+
+.facebook {
+  @extend %fa-icon;
+  @extend .fab;
+  color: $social-brand-facebook;
+  &:before {
+    content: fa-content($fa-var-facebook);
+  }
+}
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+  color: $social-brand-twitter;
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
+
+.linkedin {
+  @extend %fa-icon;
+  @extend .fab;
+  color: $social-brand-linkedin;
+  &:before {
+    content: fa-content($fa-var-linkedin);
+  }
+}
+
+.youtube {
+  @extend %fa-icon;
+  @extend .fab;
+  color: $social-brand-youtube;
+  &:before {
+    content: fa-content($fa-var-youtube);
+  }
+}
+
+.instagram {
+  @extend %fa-icon;
+  @extend .fab;
+  color: $social-brand-instagram;
+  &:before {
+    content: fa-content($fa-var-instagram);
+  }
+}
+
+.blockquote-container {
+  &.blockquote-left {
+    float: left;
+    width: 35%;
+    margin-right: $global-margin;
+
+    @include breakpoint (small only) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &.blockquote-right {
+    float: right;
+    width: 35%;
+    margin-left: $global-margin;
+  }
+
+  .callout {
+    .blockquote-title {
+      margin-left: 1rem;
+    }
+
+    blockquote {
+      quotes: "“""”""‘""’  ";
+      border-left: none;
+
+      &:before {
+        content: open-quote;
+        color: $dark-gray;
+        font-size: 4em;
+        line-height: 0.1em;
+        vertical-align: -0.4em;
+      }
+
+      &:after {
+        content: close-quote;
+        color: $dark-gray;
+        font-size: 4em;
+        line-height: 0.1em;
+        vertical-align: -0.6em;
+      }
+
+      .blockquote-content {
+        display: inline;
+        color: $black;
+      }
+    }
+  }
+}
+
+section#vehicle_details {
+  margin-top: 1em;
+}
+
+.tabs-panel ul li {
+  list-style-type: none;
+}
+
+section#post {
+  margin-top: 2em;
+}
+
+section#posts {
+  margin-top: 2em;
+}
+
+section#vehicle {
+  margin-top: 2em;
+}
+
+
+section#vehicles {
+  margin-top: 2em;
+}
+
