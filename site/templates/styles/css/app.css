@@ -12157,11 +12157,14 @@ footer #governance {
 
 .card-2 {
   border: none;
+}
+
+.gen_form {
   background-color: #e4e4e4;
   color: #666666;
 }
 
-.card-2 h4 {
+.gen_form h4 {
   color: #cc1000;
 }
 
