@@ -12157,10 +12157,16 @@ footer #governance {
 
 .card-2 {
   border: none;
+  background-color: #e4e4e4;
+  color: #666666;
+}
+
+.card-2 h4 {
+  color: #cc1000;
 }
 
 .price {
-  color: #cc0000;
+  color: #cc1000;
 }
 
 .rounded-social-buttons {
