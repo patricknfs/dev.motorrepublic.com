@@ -62,16 +62,14 @@
 						<br /><small>** Based on an initial rental of £<?=$pch_initial?> including VAT followed by <?=str_replace("M", '', $data['term'])-1?> monthly rentals of £<?=$pch_rental?> and covering <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
 					</div>
 				</div>
-			</div>
-			<div class="cell small-12 medium-4">
-					<div class="card card-2 gen_form">
-						<div class="card-section">
-							<h4>More Info</h4>
-							<p>Fill out the form below and we will contact you back, or, use the live chat option bottom right</p>
-							<?php echo $forms->embed('vehicle_quick_contact'); ?>
-						</div>
+				<div class="card card-2 gen_form">
+					<div class="card-section">
+						<h4>More Info</h4>
+						<p>Fill out the form below and we will contact you back, or, use the live chat option bottom right</p>
+						<?php echo $forms->embed('vehicle_quick_contact'); ?>
 					</div>
 				</div>
+			</div>
 		</div>
 	</div>
 
