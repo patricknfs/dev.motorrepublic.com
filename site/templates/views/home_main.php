@@ -16,10 +16,9 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
-				<h3>Check Out Our Specials</h3>
+				<h3>Straight To The Deals</h3>
 				<div class="grid-x grid-margin-x">
 					<?php
-					foreach($result AS $vehicle) {
 						$options = array(
 							'quality' => 80,
 							'upscaling' => false       
@@ -48,9 +47,44 @@
 							</div>
 						</a>
 					</div>
-					<?php
-					}
-					?>
+					<div class="cell small-12 medium-4">
+						<a href="/vehicle/<?=$vehicle['cap_id']?>">
+							<div class="card">
+								<div class="card-section">
+									<h6>
+										<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
+									</h6>
+									<p><?=$vehicle['descr']?></p>
+								</div>
+								<div class="home_deals card-image">
+									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+								</div>
+								<div class="card-section">
+									<h6>Business Clients <span class="price">£<?=$bch_rental?></span> excl. VAT</h6>
+									<h6>Personal Clients <span class="price">£<?=$pch_rental?></span> inc. VAT</h6>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cell small-12 medium-4">
+						<a href="/vehicle/<?=$vehicle['cap_id']?>">
+							<div class="card">
+								<div class="card-section">
+									<h6>
+										<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
+									</h6>
+									<p><?=$vehicle['descr']?></p>
+								</div>
+								<div class="home_deals card-image">
+									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+								</div>
+								<div class="card-section">
+									<h6>Business Clients <span class="price">£<?=$bch_rental?></span> excl. VAT</h6>
+									<h6>Personal Clients <span class="price">£<?=$pch_rental?></span> inc. VAT</h6>
+								</div>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="cell small-12 medium-4">
