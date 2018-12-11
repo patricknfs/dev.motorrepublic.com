@@ -25,13 +25,13 @@
 						);
 					?>
 					<div class="cell small-12 medium-4">
-
+						<h4>Cars</h4>
 					</div>
 					<div class="cell small-12 medium-4">
-
+						<h4>Vans</h4>
 					</div>
 					<div class="cell small-12 medium-4">
-
+						<h4>Pickups</h4>
 					</div>
 				</div>
 			</div>
