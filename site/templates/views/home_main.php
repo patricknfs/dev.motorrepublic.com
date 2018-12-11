@@ -16,7 +16,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
-				<h3>Straight To The Special Deals</h3>
+				<h3>Straight To The Deals</h3>
 				<div class="grid-x grid-margin-x">
 					<?php
 						$options = array(
@@ -25,13 +25,40 @@
 						);
 					?>
 					<div class="cell small-12 medium-4">
-						<h4>Cars</h4>
+						<a href="/vehicle/<?=$vehicle['cap_id']?>">
+							<div class="card">
+								<div class="card-section">
+									<h6>Cars</h6>
+								</div>
+								<div class="home_deals card-image">
+									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="cell small-12 medium-4">
-						<h4>Vans</h4>
+						<a href="/vehicle/<?=$vehicle['cap_id']?>">
+							<div class="card">
+								<div class="card-section">
+									<h6>Vans</h6>
+								</div>
+								<div class="home_deals card-image">
+									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="cell small-12 medium-4">
-						<h4>Pickups</h4>
+						<a href="/vehicle/<?=$vehicle['cap_id']?>">
+							<div class="card">
+								<div class="card-section">
+									<h6>Pickups</h6>
+								</div>
+								<div class="home_deals card-image">
+									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
