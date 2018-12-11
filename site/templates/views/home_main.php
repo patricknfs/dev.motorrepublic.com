@@ -28,7 +28,7 @@
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
 							<div class="card">
 								<div class="card-section">
-									<h6>Cars</h6>
+									<h4>Cars</h4>
 								</div>
 								<div class="home_deals card-image">
 									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
@@ -40,7 +40,7 @@
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
 							<div class="card">
 								<div class="card-section">
-									<h6>Vans</h6>
+									<h4>Vans</h4>
 								</div>
 								<div class="home_deals card-image">
 									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
@@ -52,7 +52,7 @@
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
 							<div class="card">
 								<div class="card-section">
-									<h6>Pickups</h6>
+									<h4>Pickups</h4>
 								</div>
 								<div class="home_deals card-image">
 									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
