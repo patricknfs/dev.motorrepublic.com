@@ -198,4 +198,4 @@ while ($row = mysqli_fetch_assoc($result)) {
   $row++;
 }
 // Free result set
-mysqli_free_result($result3);
+mysqli_free_result($result);
