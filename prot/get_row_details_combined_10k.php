@@ -6,7 +6,7 @@ session_start();
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
-
+echo memory_get_usage() . "\n";
 $query = "SELECT 
   mr1.code AS `cap_id`, mr1.capcode AS `cap_code`,  mr2.src AS src , mr2.updated AS `updated`, mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`, mr2.lcv AS `lcv`
   FROM
@@ -184,3 +184,4 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 // Free result set
 mysqli_free_result($result3);
+echo memory_get_usage() . "\n";

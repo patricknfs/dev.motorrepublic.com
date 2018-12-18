@@ -6,6 +6,7 @@
     <tr>
       <th></th>
       <th>Source</th>
+      <th>Updated</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
       <th>Manufacturer</th>
@@ -23,6 +24,7 @@
     <tr>
       <th></th>
       <th>Source</th>
+      <th>Updated</th>
       <th>Cap ID</th>
       <th>Cap Code</th>
       <th>Manufacturer</th>
