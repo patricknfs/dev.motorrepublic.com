@@ -35,7 +35,7 @@ $query = "SELECT
   (
     (
       SELECT 
-        'arval' AS src, `updated`, `updated`, '24M' AS `term`, '8K' AS `mileage`, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
+        'arval' AS src, `updated`, '24M' AS `term`, '8K' AS `mileage`, `24_8K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
