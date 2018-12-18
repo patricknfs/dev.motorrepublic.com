@@ -30,6 +30,7 @@ $primaryKey = 'id';
 // indexes
 $columns = array(
 	array( 'db' => 'src',	'dt' => 'src' ),
+	array( 'db' => 'updated',	'dt' => 'updated' ),
 	array( 'db' => 'cap_id', 'dt' => 'cap_id' ),
 	array( 'db' => 'cap_code',	'dt' => 'cap_code' ),
 	array( 'db' => 'manufacturer',	'dt' => 'manufacturer' ),

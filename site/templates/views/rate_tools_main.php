@@ -74,6 +74,7 @@
           "defaultContent": ''
         },
         { "data": "src" },
+        { "data": "updated" },
         { "data": "cap_id" },
         { "data": "cap_code" },
         { "data": "manufacturer" },
