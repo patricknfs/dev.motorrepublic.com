@@ -107,7 +107,13 @@ if($page->id != 1043){
         </div>
       </div>
       <div class="searchbar">
-        <div class="grid-container"><?=$form_out?></div>
+        <?php
+        if($page->id != 1043){
+          ?>
+          <div class="grid-container"><?=$form_out?></div>
+          <?php
+        }
+        ?>
       </div>
      
     </header>
