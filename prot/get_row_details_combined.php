@@ -539,7 +539,7 @@ $query = "SELECT
   ) AS mr2
   ON mr1.code = mr2.capid
 ";
-// echo $query; 
+echo $query; 
 $result = $conn->query($query) or die(mysqli_error($conn));
 
 // iterate over every row
