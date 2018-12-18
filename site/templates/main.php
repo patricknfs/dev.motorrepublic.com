@@ -7,7 +7,6 @@ require_once(MR_PATH . "/inc/conn.php");
 if($page->id !== 1043){
   include "power_search.php";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
