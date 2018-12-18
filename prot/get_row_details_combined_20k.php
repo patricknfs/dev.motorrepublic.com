@@ -8,7 +8,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
 
 $query = "SELECT 
-  mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`
+  mr1.code AS `cap_id`, mr1.capcode AS `cap_code`,  mr2.src AS src , mr2.updated AS `updated`, mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`, mr2.lcv AS `lcv`
   FROM
   (
     SELECT 
@@ -20,147 +20,147 @@ $query = "SELECT
   (
     (
       SELECT 
-        'arval' AS src, '24M' AS `term`, '20K' AS `mileage`, `24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+        'arval' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`, `24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'ald' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_ald` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'hitachi' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_hitachi` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'leaseplan' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ogilvie' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'ogilvie' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_ogilvie` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'lex' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'lex' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_lex` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'alphabet' AS src, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'alphabet' AS src, `updated`, '24M' AS `term`, '20K' AS `mileage`,`24_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_alphabet` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-        'arval' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+        'arval' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'ald' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_ald` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'hitachi' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_hitachi` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'leaseplan' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ogilvie' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'ogilvie' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_ogilvie` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'lex' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'lex' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_lex` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'alphabet' AS src, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'alphabet' AS src, `updated`, '36M' AS `term`, '20K' AS `mileage`, `36_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_alphabet` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-        'arval' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+        'arval' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_arval` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ald' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'ald' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_ald` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'hitachi' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'hitachi' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_hitachi` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'leaseplan' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'leaseplan' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_leaseplan` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'ogilvie' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'ogilvie' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_ogilvie` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'lex' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'lex' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_lex` HAVING rent IS NOT NULL
     )
     UNION
     (
       SELECT 
-      'alphabet' AS src, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`
+      'alphabet' AS src, `updated`, '48M' AS `term`, '20K' AS `mileage`, `48_20K_PA_rental_m` AS rent, `cap_id` AS `capid`, `vehicle_list_price` AS `vlp`, `vehicle_otr_price` AS `votrp`, `p11d_price` AS `p11p`, `CO2` as `co2`, `lcv` AS `lcv`
       FROM
         `team`.`rates_alphabet` HAVING rent IS NOT NULL
     )
@@ -177,7 +177,7 @@ $row = 1;
 
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
-  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "')";
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "')";
   // echo $insert;
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
