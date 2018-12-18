@@ -182,3 +182,5 @@ while ($row = mysqli_fetch_assoc($result)) {
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
 }
+// Free result set
+mysqli_free_result($result, $result3);
