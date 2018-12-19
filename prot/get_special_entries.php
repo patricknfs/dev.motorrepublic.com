@@ -11,7 +11,8 @@ $truncate = "TRUNCATE TABLE `team`.`rates_combined`";
 $result2 = $conn->query($truncate) or die(mysqli_error());
 
 foreach($forms->get("specials_upload")->entries->find() as $e){
-  echo "<p>{$e['e_mail']}</p>";
+  echo "<p>{$e['cap_id']}</p>";
+  echo "<p>{$e['manufacturer']}</p>";
 }
 
 // $query = "SELECT 
