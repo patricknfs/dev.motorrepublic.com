@@ -169,7 +169,13 @@ if($page->id !== 1043){
         </div>
     </section>
     </footer>
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c0241f50624ce0011ee8859&product=inline-share-buttons' async='async'></script>
+    <?php
+    if($page->id !== 1043){
+      ?>
+      <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c0241f50624ce0011ee8859&product=inline-share-buttons' async='async'></script>
+      <?php
+    }
+    ?>
   </body>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/foundation.min.js" ></script>
   <script type="text/javascript" src="<?=$config->urls->templates?>styles/js/app.js" ></script>
@@ -206,7 +212,7 @@ if($page->id !== 1043){
     <!-- End of Async Drift Code -->
     <?php
     }
-    ?>
+  ?>
   <script>
       function populate(s1,s2){
         var s1 = document.getElementById(s1);
