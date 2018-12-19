@@ -52,8 +52,7 @@ try
     $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
   
     $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
-  }
-  else {
+  } else {
     echo "<p>Vehicle not available. Please contact the team</p>";
   }
 
