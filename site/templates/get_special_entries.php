@@ -8,8 +8,6 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
 
 foreach($forms->get("specials_upload")->entries->find() as $e){
-  echo "<p>{$e['cap_id']}</p>";
-  echo "<p>{$e['manufacturer']}</p>";
   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $e['cap_id'] . "', '" . $e['cap_code'] . "', '" . $e['source'] . "', '" . $e['updated'] . "', '" . ucase($e['manufacturer']) . "', '" . $e['model'] . "', '" . $e['description_1'] . "', '" . $e['term'] . "', '" . $e['mileage'] . "', '" . $e['rental'] . "', '" . $e['vehicle_list_price'] . "', '" . $e['vehicle_otr_price'] . "', '" . $e['p11d_price'] . "', '" . $e['co2'] . "', '" . $e['deal_notes'] . "', '" . $e['lcv'] . "')";
   echo $insert;
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
