@@ -8,7 +8,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
 
 foreach($forms->get("specials_upload")->entries->find() as $e){
-  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $e['cap_id'] . "', '" . $e['cap_code'] . "', '" . $e['source'] . "', '" . $e['updated'] . "', '" . strtoupper($e['manufacturer']) . "', '" . $e['model'] . "', '" . $e['description_1'] . "', '" . $e['term'] . "', '" . $e['mileage'] . "', '" . $e['rental'] . "', '" . $e['vehicle_list_price'] . "', '" . $e['vehicle_otr_price'] . "', '" . $e['p11d_price'] . "', '" . $e['co2'] . "', '" . $e['lcv'] . "'), 1";
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $e['cap_id'] . "', '" . $e['cap_code'] . "', '" . $e['source'] . "', '" . $e['updated'] . "', '" . strtoupper($e['manufacturer']) . "', '" . $e['model'] . "', '" . $e['description_1'] . "', '" . $e['term'] . "', '" . $e['mileage'] . "', '" . $e['rental'] . "', '" . $e['vehicle_list_price'] . "', '" . $e['vehicle_otr_price'] . "', '" . $e['p11d_price'] . "', '" . $e['co2'] . "', '" . $e['lcv'] . "'), TRUE";
   echo $insert;
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
 }
