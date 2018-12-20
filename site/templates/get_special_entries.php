@@ -2,18 +2,19 @@
 // get_row_details.php
 // print_r($_GET);
 header('Content-type: application/json; charset=utf-8');
-session_start();
+// session_start();
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
 
-$truncate = "TRUNCATE TABLE `team`.`rates_combined`";
-$result2 = $conn->query($truncate) or die(mysqli_error());
-
 foreach($forms->get("specials_upload")->entries->find() as $e){
   echo "<p>{$e['cap_id']}</p>";
   echo "<p>{$e['manufacturer']}</p>";
+  $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $e['cap_id'] . "', '" . $e['cap_code'] . "', '" . $e['source'] . "', '" . $e['updated'] . "', '" . $e['manufacturer'] . "', '" . $e['model'] . "', '" . $e['descr'] . "', '" . $e['term'] . "', '" . $e['mileage'] . "', '" . $e['rental'] . "', '" . $e['vehicle_list'] . "', '" . $e['vehicle_otr'] . "', '" . $e['p11d'] . "', '" . $e['CO2_no'] . "', '" . $e['lcv'] . "')";
+  // echo $insert;
+  $result3 = $conn->query($insert) or die(mysqli_error($conn));
 }
+
 
 // $query = "SELECT 
 //   mr1.code AS `cap_id`, mr1.capcode AS `cap_code`, mr2.src AS source , mr1.man AS `manufacturer`, mr1.mod AS `model`, mr1.cap_desc AS `descr`, mr2.vlp AS `vehicle_list`, mr2.votrp AS `vehicle_otr`, mr2.p11p AS `p11d`, mr2.co2 AS `CO2_no`, mr2.term AS `term`, mr2.mileage AS `mileage`, mr2.rent AS `rental`
@@ -118,13 +119,6 @@ foreach($forms->get("specials_upload")->entries->find() as $e){
 // // iterate over every row
 // $row = 1;
 
-// while ($row = mysqli_fetch_assoc($result)) {
-//   // for every field in the result..
-//   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['source'] . "', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "')";
-//   // echo $insert;
-//   $result3 = $conn->query($insert) or die(mysqli_error($conn));
 
-//   $row++;
-// }
 
 // mysqli_close($conn);
