@@ -27,19 +27,19 @@
 					<div class="cell small-12 medium-4">
 						<a class="dashboard-nav-card" href="#">
 							<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
-							<h3 class="dashboard-nav-card-title">Cars</h3>
+							<h3 class="dashboard-nav-card-title">Car Deals</h3>
 						</a>
 					</div>
 					<div class="cell small-12 medium-4">
 						<a class="dashboard-nav-card" href="#">
 							<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
-							<h3 class="dashboard-nav-card-title">Vans</h3>
+							<h3 class="dashboard-nav-card-title">Van Deals</h3>
 						</a>
 					</div>
 					<div class="cell small-12 medium-4">
 						<a class="dashboard-nav-card" href="#">
 							<i class="dashboard-nav-card-icon fas fa-truck-pickup fa-3x" aria-hidden="true"></i>
-							<h3 class="dashboard-nav-card-title">Pickups</h3>
+							<h3 class="dashboard-nav-card-title">Pickup Deals</h3>
 						</a>
 					</div>
 				</div>
