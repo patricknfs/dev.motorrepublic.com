@@ -25,39 +25,21 @@
 						);
 					?>
 					<div class="cell small-12 medium-4">
-						<a href="/vehicle/<?=$vehicle['cap_id']?>">
-							<div class="card">
-								<div class="card-section">
-									<h4>Cars</h4>
-								</div>
-								<div class="home_deals card-image">
-									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
-								</div>
-							</div>
+						<a class="dashboard-nav-card" href="#">
+							<i class="dashboard-nav-card-icon fa fa-users" aria-hidden="true"></i>
+							<h3 class="dashboard-nav-card-title">Cars</h3>
 						</a>
 					</div>
 					<div class="cell small-12 medium-4">
-						<a href="/vehicle/<?=$vehicle['cap_id']?>">
-							<div class="card">
-								<div class="card-section">
-									<h4>Vans</h4>
-								</div>
-								<div class="home_deals card-image">
-									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
-								</div>
-							</div>
+						<a class="dashboard-nav-card" href="#">
+							<i class="dashboard-nav-card-icon fa fa-users" aria-hidden="true"></i>
+							<h3 class="dashboard-nav-card-title">Vans</h3>
 						</a>
 					</div>
 					<div class="cell small-12 medium-4">
-						<a href="/vehicle/<?=$vehicle['cap_id']?>">
-							<div class="card">
-								<div class="card-section">
-									<h4>Pickups</h4>
-								</div>
-								<div class="home_deals card-image">
-									<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=CAR&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
-								</div>
-							</div>
+						<a class="dashboard-nav-card" href="#">
+							<i class="dashboard-nav-card-icon fa fa-users" aria-hidden="true"></i>
+							<h3 class="dashboard-nav-card-title">Pickups</h3>
 						</a>
 					</div>
 				</div>
