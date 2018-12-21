@@ -12324,6 +12324,7 @@ section#vehicles {
   padding: 2rem;
   position: relative;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .dashboard-nav-card:hover .dashboard-nav-card-title,
@@ -12344,7 +12345,6 @@ section#vehicles {
   top: 1rem;
   transition: all 0.2s ease;
   width: auto;
-  margin-bottom: 2rem;
 }
 
 .dashboard-nav-card-title {
