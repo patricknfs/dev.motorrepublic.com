@@ -42,8 +42,16 @@
 							<h3 class="dashboard-nav-card-title">Pickups</h3>
 						</a>
 					</div>
+					<div class="cell small-12 medium-6">
+						<h3>Magazine Article</h3>
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+					</div>
+					<div class="cell small-12 medium-6">
+						<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+					</div>
 				</div>
 			</div>
+
 			<div class="cell small-12 medium-4">
 				<div id="message">
 					<h2>Deal of the Day</h2>
@@ -52,10 +60,6 @@
 					<p>Available in stock now from £215.99 inc. VAT</p>
 					<p><a href="#">More details...</a></p>
 				</div>
-				<h3>Magazine Article</h3>
-				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
-				<h3>Regional Strength?</h3>
-				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
 			</div>
 		</div>
 	</div>
