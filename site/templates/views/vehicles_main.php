@@ -49,7 +49,7 @@
 									<p><?=$vehicle['descr']?></p>
 								</div>
 								<?php
-								$vehicle_type = ($vehicle['lcv'] == 1?"VANS":"CARS");
+								$vehicle_type = ($vehicle['lcv'] == 1?"LCV":"CAR");
 								?>
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
 								<div class="card-section">
