@@ -41,7 +41,7 @@ try
   $tech_data = $data2->xpath('//Tech');
 
   if(isset($input->urlSegment1)) {
-    $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
+    $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
     // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
@@ -51,7 +51,9 @@ try
     $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
     $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
   
-    $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
+    // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
+    $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
+    $hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $vehicle['cap_id']));
   } else {
     echo "<p>Vehicle not available. Please contact the team</p>";
   }
