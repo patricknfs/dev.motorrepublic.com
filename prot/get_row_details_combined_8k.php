@@ -19,7 +19,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 
 // $manufacturer = "ford";
 
-$truncate = "TRUNCATE TABLE `team`.`rates_combined`";
+$truncate = "DELETE FROM `team`.`rates_combined` WHERE `special` !== TRUE";
 $result2 = $conn->query($truncate) or die(mysqli_error());
 
 $query = "SELECT 
