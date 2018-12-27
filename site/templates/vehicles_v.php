@@ -54,6 +54,6 @@ $result = $conn->query($query) or die(mysqli_error($conn));
 unset($manuf);
 unset($mdl);
 ob_start();
-include('views/vehicles__v_smain.php');
+include('views/vehicles__v_main.php');
 $page->main = ob_get_clean();
 include("./main.php");
