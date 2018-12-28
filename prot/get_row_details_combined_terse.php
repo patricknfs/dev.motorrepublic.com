@@ -12,7 +12,7 @@ $result2 = $conn->query($truncate) or die(mysqli_error());
 
 $query = "SELECT t1.*
   FROM (
-    SELECT cap_id, src, MIN(rental), updated, upfront AS rent FROM team.rates_combined  WHERE `special` = TRUE GROUP BY cap_id
+    SELECT cap_id, src, MIN(rental) AS rent FROM team.rates_combined  WHERE `special` = TRUE GROUP BY cap_id
   ) as t2 INNER JOIN team.rates_combined AS t1 ON t1.cap_id = t2.cap_id AND t1.rental = t2.rent
   ORDER BY t1.rental ASC
 ";
@@ -24,7 +24,7 @@ $row = 1;
 
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
-  $insert = "INSERT INTO `team`.`rates_combined_terse` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', NOW(), '$row['expired']', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "', '" . $row['lcv'] . "', '" . $row['special'] . "', '" . $row['deal_notes'] . "', '" . $row['upfront'] . "')";
+  $insert = "REPLACE INTO `team`.`rates_combined_terse` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', '" . $row['updated'] . "', '', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "', '" . $row['lcv'] . "', '" . $row['special'] . "', '" . $row['deal_notes'] . "', '" . $row['upfront'] . "')";
   echo $insert;
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
