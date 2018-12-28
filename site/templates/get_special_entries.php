@@ -1,12 +1,8 @@
 <?php namespace ProcessWire;
-// get_row_details.php
-// print_r($_GET);
-header('Content-type: application/json; charset=utf-8');
-// session_start();
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
-require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/conn.php';
-
+require_once(MR_PATH . "/inc/conn.php");
+include("/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/index.php"); 
 foreach($forms->get("specials_upload")->entries->find() as $e){
   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $e['cap_id'] . "', '" . $e['cap_code'] . "', '" . $e['source'] . "', CURDATE(), '" . gmdate("Y-m-d\TH:i:s\Z", $e['expired']) . "', '" . strtoupper($e['manufacturer']) . "', '" . $e['model'] . "', '" . $e['description_1'] . "', '" . $e['term'] . "', '" . $e['mileage'] . "', '" . $e['rental'] . "', '" . $e['vehicle_list_price'] . "', '" . $e['vehicle_otr_price'] . "', '" . $e['p11d_price'] . "', '" . $e['co2'] . "', '" . $e['lcv'] . "', TRUE, '" . $e['deal_notes'] . "', '" . $e['upfront'] . "')";
   echo $insert;
