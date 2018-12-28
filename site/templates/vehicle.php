@@ -51,8 +51,8 @@ try
     $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
     $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
   
-    $bch_rental = number_format($vehicle['rental'], 2, '.', ',');
-		$pch_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
+    $bch_rental = number_format($data['rental'], 2, '.', ',');
+		$pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
     
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
