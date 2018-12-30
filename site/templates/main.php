@@ -47,7 +47,7 @@ if($page->id !== 1043){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body  data-sticky-container>
-  <div class="sharethis-inline-share-buttons"></div>
+    <div class="sharethis-inline-share-buttons"></div>
     <header data-sticky data-margin-top="0">
       <!-- <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
@@ -67,8 +67,8 @@ if($page->id !== 1043){
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-      <div class="grid-comtainer menu-container">
-        <div class="menu cell small-12">
+      <div class="menu-container">
+        <div class="menu">
           <?php
           $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
           $options = array(
