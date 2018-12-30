@@ -21,6 +21,7 @@
 }
 
 .menu-mobile {
+  width: 100%;
   display: none;
   padding: 20px;
   float: right;
@@ -12078,7 +12079,7 @@ section#promo #slogan div h1, section#promo #slogan div h2 {
   margin-bottom: 1em;
 }
 
-section#search_block {
+s section#search_block {
   margin-top: 1em;
 }
 
