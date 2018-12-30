@@ -11970,7 +11970,6 @@ nav {
 #logoimg {
   width: 16em;
   margin: 0.5em auto;
-  float: left;
 }
 
 @media print, screen and (min-width: 40em) {

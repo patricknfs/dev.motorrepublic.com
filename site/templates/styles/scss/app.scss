@@ -107,7 +107,6 @@ nav {
 #logoimg {
   width: 16em;
   margin: 0.5em auto;
-  float: left;
   @include breakpoint(medium) {
     width: 16em;
     margin: 1em 0 1em 2.4em;
