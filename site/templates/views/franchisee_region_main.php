@@ -20,7 +20,8 @@
 </section>
 <section id="content">
   <div class="grid-container">
-    <div class="grid-x grid-padding-x small-up-2 medium-up-4">
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-12 medium-8">
       <h2>My Favourite Deals</h2>
       <?php
       foreach($result AS $vehicle) {
@@ -52,14 +53,9 @@
             </div>
           </a>
         </div>
-      <?php
-      }
-      ?>
-      </div>
-    </div>
-  <div class="grid-container">
-    <div class="grid-x">
-      <div class="cell small-12 medium-12">
+        <?php
+        }
+        ?>
         <!-- In this container, add blockquote-left or blockquote-right to make the blockquote left / -->
         <div class="blockquote-container">
           <div class="callout">
@@ -72,12 +68,12 @@
             </div>
           </div>
         </div>
+
+      </div>
+      <div class="cell small-12 medium-4">
+      <?=$page->body?>
       </div>
     </div>
-  </div>
+
+    </div>
 </section>
-
-
-<div class="cell small-12 medium-4">
-  <?=$page->body?>
-</div>
