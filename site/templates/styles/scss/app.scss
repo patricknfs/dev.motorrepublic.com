@@ -86,8 +86,11 @@ nav {
 }
 
 .searchbar {
-  background-color: #475b69;
-  padding-top: 1.2em;
+  display: none;
+  @include breakpoint(medium){
+    background-color: #475b69;
+    padding-top: 1.2em;
+  }
 }
 
 .floatright {
