@@ -4,10 +4,10 @@
 <section id="intro" style="background: url(<?=$config->urls->assets?>images/banner_bg.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
   <div class="grid-container">
     <div class="grid-x">
-      <div class="cell small-3 medium-9">
+      <div class="cell small-12 medium-8">
 
       </div>
-      <div class="cell small-9 medium-3">
+      <div class="cell small-12 medium-4">
         <h3><?php echo $page->title; ?></h3>
         <img src="<?=$page->profile_image->url?>" alt="<?=$page->profile_image->description?>" />
         <h4><?=$page->franchisee_name?></h4>
