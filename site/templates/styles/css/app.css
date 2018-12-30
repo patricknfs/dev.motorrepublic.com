@@ -11993,7 +11993,7 @@ nav {
 
 @media print, screen and (min-width: 40em) {
   #header_tel {
-    width: 20em;
+    width: 300em;
     margin: 0;
     padding-top: 0.5em;
     text-align: right;
