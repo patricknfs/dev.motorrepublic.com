@@ -115,7 +115,7 @@ nav {
 }
 #header_tel {
   width: 11em;
-  margin: 0.5em auto;
+  margin: 0 auto;
   @include breakpoint(medium){
     margin: 0;
     padding-top: 0.5em;

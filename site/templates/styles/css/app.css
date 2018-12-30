@@ -11982,7 +11982,7 @@ nav {
 
 #header_tel {
   width: 11em;
-  margin: 0.5em auto;
+  margin: 0 auto;
 }
 
 @media print, screen and (min-width: 40em) {
