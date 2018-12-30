@@ -67,45 +67,47 @@ if($page->id !== 1043){
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-      <div class="menu-container">
-        <div class="menu">
-          <?php
-          $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
-          $options = array(
-            'parent_class' => '',
-            'current_class' => '',
-            'has_children_class' => '',
-            'levels' => false,
-            'levels_prefix' => 'level-',
-            'max_levels' => null,
-            'firstlast' => false,
-            'collapsed' => false,
-            'show_root' => true,
-            'selector' => '',
-            'outer_tpl' => '<ul id="" class="">||',
-            'inner_tpl' => '<ul class="">||</ul>',
-            'list_tpl' => '<li%s>||</li>||</li>',
-            'list_field_class' => '',
-            'item_tpl' => '<a href="{url}">{title}</a>',
-            'item_current_tpl' => '<a href="{url}">{title}</a>',
-            'xtemplates' => '',
-            'xitem_tpl' => '<span>{title}</span>',
-            'xitem_current_tpl' => '<span>{title}</span>'
-          );
-          echo $treeMenu->render($options);
-          ?>
-          <!--<div class="navigation-tools">
-            <div class="search-bar">
-              <form action="<?=$config->urls->root?>search/" role="search">
-                <input type="search" placeholder="Enter Search" name="q" />
-                <button type="submit">
-                  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-                </button>
-              </form>
-            </div>
-          </div> -->
+      <section id="mc">
+        <div class="menu-container">
+          <div class="menu">
+            <?php
+            $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
+            $options = array(
+              'parent_class' => '',
+              'current_class' => '',
+              'has_children_class' => '',
+              'levels' => false,
+              'levels_prefix' => 'level-',
+              'max_levels' => null,
+              'firstlast' => false,
+              'collapsed' => false,
+              'show_root' => true,
+              'selector' => '',
+              'outer_tpl' => '<ul id="" class="">||',
+              'inner_tpl' => '<ul class="">||</ul>',
+              'list_tpl' => '<li%s>||</li>||</li>',
+              'list_field_class' => '',
+              'item_tpl' => '<a href="{url}">{title}</a>',
+              'item_current_tpl' => '<a href="{url}">{title}</a>',
+              'xtemplates' => '',
+              'xitem_tpl' => '<span>{title}</span>',
+              'xitem_current_tpl' => '<span>{title}</span>'
+            );
+            echo $treeMenu->render($options);
+            ?>
+            <!--<div class="navigation-tools">
+              <div class="search-bar">
+                <form action="<?=$config->urls->root?>search/" role="search">
+                  <input type="search" placeholder="Enter Search" name="q" />
+                  <button type="submit">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                  </button>
+                </form>
+              </div>
+            </div> -->
+          </div>
         </div>
-      </div>
+      </section>
       <div class="searchbar">
         <?php
         if($page->id !== 1043){
