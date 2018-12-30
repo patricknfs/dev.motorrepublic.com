@@ -7,7 +7,7 @@
       <div class="cell small-12 medium-8">
 
       </div>
-      <div class="cell small-12 medium-4" style="padding:1em;background-color:rgba(0,0,0,0.7);">
+      <div class="cell small-12 medium-4" style="padding:1em;background-color:rgba(0,0,0,0.4);">
         <h3><?php echo $page->title; ?></h3>
         <img src="<?=$page->profile_image->url?>" alt="<?=$page->profile_image->description?>" />
         <h4><?=$page->franchisee_name?></h4>
