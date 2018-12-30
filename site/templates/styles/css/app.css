@@ -11973,6 +11973,14 @@ nav {
   float: left;
 }
 
+@media print, screen and (min-width: 40em) {
+  #logoimg {
+    width: 16em;
+    margin: 0 auto;
+    float: none;
+  }
+}
+
 #header_tel {
   padding-top: 0.5em;
   text-align: right;
