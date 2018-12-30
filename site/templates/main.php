@@ -67,8 +67,8 @@ if($page->id !== 1043){
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
-      <div class="menu-container">
-        <div class="menu">
+      <div class="grid-comtainer menu-container">
+        <div class="menu cell small-12">
           <?php
           $treeMenu = $modules->get("MarkupSimpleNavigation"); // load the module
           $options = array(
