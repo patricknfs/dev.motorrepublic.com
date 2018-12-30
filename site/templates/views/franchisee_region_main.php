@@ -20,9 +20,8 @@
 </section>
 <section id="content">
   <div class="grid-container">
-    <h2>My Favourite Deals</h2>
-    <div class="grid-x grid-padding-x cell medium-8">
-     
+    <div class="grid-x grid-padding-x small-up-2 medium-up-4">
+      <h2>My Favourite Deals</h2>
       <?php
       foreach($result AS $vehicle) {
         $options = array(
@@ -53,17 +52,11 @@
             </div>
           </a>
         </div>
-        <?php
-        }
-        ?>
-      </div>
-      <div class="cell small-12 medium-4">
-        <?=$page->body?>
+      <?php
+      }
+      ?>
       </div>
     </div>
-  </div>
-</section>
-<section id="testimonial">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 medium-12">
@@ -83,3 +76,8 @@
     </div>
   </div>
 </section>
+
+
+<div class="cell small-12 medium-4">
+  <?=$page->body?>
+</div>
