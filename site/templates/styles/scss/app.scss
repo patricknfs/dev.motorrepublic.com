@@ -108,7 +108,7 @@ nav {
   width: 16em;
   margin: 1em 0 1em 2.4em;
   float: left;
-  @include breakpoint(medium){
+  @media screen and #{breakpoint(medium)} {
     width: 16em;
     margin: 0 auto;
     float: none;
