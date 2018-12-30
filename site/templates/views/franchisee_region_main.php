@@ -80,3 +80,15 @@
     </div>
   </div>
 </section>
+<section id="region_profile">
+    <div class="grid-container">
+      <div class="grid-x">
+        <div class="cell small-12 medium-6">
+          <?=$page->body?>
+        </div>
+        <div class="cell small-12 medium-6">
+
+        </div>
+      </div>
+    </div>
+</section>
