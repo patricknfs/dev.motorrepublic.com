@@ -11981,9 +11981,16 @@ nav {
 }
 
 #header_tel {
-  padding-top: 0.5em;
-  text-align: right;
-  padding-right: 3em;
+  margin: 0.5em auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  #header_tel {
+    margin: 0;
+    padding-top: 0.5em;
+    text-align: right;
+    padding-right: 3em;
+  }
 }
 
 .nav_link {
