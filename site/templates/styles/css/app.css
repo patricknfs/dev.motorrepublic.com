@@ -11968,7 +11968,7 @@ nav {
 }
 
 #logoimg {
-  width: 11em;
+  width: 16em;
   margin: 0.5em auto;
 }
 
@@ -11981,6 +11981,7 @@ nav {
 }
 
 #header_tel {
+  width: 11em;
   margin: 0.5em auto;
 }
 

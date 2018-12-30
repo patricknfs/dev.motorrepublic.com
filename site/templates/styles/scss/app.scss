@@ -105,7 +105,7 @@ nav {
 }
 
 #logoimg {
-  width: 11em;
+  width: 16em;
   margin: 0.5em auto;
   @include breakpoint(medium){
     width: 16em;
@@ -113,8 +113,8 @@ nav {
     float: left;
   }
 }
-
 #header_tel {
+  width: 11em;
   margin: 0.5em auto;
   @include breakpoint(medium){
     margin: 0;
