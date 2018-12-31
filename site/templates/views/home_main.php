@@ -68,7 +68,7 @@
 							</h6>
 							<p><?=$data['descr']?></p>
 						</div>
-						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$data['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=&IMAGETEXT=&VIEWPOINT=">
+						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$data['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=250&IMAGETEXT=&VIEWPOINT=">
 						<div class="card-section">
 							<h6>Business Clients<br /><span class="price">£<?=$bch_rental?></span>/mth excl. VAT</h6>
 							<h6>Personal Clients<br /><span class="price">£<?=$pch_rental?></span>/mth inc. VAT</h6>
