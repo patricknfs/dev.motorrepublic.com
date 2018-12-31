@@ -12331,7 +12331,13 @@ section#posts {
 }
 
 section#vehicle {
-  margin-top: 2em;
+  margin-top: 4em;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#vehicle {
+    margin-top: 2em;
+  }
 }
 
 section#vehicles {
