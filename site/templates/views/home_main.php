@@ -61,8 +61,8 @@
 			<div class="cell small-12 medium-4">
 				<a href="/vehicle/<?=$data['cap_id']?>">
 					<div class="card">
-						<h3>Hot Deals</h3>
 						<div class="card-section">
+							<h3>Hot Deals</h3>
 							<h6>
 								<?=$data['manufacturer']?> <?=$data['model']?>
 							</h6>
