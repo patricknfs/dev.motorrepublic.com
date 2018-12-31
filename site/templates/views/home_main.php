@@ -55,6 +55,8 @@
 			<?php
 				$bch_rental = number_format($data['rental'], 2, '.', ',');
 				$pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
+				$vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
+				$hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
 			?>
 			<div class="cell small-12 medium-4">
 				<a href="/vehicle/<?=$data['cap_id']?>">
