@@ -52,15 +52,27 @@
 					</div>
 				</div>
 			</div>
-			
+			<?php
+				$bch_rental = number_format($data['rental'], 2, '.', ',');
+				$pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
+			?>
 			<div class="cell small-12 medium-4">
-				<div id="message">
-					<!-- <h2>Hot Deal</h2>
-					<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">-->
-					<h4><?=$data['manufacturer']?></h4>
-					<!--<p>Available in stock now from £215.99 inc. VAT</p>
-					<p><a href="#">More details...</a></p> -->
-				</div>
+				<a href="/vehicle/<?=$data['cap_id']?>">
+					<div class="card">
+						<div class="card-section">
+							<h6>
+								<?=$data['manufacturer']?> <?=$data['model']?>
+							</h6>
+							<p><?=$data['descr']?></p>
+						</div>
+						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$data_type?>&CAPID=<?=$data['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
+						<div class="card-section">
+							<h6>Business Clients<br /><span class="price">£<?=$bch_rental?></span>/mth excl. VAT</h6>
+							<h6>Personal Clients<br /><span class="price">£<?=$pch_rental?></span>/mth inc. VAT</h6>
+							<small>click for more details...</small>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
