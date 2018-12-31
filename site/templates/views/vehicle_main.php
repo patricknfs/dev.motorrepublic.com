@@ -7,7 +7,7 @@
 			<div class="cell small-12 medium-8">
 				<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$input->urlSegment1;?>&DATE=2018/09/11&WIDTH=800&HEIGHT=600&IMAGETEXT=&VIEWPOINT=">
 				<section id="vehicle_details">
-		<!-- `			<div class="grid-container"> -->
+		<!--<div class="grid-container"> -->
 						<div class="grid-x">
 							<div class="cell small-12">
 								<ul class="tabs" data-tabs id="example-tabs">
@@ -47,7 +47,7 @@
 							</div>
 						</div>
 					<!-- </div> -->
-				</section>`
+				</section>
 			</div>
 			<div class="cell small-12 medium-4">
 				<div class="card card-2">
