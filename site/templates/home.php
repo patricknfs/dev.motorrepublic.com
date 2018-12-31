@@ -6,7 +6,13 @@ require_once(MR_PATH . "/inc/conn.php");
 include "power_search.php";
 $manuf = $page->top_deal_manuf;
 // $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined` WHERE `manufacturer` = '" . strtoupper($manuf) . "' GROUP BY `model` ORDER BY `rental` ASC LIMIT 6";
-$query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,`rental`, `vehicle_list_price`, `vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined_terse` WHERE `special` = true ORDER BY `rental` ASC LIMIT 6";
+// $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,`rental`, `vehicle_list_price`, `vehicle_otr_price`,`p11d_price`,`CO2` FROM `team`.`rates_combined_terse` WHERE `special` = true ORDER BY `rental` ASC LIMIT 1";
+$query = SELECT 
+    *
+FROM
+  `team`.`rates_combined_terse` WHERE `special` = TRUE
+ORDER BY RAND()
+LIMIT 1;
 $result = $conn->query($query) or die(mysqli_error($conn));
 $data = $result->fetch_assoc();
 // echo $query;

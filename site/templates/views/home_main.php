@@ -55,11 +55,11 @@
 			
 			<div class="cell small-12 medium-4">
 				<div id="message">
-					<h2>Deal of the Day</h2>
-					<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">
-					<h4>THE ALL NEW FIESTA ST2</h4>
-					<p>Available in stock now from £215.99 inc. VAT</p>
-					<p><a href="#">More details...</a></p>
+					<!-- <h2>Hot Deal</h2>
+					<img src="<?=$config->urls->assets?>images/ford_fiesta_st2.jpg">-->
+					<h4><?=$data->manufacturer?></h4>
+					<!--<p>Available in stock now from £215.99 inc. VAT</p>
+					<p><a href="#">More details...</a></p> -->
 				</div>
 			</div>
 		</div>
