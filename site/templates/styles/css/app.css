@@ -12152,6 +12152,10 @@ section#whatwedo {
   padding-top: 2em;
 }
 
+#franchisee_det {
+  margin: 0.5em auto;
+}
+
 footer {
   background: url(/site/assets/graphics/mr_footer_red.png) no-repeat center center fixed;
   background-size: cover;
