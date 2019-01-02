@@ -12020,6 +12020,10 @@ tr.shown td.details-control {
   color: #ffffff;
 }
 
+section#menu {
+  background-color: #3b5998;
+}
+
 section#promo {
   margin-top: 7em;
   position: relative;
