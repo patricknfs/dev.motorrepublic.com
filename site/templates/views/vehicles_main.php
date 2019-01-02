@@ -21,7 +21,7 @@
 				<ul>
 			</nav>
 		</div>
-		<div class="grid-x grid-padding-x small-up-1 medium-up-4">
+		<div class="grid-x grid-padding-x small-up-2 medium-up-4">
 			<?php
 			if($total_rows > 0){
 				foreach($result AS $vehicle) {
