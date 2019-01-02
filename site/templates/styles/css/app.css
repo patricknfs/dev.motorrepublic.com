@@ -81,6 +81,7 @@
   text-decoration: none;
   padding: 1em 1em;
   display: block;
+  line-height: 2em;
 }
 
 .menu > ul > li:hover {
