@@ -184,7 +184,7 @@
   }
   .menu > ul {
     display: none;
-    padding: 2em 0;
+    padding: 3em 0;
   }
   .menu > ul > li {
     width: 100%;
@@ -198,6 +198,7 @@
     padding: 0 0.3em 0 1em;
     width: 100%;
     display: block;
+    line-height: 2em;
   }
   .menu > ul > li > ul {
     position: relative;
