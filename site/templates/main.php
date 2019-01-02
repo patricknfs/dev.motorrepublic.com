@@ -67,6 +67,7 @@ if($page->id !== 1043){
           <h3>Call: 0121 794 9073</h3>
         </div>
       </div>
+      <section id="menu">
       <div class="menu-container">
         <div class="menu">
           <?php
@@ -106,6 +107,7 @@ if($page->id !== 1043){
           </div> -->
         </div>
       </div>
+      </section>
       <div class="searchbar">
         <?php
         if($page->id !== 1043){
