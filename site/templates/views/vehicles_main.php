@@ -46,7 +46,7 @@
 									<h6>
 										<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
 									</h6>
-									<p class="veh_descr"><?=$vehicle['descr']?></p>
+									<p id="veh_descr"><?=$vehicle['descr']?></p>
 								</div>
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=300&HEIGHT=225&IMAGETEXT=&VIEWPOINT=">
 								<div class="card-section">
