@@ -12362,6 +12362,12 @@ section#vehicles {
   }
 }
 
+@media screen and (max-width: 63.9375em) {
+  #veh_descr {
+    display: none;
+  }
+}
+
 .dashboard-nav-card {
   background: #cc1000;
   border-radius: 0;

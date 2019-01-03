@@ -551,6 +551,12 @@ section#vehicles {
   }
 }
 
+#veh_descr{
+  @include breakpoint(medium down) {
+    display: none;
+  }
+}
+
 .dashboard-nav-card {
   background: $primary-color;
   border-radius: $card-border-radius;
