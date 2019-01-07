@@ -19,7 +19,7 @@ if (($handle = fopen($_FILES['file']['tmp_name'], "r")) !== FALSE) {
     
     $row++;
     echo $row;
-    // if($row > 1) continue;
+    // if($row > 2) continue;
     for ($c=0; $c < $num; $c++) {
       echo $data[$c] . "<br />\n";
       // $entry = array(
