@@ -21,7 +21,8 @@ if (($handle = fopen($_FILES['file']['tmp_name'], "r")) !== FALSE) {
     
     for ($c=0; $c < $num; $c++) {
       echo $data[$c] . "<br />\n";
-      echo $data[c][cap_id];
+      print_r($data[c])
+      // echo $data[c][cap_id];
       // $entry = array(
       //   'first_name' => 'John',
       //   'last_name' => 'Smith',
