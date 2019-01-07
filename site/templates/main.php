@@ -58,7 +58,7 @@ if($page->id !== 1043){
         <div class="cell small-12 medium-6 .align-right">
         </div>
         
-      </div> -->
+      </div> -->  
       <div id="logorow" class="grid-x align-justify">
         <div class="cell small-12 medium-3" id="logoimg">
           <a href="/"><img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" /></a>

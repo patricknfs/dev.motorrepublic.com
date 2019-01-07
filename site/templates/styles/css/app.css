@@ -17,7 +17,7 @@
 .menu-container {
   width: 100%;
   margin: 0 auto;
-  background: #3e505d;
+  background: #404040;
 }
 
 .menu-mobile {
@@ -5738,7 +5738,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #fafafa;
+  background: #f2f2f2;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.5;
@@ -9668,7 +9668,7 @@ select[multiple] {
   display: none;
   border: 1px solid #cacaca;
   border-radius: 0;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   font-size: 1rem;
 }
 
