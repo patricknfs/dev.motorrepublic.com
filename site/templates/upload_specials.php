@@ -8,7 +8,7 @@ $lines = array();
 while( ($row = fgetcsv($fh, 8192)) !== FALSE ) {
 	$lines[] = $row;
 }
-var_dump($lines);
+// var_dump($lines);
 
 
 // $row = 1;
