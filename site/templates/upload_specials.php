@@ -24,6 +24,7 @@ if (($handle = fopen($_FILES['file']['tmp_name'], "r")) !== FALSE) {
   fclose($handle);
 }
 
+
 // $entry = array(
 //   'first_name' => 'John',
 //   'last_name' => 'Smith',
