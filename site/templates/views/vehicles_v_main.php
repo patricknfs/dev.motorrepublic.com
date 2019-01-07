@@ -43,9 +43,7 @@
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
 							<div class="card">
 								<div class="card-section">
-									<h6>
-										<?=$vehicle['manufacturer']?> <?=$vehicle['model']?>
-									</h6>
+									<h4><?=$vehicle['manufacturer']?> <?=$vehicle['model']?></h4>
 									<p><?=$vehicle['descr']?></p>
 								</div>
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=">
