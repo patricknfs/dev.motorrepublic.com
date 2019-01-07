@@ -18,7 +18,8 @@ if (($handle = fopen($_FILES['file']['tmp_name'], "r")) !== FALSE) {
     echo "<p> $num fields in line $row: <br /></p>\n";
     
     $row++;
-    if($row > 1) continue;
+    echo $row;
+    // if($row > 1) continue;
     for ($c=0; $c < $num; $c++) {
       echo $data[$c] . "<br />\n";
       // $entry = array(
