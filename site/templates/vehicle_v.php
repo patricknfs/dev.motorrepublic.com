@@ -1,15 +1,7 @@
 <?php
-// vehicle.php
+// vehicle_v.php
 // $products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
 
-// $pagination = $products->renderPager(array(
-//   'nextItemLabel' => "Next",
-//   'previousItemLabel' => "Prev",
-//   'listMarkup' => "<ul class='MarkupPagerNav pagination text-center'role='navigation' aria-label='Pagination'>{out}</ul>",
-//   'currentItemClass' => "current",
-//   'itemMarkup' => "<li class='{class}'>{out}</li>",
-//   'linkMarkup' => "<a href='{url}'><span>{out}</span></a>"  
-// ));
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
