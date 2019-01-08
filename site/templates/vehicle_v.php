@@ -8,7 +8,7 @@ require_once(MR_PATH . "/inc/conn.php");
 include "inc/functions.php";
 include "inc/manufacturer.php";
 include "power_search.php";
-$_GET['vid'] = $input->urlSegment1;
+// $_GET['vid'] = $input->urlSegment1;
 
 try
 {
@@ -18,7 +18,6 @@ try
   $client = get_soap_client_2();
 
   $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'lcv', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
-  echo $params;
   $client->GetStandardEquipment($params);
   $data = $client->__getLastResponse();
   $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
