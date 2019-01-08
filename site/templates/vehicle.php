@@ -42,6 +42,8 @@ try
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
     $manufacturer = $data['manufacturer'];
+    $model = $data['model'];
+		$descr = $data['descr'];
     $hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
   } else {
     echo "<p>Vehicle not available. Please contact the team</p>";

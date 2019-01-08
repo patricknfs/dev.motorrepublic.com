@@ -52,8 +52,8 @@
 			<div class="cell small-12 medium-4">
 				<div class="card card-2">
 					<div class="card-section">
-						<h3><?=$manufacturer?> <?=$data['model']?></h3>
-						<p><?=$data['descr']?></p>
+						<h3><?=$manufacturer?> <?=$model?></h3>
+						<p><?=$descr?></p>
 						<hr>
 							<h6>Business Clients - From <span class="price">£<?=$bch_rental?></span> * excl. VAT</h6>
 							<h6>Personal Clients - From <span class="price">£<?=$pch_rental?></span> ** inc. VAT</h6>
