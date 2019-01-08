@@ -35,7 +35,7 @@ try
 
   if(isset($input->urlSegment1)) {
     $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment1 . " ORDER BY `rental` ASC LIMIT 1";
-    echo $query;
+    // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
 
