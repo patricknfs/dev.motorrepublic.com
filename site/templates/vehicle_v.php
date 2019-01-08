@@ -58,6 +58,6 @@ catch(Exception $e){
 }
 
 ob_start();
-include('views/vehicle_main.php');
+include('views/vehicle_v_main.php');
 $page->main = ob_get_clean();
 include("./main.php");
