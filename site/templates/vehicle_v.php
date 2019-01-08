@@ -17,7 +17,7 @@ include "inc/functions.php";
 include "inc/manufacturer.php";
 include "power_search.php";
 print_r($_GET);
-$_GET['vid'] = $input->urlSegment());
+$_GET['vid'] = $input->urlSegment();
 try
 {
   $username = '173210';
