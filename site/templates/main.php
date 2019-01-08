@@ -240,7 +240,7 @@ if($page->id !== 1043){
         //       echo "'" . $row2['model'] . "|" . $row2['model'] . "',";
         //     }
         //   echo "]}";
-        }
+        // }
         ?> 
         for(var option in optionArray){
           var pair = optionArray[option].split("|");
