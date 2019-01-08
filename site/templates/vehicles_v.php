@@ -22,7 +22,7 @@ if (isset($_GET['pageno'])) {
 } else {
   $pageno = 1;
 }
-$no_of_records_per_page = 20;
+$no_of_records_per_page = 21;
 $offset = ($pageno-1) * $no_of_records_per_page;
 $manuf = $sanitizer->text($input->post->slct1);
 // echo $manuf;
@@ -30,13 +30,13 @@ $mdl = $sanitizer->text($input->post->slct2);
 // echo $mdl;
 
 if( !empty($manuf) ) {
-  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' AND `special` = 1 AND `lcv` = 1 GROUP BY `cap_id` ";
+  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = 1 GROUP BY `cap_id` ";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   // $manuf = filter_var($_POST['manufacturer'], FILTER_SANITIZE_STRING);
   // $model = filter_var($_POST['model'], FILTER_SANITIZE_STRING);
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' AND `special` = 1 AND `lcv` = 1 GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' AND `lcv` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   // echo "if manu: " .  $query;
 }
 else {
@@ -44,7 +44,7 @@ else {
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv` FROM `team`.`rates_combined_terse` WHERE `special` = 1 AND `lcv` = 1 GROUP BY `cap_id` ORDER BY `rental` ASC LIMIT $offset, $no_of_records_per_page";
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special` FROM `team`.`rates_combined_terse` WHERE `lcv` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   // echo "else " . $query;
 }
 
