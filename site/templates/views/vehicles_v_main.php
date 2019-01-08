@@ -44,14 +44,23 @@
 							<div class="card">
 								<div class="card-section">
 									<h4><?=$vehicle['manufacturer']?> <?=$vehicle['model']?></h4>
-									<p><?=$vehicle['descr']?></p>
+									<p id="veh_descr"><?=$vehicle['descr']?></p>
 								</div>
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=">
 								<div class="card-section">
-									<h6>Business Clients: <span class="price">£<?=$bch_rental?></span>/mth excl. VAT</h6>
-									<h6>Personal Clients: <span class="price">£<?=$pch_rental?></span>/mth inc. VAT</h6>
+									<h6>Business Clients: <span class="price">£<?=$bch_rental?></span><small>/m ex VAT</small></h6>
+									<h6>Personal Clients: <span class="price">£<?=$pch_rental?></span><small>/m inc VAT</small></h6>
 									<small>click for more details...</small>
 								</div>
+								<?php
+								if($vehicle['special'] == 1){
+								?>
+								<div class="card-section special">
+									<h4>Special Deal<h4>
+								</div>
+								<?php
+								}
+								?>
 							</div>
 						</a>
 					</div>
