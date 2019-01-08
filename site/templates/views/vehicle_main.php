@@ -61,6 +61,15 @@
 						<small>* Based on an initial rental of £<?=$bch_initial?> excluding VAT followed by <?=str_replace("M", '', $data['term'])-1?> monthly rentals of £<?=$bch_rental?> and covering <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
 						<br /><small>** Based on an initial rental of £<?=$pch_initial?> including VAT followed by <?=str_replace("M", '', $data['term'])-1?> monthly rentals of £<?=$pch_rental?> and covering <?=str_replace("K",",000",$data['mileage'])?> miles annually.</small>
 					</div>
+					<?php
+					if($special == 1){
+					?>
+					<div class="card-section special">
+						<h4>Special Deal<h4>
+					</div>
+					<?php
+					}
+					?>
 				</div>
 				<div class="card card-2 gen_form">
 					<div class="card-section">
