@@ -24,22 +24,16 @@
 							'upscaling' => false       
 						);
 					?>
-					<div class="cell small-12 medium-4">
+					<div class="cell small-12 medium-6">
 						<a class="dashboard-nav-card" href="/find-your-car/">
 							<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
 							<h3 class="dashboard-nav-card-title">Cars</h3>
 						</a>
 					</div>
-					<div class="cell small-12 medium-4">
+					<div class="cell small-12 medium-6">
 						<a class="dashboard-nav-card" href="/van-leasing-hgv/">
 							<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
 							<h3 class="dashboard-nav-card-title">Vans</h3>
-						</a>
-					</div>
-					<div class="cell small-12 medium-4">
-						<a class="dashboard-nav-card" href="/van-leasing-hgv/">
-							<i class="dashboard-nav-card-icon fas fa-truck-pickup fa-3x" aria-hidden="true"></i>
-							<h3 class="dashboard-nav-card-title">Pickups</h3>
 						</a>
 					</div>
 					<div class="cell small-12 medium-6">
