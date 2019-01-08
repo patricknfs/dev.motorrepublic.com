@@ -1,15 +1,22 @@
 <?php
-// vehicle_v.php
+// vehicle.php
 // $products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
-print_r($_GET,$_POST);
+
+// $pagination = $products->renderPager(array(
+//   'nextItemLabel' => "Next",
+//   'previousItemLabel' => "Prev",
+//   'listMarkup' => "<ul class='MarkupPagerNav pagination text-center'role='navigation' aria-label='Pagination'>{out}</ul>",
+//   'currentItemClass' => "current",
+//   'itemMarkup' => "<li class='{class}'>{out}</li>",
+//   'linkMarkup' => "<a href='{url}'><span>{out}</span></a>"  
+// ));
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 include "inc/functions.php";
 include "inc/manufacturer.php";
 include "power_search.php";
-// $_GET['vid'] = $input->urlSegment1;
-
+$_GET['vid'] = $input->urlSegment1;
 try
 {
   $username = '173210';
@@ -17,7 +24,7 @@ try
   $date = date('c');
   $client = get_soap_client_2();
 
-  $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'lcv', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
+  $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
   $client->GetStandardEquipment($params);
   $data = $client->__getLastResponse();
   $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
@@ -25,7 +32,7 @@ try
   $groups = array_unique($data->xpath('//SE/Dc_Description'));
   $equipment = $data->xpath('//SE');
 
-  $params2 = array('subscriberId' => $username, 'password' => $password, 'database' => 'lcv', 'capid' => $input->urlSegment1, 'techDate' => $date, 'justCurrent' => true ); //define your parameters here
+  $params2 = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'techDate' => $date, 'justCurrent' => true ); //define your parameters here
   $client->GetTechnicalData($params2);
   $data2 = $client->__getLastResponse();
   $xml2 = str_replace(array("diffgr:","msdata:"),'', trim($data2));
@@ -38,7 +45,7 @@ try
     // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
-
+  
     // $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
     // $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
     $bch_rental = number_format($data['rental'], 2, '.', ',');
