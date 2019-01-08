@@ -1,7 +1,7 @@
 <?php
 // vehicle_v.php
 // $products = $pages->find("$selector, limit=12, sort=sequence, sort=colour");
-
+print_r($_GET,$_POST);
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
