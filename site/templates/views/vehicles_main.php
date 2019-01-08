@@ -52,6 +52,15 @@
 									<h6>Personal Clients: <span class="price">£<?=$pch_rental?></span><small>/m inc VAT</small></h6>
 									<small>click for more details...</small>
 								</div>
+								<?php
+								if($vehicle['special'] == 1){
+								?>
+								<div class="card-section special">
+									<h4>Special Deal<h4>
+								</div>
+								<?php
+								}
+								?>
 							</div>
 						</a>
 					</div>
