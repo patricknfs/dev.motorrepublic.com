@@ -64,7 +64,7 @@
 				</div>
 				<div class="card card-2 gen_form">
 					<div class="card-section">
-						<h4>Find Your Best Deal</h4>
+						<h4>Get a Quote Now</h4>
 						<p>Fill out the form below and we will contact you back, or, use the live chat option bottom right</p>
 						<?php echo $forms->embed('vehicle_quick_contact'); ?>
 					</div>
