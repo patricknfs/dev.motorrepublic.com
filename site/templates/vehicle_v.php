@@ -16,6 +16,7 @@ require_once(MR_PATH . "/inc/conn.php");
 include "inc/functions.php";
 include "inc/manufacturer.php";
 include "power_search.php";
+print_r($_GET);
 $_GET['vid'] = $input->urlSegment1;
 try
 {
