@@ -165,7 +165,7 @@ if($page->id !== 1043){
               <p>You should try and estimate the distance you will travel as accurately as possible to try and avoid excess mileage charges at the end of your contract.</p>
               <p>Only regulated business will fall under the jurisdiction of the Financial Conduct Authority.</p>
               <p>VAT at 20% may be payable.</p>
-              <p>You should try and estimate the distance you will travel as accurately as possible to try and avoid excess mileage charges at the end of your contract.</p>
+              <p><strong>You should try and estimate the distance you will travel as accurately as possible to try and avoid excess mileage charges at the end of your contract.</strong></p>
             </div>
             <div class="cell small-12 medium-2">
               <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
