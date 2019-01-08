@@ -17,7 +17,7 @@ try
   $date = date('c');
   $client = get_soap_client_2();
 
-  $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
+  $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'lcv', 'capid' => $input->urlSegment1, 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
   $client->GetStandardEquipment($params);
   $data = $client->__getLastResponse();
   $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
@@ -25,7 +25,7 @@ try
   $groups = array_unique($data->xpath('//SE/Dc_Description'));
   $equipment = $data->xpath('//SE');
 
-  $params2 = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capid' => $input->urlSegment1, 'techDate' => $date, 'justCurrent' => true ); //define your parameters here
+  $params2 = array('subscriberId' => $username, 'password' => $password, 'database' => 'lcv', 'capid' => $input->urlSegment1, 'techDate' => $date, 'justCurrent' => true ); //define your parameters here
   $client->GetTechnicalData($params2);
   $data2 = $client->__getLastResponse();
   $xml2 = str_replace(array("diffgr:","msdata:"),'', trim($data2));
