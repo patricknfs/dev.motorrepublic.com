@@ -200,7 +200,7 @@ if($page->id !== 1043){
           </div>
           <div class="grid-container">
             <div class="cell small-12 medium-3"><a href="/info/privacy/">Privacy Policy</a></div>
-            <div class="cell small-12 medium-3"><a href="/info/terms-conditions/">Privacy Policy</a></div>
+            <div class="cell small-12 medium-3"><a href="/info/terms-conditions/">Terms & Conditions</a></div>
             <div class="cell small-12 medium-3"><a href="/info/privacy/">Privacy Policy</a></div>
             <div class="cell small-12 medium-3"><a href="/info/privacy/">Privacy Policy</a></div>
           </div>
