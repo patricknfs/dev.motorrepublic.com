@@ -198,6 +198,12 @@ if($page->id !== 1043){
               <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
             </div>
           </div>
+          <div class="grid-container">
+            <div class="cell small-12 medium-3"><a href="/info/privacy/">Privacy Policy</a></div>
+            <div class="cell small-12 medium-3"></div>
+            <div class="cell small-12 medium-3"></div>
+            <div class="cell small-12 medium-3"></div>
+          </div>
         </div>
     </section>
     </footer>
