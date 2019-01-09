@@ -18,9 +18,9 @@ ob_start();
 <form action="<?=$pages->get($selector)->url;?>" method="POST">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-2">
-      <h5 style="color: #ffffff; line-height: 2em;">Quick Search</h5>
+      
     </div>
-    <div class="cell small-12 medium-4">
+    <div class="cell small-12 medium-3">
       <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
         <option value="">Manufacturer</option>
         <?php
@@ -32,10 +32,10 @@ ob_start();
         ?>
       </select>
     </div>
-    <div class="cell small-12 medium-4">
+    <div class="cell small-12 medium-3">
       <select id="slct2" name="slct2">>Model (choose manufacturer first)</select>
     </div>
-    <div class="cell small-12 medium-2">
+    <div class="cell small-12 medium-4">
       <input type="submit" class="button" value="Find Your Deal">
     </div>
   </form>
