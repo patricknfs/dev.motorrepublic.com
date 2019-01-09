@@ -11957,7 +11957,7 @@ nav {
 @media print, screen and (min-width: 40em) {
   .searchbar {
     display: block;
-    background-color: #444;
+    background-color: #555;
     padding-top: 0.8em;
   }
 }
