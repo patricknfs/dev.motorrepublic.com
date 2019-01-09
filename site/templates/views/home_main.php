@@ -21,7 +21,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
-			<div class="grid-x grid-padding-x small-up-1 medium-up-1.5">
+			<div class="grid-x grid-padding-x small-up-1 medium-up-2">
 			<?php
 			
 				foreach($result AS $vehicle) {
