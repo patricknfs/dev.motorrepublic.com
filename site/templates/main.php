@@ -188,7 +188,6 @@ if($page->id !== 1043){
               <p>Failure to maintain payments may result in termination of your agreement and the vehicle being returned, this could affect your credit rating and make it more difficult to obtain credit in the future.</p>
               <p>All prices correct at time of publication.</p>
               <p>All vehicle images and car descriptions on this site are for illustration and reference purposes only and are not necessarily an accurate representation of the vehicle on offer.</p>
-              <p>You should try and estimate the distance you will travel as accurately as possible to try and avoid excess mileage charges at the end of your contract.</p>
               <p>Only regulated business will fall under the jurisdiction of the Financial Conduct Authority.</p>
               <p>VAT at 20% may be payable.</p>
               <p><strong>You should try and estimate the distance you will travel as accurately as possible to try and avoid excess mileage charges at the end of your contract.</strong></p>
