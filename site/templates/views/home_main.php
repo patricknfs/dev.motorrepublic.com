@@ -93,11 +93,11 @@
 							<h3 class="dashboard-nav-card-title">Vans & Pickups</h3>
 						</a>
 					</div>
-					<div class="cell small-12">
+					<div class="cell small-12 card">
 						<h3>Our Panel of Funders</h3>
 						<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
 					</div>
-					<div class="cell small-12">
+					<div class="cell small-12 card">
 						<?=$page->regional_strength?>
 					</div>
 				</div>
