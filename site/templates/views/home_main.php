@@ -73,7 +73,7 @@
 		</div>
 	</div>
 </section>
-<section id="block_two">
+<!-- <section id="block_two">
 	<div class="grid-container">
 		<div class="grid-x">
 			<div class="cell small-12 medium-6">
@@ -84,4 +84,4 @@
 			<div class="cell small-12 medium-6"></div>
 		</div>
 	</div>
-</section>
+</section> -->
