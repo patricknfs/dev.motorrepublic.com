@@ -32,14 +32,14 @@
 					$vehicle_type = ($vehicle['lcv'] == 1?"LCV":"CAR");
 					$hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $vehicle['cap_id']));
 
-					// $bch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)), 2, '.', ',');
-					// $pch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)*1.2), 2, '.', ',');
+					$bch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)), 2, '.', ',');
+					$pch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)*1.2), 2, '.', ',');
 
-					// $bch_rental = number_format($vehicle['rental'], 2, '.', ',');
-					// $pch_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
+					$bchs_rental = number_format($vehicle['rental'], 2, '.', ',');
+					$pchs_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
 
-					(($vehicle['lcv'] == 1)?$bch_rental = number_format($vehicle['rental'], 2, '.', ','):$bch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)), 2, '.', ','));
-					(($vehicle['lcv'] == 1)?$pch_rental = number_format(($vehicle['rental']*1.2), 2, '.', ','):$pch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)*1.2), 2, '.', ','));
+					(($vehicle['lcv'] == 1)?$bchs_rental:$bch_rental);
+					(($vehicle['lcv'] == 1)?$pchs_rental:$pch_rental);
 					?>
 					<div class="cell">
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
