@@ -36,9 +36,8 @@
 							<h3 class="dashboard-nav-card-title">Van & Pickup Deals</h3>
 						</a>
 					</div>
-					<div class="cell small-12 medium-6">
-					<h3>Magazine Article</h3>
-					<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+					<<div class="cell small-12 medium-6">
+						<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
 					</div>
 					<div class="cell small-12 medium-6">
 						<?=$page->regional_strength?>
