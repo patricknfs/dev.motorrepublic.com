@@ -157,9 +157,12 @@ section#menurow {
 }
 
 section#promo {
-  margin-top: 7em;
+  margin-top: 2.3em;
   position: relative;
   overflow: hidden;
+  @include breakpoint(medium){
+    margin-top: 0;
+  }
 
   #hero-title {
     background: rgba(0,0,0,0.2);

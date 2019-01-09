@@ -12031,9 +12031,15 @@ section#menurow {
 }
 
 section#promo {
-  margin-top: 7em;
+  margin-top: 2.3em;
   position: relative;
   overflow: hidden;
+}
+
+@media print, screen and (min-width: 40em) {
+  section#promo {
+    margin-top: 0;
+  }
 }
 
 section#promo #hero-title {
