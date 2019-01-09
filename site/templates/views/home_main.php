@@ -51,23 +51,23 @@
 							'upscaling' => false       
 						);
 					?>
-					<div class="cell small-12 medium-6">
+					<div class="cell small-12">
 						<a class="dashboard-nav-card" href="/find-your-car/">
 							<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
 							<h3 class="dashboard-nav-card-title">Car Deals</h3>
 						</a>
 					</div>
-					<div class="cell small-12 medium-6">
+					<div class="cell small-12">
 						<a class="dashboard-nav-card" href="/van-leasing-hgv/">
 							<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
 							<h3 class="dashboard-nav-card-title">Van & Pickup Deals</h3>
 						</a>
 					</div>
-					<div class="cell small-12 medium-6">
+					<div class="cell small-12">
 						<h3>Our Panel of Funders</h3>
 						<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
 					</div>
-					<div class="cell small-12 medium-6">
+					<div class="cell small-12">
 						<?=$page->regional_strength?>
 					</div>
 				</div>
