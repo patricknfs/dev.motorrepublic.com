@@ -33,7 +33,7 @@ try
     $data = $result->fetch_assoc();
   
 
-    if($vehicle['special'] == 1){
+    if($data['special'] == 1){
       $bch_rental = number_format($data['rental'], 2, '.', ',');
       $pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
       $bch_initial = number_format(($data['rental'] * $data['upfront']), 2, '.', ',');
