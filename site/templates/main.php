@@ -218,7 +218,7 @@ if($page->id !== 1043){
     <?php
     }
   ?>
-  <!-- <script>
+  <script>
       function populate(s1,s2){
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
@@ -227,20 +227,20 @@ if($page->id !== 1043){
           var optionArray = ["|"];
         }
         <?php
-        // $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
-        // $result = mysqli_query($conn, $query);
+        $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
+        $result = mysqli_query($conn, $query);
 
-        // while ($row = mysqli_fetch_assoc($result)) {
-        //   echo "else if(s1.value == '" . $row['manufacturer'] . "'){
-        //     var optionArray = ['|',";
-        //     $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
-        //     // echo $query2;
-        //     $result2 = mysqli_query($conn, $query2);
-        //     while ($row2 = mysqli_fetch_array($result2)) {
-        //       echo "'" . $row2['model'] . "|" . $row2['model'] . "',";
-        //     }
-        //   echo "]}";
-        // }
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo "else if(s1.value == '" . $row['manufacturer'] . "'){
+            var optionArray = ['|',";
+            $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
+            // echo $query2;
+            $result2 = mysqli_query($conn, $query2);
+            while ($row2 = mysqli_fetch_array($result2)) {
+              echo "'" . $row2['model'] . "|" . $row2['model'] . "',";
+            }
+          echo "]}";
+        }
         ?> 
         for(var option in optionArray){
           var pair = optionArray[option].split("|");
@@ -250,5 +250,5 @@ if($page->id !== 1043){
           s2.options.add(newOption);
         }
       }
-    </script> -->
+    </script>
 </html>
