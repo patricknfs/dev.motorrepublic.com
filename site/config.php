@@ -95,5 +95,5 @@ $config->installed = 1521801191;
  * Installer: HTTP Hosts Whitelist
  * 
  */
-$config->httpHosts = array('dev.motorrepublic.com', 'motorrepublic.com'), 'www.motorrepublic.com';
+$config->httpHosts = array('dev.motorrepublic.com', 'motorrepublic.com', 'www.motorrepublic.com');
 
