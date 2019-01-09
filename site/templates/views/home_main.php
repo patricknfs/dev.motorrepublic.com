@@ -16,8 +16,36 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-8">
-				<!-- <h3>Straight To The Special Deals</h3> -->
-				<div class="grid-x grid-margin-x">
+				<a href="/vehicle/<?=$data['cap_id']?>">
+					<div class="card">
+						<div class="card-section">
+							<!-- <h3>Hot Deals</h3> -->
+							<h3>
+								<?=$data['manufacturer']?> <?=$data['model']?>
+							</h3>
+							<p><?=$data['descr']?></p>
+						</div>
+						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$data['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=">
+						<div class="card-section">
+							<h6>Business Clients: <span class="price">£<?=$bch_rental?></span><small>/mth excl. VAT</small></h6>
+							<h6>Personal Clients: <span class="price">£<?=$pch_rental?></span><small>/mth inc. VAT</small></h6>
+							<small>click for more details...</small>
+						</div>
+						<div class="card-section special">
+							<h4>Special Deal<h4>
+						</div>
+					</div>
+				</a>
+			</div>
+			<?php
+				$bch_rental = number_format($data['rental'], 2, '.', ',');
+				$pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
+				$vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
+				$hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
+			?>
+			<div class="cell small-12 medium-4">
+							<!-- <h3>Straight To The Special Deals</h3> -->
+							<div class="grid-x grid-margin-x">
 					<?php
 						$options = array(
 							'quality' => 80,
@@ -44,34 +72,7 @@
 						<?=$page->regional_strength?>
 					</div>
 				</div>
-			</div>
-			<?php
-				$bch_rental = number_format($data['rental'], 2, '.', ',');
-				$pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
-				$vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
-				$hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
-			?>
-			<div class="cell small-12 medium-4">
-				<a href="/vehicle/<?=$data['cap_id']?>">
-					<div class="card">
-						<div class="card-section">
-							<!-- <h3>Hot Deals</h3> -->
-							<h3>
-								<?=$data['manufacturer']?> <?=$data['model']?>
-							</h3>
-							<p><?=$data['descr']?></p>
-						</div>
-						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$data['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=">
-						<div class="card-section">
-							<h6>Business Clients: <span class="price">£<?=$bch_rental?></span><small>/mth excl. VAT</small></h6>
-							<h6>Personal Clients: <span class="price">£<?=$pch_rental?></span><small>/mth inc. VAT</small></h6>
-							<small>click for more details...</small>
-						</div>
-						<div class="card-section special">
-							<h4>Special Deal<h4>
-						</div>
-					</div>
-				</a>
+				
 			</div>
 		</div>
 	</div>
