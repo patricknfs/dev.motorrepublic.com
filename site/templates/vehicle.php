@@ -45,13 +45,13 @@ try
       $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
       $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
     }
-    
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
     $manufacturer = $data['manufacturer'];
     $model = $data['model'];
     $descr = $data['descr'];
     $special = $data['special'];
+    $term = str_replace("M", '', $data['term'])-1;
     $hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
   } else {
     echo "<p>Vehicle not available. Please contact the team</p>";
