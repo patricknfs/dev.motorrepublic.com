@@ -55,10 +55,10 @@
 				<a href="/vehicle/<?=$data['cap_id']?>">
 					<div class="card">
 						<div class="card-section">
-							<h3>Hot Deals</h3>
-							<h6>
+							<!-- <h3>Hot Deals</h3> -->
+							<h3>
 								<?=$data['manufacturer']?> <?=$data['model']?>
-							</h6>
+							</h3>
 							<p><?=$data['descr']?></p>
 						</div>
 						<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$data['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=">
@@ -66,6 +66,9 @@
 							<h6>Business Clients<br /><span class="price">£<?=$bch_rental?></span>/mth excl. VAT</h6>
 							<h6>Personal Clients<br /><span class="price">£<?=$pch_rental?></span>/mth inc. VAT</h6>
 							<small>click for more details...</small>
+						</div>
+						<div class="card-section special">
+							<h4>Special Deal<h4>
 						</div>
 					</div>
 				</a>
