@@ -11950,10 +11950,6 @@ nav {
   z-index: 5;
 }
 
-.searchbar {
-  display: none;
-}
-
 @media print, screen and (min-width: 40em) {
   .searchbar {
     background-color: #475b69;
