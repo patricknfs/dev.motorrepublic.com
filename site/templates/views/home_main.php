@@ -23,7 +23,7 @@
 			<div class="cell small-12 medium-8">
 			<div class="grid-x grid-padding-x small-up-1 medium-up-3">
 			<?php
-			if($total_rows > 0){
+			
 				foreach($result AS $vehicle) {
 					$options = array(
 						'quality' => 80,
@@ -68,10 +68,7 @@
 					</div>
 				<?php
 				}
-			}
-			else {
-				echo "<h2>This vehicle is either a special purchase or not currently available. Please call the number above or use live chat to speak to an expert.</h2>";
-			}
+
 			?>
 		</div>
 			</div>
