@@ -38,8 +38,8 @@
 					$bchs_rental = number_format($vehicle['rental'], 2, '.', ',');
 					$pchs_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
 
-					(($vehicle['lcv'] == 1)?$bchs_rental:$bch_rental);
-					(($vehicle['lcv'] == 1)?$pchs_rental:$pch_rental);
+					$bch = (($vehicle['lcv'] == 1)?$bchs_rental:$bch_rental);
+					$pch = (($vehicle['lcv'] == 1)?$pchs_rental:$pch_rental);
 					?>
 					<div class="cell">
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
@@ -50,8 +50,8 @@
 								</div>
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=">
 								<div class="card-section">
-									<h6>Business Clients: <span class="price">£<?=$bch_rental?></span><small>/m ex VAT</small></h6>
-									<h6>Personal Clients: <span class="price">£<?=$pch_rental?></span><small>/m inc VAT</small></h6>
+									<h6>Business Clients: <span class="price">£<?=$bch?></span><small>/m ex VAT</small></h6>
+									<h6>Personal Clients: <span class="price">£<?=$pch?></span><small>/m inc VAT</small></h6>
 									<small>click for more details...</small>
 								</div>
 								<?php
