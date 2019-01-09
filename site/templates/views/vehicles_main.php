@@ -38,13 +38,13 @@
 					$bchs_rental = number_format($vehicle['rental'], 2, '.', ',');
 					$pchs_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
 					
-					$bch = (($vehicle['lcv'] == 1)?$bchs_rental:$bch_rental);
-					$pch = (($vehicle['lcv'] == 1)?$pchs_rental:$pch_rental);
+					$bch = (($vehicle['special'] == 1)?$bchs_rental:$bch_rental);
+					$pch = (($vehicle['special'] == 1)?$pchs_rental:$pch_rental);
 					?>
 					<div class="cell">
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
 							<div class="card">
-								<?=$vehicle['lcv']?>
+								<?=$vehicle['special']?>
 								<div class="card-section">
 									<h4><?=$vehicle['manufacturer']?> <?=$vehicle['model']?></h4>
 									<p id="veh_descr"><?=$vehicle['descr']?></p>
