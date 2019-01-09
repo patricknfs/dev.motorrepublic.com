@@ -57,7 +57,7 @@
           }
           ?> -->
           <!-- In this container, add blockquote-left or blockquote-right to make the blockquote left / -->
-          <div class="blockquote-container">
+          <!-- <div class="blockquote-container">
             <div class="callout">
               <h4 class="blockquote-title"><?=$testimonial->title?></h4>
               <blockquote>
@@ -67,7 +67,7 @@
                 <cite><?=$testimonial->sig?></cite>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
         <div class="cell small-12 medium-4">
