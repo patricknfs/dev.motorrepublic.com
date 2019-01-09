@@ -86,8 +86,9 @@ nav {
 }
 
 .searchbar {
-  // display: none;
+  display: none;
   @include breakpoint(medium){
+    display: block;
     background-color: #444;
     padding-top: 1.2em;
   }
