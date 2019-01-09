@@ -36,7 +36,7 @@
 							<h3 class="dashboard-nav-card-title">Van & Pickup Deals</h3>
 						</a>
 					</div>
-					<<div class="cell small-12 medium-6">
+					<div class="cell small-12 medium-6">
 						<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
 					</div>
 					<div class="cell small-12 medium-6">
