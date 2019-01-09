@@ -1,3 +1,8 @@
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /var/www/vhosts/motorrepublic.com/pwds/.htpasswd
+AuthGroupFile /dev/null
+require valid-user
 #################################################################################################
 # START PROCESSWIRE HTACCESS DIRECTIVES
 # @version 3.0

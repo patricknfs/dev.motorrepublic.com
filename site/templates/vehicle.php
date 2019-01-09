@@ -52,6 +52,7 @@ try
     $descr = $data['descr'];
     $special = $data['special'];
     $term = str_replace("M", '', $data['term'])-1;
+    $mileage = str_replace("K",",000",$data['mileage']);
     $hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
   } else {
     echo "<p>Vehicle not available. Please contact the team</p>";
