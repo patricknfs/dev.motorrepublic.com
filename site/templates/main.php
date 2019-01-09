@@ -194,13 +194,11 @@ if($page->id !== 1043){
             </div>
             <div class="cell small-12 medium-2">
               <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
+              <a href="/info/privacy/">Privacy Policy</a>
+              <a href="/info/terms-conditions/">Terms & Conditions</a>
+              <a href="/info/privacy/">Information</a>
+              <a href="/info/privacy/">Privacy Policy</a>
             </div>
-          </div>
-          <div class="grid-container">
-            <div class="cell small-12 medium-3"><a href="/info/privacy/">Privacy Policy</a></div>
-            <div class="cell small-12 medium-3"><a href="/info/terms-conditions/">Terms & Conditions</a></div>
-            <div class="cell small-12 medium-3"><a href="/info/privacy/">Information</a></div>
-            <div class="cell small-12 medium-3"><a href="/info/privacy/">Privacy Policy</a></div>
           </div>
         </div>
     </section>
