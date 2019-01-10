@@ -12193,6 +12193,10 @@ footer #governance {
   padding-top: 2em;
 }
 
+.tel a {
+  color: #fff;
+}
+
 .home_deals {
   text-align: center;
 }
