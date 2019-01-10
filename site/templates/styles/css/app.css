@@ -12193,7 +12193,7 @@ footer #governance {
   padding-top: 2em;
 }
 
-.tel a {
+.tel a:visited {
   color: #fff;
 }
 
