@@ -157,7 +157,7 @@ if($page->id !== 1043){
           <div class="cell small-12 medium-4">
             <ul>
               <h3>Talk To Us</h3>
-              <li>T: <a href="tel:01217949073">0121 794 9073</a></li>
+              <li class="tel">T: <a href="tel:01217949073">0121 794 9073</a></li>
               <li>E: sales@motorrepublic.com</li>
             </ul>
           </div>
