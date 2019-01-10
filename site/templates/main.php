@@ -154,13 +154,13 @@ if($page->id !== 1043){
     <footer>
       <div class="grid-container">
         <div class="grid-x">
-          <div class="cell small-6 medium-4">
-          <ul><h3>Talk To Us</h3>
-            <li>T: 0121 794 9073</li>
-            <li>E: sales@motorrepublic.com</li>
-          </ul>
+          <div class="cell small-12 medium-4">
+            <ul><h3>Talk To Us</h3>
+              <li>T: 0121 794 9073</li>
+              <li>E: sales@motorrepublic.com</li>
+            </ul>
           </div>
-          <div class="cell small-6 medium-4">
+          <div class="cell small-12 medium-4">
             <ul><h3>Where We Are</h3>
               <li>Motor Republic</li>
               <li>5 The Croft</li>
@@ -194,10 +194,10 @@ if($page->id !== 1043){
             </div>
             <div class="cell small-12 medium-2">
               <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
-              <a href="/info/privacy/">Privacy Policy</a>
-              <a href="/info/terms-conditions/">Terms & Conditions</a>
-              <a href="/info/privacy/">Information</a>
-              <a href="/info/privacy/">Privacy Policy</a>
+              <p><a href="/info/privacy/">Privacy Policy</a></p>
+              <p><a href="/info/terms-conditions/">Terms & Conditions</a></p>
+              <p><a href="/info/information/">Information</a></p>
+              <p><a href="/info/privacy/">Privacy Policy</a></p>
             </div>
           </div>
         </div>
