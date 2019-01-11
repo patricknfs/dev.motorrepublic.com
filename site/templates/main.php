@@ -200,6 +200,7 @@ if($page->id !== 1043){
               <p><a href="/info/terms-conditions/">Terms & Conditions</a></p>
               <p><a href="/info/information/">Information</a></p>
               <p><a href="/info/initial-disclosure/">Initial Disclosure</a></p>
+              <p><a href="/info/commission-disclosure/">Commission Disclosure</a></p>
             </div>
           </div>
         </div>
