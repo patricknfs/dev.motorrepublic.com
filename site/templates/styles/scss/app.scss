@@ -340,12 +340,16 @@ footer {
   }
 }
 
-.tel a {
-  color: #fff;
-}
+// .tel a {
+//   color: #fff;
+// }
 
-.tel a:visited {
-  color: #fff;
+// .tel a:visited {
+//   color: #fff;
+// }
+
+.tel a, .tel a:visited, .tel a:hover, .te a:active {
+  color: inherit; !important
 }
 
 // Home page
