@@ -15,7 +15,7 @@ $AdminMessage = "MR Hitachi CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`rates_hitachi`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-$csv = "inc/hitachi_rates_all.csv";
+$csv = "repos/hitachi_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($rawdata);
