@@ -623,3 +623,15 @@ section#vehicles {
 .card-section small {
   color: #666;
 }
+
+.small_vehicle_image {
+  @include breakpoint(medium){
+    display: none;
+  }
+}
+
+.large_vehicle_image {
+  @include breakpoint (small only) {
+    display: none;
+  }
+}

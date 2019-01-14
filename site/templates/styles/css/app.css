@@ -12421,3 +12421,15 @@ section#vehicles {
 .card-section small {
   color: #666;
 }
+
+@media print, screen and (min-width: 40em) {
+  .small_vehicle_image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .large_vehicle_image {
+    display: none;
+  }
+}
