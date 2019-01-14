@@ -12435,7 +12435,12 @@ section#vehicles {
 }
 
 #footer_compliance {
+  color: #ffffff;
   margin-bottom: 3em;
+}
+
+#footer_compliance h4 {
+  color: #ffffff;
 }
 
 #footer_compliance a {
