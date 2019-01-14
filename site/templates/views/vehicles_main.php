@@ -1,5 +1,5 @@
 <section id="vehicles">
-	<div class="grid-container flex-container">
+	<div class="grid-container">
 		<!-- <div class="grid-x">
 			<div class="cell small-12">
 				<div class="text-center">
@@ -7,7 +7,7 @@
 				</div>
 			</div>
 		</div> -->
-		<div class="grid-x align-center flex-item">
+		<div class="grid-x align-center">
 			<nav class="nav_pagination" aria-label="Pagination">
 				<ul class="pagination text-center">
 					<li><a href="?pageno=1">First</a></li>
@@ -21,7 +21,7 @@
 				<ul>
 			</nav>
 		</div>
-		<div class="grid-x grid-padding-x small-up-1 medium-up-3 flex-item">
+		<div class="grid-x grid-padding-x small-up-1 medium-up-3">
 			<?php
 			if($total_rows > 0){
 				foreach($result AS $vehicle) {
