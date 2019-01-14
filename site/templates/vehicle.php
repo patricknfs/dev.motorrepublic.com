@@ -52,7 +52,7 @@ try
     $model = $data['model'];
     $_GET['model'] = $model;
     $descr = $data['descr'];
-    $_GET['descr'] = $descr;
+    $_GET['description_1'] = $descr;
     $special = $data['special'];
     $term = str_replace("M", '', $data['term'])-1;
     $mileage = str_replace("K",",000",$data['mileage']);
