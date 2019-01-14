@@ -48,8 +48,11 @@ try
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
     $manufacturer = $data['manufacturer'];
+    $_GET['manufacturer'] = $manufacturer;
     $model = $data['model'];
+    $_GET['model = $model'];
     $descr = $data['descr'];
+    $_GET['descr = $descr;']
     $special = $data['special'];
     $term = str_replace("M", '', $data['term'])-1;
     $mileage = str_replace("K",",000",$data['mileage']);
