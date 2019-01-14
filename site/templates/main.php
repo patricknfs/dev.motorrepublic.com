@@ -195,14 +195,15 @@ if($page->id !== 1043){
             </div>
             <div class="cell small-12 medium-2">
               <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
-              
-              <p><a href="/info/treating-customer-fairly/">Treating Customers Fairly</a></p>
-              <p><a href="/info/privacy/">Privacy Policy</a></p>
-              <p><a href="/info/complaints-procedure/">Complaints Procedure</a></p>
-              <p><a href="/info/terms-conditions/">Terms & Conditions</a></p>
-              <p><a href="/info/information/">Information</a></p>
-              <p><a href="/info/initial-disclosure/">Initial Disclosure</a></p>
-              <p><a href="/info/commission-disclosure/">Commission Disclosure</a></p>
+              <div id="footer_compliance">
+                <p><a href="/info/treating-customer-fairly/">Treating Customers Fairly</a></p>
+                <p><a href="/info/privacy/">Privacy Policy</a></p>
+                <p><a href="/info/complaints-procedure/">Complaints Procedure</a></p>
+                <p><a href="/info/terms-conditions/">Terms & Conditions</a></p>
+                <p><a href="/info/information/">Information</a></p>
+                <p><a href="/info/initial-disclosure/">Initial Disclosure</a></p>
+                <p><a href="/info/commission-disclosure/">Commission Disclosure</a></p>
+              </div>
             </div>
           </div>
         </div>
