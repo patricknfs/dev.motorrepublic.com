@@ -196,6 +196,7 @@ if($page->id !== 1043){
             <div class="cell small-12 medium-2">
               <img  class="float-center" src="<?=$config->urls->assets?>graphics/bvrla-white.png" />
               <div id="footer_compliance">
+                <h4>Documents</h4>
                 <p><a href="/info/treating-customer-fairly/">Treating Customers Fairly</a></p>
                 <p><a href="/info/privacy/">Privacy Policy</a></p>
                 <p><a href="/info/complaints-procedure/">Complaints Procedure</a></p>
