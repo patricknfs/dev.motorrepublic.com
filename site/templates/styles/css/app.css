@@ -12193,12 +12193,8 @@ footer #governance {
   padding-top: 2em;
 }
 
-.tel a {
-  color: #fff;
-}
-
-.tel a:visited {
-  color: #fff;
+.tel a, .tel a:visited, .tel a:hover, .tel a:active {
+  color: inherit !important;
 }
 
 .home_deals {
@@ -12380,12 +12376,6 @@ section#vehicles {
 @media print, screen and (min-width: 40em) {
   section#vehicles {
     margin-top: 2em;
-  }
-}
-
-@media screen and (max-width: 63.9375em) {
-  #veh_descr {
-    display: none;
   }
 }
 
