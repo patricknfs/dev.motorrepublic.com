@@ -50,9 +50,9 @@ try
     $manufacturer = $data['manufacturer'];
     $_GET['manufacturer'] = $manufacturer;
     $model = $data['model'];
-    $_GET['model = $model'];
+    $_GET['model'] = $model;
     $descr = $data['descr'];
-    $_GET['descr = $descr'];
+    $_GET['descr'] = $descr;
     $special = $data['special'];
     $term = str_replace("M", '', $data['term'])-1;
     $mileage = str_replace("K",",000",$data['mileage']);
