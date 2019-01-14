@@ -573,11 +573,11 @@ section#vehicles {
   }
 }
 
-#veh_descr{
-  @include breakpoint(medium down) {
-    display: none;
-  }
-}
+// #veh_descr{
+//   @include breakpoint(medium down) {
+//     display: none;
+//   }
+// }
 
 .dashboard-nav-card {
   background: #333333;
