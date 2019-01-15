@@ -16,6 +16,8 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     $data = array_map('trim',$data);
     echo $data['company'];
+    echo $data['town'];
+    echo $data['county'];
   }
 }
 ?>
