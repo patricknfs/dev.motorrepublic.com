@@ -25,7 +25,7 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
     // echo $data[8]; // email
     $pc_bhams_worcsn = array('B14','B27','B30','B31','B38','B40','B45','B47','B48','B49','B50','B60','B61','B80','B90','B91','B92','B93','B94','B95','B96','B97','B98','DY13','WR9');
     $postcode = explode(' ', $data[3]);
-    if(in_array($postcode, $pc_bhams_worcsn)){
+    if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode;
     }
   }
