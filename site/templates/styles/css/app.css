@@ -11952,6 +11952,10 @@ nav {
   z-index: 5;
 }
 
+.searchbar {
+  margin-top: 1em;
+}
+
 @media print, screen and (min-width: 40em) {
   .searchbar {
     display: block;
