@@ -12,7 +12,7 @@ $AdminMessage = "MR Slice Report\n";
 // Now open the local file and loop through it.
 
 
-if (($handle = fopen("inc/" . $csv, "r")) !== FALSE) {
+if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     echo $data['company'];
   }
