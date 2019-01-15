@@ -18,6 +18,12 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
     echo $data[0];
     echo $data[1];
     echo $data[2];
+    echo $data[3];
+    echo $data[4];
+    echo $data[5];
+    echo $data[6];
+    echo $data[7];
+    echo $data[8];
   }
 }
 ?>
