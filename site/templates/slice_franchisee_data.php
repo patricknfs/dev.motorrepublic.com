@@ -29,7 +29,7 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
       // echo $postcode[0] . "\n";
       $file = fopen("pc_bhams_worcsn.csv","w");
       $line = array("company","town","county","postcode","prefix","fname","sname","jobrole","email");
-      fputcsv($file,explode(',',$line));
+      // fputcsv($file,explode(',',$line));
       fputcsv($file,explode(',',$data));
     }
   }
