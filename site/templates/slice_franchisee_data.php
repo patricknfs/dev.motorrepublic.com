@@ -29,6 +29,7 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
       echo $postcode[0] . "\n";
       $file = fopen("pc_bhams_worcsn.csv","w");
       foreach ($data as $row) {
+        echo $row['0'];
         fputcsv($file,$row);
       }
     }
