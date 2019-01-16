@@ -36,8 +36,8 @@ try
     if($data['special'] == 1){
       $bch_rental = number_format($data['rental'], 2, '.', ',');
       $pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
-      $bch_initial = number_format(($data['rental'] * $data['upfront']), 2, '.', ',');
-      $pch_initial = number_format((($data['rental'] * $data['upfront'])*1.2), 2, '.', ',');
+      $bch_initial = number_format(($data['rental'] * (($data['special_upfront']?$data['special_upfront']:$data['upfront'])), 2, '.', ',');
+      $pch_initial = number_format((($data['rental'] * ($data['special_upfront']?$data['special_upfront']:$data['upfront']))*1.2), 2, '.', ',');
     }
     else {
       $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
@@ -60,7 +60,6 @@ try
   } else {
     echo "<p>Vehicle not available. Please contact the team</p>";
   }
-
 }
 catch(Exception $e){ 
     echo $e->getCode(). '<br />'. $e->getMessage();
