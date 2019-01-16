@@ -28,10 +28,15 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
       $file = fopen("pc_bhams_worcsn.csv","w");
-      foreach ($data as $row) {
-        echo $data['0'];
-        fputcsv($file,$row);
-      }
+      $row = 1;
+
+      $num = count($data);
+      $row++;
+      echo $data[0] . "\n" . $data[1] . "<br />\n";
+      fputcsv($file, [$data[0], $data[1]]);
+  
+      fclose($handle);
+      fclose($file);
     }
   }
 }
