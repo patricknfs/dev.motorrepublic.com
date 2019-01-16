@@ -13,7 +13,7 @@ $AdminMessage = "MR Slice Report\n";
 
 if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    $data = array_map('trim',$data);
+    // $data = array_map('trim',$data);
     // echo $data[0]; // company
     // echo $data[1]; // town
     // echo $data[2]; // county
@@ -28,8 +28,6 @@ if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
       $file = fopen("pc_bhams_worcsn.csv","w");
-      $line = array("company","town","county","postcode","prefix","fname","sname","jobrole","email");
-      // fputcsv($file,explode(',',$line));
       foreach ($data as $row) {
         fputcsv($file,$row);
       }
