@@ -17,10 +17,6 @@ foreach($form->entries()->find("sort=created") as $entry) {
   $entries[] = $entry;
 }
 
-// foreach($entries as $entry){
-//   echo "<p>$entry[cap_id]</p>";
-// }
-
 foreach($entries as $entry){
   // for every field in the result..
   $insert = "INSERT INTO `team`.`rates_combined` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', NOW(), '" . $entry['expired'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['description_1'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list_price'] . "', '" . $entry['vehicle_otr_price'] . "', '" . $entry['p11d_price'] . "', '" . $entry['co2'] . "', '" . $entry['lcv'] . "', 1, '" . $entry['deal_notes'] . "', '" . $entry['upfront'] . "')";
