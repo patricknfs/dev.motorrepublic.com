@@ -14,6 +14,7 @@ $form = $forms->get('specials_upload');
 
 $entries = array();
 foreach($form->entries()->find("sort=created") as $entry) {
+  print_r($entries);
   $entries[] = $entry;
 }
 
