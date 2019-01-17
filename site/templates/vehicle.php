@@ -60,7 +60,6 @@ try
   } else {
     echo "<p>Vehicle not available. Please contact the team</p>";
   }
-
 }
 catch(Exception $e){ 
     echo $e->getCode(). '<br />'. $e->getMessage();
