@@ -36,7 +36,7 @@ try
     if($data['special'] == 1){
       $bch_rental = number_format($data['rental'], 2, '.', ',');
       $pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
-      $bch_initial = (($data['special_upfront'])?$data['special_upfront']:number_format(($data['rental'] * $data['upfront'])), 2, '.', ',');
+      $bch_initial = (($data['special_upfront'])?$data['special_upfront']:number_format(($data['rental'] * $data['upfront']), 2, '.', ','));
       $pch_initial = number_format((($data['rental'] * $data['upfront'])*1.2), 2, '.', ',');
     }
     else {
