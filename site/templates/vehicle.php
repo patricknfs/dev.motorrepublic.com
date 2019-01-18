@@ -54,6 +54,7 @@ try
     $descr = $data['descr'];
     $_GET['description_1'] = $descr;
     $special = $data['special'];
+    $website_deal_notes = $data['website_deal_notes'];
     $term = str_replace("M", '', $data['term'])-1;
     $mileage = str_replace("K",",000",$data['mileage']);
     $hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $data['cap_id']));
