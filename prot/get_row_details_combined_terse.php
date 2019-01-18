@@ -12,7 +12,7 @@ $result2 = $conn->query($truncate) or die(mysqli_error());
 
 $query = "SELECT t1.*
   FROM (
-    SELECT cap_id, src, MIN(rental) AS rent FROM team.rates_combined_copy GROUP BY cap_id
+    SELECT cap_id, src, MIN(rental) AS rent, special_upfront, website_deal_notes FROM team.rates_combined_copy GROUP BY cap_id
   ) as t2 INNER JOIN team.rates_combined_copy AS t1 ON t1.cap_id = t2.cap_id AND t1.rental = t2.rent
   ORDER BY t1.rental ASC
 ";
