@@ -62,7 +62,11 @@
 						<small>* Based on an initial rental of £<?=$bch_initial?> excluding VAT followed by <?=$term?> monthly rentals of £<?=$bch_rental?> and covering <?=$mileage?> miles annually.</small>
 						<br /><small>** Based on an initial rental of £<?=$pch_initial?> including VAT followed by <?=$term?> monthly rentals of £<?=$pch_rental?> and covering <?=$mileage?> miles annually.</small>
 						<br /><br /><h6>Additional Information</h6>
-						<small><?=$website_deal_notes?></small>			
+						<?php
+						if($website_deal_notes){
+							echo "<small>$website_deal_notes</small>";	
+						}
+						?>
 					</div>
 					<?php
 					if($special == 1){
