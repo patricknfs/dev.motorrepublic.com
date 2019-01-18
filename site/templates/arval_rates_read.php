@@ -18,7 +18,7 @@ $truncate = "TRUNCATE TABLE `team`.`rates_arval`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
 
-if (($handle = fopen("inc/arval_rates.csv", "r")) !== FALSE) {
+if (($handle = fopen("repos/arval_rates.csv", "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     $data = str_replace(',', '', $rawdata);
     $data = str_replace('£','',$data);
