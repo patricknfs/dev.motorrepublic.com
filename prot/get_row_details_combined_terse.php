@@ -23,7 +23,7 @@ $row = 1;
 
 while ($row = mysqli_fetch_assoc($result)) {
   // for every field in the result..
-  $insert = "REPLACE INTO `team`.`rates_combined_terse_copy` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', '" . $row['updated'] . "', '', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "', '" . $row['lcv'] . "', '" . $row['special'] . "', '" . $row['deal_notes'] . "', '" . $row['upfront'] . "', '" . str_replace(',','',$row['special_upfront']) . "', '" . $row['website_deal_notes'] . "'";
+  $insert = "REPLACE INTO `team`.`rates_combined_terse_copy` VALUES ('','" . $row['cap_id'] . "', '" . $row['cap_code'] . "', '" . $row['src'] . "', '" . $row['updated'] . "', '', '" . $row['manufacturer'] . "', '" . $row['model'] . "', '" . $row['descr'] . "', '" . $row['term'] . "', '" . $row['mileage'] . "', '" . $row['rental'] . "', '" . $row['vehicle_list'] . "', '" . $row['vehicle_otr'] . "', '" . $row['p11d'] . "', '" . $row['CO2_no'] . "', '" . $row['lcv'] . "', '" . $row['special'] . "', '" . $row['deal_notes'] . "', '" . $row['upfront'] . "', '" . str_replace(',','',$row['special_upfront']) . "', '" . $row['website_deal_notes'] . "')";
   echo $insert;
   $result3 = $conn->query($insert) or die(mysqli_error($conn));
   $row++;
