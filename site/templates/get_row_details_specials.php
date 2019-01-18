@@ -20,7 +20,7 @@ foreach($form->entries()->find("sort=created") as $entry) {
 
 foreach($entries as $entry){
   // for every field in the result..
-  $insert = "INSERT INTO `team`.`rates_combined_copy` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', NOW(), '" . $entry['expired'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['description_1'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list_price'] . "', '" . $entry['vehicle_otr_price'] . "', '" . $entry['p11d_price'] . "', '" . $entry['co2'] . "', '" . $entry['lcv'] . "', 1, '" . $entry['deal_notes'] . "', '" . $entry['upfront'] . "', '" . str_replace(',','',$entry['special_upfront']) . "', '" . (($entry['website_deal_notes'])?$entry['website_deal_notes']:$entry['website_deal_notes]')) . "')";
+  $insert = "INSERT INTO `team`.`rates_combined_copy` VALUES ('','" . $entry['cap_id'] . "', '" . $entry['cap_code'] . "', '" . $entry['source'] . "', NOW(), '" . $entry['expired'] . "', '" . $entry['manufacturer'] . "', '" . $entry['model'] . "', '" . $entry['description_1'] . "', '" . $entry['term'] . "', '" . $entry['mileage'] . "', '" . $entry['rental'] . "', '" . $entry['vehicle_list_price'] . "', '" . $entry['vehicle_otr_price'] . "', '" . $entry['p11d_price'] . "', '" . $entry['co2'] . "', '" . $entry['lcv'] . "', 1, '" . $entry['deal_notes'] . "', '" . $entry['upfront'] . "', '" . str_replace(',','',$entry['special_upfront']) . "', '" . (($entry['website_deal_notes'])?$entry['website_deal_notes']:$entry['website_deal_notes'])) . "')";
   echo $insert;
   $result = $conn->query($insert) or die(mysqli_error($conn));
   $entry++;
