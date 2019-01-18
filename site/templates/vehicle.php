@@ -27,7 +27,7 @@ try
 
 
   if(null !== $input->urlSegment()) {
-    $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront`, `special` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment() . " ORDER BY `rental` ASC LIMIT 1";
+    $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront`, `special`, `special_upfront`, `website_deal_notes` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment() . " ORDER BY `rental` ASC LIMIT 1";
     // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
