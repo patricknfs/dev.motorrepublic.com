@@ -67,8 +67,14 @@ catch(Exception $e){
 }
 
 echo "LCV?" . $data['lcv'];
+if($data['lcv'] == 1){
+  $carlcv = "LCV";
+}
+else {
+  $carlcv = "CAR";
+}
 
-$params = array('subscriberId' => $username, 'password' => $password, 'database' => ($data['lcv'] == 1?"LCV":"CAR"), 'capid' => $input->urlSegment(), 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
+$params = array('subscriberId' => $username, 'password' => $password, 'database' => $carlcv, 'capid' => $input->urlSegment(), 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
 $client->GetStandardEquipment($params);
 $data = $client->__getLastResponse();
 $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
@@ -76,7 +82,7 @@ $data = new SimpleXMLElement($xml);
 $groups = array_unique($data->xpath('//SE/Dc_Description'));
 $equipment = $data->xpath('//SE');
 
-$params2 = array('subscriberId' => $username, 'password' => $password, 'database' => ($data['lcv'] == 1?"LCV":"CAR"), 'capid' => $input->urlSegment(), 'techDate' => $date, 'justCurrent' => true ); //define your parameters here
+$params2 = array('subscriberId' => $username, 'password' => $password, 'database' => $carlcv, 'capid' => $input->urlSegment(), 'techDate' => $date, 'justCurrent' => true ); //define your parameters here
 $client->GetTechnicalData($params2);
 $data2 = $client->__getLastResponse();
 $xml2 = str_replace(array("diffgr:","msdata:"),'', trim($data2));
