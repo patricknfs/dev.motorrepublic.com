@@ -36,7 +36,7 @@
 											foreach($tech_data as $item2){
 												// echo $item->Dc_Description . " = " . $group . "<br />";
 												if(trim($item2->Dc_Description) === trim($group2)){
-													echo "<li class='grid-x'><div class='cell small-3'>" . $item2->DT_LongDescription . "</div><div class='cell small-3'>".  $item2->tech_value_string . "</div></li>";
+													echo "<li class='grid-x'><div class='cell small-6'>" . $item2->DT_LongDescription . "</div><div class='cell small-6'>".  $item2->tech_value_string . "</div></li>";
 												}
 											}
 											echo "</ul>";
