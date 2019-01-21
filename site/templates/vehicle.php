@@ -66,7 +66,6 @@ catch(Exception $e){
     echo $e->getCode(). '<br />'. $e->getMessage();
 }
 
-echo "LCV?" . $data['lcv'];
 if($data['lcv'] == 1){
   $carlcv = "LCV";
 }
