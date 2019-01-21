@@ -66,6 +66,8 @@ catch(Exception $e){
     echo $e->getCode(). '<br />'. $e->getMessage();
 }
 
+echo "LCV?" . $data['lcv'];
+
 $params = array('subscriberId' => $username, 'password' => $password, 'database' => ($data['lcv'] == 1?"LCV":"CAR"), 'capid' => $input->urlSegment(), 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
 $client->GetStandardEquipment($params);
 $data = $client->__getLastResponse();
