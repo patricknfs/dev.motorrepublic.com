@@ -13,7 +13,6 @@ if($page->id !== 1043){
   <head itemscope itemtype="http://schema.org/Thing">
     <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta itemprop="description" name="description" content="">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="" />
     <meta name="twitter:title" content="
@@ -55,7 +54,7 @@ if($page->id !== 1043){
       }
       ?>
     </title>
-    <meta name="description" content="
+    <meta itemprop="description"  name="description" content="
       <?php
       if ($page->get("title") == "Home") {
         echo "Motor Rep Vehicle Leasing";
