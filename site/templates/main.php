@@ -54,7 +54,7 @@ if($page->id !== 1043){
         echo $page->get("title");
       }
       ?>
-    </title>/. 
+    </title>
     <meta name="description" content="
       <?php
       if ($page->get("title") == "Home") {
