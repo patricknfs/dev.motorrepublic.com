@@ -23,7 +23,7 @@ if($page->id !== 1043){
       if ($page->get("title") == "Home") {
         echo " Vehicle Leasing";
       }
-      elseif ($page->parents->has("vehicle")) {
+      elseif($page->template->name == 'vehicle'){
         echo "Great Lease Deal for: " . $manufacturer . " " . $model;
       }
       else {
