@@ -24,7 +24,7 @@ if($page->id !== 1043){
         echo " Vehicle Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deal for: " . $manufacturer . " " . $model;
+        echo "Great Lease Deal for the " . $data['manufacturer'] . " " . $model;
       }
       else {
         echo $page->get("title");
