@@ -24,9 +24,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 1){
-      switch($data[40]){
+      switch($data[17]){
         case 24:
-        switch($data[41]){
+        switch($data[18]){
           case 16000:
           $mileage = 8000;
           break;
@@ -46,11 +46,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[41] . "mileage profile is not coded into 24 month mileage specifier";
+          echo $data[18] . "mileage profile is not coded into 24 month mileage specifier";
         }
         break;
         case 36:
-        switch($data[41]){
+        switch($data[18]){
           case 24000:
           $mileage = 8000;
           break;
@@ -70,11 +70,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[41] . "mileage profile is not coded into 36 month mileage specifier";
+          echo $data[18] . "mileage profile is not coded into 36 month mileage specifier";
         }
         break;
         case 48:
-        switch($data[41]){
+        switch($data[18]){
           case 32000:
           $mileage = 8000;
           break;
@@ -94,16 +94,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[41] . "mileage profile is not coded into 48 month mileage specifier";
+          echo $data[18] . "mileage profile is not coded into 48 month mileage specifier";
         }
         break;
         default:
-        echo $data[40] . "monthly profile not coded";
+        echo $data[20] . "monthly profile not coded";
       }
       switch($mileage){
         case 8000:
-        if($data[43] == 0){
-          switch($data[40]){
+        if($data[16] == 0){
+          switch($data[20]){
             case 24:
             $insert = "`24_8K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -122,7 +122,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[20]){
             case 24:
             $insert = "`24_8K_PA_rental_m` = " . $data[47];
             break;
@@ -143,10 +143,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
         `cap_id` = " . $data[1] . ",
-        `CO2` = " . $data[15] . ",
-        `vehicle_list_price` = " . $data[23] . ",
-        `vehicle_otr_price` = " . $data[32] . ",
-        `p11d_price` = " . $data[35] . ",
+        `CO2` = " . $data[14] . ",
+        `vehicle_list_price` = " . $data[16] . ",
+        `vehicle_otr_price` = " . $data[18] . ",
+        `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -155,8 +155,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 10000:
-        if($data[43] == 0){
-          switch($data[40]){
+        if($data[16] == 0){
+          switch($data[20]){
             case 24:
             $insert = "`24_10K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -175,7 +175,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[20]){
             case 24:
             $insert = "`24_10K_PA_rental_m` = " . $data[47];
             break;
@@ -196,10 +196,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
         `cap_id` = " . $data[1] . ",
-        `CO2` = " . $data[15] . ",
-        `vehicle_list_price` = " . $data[23] . ",
-        `vehicle_otr_price` = " . $data[32] . ",
-        `p11d_price` = " . $data[35] . ",
+        `CO2` = " . $data[14] . ",
+        `vehicle_list_price` = " . $data[16] . ",
+        `vehicle_otr_price` = " . $data[18] . ",
+        `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -208,8 +208,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 15000:
-        if($data[43] == 0){
-          switch($data[40]){
+        if($data[16] == 0){
+          switch($data[20]){
             case 24:
             $insert = "`24_15K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -228,7 +228,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[20]){
             case 24:
             $insert = "`24_15K_PA_rental_m` = " . $data[47];
             break;
@@ -249,10 +249,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
         `cap_id` = " . $data[1] . ",
-        `CO2` = " . $data[15] . ",
-        `vehicle_list_price` = " . $data[23] . ",
-        `vehicle_otr_price` = " . $data[32] . ",
-        `p11d_price` = " . $data[35] . ",
+        `CO2` = " . $data[14] . ",
+        `vehicle_list_price` = " . $data[16] . ",
+        `vehicle_otr_price` = " . $data[18] . ",
+        `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -261,8 +261,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 20000:
-        if($data[43] == 0){
-          switch($data[40]){
+        if($data[16] == 0){
+          switch($data[20]){
             case 24:
             $insert = "`24_20K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -281,7 +281,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[20]){
             case 24:
             $insert = "`24_20K_PA_rental_m` = " . $data[47];
             break;
@@ -302,10 +302,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
         `cap_id` = " . $data[1] . ",
-        `CO2` = " . $data[15] . ",
-        `vehicle_list_price` = " . $data[23] . ",
-        `vehicle_otr_price` = " . $data[32] . ",
-        `p11d_price` = " . $data[35] . ",
+        `CO2` = " . $data[14] . ",
+        `vehicle_list_price` = " . $data[16] . ",
+        `vehicle_otr_price` = " . $data[18] . ",
+        `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -314,8 +314,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 25000:
-        if($data[43] == 0){
-          switch($data[40]){
+        if($data[16] == 0){
+          switch($data[20]){
             case 24:
             $insert = "`24_25K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -334,7 +334,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[20]){
             case 24:
             $insert = "`24_25K_PA_rental_m` = " . $data[47];
             break;
@@ -355,10 +355,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
         `cap_id` = " . $data[1] . ",
-        `CO2` = " . $data[15] . ",
-        `vehicle_list_price` = " . $data[23] . ",
-        `vehicle_otr_price` = " . $data[32] . ",
-        `p11d_price` = " . $data[35] . ",
+        `CO2` = " . $data[14] . ",
+        `vehicle_list_price` = " . $data[16] . ",
+        `vehicle_otr_price` = " . $data[18] . ",
+        `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -367,8 +367,8 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         " . $insert . ";";
         break;
         case 30000:
-        if($data[43] == 0){
-          switch($data[40]){
+        if($data[16] == 0){
+          switch($data[20]){
             case 24:
             $insert = "`24_30K_PA_rental_nm` = " . ($data[47]);
             break;
@@ -387,7 +387,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           }
         }
         else {
-          switch($data[40]){
+          switch($data[20]){
             case 24:
             $insert = "`24_30K_PA_rental_m` = " . $data[47];
             break;
@@ -408,10 +408,10 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_hitachi`
         SET
         `cap_id` = " . $data[1] . ",
-        `CO2` = " . $data[15] . ",
-        `vehicle_list_price` = " . $data[23] . ",
-        `vehicle_otr_price` = " . $data[32] . ",
-        `p11d_price` = " . $data[35] . ",
+        `CO2` = " . $data[14] . ",
+        `vehicle_list_price` = " . $data[16] . ",
+        `vehicle_otr_price` = " . $data[18] . ",
+        `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
         " . $insert . "
@@ -441,7 +441,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
   while (($rawdata2 = fgetcsv($handle2, 0, ",")) !== FALSE) {
     $data2 = preg_replace('/\s+/', '', $rawdata2);
     if($row > 1){
-      if($data2[68] != 0){
+      if($data2[31] != 0){
         switch($data2[67]){
           case 24:
           switch($data2[68]){
