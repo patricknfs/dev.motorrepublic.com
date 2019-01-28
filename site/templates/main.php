@@ -48,7 +48,7 @@ if($page->id !== 1043){
         echo " Vehicle Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Motor Republic Provide Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model;
+        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model;
       }
       else {
         echo $page->get("title");
