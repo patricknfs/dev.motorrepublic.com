@@ -21,7 +21,7 @@ if($page->id !== 1043){
         echo " Vehicle Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model;
+        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
@@ -34,7 +34,7 @@ if($page->id !== 1043){
         echo "Motor Republic Vehicle Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model;
+        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
@@ -60,7 +60,7 @@ if($page->id !== 1043){
         echo "Motor Rep Vehicle Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Motor Republic Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model;
+        echo "Motor Republic Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
