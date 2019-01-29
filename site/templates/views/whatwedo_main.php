@@ -1,6 +1,5 @@
 <?php
 // whatwedo_main.php
-$image = $page->images->first();
 ?>
 <section id="whatwedo">
   <div class="hero" style="background: url('<?=$image->url?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
@@ -21,7 +20,14 @@ $image = $page->images->first();
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-6">
-        <?=$page->body2?>
+        <?php
+        if($page->id == 1159){
+          echo $page->regional_strength;
+        }
+        else {
+          echo $page->body;
+        }
+        ?>
       </div>
       <div class="cell small-12 medium-6">
         <?=$page->body3?>
