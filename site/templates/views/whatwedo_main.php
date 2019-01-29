@@ -7,7 +7,7 @@
       <div class="grid-x hero">
         <div class="cell small-12 medium-6">
           <div class="hero_overlay">
-            <h1 class="hero-title"><?=$page->title?></h1>  
+            <h1><?=$page->title?></h1>  
             <?=$page->summary?>
           </div>
         </div>
