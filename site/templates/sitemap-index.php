@@ -7,7 +7,7 @@
 	
 	$templates = "about|basic-page|franchisee-region|vehicle|vehicles|vehicle_v|post|posts|testimonila|testimonials|whatwedo";
 	$key = $pages->count("template=$templates");
-	$limit = 2000;
+	$limit = 200;
 
 	$pageNum = ceil($key/ $limit);
 	$post = $pages->get("template=sitemap-xml");
