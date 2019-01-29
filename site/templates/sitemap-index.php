@@ -5,9 +5,9 @@
 	    '<?xml version="1.0" encoding="UTF-8"?>' . "\n" .
 	    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 	
-	$templates = "basic-page|blog-post|tag";
+	$templates = "about,basic-page|franchisee-region|vehicle|vehicles|vehicle_v|post|posts|testimonila|testimonials|whatwedo";
 	$key = $pages->count("template=$templates");
-	$limit = 200;
+	$limit = 2000;
 
 	$pageNum = ceil($key/ $limit);
 	$post = $pages->get("template=sitemap-xml");
@@ -23,5 +23,5 @@
 
 	header("Content-Type: text/xml");
 
-	echo $out; 
+	echo $out;
 ?>
