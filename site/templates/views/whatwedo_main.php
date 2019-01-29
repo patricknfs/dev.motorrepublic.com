@@ -21,8 +21,9 @@
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-6">
         <?php
+        $homepage = $pages->get(1006)
         if($page->id == 1159){
-          echo $page->regional_strength;
+          echo $homepage->regional_strength;
         }
         else {
           echo $page->body;
