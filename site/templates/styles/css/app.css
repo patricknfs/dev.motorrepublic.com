@@ -12007,6 +12007,10 @@ nav {
   }
 }
 
+#header_tel h2 {
+  font-size: 3rem;
+}
+
 .special {
   background-color: #cc0000;
   color: #fff;
