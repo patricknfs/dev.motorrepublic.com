@@ -15,11 +15,7 @@
 	$i = 1;
 
 	while($pageNum >= $i){
-	  $out .= "\n<sitemap>" .﻿
-	    "\n\t<loc>" . $post->httpUrl . "page$i/</loc>" .
-	    "\n\t<lastmod>" . date("Y-m-d", $post->modified) . "</lastmod>" .
-	    "\n</sitemap>";
-
+	  $out .= "\n<sitemap>\n\t<loc>" . $post->httpUrl . "page$i/</loc>\n\t<lastmod>" . date("Y-m-d", $post->modified) . "</lastmod>\n</sitemap>";
 	  $i = $i + 1;
 	}
 
