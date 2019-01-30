@@ -1,9 +1,7 @@
 <?php
 	namespace ProcessWire;
 
-	$out =  
-	    '<?xml version="1.0" encoding="UTF-8"?>' . "\n" .
-	    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+	$out =  '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
 	$pageArray = $pages->find("template=about|basic-page|franchisee-region|vehicle|vehicles|vehicle_v|post|posts|testimonila|testimonials|whatwedo, limit=200");
 	print_r($pageArray);
