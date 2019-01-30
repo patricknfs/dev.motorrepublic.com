@@ -7,7 +7,7 @@
 	echo $query;
 	$result = $conn->query($query) or die(mysqli_error($conn));
 
-	$out =  '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+	$out =  "<?xml version='1.0' encoding='UTF-8'?><urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>";
 
 	foreach ($pageArray as $post) {
 	  $out .= "\n<url>\n\t<loc>" . $post->httpUrl . "</loc>\n\t<lastmod>" . date("Y-m-d", $post->modified) . "</lastmod>\n</url>";
