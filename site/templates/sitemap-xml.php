@@ -14,7 +14,7 @@
 	}
 
 	foreach ($result as $post2) {
-		$out .= "\n<url>\n\t<loc>https://motorrepublic.com/vehicle/" . $post2['cap_id'] . "</loc>\n\t<lastmod></lastmod>\n</url>";
+		$out .= "\n<url>\n\t<loc>https://motorrepublic.com/vehicle/" . $post2['cap_id'] . "</loc>\n\t<lastmod>" . date("Y-m-d") . "</lastmod>\n</url>";
 	}
 
 	$out .= "\n</urlset>";
