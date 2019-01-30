@@ -1,5 +1,5 @@
 <?php
-$csv = "mailing_north_uk.csv";
+$csv = "repos/mailing_north_uk.csv";
 
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
@@ -11,7 +11,7 @@ $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Slice Report\n";
 // Now open the local file and loop through it.
 
-if (($handle = fopen("repos/" . $csv, "r")) !== FALSE) {
+if (($handle = fopen($csv, "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // $data = array_map('trim',$data);
     // echo $data[0]; // company
