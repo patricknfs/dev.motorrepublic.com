@@ -50,7 +50,7 @@
 			<img class="small_vehicle_image" src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$input->urlSegment1;?>&DATE=2018/09/11&WIDTH=800&HEIGHT=600&IMAGETEXT=&VIEWPOINT=">
 				<div class="card card-2">
 					<div class="card-section">
-						<h1><?=$manufacturer?> <?=$model?></h1>
+						<h2><?=$manufacturer?> <?=$model?></h2>
 						<p><?=$descr?></p>
 						<hr>
 							<h6>Business Clients - From <span class="price">£<?=$bch_rental?></span> * excl. VAT</h6>
