@@ -21,5 +21,5 @@
 
 	header("Content-Type: text/xml");
 
-	echo $out;
+	// echo $out;
 ?>
