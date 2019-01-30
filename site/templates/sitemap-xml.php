@@ -4,6 +4,7 @@
 	require_once(MR_PATH . "/inc/conn.php");
 	$pageArray = $pages->find("template=about|basic-page|franchisee-region|vehicle|vehicles|vehicle_v|post|posts|testimonial|testimonials|whatwedo, limit=200");
 	$query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special` FROM `team`.`rates_combined_terse` GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT";
+	echo $query;
 	$result = $conn->query($query) or die(mysqli_error($conn));
 
 	$out =  '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
