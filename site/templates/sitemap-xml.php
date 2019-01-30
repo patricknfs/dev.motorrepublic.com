@@ -3,7 +3,7 @@
 	require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 	require_once(MR_PATH . "/inc/conn.php");
 	$pageArray = $pages->find("template=about|basic-page|franchisee-region|vehicle|vehicles|vehicle_v|post|posts|testimonial|testimonials|whatwedo, limit=200");
-	$query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special` FROM `team`.`rates_combined_terse` GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT";
+	$query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special` FROM `team`.`rates_combined_terse` GROUP BY `cap_id`";
 	
 	$result = $conn->query($query) or die(mysqli_error($conn));
 
