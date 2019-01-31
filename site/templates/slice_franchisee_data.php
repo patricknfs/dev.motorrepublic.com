@@ -33,7 +33,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
 
       $num = count($data);
       $row++;
-      echo $data[0] . "\n" . $data[1] . "<br />\n";
+      echo $data[0] . "\n" . $data[1] . "\n";
       fputcsv($file, [$data[0], $data[1]]);
   
       fclose($handle);
