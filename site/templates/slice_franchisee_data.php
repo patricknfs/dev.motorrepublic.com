@@ -11,8 +11,9 @@ require_once(MR_PATH . "/inc/conn.php");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Slice Report\n";
 // Now open the local file and loop through it.
-$row = 1;
+
 if (($handle = fopen($csv, "r")) !== FALSE) {
+  $row = 1;
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // $data = array_map('trim',$data);
     // echo $data[0]; // company
