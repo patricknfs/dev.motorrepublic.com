@@ -28,7 +28,6 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     $postcode = explode(' ', trim($data[3]));
     $pc_bhams_worcsn = array('B14','B27','B30','B31','B38','B40','B45','B47','B48','B49','B50','B60','B61','B80','B90','B91','B92','B93','B94','B95','B96','B97','B98','DY13','WR9');
    
-
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
       $file = fopen("pc_bhams_worcsn.csv","w");
@@ -37,10 +36,9 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
       $row++;
       echo $data[0] . "\n" . $data[1] . "\n";
       fputcsv($file, [$data[0], $data[1]]);
-  
-      fclose($handle);
-      fclose($file);
     }
   }
 }
+fclose($handle);
+fclose($file);
 ?>
