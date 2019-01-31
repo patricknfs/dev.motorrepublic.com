@@ -30,7 +30,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
    
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
-      $file = fopen("pc_bhams_worcsn.csv","w");
+      $file = fopen("pc_bhams_worcsn.csv","a");
       
       $num = count($data);
       $row++;
