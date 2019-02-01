@@ -40,7 +40,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
 
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_bhams_worcsn.csv","a");
+      $file = fopen("m_bhams_worcsn" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -49,7 +49,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_warks)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_warks.csv","a");
+      $file = fopen("m_warks" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -58,7 +58,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_cardiff)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_cardiff.csv","a");
+      $file = fopen("m_cardiff" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -67,7 +67,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_maidstone)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_maidstone.csv","a");
+      $file = fopen("m_maidstone" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -76,7 +76,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_canary_wharf)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_canary_wharf.csv","a");
+      $file = fopen("m_canary_wharf" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -85,7 +85,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_reading)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_reading.csv","a");
+      $file = fopen("m_reading" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -94,7 +94,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_sheffield_north)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_sheffield_north.csv","a");
+      $file = fopen("m_sheffield_north" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -103,7 +103,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_bristol)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_bristol.csv","a");
+      $file = fopen("m_bristol" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -112,7 +112,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_dartford)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_dartford.csv","a");
+      $file = fopen("m_dartford" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -121,7 +121,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_portsmouth_iow)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_portsmouth_iow.csv","a");
+      $file = fopen("m_portsmouth_iow" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -130,7 +130,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_ayrshire)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_ayrshire.csv","a");
+      $file = fopen("m_ayrshire" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -139,7 +139,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     elseif(in_array($postcode[0], $pc_norwich)){
       echo $postcode[0] . "\n";
-      $file = fopen("m_norwich.csv","a");
+      $file = fopen("m_norwich" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
@@ -148,7 +148,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     }
     else {
       echo $postcode[0] . "\n";
-      $file = fopen("m_unassigned.csv","a");
+      $file = fopen("m_unassigned" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
