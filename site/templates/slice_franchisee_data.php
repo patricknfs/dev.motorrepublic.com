@@ -31,30 +31,30 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
 
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
-      $file = fopen("pc_bhams_worcsn.csv","a");
+      $file = fopen("m_bhams_worcsn.csv","a");
       
       $num = count($data);
       $row++;
       echo $data[0] . "\n" . $data[1] . "\n";
-      fputcsv($file, [$data[0], $data[1]]);
+      fputcsv($file, [$data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]]);
     }
     elseif(in_array($postcode[0], $pc_warks)){
       echo $postcode[0] . "\n";
-      $file = fopen("warks.csv","a");
+      $file = fopen("m_warks.csv","a");
       
       $num = count($data);
       $row++;
       echo $data[0] . "\n" . $data[1] . "\n";
-      fputcsv($file, [$data[0], $data[1]]);
+      fputcsv($file, [$data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]]);
     }
     elseif(in_array($postcode[0], $pc_cardiff)){
       echo $postcode[0] . "\n";
-      $file = fopen("cardiff.csv","a");
+      $file = fopen("m_cardiff.csv","a");
       
       $num = count($data);
       $row++;
       echo $data[0] . "\n" . $data[1] . "\n";
-      fputcsv($file, [$data[0], $data[1]]);
+      fputcsv($file, [$data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]]);
     }
   }
 }
