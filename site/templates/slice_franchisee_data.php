@@ -146,6 +146,15 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
       echo $data[0] . "\n" . $data[1] . "\n";
       fputcsv($file, [$data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]]);
     }
+    else {
+      echo $postcode[0] . "\n";
+      $file = fopen("m_unassigned.csv","a");
+      
+      $num = count($data);
+      $row++;
+      echo $data[0] . "\n" . $data[1] . "\n";
+      fputcsv($file, [$data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]]);
+    }
   }
 }
 fclose($handle);
