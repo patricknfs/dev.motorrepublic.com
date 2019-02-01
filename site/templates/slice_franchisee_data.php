@@ -27,7 +27,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     $postcode = explode(' ', trim($data[3]));
     $pc_bhams_worcsn = array('B14','B27','B30','B31','B38','B40','B45','B47','B48','B49','B50','B60','B61','B80','B90','B91','B92','B93','B94','B95','B96','B97','B98','DY13','WR9');
     $pc_warks = array('CV1','CV10','CV11','CV12','CV13','CV2','CV21','CV22','CV23','CV3','CV31','CV32','CV33','CV34','CV35','CV36','CV37','CV4','CV47','CV5','CV6','CV7','CV8','CV9');
-    $pc_cardiff = array('CF1','CF10','CF11','CF14','CF15','CF23','CF24','CF3','CF37','CF38','CF39','CF40','CF41','CF43','CF44','CF45','CF46','CF47','CF48','CF5','CF61','CF62','CF63','CF64','CF71','CF72','CF81','CF82','CF83','NP1','NP10','NP11','NP12','NP13','NP15','NP16','NP18','NP19','NP2','NP20','NP24','NP25','NP26','NP3','NP4','NP44','NP5','NP6','NP9')
+    $pc_cardiff = array('CF1','CF10','CF11','CF14','CF15','CF23','CF24','CF3','CF37','CF38','CF39','CF40','CF41','CF43','CF44','CF45','CF46','CF47','CF48','CF5','CF61','CF62','CF63','CF64','CF71','CF72','CF81','CF82','CF83','NP1','NP10','NP11','NP12','NP13','NP15','NP16','NP18','NP19','NP2','NP20','NP24','NP25','NP26','NP3','NP4','NP44','NP5','NP6','NP9');
 
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
