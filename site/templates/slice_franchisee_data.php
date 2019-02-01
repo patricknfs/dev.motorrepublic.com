@@ -1,5 +1,5 @@
 <?php
-// $csv = "repos/mailing_north_uk.csv";#
+$csv = "repos/mailing_north_uk.csv";#
 
 
 date_default_timezone_set('CET');
