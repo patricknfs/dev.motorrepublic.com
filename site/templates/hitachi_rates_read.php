@@ -24,9 +24,9 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 1){
-      switch($data[17]){
+      switch($data[20]){
         case 24:
-        switch($data[18]){
+        switch($data[21]){
           case 16000:
           $mileage = 8000;
           break;
@@ -46,11 +46,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[18] . "mileage profile is not coded into 24 month mileage specifier";
+          echo $data[21] . "mileage profile is not coded into 24 month mileage specifier";
         }
         break;
         case 36:
-        switch($data[18]){
+        switch($data[21]){
           case 24000:
           $mileage = 8000;
           break;
@@ -70,11 +70,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[18] . "mileage profile is not coded into 36 month mileage specifier";
+          echo $data[21] . "mileage profile is not coded into 36 month mileage specifier";
         }
         break;
         case 48:
-        switch($data[18]){
+        switch($data[21]){
           case 32000:
           $mileage = 8000;
           break;
@@ -94,7 +94,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[18] . "mileage profile is not coded into 48 month mileage specifier";
+          echo $data[21] . "mileage profile is not coded into 48 month mileage specifier";
         }
         break;
         default:
@@ -145,7 +145,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[18] . ",
+        `vehicle_otr_price` = " . $data[21] . ",
         `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
@@ -198,7 +198,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[18] . ",
+        `vehicle_otr_price` = " . $data[21] . ",
         `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
@@ -251,7 +251,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[18] . ",
+        `vehicle_otr_price` = " . $data[21] . ",
         `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
@@ -304,7 +304,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[18] . ",
+        `vehicle_otr_price` = " . $data[21] . ",
         `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
@@ -357,7 +357,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[18] . ",
+        `vehicle_otr_price` = " . $data[21] . ",
         `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
@@ -410,7 +410,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         `cap_id` = " . $data[1] . ",
         `CO2` = " . $data[14] . ",
         `vehicle_list_price` = " . $data[16] . ",
-        `vehicle_otr_price` = " . $data[18] . ",
+        `vehicle_otr_price` = " . $data[21] . ",
         `p11d_price` = " . $data[19] . ",
         `updated` = NOW(),
         `lcv` = " . ((substr($data[2], -1) == 'L')?1:0) . ",
