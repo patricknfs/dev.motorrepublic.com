@@ -422,7 +422,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         default;
         echo "Ratebook fault";
       }
-      echo $update . "<br />";
+      echo $update . "\n";
       $result2 = mysqli_query($conn, $update);
     }
     $row++;
@@ -566,7 +566,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[18] . ",
           `p11d_price` = " . $data2[19] . ",
           `updated` = NOW(),
-          `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+          `lcv` = " . ((substr($data2[1], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -672,7 +672,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[18] . ",
           `p11d_price` = " . $data2[19] . ",
           `updated` = NOW(),
-          `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+          `lcv` = " . ((substr($data2[1], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -725,7 +725,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[18] . ",
           `p11d_price` = " . $data2[19] . ",
           `updated` = NOW(),
-          `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+          `lcv` = " . ((substr($data2[1], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -781,7 +781,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
-          `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+          `lcv` = " . ((substr($data2[1], -1) == 'L')?1:0) . ",
           " . $insert . ";";
           break;
           case 30000:
@@ -831,7 +831,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           `vehicle_otr_price` = " . $data2[18] . ",
           `p11d_price` = " . $data2[19] . ",
           `updated` = NOW(),
-          `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+          `lcv` = " . ((substr($data2[1], -1) == 'L')?1:0) . ",
           " . $insert . "
           ON DUPLICATE KEY UPDATE
           `updated` = NOW(),
@@ -840,7 +840,7 @@ if (($handle2 = fopen($csv , "r")) !== FALSE) {
           default;
           echo "Ratebook fault";
         }
-        echo $update . "<br />";
+        echo $update . "\n";
         $result2 = mysqli_query($conn, $update);
       }
       $row++;
