@@ -26,7 +26,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     if($row > 1){
       switch($data[20]){
         case 24:
-        switch($data[18]){
+        switch($data[21]){
           case 16000:
           $mileage = 8000;
           break;
@@ -46,11 +46,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[18] . "mileage profile is not coded into 24 month mileage specifier";
+          echo $data[21] . "mileage profile is not coded into 24 month mileage specifier";
         }
         break;
         case 36:
-        switch($data[18]){
+        switch($data[21]){
           case 24000:
           $mileage = 8000;
           break;
@@ -70,11 +70,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[18] . "mileage profile is not coded into 36 month mileage specifier";
+          echo $data[21] . "mileage profile is not coded into 36 month mileage specifier";
         }
         break;
         case 48:
-        switch($data[18]){
+        switch($data[21]){
           case 32000:
           $mileage = 8000;
           break;
@@ -94,7 +94,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
           $mileage = 30000;
           break;
           default:
-          echo $data[18] . "mileage profile is not coded into 48 month mileage specifier";
+          echo $data[21] . "mileage profile is not coded into 48 month mileage specifier";
         }
         break;
         default:
