@@ -46,7 +46,7 @@
             '<td width="30%">'+d.CO2+'</td>'+
             '<td><strong>P11d:</strong></td>'+
             '<td><p>'+d.p11d_price+'</p></td>'+
-            '<td rowspan="2"><p>'+d.notes+'</p></td>'+
+            '<td rowspan="2"><p>'+d.deal_notes+'</p></td>'+
         '</tr>'+
         '<tr>'+
             '<td width="30%"><p><strong>List Price:</strong></p></td>'+
@@ -84,8 +84,9 @@
         { "data": "descr" },
         { "data": "term" },
         { "data": "mileage" },
-        { "data": "rental" }
-        { "data": "deal_notes" }
+        { "data": "rental" },
+        { "data": "deal_notes" },
+        { "data": "website_deal_notes" }
       ],
       "order": [[ 10, "asc" ]],
       "scrollY": "700px",
