@@ -42,9 +42,7 @@ $columns = array(
 	array( 'db' => 'vehicle_list_price', 'dt' => 'vehicle_list_price' ),
 	array( 'db' => 'vehicle_otr_price', 'dt' => 'vehicle_otr_price' ),
 	array( 'db' => 'p11d_price', 'dt' => 'p11d_price' ),
-	array( 'db' => 'CO2', 'dt' => 'CO2' ),
-	array( 'db' => 'deal_notes', 'dt' => 'deal_notes' ),
-	array( 'db' => 'website_deal_notes', 'dt' => 'website_deal_notes' )
+	array( 'db' => 'CO2', 'dt' => 'CO2' )
 );
 
 // SQL server connection information
