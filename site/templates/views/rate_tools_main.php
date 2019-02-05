@@ -62,7 +62,7 @@
         "search": "_INPUT_",
         "searchPlaceholder": "Search..."
 	    },
-			"processing": true,
+			// "processing": true,
       "ajax": {
       	"url": "/prot/server_processing.php",
         "type": "GET",
