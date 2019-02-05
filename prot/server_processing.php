@@ -19,7 +19,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/site/templates/inc/config.php');
  */
 
 // DB table to use
-$table = 'rates_combined_copy';
+$table = 'rates_combined';
 
 // Table's primary key
 $primaryKey = 'id';
