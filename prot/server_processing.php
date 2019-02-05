@@ -68,7 +68,7 @@ $sql_details = array(
 
 require( MR_PATH . '/inc/ssp.class.php' );
 
-echo (
+print_r (
 	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
 );
 
