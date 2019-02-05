@@ -126,5 +126,11 @@
             }
         }
     });
+        // On each draw, loop over the `detailRows` array and show any child rows
+    dt.on( 'draw', function () {
+      $.each( detailRows, function ( i, id ) {
+          $('#'+id+' td.details-control').trigger( 'click' );
+      } );
+    } );
 	});
 </script>
