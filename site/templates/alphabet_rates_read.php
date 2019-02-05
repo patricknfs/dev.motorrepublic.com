@@ -19,9 +19,9 @@ $row = 1;
 $csv = "repos/alphabet_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-    // $data = preg_replace('/\s+/', '', $data);
+    $data = preg_replace('/\s+/', '', $data);
     $data = str_replace('£','',$data);
-    // $data = str_replace('#N/A',NULL,$data);
+    $data = str_replace('#N/A',NULL,$data);
     if($row > 7){
       $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` = '" . trim($data[0]) . "' LIMIT 1";
       // echo $cap_query . "</n>";
