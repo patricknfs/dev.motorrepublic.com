@@ -62,7 +62,7 @@
         "search": "_INPUT_",
         "searchPlaceholder": "Search..."
 	    },
-			// "processing": true,
+			"processing": true,
       "ajax": {
       	"url": "/prot/server_processing.php",
         "type": "GET",
@@ -84,7 +84,9 @@
         { "data": "descr" },
         { "data": "term" },
         { "data": "mileage" },
-        { "data": "rental" }
+        { "data": "rental" },
+        { "data": "deal_notes" },
+        { "data": "website_deal_notes" }
       ],
       "order": [[ 10, "asc" ]],
       "scrollY": "700px",
@@ -99,21 +101,30 @@
       "scroller": true,
       "select": true
 		});
+
+    var detailRows = [];
     // Add event listener for opening and closing details
     $('#mr_rates tbody').on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
-      var row = table.row( tr );
-
-      if ( row.child.isShown() ) {
-          // This row is already open - close it
-          row.child.hide();
-          tr.removeClass('shown');
-      }
-      else {
-          // Open this row
-          row.child( format(row.data()) ).show();
-          tr.addClass('shown');
-      }
+      var row = dt.row( tr );
+        var idx = $.inArray( tr.attr('id'), detailRows );
+ 
+        if ( row.child.isShown() ) {
+            tr.removeClass( 'details' );
+            row.child.hide();
+ 
+            // Remove from the 'open' array
+            detailRows.splice( idx, 1 );
+        }
+        else {
+            tr.addClass( 'details' );
+            row.child( format( row.data() ) ).show();
+ 
+            // Add to the 'open' array
+            if ( idx === -1 ) {
+                detailRows.push( tr.attr('id') );
+            }
+        }
     });
 	});
 </script>
