@@ -16,7 +16,7 @@ $AdminMessage = "MR Alphabet CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`rates_alphabet`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-$csv = "inc/alphabet_rates_all.csv";
+$csv = "repos/alphabet_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
     // $data = preg_replace('/\s+/', '', $data);
