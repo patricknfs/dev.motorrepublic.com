@@ -106,7 +106,7 @@
     // Add event listener for opening and closing details
     $('#mr_rates tbody').on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
-      var row = dt.row( tr );
+        var row = dt.row( tr );
         var idx = $.inArray( tr.attr('id'), detailRows );
  
         if ( row.child.isShown() ) {
@@ -125,12 +125,13 @@
                 detailRows.push( tr.attr('id') );
             }
         }
-    });
-        // On each draw, loop over the `detailRows` array and show any child rows
+    } );
+ 
+    // On each draw, loop over the `detailRows` array and show any child rows
     dt.on( 'draw', function () {
-      $.each( detailRows, function ( i, id ) {
-          $('#'+id+' td.details-control').trigger( 'click' );
-      } );
+        $.each( detailRows, function ( i, id ) {
+            $('#'+id+' td.details-control').trigger( 'click' );
+        } );
     } );
 	});
 </script>
