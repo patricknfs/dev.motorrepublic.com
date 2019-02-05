@@ -43,7 +43,11 @@ $columns = array(
 	array( 'db' => 'vehicle_otr_price', 'dt' => 'vehicle_otr_price' ),
 	array( 'db' => 'p11d_price', 'dt' => 'p11d_price' ),
 	array( 'db' => 'CO2', 'dt' => 'CO2' ),
+	array( 'db' => 'lcv', 'dt' => 'lcv' ),
+	array( 'db' => 'special', 'dt' => 'special' ),
 	array( 'db' => 'deal_notes', 'dt' => 'deal_notes' ),
+	array( 'db' => 'upfront', 'dt' => 'upfront' ),
+	array( 'db' => 'special_upfront', 'dt' => 'special_upfront' ),
 	array( 'db' => 'website_deal_notes', 'dt' => 'website_deal_notes' )
 );
 
