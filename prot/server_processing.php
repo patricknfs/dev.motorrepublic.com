@@ -72,6 +72,6 @@ print_r (
 	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
 );
 
-// echo json_encode(
-// 	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
-// );
+echo json_encode(
+	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
+);
