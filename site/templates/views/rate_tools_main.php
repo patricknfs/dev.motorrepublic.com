@@ -85,6 +85,8 @@
         { "data": "term" },
         { "data": "mileage" },
         { "data": "rental" }
+        { "data": "deal_notes" }
+        { "data": "website_deal_notesl" }
       ],
       "order": [[ 10, "asc" ]],
       "scrollY": "700px",
