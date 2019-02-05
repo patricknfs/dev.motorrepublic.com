@@ -29,11 +29,10 @@ $primaryKey = 'id';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-	array( 'db' => 'cap_id', 'dt' => 'cap_id' ),
-	array( 'db' => 'cap_code',	'dt' => 'cap_code' ),
 	array( 'db' => 'src',	'dt' => 'src' ),
 	array( 'db' => 'updated',	'dt' => 'updated' ),
-	array( 'db' => 'expired',	'dt' => 'expired' ),
+	array( 'db' => 'cap_id', 'dt' => 'cap_id' ),
+	array( 'db' => 'cap_code',	'dt' => 'cap_code' ),
 	array( 'db' => 'manufacturer',	'dt' => 'manufacturer' ),
 	array( 'db' => 'model',	'dt' => 'model' ),
 	array( 'db' => 'descr',	'dt' => 'descr' ),
@@ -44,11 +43,7 @@ $columns = array(
 	array( 'db' => 'vehicle_otr_price', 'dt' => 'vehicle_otr_price' ),
 	array( 'db' => 'p11d_price', 'dt' => 'p11d_price' ),
 	array( 'db' => 'CO2', 'dt' => 'CO2' ),
-	array( 'db' => 'lcv', 'dt' => 'lcv' ),
-	array( 'db' => 'special', 'dt' => 'special' ),
 	array( 'db' => 'deal_notes', 'dt' => 'deal_notes' ),
-	array( 'db' => 'upfront', 'dt' => 'upfront' ),
-	array( 'db' => 'special_upfront', 'dt' => 'special_upfront' ),
 	array( 'db' => 'website_deal_notes', 'dt' => 'website_deal_notes' )
 );
 
@@ -67,10 +62,6 @@ $sql_details = array(
  */
 
 require( MR_PATH . '/inc/ssp.class.php' );
-
-// print_r (
-// 	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
-// );
 
 echo json_encode(
 	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
