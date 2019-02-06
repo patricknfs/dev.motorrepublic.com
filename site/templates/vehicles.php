@@ -30,7 +30,7 @@ $mdl = $sanitizer->text($input->post->slct2);
 // echo $mdl;
 
 if( !empty($manuf) ) {
-  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = 0 AND `special` = 1 GROUP BY `cap_id` ";
+  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = 0 AND `special` = 1";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
@@ -40,7 +40,7 @@ if( !empty($manuf) ) {
   // echo "if manu: " .  $query;
 }
 else {
-  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `cap_id`";
+  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `special` = 1";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
