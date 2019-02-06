@@ -40,7 +40,7 @@ if( !empty($manuf) ) {
   // echo "if manu: " .  $query;
 }
 else {
-  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` GROUP BY `cap_id` WHERE `special` = 1";
+  $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `cap_id`";
   $countres = $conn->query($total_pages_sql);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
