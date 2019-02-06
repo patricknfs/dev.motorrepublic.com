@@ -302,7 +302,7 @@ if($page->id !== 1043){
           var optionArray = ["|"];
         }
         <?php
-        $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined` AND `special` = 1 ORDER BY `manufacturer` ASC";
+        $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
         $result = mysqli_query($conn, $query);
 
         while ($row = mysqli_fetch_assoc($result)) {
