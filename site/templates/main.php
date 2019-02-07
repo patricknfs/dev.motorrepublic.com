@@ -18,13 +18,13 @@ if($page->id !== 1043){
     <meta name="twitter:title" content="
       <?php
       if ($page->get("title") == "Home") {
-        echo " Vehicle Leasing";
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
       }
       else {
-        echo $page->get("title");
+        echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
       }
       ?>
     ">
@@ -60,7 +60,7 @@ if($page->id !== 1043){
         echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Motor Republic Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+        echo "Motor Republic Leasing Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
