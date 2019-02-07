@@ -44,20 +44,20 @@ if($page->id !== 1043){
     <title>
       <?php
       if ($page->get("title") == "Home") {
-        echo " Vehicle Leasing";
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
       }
       else {
-        echo $page->get("title");
+        echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
       }
       ?>
     </title>
     <meta itemprop="description"  name="description" content="
       <?php
       if ($page->get("title") == "Home") {
-        echo "Motor Rep Vehicle Leasing";
+        echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
         echo "Motor Republic Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
