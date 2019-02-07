@@ -23,6 +23,12 @@ if($page->id !== 1043){
       elseif($page->template->name == 'vehicle'){
         echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
       }
+      elseif($page->template->name == 'vehicles'){
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicles_v'){
+        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
       else {
         echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
       }
@@ -48,6 +54,12 @@ if($page->id !== 1043){
       }
       elseif($page->template->name == 'vehicle'){
         echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+      }
+      elseif($page->template->name == 'vehicles'){
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicles_v'){
+        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       else {
         echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
