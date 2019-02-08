@@ -142,7 +142,7 @@ if($page->id !== 1043){
           <a href="/"><img src="<?=$config->urls->assets?>graphics/logo.svg" alt="Logo" /></a>
         </div>
         <div class="cell small-12 medium-3" id="header_tel">
-          <h2>Call: 0121 794 9073</h2>
+          <h2>Call: <a href="tel:00441217949073">0121 794 9073</a></h2>
         </div>
       </div>
       <section id="menurow">
