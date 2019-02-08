@@ -125,7 +125,7 @@ if($page->id !== 1043){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body  data-sticky-container>
-    <div class="sharethis-inline-share-buttons"></div>
+    <!-- <div class="sharethis-inline-share-buttons"></div> -->
     <header data-sticky data-margin-top="0">
       <!-- <div id="primenav" class="grid-x">
         <div class="cell small-12 medium-6">
