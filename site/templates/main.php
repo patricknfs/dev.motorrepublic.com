@@ -17,66 +17,66 @@ if($page->id !== 1043){
     <meta name="twitter:site" content="" />
     <meta name="twitter:title" content="
       <?php
-      if ($page->get("title") == "Home") {
-        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
-      }
-      elseif($page->template->name == 'vehicles'){
-        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      elseif($page->template->name == 'vehicles_v'){
-        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      else {
-        echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
-      }
+      // if ($page->get("title") == "Home") {
+      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // elseif($page->template->name == 'vehicle'){
+      //   echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+      // }
+      // elseif($page->template->name == 'vehicles'){
+      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // elseif($page->template->name == 'vehicles_v'){
+      //   echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // else {
+      //   echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
+      // }
       ?>
     ">
     <meta name="twitter:description" content="
       <?php
-      if ($page->get("title") == "Home") {
-        echo "Motor Republic Vehicle Leasing";
-      }
-      elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
-      }
-      else {
-        echo $page->get("title");
-      }
+      // if ($page->get("title") == "Home") {
+      //   echo "Motor Republic Vehicle Leasing";
+      // }
+      // elseif($page->template->name == 'vehicle'){
+      //   echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+      // }
+      // else {
+      //   echo $page->get("title");
+      // }
       ?>
     ">
     <title>
       <?php
-      if ($page->get("title") == "Home") {
-        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
-      }
-      elseif($page->template->name == 'vehicles'){
-        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      elseif($page->template->name == 'vehicles_v'){
-        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      else {
-        echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
-      }
-      ?>
+      // if ($page->get("title") == "Home") {
+      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // elseif($page->template->name == 'vehicle'){
+      //   echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+      // }
+      // elseif($page->template->name == 'vehicles'){
+      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // elseif($page->template->name == 'vehicles_v'){
+      //   echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // else {
+      //   echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
+      // }
+      // ?>
     </title>
     <meta itemprop="description"  name="description" content="
       <?php
-      if ($page->get("title") == "Home") {
-        echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
-      }
-      elseif($page->template->name == 'vehicle'){
-        echo "Motor Republic Leasing Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
-      }
-      else {
-        echo $page->get("title");
-      }
+      // if ($page->get("title") == "Home") {
+      //   echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
+      // }
+      // elseif($page->template->name == 'vehicle'){
+      //   echo "Motor Republic Leasing Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+      // }
+      // else {
+      //   echo $page->get("title");
+      // }
       ?>"
     />
     <script>

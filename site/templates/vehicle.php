@@ -24,8 +24,6 @@ try
   $date = date('c');
   $client = get_soap_client_2();
 
-
-
   if(null !== $input->urlSegment()) {
     $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront`, `special`, `special_upfront`, `website_deal_notes` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment() . " ORDER BY `rental` ASC LIMIT 1";
     // echo $query;
