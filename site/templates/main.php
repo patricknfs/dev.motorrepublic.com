@@ -275,7 +275,7 @@ if($page->id !== 1043){
   if($page->id !== 1043){
     ?>
     <!-- Start of Async Drift Code -->
-    <script>
+    <!-- <script>
       "use strict";
 
       !function() {
@@ -300,7 +300,7 @@ if($page->id !== 1043){
       }();
       drift.SNIPPET_VERSION = '0.3.1';
       drift.load('zr8i59c3d6dv');
-    </script>
+    </script> -->
     <!-- End of Async Drift Code -->
     <?php
     }
