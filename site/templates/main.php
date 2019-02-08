@@ -79,7 +79,7 @@ if($page->id !== 1043){
       // }
       ?>"
     />
-    <script>
+    <!-- <script>
       window['_fs_debug'] = false;
       window['_fs_host'] = 'fullstory.com';
       window['_fs_org'] = 'CPW9F';
@@ -95,7 +95,7 @@ if($page->id !== 1043){
           g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
           g.clearUserCookie=function(){};
       })(window,document,window['_fs_namespace'],'script','user');
-    </script>
+    </script> -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
