@@ -143,7 +143,7 @@
           childTable = childTable.contact('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
 
           div
-          .html( childTable );
+          .html( childTable )
           .removeClass( 'loading' );
         }
       } );
