@@ -119,19 +119,34 @@
           .text( 'Loading...' );
   
       $.ajax( {
-          url: '/prot/server_processing_sub.php',
-          data: {
-            vehicle_list_price: rowData.vehicle_list_price,
-            vehicle_otr_price: rowData.vehicle_otr_price,
-            p11d_price: rowData.p11d_price,
-            CO2: rowData.CO2
-          },
-          dataType: 'json',
-          success: function ( json ) {
-              div
-                  .html( json.html )
-                  .removeClass( 'loading' );
+        url: '/prot/server_processing_sub.php',
+        data: {
+          vehicle_list_price: rowData.vehicle_list_price,
+          vehicle_otr_price: rowData.vehicle_otr_price,
+          p11d_price: rowData.p11d_price,
+          CO2: rowData.CO2
+        },
+        dataType: 'json',
+        // success: function ( json ) {
+        //     div
+        //         .html( json.html )
+        //         .removeClass( 'loading' );
+        // }
+        success: function ( json ) {
+ 
+        console.log(json);
+        var childTable = '<table><thead><tr><td>TIME</td><td>DESC</td></tr></thead><tbody>';
+
+          for(var i=0;i<json.length;i++){
+                  childTable = childTable.concat('<tr><td>' + vehicle_list_price + '</td><td>' + vehicle_otr_price + '</td></tr>');
           }
+          
+          childTable = childTable.contact('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
+
+        div
+          .html( childTable );
+          .removeClass( 'loading' );
+        }
       } );
   
       return div;
