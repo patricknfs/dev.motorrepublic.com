@@ -4,3 +4,4 @@ htaccess.old
 .git
 .git.bfg-report
 site/templates/styles_old/
+.gitignore
