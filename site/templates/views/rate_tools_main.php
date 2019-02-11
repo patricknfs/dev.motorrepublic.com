@@ -103,17 +103,35 @@
     $('#mr_rates tbody').on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
       var row = table.row( tr );
-
+  
       if ( row.child.isShown() ) {
-          // This row is already open - close it
           row.child.hide();
           tr.removeClass('shown');
       }
       else {
-          // Open this row
           row.child( format(row.data()) ).show();
           tr.addClass('shown');
       }
     });
+    function format ( rowData ) {
+      var div = $('<div/>')
+          .addClass( 'loading' )
+          .text( 'Loading...' );
+  
+      $.ajax( {
+          url: '/api/staff/details',
+          data: {
+              name: rowData.name
+          },
+          dataType: 'json',
+          success: function ( json ) {
+              div
+                  .html( json.html )
+                  .removeClass( 'loading' );
+          }
+      } );
+  
+      return div;
+    }
 	});
 </script>
