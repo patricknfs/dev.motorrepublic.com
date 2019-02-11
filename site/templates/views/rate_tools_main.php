@@ -140,7 +140,7 @@
             childTable = childTable.concat('<tr><td>' + vehicle_list_price + '</td><td>' + vehicle_otr_price + '</td></tr>');
           }
           
-          childTable = childTable.contact('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
+          childTable = childTable.concat('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
 
           div
           .html( childTable )
