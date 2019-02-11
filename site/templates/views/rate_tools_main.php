@@ -133,17 +133,16 @@
         //         .removeClass( 'loading' );
         // }
         success: function ( json ) {
- 
-        console.log(json);
-        var childTable = '<table><thead><tr><td>TIME</td><td>DESC</td></tr></thead><tbody>';
+          console.log(json);
+          var childTable = '<table><thead><tr><td>TIME</td><td>DESC</td></tr></thead><tbody>';
 
           for(var i=0;i<json.length;i++){
-                  childTable = childTable.concat('<tr><td>' + vehicle_list_price + '</td><td>' + vehicle_otr_price + '</td></tr>');
+            childTable = childTable.concat('<tr><td>' + vehicle_list_price + '</td><td>' + vehicle_otr_price + '</td></tr>');
           }
           
           childTable = childTable.contact('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
 
-        div
+          div
           .html( childTable );
           .removeClass( 'loading' );
         }
