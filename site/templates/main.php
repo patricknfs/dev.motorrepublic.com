@@ -17,69 +17,69 @@ if($page->id !== 1043){
     <meta name="twitter:site" content="" />
     <meta name="twitter:title" content="
       <?php
-      // if ($page->get("title") == "Home") {
-      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // elseif($page->template->name == 'vehicle'){
-      //   echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
-      // }
-      // elseif($page->template->name == 'vehicles'){
-      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // elseif($page->template->name == 'vehicles_v'){
-      //   echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // else {
-      //   echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
-      // }
+      if ($page->get("title") == "Home") {
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicle'){
+        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+      }
+      elseif($page->template->name == 'vehicles'){
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicles_v'){
+        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      else {
+        echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
+      }
       ?>
     ">
     <meta name="twitter:description" content="
       <?php
-      // if ($page->get("title") == "Home") {
-      //   echo "Motor Republic Vehicle Leasing";
-      // }
-      // elseif($page->template->name == 'vehicle'){
-      //   echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
-      // }
-      // else {
-      //   echo $page->get("title");
-      // }
+      if ($page->get("title") == "Home") {
+        echo "Motor Republic Vehicle Leasing";
+      }
+      elseif($page->template->name == 'vehicle'){
+        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+      }
+      else {
+        echo $page->get("title");
+      }
       ?>
     ">
     <title>
       <?php
-      // if ($page->get("title") == "Home") {
-      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // elseif($page->template->name == 'vehicle'){
-      //   echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
-      // }
-      // elseif($page->template->name == 'vehicles'){
-      //   echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // elseif($page->template->name == 'vehicles_v'){
-      //   echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // else {
-      //   echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
-      // }
-      // ?>
+      if ($page->get("title") == "Home") {
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicle'){
+        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+      }
+      elseif($page->template->name == 'vehicles'){
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicles_v'){
+        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      else {
+        echo $page->get("title") . " - Car Leasing. Business & Personal Contract Hire";
+      }
+      ?>
     </title>
     <meta itemprop="description"  name="description" content="
       <?php
-      // if ($page->get("title") == "Home") {
-      //   echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
-      // }
-      // elseif($page->template->name == 'vehicle'){
-      //   echo "Motor Republic Leasing Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
-      // }
-      // else {
-      //   echo $page->get("title");
-      // }
+      if ($page->get("title") == "Home") {
+        echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
+      }
+      elseif($page->template->name == 'vehicle'){
+        echo "Motor Republic Leasing Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+      }
+      else {
+        echo $page->get("title");
+      }
       ?>"
     />
-    <!-- <script>
+    <script>
       window['_fs_debug'] = false;
       window['_fs_host'] = 'fullstory.com';
       window['_fs_org'] = 'CPW9F';
@@ -95,7 +95,7 @@ if($page->id !== 1043){
           g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
           g.clearUserCookie=function(){};
       })(window,document,window['_fs_namespace'],'script','user');
-    </script> -->
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -111,12 +111,12 @@ if($page->id !== 1043){
       gtag('config', 'UA-81524203-1');
     </script>
     <link rel="alternate" href="https://motorrepublic.com" hreflang="en-gb" />
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
     <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
@@ -275,7 +275,7 @@ if($page->id !== 1043){
   if($page->id !== 1043){
     ?>
     <!-- Start of Async Drift Code -->
-    <!-- <script>
+    <script>
       "use strict";
 
       !function() {
@@ -300,12 +300,12 @@ if($page->id !== 1043){
       }();
       drift.SNIPPET_VERSION = '0.3.1';
       drift.load('zr8i59c3d6dv');
-    </script> -->
+    </script>
     <!-- End of Async Drift Code -->
     <?php
     }
   ?>
-  <script>
+    <script>
       function populate(s1,s2){
         var s1 = document.getElementById(s1);
         var s2 = document.getElementById(s2);
@@ -314,13 +314,12 @@ if($page->id !== 1043){
           var optionArray = ["|"];
         }
         <?php
-        $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
+        $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`vehicles` ORDER BY `manufacturer` ASC";
         $result = mysqli_query($conn, $query);
-
         while ($row = mysqli_fetch_assoc($result)) {
           echo "else if(s1.value == '" . $row['manufacturer'] . "'){
             var optionArray = ['|',";
-            $query2 = "SELECT DISTINCT(`model`) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' AND `special` = 1 ORDER BY `model` ASC";
+            $query2 = "SELECT DISTINCT(`model`) FROM `team`.`vehicles` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
             // echo $query2;
             $result2 = mysqli_query($conn, $query2);
             while ($row2 = mysqli_fetch_array($result2)) {
@@ -328,7 +327,7 @@ if($page->id !== 1043){
             }
           echo "]}";
         }
-        ?>
+        ?> 
         for(var option in optionArray){
           var pair = optionArray[option].split("|");
           var newOption = document.createElement("option");
