@@ -7,8 +7,8 @@ switch($http_host){
     define("MR_DB_PASSWORD", 'Mx446#nn0~');
     define("MR_DB_SERVER", "localhost");
     define("MR_DB_DATABASE", "team");
-    define("MR_PATH", "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates");
-    define("MR_PATH2", "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/");
+    define("MR_PATH", "/var/www/vhosts/motorrepublic.com/site/templates");
+    define("MR_PATH2", "/var/www/vhosts/motorrepublic.com/");
     break;
 
   default :
