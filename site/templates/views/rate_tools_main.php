@@ -119,9 +119,12 @@
           .text( 'Loading...' );
   
       $.ajax( {
-          url: '/api/staff/details',
+          url: '/prot/server_processing_sub.php',
           data: {
-              name: rowData.name
+            vehicle_list_price: rowData.vehicle_list_price,
+            vehicle_otr_price: rowData.vehicle_otr_price,
+            p11d_price: rowData.p11d_price,
+            CO2: rowData.CO2
           },
           dataType: 'json',
           success: function ( json ) {
