@@ -41,7 +41,7 @@
 </section>
 <section id="block_three">
 	<div class="grid-container">
-		<div class="grid-x">
+		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
 				<a class="dashboard-nav-card" href="/find-your-car/">
 					<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
