@@ -20,7 +20,7 @@
 <section id="block_one">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6">
+			<div class="cell small-12 medium-8">
 			<div class="grid-x grid-padding-x small-up-1 medium-up-2">
 			<?php
 			
@@ -72,7 +72,7 @@
 			?>
 		</div>
 			</div>
-			<div class="cell small-12 medium-6">
+			<div class="cell small-12 medium-4">
 				<!-- <h3>Straight To The Special Deals</h3> -->
 				<div class="grid-x grid-margin-x">
 					<?php
