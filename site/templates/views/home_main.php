@@ -42,13 +42,13 @@
 <section id="block_three">
 	<div class="grid-container">
 		<div class="grid-x">
-			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . "images/mercedes_a-class_2018_120219_600.jpg"?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+			<div class="cell small-12 medium-6">
 				<a class="dashboard-nav-card" href="/find-your-car/">
 					<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
 					<h3 class="dashboard-nav-card-title">Cars</h3>
 				</a>
 			</div>
-			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . 'images/ford_transit_120219_600.jpg'?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+			<div class="cell small-12 medium-6">
 				<a class="dashboard-nav-card" href="/van-leasing-hgv/">
 					<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
 					<h3 class="dashboard-nav-card-title">Vans & Pickups</h3>
