@@ -25,7 +25,7 @@
 					<h1>Click here to go straight to our car specials</h1>
 				</div>
 			</div>
-			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . 'images/ford_transit_120219_600.jpg'?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">>
+			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . 'images/ford_transit_120219_600.jpg'?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 				<div class="cell small-4" style="height:10em;">
 					<h1>Click here to go straight to our van and pickup specials</h1>
 				</div>
