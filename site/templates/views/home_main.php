@@ -20,92 +20,15 @@
 <section id="block_one">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6">
-			<div class="grid-x grid-padding-x small-up-1 medium-up-2">
-			<?php
-			
-				foreach($result AS $vehicle) {
-					$options = array(
-						'quality' => 80,
-						'upscaling' => false       
-					);
-					$vehicle_type = ($vehicle['lcv'] == 1?"LCV":"CAR");
-					$hashcode = strtoupper(md5("173210NfS4Je" . $vehicle_type . $vehicle['cap_id']));
-
-					$bch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)), 2, '.', ',');
-					$pch_rental = number_format(((($vehicle['rental'] * $vehicle['term']) + 300) / ($vehicle['term']+8)*1.2), 2, '.', ',');
-
-					$bchs_rental = number_format($vehicle['rental'], 2, '.', ',');
-					$pchs_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
-					
-					$bch = (($vehicle['special'] == 1)?$bchs_rental:$bch_rental);
-					$pch = (($vehicle['special'] == 1)?$pchs_rental:$pch_rental);
-					?>
-					<div class="cell">
-						<a href="/vehicle/<?=$vehicle['cap_id']?>">
-							<div class="card">
-								<div class="card-section">
-									<h4><?=$vehicle['manufacturer']?> <?=$vehicle['model']?></h4>
-									<p id="veh_descr"><?=$vehicle['descr']?></p>
-								</div>
-								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=" alt="<?=$vehicle['manufacturer']?> <?=$vehicle['model']?> - <?=$vehicle['cap_id']?>" />
-								<div class="card-section">
-									<h6>Business Clients: <span class="price">£<?=$bch?></span><small>/m ex VAT</small></h6>
-									<h6>Personal Clients: <span class="price">£<?=$pch?></span><small>/m inc VAT</small></h6>
-									<small>click for more details...</small>
-								</div>
-								<?php
-								if($vehicle['special'] == 1){
-									?>
-									<div class="card-section special">
-										<h4>Special Deal<h4>
-									</div>
-									<?php
-								}
-								?>
-							</div>
-						</a>
-					</div>
-				<?php
-				}
-
-			?>
-		</div>
-			</div>
-			<div class="cell small-12 medium-6">
-				<!-- <h3>Straight To The Special Deals</h3> -->
-				<div class="grid-x grid-margin-x">
-					<?php
-						$options = array(
-							'quality' => 80,
-							'upscaling' => false       
-						);
-					?>
-					<div class="cell small-12">
-						<a class="dashboard-nav-card" href="/find-your-car/">
-							<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
-							<h3 class="dashboard-nav-card-title">Cars</h3>
-						</a>
-					</div>
-					<div class="cell small-12">
-						<a class="dashboard-nav-card" href="/van-leasing-hgv/">
-							<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
-							<h3 class="dashboard-nav-card-title">Vans & Pickups</h3>
-						</a>
-					</div>
-					<div class="cell small-12 card">
-						<div class="card-section">
-							<h3>Our Panel of Funders</h3>
-							<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
-						</div>
-					</div>
-					<div class="cell small-12 card">
-						<div class="card-section">
-							<?=$page->regional_strength?>
-						</div>
-					</div>
+			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . "/images/mercedes_a-class_2018_120219_600.jpg"?>') cover">
+				<div class="cell small-4" style="height:10em;">
+					<h1>Click here to go straight to our car specials</h1>
 				</div>
-				
+			</div>
+			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . '/images/ford_transit_120219_600.jpg'?>') cover">>
+				<div class="cell small-4" style="height:10em;">
+					<h1>Click here to go straight to our van and pickup specials</h1>
+				</div>
 			</div>
 		</div>
 	</div>
