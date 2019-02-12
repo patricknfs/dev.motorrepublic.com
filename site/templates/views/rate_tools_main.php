@@ -122,7 +122,7 @@
       $.ajax( {
         url: '/prot/server_processing_sub.php',
         data: {
-          "tid":d.id
+          "tid":rowData.id
 		    },
         dataType: 'json',
 
