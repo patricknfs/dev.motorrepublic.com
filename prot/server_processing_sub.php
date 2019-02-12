@@ -1,56 +1,28 @@
 <?php
-require_once($_SERVER["DOCUMENT_ROOT"] . '/site/templates/inc/config.php');
-/*
- * DataTables example server-side processing script.
- *
- * Please note that this script is intentionally extremely simply to show how
- * server-side processing can be implemented, and probably shouldn't be used as
- * the basis for a large complex system. It is suitable for simple use cases as
- * for learning.
- *
- * See http://datatables.net/usage/server-side for full details on the server-
- * side processing requirements of DataTables.
- *
- * @license MIT - http://datatables.net/license_mit
- */
+session_start();
+date_default_timezone_set('GMT');
+require_once $_SERVER['DOCUMENT_ROOT'] . '/inc/config.php';
+require_once(PPW_PATH . "/inc/conn2.php");
+require_once(PPW_PATH . "/inc/functions.php");
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Easy set variables
- */
+$tid = inputGet('tid');
+mysqli_query($conn2, 'SET CHARACTER SET utf8');
+$query2 = "
+	SELECT `vehicle_list_price`,`vehicle_otr_price`, `p11d_price`, `CO2` FROM `rates_combined` WHERE `id` = " . $tid . " LIMIT 1
+";
+// echo $query2;
+$result2 = $conn2->query($query2)  or die(mysqli_error());
+// iterate over every row
+while ($row = mysqli_fetch_assoc($result2)) {
+	// for every field in the result..
+	
+	$row2['xml_date'] = $row['vehicle_list_price'];
+	$row2['xml_date'] = $row['vehicle_otr_price'];
+	$row2['xml_date'] = $row['p11d_price'];
+	$row2['xml_date'] = $row['CO2'];
 
-// DB table to use
-$table = 'rates_combined';
-
-// Table's primary key
-$primaryKey = 'id';
-
-// Array of database columns which should be read and sent back to DataTables.
-// The `db` parameter represents the column name in the database, while the `dt`
-// parameter represents the DataTables column identifier. In this case simple
-// indexes
-$columns = array(
-	array( 'db' => 'vehicle_list_price', 'dt' => 'vehicle_list_price' ),
-	array( 'db' => 'vehicle_otr_price', 'dt' => 'vehicle_otr_price' ),
-	array( 'db' => 'p11d_price', 'dt' => 'p11d_price' ),
-	array( 'db' => 'CO2', 'dt' => 'CO2' )
-);
-
-// SQL server connection information
-$sql_details = array(
-	'user' => MR_DB_USERNAME,
-	'pass' => MR_DB_PASSWORD,
-	'db'   => 'team',
-	'host' => 'localhost'
-);
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * If you just want to use the basic configuration for DataTables with PHP
- * server-side, there is no need to edit below this line.
- */
-
-require( MR_PATH . '/inc/ssp.class.php' );
-
-echo json_encode(
-	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
-);
+	$rows[] = $row2;
+}
+// print_r($rows);
+echo json_encode($rows, JSON_PRETTY_PRINT);
+?>
