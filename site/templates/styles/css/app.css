@@ -12123,6 +12123,10 @@ section#block_one {
   padding: 1em;
 }
 
+#car_specials a {
+  color: #ffffff;
+}
+
 #van_specials {
   background: #cc1000;
   color: #ffffff;
@@ -12130,6 +12134,10 @@ section#block_one {
   margin-top: 2em;
   margin-bottom: 10em;
   padding: 1em;
+}
+
+#van_specials a {
+  color: #ffffff;
 }
 
 section#block_two {
