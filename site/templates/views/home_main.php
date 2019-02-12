@@ -21,7 +21,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . "images/mercedes_a-class_2018_120219_600.jpg"?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-				<div class="grid-x grid-margin-x">	
+				<div class="grid-x ">	
 					<div id="car_specials" class="cell small-3">
 						<h1>Car Specials</h1>
 					</div>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . 'images/ford_transit_120219_600.jpg'?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-				<div class="grid-x grid-margin-x">	
+				<div class="grid-x">	
 					<div id="van_specials" class="cell small-3">
 						<h1>Van and Pickup Specials</h1>
 					</div>
