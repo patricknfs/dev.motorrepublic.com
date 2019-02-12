@@ -137,9 +137,9 @@
           console.log(json);
           var childTable = '<table><thead><tr><td>TIME</td><td>DESC</td></tr></thead><tbody>';
 
-          for(var i=0;i<json.length;i++){
+          // for(var i=0;i<json.length;i++){
             childTable = childTable.concat('<tr><td>' + rowData.vehicle_list_price + '</td><td>' + rowData.vehicle_otr_price + '</td></tr>');
-          }
+          // }
           
           childTable = childTable.concat('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
 
