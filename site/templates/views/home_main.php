@@ -45,13 +45,13 @@
 			<div class="cell small-12 medium-6">
 				<a class="dashboard-nav-card" href="/find-your-car/">
 					<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
-					<h3 class="dashboard-nav-card-title">Cars</h3>
+					<h3 class="dashboard-nav-card-title">Latest Car Specials</h3>
 				</a>
 			</div>
 			<div class="cell small-12 medium-6">
 				<a class="dashboard-nav-card" href="/van-leasing-hgv/">
 					<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
-					<h3 class="dashboard-nav-card-title">Vans & Pickups</h3>
+					<h3 class="dashboard-nav-card-title">Latest Vans & Pickup Specials</h3>
 				</a>
 			</div>
 		</div>
