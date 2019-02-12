@@ -12114,6 +12114,24 @@ section#block_one {
   margin-top: 1em;
 }
 
+#car_specials {
+  background: #cc1000;
+  color: #ffffff;
+  height: 10em;
+  margin-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 10em;
+}
+
+#van_specials {
+  background: #cc1000;
+  color: #ffffff;
+  height: 10em;
+  margin-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 10em;
+}
+
 section#block_two {
   background: url(/site/assets/images/tesla_1900.jpg) no-repeat center center fixed;
   background-size: contain;
