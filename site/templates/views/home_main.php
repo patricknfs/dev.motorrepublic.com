@@ -24,6 +24,7 @@
 				<div class="grid-x ">	
 					<div id="car_specials" class="cell small-3">
 						<h1>Car Specials</h1>
+						<a href="">Click Here...</a>
 					</div>
 					<div class="cell auto">&nbsp;</div>
 				</div>
@@ -32,6 +33,7 @@
 				<div class="grid-x">	
 					<div id="van_specials" class="cell small-3">
 						<h1>Van &amp; Pickup Specials</h1>
+						<a href="">Click Here...</a>
 					</div>
 				</div>
 				<div class="cell auto">&nbsp;</div>
