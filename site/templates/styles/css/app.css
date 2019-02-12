@@ -12117,18 +12117,18 @@ section#block_one {
 #car_specials {
   background: #cc1000;
   color: #ffffff;
-  height: 10em;
   margin-left: 2em;
   margin-top: 2em;
+  margin-bottom: 10em;
   padding: 1em;
 }
 
 #van_specials {
   background: #cc1000;
   color: #ffffff;
-  height: 10em;
   margin-left: 2em;
   margin-top: 2em;
+  margin-bottom: 10em;
   padding: 1em;
 }
 
