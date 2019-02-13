@@ -314,12 +314,12 @@ if($page->id !== 1043){
         var optionArray = ["|"];
       }
       <?php
-      $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` ORDER BY `manufacturer` ASC";
+      $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
       $result = mysqli_query($conn, $query);
       while ($row = mysqli_fetch_assoc($result)) {
         echo "else if(s1.value == '" . $row['manufacturer'] . "'){
           var optionArray = ['|',";
-          $query2 = "SELECT DISTINCT(`model`) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `model` ASC";
+          $query2 = "SELECT DISTINCT(`model`) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' AND `special` = 1 ORDER BY `model` ASC";
           // echo $query2;
           $result2 = mysqli_query($conn, $query2);
           while ($row2 = mysqli_fetch_array($result2)) {
