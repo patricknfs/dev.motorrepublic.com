@@ -330,8 +330,7 @@ if($page->id !== 1043){
       }
       mysqli_free_result($result2);
       mysqli_free_result($result);
-      mysqli_close($result);
-      mysqli_close($result2);
+      mysqli_close($conn);
       ?> 
       for(var option in optionArray){
         var pair = optionArray[option].split("|");
