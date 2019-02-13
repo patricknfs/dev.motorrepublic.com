@@ -327,8 +327,8 @@ if($page->id !== 1043){
             echo "'" . $row2['model'] . "|" . $row2['model'] . "',";
           }
         echo "]}";
-        mysqli_free_result($result2);
       }
+      mysqli_free_result($result2);
       mysqli_free_result($result);
       mysqli_close($result);
       mysqli_close($result2);
