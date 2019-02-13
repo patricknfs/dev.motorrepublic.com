@@ -318,7 +318,7 @@ if($page->id !== 1043){
       $result = mysqli_query($conn, $query);
       // echo $query;
       while ($row = mysqli_fetch_assoc($result)) {
-        echo "else if(s1.value == '" . $row['manufacturer'] . "'){
+        echo " else if(s1.value == '" . $row['manufacturer'] . "'){
           var optionArray = ['|',";
           $query2 = "SELECT DISTINCT(`model`) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' AND `special` = 1 ORDER BY `model` ASC";
           // echo $query2;
