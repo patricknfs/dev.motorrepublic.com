@@ -86,10 +86,12 @@
 <section id="block_marques">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6">
-				<?=$page->body?>
-			</div>
 			<div class="cell small-12 medium-6 card">
+				<div class="card-section">
+					<?=$page->body?>
+				</div>
+			</div>
+			<div class="cell small-12 medium-6">
 				<div class="card-section">
 					<h3>Our Panel of Funders</h3>
 					<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
