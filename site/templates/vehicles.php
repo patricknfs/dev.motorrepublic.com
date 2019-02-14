@@ -28,7 +28,7 @@ $manuf = $sanitizer->text($input->post->slct1);
 // echo $manuf;
 $mdllcv = $sanitizer->text($input->post->slct2);
 $mdllcv = explode("-", $mdllcv);
-$mdl - $mdllcv[0];
+$mdl = $mdllcv[0];
 $lcv = $mdllcv[1];
 // echo $mdl;
 
