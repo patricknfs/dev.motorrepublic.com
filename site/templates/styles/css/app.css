@@ -12152,6 +12152,10 @@ section#block_two h1, section#block_two p {
   color: #fff;
 }
 
+section#block_marques {
+  margin-top: 2em;
+}
+
 section#block_three {
   margin-top: 2em;
 }

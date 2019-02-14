@@ -29,10 +29,6 @@
 		</div>
 	</div>
 </section>
-
-<section id="block_marques">
-	
-</section>
 <section id="block_marques">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
