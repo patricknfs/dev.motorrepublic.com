@@ -135,7 +135,6 @@ if($page->id !== 1043){
         </div>
         <div class="cell small-12 medium-6 .align-right">
         </div>
-        
       </div> -->  
       <div id="logorow" class="grid-x align-justify">
         <div class="cell small-12 medium-3" id="logoimg">

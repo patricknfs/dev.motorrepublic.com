@@ -8,9 +8,9 @@ $result = mysqli_query($conn, $query);
 
 $man = array();
 
-
 while ($row = mysqli_fetch_assoc($result)) {
-  array_push($man, $row['manufacturer']);
+  $manu = (stripos($row['manufacturer'], 'mercedes' ) === FALSE?$row['manufacturer']:"MERCEDES");
+  array_push($man, $manu);
 }
 $selector = "template=vehicles";
 ob_start();

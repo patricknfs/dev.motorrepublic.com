@@ -59,15 +59,42 @@
 		</div>
 	</div>
 </section>
-<!-- <section id="block_two">
+<section id="block_marques">
 	<div class="grid-container">
-		<div class="grid-x">
-			<div class="cell small-12 medium-6">
-				<h1>Focus on the Tesla phenomenon</h1>
-				<p>It's a T. It goes "tuh". We're rescuing ya. You've killed me! Oh, you've killed me! I had more, but you go ahead.</p>
-				<p>When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought "Why should I? " Then later, Leela made the film. <strong> But if I did make it, you can bet there would have been more topless women on motorcycles.</strong> <em> Roll film!</em> Why would a robot need to drink?</p>
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-12 medium-4">
+
 			</div>
-			<div class="cell small-12 medium-6"></div>
+			<div class="cell small-12 medium-4">
+
+			</div>
+			<div class="cell small-12 medium-4">
+
+			</div>
+			<div class="cell small-12 medium-4">
+
+			</div>
+			<div class="cell small-12 medium-4">
+
+			</div>
+			<div class="cell small-12 medium-4">
+
+			</div>
 		</div>
 	</div>
-</section> -->
+</section>
+<section id="block_marques">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-12 medium-6">
+				<?=$page->body?>
+			</div>
+			<div class="cell small-12 medium-6 card">
+				<div class="card-section">
+					<h3>Our Panel of Funders</h3>
+					<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
