@@ -23,14 +23,8 @@
 			<div class="cell small-12 medium-6">
 				<img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt=""/>
 			</div>
-			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . 'images/ford_transit_120219_600.jpg'?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-				<div class="grid-xy">	
-					<div id="van_specials" class="cell small-3">
-						<h1>Van &amp; Pickup Specials</h1>
-						<a href="/vehicles_v/">Click Here...</a>
-					</div>
-				</div>
-				<div class="cell auto">&nbsp;</div>
+			<div class="cell small-12 medium-6">
+				<img src="<?=$config->urls->assets?>images/ford_transit_140219_600.png" alt=""/>
 			</div>
 		</div>
 	</div>
