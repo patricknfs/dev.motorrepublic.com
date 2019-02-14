@@ -321,7 +321,7 @@ if($page->id !== 1043){
         echo " else if(s1.value == '" . $row['manufacturer'] . "'){
           var optionArray = ['|',";
           $query2 = "SELECT DISTINCT(`model`), `lcv` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' AND `special` = 1 ORDER BY `model` ASC";
-          echo $query2;
+          // echo $query2;
           $result2 = mysqli_query($conn, $query2);
           while ($row2 = mysqli_fetch_array($result2)) {
             echo "'" . $row2['model'] . "|" . $row2['model'] . "|" . $row2['lcv'] . "',";
@@ -339,6 +339,7 @@ if($page->id !== 1043){
         newOption.innerHTML = pair[1];
         s2.options.add(newOption);
         s3.value = pair[2];
+        console.log(pair[0],pair[1],pair[2])
       }
     }
   </script>
