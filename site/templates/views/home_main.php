@@ -91,9 +91,11 @@
 					<?=$page->body?>
 				</div>
 			</div>
-			<div id="funders" class="cell small-12 medium-6">
-				<h3>Our Panel of Funders</h3>
-				<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
+			<div class="cell small-12 medium-6 card">
+				<div class="card-section">
+					<h3>Our Panel of Funders</h3>
+					<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
+				</div>
 			</div>
 		</div>
 	</div>
