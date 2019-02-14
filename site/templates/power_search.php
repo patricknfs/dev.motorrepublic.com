@@ -21,8 +21,7 @@ ob_start();
       
     </div>
     <div class="cell small-12 medium-3">
-      <select id="slct1" name="slct1" onchange="populate(this.id,'slct2','slct3')">
-        
+      <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
         <option value="">Manufacturer</option>
         <?php
         foreach ($man as $manufacturer) {
@@ -34,7 +33,6 @@ ob_start();
       </select>
     </div>
     <div class="cell small-12 medium-3">
-      <input type="hidden" id="slct3" name="slct3" value="">
       <select id="slct2" name="slct2">>Model (choose manufacturer first)</select>
     </div>
     <div class="cell small-12 medium-4">
