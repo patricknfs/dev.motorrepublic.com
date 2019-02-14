@@ -38,7 +38,7 @@ if($input->urlSegment1 == 'van-leasing-hgv') {
 else{
   $lcv2 = 0;
 }
-
+echo $lcv2;
 // echo $mdl;
 
 if( !empty($manuf) ) {
