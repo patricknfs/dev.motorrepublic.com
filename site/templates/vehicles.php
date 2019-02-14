@@ -29,7 +29,10 @@ $manuf = $sanitizer->text($input->post->slct1);
 $mdllcv = $sanitizer->text($input->post->slct2);
 $mdllcv = explode("-", $mdllcv);
 $mdl = $mdllcv[0];
-$lcv = $mdllcv[1];
+if($manuf){
+  $lcv = $mdllcv[1];
+}
+
 // echo $mdl;
 
 if( !empty($manuf) ) {
