@@ -21,9 +21,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
-				<div class="grid-x ">	
-					<img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt=""/>
-				</div>
+				<img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt=""/>
 			</div>
 			<div class="cell small-12 medium-6" style="background: url('<?=$config->urls->assets . 'images/ford_transit_120219_600.jpg'?>')  no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 				<div class="grid-xy">	
