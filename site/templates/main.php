@@ -334,7 +334,7 @@ if($page->id !== 1043){
       for(var option in optionArray){
         var pair = optionArray[option].split("|");
         var newOption = document.createElement("option");
-        newOption.value = pair[0]+pair[2];
+        newOption.value = pair[0]+ "-" + pair[2];
         newOption.innerHTML = pair[1];
         s2.options.add(newOption);
       }
