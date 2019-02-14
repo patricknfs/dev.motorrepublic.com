@@ -41,24 +41,7 @@
 		</div>
 	</div>
 </section>
-<section id="block_three">
-	<div class="grid-container">
-		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6">
-				<a class="dashboard-nav-card" href="/find-your-car/">
-					<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
-					<h3 class="dashboard-nav-card-title">Latest Car Specials</h3>
-				</a>
-			</div>
-			<div class="cell small-12 medium-6">
-				<a class="dashboard-nav-card" href="/van-leasing-hgv/">
-					<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
-					<h3 class="dashboard-nav-card-title">Latest Vans & Pickup Specials</h3>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
+
 <section id="block_marques">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
@@ -96,6 +79,25 @@
 					<h3>Our Panel of Funders</h3>
 					<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="block_three">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-12 medium-6">
+				<a class="dashboard-nav-card" href="/find-your-car/">
+					<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
+					<h3 class="dashboard-nav-card-title">Latest Car Specials</h3>
+				</a>
+			</div>
+			<div class="cell small-12 medium-6">
+				<a class="dashboard-nav-card" href="/van-leasing-hgv/">
+					<i class="dashboard-nav-card-icon fas fa-shuttle-van fa-3x" aria-hidden="true"></i>
+					<h3 class="dashboard-nav-card-title">Latest Vans & Pickup Specials</h3>
+				</a>
 			</div>
 		</div>
 	</div>
