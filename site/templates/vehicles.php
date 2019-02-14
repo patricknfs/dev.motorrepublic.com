@@ -32,7 +32,7 @@ $mdl = $mdllcv[0];
 if($manuf){
   $lcv = $mdllcv[1];
 }
-if($input->urlSegment1 == 'van-leasing-hgv') {
+if($page->id == 1023) {
   $lcv2 = 1;
 }
 else{
