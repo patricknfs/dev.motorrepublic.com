@@ -32,8 +32,7 @@ $mdl = $mdllcv[0];
 if($manuf){
   $lcv = $mdllcv[1];
 }
-
-if($input->urlSegment1() == "van-leasing-hgv"){
+if($input->urlSegment1 == 'van-leasing-hgv') {
   $lcv2 = 1;
 }
 else{
