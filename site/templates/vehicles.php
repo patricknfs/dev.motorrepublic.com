@@ -27,7 +27,7 @@ $offset = ($pageno-1) * $no_of_records_per_page;
 $manuf = $sanitizer->text($input->post->slct1);
 // echo $manuf;
 $mdllcv = $sanitizer->text($input->post->slct2);
-$mdllcv = explode("-", $mdllcv,);
+$mdllcv = explode("-", $mdllcv);
 $mdl - $mdllcv[0];
 $lcv = $mdllcv[1];
 // echo $mdl;
