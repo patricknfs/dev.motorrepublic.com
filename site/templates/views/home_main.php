@@ -21,10 +21,10 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
-				<img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt=""/>
+				<a href="/van-leasing-hgv"><img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt="Van Pickup and HGV lease"/></a>
 			</div>
 			<div class="cell small-12 medium-6">
-				<img src="<?=$config->urls->assets?>images/ford_transit_140219_600.png" alt=""/>
+				<a href="/van-leasing-hgv"><img src="<?=$config->urls->assets?>images/ford_transit_140219_600.png" alt="Car Lease"/></a>
 			</div>
 		</div>
 	</div>
