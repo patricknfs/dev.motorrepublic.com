@@ -1,6 +1,6 @@
 <?php
 // $csv = "repos/mailing_north_uk.csv";
-$csv = "repos/mailing_north_uk.csv";
+$csv = "repos/m_unassigned_01022019.csv";
 
 
 date_default_timezone_set('CET');
@@ -8,7 +8,6 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 
 //Open local file to write to
-// $fp = fopen("/var/www/vhosts/dootet.com/stats.dootet.com/data/affilired.csv", "w");
 $adminEmail = "patrick.ogorman@nationalfleetservices.net";
 $AdminMessage = "MR Slice Report\n";
 
@@ -38,6 +37,7 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     $pc_portsmouth_iow = array('PO1','PO10','PO11','PO18','PO19','PO2','PO3','PO30','PO31','PO32','PO33','PO34','PO35','PO36','PO37','PO38','PO39','PO4','PO40','PO41','PO5','PO6','PO7','PO8','PO9');
     $pc_ayrshire = array('G45','G46','G76','G77','G78','G79','KA1','KA10','KA11','KA12','KA13','KA14','KA15','KA16','KA17','KA18','KA19','KA2','KA20','KA21','KA22','KA23','KA24','KA25','KA26','KA27','KA28','KA29','KA3','KA30','KA4','KA5','KA6','KA7','KA8','KA9','PA1','PA10','PA11','PA12','PA13','PA14','PA15','PA16','PA17','PA18','PA19','PA2','PA3','PA4','PA5','PA6','PA7','PA8','PA9');
     $pc_norwich = array('IP25','NR1','NR10','NR11','NR12','NR13','NR14','NR15','NR17','NR18','NR19','NR2','NR20','NR21','NR22','NR23','NR24','NR25','NR26','NR27','NR28','NR29','NR3','NR30','NR31','NR32','NR4','NR5','NR6','NR7','NR8','NR9','PE37');
+    $pc_newcastle = array('NE1','NE2','NE3','NE4','NE5','NE6','NE7','NE8','NE9','NE10','NE11','NE12','NE13','NE15','NE16','NE17','NE18','NE19','NE20','NE21','NE22','NE23','NE24','NE25','NE26','NE27','NE28','NE29','NE30','NE31','NE32','NE33','NE34','NE35','NE36','NE37','NE38','NE39','NE40','NE41','NE42','NE43','NE44','NE45','NE46','NE47','NE48','NE49','NE61','NE62','NE63','NE64','NE65','NE66','NE66','NE67','NE68','NE69','NE70','NE71','NE82','NE83','NE85','NE88','NE92','NE98','NE99','SR1','SR2','SR3','SR4','SR5','SR6','SR7','SR8','SR9','DH1','DH2','DH3','DH4','DH5','DH6','DH7','DH8','DH9','DH97','DH98','DH99','DL1','DL2','DL3','DL4','DL5','DL6','DL7','DL8','DL9','DL10','DL11','DL12','DL13','DL14','DL15','DL16','DL16','DL17','DL98','TS1','TS2','TS3','TS4','TS5','TS6','TS7','TS8','TS9','TS10','TS11','TS12','TS13','TS14','TS15','TS16','TS17','TS18','TS19','TS20','TS21','TS22','TS23','TS24','TS25','TS26','TS27','TS28');
 
     if(in_array($postcode[0], $pc_bhams_worcsn)){
       echo $postcode[0] . "\n";
@@ -141,6 +141,15 @@ if (($handle = fopen($csv, "r")) !== FALSE) {
     elseif(in_array($postcode[0], $pc_norwich)){
       echo $postcode[0] . "\n";
       $file = fopen("m_norwich_" . date('dmY') . ".csv","a");
+      
+      $num = count($data);
+      $row++;
+      echo $data[0] . "\n" . $data[1] . "\n";
+      fputcsv($file, [$data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]]);
+    }
+    elseif(in_array($postcode[0], $pc_newcastle)){
+      echo $postcode[0] . "\n";
+      $file = fopen("m_newcastle_" . date('dmY') . ".csv","a");
       
       $num = count($data);
       $row++;
