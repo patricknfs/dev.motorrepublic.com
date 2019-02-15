@@ -52,6 +52,7 @@ if( !empty($manuf) ) {
 else {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `special` = 1 AND `lcv` = '" . $lcv2 . "'";
   $countres = $total_pages_sql->fetch_row();
+  echo "rows: " . $countres;
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special` FROM `team`.`rates_combined_terse` WHERE `lcv` = '" . $lcv2 . "' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
