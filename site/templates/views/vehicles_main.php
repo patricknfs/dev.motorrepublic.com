@@ -9,17 +9,7 @@
 		</div> -->
 		<div class="grid-x align-center">
 			<nav class="nav_pagination" aria-label="Pagination">
-			<?php
-			$pagination = $results->renderPager();
-echo $pagination;
-echo "<ul>";
-foreach($results as $result) {
-    echo "<li><a href='{$result->url}'>{$result->title}</a></li>";
-}
-echo "</ul>";
-echo $pagination; 
-?>
-				<!-- <ul class="pagination text-center">
+				<ul class="pagination text-center">
 					<li><a href="?pageno=1">First</a></li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
 						<a href="<?php echo ($pageno <= 1 ? '#' : '?pageno=' . ($pageno - 1)) ?>">Previous <span class="show-for-sr">page</span></a>
@@ -28,7 +18,7 @@ echo $pagination;
 						<a href="<?php echo ($pageno >= $total_pages ? '#' : '?pageno=' . ($pageno + 1)) ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
 					</li>
 					<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
-				<ul> -->
+				<ul>
 			</nav>
 		</div>
 		<div class="grid-x grid-padding-x small-up-1 medium-up-3">
