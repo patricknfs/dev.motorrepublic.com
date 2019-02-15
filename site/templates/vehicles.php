@@ -17,13 +17,14 @@ require_once(MR_PATH . "/inc/conn.php");
 
 include "power_search.php";
 
-if (isset($_GET['pageno'])) {
-  $pageno = $_GET['pageno'];
-} else {
-  $pageno = 1;
-}
-$no_of_records_per_page = 21;
-$offset = ($pageno-1) * $no_of_records_per_page;
+// if (isset($_GET['pageno'])) {
+//   $pageno = $_GET['pageno'];
+// } else {
+//   $pageno = 1;
+// }
+// $no_of_records_per_page = 21;
+// $offset = ($pageno-1) * $no_of_records_per_page;
+
 $manuf = $sanitizer->text($input->post->slct1);
 // echo $manuf;
 $mdllcv = $sanitizer->text($input->post->slct2);

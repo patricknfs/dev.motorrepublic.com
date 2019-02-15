@@ -9,6 +9,16 @@
 		</div> -->
 		<div class="grid-x align-center">
 			<nav class="nav_pagination" aria-label="Pagination">
+			<?php
+			$pagination = $results->renderPager();
+echo $pagination;
+echo "<ul>";
+foreach($results as $result) {
+    echo "<li><a href='{$result->url}'>{$result->title}</a></li>";
+}
+echo "</ul>";
+echo $pagination; 
+?>
 				<ul class="pagination text-center">
 					<li><a href="?pageno=1">First</a></li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
