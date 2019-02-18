@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 $selector = "template=vehicles";
 ob_start();
 ?>
-<form action="<?=$pages->get($selector)->url;?>" method="POST">
+<form action="<?=$pages->get($selector)->url;?>" method="GET">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-2">
       
