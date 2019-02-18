@@ -32,9 +32,9 @@
 <section id="block_marques">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6>
+			<div class="cell small-12 medium-6">
 				<div class="grid-container">
-					<div class="grid-x">
+					<div class="grid-x grid-margin-x">
 						<div class="cell small-12">
 							<img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" />
 						</div>
