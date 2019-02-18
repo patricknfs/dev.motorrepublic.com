@@ -36,7 +36,7 @@
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x">
 						<div class="cell small-12 medium-6">
-							<img src="<?=$config->assets->urls?>graphics/bmw_specials_600.png" />
+							<img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" />
 						</div>
 						<div class="cell small-12 medium-6">
 
