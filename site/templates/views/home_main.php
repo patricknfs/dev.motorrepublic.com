@@ -32,7 +32,7 @@
 <section id="block_marques">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6 card">
+			<div class="cell small-12 medium-6>
 				<div class="grid-container">
 					<div class="grid-x">
 						<div class="cell small-12">
