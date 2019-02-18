@@ -33,31 +33,23 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
-				<div class="grid-container">
-					<div class="grid-x grid-margin-x">
-						<div class="cell small-12">
-							<img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" />
-						</div>
-						<div class="cell small-12 medium-6">
+				<div class="cell small-12">
+					<img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" />
+				</div>
+				<div class="cell small-12 medium-6">
 
-						</div>
-						<div class="cell small-12 medium-6">
+				</div>
+				<div class="cell small-12 medium-6">
 
-						</div>
-						<div class="cell small-12 medium-6">
+				</div>
+				<div class="cell small-12 medium-6">
 
-						</div>
-						<div class="cell small-12 medium-6">
+				</div>
+				<div class="cell small-12 medium-6">
 
-						</div>
-						<div class="cell small-12 medium-6">
+				</div>
+				<div class="cell small-12 medium-6">
 
-						</div>
-					</div>
-					<!-- <div class="card-section">
-						<h3>Our Panel of Funders</h3>
-						<img src="<?=$config->urls->assets?>graphics/who_we_work_with_email_090118.png">
-					</div> -->
 				</div>
 			</div>
 			<div class="cell small-12 medium-6 card">
