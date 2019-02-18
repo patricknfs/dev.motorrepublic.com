@@ -5,3 +5,4 @@ htaccess.old
 .git.bfg-report
 site/templates/styles_old/
 .gitignore
+site/templates/mailing/
