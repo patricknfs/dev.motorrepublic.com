@@ -54,6 +54,7 @@ if( !empty($manuf) ) {
 else {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1");
   $total_rows = $total_pages_sql->fetch_row();
+  print_r($total_rows);
   echo "total rows: " . $total_rows[0];
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   echo "total_pages: " . $total_pages;
