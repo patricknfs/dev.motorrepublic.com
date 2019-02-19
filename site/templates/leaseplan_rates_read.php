@@ -15,7 +15,7 @@ $AdminMessage = "MR Leaseplan CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`rates_leaseplan`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-$csv = "inc/leaseplan_rates_all.csv";
+$csv = "repos/leaseplan_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     // print_r($rawdata);
