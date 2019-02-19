@@ -34,13 +34,13 @@
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6 grid-margin-y">
 				<div class="cell small-12">
-					<a href="/van-leasing-hgv/?slct1=BMW&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" /></a>
+					<a href="/van-leasing-hgv/?slct1=BMW&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" alt="Click for the latest special deals for BMW" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-					<a href="/van-leasing-hgv/?slct1=MERCEDES&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" /></a>
+					<a href="/van-leasing-hgv/?slct1=MERCEDES&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" alt="Click for Mercedes special deals" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-					<a href="/van-leasing-hgv/?slct1=LAND+ROVER&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
+					<a href="/van-leasing-hgv/?slct1=LAND+ROVER&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" alt="Click for the latest Land Rover and Range Rover special deals." /></a>
 				</div>
 				<div class="cell small-12 medium-6">
 
