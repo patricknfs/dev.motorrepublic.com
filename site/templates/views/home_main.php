@@ -31,8 +31,8 @@
 </section>
 <section id="block_marques">
 	<div class="grid-container">
-		<div class="grid-x grid-margin-xy">
-			<div class="cell small-12 medium-6">
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-12 medium-6 grid-margin-y">
 				<div class="cell small-12">
 					<a href="http://dev.motorrepublic.com/van-leasing-hgv/?slct1=BMW&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" /></a>
 				</div>
