@@ -40,7 +40,7 @@
 					<a href="http://dev.motorrepublic.com/van-leasing-hgv/?slct1=MERCEDES&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-
+					<a href="http://dev.motorrepublic.com/van-leasing-hgv/?slct1=LAND+ROVER&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
 
