@@ -39,8 +39,6 @@ if($page->id == 1023) {
 else{
   $lcv2 = 0;
 }
-// echo "lcv2 is: " . $lcv2;
-// echo $mdl;
 
 if( !empty($manuf) ) {
   $total_pages_sql = "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1";
