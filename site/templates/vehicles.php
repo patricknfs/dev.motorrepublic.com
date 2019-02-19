@@ -57,6 +57,7 @@ else {
   // $countres = $conn->query($total_pages_sql);
   $tresult = $conn->query($total_pages_sql) or die(mysqli_error($total_pages_sql));
   $countres = mysqli_num_rows($tresult);
+  echo $countres;
   print_r($countres);
   $total_rows = $countres->num_rows;
   $total_pages = ceil($total_rows / $no_of_records_per_page);
