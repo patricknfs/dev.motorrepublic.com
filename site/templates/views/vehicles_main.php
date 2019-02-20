@@ -22,12 +22,12 @@
 							}
 							else {
 								if(!empty($manuf)){
-									echo "&slct1=" . $manuf . "&slct2=" . $mdl;
+									echo "?slct1=" . $manuf . "&slct2=" . $mdl;
 								}
 								else{
 									echo "undefined";
 								}
-								echo "?pageno=" . ($pageno + 1);
+								echo "&pageno=" . ($pageno + 1);
 							}
 							?> 
 							aria-label="Next page">Next <span class="show-for-sr">page</span>
