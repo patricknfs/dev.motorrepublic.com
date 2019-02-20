@@ -24,9 +24,6 @@
 								if(!empty($manuf)){
 									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
 								}
-								else{
-									echo "undefined";
-								}
 								echo "pageno=" . ($pageno + 1);
 							}
 							?> 
