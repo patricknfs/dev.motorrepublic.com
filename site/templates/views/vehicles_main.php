@@ -15,7 +15,7 @@
 						<a href="<?php echo ($pageno <= 1 ? '#' : '?pageno=' . ($pageno - 1)) ?>">Previous <span class="show-for-sr">page</span></a>
 					</li>
 					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-						<a href="<?php echo ($pageno >= $total_pages ? '#' : '?pageno=' . ($pageno + 1)) ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
+						<a href="<?php echo ($pageno >= $total_pages ? '#' : '?pageno=' . ($pageno + 1) . (!empty($manuf)?'&slct1=' . $manuf . '&slct2=-undefined':'')) ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
 					</li>
 					<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
 				<ul>
