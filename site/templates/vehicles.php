@@ -26,7 +26,7 @@ $no_of_records_per_page = 21;
 $offset = ($pageno-1) * $no_of_records_per_page;
 
 $manuf = $sanitizer->text($input->get->slct1);
-// echo $manuf;
+echo "Manuf is: " . $manuf;
 $mdllcv = $sanitizer->text($input->get->slct2);
 $mdllcv = explode("-", $mdllcv);
 $mdl = $mdllcv[0];
