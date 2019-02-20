@@ -29,11 +29,13 @@ $manuf = $sanitizer->text($input->get->slct1);
 echo "Manuf is: " . $manuf;
 $mdllcv = $sanitizer->text($input->get->slct2);
 $mdllcv = explode("-", $mdllcv);
-$mdl = $mdllcv[0];
 
-$lcv = "";
-if($manuf){
-  $lcv = $mdllcv[1];
+if($mdllcv){
+  $mdl = $mdllcv[0];
+  $lcv = "";
+  if($manuf){
+    $lcv = $mdllcv[1];
+  }
 }
 
 if($page->id == 1023) {
