@@ -29,6 +29,7 @@ $manuf = $sanitizer->text($input->get->slct1);
 echo "Manuf is: " . $manuf;
 $mdllcv = $sanitizer->text($input->get->slct2);
 $lcv = "";
+$mdl = "";
 if(!empty($mdllcv)){
   $mdllcv = explode("-", $mdllcv);
   $mdl = $mdllcv[0];
