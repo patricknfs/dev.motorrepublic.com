@@ -30,7 +30,7 @@ echo "Manuf is: " . $manuf;
 $mdllcv = $sanitizer->text($input->get->slct2);
 $mdllcv = explode("-", $mdllcv);
 
-if($mdllcv){
+if(!empty($mdllcv)){
   $mdl = $mdllcv[0];
   $lcv = "";
   if($manuf){
