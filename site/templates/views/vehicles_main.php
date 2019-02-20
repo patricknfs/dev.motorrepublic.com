@@ -22,7 +22,7 @@
 							}
 							else {
 								echo "?pageno=" . ($pageno + 1);
-								if(!empty($manuf){
+								if(!empty($manuf)){
 									echo "&slct1=" . $manuf . "&slct2=" . $mdl;
 								}
 								else{
