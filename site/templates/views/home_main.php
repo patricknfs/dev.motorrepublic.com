@@ -42,7 +42,7 @@
 				<div class="cell small-12 medium-6">
 					<a href="/vehicles/?slct1=LAND+ROVER&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
 				</div>
-				<div class="cell small-12 medium-6">
+				<div class="cell small-12 medium-6"zsys>
 
 				</div>
 				<div class="cell small-12 medium-6">
