@@ -12,7 +12,7 @@
 				<ul class="pagination text-center">
 					<li><a href="?pageno=1">First</a></li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
-						<a href="<?php echo ($pageno <= 1 ? '#' : '?pageno=' . ($pageno - 1)) ?>">Previous <span class="show-for-sr">page</span></a>
+						
 						<a href="?
 							<?php
 							if($pageno <= 1){
