@@ -25,7 +25,7 @@
 								echo "pageno=" . ($pageno - 1);
 							}
 							?> 
-							aria-label="Next page">Next <span class="show-for-sr">page</span>
+							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
 						</a>
 					</li>
 					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
