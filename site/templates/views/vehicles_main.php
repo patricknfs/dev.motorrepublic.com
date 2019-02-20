@@ -107,17 +107,43 @@
 		</div>
 	</div>
 	<div class="grid-x align-center">
-		<nav class="nav_pagination" aria-label="Pagination">
-			<ul class="pagination text-center">
-				<li><a href="?pageno=1">First</a></li>
-				<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
-					<a href="<?php echo ($pageno <= 1 ? '#' : '?pageno=' . ($pageno - 1)) ?>">Previous <span class="show-for-sr">page</span></a>
-				</li>
-				<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-					<a href="<?php echo ($pageno >= $total_pages ? '#' : '?pageno=' . ($pageno + 1)) ?>"  aria-label="Next page">Next <span class="show-for-sr">page</span></a>
-				</li>
-				<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
-			<ul>
-		</nav>
+		<nav aria-label="Pagination">
+				<ul class="pagination text-center">
+					<li><a href="?pageno=1">First</a></li>
+					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
+						<a href="?
+							<?php
+							if($pageno <= 1){
+								echo "#";
+							}
+							else {
+								if(!empty($manuf)){
+									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
+								}
+								echo "pageno=" . ($pageno - 1);
+							}
+							?> 
+							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
+						</a>
+					</li>
+					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+						<a href="?
+							<?php
+							if($pageno >= $total_pages){
+								echo "#";
+							}
+							else {
+								if(!empty($manuf)){
+									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
+								}
+								echo "pageno=" . ($pageno + 1);
+							}
+							?> 
+							aria-label="Next page">Next <span class="show-for-sr">page</span>
+						</a>
+					</li>
+					<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+				<ul>
+			</nav>
 	</div>
 </section>
