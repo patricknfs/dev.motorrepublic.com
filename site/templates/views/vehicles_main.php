@@ -19,7 +19,7 @@
 								}
 								echo "pageno=1";
 							?> 
-							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
+							aria-label="First page">First <span class="show-for-sr">page</span>
 						</a>
 					</li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
