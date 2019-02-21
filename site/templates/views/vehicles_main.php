@@ -10,7 +10,18 @@
 		<div class="grid-x align-center">
 			<nav aria-label="Pagination">
 				<ul class="pagination text-center">
-					<li><a href="?pageno=1">First</a></li>
+					<!-- <li><a href="?pageno=1">First</a></li> -->
+					<li>
+						<a href="?
+							<?php
+								if(!empty($manuf)){
+									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
+								}
+								echo "pageno=1";
+							?> 
+							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
+						</a>
+					</li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
 						<a href="?
 							<?php
