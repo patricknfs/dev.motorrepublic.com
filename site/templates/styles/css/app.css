@@ -12001,6 +12001,12 @@ nav {
   font-size: 2.2rem;
 }
 
+@media print, screen and (min-width: 40em) {
+  #header_tel h2 {
+    font-size: 1.4rem;
+  }
+}
+
 .special {
   background-color: #cc0000;
   color: #fff;
