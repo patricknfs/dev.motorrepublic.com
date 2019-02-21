@@ -59,7 +59,7 @@
 								if(!empty($manuf)){
 									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
 								}
-								echo "pageno=1" . $total_pages;
+								echo "pageno=" . $total_pages;
 							?> 
 							aria-label="Last page">Last <span class="show-for-sr">page</span>
 						</a>
