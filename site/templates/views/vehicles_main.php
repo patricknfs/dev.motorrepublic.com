@@ -86,7 +86,10 @@
 					$pchs_rental = number_format(($vehicle['rental']*1.2), 2, '.', ',');
 					
 					$bch = (($vehicle['special'] == 1)?$bchs_rental:$bch_rental);
-					$pch = (($vehicle['special'] == 1)?$pchs_rental:$pch_rental);
+					if($vehicle['biz_only'] == 0){
+						$pch = (($vehicle['special'] == 1)?$pchs_rental:$pch_rental);
+					}
+
 					?>
 					<div class="cell">
 						<a href="/vehicle/<?=$vehicle['cap_id']?>">
