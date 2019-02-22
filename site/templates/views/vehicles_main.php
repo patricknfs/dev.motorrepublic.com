@@ -101,7 +101,13 @@
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=" alt="<?=$vehicle['manufacturer']?> <?=$vehicle['model']?> - <?=$vehicle['cap_id']?>">
 								<div class="card-section">
 									<h6>Business Clients: <span class="price">£<?=$bch?></span><small>/m ex VAT</small></h6>
-									<h6>Personal Clients: <span class="price">£<?=$pch?></span><small>/m inc VAT</small></h6>
+									<?php
+									if($vehicle['biz_only'] == 0){
+										?>
+										<h6>Personal Clients: <span class="price">£<?=$pch?></span><small>/m inc VAT</small></h6>
+										<?php
+									}
+									?>
 									<small>click for more details...</small>
 								</div>
 								<?php
