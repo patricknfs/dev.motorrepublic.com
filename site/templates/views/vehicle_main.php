@@ -55,7 +55,7 @@
 						<hr>
 						<h6>Business Clients - From <span class="price">£<?=$bch_rental?></span> * excl. VAT</h6>
 						<?php
-						if($biz_only === 0){
+						if($biz_only == 0){
 							?>
 							<h6>Personal Clients - From <span class="price">£<?=$pch_rental?></span> ** inc. VAT</h6>
 							<?php
@@ -65,7 +65,7 @@
 						<hr>
 						<small>* Based on an initial rental of £<?=$bch_initial?> excluding VAT followed by <?=$term?> monthly rentals of £<?=$bch_rental?> and covering <?=$mileage?> miles annually.</small>
 						<?php
-						if($biz_only === 0){
+						if($biz_only == 0){
 							?>
 							<br /><small>** Based on an initial rental of £<?=$pch_initial?> including VAT followed by <?=$term?> monthly rentals of £<?=$pch_rental?> and covering <?=$mileage?> miles annually.</small>
 							<?php
