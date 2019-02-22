@@ -60,7 +60,7 @@
 							<h6>Personal Clients - From <span class="price">£<?=$pch_rental?></span> ** inc. VAT</h6>
 							<?php
 						}
-						echo "biz is: " . $biz_only;
+						// echo "biz is: " . $biz_only;
 						?>
 						<hr>
 						<small>* Based on an initial rental of £<?=$bch_initial?> excluding VAT followed by <?=$term?> monthly rentals of £<?=$bch_rental?> and covering <?=$mileage?> miles annually.</small>

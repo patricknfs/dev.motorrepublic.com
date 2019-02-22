@@ -56,7 +56,7 @@ try
     $_GET['description_1'] = $descr;
     $special = $data['special'];
     $biz_only = $data['biz_only'];
-    echo "biz is: " . $biz_only;
+    // echo "biz is: " . $biz_only;
     $website_deal_notes = $data['website_deal_notes'];
     $term = str_replace("M", '', $data['term'])-1;
     $mileage = str_replace("K",",000",$data['mileage']);
