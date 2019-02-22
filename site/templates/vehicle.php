@@ -25,12 +25,11 @@ try
   $client = get_soap_client_2();
 
   if(null !== $input->urlSegment()) {
-    $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront`, `special`, `special_upfront`, `website_deal_notes` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment() . " ORDER BY `rental` ASC LIMIT 1";
+    $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront`, `special`, `special_upfront`, `website_deal_notes`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment() . " ORDER BY `rental` ASC LIMIT 1";
     // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
   
-
     if($data['special'] == 1){
       $bch_rental = number_format($data['rental'], 2, '.', ',');
       $pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
@@ -39,9 +38,11 @@ try
     }
     else {
       $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
-      $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
-      $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
-      $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
+      if($data['biz_only'] === 0){
+        $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
+      }
+        $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
+        $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
     }
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
