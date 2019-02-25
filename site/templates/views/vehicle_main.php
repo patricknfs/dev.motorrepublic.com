@@ -53,11 +53,11 @@
 						<h2><?=$manufacturer?> <?=$model?></h2>
 						<p><?=$descr?></p>
 						<hr>
-						<h6>Business Clients - From <span class="price">£<?=$bch_rental?></span> * excl. VAT</h6>
+						<h6>Business Clients - From <strong><span class="price">£<?=$bch_rental?></span></strong> * excl. VAT</h6>
 						<?php
 						if($biz_only == 0){
 							?>
-							<h6>Personal Clients - From <span class="price">£<?=$pch_rental?></span> ** inc. VAT</h6>
+							<h6>Personal Clients - From <strong><span class="price">£<?=$pch_rental?></span></strong> ** inc. VAT</h6>
 							<?php
 						}
 						// echo "biz is: " . $biz_only;
