@@ -69,6 +69,7 @@
         "dataType": "json"
 			},
       "columns": [
+        {"data": "id"},
         {
           "className":      'details-control',
           "orderable":      false,
@@ -122,7 +123,7 @@
       $.ajax( {
         url: '/prot/server_processing_sub.php',
         data: {
-          "tid":rowData.cap_id
+          "tid":rowData.id
 		    },
         dataType: 'json',
 
