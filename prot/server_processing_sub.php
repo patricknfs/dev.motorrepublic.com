@@ -3,8 +3,8 @@ session_start();
 date_default_timezone_set('GMT');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/site/templates/inc/config.php';
 // echo $_SERVER['DOCUMENT_ROOT'];
-require_once(PPW_PATH . "/inc/conn.php");
-require_once(PPW_PATH . "/inc/functions.php");
+require_once(MR_PATH . "/inc/conn.php");
+require_once(MR_PATH . "/inc/functions.php");
 
 $tid = inputGet('tid');
 mysqli_query($conn, 'SET CHARACTER SET utf8');
