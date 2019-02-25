@@ -3,6 +3,8 @@
 
 // alphabet ratebooks are standard 3 up front
 // Make sure to format the value cells to be a 2 decinmal place number without commas
+// Remove 18K & 25K columns if present
+
 
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
