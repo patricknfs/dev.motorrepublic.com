@@ -15,11 +15,11 @@ $result2 = $conn2->query($query2)  or die(mysqli_error());
 // iterate over every row
 while ($row = mysqli_fetch_assoc($result2)) {
 	// for every field in the result..
-	
-	$row2['xml_date'] = $row['vehicle_list_price'];
-	$row2['xml_date'] = $row['vehicle_otr_price'];
-	$row2['xml_date'] = $row['p11d_price'];
-	$row2['xml_date'] = $row['CO2'];
+	$row2['vehicle_list_price'] = $row['vehicle_list_price'];
+	$row2['vehicle_otr_price'] = $row['vehicle_otr_price'];
+	$row2['p11d_price'] = $row['p11d_price'];
+	$row2['CO2'] = $row['CO2'];
+	$row2['deal_notes'] = $row['deal_notes'];
 
 	$rows[] = $row2;
 }
