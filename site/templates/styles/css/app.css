@@ -12261,6 +12261,10 @@ footer #governance {
   font-size: 1.6rem;
 }
 
+.pence {
+  font-size: 1rem;
+}
+
 .rounded-social-buttons {
   text-align: right;
   margin-right: 1em;
