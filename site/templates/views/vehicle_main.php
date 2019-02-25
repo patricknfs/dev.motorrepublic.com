@@ -57,7 +57,7 @@
 						<?php
 						if($biz_only == 0){
 							?>
-							<h6>Personal Clients - From <strong><span class="price">£<?=$pch_rental?></span></strong> ** inc. VAT</h6>
+							<h6>Personal Clients - From <strong><span class="price">£<?=$pch_rental[0]?>.<?=$pch_rental[1]?></span></strong> ** inc. VAT</h6>
 							<?php
 						}
 						// echo "biz is: " . $biz_only;
