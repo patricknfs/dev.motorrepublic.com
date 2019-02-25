@@ -100,7 +100,7 @@
 								</div>
 								<img src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$vehicle['cap_id']?>&DATE=2018/09/11&WIDTH=400&HEIGHT=300&IMAGETEXT=&VIEWPOINT=" alt="<?=$vehicle['manufacturer']?> <?=$vehicle['model']?> - <?=$vehicle['cap_id']?>">
 								<div class="card-section">
-									<h6>Business Clients: <span class="price">£<?=$bch?></span><small>/m ex VAT</small></h6>
+									<h6>Business Clients: <span class="price"><strong>£<?=$bch?></strong></span><small>/m ex VAT</small></h6>
 									<?php
 									if($vehicle['biz_only'] == 0){
 										?>
