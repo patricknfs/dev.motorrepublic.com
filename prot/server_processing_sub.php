@@ -6,7 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 require_once(MR_PATH . "/inc/functions.php");
 
-$tid = inputGet('tid');
+$tid = $input->get('tid');
 mysqli_query($conn, 'SET CHARACTER SET utf8');
 $query2 = "SELECT `vehicle_list_price`,`vehicle_otr_price`, `p11d_price`, `CO2` FROM `rates_combined` WHERE `id` = " . $tid . " LIMIT 1";
 // echo $query2;
