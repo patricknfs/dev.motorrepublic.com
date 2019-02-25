@@ -53,7 +53,7 @@
 						<h2><?=$manufacturer?> <?=$model?></h2>
 						<p><?=$descr?></p>
 						<hr>
-						<h6>Business Clients - From <strong><span class="price">£<?=$bch_rental?></span></strong> * excl. VAT</h6>
+						<h6>Business Clients - From <strong><span class="price">£<?=$bch_rental[0]?>.<?=$bch_rental[1]?></span></strong> * excl. VAT</h6>
 						<?php
 						if($biz_only == 0){
 							?>

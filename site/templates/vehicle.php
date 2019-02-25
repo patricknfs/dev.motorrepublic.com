@@ -46,6 +46,9 @@ try
         $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
       }
     }
+
+    $bch_rental = explode(".",$bch_rental);
+    $pch_rental = explode(".",$pch_rental);
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
     $manufacturer = $data['manufacturer'];
