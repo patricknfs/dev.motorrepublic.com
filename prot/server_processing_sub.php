@@ -1,7 +1,8 @@
 <?php
 session_start();
 date_default_timezone_set('GMT');
-header("Content-Type: application/json");
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/site/templates/inc/config.php';
 // echo $_SERVER['DOCUMENT_ROOT'];
 require_once(MR_PATH . "/inc/conn.php");
@@ -23,5 +24,5 @@ while ($row = mysqli_fetch_assoc($result2)) {
 	$rows[] = $row2;
 }
 // print_r($rows);
-echo json_encode($rows, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT);
+echo json_encode($rows);
 ?>
