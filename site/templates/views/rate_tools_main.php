@@ -4,6 +4,7 @@
 <table id="mr_rates" class="display" style="width:100%">
   <thead>
     <tr>
+      <th>id</td>
       <th></th>
       <th>Source</th>
       <th>Updated</th>
@@ -22,6 +23,7 @@
 	</tbody>
   <tfoot>
     <tr>
+      <th>id</td>
       <th></th>
       <th>Source</th>
       <th>Updated</th>
