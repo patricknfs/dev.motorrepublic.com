@@ -131,13 +131,13 @@
 
         success: function ( json ) {
           console.log(json);
-          var childTable = '<table><thead><tr><td>TIME</td><td>DESC</td></tr></thead><tbody>';
+          var childTable = '<table><thead><tr><td>List Price</td><td>OTR Price</td><td>Deal Notes</td></tr></thead><tbody>';
 
           // for(var i=0;i<json.length;i++){
-            childTable = childTable.concat('<tr><td>' + rowData.vehicle_list_price + '</td><td>' + rowData.vehicle_otr_price + '</td></tr>');
+            childTable = childTable.concat('<tr><td>' + rowData.vehicle_list_price + '</td><td>' + rowData.vehicle_otr_price + '</td><td>' + rowData.deal_notes + '</td></tr>');
           // }
           
-          childTable = childTable.concat('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
+          childTable = childTable.concat('<tr><td>List Price</td><td>PTR Price</td><td>Deal Notes</td></tr></tbody></table>');
 
           div
           .html( childTable )
