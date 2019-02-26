@@ -69,7 +69,6 @@
         "dataType": "json"
 			},
       "columns": [
-        {"data": "id"},
         {
           "className":      'details-control',
           "orderable":      false,
