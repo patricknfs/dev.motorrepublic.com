@@ -116,9 +116,9 @@
     });
 
     function format ( rowData ) {
-      var div = $('<div/>')
-          .addClass( 'loading' );
-          .text( 'Loading...' );
+      var div = $('<div>')
+        .addClass( 'loading' );
+        .text( 'Loading...' );
   
       $.ajax( {
         url: '/prot/server_processing_sub.php',
