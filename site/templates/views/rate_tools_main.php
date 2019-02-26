@@ -132,9 +132,9 @@
         success: function ( json ) {
           var childTable = '<table width="100%"><thead><tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></thead><tbody>';
 
-          // for(var i=0;i<json.length;i++){
+          for(var i=0;i<json.length;i++){
             childTable = childTable.concat('<tr><td>' + rowData.vehicle_list_price + '</td><td>' + rowData.vehicle_otr_price + '</td><td>' + rowData.p11d_price + '</td><td>' + rowData.CO2 + '</td><td>' + rowData.deal_notes + '</td></tr>');
-          // }
+          }
           
           childTable = childTable.concat('<tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></tbody></table>');
 
