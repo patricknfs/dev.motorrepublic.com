@@ -131,7 +131,7 @@
 
         success: function ( json ) {
           console.log(rowData.deal_notes);
-          $( "body" ).html( json );
+          $( "#mr_rates tbody" ).html( json );
           var childTable = '<table width="100%"><thead><tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></thead><tbody>';
 
           for(var i=0;i<json.length;i++){
