@@ -1,6 +1,7 @@
 <?php
 session_start();
 date_default_timezone_set('GMT');
+header("Content-Type: application/json");
 require_once $_SERVER['DOCUMENT_ROOT'] . '/site/templates/inc/config.php';
 // echo $_SERVER['DOCUMENT_ROOT'];
 require_once(MR_PATH . "/inc/conn.php");
