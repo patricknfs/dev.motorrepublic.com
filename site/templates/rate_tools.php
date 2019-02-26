@@ -16,4 +16,3 @@ include('views/rate_tools_main.php');
 // include('views/functions.php');
 $page->main = ob_get_clean();
 include("./main.php");
-
