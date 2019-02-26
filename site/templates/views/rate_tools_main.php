@@ -117,7 +117,7 @@
 
     function format ( rowData ) {
       var div = $('<div/>')
-          .addClass( 'loading' )
+          .addClass( 'loading' );
           .text( 'Loading...' );
   
       $.ajax( {
