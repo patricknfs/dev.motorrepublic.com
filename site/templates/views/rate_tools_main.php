@@ -130,7 +130,6 @@
         dataType: 'json',
 
         success: function ( json ) {
-          var dealnotes = rowData.deal_notes;
           var childTable = '<table width="100%"><thead><tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></thead><tbody>';
 
           // for(var i=0;i<json.length;i++){
