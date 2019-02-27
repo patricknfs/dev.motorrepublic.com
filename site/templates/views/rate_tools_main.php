@@ -137,7 +137,7 @@
             childTable = childTable.concat('<tr><td>' + json[i].vehicle_list_price + '</td><td>' + json[i].vehicle_otr_price + '</td><td>' + json[i].p11d_price + '</td><td>' + json[i].CO2 + '</td><td>' + json[i].deal_notes + '</td></tr>');
           }
           
-          childTable = childTable.concat('<tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></tbody></table>');
+          childTable = childTable.concat('</tbody></table>');
 
           div
           .html( childTable )
