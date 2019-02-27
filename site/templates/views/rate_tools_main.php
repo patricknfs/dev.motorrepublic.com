@@ -4,6 +4,7 @@
 <table id="mr_rates" class="display" style="width:100%">
   <thead>
     <tr>
+      <th>id</td>
       <th></th>
       <th>Source</th>
       <th>Updated</th>
@@ -22,6 +23,7 @@
 	</tbody>
   <tfoot>
     <tr>
+      <th>id</td>
       <th></th>
       <th>Source</th>
       <th>Updated</th>
@@ -37,25 +39,6 @@
   </tfoot>
 </table>
 <script type="text/javascript">
-  /* Formatting function for row details - modify as you need */
-  // function format ( d ) {
-  //   // `d` is the original data object for the row
-  //   return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-  //       '<tr>'+
-  //           '<td width="30%"><strong>CO2:</strong></td>'+
-  //           '<td width="30%">'+d.CO2+'</td>'+
-  //           '<td><strong>P11d:</strong></td>'+
-  //           '<td><p>'+d.p11d_price+'</p></td>'+
-  //           '<td rowspan="2"><p>'+d.deal_notes+'</p></td>'+
-  //       '</tr>'+
-  //       '<tr>'+
-  //           '<td width="30%"><p><strong>List Price:</strong></p></td>'+
-  //           '<td width="30%"><p>'+d.vehicle_list_price+'</p></td>'+
-  //           '<td><p><strong>Funder OTR Price (Not to be used with other funders):</strong></p></td>'+
-  //           '<td><p>'+d.vehicle_otr_price+'</p></td>'+
-  //       '</tr>'+
-  //   '</table>';
-  // };
   $(document).ready(function() {
 		var table = $('#mr_rates').DataTable( {
 			"language": {
@@ -69,7 +52,7 @@
         "dataType": "json"
 			},
       "columns": [
-        {"data": "id"},
+        { "data": "id"},
         {
           "className":      'details-control',
           "orderable":      false,
@@ -128,14 +111,14 @@
         dataType: 'json',
 
         success: function ( json ) {
-          console.log(json);
-          var childTable = '<table><thead><tr><td>TIME</td><td>DESC</td></tr></thead><tbody>';
+          // console.log(json);
+          var childTable = '<table width="100%"><thead><tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></thead><tbody>';
 
-          // for(var i=0;i<json.length;i++){
-            childTable = childTable.concat('<tr><td>' + rowData.vehicle_list_price + '</td><td>' + rowData.vehicle_otr_price + '</td></tr>');
-          // }
+          for(var i=0;i<json.length;i++){
+            childTable = childTable.concat('<tr><td>' + json[i].vehicle_list_price + '</td><td>' + json[i].vehicle_otr_price + '</td><td>' + json[i].p11d_price + '</td><td>' + json[i].CO2 + '</td><td>' + json[i].deal_notes + '</td></tr>');
+          }
           
-          childTable = childTable.concat('<tr><td>AA</td><td>BB</td></tr></tbody></table>');
+          childTable = childTable.concat('</tbody></table>');
 
           div
           .html( childTable )

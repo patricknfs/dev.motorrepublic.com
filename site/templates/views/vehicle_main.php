@@ -63,11 +63,11 @@
 						// echo "biz is: " . $biz_only;
 						?>
 						<hr>
-						<small>* Based on an initial rental of £<?=$bch_initial?> excluding VAT followed by <?=$term?> monthly rentals of £<?=$bch_rental?> and covering <?=$mileage?> miles annually.</small>
+						<small>* Based on an initial rental of £<?=$bch_initial?> excluding VAT followed by <?=$term?> monthly rentals of £<?=$bch_rental[0]?>.<?=$bch_rental[1]?> and covering <?=$mileage?> miles annually.</small>
 						<?php
 						if($biz_only == 0){
 							?>
-							<br /><small>** Based on an initial rental of £<?=$pch_initial?> including VAT followed by <?=$term?> monthly rentals of £<?=$pch_rental?> and covering <?=$mileage?> miles annually.</small>
+							<br /><small>** Based on an initial rental of £<?=$pch_initial?> including VAT followed by <?=$term?> monthly rentals of £<?=$pch_rental[0]?>.<?=$pch_rental[1]?> and covering <?=$mileage?> miles annually.</small>
 							<?php
 						}
 						if($website_deal_notes){
