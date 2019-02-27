@@ -39,25 +39,6 @@
   </tfoot>
 </table>
 <script type="text/javascript">
-  /* Formatting function for row details - modify as you need */
-  // function format ( d ) {
-  //   // `d` is the original data object for the row
-  //   return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-  //       '<tr>'+
-  //           '<td width="30%"><strong>CO2:</strong></td>'+
-  //           '<td width="30%">'+d.CO2+'</td>'+
-  //           '<td><strong>P11d:</strong></td>'+
-  //           '<td><p>'+d.p11d_price+'</p></td>'+
-  //           '<td rowspan="2"><p>'+d.deal_notes+'</p></td>'+
-  //       '</tr>'+
-  //       '<tr>'+
-  //           '<td width="30%"><p><strong>List Price:</strong></p></td>'+
-  //           '<td width="30%"><p>'+d.vehicle_list_price+'</p></td>'+
-  //           '<td><p><strong>Funder OTR Price (Not to be used with other funders):</strong></p></td>'+
-  //           '<td><p>'+d.vehicle_otr_price+'</p></td>'+
-  //       '</tr>'+
-  //   '</table>';
-  // };
   $(document).ready(function() {
 		var table = $('#mr_rates').DataTable( {
 			"language": {
@@ -130,7 +111,7 @@
         dataType: 'json',
 
         success: function ( json ) {
-          console.log(json);
+          // console.log(json);
           var childTable = '<table width="100%"><thead><tr><td>List Price</td><td>OTR Price</td><td>P11D</td><td>CO2</td><td>Deal Notes</td></tr></thead><tbody>';
 
           for(var i=0;i<json.length;i++){
