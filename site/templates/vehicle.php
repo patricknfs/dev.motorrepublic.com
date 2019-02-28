@@ -36,7 +36,6 @@ try
       $bch_initial = (($data['special_upfront'] > 0)?$data['special_upfront']:number_format(($data['rental'] * $data['upfront']), 2, '.', ','));
       if($data['biz_only'] == 0){
         $pch_rental = number_format(($data['rental']*1.2), 2, '.', ',');
-        $pch_rental = explode(".",$pch_rental);
         $pch_initial = (($data['special_upfront'] > 0)?number_format(($data['special_upfront'] * 1.2), 2, '.', ','):number_format((($data['rental'] * $data['upfront'])*1.2), 2, '.', ','));
       }
     }
@@ -46,7 +45,6 @@ try
       $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
       if($data['biz_only'] == 0){
         $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
-        $pch_rental = explode(".",$pch_rental);
         $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
       }
     }
