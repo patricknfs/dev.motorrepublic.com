@@ -21,7 +21,7 @@ if($page->id !== 1043){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Leasing Offer – Motor Republic";
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic = " . $input->urlSegment();
       }
       elseif($page->template->name == 'vehicles'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -40,7 +40,7 @@ if($page->id !== 1043){
         echo "Motor Republic Car, Van & HGV Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic = " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
@@ -53,7 +53,7 @@ if($page->id !== 1043){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " Leasing Offer – Motor Republic";
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic = " . $input->urlSegment();
       }
       elseif($page->template->name == 'vehicles'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -75,7 +75,7 @@ if($page->id !== 1043){
         echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " Leasing Offer – Motor Republic";
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic = " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
