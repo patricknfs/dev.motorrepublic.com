@@ -21,7 +21,7 @@ if($page->id !== 1043){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deal for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Leasing Offer – Motor Republic";
       }
       elseif($page->template->name == 'vehicles'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -37,10 +37,10 @@ if($page->id !== 1043){
     <meta name="twitter:description" content="
       <?php
       if ($page->get("title") == "Home") {
-        echo "Motor Republic Vehicle Leasing";
+        echo "Motor Republic Car, Van & HGV Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
@@ -53,7 +53,7 @@ if($page->id !== 1043){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo "Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " - Motor Republic Leasing";
+        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " Leasing Offer – Motor Republic";
       }
       elseif($page->template->name == 'vehicles'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -71,8 +71,11 @@ if($page->id !== 1043){
       if ($page->get("title") == "Home") {
         echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
       }
+      elseif($page->template->name == 'vehicles'){
+        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+      }
       elseif($page->template->name == 'vehicle'){
-        echo "Motor Republic Leasing Provide Great Lease Deals for the " . $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " - " . $input->urlSegment() . " Leasing Offer – Motor Republic";
       }
       else {
         echo $page->get("title");
