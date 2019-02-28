@@ -51,8 +51,8 @@ try
       }
     }
 
-    $bch_rental = explode(".",$bch_rental);
-    $pch_rental = explode(".",$pch_rental);
+    // $bch_rental = explode(".",$bch_rental);
+    // $pch_rental = explode(".",$pch_rental);
     // $hashcode = strtoupper(md5("173210NfS4JeCAR" . $input->urlSegment1));
     $vehicle_type = ($data['lcv'] == 1?"LCV":"CAR");
     $manufacturer = $data['manufacturer'];
