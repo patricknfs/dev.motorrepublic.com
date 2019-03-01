@@ -88,13 +88,13 @@
 
 .menu > ul > li:hover {
   color: #cc1000;
-  background: #767676;
+  background: #1a1a1a;
 }
 
 .menu > ul > li > ul {
   display: none;
   width: 100%;
-  background: #767676;
+  background: #1a1a1a;
   padding: 20px;
   position: absolute;
   z-index: 99;
