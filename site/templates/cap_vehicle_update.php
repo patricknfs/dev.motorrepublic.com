@@ -17,7 +17,7 @@ if ($result = $conn->query($query)) {
   printf("Select returned %d rows.\n", $result->num_rows);
   $result = $conn->query($query) or die(mysqli_error($conn));
   foreach($result AS $vehicle) {
-    echo $vehicle['manufacturer'] . " " . $vehicle['model'];
+    echo $vehicle['cap_id'];
   }
   /* free result set */
   $result->close();
