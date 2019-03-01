@@ -55,10 +55,10 @@ if($page->id !== 1043){
       elseif($page->template->name == 'vehicle'){
         echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
-      elseif($page->template->name == 'vehicles'){
+      elseif($page->name == 'car-leasing'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
-      elseif($page->template->name == 'vehicles_v'){
+      elseif($page->name == 'van-leasing-hgv'){
         echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       else {
@@ -188,7 +188,7 @@ if($page->id !== 1043){
         </div>
       </div>
       </section>
-      <!-- <div class="searchbar">
+      <div class="searchbar">
         <?php
         if($page->id !== 1043){
           ?>
@@ -196,7 +196,7 @@ if($page->id !== 1043){
           <?php
         }
         ?>
-      </div> -->
+      </div>
      
     </header>
       <?php
