@@ -13,3 +13,9 @@ $data = new SimpleXMLElement($xml);
 $groups = array_unique($data->xpath('//SE/Dc_Description'));
 $equipment = $data->xpath('//SE');
 
+if ($result = $mysqli->query("SELECT * FROM `team`.`vehicles`")) {
+  printf("Select returned %d rows.\n", $result->num_rows);
+
+  /* free result set */
+  $result->close();
+}
