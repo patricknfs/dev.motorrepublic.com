@@ -15,7 +15,7 @@ include "inc/functions.php";
 
 if ($result = $conn->query("SELECT * FROM `team`.`vehicles`")) {
   printf("Select returned %d rows.\n", $result->num_rows);
-  $result = $conn->query($query) or die(mysqli_error($conn));
+  $result = $conn->query("SELECT * FROM `team`.`vehicles`") or die(mysqli_error($conn));
   foreach($result AS $vehicle) {
     echo $vehicle['manufacturer'] . " " . $vehicle['model'];
   }
