@@ -12,10 +12,10 @@ include "inc/functions.php";
 // $data = new SimpleXMLElement($xml);
 // $groups = array_unique($data->xpath('//SE/Dc_Description'));
 // $equipment = $data->xpath('//SE');
-
-if ($result = $conn->query("SELECT * FROM `team`.`vehicles`")) {
+$query = "SELECT * FROM `team`.`vehicles`";
+if ($result = $conn->query($query)) {
   printf("Select returned %d rows.\n", $result->num_rows);
-  $result = $conn->query("SELECT * FROM `team`.`vehicles`") or die(mysqli_error($conn));
+  $result = $conn->query($query) or die(mysqli_error($conn));
   foreach($result AS $vehicle) {
     echo $vehicle['manufacturer'] . " " . $vehicle['model'];
   }
