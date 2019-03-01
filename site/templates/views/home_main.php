@@ -64,7 +64,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
-				<a class="dashboard-nav-card" href="/vehicles/">
+				<a class="dashboard-nav-card" href="/car-leasing/">
 					<i class="dashboard-nav-card-icon fas fa-car fa-3x" aria-hidden="true"></i>
 					<h3 class="dashboard-nav-card-title">Latest Car Specials</h3>
 				</a>
