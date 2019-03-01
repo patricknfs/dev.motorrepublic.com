@@ -21,7 +21,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6">
-				<a href="/vehicles/"><img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt="Van Pickup and HGV lease"/></a>
+				<a href="/car-leasing/"><img src="<?=$config->urls->assets?>images/mercedes_a-class_2018_140219_600.png" alt="Van Pickup and HGV lease"/></a>
 			</div>
 			<div class="cell small-12 medium-6">
 				<a href="/van-leasing-hgv/"><img src="<?=$config->urls->assets?>images/ford_transit_140219_600.png" alt="Car Lease"/></a>
@@ -34,13 +34,13 @@
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6 grid-margin-y">
 				<div class="cell small-12">
-					<a href="/vehicles/?slct1=BMW&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" /></a>
+					<a href="/car-leasing/?slct1=BMW&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-					<a href="/vehicles/?slct1=MERCEDES&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" /></a>
+					<a href="/car-leasing/?slct1=MERCEDES&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-					<a href="/vehicles/?slct1=LAND+ROVER&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
+					<a href="/car-leasing/?slct1=LAND+ROVER&slct2=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
 
