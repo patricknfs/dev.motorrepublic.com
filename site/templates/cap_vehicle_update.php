@@ -24,9 +24,9 @@ try
       $data = new SimpleXMLElement($xml);
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
-      $cc = $data->xpath('//CC');
+      $cc = $data->xpath('//Tech_Table/CC');
       print_r($cc);
-      $co2 = $data->xpath('//CO2');
+      $co2 = $data->xpath('//Tech_Table/CO2');
       print_r($co2);
       $enginepower_ps = '';
       $mpg_combined = '';
@@ -35,7 +35,7 @@ try
       $standardmanwarranty_years = '';
       $bodystyle = '';
 
-      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle . "' WHERE `cap_id` = ' . $cap_id . '"; 
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle . "' WHERE `cap_id` = '" . $cap_id . "'"; 
       echo $query2;
       // $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
