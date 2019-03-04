@@ -26,7 +26,13 @@ try
       // $equipment = $data->xpath('//SE');
       $cc = $data->xpath('//Tech_Table/CC');
       $co2 = $data->xpath('//Tech_Table/CO2');
-      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . """', `co2` = '', `` = '', `` = '', `` = '', `` = '', WHERE `cap_id` = ' . $cap_id . '"; 
+      $enginepower_ps = '';
+      $mpg_combined = '';
+      $insurancegroup150 = ''; 
+      $standardmanwarranty_mileage = '';
+      $standardmanwarranty_years = '';
+
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "' WHERE `cap_id` = ' . $cap_id . '"; 
       echo $query2;
       // $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
