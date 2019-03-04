@@ -4,21 +4,37 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 include "inc/functions.php";
 // include "inc/manufacturer.php";
+try
+{
+  $username = '173210';
+  $password = 'NfS4Je';
+  $date = date('c');
+  $client = get_soap_client_1();
 
-// $params = array('subscriberId' => $username, 'password' => $password, 'database' => $carlcv, 'capid' => $input->urlSegment(), 'seDate' => $date, 'justCurrent' => true ); //define your parameters here
-// $client->GetBulkTechnicalDataResponse($params);
-// $data = $client->__getLastResponse();
-// $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
-// $data = new SimpleXMLElement($xml);
-// $groups = array_unique($data->xpath('//SE/Dc_Description'));
-// $equipment = $data->xpath('//SE');
-$query = "SELECT * FROM `team`.`vehicles`";
-if ($result = $conn->query($query)) {
-  printf("Select returned %d rows.\n", $result->num_rows);
-  $result = $conn->query($query) or die(mysqli_error($conn));
-  foreach($result AS $vehicle) {
-    echo $vehicle['cap_id'];
+  $query = "SELECT * FROM `team`.`vehicles`";
+  if ($result = $conn->query($query)) {
+    printf("Select returned %d rows.\n", $result->num_rows);
+    $result = $conn->query($query) or die(mysqli_error($conn));
+    foreach($result AS $vehicle) {
+      $cap_id = $vehicle['cap_id'];
+      $params = array('subscriberId' => $username, 'password' => $password, 'database' => $carlcv, 'capidList' => $input->urlSegment(), 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
+      $client->GetBulkTechnicalDataResponse($params);
+      $data = $client->__getLastResponse();
+      $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
+      $data = new SimpleXMLElement($xml);
+      // $groups = array_unique($data->xpath('//SE/Dc_Description'));
+      // $equipment = $data->xpath('//SE');
+      $cc = $data->xpath('//Tech_Table/CC');
+      $co2 = $data->xpath('//Tech_Table/CO2');
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . """', `co2` = '', `` = '', `` = '', `` = '', `` = '', WHERE `cap_id` = ' . $cap_id . '"; 
+      echo $query2;
+      // $result2 = $conn->query($query2) or die(mysqli_error($conn));
+    }
+    /* free result set */
+    $result->close();
+    $result2->close();
   }
-  /* free result set */
-  $result->close();
+}
+catch(Exception $e){ 
+  echo $e->getCode(). '<br />'. $e->getMessage();
 }
