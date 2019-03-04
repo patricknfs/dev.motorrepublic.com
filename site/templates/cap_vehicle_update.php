@@ -25,7 +25,9 @@ try
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
       $cc = array_unique($data->xpath('//Tech_Table/CC'));
+      print_r($cc);
       $co2 = array_unique($data->xpath('//Tech_Table/CO2'));
+      print_r($co2);
       $enginepower_ps = '';
       $mpg_combined = '';
       $insurancegroup150 = ''; 
