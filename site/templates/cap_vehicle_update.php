@@ -17,7 +17,7 @@ try
     $result = $conn->query($query) or die(mysqli_error($conn));
     foreach($result AS $vehicle) {
       $cap_id = $vehicle['cap_id'];
-      $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $input->urlSegment(), 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
+      $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $cap_id, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
       $client->GetBulkTechnicalDataResponse($params);
       $data = $client->__getLastResponse();
       $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
