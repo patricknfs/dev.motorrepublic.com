@@ -31,8 +31,9 @@ try
       $insurancegroup150 = ''; 
       $standardmanwarranty_mileage = '';
       $standardmanwarranty_years = '';
+      $bodystyle = '';
 
-      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "' WHERE `cap_id` = ' . $cap_id . '"; 
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle . "' WHERE `cap_id` = ' . $cap_id . '"; 
       echo $query2;
       // $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
