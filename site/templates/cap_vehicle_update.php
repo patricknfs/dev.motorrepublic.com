@@ -24,16 +24,16 @@ try
       $data = new SimpleXMLElement($xml);
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
-      $cc = $data->xpath('//TechData/Tech_Table/CC');
-      print_r($data->xpath('//TechData/Tech_Table/CC'));
-      $co2 = $data->xpath('//TechData/Tech_Table/CO2');
-      print_r($data->xpath('//TechData/Tech_Table/CO2'));
+      $cc = $data->xpath('//CC');
+      print_r($data->xpath('//CC'));
+      $co2 = $data->xpath('//CO2');
+      print_r($data->xpath('//CO2'));
       $enginepower_ps = '';
       $mpg_combined = '';
       $insurancegroup150 = ''; 
       $standardmanwarranty_mileage = '';
       $standardmanwarranty_years = '';
-      $bodystyle = $data->xpath('//TechData/Tech_Table/BodyStyle');
+      $bodystyle = $data->xpath('//BodyStyle');
 
       $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle . "' WHERE `cap_id` = '" . $cap_id . "'"; 
       echo $query2;
