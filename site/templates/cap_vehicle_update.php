@@ -9,7 +9,7 @@ try
   $username = '173210';
   $password = 'NfS4Je';
   $date = date('c');
-  $client = get_soap_client_1();
+  $client = get_soap_client_2();
 
   $query = "SELECT * FROM `team`.`vehicles`";
   if ($result = $conn->query($query)) {
