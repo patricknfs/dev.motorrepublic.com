@@ -34,7 +34,7 @@ try
       $standardmanwarranty_years = $data->xpath('//STANDARDMANWARRANTY_YEARS');
       $bodystyle = $data->xpath('//BodyStyle');
 
-      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc[0] . "', `co2` = '" . $co2[0] . "', `enginepower_ps` = '" . $enginepower_ps[0] . "', `mpg_combined` = '" . $mpg_combined[0] . "', `insurancegroup1-50` = '" . $insurancegroup150[0] ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage[0] . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years[0] . "', `bodystyle` = '" . $bodystyle[0] . "' WHERE `cap_id` = '" . $cap_id . "'"; 
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . $co2[0] . "', `enginepower_ps` = '" . $enginepower_ps[0] . "', `mpg_combined` = '" . $mpg_combined[0] . "', `insurancegroup1-50` = '" . $insurancegroup150[0] ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage[0] . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years[0] . "', `bodystyle` = '" . $bodystyle[0] . "' WHERE `cap_id` = '" . $cap_id . "'"; 
       echo $query2;
       // $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
