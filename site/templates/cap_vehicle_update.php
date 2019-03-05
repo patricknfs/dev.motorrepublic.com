@@ -21,8 +21,8 @@ try
       $client->GetBulkTechnicalData($params);
       // $data = $client->__getLastResponse();
       // $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      // $data = new SimpleXMLElement($xml);
-      $xml = simplexml_load_string($client);
+      $data = new SimpleXMLElement($client);
+      // $xml = simplexml_load_string($client);
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
       $cc = $xml->xpath('//CC');
