@@ -25,7 +25,7 @@ try
       $data = new SimpleXMLElement($xml);
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
-      $cc = $data->xpath('//CC');
+      $cc = array_unique($data->xpath('//CC'));
       $co2 = $data->xpath('//CO2');
       $enginepower_ps = '';
       $mpg_combined = '';
