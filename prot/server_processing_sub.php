@@ -17,7 +17,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 	$rows[] = $row2;
 }
 
-$query2 = "SELECT `cc`,`co2`, FROM `team`.`vehicles` WHERE `id` = '" . $tid . "' LIMIT 1";
+$query2 = "SELECT `cc`,`co2`,`enginepower_ps`,`mpg_combined`,`insurancegroup1-50`,`standardmanwarranty_mileage`,`standardmanwarranty_years`,`bodystyle`,`p11d` FROM `team`.`vehicles` WHERE `id` = '" . $tid . "' LIMIT 1";
 $result2 = $conn->query($query2);
 
 while ($row3 = mysqli_fetch_assoc($result2)) {
