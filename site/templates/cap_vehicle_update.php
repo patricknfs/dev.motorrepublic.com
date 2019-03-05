@@ -43,6 +43,6 @@ try
     $result2->close();
   }
 }
-catch(Exception $e){ 
+catch(SoapFault $e){ 
   echo $e->getCode(). '<br />'. $e->getMessage();
 }
