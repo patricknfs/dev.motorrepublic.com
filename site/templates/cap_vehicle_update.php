@@ -27,11 +27,11 @@ try
       // $equipment = $data->xpath('//SE');
       $cc = $data->xpath('//CC');
       $co2 = $data->xpath('//CO2');
-      $enginepower_ps = '';
-      $mpg_combined = '';
-      $insurancegroup150 = ''; 
-      $standardmanwarranty_mileage = '';
-      $standardmanwarranty_years = '';
+      $enginepower_ps = $data->xpath('//ENGINEPOWER_PS');
+      $mpg_combined = $data->xpath('//MPG_COMBINED');
+      $insurancegroup150 = $data->xpath('//INSURANCEGROUP150');
+      $standardmanwarranty_mileage = $data->xpath('//STANDARDMANWARRANTY_MILEAGE');
+      $standardmanwarranty_years = $data->xpath('//STANDARDMANWARRANTY_YEARS');
       $bodystyle = $data->xpath('//BodyStyle');
 
       $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc[0] . "', `co2` = '" . $co2[0] . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle[0] . "' WHERE `cap_id` = '" . $cap_id . "'"; 
