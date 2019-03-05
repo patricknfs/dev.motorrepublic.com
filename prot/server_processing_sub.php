@@ -10,7 +10,7 @@ require_once(MR_PATH . "/inc/functions.php");
 $tid = filter_input(INPUT_GET, "tid", FILTER_SANITIZE_STRING);
 echo "tid is: " . $tid;
 mysqli_query($conn, 'SET CHARACTER SET utf8');
-$query = "SELECT `deal_notes` FROM `team`.`rates_combined` WHERE `id` = '" . $tid . "' LIMIT 1";
+$query = "SELECT `id`,`deal_notes` FROM `team`.`rates_combined` WHERE `id` = '" . $tid . "' LIMIT 1";
 $result = $conn->query($query);
 while ($row = mysqli_fetch_assoc($result)) {
 	$row2['deal_notes'] = $row['deal_notes'];
