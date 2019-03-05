@@ -27,14 +27,14 @@ try
       // $equipment = $data->xpath('//SE');
       $cc = $xml->xpath('//CC');
       var_dump((string)$cc[0]);
-      $co2 = $data->xpath('//CO2');
+      $co2 = $xml->xpath('//CO2');
       print_r($co2);
       $enginepower_ps = '';
       $mpg_combined = '';
       $insurancegroup150 = ''; 
       $standardmanwarranty_mileage = '';
       $standardmanwarranty_years = '';
-      $bodystyle = $data->xpath('//BodyStyle');
+      $bodystyle = $xml->xpath('//BodyStyle');
 
       $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle . "' WHERE `cap_id` = '" . $cap_id . "'"; 
       echo $query2;
