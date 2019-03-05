@@ -25,7 +25,7 @@ try
       $xml = simplexml_load_string($data);
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
-      $cc = $data->xpath('//CC');
+      $cc = $xml->xpath('//CC');
       var_dump((string)$cc[0]);
       $co2 = $data->xpath('//CO2');
       print_r($co2);
