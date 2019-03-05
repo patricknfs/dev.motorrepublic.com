@@ -8,7 +8,7 @@ try
 {
   $username = '173210';
   $password = 'NfS4Je';
-  $date = date('c');
+  $date = date('Y/m/d');
   $client = get_soap_client_2();
 
   $query = "SELECT * FROM `team`.`vehicles`";
