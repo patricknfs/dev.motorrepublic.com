@@ -31,7 +31,7 @@ while ($row3 = mysqli_fetch_assoc($result2)) {
 	$row4['bodystyle'] = $row['bodystyle'];
 	$row4['p11d_price'] = $row['p11d_price'];
 
-	$rows[] = $row4;
+	$rows[] .= $row4;
 }
 // print_r($rows);
 echo json_encode($rows, JSON_PRETTY_PRINT);
