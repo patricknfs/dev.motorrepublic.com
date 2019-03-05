@@ -8,7 +8,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 require_once(MR_PATH . "/inc/functions.php");
 $tid = filter_input(INPUT_GET, "tid", FILTER_SANITIZE_STRING);
-echo "tid is: " . $tid;
 mysqli_query($conn, 'SET CHARACTER SET utf8');
 $query = "SELECT `id`,`deal_notes` FROM `team`.`rates_combined` WHERE `id` = '" . $tid . "' LIMIT 1";
 $result = $conn->query($query);
