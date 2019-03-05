@@ -19,23 +19,22 @@ try
       $cap_id = $vehicle['cap_id'];
       $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $cap_id, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
       $client->GetBulkTechnicalData($params);
-      // $data = $client->__getLastResponse();
       echo "Response:\n" . $client->__getLastResponse() . "\n";
-      // $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
-      $data = new SimpleXMLElement($client);
-      // $xml = simplexml_load_string($client);
+      // $data = $client->__getLastResponse();
+      $xml = str_replace(array("diffgr:","msdata:"),'', trim($data));
+      $data = new SimpleXMLElement($xml);
       // $groups = array_unique($data->xpath('//SE/Dc_Description'));
       // $equipment = $data->xpath('//SE');
-      $cc = $xml->xpath('//CC');
+      $cc = $data->xpath('//CC');
       var_dump((string)$cc[0]);
-      $co2 = $xml->xpath('//CO2');
+      $co2 = $data->xpath('//CO2');
       print_r($co2);
       $enginepower_ps = '';
       $mpg_combined = '';
       $insurancegroup150 = ''; 
       $standardmanwarranty_mileage = '';
       $standardmanwarranty_years = '';
-      $bodystyle = $xml->xpath('//BodyStyle');
+      $bodystyle = $data->xpath('//BodyStyle');
 
       $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . $cc . "', `co2` = '" . $co2 . "', `enginepower_ps` = '$enginepower_ps', `mpg_combined` = '" . $mpg_combined . "', `insurancegroup1-50` = '" . $insurancegroup150 ."', `standardmanwarranty_mileage` = '" . $standardmanwarranty_mileage . "', `standardmanwarranty_years` = '" . $standardmanwarranty_years . "', `bodystyle` = '" . $bodystyle . "' WHERE `cap_id` = '" . $cap_id . "'"; 
       echo $query2;
