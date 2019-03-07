@@ -1,3 +1,4 @@
+Redirect 301 /vehicles/ /car-leasing/
 #################################################################################################
 # START PROCESSWIRE HTACCESS DIRECTIVES
 # @version 3.0
