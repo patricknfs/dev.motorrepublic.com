@@ -22,16 +22,16 @@
 						</a>
 					</li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
-						<a href="?
+						<a href="
 							<?php
 							if($pageno <= 1){
 								echo "#";
 							}
 							else {
 								if(!empty($manuf)){
-									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
+									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&";
 								}
-								echo "pageno=" . ($pageno - 1);
+								echo "?pageno=" . ($pageno - 1);
 							}
 							?> 
 							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
