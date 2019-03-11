@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   array_push($man, $manu);
 }
 
-$selector = (Slcv2 == 1?"name=car-leasing":"van-leasing-hgv");
+$selector = ($lcv2 == 1?"name=car-leasing":"van-leasing-hgv");
 ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
