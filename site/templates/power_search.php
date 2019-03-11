@@ -12,7 +12,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   $manu = (stripos($row['manufacturer'], 'mercedes' ) === FALSE?$row['manufacturer']:"MERCEDES");
   array_push($man, $manu);
 }
-$selector = (($lcv==1)?"template=vehicles":"");
+$selector = (($lcv==1)?"name=van-leasing-hgv":"car-leasing");
 ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
