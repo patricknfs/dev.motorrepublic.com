@@ -188,7 +188,7 @@ if($page->id !== 1043){
         </div>
       </div>
       </section>
-      <!-- <div class="searchbar">
+      <div class="searchbar">
         <?php
         if($page->id !== 1043){
           ?>
@@ -196,7 +196,7 @@ if($page->id !== 1043){
           <?php
         }
         ?>
-      </div> -->
+      </div>
      
     </header>
       <?php
