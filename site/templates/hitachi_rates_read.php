@@ -24,7 +24,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 1){
-      switch($data[11]){
+      switch($data[16]){
         case 24:
         switch($data[17]){
           case 16000:
