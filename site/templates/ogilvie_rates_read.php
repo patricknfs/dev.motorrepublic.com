@@ -20,6 +20,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     $num = count($rawdata);
     $data = preg_replace('/\s+/', '', $rawdata);
+    if($row > 2){
     switch($data[22]){
       case 24:
       switch($data[23]){
@@ -96,7 +97,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
       default:
       echo $data[22] . "monthly profile not coded";
     }
-    if($row > 2){
+    
       switch($mileage){
         case 8000:
         switch($data[22]){
