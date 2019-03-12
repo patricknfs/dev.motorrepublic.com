@@ -98,7 +98,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         break;
         default:
-        echo $data[11] . "monthly profile not coded";
+        echo $data[16] . "monthly profile not coded";
       }
       switch($mileage){
         case 8000:
