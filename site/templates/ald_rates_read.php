@@ -31,16 +31,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 8000:
         switch($data[0]){
           case 24:
-          $insert = "`24_8K_PA_rental_m` = '" . $data12 . "', `24_8K_PA_rental_nm` = " . $data11;
+          $insert = "`24_8K_PA_rental_m` = '" . $data12 . "', `24_8K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 36:
-          $insert = "`36_8K_PA_rental_m` = '" . $data12 . "', `36_8K_PA_rental_nm` = " . $data11;
+          $insert = "`36_8K_PA_rental_m` = '" . $data12 . "', `36_8K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 48:
-          $insert = "`48_8K_PA_rental_m` = '" . $data12 . "', `48_8K_PA_rental_nm` = " . $data11;
+          $insert = "`48_8K_PA_rental_m` = '" . $data12 . "', `48_8K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 60:
-          $insert = "`60_8K_PA_rental_m` = '" . $data12 . "', `60_8K_PA_rental_nm` = " . $data11;
+          $insert = "`60_8K_PA_rental_m` = '" . $data12 . "', `60_8K_PA_rental_nm` = '" . $data11 . "'";
           break;
           default:
           echo "no months defined";
@@ -63,16 +63,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 10000:
         switch($data[0]){
           case 24:
-          $insert = "`24_10K_PA_rental_m` = '" . $data12 . "', `24_10K_PA_rental_nm` = " . $data11;
+          $insert = "`24_10K_PA_rental_m` = '" . $data12 . "', `24_10K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 36:
-          $insert = "`36_10K_PA_rental_m` = '" . $data12 . "', `36_10K_PA_rental_nm` = " . $data11;
+          $insert = "`36_10K_PA_rental_m` = '" . $data12 . "', `36_10K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 48:
-          $insert = "`48_10K_PA_rental_m` = '" . $data12 . "', `48_10K_PA_rental_nm` = " . $data11;
+          $insert = "`48_10K_PA_rental_m` = '" . $data12 . "', `48_10K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 60:
-          $insert = "`60_10K_PA_rental_m` = '" . $data12 . "', `60_10K_PA_rental_nm` = " . $data11;
+          $insert = "`60_10K_PA_rental_m` = '" . $data12 . "', `60_10K_PA_rental_nm` = '" . $data11 . "'";
           break;
           default:
           echo "no months defined";
@@ -95,16 +95,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 15000:
         switch($data[0]){
           case 24:
-          $insert = "`24_15K_PA_rental_m` = '" . $data12 . "', `24_15K_PA_rental_nm` = " . $data11;
+          $insert = "`24_15K_PA_rental_m` = '" . $data12 . "', `24_15K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 36:
-          $insert = "`36_15K_PA_rental_m` = '" . $data12 . "', `36_15K_PA_rental_nm` = " . $data11;
+          $insert = "`36_15K_PA_rental_m` = '" . $data12 . "', `36_15K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 48:
-          $insert = "`48_15K_PA_rental_m` = '" . $data12 . "', `48_15K_PA_rental_nm` = " . $data11;
+          $insert = "`48_15K_PA_rental_m` = '" . $data12 . "', `48_15K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 60:
-          $insert = "`60_15K_PA_rental_m` = '" . $data12 . "', `60_15K_PA_rental_nm` = " . $data11;
+          $insert = "`60_15K_PA_rental_m` = '" . $data12 . "', `60_15K_PA_rental_nm` = '" . $data11 . "'";
           break;
           default:
           echo "no months defined";
@@ -127,16 +127,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 20000:
         switch($data[0]){
           case 24:
-          $insert = "`24_20K_PA_rental_m` = '" . $data12 . "', `24_20K_PA_rental_nm` = " . $data11;
+          $insert = "`24_20K_PA_rental_m` = '" . $data12 . "', `24_20K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 36:
-          $insert = "`36_20K_PA_rental_m` = '" . $data12 . "', `36_20K_PA_rental_nm` = " . $data11;
+          $insert = "`36_20K_PA_rental_m` = '" . $data12 . "', `36_20K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 48:
-          $insert = "`48_20K_PA_rental_m` = '" . $data12 . "', `48_20K_PA_rental_nm` = " . $data11;
+          $insert = "`48_20K_PA_rental_m` = '" . $data12 . "', `48_20K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 60:
-          $insert = "`60_20K_PA_rental_m` = '" . $data12 . "', `60_20K_PA_rental_nm` = " . $data11;
+          $insert = "`60_20K_PA_rental_m` = '" . $data12 . "', `60_20K_PA_rental_nm` = '" . $data11 . "'";
           break;
           default:
           echo "no months defined";
@@ -159,16 +159,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 25000:
         switch($data[0]){
           case 24:
-          $insert = "`24_25K_PA_rental_m` = '" . $data12 . "', `24_25K_PA_rental_nm` = " . $data11;
+          $insert = "`24_25K_PA_rental_m` = '" . $data12 . "', `24_25K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 36:
-          $insert = "`36_25K_PA_rental_m` = '" . $data12 . "', `36_25K_PA_rental_nm` = " . $data11;
+          $insert = "`36_25K_PA_rental_m` = '" . $data12 . "', `36_25K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 48:
-          $insert = "`48_25K_PA_rental_m` = '" . $data12 . "', `48_25K_PA_rental_nm` = " . $data11;
+          $insert = "`48_25K_PA_rental_m` = '" . $data12 . "', `48_25K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 60:
-          $insert = "`60_25K_PA_rental_m` = '" . $data12 . "', `60_25K_PA_rental_nm` = " . $data11;
+          $insert = "`60_25K_PA_rental_m` = '" . $data12 . "', `60_25K_PA_rental_nm` = '" . $data11 . "'";
           break;
           default:
           echo "no months defined";
@@ -193,16 +193,16 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $data12 = str_replace(',','',$data[12]);
         switch($data[0]){
           case 24:
-          $insert = "`24_30K_PA_rental_m` = '" . $data12 . "', `24_30K_PA_rental_nm` = " . $data11;
+          $insert = "`24_30K_PA_rental_m` = '" . $data12 . "', `24_30K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 36:
-          $insert = "`36_30K_PA_rental_m` = '" . $data12 . "', `36_30K_PA_rental_nm` = " . $data11;
+          $insert = "`36_30K_PA_rental_m` = '" . $data12 . "', `36_30K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 48:
-          $insert = "`48_30K_PA_rental_m` = '" . $data12 . "', `48_30K_PA_rental_nm` = " . $data11;
+          $insert = "`48_30K_PA_rental_m` = '" . $data12 . "', `48_30K_PA_rental_nm` = '" . $data11 . "'";
           break;
           case 60:
-          $insert = "`60_30K_PA_rental_m` = '" . $data12 . "', `60_30K_PA_rental_nm` = " . $data11;
+          $insert = "`60_30K_PA_rental_m` = '" . $data12 . "', `60_30K_PA_rental_nm` = '" . $data11 . "'";
           break;
           default:
           echo "no months defined";
