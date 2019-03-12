@@ -25,64 +25,72 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = str_replace('£','',$data);
     $data = str_replace(',','',$data);
     $data = str_replace('#N/A',NULL,$data);
-    if($row > 6){
+    if($row > 7){
       $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` = '" . trim($data[0]) . "' LIMIT 1";
-      echo $cap_query . "</n>";
+      // echo $cap_query . "</n>";
       $cap_result = mysqli_query($conn, $cap_query);
       $cap_row = mysqli_fetch_assoc($cap_result);
       $capid = $cap_row['cap_id'];
       $insert ='';
       if($data[33] == 0){
-        $insert .= "`24_8K_PA_rental_nm` = '" . $data[8] . "',";
-        $insert .= "`36_8K_PA_rental_nm` = '" . $data[36] . "',";
-        $insert .= "`48_8K_PA_rental_nm` = '" . $data[64] . "',";
-        $insert .= "`60_8K_PA_rental_nm` = '" . $data[92] . "',";
-        $insert .= "`24_10K_PA_rental_nm` = '" . $data[12] . "',";
-        $insert .= "`36_10K_PA_rental_nm` = '" . $data[40] . "',";
-        $insert .= "`48_10K_PA_rental_nm` = '" . $data[68] . "',";
-        $insert .= "`60_10K_PA_rental_nm` = '" . $data[96] . "',";
-        $insert .= "`24_15K_PA_rental_nm` = '" . $data[20] . "',";
-        $insert .= "`36_15K_PA_rental_nm` = '" . $data[48] . "',";
-        $insert .= "`48_15K_PA_rental_nm` = '" . $data[76] . "',";
-        $insert .= "`60_15K_PA_rental_nm` = '" . $data[104] . "',";
-        $insert .= "`24_20K_PA_rental_nm` = '" . $data[24] . "',";
-        $insert .= "`36_20K_PA_rental_nm` = '" . $data[52] . "',";
-        $insert .= "`48_20K_PA_rental_nm` = '" . $data[80] . "',";
-        $insert .= "`60_20K_PA_rental_nm` = '" . $data[108] . "',";
-        $insert .= "`24_30K_PA_rental_nm` = '" . $data[28] . "',";
-        $insert .= "`36_30K_PA_rental_nm` = '" . $data[56] . "',";
-        $insert .= "`48_30K_PA_rental_nm` = '" . $data[84] . "',";
-        $insert .= "`60_30K_PA_rental_nm` = '" . $data[112] . "'";
+        $insert .= "`24_8K_PA_rental_nm` = '" . $data[11] . "',";
+        $insert .= "`36_8K_PA_rental_nm` = '" . $data[47] . "',";
+        $insert .= "`48_8K_PA_rental_nm` = '" . $data[83] . "',";
+        $insert .= "`60_8K_PA_rental_nm` = '" . $data[119] . "',";
+        $insert .= "`24_10K_PA_rental_nm` = '" . $data[15] . "',";
+        $insert .= "`36_10K_PA_rental_nm` = '" . $data[51] . "',";
+        $insert .= "`48_10K_PA_rental_nm` = '" . $data[87] . "',";
+        $insert .= "`60_10K_PA_rental_nm` = '" . $data[123] . "',";
+        $insert .= "`24_15K_PA_rental_nm` = '" . $data[23] . "',";
+        $insert .= "`36_15K_PA_rental_nm` = '" . $data[59] . "',";
+        $insert .= "`48_15K_PA_rental_nm` = '" . $data[95] . "',";
+        $insert .= "`60_15K_PA_rental_nm` = '" . $data[131] . "',";
+        $insert .= "`24_20K_PA_rental_nm` = '" . $data[31] . "',";
+        $insert .= "`36_20K_PA_rental_nm` = '" . $data[67] . "',";
+        $insert .= "`48_20K_PA_rental_nm` = '" . $data[103] . "',";
+        $insert .= "`60_20K_PA_rental_nm` = '" . $data[139] . "',";
+        $insert .= "`24_25K_PA_rental_nm` = '" . $data[35] . "',";
+        $insert .= "`36_25K_PA_rental_nm` = '" . $data[71] . "',";
+        $insert .= "`48_25K_PA_rental_nm` = '" . $data[107] . "',";
+        $insert .= "`60_25K_PA_rental_nm` = '" . $data[143] . "',";
+        $insert .= "`24_30K_PA_rental_nm` = '" . $data[39] . "',";
+        $insert .= "`36_30K_PA_rental_nm` = '" . $data[75] . "',";
+        $insert .= "`48_30K_PA_rental_nm` = '" . $data[111] . "',";
+        $insert .= "`60_30K_PA_rental_nm` = '" . $data[147] . "'";
       }
       else {
-        $insert .= "`24_8K_PA_rental_m` = '" . $data[10] . "',";
-        $insert .= "`36_8K_PA_rental_m` = '" . $data[38] . "',";
-        $insert .= "`48_8K_PA_rental_m` = '" . $data[66] . "',";
-        $insert .= "`60_8K_PA_rental_m` = '" . $data[94] . "',";
-        $insert .= "`24_10K_PA_rental_m` = '" . $data[14] . "',";
-        $insert .= "`36_10K_PA_rental_m` = '" . $data[42] . "',";
-        $insert .= "`48_10K_PA_rental_m` = '" . $data[70] . "',";
-        $insert .= "`60_10K_PA_rental_m` = '" . $data[98] . "',";
-        $insert .= "`24_15K_PA_rental_m` = '" . $data[22] . "',";
-        $insert .= "`36_15K_PA_rental_m` = '" . $data[50] . "',";
-        $insert .= "`48_15K_PA_rental_m` = '" . $data[78] . "',";
-        $insert .= "`60_15K_PA_rental_m` = '" . $data[106] . "',";
-        $insert .= "`24_20K_PA_rental_m` = '" . $data[26] . "',";
-        $insert .= "`36_20K_PA_rental_m` = '" . $data[54] . "',";
-        $insert .= "`48_20K_PA_rental_m` = '" . $data[82] . "',";
-        $insert .= "`60_20K_PA_rental_m` = '" . $data[110] . "',";
-        $insert .= "`24_30K_PA_rental_m` = '" . $data[30] . "',";
-        $insert .= "`36_30K_PA_rental_m` = '" . $data[58] . "',";
-        $insert .= "`48_30K_PA_rental_m` = '" . $data[86] . "',";
-        $insert .= "`60_30K_PA_rental_m` = '" . $data[114] . "'";
+        $insert .= "`24_8K_PA_rental_m` = '" . $data[13] . "',";
+        $insert .= "`36_8K_PA_rental_m` = '" . $data[49] . "',";
+        $insert .= "`48_8K_PA_rental_m` = '" . $data[85] . "',";
+        $insert .= "`60_8K_PA_rental_m` = '" . $data[121] . "',";
+        $insert .= "`24_10K_PA_rental_m` = '" . $data[17] . "',";
+        $insert .= "`36_10K_PA_rental_m` = '" . $data[53] . "',";
+        $insert .= "`48_10K_PA_rental_m` = '" . $data[89] . "',";
+        $insert .= "`60_10K_PA_rental_m` = '" . $data[125] . "',";
+        $insert .= "`24_15K_PA_rental_m` = '" . $data[25] . "',";
+        $insert .= "`36_15K_PA_rental_m` = '" . $data[61] . "',";
+        $insert .= "`48_15K_PA_rental_m` = '" . $data[97] . "',";
+        $insert .= "`60_15K_PA_rental_m` = '" . $data[133] . "',";
+        $insert .= "`24_20K_PA_rental_m` = '" . $data[33] . "',";
+        $insert .= "`36_20K_PA_rental_m` = '" . $data[69] . "',";
+        $insert .= "`48_20K_PA_rental_m` = '" . $data[105] . "',";
+        $insert .= "`60_20K_PA_rental_m` = '" . $data[141] . "',";
+        $insert .= "`24_25K_PA_rental_m` = '" . $data[37] . "',";
+        $insert .= "`36_25K_PA_rental_m` = '" . $data[73] . "',";
+        $insert .= "`48_25K_PA_rental_m` = '" . $data[109] . "',";
+        $insert .= "`60_25K_PA_rental_m` = '" . $data[145] . "',";
+        $insert .= "`24_30K_PA_rental_m` = '" . $data[41] . "',";
+        $insert .= "`36_30K_PA_rental_m` = '" . $data[77] . "',";
+        $insert .= "`48_30K_PA_rental_m` = '" . $data[113] . "',";
+        $insert .= "`60_30K_PA_rental_m` = '" . $data[149] . "'";
       }
       $update = "INSERT INTO `team`.`rates_alphabet`
       SET
       `cap_id` = '" . $capid  . "',
-      `CO2` = '" . $data[15] . "',
-      `p11d_price` = '" . str_replace('£','',$data[3]) . "',
+      `CO2` = '" . $data[154] . "',
+      `p11d_price` = '" . str_replace('£','',$data[5]) . "',
       `updated` = NOW(),
-      `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+      `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
       " . $insert . "
       ON DUPLICATE KEY UPDATE
       `updated` = NOW(),
