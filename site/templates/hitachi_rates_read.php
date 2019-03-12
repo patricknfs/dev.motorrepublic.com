@@ -23,7 +23,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = preg_replace('/\s+/', '', $rawdata);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
-    if($row > 1){
+    if($row > 2){
       echo "months is: " . $data[17];
       switch($data[16]){
         case 24:
