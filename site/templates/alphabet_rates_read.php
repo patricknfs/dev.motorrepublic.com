@@ -25,7 +25,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = str_replace('£','',$data);
     $data = str_replace(',','',$data);
     $data = str_replace('#N/A',NULL,$data);
-    if($row > 7){
+    if($row > 6){
       $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` = '" . trim($data[0]) . "' LIMIT 1";
       // echo $cap_query . "</n>";
       $cap_result = mysqli_query($conn, $cap_query);
