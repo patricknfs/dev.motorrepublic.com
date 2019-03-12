@@ -23,7 +23,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = preg_replace('/\s+/', '', $rawdata);
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
-    if($row > 2){
+    
       echo "months is: " . $data[17];
       switch($data[16]){
         case 24:
@@ -101,6 +101,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         default:
         echo $data[16] . "monthly profile not coded";
       }
+      if($row > 2){
       switch($mileage){
         case 8000:
         if($data[15] == 0){
