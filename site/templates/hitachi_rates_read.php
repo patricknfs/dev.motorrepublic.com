@@ -24,6 +24,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     // $data = str_replace('£','',$data);
     // $data = str_replace('#N/A',NULL,$data);
     if($row > 1){
+      echo "months is: " . $data[17}]
       switch($data[16]){
         case 24:
         switch($data[17]){
