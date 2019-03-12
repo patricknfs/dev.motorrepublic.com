@@ -15,7 +15,7 @@ $AdminMessage = "MR Ogilvie CSV Upload Report\n";
 $truncate = "TRUNCATE TABLE `team`.`rates_ogilvie`";
 $result = mysqli_query($conn, $truncate);
 $row = 1;
-$csv = "inc/ogilvie_rates_all.csv";
+$csv = "repos/ogilvie_rates_all.csv";
 if (($handle = fopen($csv , "r")) !== FALSE) {
   while (($rawdata = fgetcsv($handle, 0, ",")) !== FALSE) {
     $num = count($rawdata);
