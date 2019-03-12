@@ -27,12 +27,12 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
     $data = str_replace('#N/A',NULL,$data);
     if($row > 7){
       $cap_query = "SELECT `cap_id` FROM `team`.`vehicles` WHERE `cap_code` = '" . trim($data[0]) . "' LIMIT 1";
-      // echo $cap_query . "</n>";
+      echo $cap_query . "</n>"
       $cap_result = mysqli_query($conn, $cap_query);
       $cap_row = mysqli_fetch_assoc($cap_result);
       $capid = $cap_row['cap_id'];
       $insert ='';
-      if($data[33] == 0){
+      if($data[16] == 0){
         $insert .= "`24_8K_PA_rental_nm` = '" . $data[11] . "',";
         $insert .= "`36_8K_PA_rental_nm` = '" . $data[47] . "',";
         $insert .= "`48_8K_PA_rental_nm` = '" . $data[83] . "',";
