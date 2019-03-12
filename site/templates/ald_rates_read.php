@@ -48,13 +48,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = " . $data[24] . ",
-        `CO2` = " . $data[10] . ",
+        `cap_id` = '" . $data[24] . "',
+        `CO2` = '" . $data[10] . "',
         `vehicle_list_price` = '" . str_replace(',','',$data[15]) . "',
         `vehicle_otr_price` = '" . str_replace(',','',$data[16]) . "',
-        `p11d_price` = " . str_replace(',','',$data[5]) . ",
+        `p11d_price` = '" . str_replace(',','',$data[5]) . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[21], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -80,13 +80,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = " . $data[24] . ",
-        `CO2` = " . $data[10] . ",
+        `cap_id` = '" . $data[24] . "',
+        `CO2` = '" . $data[10] . "',
         `vehicle_list_price` = '" . str_replace(',','',$data[15]) . "',
         `vehicle_otr_price` = '" . str_replace(',','',$data[16]) . "',
-        `p11d_price` = " . str_replace(',','',$data[5]) . ",
+        `p11d_price` = '" . str_replace(',','',$data[5]) . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[21], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -112,13 +112,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = " . $data[24] . ",
-        `CO2` = " . $data[10] . ",
+        `cap_id` = '" . $data[24] . "',
+        `CO2` = '" . $data[10] . "',
         `vehicle_list_price` = '" . str_replace(',','',$data[15]) . "',
         `vehicle_otr_price` = '" . str_replace(',','',$data[16]) . "',
-        `p11d_price` = " . str_replace(',','',$data[5]) . ",
+        `p11d_price` = '" . str_replace(',','',$data[5]) . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[21], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -144,13 +144,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = " . $data[24] . ",
-        `CO2` = " . $data[10] . ",
+        `cap_id` = '" . $data[24] . "',
+        `CO2` = '" . $data[10] . "',
         `vehicle_list_price` = '" . str_replace(',','',$data[15]) . "',
         `vehicle_otr_price` = '" . str_replace(',','',$data[16]) . "',
-        `p11d_price` = " . str_replace(',','',$data[5]) . ",
+        `p11d_price` = '" . str_replace(',','',$data[5]) . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[21], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -176,13 +176,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = " . $data[24] . ",
-        `CO2` = " . $data[10] . ",
+        `cap_id` = '" . $data[24] . "',
+        `CO2` = '" . $data[10] . "',
         `vehicle_list_price` = '" . str_replace(',','',$data[15]) . "',
         `vehicle_otr_price` = '" . str_replace(',','',$data[16]) . "',
-        `p11d_price` = " . str_replace(',','',$data[5]) . ",
+        `p11d_price` = '" . str_replace(',','',$data[5]) . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[21], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -210,13 +210,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_ald`
         SET
-        `cap_id` = " . $data[24] . ",
-        `CO2` = " . $data[10] . ",
+        `cap_id` = '" . $data[24] . "',
+        `CO2` = '" . $data[10] . "',
         `vehicle_list_price` = '" . str_replace(',','',$data[15]) . "',
         `vehicle_otr_price` = '" . str_replace(',','',$data[16]) . "',
-        `p11d_price` = " . str_replace(',','',$data[5]) . ",
+        `p11d_price` = '" . str_replace(',','',$data[5]) . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[21], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[21], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
