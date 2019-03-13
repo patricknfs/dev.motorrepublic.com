@@ -55,7 +55,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
-        `cap_id` = " . $capid . ",
+        `cap_id` = '" . $capid . "',
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[15] . ",
         `p11d_price` = " . $data[6] . ",
@@ -86,7 +86,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
-        `cap_id` = " . $capid . ",
+        `cap_id` = '" . $capid . "',
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[15] . ",
         `p11d_price` = " . $data[6] . ",
@@ -117,7 +117,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
-        `cap_id` = " . $capid . ",
+        `cap_id` = '" . $capid . "',
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
@@ -148,7 +148,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
-        `cap_id` = " . $capid . ",
+        `cap_id` = '" . $capid . "',
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
@@ -179,7 +179,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
-        `cap_id` = " . $capid . ",
+        `cap_id` = '" . $capid . "',
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
@@ -210,7 +210,7 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_lex`
         SET
-        `cap_id` = " . $capid . ",
+        `cap_id` = '" . $capid . "',
         `CO2` = " . $data[5]. ",
         `vehicle_list_price` = " . $data[17] . ",
         `p11d_price` = " . $data[6] . ",
