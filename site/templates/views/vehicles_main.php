@@ -55,7 +55,7 @@
 								}
 							}
 							?> 
-							aria-label="Next page">Next <span class="show-for-sr">page</span>
+							" aria-label="Next page">Next <span class="show-for-sr">page</span>
 						</a>
 					</li>
 					<li>
