@@ -56,11 +56,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_lex`
         SET
         `cap_id` = '" . $capid . "',
-        `CO2` = " . $data[5]. ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[6] . ",
+        `CO2` = '" . $data[5]. "',
+        `vehicle_list_price` = '" . $data[17] . "',
+        `p11d_price` = '" . $data[6] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[0], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -87,11 +87,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_lex`
         SET
         `cap_id` = '" . $capid . "',
-        `CO2` = " . $data[5]. ",
-        `vehicle_list_price` = " . $data[15] . ",
-        `p11d_price` = " . $data[6] . ",
+        `CO2` = '" . $data[5]. "',
+        `vehicle_list_price` = '" . $data[17] . "',
+        `p11d_price` = '" . $data[6] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[0], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -118,11 +118,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_lex`
         SET
         `cap_id` = '" . $capid . "',
-        `CO2` = " . $data[5]. ",
-        `vehicle_list_price` = " . $data[17] . ",
-        `p11d_price` = " . $data[6] . ",
+        `CO2` = '" . $data[5]. "',
+        `vehicle_list_price` = '" . $data[17] . "',
+        `p11d_price` = '" . $data[6] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[0], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -149,11 +149,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_lex`
         SET
         `cap_id` = '" . $capid . "',
-        `CO2` = " . $data[5]. ",
-        `vehicle_list_price` = " . $data[17] . ",
-        `p11d_price` = " . $data[6] . ",
+        `CO2` = '" . $data[5]. "',
+        `vehicle_list_price` = '" . $data[17] . "',
+        `p11d_price` = '" . $data[6] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[0], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -180,11 +180,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_lex`
         SET
         `cap_id` = '" . $capid . "',
-        `CO2` = " . $data[5]. ",
-        `vehicle_list_price` = " . $data[17] . ",
-        `p11d_price` = " . $data[6] . ",
+        `CO2` = '" . $data[5]. "',
+        `vehicle_list_price` = '" . $data[17] . "',
+        `p11d_price` = '" . $data[6] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[0], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -211,11 +211,11 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         $update = "INSERT INTO `team`.`rates_lex`
         SET
         `cap_id` = '" . $capid . "',
-        `CO2` = " . $data[5]. ",
-        `vehicle_list_price` = " . $data[17] . ",
-        `p11d_price` = " . $data[6] . ",
+        `CO2` = '" . $data[5]. "',
+        `vehicle_list_price` = '" . $data[17] . "',
+        `p11d_price` = '" . $data[6] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[0], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[0], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
