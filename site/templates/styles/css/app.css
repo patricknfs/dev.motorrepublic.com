@@ -9971,7 +9971,7 @@ select[multiple] {
   color: #0a0a0a;
 }
 
-/* .pagination-previous a::before,
+.pagination-previous a::before,
 .pagination-previous.disabled::before {
   display: inline-block;
   margin-right: 0.5rem;
@@ -9983,7 +9983,7 @@ select[multiple] {
   display: inline-block;
   margin-left: 0.5rem;
   content: '\00bb';
-} */
+}
 
 .progress {
   height: 1rem;
