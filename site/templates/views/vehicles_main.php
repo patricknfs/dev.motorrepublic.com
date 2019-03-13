@@ -31,7 +31,13 @@
 								if(!empty($manuf)){
 									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&";
 								}
-								echo "?pageno=" . ($pageno - 1);
+								if(!empty($manuf)){
+									echo "pageno=" . ($pageno - 1);
+								}
+								else {
+									echo "?pageno=" . ($pageno - 1);
+								}
+								
 							}
 							?> 
 							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
