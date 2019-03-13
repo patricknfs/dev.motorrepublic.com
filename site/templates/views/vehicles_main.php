@@ -18,11 +18,11 @@
 								}
 								echo "pageno=1";
 							?> 
-							aria-label="First page">First <span class="show-for-sr">page</span>
+							" aria-label="First page">First <span class="show-for-sr">page</span>
 						</a>
 					</li>
 					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
-						<a href="
+						<a href="?
 							<?php
 							if($pageno <= 1){
 								echo "#";
@@ -36,7 +36,7 @@
 								}
 							}
 							?> 
-							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
+							" aria-label="Previous page">Prev <span class="show-for-sr">page</span>
 						</a>
 					</li>
 					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
@@ -66,7 +66,7 @@
 								}
 								echo "pageno=" . $total_pages;
 							?> 
-							aria-label="Last page">Last <span class="show-for-sr">page</span>
+							" aria-label="Last page">Last <span class="show-for-sr">page</span>
 						</a>
 					</li>
 					<!-- <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li> -->
