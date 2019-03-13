@@ -51,10 +51,7 @@
 							}
 							else {
 								if(!empty($manuf)){
-									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&";
-								}
-								if(!empty($manuf)){
-									echo "pageno=" . ($pageno + 1);
+									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&pageno=" . ($pageno + 1);
 								}
 								else {
 									echo "?pageno=" . ($pageno + 1);
