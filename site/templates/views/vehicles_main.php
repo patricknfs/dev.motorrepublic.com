@@ -42,7 +42,7 @@
 					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
 						<a href="?
 							<?php
-							echo "total pages: " . $total_pages;
+							// echo "total pages: " . $total_pages;
 							if($pageno >= $total_pages){
 								echo "#";
 							}
