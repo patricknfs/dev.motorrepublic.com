@@ -44,17 +44,17 @@
 						</a>
 					</li>
 					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-						<a href="
+						<a href="?
 							<?php
 							if($pageno >= $total_pages){
 								echo "#";
 							}
 							else {
 								if(!empty($manuf)){
-									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&pageno=" . ($pageno + 1);
+									echo "slct1=" . $manuf . "&slct2=" . $mdl . "&pageno=" . ($pageno + 1);
 								}
 								else {
-									echo "?pageno=" . ($pageno + 1);
+									echo "pageno=" . ($pageno + 1);
 								}
 							}
 							?> 
