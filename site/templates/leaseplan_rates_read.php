@@ -28,20 +28,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 8000:
         switch($data[12]){
           case 24:
-          $insert = "`24_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`24_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`24_8K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`24_8K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 36:
-          $insert = "`36_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`36_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`36_8K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`36_8K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 48:
-          $insert = "`48_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`48_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`48_8K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`48_8K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 60:
-          $insert = "`60_8K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`60_8K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`60_8K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`60_8K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           default:
           echo "no months defined";
@@ -49,13 +49,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[0] . ",
-        `CO2` = " . $data[9] . ",
-        `vehicle_list_price` = " . $data[10] . ",
+        `cap_id` = '" . $data[0] . "',
+        `CO2` = '" . $data[9] . "',
+        `vehicle_list_price` = '" . $data[10] . "',
         `vehicle_otr_price` = '0.00',
-        `p11d_price` = " . $data[8] . ",
+        `p11d_price` = '" . $data[8] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[1], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -64,20 +64,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 10000:
         switch($data[12]){
           case 24:
-          $insert = "`24_10K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`24_10K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`24_10K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`24_10K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 36:
-          $insert = "`36_10K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`36_10K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`36_10K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`36_10K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 48:
-          $insert = "`48_10K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`48_10K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`48_10K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`48_10K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 60:
-          $insert = "`60_10K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`60_10K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`60_10K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`60_10K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           default:
           echo "no months defined";
@@ -85,13 +85,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[0] . ",
-        `CO2` = " . $data[9] . ",
-        `vehicle_list_price` = " . $data[10] . ",
+        `cap_id` = '" . $data[0] . "',
+        `CO2` = '" . $data[9] . "',
+        `vehicle_list_price` = '" . $data[10] . "',
         `vehicle_otr_price` = '0.00',
-        `p11d_price` = " . $data[8] . ",
+        `p11d_price` = '" . $data[8] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[1], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -100,20 +100,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 15000:
         switch($data[12]){
           case 24:
-          $insert = "`24_15K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`24_15K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`24_15K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`24_15K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 36:
-          $insert = "`36_15K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`36_15K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`36_15K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`36_15K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 48:
-          $insert = "`48_15K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`48_15K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`48_15K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`48_15K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 60:
-          $insert = "`60_15K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`60_15K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`60_15K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`60_15K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           default:
           echo "no months defined";
@@ -121,13 +121,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[0] . ",
-        `CO2` = " . $data[9] . ",
-        `vehicle_list_price` = " . $data[10] . ",
+        `cap_id` = '" . $data[0] . "',
+        `CO2` = '" . $data[9] . "',
+        `vehicle_list_price` = '" . $data[10] . "',
         `vehicle_otr_price` = '0.00',
-        `p11d_price` = " . $data[8] . ",
+        `p11d_price` = '" . $data[8] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[1], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -136,20 +136,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 20000:
         switch($data[12]){
           case 24:
-          $insert = "`24_20K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`24_20K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`24_20K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`24_20K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 36:
-          $insert = "`36_20K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`36_20K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`36_20K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`36_20K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 48:
-          $insert = "`48_20K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`48_20K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`48_20K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`48_20K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 60:
-          $insert = "`60_20K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`60_20K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`60_20K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`60_20K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           default:
           echo "no months defined";
@@ -157,13 +157,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[0] . ",
-        `CO2` = " . $data[9] . ",
-        `vehicle_list_price` = " . $data[10] . ",
+        `cap_id` = '" . $data[0] . "',
+        `CO2` = '" . $data[9] . "',
+        `vehicle_list_price` = '" . $data[10] . "',
         `vehicle_otr_price` = '0.00',
-        `p11d_price` = " . $data[8] . ",
+        `p11d_price` = '" . $data[8] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[1], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -172,20 +172,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 25000:
         switch($data[12]){
           case 24:
-          $insert = "`24_25K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`24_25K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`24_25K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`24_25K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 36:
-          $insert = "`36_25K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`36_25K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`36_25K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`36_25K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 48:
-          $insert = "`48_25K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`48_25K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`48_25K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`48_25K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 60:
-          $insert = "`60_25K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`60_25K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`60_25K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`60_25K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           default:
           echo "no months defined";
@@ -193,13 +193,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[0] . ",
-        `CO2` = " . $data[9] . ",
-        `vehicle_list_price` = " . $data[10] . ",
+        `cap_id` = '" . $data[0] . "',
+        `CO2` = '" . $data[9] . "',
+        `vehicle_list_price` = '" . $data[10] . "',
         `vehicle_otr_price` = '0.00',
-        `p11d_price` = " . $data[8] . ",
+        `p11d_price` = '" . $data[8] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[1], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
@@ -208,20 +208,20 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         case 30000:
         switch($data[12]){
           case 24:
-          $insert = "`24_30K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`24_30K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`24_30K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`24_30K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 36:
-          $insert = "`36_30K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`36_30K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`36_30K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`36_30K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 48:
-          $insert = "`48_30K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`48_30K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`48_30K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`48_30K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           case 60:
-          $insert = "`60_30K_PA_rental_nm` = " . ($data[17]);
-          $insert .= ",`60_30K_PA_rental_m` = " . ($data[17]+$data[18]);
+          $insert = "`60_30K_PA_rental_nm` = '" . ($data[17]) . "'";
+          $insert .= ",`60_30K_PA_rental_m` = '" . ($data[17]+$data[18]) . "'";
           break;
           default:
           echo "no months defined";
@@ -229,13 +229,13 @@ if (($handle = fopen($csv , "r")) !== FALSE) {
         }
         $update = "INSERT INTO `team`.`rates_leaseplan`
         SET
-        `cap_id` = " . $data[0] . ",
-        `CO2` = " . $data[9] . ",
-        `vehicle_list_price` = " . $data[10] . ",
+        `cap_id` = '" . $data[0] . "',
+        `CO2` = '" . $data[9] . "',
+        `vehicle_list_price` = '" . $data[10] . "',
         `vehicle_otr_price` = '0.00',
-        `p11d_price` = " . $data[8] . ",
+        `p11d_price` = '" . $data[8] . "',
         `updated` = NOW(),
-        `lcv` = " . ((substr($data[1], -1) == 'L')?1:0) . ",
+        `lcv` = '" . ((substr($data[1], -1) == 'L')?1:0) . "',
         " . $insert . "
         ON DUPLICATE KEY UPDATE
         `updated` = NOW(),
