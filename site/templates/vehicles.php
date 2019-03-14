@@ -24,12 +24,12 @@ if (isset($_GET['pageno'])) {
 }
 $no_of_records_per_page = 21;
 $offset = ($pageno-1) * $no_of_records_per_page;
-if (isset($page->marque)){
-  $manuf = $page->marque;
-}
-else {
+// if (isset($page->marque)){
+//   $manuf = $page->marque;
+// }
+// else {
   $manuf = $sanitizer->text($input->get->slct1);
-}
+// }
 
 // echo "Manuf is: " . $manuf;
 $mdllcv = $sanitizer->text($input->get->slct2);
