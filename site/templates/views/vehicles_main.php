@@ -143,42 +143,68 @@
 	</div>
 	<div class="grid-x align-center">
 		<nav aria-label="Pagination">
-				<ul class="pagination text-center">
-					<li><a href="?pageno=1">First</a></li>
-					<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
-						<a href="
-							<?php
-							if($pageno <= 1){
-								echo "#";
+			<ul class="pagination text-center">
+				<li>
+					<a href="?
+						<?php
+							if(!empty($manuf)){
+								echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
+							}
+							echo "pageno=1";
+						?> 
+						" aria-label="First page">First <span class="show-for-sr">page</span>
+					</a>
+				</li>
+				<li class="pagination-previous <?php if($pageno <= 1){ echo 'disabled'; } ?>">
+					<a href="?
+						<?php
+						if($pageno <= 1){
+							echo "#";
+						}
+						else {
+							if(!empty($manuf)){
+								echo "slct1=" . $manuf . "&slct2=" . $mdl . "&pageno=" . ($pageno - 1);
 							}
 							else {
-								if(!empty($manuf)){
-									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&";
-								}
-								echo "?pageno=" . ($pageno - 1);
+								echo "pageno=" . ($pageno - 1);
 							}
-							?> 
-							aria-label="Previous page">Prev <span class="show-for-sr">page</span>
-						</a>
-					</li>
-					<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-						<a href="
-							<?php
-							if($pageno >= $total_pages){
-								echo "#";
+						}
+						?> 
+						" aria-label="Previous page">Prev <span class="show-for-sr">page</span>
+					</a>
+				</li>
+				<li class="pagination-next <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+					<a href="?
+						<?php
+						// echo "total pages: " . $total_pages;
+						if($pageno >= $total_pages){
+							echo "#";
+						}
+						else {
+							if(!empty($manuf)){
+								echo "slct1=" . $manuf . "&slct2=" . $mdl . "&pageno=" . ($pageno + 1);
 							}
 							else {
-								if(!empty($manuf)){
-									echo "?slct1=" . $manuf . "&slct2=" . $mdl . "&";
-								}
-								echo "?pageno=" . ($pageno + 1);
+								echo "pageno=" . ($pageno + 1);
 							}
-							?> 
-							aria-label="Next page">Next <span class="show-for-sr">page</span>
-						</a>
-					</li>
-					<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
-				<ul>
-			</nav>
+						}
+						?> 
+						" aria-label="Next page">Next <span class="show-for-sr">page</span>
+					</a>
+				</li>
+				<li>
+					<a href="?
+						<?php
+							if(!empty($manuf)){
+								echo "slct1=" . $manuf . "&slct2=" . $mdl . "&";
+							}
+							echo "pageno=" . $total_pages;
+						?> 
+						" aria-label="Last page">Last <span class="show-for-sr">page</span>
+					</a>
+				</li>
+				<!-- <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li> -->
+			<ul>
+		</nav>
 	</div>
 </section>
