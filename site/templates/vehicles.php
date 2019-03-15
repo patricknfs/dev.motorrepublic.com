@@ -24,6 +24,7 @@ if (isset($_GET['pageno'])) {
 }
 $no_of_records_per_page = 21;
 $offset = ($pageno-1) * $no_of_records_per_page;
+echo "Marque is: "  . $page->marque;
 if ($page->marque != ''){
   $manuf = $page->marque;
 }
