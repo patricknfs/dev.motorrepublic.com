@@ -26,7 +26,7 @@ $no_of_records_per_page = 21;
 $offset = ($pageno-1) * $no_of_records_per_page;
 echo "Marque is: "  . $page->marque->title;
 if ($page->marque != ''){
-  $manuf = strtoupper($page->marque);
+  $manuf = strtoupper($page->marque->title);
 }
 else {
   $manuf = $sanitizer->text($input->get->slct1);
