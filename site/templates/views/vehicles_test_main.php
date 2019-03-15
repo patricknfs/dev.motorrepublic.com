@@ -1,5 +1,5 @@
 <?php
-$ds = $page->dynamic;
+$ds = $page->manufacturers;
 
 echo $ds->manufacturers;
 ?>
