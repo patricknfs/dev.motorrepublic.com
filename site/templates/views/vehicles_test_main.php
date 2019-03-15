@@ -1,3 +1,8 @@
+<?php
+$ds = $page->dynamic;
+
+echo $ds->manufacturers;
+?>
 <section id="vehicles">
 	<div class="grid-container">
 		<!-- <div class="grid-x">
