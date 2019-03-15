@@ -1,0 +1,388 @@
+<?php
+
+/**
+* Dynamic Selects: Process
+* 
+* ProcessDynamicSelects enables the creation of dynamic/chained/cascading selects/dropdowns.
+* These selects are for use in MarkupDynamicSelects (frontend).
+* Unlike FieldtypeDynamicSelects, the values/data of these selects are not stored.
+* However, after using the selects to filter data, devs can implement any post-manipulation they wish, e.g. post them via a form
+*
+* @author Francis Otieno (Kongondo)
+*
+* This is a Copyrighted Commercial Module. Please do not distribute or host publicly. The license is not transferable.
+*  
+* ProcessDynamicSelects for ProcessWire
+* Copyright (C) 2016 by Francis Otieno
+* Licensed under a Commercial Licence (see README.txt)
+*
+* @permission Permission 'dynamic-selects':			This permission allows the user to access/view Dynamic Selects.
+*													The permission is automatically created when the module is installed.
+*
+* -----------------------------------------------------------------------------------------------------------------------------------
+* Custom Permissions. @note: These permissions kick in only if present. Create them and assign them to roles if you need to use them.
+* -----------------------------------------------------------------------------------------------------------------------------------
+*
+* @permission Permission 'dynamic-selects-publish': 	This permission allows the user to (un)publish dynamic selects.
+* @permission Permission 'dynamic-selects-lock': 		This permission allows the user to (un)lock dynamic selects.
+* @permission Permission 'dynamic-selects-delete': 		This permission allows the user to trash or delete dynamic selects.
+* @permission Permission 'dynamic-selects-edit': 		This permission allows the user to edit dynamic selects.
+*
+*/
+
+class ProcessDynamicSelects extends Process implements Module {
+	
+	/**
+	 * Return information about this module (required)
+	 *
+	 */	
+	public static function getModuleInfo() {
+	
+		// @User role needs 'dynamic-selects' permission
+		// @$permission = 'dynamic-selects';
+		// @Installs Markupdynamicselects, FieldtypeDynamicSelects
+
+		return array(
+			'title' => 'Dynamic Selects: Process',			
+			'author' => 'Francis Otieno (Kongondo)',
+			'version' => 5,
+			'href' => 'http://dynamicselects.kongondo.com',			
+			'summary' => 'Dynamic Selects: Ajax-driven builder of dynamic selects/dropdown lists for multiple data types.',			
+			'singular' => true, 
+			'autoload' => false, 
+			'permission' => 'dynamic-selects',
+			'installs' => array('FieldtypeDynamicSelects', 'MarkupDynamicSelects'),
+		);
+
+	}	
+		
+	const PAGE_NAME = 'dynamic-selects';
+
+	// for external Classes that extend this module
+	protected $dsRender;
+	protected $dsActions;
+
+	private $cookieName;// name of the cookie used to save limit of selects to show per page in selects dashboard
+	private $showLimit;// value of number of selects to show per page in selects dashboard
+	
+
+	/* ######################### - SET UP - ######################### */
+	
+	/**
+	 * Set some key properties for use throughout the class.
+	 *
+	 * @access public
+	 *
+	 */
+	public function __construct() {
+
+    	/******** - PERMISSIONS CHECK - *******/
+		$this->noPublish = $this->permissions->get('dynamic-selects-publish')->id && !$this->user->hasPermission('dynamic-selects-publish') ? true : false;
+		$this->noLock = $this->permissions->get('dynamic-selects-lock')->id && !$this->user->hasPermission('dynamic-selects-lock') ? true : false;
+		$this->noDelete = $this->permissions->get('dynamic-selects-delete')->id && !$this->user->hasPermission('dynamic-selects-delete') ? true : false;
+		$this->noEdit = $this->permissions->get('dynamic-selects-edit')->id && !$this->user->hasPermission('dynamic-selects-edit') ? true : false;
+
+		/******** - SCRIPTS AND STYLES - *******/
+
+		$config = $this->wire('config');
+
+		$url = $config->urls->ProcessDynamicSelects;
+		$config->styles->add($url . "DynamicSelectsRender.css");// @note: css + js in an 'external' file to be shared between
+		$config->scripts->add($url . "DynamicSelectsRender.js");//...InputfieldDynamicSelects and MarkupDynamicSelects modules
+
+		parent::__construct();
+
+		// include helper classes
+		$dir = dirname(__FILE__);
+		require_once("$dir/DynamicSelectsRender.php");
+		require_once("$dir/DynamicSelectsDatabase.php");
+		require_once("$dir/DynamicSelectsActions.php");
+		require_once("$dir/DynamicSelectsUtilities.php");// @note: need it for DynamicSelectsRender to properly initialise when module first installed
+
+	}
+
+	/**
+	 * Initialise the module. This is an optional initialisation method called before any execute methods.
+	 *	
+	 * Initialises various class properties ready for use throughout the class.
+	 *
+	 * @access public
+	 *
+	 */
+	public function init() {
+
+		if ($this->permissions->get('dynamic-selects')->id && !$this->user->hasPermission('dynamic-selects'))
+			 throw new WirePermissionException('Dynamic Selects: You have no permission to use this module');
+
+		parent::init();
+
+		/******** - SCRIPTS AND STYLES - *******/
+		$config = $this->wire('config');
+		$config->scripts->add($config->urls->ProcessDynamicSelects . "DynamicSelectsConfig.js");
+
+		$this->dsRender = new DynamicSelectsRender();
+		$this->dsActions = new DynamicSelectsActions();
+
+		// cookie per user to save state of number of selects to display per pagination screen in execute() (landing page)
+		$this->cookieName = $this->wire('user')->id . '-dynamicselects';
+		// default number of selects to show in execute() if no custom limit set (via post/session cookie).
+		$this->showLimit = 10;
+
+		/******** - INITIALIZE WIRETABS - *******/
+		$this->wire('modules')->get('JqueryWireTabs');
+
+	}
+
+	/* ######################### - EXECUTE PAGES - ######################### */
+	
+	/**
+	 * Displays a list of the dynamic selects.
+	 * 
+	 * Dynamic Selects dashboard.
+	 *
+	 * @access public
+	 * @return String $out.
+	 *
+	 */
+	public function ___execute() {
+		$out = $this->dsRender->renderDynamicSelectsDashboard($this->cookieName, $this->showLimit);
+		return $out;
+	}
+	
+	/**
+	 * Renders a single 'dynamic select' for editing.
+	 *
+	 * Called when the URL is Dynamic Selects page URL + "/edit/" 
+	 *
+	 * @access public
+	 * @return String $out.
+	 *
+	 */
+	public function ___executeEdit() {
+		$out = $this->dsRender->renderDynamicSelectsSingleEdit($this->className());
+		return $out;
+	}			
+
+	/* ######################### - PROCESS NON-AJAX FORMS - ######################### */
+	
+	/**
+	 * Processes ProcessDynamicSelects form inputs (CRUD).
+	 *	
+	 * CRUD: Processes all the form input sent from execute() and executeEdit().
+	 *	
+	 * @param mixed $form Sent form values
+	 * @param $action Int $action Determines what form action was executed (1=create; 2=bulk actions; 3=single edit; 4=delete single).
+	 * @access protected
+	 *	
+	 */
+	protected function save($form, $action) {
+
+		// process form
+		$post = $this->wire('input')->post;
+		$form->processInput($post);
+		$dsID = (int) $this->input->post->ds_id;
+
+		$options = array();
+		$actionType = '';
+		$saveAndExit = false;
+		$action = (int) $action;
+		
+		//  01. ================ save new dynamic selects =====================
+		if ($action == 1){
+				$createDSUnpublishedBtn = $post->ds_create_unpublished_btn;
+				$createDynamicSelects = $post->ds_create;// $createDynamicSelects will be a string of text separated by a new line (\n).
+				if ($createDynamicSelects) {
+						$actionType = 'create';
+						$options['published'] = $createDSUnpublishedBtn ? 0 : 1;
+						$this->dsActions->actionDynamicSelects($actionType, $createDynamicSelects, $options);
+				}
+				// show error message if add button clicked without first entering some categories to add
+				else $this->error($this->_('Dynamic Selects: You need to first add titles of dynamic selects to be created.'));
+		}	
+		//  02. ================ apply bulk actions to existing dynamic selects =====================
+		elseif($action == 2) {// was the right button pressed		
+				$bulkAction = $post->ds_action_select;
+				// if no bulk action was selected
+				if (!$bulkAction) {
+						$this->error($this->_('Dynamic Selects: You need to select an action to apply first.'));
+						return false;
+				}
+
+				$actionSelects = $post->ds_action;// checkbox array name
+				// check if 'dynamic selects' were selected. 
+				if ($actionSelects) {
+						$actionType = $this->wire('sanitizer')->fieldName($bulkAction);
+						$dynamicSelects = $actionSelects;
+						$this->dsActions->actionDynamicSelects($actionType, $dynamicSelects);
+				}
+
+				else {
+						// show error message if 'apply action button' clicked without first selecting 'dynamic selects'
+						$this->error($this->_('Dynamic Selects: You need to select at least one dynamic select before applying an action.'));
+						return false;
+				}
+		
+		}
+		//  03. ================ save edits to a single dynamic select	 =====================
+		elseif($action == 3) {
+				$saveAndExitBtn = $post->ds_save_exit;
+				if($saveAndExitBtn) $saveAndExit = true;
+				$actionType = 'edit';
+				// @note: settings of a single 'dynamic selects'
+				$this->dsActions->actionDynamicSelects($actionType, $post);
+		}// end elseif save single dynamic select
+		
+		//  04. ================ delete a single dynamic select (edit mode) =====================
+		elseif($action == 4) {
+				// $dsDelete = $this->input->post->ds_delete;// changed to hidden input from button in ProcessDynamicSelects.js
+				$dsDeleteConfirm = $post->ds_delete_confirm;// checkbox to confirm trash
+					if($dsDeleteConfirm) {
+							// if user does not have permission to trash/delete a dynamic select, exit with an error							
+							// @access-control: dynamic-selects-delete
+							if($this->noDelete) {
+									$this->error($this->_('Dynamic Selects: You have no permission to delete selects.'));
+							}
+						
+							$actionType = 'trash';
+							$this->dsActions->actionDynamicSelects($actionType, array($dsDeleteConfirm));
+							$saveAndExit = true;
+					}// end if confirm delete
+
+		}// end elseif delete dynamic select
+
+		$editURL = !$saveAndExit ? 'edit/?id=' . $dsID : '';// if no 'save and exit' keep on editing 'dynamic select'
+		$this->wire('session')->redirect($this->wire('page')->url . $editURL);
+
+	}
+
+	/* ######################### - AJAX - ######################### */
+
+	/**
+	 * A URL for receiving ajax calls and passing these on for processing.
+	 *
+	 * Process InputfieldDynamicSelects ajax requests.
+	 *
+	 * @access public
+	 * @return $dataJSON String JSON-encoded string with results to populate a given select.
+	 *
+	 */
+	public function executeAjax() {
+		if ($this->config->ajax) {
+			$input = $this->input->post;
+			header('Content-Type: application/json');
+			$dataJSON = $this->dsActions->processDataRequest($input, false);
+			echo $dataJSON;
+			exit;
+		}
+	}
+
+	/* ######################### - INSTALLERS - ######################### */
+
+	/**
+	 * Install/Verify Dynamic Selects components.
+	 *
+	 * Process InputfieldDynamicSelects ajax requests.
+	 *
+	 * @access private
+	 * @param Int/Null $mode Determines whether criteria for install has been verified.
+	 * @return DynamicSelectsInstaller::verifyInstall() Verifies or Installs Dynamic Selects components.
+	 *
+	 */
+	private function dsInstaller($mode) {
+		// run Dynamic Selects installer
+		/*	
+			@note:
+				- installs 1 template (for dynamic selects [child pages of main Dynamic Selects page])
+				- 1 field (for saving each dynamic selects settings)
+		*/
+		require_once(dirname(__FILE__) . '/DynamicSelectsInstaller.php'); 
+		$dsi = new DynamicSelectsInstaller();
+		return $dsi->verifyInstall($mode);
+	}
+
+	/**
+	 * Cleanup Dynamic Selects components when the module is uninstalled.
+	 *	 
+	 *
+	 * @access private
+	 * @param Int $moduleID ID of the module whose components we will be removing.
+	 * @return DynamicSelectsCleanup::cleanUp() Removes Dynamic Selects components.
+	 *
+	 */
+	private function dsCleanup($moduleID) {
+		// run Dynamic Selects uninstaller/cleanup wizard
+		/*
+			@note: uninstalls:
+				- this ProcessDynamicSelects page + all its children (dynamic selects pages)
+				- 1 template ('dynamic-selects')
+				- 1 field (ds_settings)
+				- 1 permission ('dynamic-selects')
+		*/
+		require_once(dirname(__FILE__) . '/DynamicSelectsCleanup.php'); 
+		$dsu = new DynamicSelectsCleanup();
+		return $dsu->cleanUp($moduleID);
+	}
+	
+	/**
+	 * Called only when the module is installed.
+	 *
+	 * A new page with this Process module assigned is created. 
+	 * A new permission 'dynamic-selects' is created.
+	 *
+	 * @access public
+	 *
+	 */	
+	public function ___install() {
+	
+		// installer for template and fields + their tags  to be used by Dynamic Selects	
+		// create ProcessDynamicSelects admin page and permission if DynamicSelectsInstaller was successful in its validation
+		if($this->dsInstaller($mode = null) == true) {
+			// create Dynamic Selects page and permission		
+			$page = new Page();
+			$page->template = 'admin';
+			$page->parent = $this->pages->get($this->config->adminRootPageID);
+			$page->title = 'Dynamic Selects';
+			$page->name = self::PAGE_NAME;
+			$page->process = $this;
+			$page->save();
+		
+			$this->dsInstaller($mode = 1);// run DynamicSelectsInstaller
+			// tell the user we created this page
+			$this->message("Dynamic Selects: Created page {$page->path}");
+		
+		}// end if install verification passed
+
+		else throw new WireException($this->_('Dynamic Selects: Installation aborted. Check and fix reported errors first.'));
+		
+		// create module's permission
+		$permission = $this->wire('permissions')->get('dynamic-selects');
+		if (!$permission->id) {
+				$p = new Permission();
+				$p->name = 'dynamic-selects';
+				$p->title = $this->_('View Dynamic Selects Page');
+				$p->save();
+			
+				// tell the user we created this module's permission
+				$this->message('Dynamic Selects: Created New Permission dynamic-selects');
+		}			
+	
+	}
+
+	/**
+	 * Called only when the module is uninstalled.
+	 *
+	 * This should return the site to the same state it was in before the module was installed.
+	 * Deletes
+	 *
+	 * @access public
+	 *
+	 */	 
+	public function ___uninstall() {
+		// find and delete the page we installed, locating it by the process field (which has the module ID)
+		// it would probably be sufficient just to locate by name, but this is just to be extra sure.
+		$moduleID = $this->wire('modules')->getModuleID($this); 
+		$this->dsCleanup($moduleID);// run DynamicSelectsCleanup / wizard
+	}
+
+	
+}

@@ -1,0 +1,140 @@
+<?php
+
+/**
+* Dynamic Selects: Inputfield
+*
+* Ajax-driven Inputfield that renders and processes dynamic/chained/cascading selects/dropdowns on a page.
+* Graphical User Interface for FieldtypeDynamicSelects.
+*
+* @author Francis Otieno (Kongondo) <kongondo@gmail.com> kongondo.com
+* 
+* This is a Copyrighted Commercial Module. Please do not distribute or host publicly. The license is not transferable.
+*  
+* InputfieldDynamicSelects for ProcessWire
+* Copyright (C) 2016 by Francis Otieno
+* Licensed under a Commercial Licence (see README.txt)
+*
+*/
+
+class InputfieldDynamicSelects extends Inputfield {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => 'Dynamic Selects (Inputfield)',
+			'author' => 'Francis Otieno (Kongondo)',
+			'version' => 5,
+			'href' => 'http://dynamicselects.kongondo.com',
+			'summary' => 'Dynamic Selects: An ajax-driven dynamic (dependent/cascading/chained) selects/dropdown lists GUI (Inputfield) for FieldtypeDynamicSelects.',
+			'requires' => 'FieldtypeDynamicSelects', 
+			);
+	}
+
+	public function init() {
+		parent::init();
+	}
+
+	public function setField(Field $field) {
+		$this->field = $field;
+	}
+
+	################
+
+	/**
+	 * Outputs javascript configuration values for ajax calls made by dynamic selects.
+	 *
+	 * @access protected
+	 * @return Object $scripts Populate modules JS config with options.
+	 *
+	 */
+	protected function ajaxConfigs() {
+		$config = $this->wire('config');
+		// options for ajax calls
+		$ajaxURL = $config->urls->admin . 'dynamic-selects/ajax/';//@note: Only for InputfieldDynamicSelects; not frontend!
+		$dataFetchError = $this->_('Dynamic Selects: There was an error fetching data');
+		$options = array('config' => array('ajaxURL' => $ajaxURL, 'fetchError' => $dataFetchError));
+		// @note: generic config name shared between InputfieldDynamicSelects and MarkupDynamicSelects modules
+		$scripts = $config->js('DynamicSelects', $options);
+		return $scripts;
+	}
+
+	/**
+	 * Render dynamic (dependent/chained/cascading) selects/dropdowns showing saved and selectable values.
+	 *
+	 * @access public
+	 * @return String $out Markup of dynamic selects.
+	 *
+	 */
+	public function ___render() {
+
+		$this->ajaxConfigs();// output js configurations for our ajax scripts
+
+		// get an instance of DynamicSelectsRender() class
+		// @note: class inluded via FieldtypeDynamicSelects
+		$ds = new DynamicSelectsRender();
+
+		$out = '';
+
+		$values = $this->attr('value');
+		
+		if(!isset($this->field->data['columns']) || !$this->field->valid) {
+			$error = $this->_('Dynamic Selects: This field has not yet been properly set up. Please check your field settings.');
+			return $this->field->error($error);
+		}
+
+		// error if only 1 column has been set up. At least 2 are needed; a trigger and a dependent
+		if($this->field->numCols < 2) {
+			$error = $this->_('Dynamic Selects: You need at least 2 columns for this field to work; a trigger and a dependent select.');
+			return $this->field->error($error);
+		}
+		
+		$uniqueid = $this->field->name . '|' . $this->field->id;
+		$selects = $ds->renderSelects($this->field->data, $values, $uniqueid, false);// @note: false here means we are not in FRONTEND
+		
+		if(is_null($selects)) {
+			$error = $this->_('Dynamic Selects: A Selector or custom code need to be specified to return data for first/initial dyanamic select.');
+			return $this->field->error($error);
+		}
+
+		$out .= $selects;
+
+		return $out;
+
+	}
+	
+	/**
+	 * Process input for the values sent from this field for saving to db
+	 */
+	public function ___processInput(WireInputData $input) {
+
+		$value = $this->attr('value');// old values
+		// @note we get and iterate field settings 'columns' since we don't know beforehand the names of the inputs for this field
+		$columns = $this->field->data['columns'];
+
+		$data = array();
+
+		foreach ($columns as $columnName => $columnValues) {
+			$columnData = explode('|', $input->$columnName);// @note: can be ID of page|template|field|user
+			$columnID = (int) $columnData[0];
+			// for multi-files/images/options, we need to save the name of the item...
+			//...since they don't have individual IDs to be able to identify them uniquely when matching selected <option>
+			if(isset($columnData[1])){
+				if(!ctype_digit($columnData[1])) $data[$columnName] = $columnData[1];// file|image|options name/title saved to 'data' column
+				else $columnID = (int) $columnData[1];// @note: if digit means fieldID so save it instead for this column
+			}
+			// set our values ready for save + track changes
+			$value->set($columnName, $columnID);
+			$this->trackChange('value');
+		}
+
+		if(count($data)) $data = json_encode($data);
+		else $data = '';
+		$value->set('extraData', $data);
+		$this->trackChange('value');// @todo...needed again?
+
+		return $this;
+
+	}
+
+
+}
+

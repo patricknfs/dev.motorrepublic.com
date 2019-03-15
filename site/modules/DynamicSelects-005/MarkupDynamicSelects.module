@@ -1,0 +1,358 @@
+<?php
+
+/**
+* Dynamic Selects: Markup
+*
+* Module that outputs values of dynamic/chained/cascading created using ProcessDynamicSelects.
+* These Dynamic Selects are built and defined within the Process Module. They are not stored anywhere else.
+* There's no limit to the number of selects that can be defined.
+* @note: Rendering of the selects are 'access' controlled. Accessiblity is defined when building the selects.
+* By default, only logged in users can view selects.
+*
+* @author Francis Otieno (Kongondo) <kongondo@gmail.com> kongondo.com
+* 
+* This is a Copyrighted Commercial Module. Please do not distribute or host publicly. The license is not transferable.
+*  
+* MarkupDynamicSelects for ProcessWire
+* Copyright (C) 2016 by Francis Otieno
+* Licensed under a Commercial Licence (see README.txt)
+*
+*/
+
+class MarkupDynamicSelects extends WireData implements Module {
+	
+	/**
+	 * Return information about this module (required)
+	 * @ Requires ProcessDynamicSelects
+	 *
+	 */	
+	public static function getModuleInfo() {
+	
+		return array(
+			'title' => 'Dynamic Selects: Markup',			
+			'author' => 'Francis Otieno (Kongondo)',
+			'version' => 5,
+			'href' => 'http://dynamicselects.kongondo.com',			
+			'summary' => 'Dynamic Selects: Ajax-driven dynamic selects/dropdown lists for multiple data types.',			
+			'singular' => true, 
+			'autoload' => false, 
+			'requires' => 'ProcessDynamicSelects'
+		);
+
+	}
+
+	/* ######################### - SET UP - ######################### */
+	
+	/**
+	 * Set stuff needed throughout the class.
+	 *
+	 * @access public
+	 *
+	 */
+	public function __construct() {
+    	//parent::__construct();
+		// include helper classes
+		$dir = dirname(__FILE__);
+		require_once("$dir/DynamicSelectsRender.php");
+		require_once("$dir/DynamicSelectsActions.php");
+		require_once("$dir/DynamicSelectsUtilities.php");
+	}
+
+	/**
+	 * Initialise the module. This is an optional initialisation method called before any execute methods.
+	 *	
+	 * Initialises various class properties ready for use throughout the class.
+	 *
+	 * @access public
+	 *
+	 */	
+	public function init() {
+		/* @note: 
+			- @access-control: @note: needs to be checked individually for each select since they may have different access settings
+ 			- @see: $this->buildDynamicSelects();
+ 		 */
+		
+		$this->dsRender = new DynamicSelectsRender();
+		$this->dsActions = new DynamicSelectsActions();
+		$this->dsUtilities = new DynamicSelectsUtilities();
+	}
+
+	/**
+	 * Pass on a Dynamic Select for processing and rendering.
+	 * 
+	 * This is just a method that the user interfaces with.
+	 * The processing work is done by other methods.
+	 *
+	 * @access public
+	 * @param Mixed $dynamicSelects Page, ID, Title, Name of a Dynamic Selects or Array of Dynamic Selects items.
+	 * @param Bool $debug If true will output empty ordered list to be populated by JavaScript with results/data for the current select (for debugging).
+	 * @return Method buildDynamicSelects() or throwError() if the Dynamic Selects has no settings.
+	 *
+	 */		
+	public function render($dynamicSelects, $debug=false) {
+		// get the given Dynamic Selects' settings
+		$dsSettings = $this->getDynamicSelectsSettings($dynamicSelects);
+		if(!is_array($dsSettings)) return $this->throwError();
+		// render the Dynamic Selects
+		return $this->buildDynamicSelects($dsSettings, $debug);
+	}
+
+	/**
+	 * Get the given Dynamic Selects settings.
+	 * 
+	 * The method determines and processes a Dynamic Selects to return its settings to be used to render it in the frontend.
+	 * Used by render().
+	 *
+	 * @access private
+	 * @param Mixed $ds Page, ID, Title, Name of a Dynamic Selects or Array of Dynamic Selects' items.
+	 * @return Array $dynamicSelects Array with this Dynamic Selects' settings.
+	 *
+	 */
+	private function getDynamicSelectsSettings($ds) {
+
+		$dsSettings = '';
+		
+		#### - get the JSON string settings of the given Dynamic Selects - ###
+
+		// if we got a Page object
+		if($ds instanceof Page) {
+				$dynamicSelectsJSON = $ds->ds_settings;
+				$dsSettings = json_decode($dynamicSelectsJSON, true);
+		}
+		// if we got a populated array of Dynamic Selects items
+		elseif(is_array($ds)) {
+			 	$dsSettings = $ds;// for consistency
+		}
+		// if we got the title|name of the Dynamic Selects
+		elseif (is_string($ds)) {
+				// grab the Dynamic Selects
+				$dsName = $this->wire('sanitizer')->pageName($ds);
+				$ds = $this->wire('pages')->get($this->config->adminRootPageID)->child('name=dynamic-selects, check_access=0')->child("name=$dsName, check_access=0, include=hidden");
+				if($ds) $dsSettings = json_decode($ds->ds_settings, true);
+		}
+		// if we got an id of the Dynamic Selects
+		elseif(is_integer($ds)) {
+				// grab the Dynamic Selects
+				$ds = $this->wire('pages')->get($ds);// @note: we've already determined that we are dealing with an integer, so no need to typecast
+				if($ds) $dsSettings = json_decode($ds->ds_settings, true);
+		}
+		
+		// @note: we skip unpublished Dynamic Selects
+		if($ds instanceof Page && ($ds->is(Page::statusUnpublished)) || ($ds->is(Page::statusTrash))) return;
+
+		return $dsSettings;
+
+	}	
+
+	/**
+	 * Builds Dynamic Selects.
+	 * 
+	 * Utilises DynamicSelectsRender::renderSelects() to render frontend Dynamic Selects.
+	 * Conducts access checks first before building selects.
+	 *
+	 * @access private
+	 * @param Array $dsSettings Settings of the given Dynamic Selects.
+	 * @param Bool $debug If true will output empty ordered list to be populated by JavaScript with results/data for the current select (for debugging).
+	 * @return String $out Dynamic Selects Markup.
+	 *
+	 */
+	private function buildDynamicSelects(Array $dsSettings, $debug=false) {
+		
+		$out = '';
+
+		## validation ##
+
+		// 1. first we check if this Dynamic Selects is properly set up		
+		if(!isset($dsSettings['columns']) || !$dsSettings['valid']) {
+			$error = $this->_('Dynamic Selects: This select has not yet been properly set up. Please check your settings.');
+			return $this->throwError($error);
+		}
+
+		// 2. @access-control: checks if view access is set for a given dynamic select...
+		/*	- if check access is set, we check if the current user can view this Dynamic Selects...
+		 	- if check access RETURNS TRUE && current user HAS NO VIEW ACCESS...
+			- we execute an set action @see $this->checkAccessActions();
+		 	- @note: we check access here so that we are always checking against a 'validly set up' Dynamic Selects (@see above columns and validity check)
+		*/
+		if($this->dsUtilities->checkAccess($dsSettings)) return $this->checkAccessActions($dsSettings);
+
+		// 3. error if only 1 column has been set up. At least 2 are needed; a trigger and a dependent
+		if($dsSettings['numCols'] < 2) {
+			$error = $this->_('Dynamic Selects: You need at least 2 selects for this to work; a trigger and a dependent select.');
+			return $this->throwError($error);
+		}
+
+		/* ## GOOD TO GO ## */
+		$values = new WireData();// @note: just a placeholder to avoid errors in DynamicSelectsRender::renderSelects()
+		
+		$selects = $this->dsRender->renderSelects($dsSettings, $values, $dsSettings['uniqueid']);
+		if(is_null($selects)) {
+			$error = $this->_('Dynamic Selects: A Selector or custom code needs to be specified to return data for first/initial select.');
+			return $this->throwError($error);
+		}		
+
+		$out .= $selects;
+
+		if($debug) $out .= $this->renderDebugMarkup($dsSettings['uniqueid']);
+
+		return $out;
+
+	}
+
+	/**
+	 * Render script markup needed for Dynamic Selects.
+	 *	
+	 * This script is responsible for the chained selects behaviour and actions.
+	 * Output uses <script></script>
+	 *
+	 * @access public
+	 * @return String $out Markup to add to <head> or just before </body>.
+	 *
+	 */
+	public function renderDynamicSelectsScripts() {
+		$url = $this->wire('config')->urls->$this;
+		$out = "\n\t\t<script type='text/javascript' src='". $url . "DynamicSelectsRender.js'></script>\n";
+		return $out;
+	}
+
+	/**
+	 * Render styles markup needed for Dynamic Selects.
+	 *	
+	 * Output uses <link></link>.
+	 * Custom styles could be used instead of this one.
+	 *
+	 * @access public
+	 * @return String $out Markup to add to <head>.
+	 *
+	 */
+	public function renderDynamicSelectsStyles() {
+		$url = $this->wire('config')->urls->$this;
+		$out = "\n\t\t<link href='". $url ."DynamicSelectsRender.css' type='text/css' rel='stylesheet'>\n";
+		return $out;
+	}
+
+	/**
+	 * Outputs javascript configuration values for ajax calls made by Dynamic Selects.
+	 *
+	 * @access protected
+	 * @param Array $options Array of dynamic select options.
+	 * @return String $json Config with options for a Dynamic Selects.
+	 *
+	 */
+	public function renderConfigs($options = null) {
+
+		// default options
+		$defaultOptions = array(
+							'ajaxURL' => './',// by default we post ajax calls to the current page
+							'fetchError' => $this->_('Dynamic Selects: There was an error fetching data'),
+		);
+
+		// merge user options with default options
+		if($options != null && is_array($options)) $options = array_merge($defaultOptions, $options);
+		else $options = $defaultOptions;
+
+		$dsOptions = array();
+		$dsOptions['DynamicSelects']['config'] = $options;
+		$json = json_encode($dsOptions);
+
+		return $json;
+
+	}
+
+	/**
+	 * Outputs empty ordered list markup that will be populated by javascript with results of current select.
+	 *
+	 * Useful for debugging purposes: e.g. to ensure that validation/includes/excludes working properly as set up.
+	 *
+	 * @access private
+	 * @return String $out Markup to output below Dynamic Selects markup.
+	 *
+	 */
+	private function renderDebugMarkup($uniqueid) {
+		$out ="\t<ol data-debug-ds-id='{$uniqueid}'></ol>\n";
+		return $out;
+	}
+
+	/**
+	 * Process Ajax Request from a Dynamic Selects.
+	 * 	
+	 *
+	 * @access public
+	 * @param Object $input Ajax Post input with request for a select's data.
+	 * @return String JSON string with this select's data. @note: via DynamicSelectsActions::processDataRequest()
+	 *
+	 */
+	public function processAjax($input) {
+		return $this->dsActions->processDataRequest($input);
+	}	
+
+	/**
+	 * Implements action to take if the given Dynamic Selects has access controls.
+	 *	
+	 * We only get here if the current user is not allowed to view the Dynamic Selects.	
+	 * Actions include: empty output; 404; login page; redirect; and custom message.
+	 *
+	 * @access private
+	 * @param Array $dsSettings Settings of a given Dyanamic Selects.
+	 * @return Mixed. One of the above outputs.
+	 *
+	 */
+	private function checkAccessActions(Array $dsSettings) {
+		
+		if(isset($dsSettings['noFrontAccessAction'])) {
+			
+			$action = (int) $dsSettings['noFrontAccessAction'];
+
+			if($action == 1) return;// output nothing
+			elseif($action == 2)$this->wire('session')->redirect($this->wire('pages')->get($this->wire('config')->http404PageID)->url);
+			elseif($action == 3) $this->wire('session')->redirect( $this->wire('config')->urls->admin );// login page
+			elseif($action == 4) $this->wire('session')->redirect($dsSettings['noFrontAccessRedirectURL']);// redirect to given page
+			elseif($action == 5) return '<p class="no_access">' . $dsSettings['noFrontAccessCustomText'] . '</p>';// return custom message
+
+		}
+
+		// else no action set up yet!
+		return $this->throwError($this->_('Dynamic Selects: No action set yet for invalid access!'));// @note: OK to show since only superusers will see
+		
+	}
+
+	/**
+	 * Throw error or return false.
+	 * 
+	 * This is called if either no Dynamic Selects found or it is not properly set up.
+	 * Throws WireException for superusers but returns false for all others.
+	 *
+	 * @access public
+	 * @param String $error Error message.
+	 * @return WireException or false.
+	 *
+	 */
+	public function throwError($error = '') {
+		$error = $error ? $error : $this->_('Dynamic Selects: No dynamic select found or the dynamic select has not been properly set up!');
+		if($this->wire('user')->isSuperuser()) 	throw new WireException($error);
+		else return false;
+	}
+
+	/**
+	 * Called only when the module is installed.
+	 *
+	 * @access public
+	 *
+	 */	
+	public function ___install() {
+		// Don't need to add anything here...		
+	}
+
+	/**
+	 * Called only when the module is uninstalled.
+	 *
+	 * This returns the site to the same state it was in before the module was installed.
+	 *
+	 * @access public
+	 *
+	 */
+	 public function ___uninstall() {
+		// Don't need to add anything here...			
+	}	
+
+}

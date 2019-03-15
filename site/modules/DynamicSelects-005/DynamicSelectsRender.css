@@ -1,0 +1,26 @@
+/**
+*
+* CSS styles for the Commercial ProcessWire Module Dynamic Selects (Render)
+*
+* @author Francis Otieno (Kongondo) <kongondo@gmail.com>
+*
+* Copyright (C) 2016 by Francis Otieno
+*
+*/
+select.ds{margin-right: 1.5em; margin-top: 0.25em; min-width: 150px; display: block;}
+label.ds {display: inline-block; position: relative;}
+label.ds_empty {display: none;}
+span.ds_spinner {
+	/*margin-left: 0.25em;*/
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	right: 5%;
+	top: 0;
+	z-index: 1000;
+}
+span.ds_spinner  i.ds_spinner, ul.ds_cached {display: none;}
+/* debugger list */
+ol#ds_debug_results_list li{margin:0;}
+div.InputfieldContent ol#ds_debug_results_list li{margin-left:2em;}
+

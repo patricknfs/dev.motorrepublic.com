@@ -1,0 +1,521 @@
+<?php
+
+/**
+* Dynamic Selects: Fieldtype
+*
+* Fieldtype that stores and outputs values of dynamic/chained/cascading selects/dropdowns for a page.
+* Presently only stores values for internal PW resources (pages|templates|users|fields).
+* Dynamism between selects are user-defined at the field level.
+* Values are stored as integers.
+* There's no limit to the number of selects that can be defined.
+*
+* @author Francis Otieno (Kongondo) <kongondo@gmail.com> kongondo.com
+* 
+* This is a Copyrighted Commercial Module. Please do not distribute or host publicly. The license is not transferable.
+*  
+* FieldtypeDynamicSelects for ProcessWire
+* Copyright (C) 2016 by Francis Otieno
+* Licensed under a Commercial Licence (see README.txt)
+*
+*/
+
+class FieldtypeDynamicSelects extends Fieldtype {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => 'Dynamic Selects: Fieldtype',
+			'author' => 'Francis Otieno (Kongondo)',
+			'version' => 5,
+			'href' => 'http://dynamicselects.kongondo.com',
+			'summary' => 'Dynamic Selects: Field that stores values of ajax-driven dynamic selects/dropdown lists for multiple data types.',
+			'installs' => 'InputfieldDynamicSelects',
+			'requires' => 'ProcessDynamicSelects',
+			);
+	}
+
+	public function init() {
+		parent::init();
+
+		$dir = dirname(__FILE__);
+		require_once("$dir/DynamicSelects.php");
+		require_once("$dir/DynamicSelectsRender.php");
+		require_once("$dir/DynamicSelectsUtilities.php");
+		require_once("$dir/DynamicSelectsActions.php");
+	
+	}
+
+	/**
+	 * Just here to fulfill ConfigurableModule interface.
+	 *
+	 */
+	/*public static function getModuleConfigInputfields(array $data) {
+		return new InputfieldWrapper();
+	}*/
+
+	/**
+	 * Return the required Inputfield used to populate a field of this type.
+	 *
+	 */
+	public function getInputfield(Page $page, Field $field) {
+		$inputfield = $this->modules->get("InputfieldDynamicSelects");
+		// our inputfield requires a Field (most Inputfields don't)
+		$inputfield->setField($field);// @note: this is a method in InputfieldDynamicSelects			
+		return $inputfield;
+	}
+
+	/**
+	 * Return a blank ready-to-populate version of a field of this type.
+	 *
+	 */
+	public function getBlankValue(Page $page, Field $field) {
+		$data = new DynamicSelects($page);
+		$data->setTrackChanges(true);
+		return $data;
+
+	}
+
+	/**
+	 * Set the config option fields for this Field.
+	 *
+	 * These appear in the 'Details' Tab when editing an instance of this Field.
+	 *
+	 */
+	public function ___getConfigInputfields(Field $field) {
+		
+		$inputfields = parent::___getConfigInputfields($field);
+
+		$modules = $this->wire('modules');
+		$dsRender = new DynamicSelectsRender();
+
+		// radios: initial/first dynamic select column settings
+		// determine whether initial column will list pages, templates OR users		
+		$f = $dsRender->renderFirstColumnDataSourceInput($field->firstColumn);
+		$inputfields->append($f);
+
+		// text: selector for finding 'first column' pages|templates|users
+		$f = $dsRender->renderFirstColumnSelectorInput($field->firstColumnSelector);
+		$inputfields->append($f);
+
+		// textarea: input for custom php code for finding pages|templates|users to be used as data source for the first dynamic select column		
+		$f = $dsRender->renderFirstColumnFindCodeInput($field->firstColumnFindCode);
+		$inputfields->append($f);
+
+		// textarea: exclusions list =>
+		// input for column..+IDS of fields to exclude from specified field:fields OR user:propert:user:properties data-relationsh:data-source columns/selects
+		$fs = $modules->get("InputfieldFieldset");// @note: we wrap these settings in a fieldset	
+		$fs->label = $this->_('Include/Exclude: Templates, Pages, Fields');
+		$fs->collapsed = 1;// always collapsed
+		$fs->description = $this->_('Please read the usage notes first.');
+
+		// inclusions/exclusions usage notes
+		$f = $modules->get('InputfieldMarkup');
+		$f->label = $this->_('Usage Notes');
+		$f->collapsed = Inputfield::collapsedYes;
+		$f->value = $dsRender->renderIncludeExcludeNotes(false);
+		$fs->add($f);
+
+		// included + excluded templates
+		$f = $dsRender->renderFilterByIDsInput($field->includedTemplates, 1);
+		$fs->add($f);
+		$f = $dsRender->renderFilterByIDsInput($field->excludedTemplates, 2);
+		$fs->add($f);
+
+		// included + excluded pages
+		$f = $dsRender->renderFilterByIDsInput($field->includedPages, 3);
+		$fs->add($f);
+		$f = $dsRender->renderFilterByIDsInput($field->excludedPages, 4);
+		$fs->add($f);
+
+		// included + excluded fields
+		$f = $dsRender->renderFilterByIDsInput($field->includedFields, 5);
+		$fs->add($f);
+		$f = $dsRender->renderFilterByIDsInput($field->excludedFields, 6);
+		$fs->add($f);
+
+		$inputfields->append($fs);
+
+		// checkbox: hide empty selects option
+		$f = $dsRender->renderHideEmptySelectsInput($field->hideEmptySelects);
+		$inputfields->append($f);
+
+		/*@todo: will add if there's enough demand for this + will be a JS solution
+		// checkbox: auto-select value in last select if only single value present
+		$f = $dsRender->renderFinalSingleSelectInput($field->autoFinalSingleSelect);
+		$inputfields->append($f);
+		*/		
+
+		#####################
+		
+		// custom markup: dynamic selects field settings
+		$configScript = "<script>" . file_get_contents(__DIR__ . "/DynamicSelectsConfig.js") . "</script>";
+		// @note: could also get loaded via ProcessDynamicSelects.module if...
+		// ...loaded script in __construct()
+
+		$markup = $modules->get('InputfieldMarkup');
+		$markup->attr('id', 'table_definition_js');
+		$markup->value = $configScript;
+
+		$inputfields->append($markup);
+
+		// render dynamic columns settings table
+		$blankArray[''] = array();
+		$columns = count($field->columns) ? $field->columns : $blankArray;
+		$t = $dsRender->renderTable($columns);
+
+		$inputfields->append($t);
+
+		#######################
+		
+		// save column settings
+		$this->addHookAfter('ProcessField::fieldSaved', $this, 'processColumns');
+
+		return $inputfields;
+		
+	}
+
+	/**
+	 * Process (CRUD) Dynamic Selects' columns.
+	 *
+	 * Create, delete and update db columns and their settings in this field.
+	 *
+	 * @access protected
+	 * @param Object $event The object returned by the hook.
+	 *
+	 */
+	protected function processColumns(HookEvent $event) {
+		$field = $event->arguments(0);
+		$input = $this->wire('input')->post;
+		$dsActions = new DynamicSelectsActions();
+		$dsActions->actionProcessColumns($field, $input, 1);
+	}
+
+	/**
+	 * Format a value for output, called when a Page's outputFormatting is on.
+	 *
+	 */
+	public function formatValue(Page $page, Field $field, $value) {
+		// we don't need to do anything in here since we are returning other fields' native values
+		return $value;
+	}
+
+	/**
+	 * Given a value, make it clean for storage within a Page.
+	 *
+	 */
+	public function sanitizeValue(Page $page, Field $field, $value) {
+
+		#sanitization of individual fields within a given Dynamic Select is being performed in sleepValue() and wakeupValue()
+		#so we don't need to do anything else here.
+
+		// if given a blank value, return a valid blank value
+		if(empty($value)) return $this->getBlankValue($page, $field, $value); 
+
+		// if given something other than an instance of DynamicSelects, throw an error
+		if(!$value instanceof DynamicSelects) {
+			throw new WireException("Value set to field '$field->name' must be DynamicSelects"); 
+		}		
+
+		return $value;
+
+	}
+
+	/**
+     * Given a raw value (value as stored in DB), return the value as it would appear in a Page object.
+ 	 *
+     * @param Page $page.
+     * @param Field $field.
+     * @param string|int|array $value.
+     * @access public
+     * @return string|int|array|object $value.
+     *
+     */
+	public function ___wakeupValue(Page $page, Field $field, $value) {
+
+		//if for some reason we already got a valid value, then just return it
+		if($value instanceof DynamicSelects) return $value;
+
+		//start a blank value to be populated. this is just a normal php array
+		$ds = $this->getBlankValue($page, $field);
+
+		//if we were given a blank value, then we've got nothing to do: just return a blank DynamicSelects
+		if(empty($value) || !is_array($value) || !$field->valid) return $ds;
+
+		$sanitizer = $this->wire('sanitizer');
+		$type = 'pages';
+
+		$dsUtilities = new DynamicSelectsUtilities();
+
+		// saved 'columns' settings in the data array
+		$columnSettings = $field->data['columns'];
+
+		$triggerID = 0;
+		$relationship = 0;
+		$source = 0;
+		$fieldName = '';
+		
+		$relationships = $dsUtilities->relationships();// array
+
+		// extra properties
+		$extraDataJSON = $value['data'];
+		$extraData = strlen($extraDataJSON) ? json_decode($extraDataJSON, true) : array();
+		$columnNames = array();
+		$columnLabels = array();
+
+		// COLUMN PROPERTIES AND VALUES
+		foreach ($columnSettings as $columnName => $columnValues) {
+
+			/* array structure
+
+				$columnName => column name {matches column name in this field's db table}
+				$columnValues =>
+					0 = column label,
+					1 = data-trigger,
+					2 = data-relationship,
+					3 = data-source,
+
+			  ######### - @NOTES - #########
+
+				i. 	 Each column has 8 related properties (4x2) (@see additional ones below)
+				ii.  Not all properties useful for frontend. Some for debugging and others for InputfieldDynamicSelect
+				iii. if field is instance of FieldtypePage it means the ID saved in DB was of the selected page in the pagefield, so show its title
+					 otherwise return value of field
+				iv. Additional Properties:
+					- $ds->extraData: holds data for ALL columns that return values such as filenames|fieltypeoptions (db=json; property=array); needed for matching
+					e.g. 'my_photo.jpg'
+					- $ds->columnNames property: utility property with all column names
+					- $ds->columnNameLabels property: utility property with all column labels
+					
+				PROPERTIES
+
+					@note:
+						- values below are specific to saved DB data! and not generic field settings. 
+						- for instance, the trigger of a column for the specific page being queried is the saved value in the database AND NOT the generic field setting, e.g. column1 triggers column2. Instead object with ID 1234 is the trigger for object with ID 4567
+
+					1: column MAIN property [from db]
+						a. VALUE: $ds->columnName: value of what is specified in data-source. Defaults to Title for pages and label for fields and templates
+						b. ID: $ds->columnNameID: ID of the page/template/field/user
+
+					2: column TRIGGER property [from db]
+						a. VALUE: $ds->columnNameTrigger: value of what is specified in data-trigger. Defaults to Title for pages and label for fields and templates
+						b. ID: $ds->columnNameTriggerID: ID of the trigger page/template/field/user
+
+					3: column RELATIONSHIP property [from field settings]
+						a. VALUE: $ds->columnNameRelationship: preset relationship type {None, Child, Parent, etc}
+						b. ID: $ds->columnNameRelationshipID: preset ID depicting the relationship type {0=none;1=child, etc..}
+
+					4: column DATA SOURCE property [from field settings]
+						a. VALUE: $ds->columnNameSource: value of preset data sources
+						b. ID: $ds->columnNameSourceID: ID of the preset data source {0=Initial, id=fieldName, etc}
+
+					5: column FILE property [from db 'DATA' COLUMN]
+						a. VALUE: $ds->columnNameSource: value of preset data sources
+						b. ID: $ds->columnNameSourceID: ID of the preset data source {0=Initial, id=fieldName, etc}
+
+			*/
+
+			// @note: don't really need to sanitize below values again since already done on field settings save
+
+			$mainProperty = '';// the value of $ds->columnName
+			$id = (int) $value[$columnName];// the value of $ds->columnNameID
+			$columnLabel = $sanitizer->entities($columnValues[0]);// $ds->columnNameLabel
+			$source = (int) $columnValues[3];// $ds->columnNameSourceID
+
+			$trigger = $source == 0 ? 0 : $dsUtilities->sanitizeFieldName($columnValues[1]);
+			$relationship = (int) $columnValues[2];// $ds->columnNameRelationshipID
+
+			$columnNames[] = $dsUtilities->sanitizeFieldName($columnName);// $ds->columnNames
+			$columnLabels[] = $columnLabel;// $ds->columnLabels
+			
+			if($trigger) $triggerID = (int) $value[$columnValues[1]];// $ds->columnNameTriggerID
+
+			## from data-source, we determine type of object whose value to return for columnName
+			## can be page|template|field
+
+			// dealing with first column (initial) [data-source = 0]. Hence, pages|templates|users
+			if($source == 0) {
+				if($field->firstColumn == 2) $type = 'templates';
+				elseif($field->firstColumn == 3) $type = 'users';
+
+				$obj = $this->wire($type)->get($id);
+				if(!is_object($obj) || !$obj->id > 0) continue;
+
+				$mainProperty = $obj->get('title|label|name');// @note: already works fine in multilingual
+
+			}
+			// dealing with a page OR a user [data-source = -2 {varies} OR -4 {user: varies} OR > 0 {named-field ID}]
+			elseif($source == -2 || $source == -4 || $source > 0) {
+
+				// determine field to show
+				if($source > 0) $fieldID = $source;// named-field
+				else $fieldID = $triggerID;// if varies, get field from trigger (only fields can be associated with data-source: varies)
+
+				// get the field whose value we will return for this page ($p)
+				$f = $this->wire('fields')->get($fieldID);
+				if(!$f || !$f->id > 0) continue;
+
+				$fieldName = $f->name;
+
+				// if field is a pagefield, it doesn't matter whether we were dealing with pages or users...ID saved is the pageID of the page selected in the pagefield
+				if(get_class($f->type) == 'FieldtypePage') {
+						$p = $this->wire('pages')->get($id);
+						if(!$p || !$p->id > 0) continue;
+						$mainProperty = $p->title;// @note: already works fine in multilingual
+				}
+				else {
+						// determine if dealing with a user or a page
+						if($relationship == 8) $type = 'users';
+						else $type = 'pages';
+
+						$obj = $this->wire($type)->get($id);
+						if(!$obj || !$obj->id > 0) continue;
+						
+						$mainProperty = $obj->get("{$fieldName}|title|label|name");// @note: already works fine in multilingual
+						
+					}
+
+			}
+			// dealing with a field [data-source = -1 {fields} || -3 {user: properties}]
+			elseif($source == -1 || $source == -3) {
+
+				$fieldID = $id;// $value[$columnName]
+				$f = $this->wire('fields')->get($fieldID);
+				if(!$f || !$f->id > 0) continue;
+				$mainProperty = $f->label? $f->label : $f->name;
+				$fieldName = $f->name;// @todo...needed?
+				
+			}
+
+			 if(isset($extraData[$columnName])) $mainProperty = $extraData[$columnName];
+
+			###### - FIELD PROPERTIES - ######
+
+			# 1. MAIN properties			
+			// a. columnID
+			$ds->{"{$columnName}ID"} = $id;
+			// b. columnName
+			$ds->$columnName = $mainProperty;
+
+			# 2. TRIGGER properties
+			// a. triggerID
+			$ds->{"{$columnName}TriggerID"} = $triggerID;
+			// b. triggerName
+			$ds->{"{$columnName}Trigger"} = $ds->$trigger;
+
+			# 3. RELATIONSHIP properties
+			// a. relationshipID
+			$ds->{"{$columnName}RelationshipID"} = $relationship;
+			// b. relationship
+			$ds->{"{$columnName}Relationship"} = $relationships[$relationship];
+
+			# 4. SOURCE properties
+			// a. sourceID
+			$ds->{"{$columnName}SourceID"} = $source;
+			// b. source
+			$ds->{"{$columnName}Source"} = $fieldName ? $fieldName : $this->_('Initial');
+
+			# 5. PageID property
+			if($source == -2 || $source == -4) {
+		
+				// get the ID of the page that triggered the relationship-source value=>varies|user:value=>varies
+				// ...this is because only field=>fields can trigger value=>varies AND only user:property=>user:properties can trigger user:value=>user:varies
+				// ...AND in that case, in the trigger, we save the id of the field in the db
+				// ...however, when retrieving saved values to list + match, we need to also have the ID of the page that contains that field/property...
+				$ds->{"{$columnName}PageID"} = $ds->{"{$trigger}TriggerID"};
+
+			}
+
+		}// end foreach
+		
+		#6 EXTRA properties (return arrays)
+		$ds->extraData = $extraData;
+		// extra utility properties with names of all columns
+		$ds->columnNames = $columnNames;// column names
+		$ds->columnLabels = $columnLabels;// column labels
+		
+		$ds->setTrackChanges(true);// track changes for the DynamicSelects @todo?
+	
+		return $ds;
+
+	}
+
+	/**
+     * Given an 'awake' value, as set by wakeupValue, convert the value back to a basic type for storage in DB. 
+     *              
+     * @param Page $page.
+     * @param Field $field.
+     * @param string|int|array|object $value.
+     * @access public
+     * @return Array $sleepValue.
+     *
+     */
+	public function ___sleepValue(Page $page, Field $field, $value) {
+
+		$sleepValue = array();
+
+		// if we are given something other than an DynamicSelects just return a blank array
+		if(!$value instanceof DynamicSelects) return $sleepValue;
+
+		$sleepValue['data'] = $this->sanitizer->text($value->extraData);// @note: will always be JSON
+
+		// @note we get and iterate field settings 'columns' since we don't know beforehand the names fo the inputs for this field
+		$columnSettings = $field->data['columns'];
+
+		foreach ($columnSettings as $columnName => $columnValues) {
+			$sleepValue[$columnName] = $value->$columnName ? (int) $value->$columnName : NULL;// we don't store empty values
+		}
+
+		return $sleepValue;
+
+	}
+
+	/**
+	 * Return the database schema that defines a Dynamic Select's items.
+	 *
+	 */
+	public function getDatabaseSchema(Field $field) {
+
+		$schema = parent::getDatabaseSchema($field);
+
+		// 'data' is a required field for any Fieldtype,..
+		//...we are using it to store JSON string where elements do not have unique IDs...
+		//... e.g. images in a multiple images field
+
+		$schema['data'] = 'VARCHAR(255)';
+		// indexes, for any fields that need to be searchable from selectors
+		$schema['keys']['data'] = 'FULLTEXT KEY data (data)';// @todo...does not really need to be searchable?
+		
+		if(isset($field->data['columns'])) $columnSettings = $field->data['columns'];
+		else return $schema;// if field not yet set up return	
+
+		$dsUtilities = new DynamicSelectsUtilities();
+
+		foreach ($columnSettings as $columnName => $columnValues) {
+			// @note: not really needed here as would already have been checked in $this->processColumns(); 
+			$name = $dsUtilities->sanitizeFieldName($columnName);
+			if(empty($name)) continue; 
+			$typeSQL = 'INT UNSIGNED DEFAULT NULL';// @note: all our columns will always be of type positive INT
+			$schema[$name] = $typeSQL;
+			$index = "INDEX";
+			$schema['keys'][$name] = "$index `$name` (`$name`)";
+
+		}
+
+		return $schema;
+
+	}
+
+	/**
+	 * Method called when the field is database-queried from a selector.
+	 *
+	 */
+	public function getMatchQuery($query, $table, $subfield, $operator, $value) {
+		/* 
+			@note: devs can easily implement searches in template files using subselectors. For example
+			$products = $pages->find("dynamic.product!='', dynamic.price=[integer_field>=500, template=products-clothes]");
+		*/
+		return parent::getMatchQuery($query, $table, $subfield, $operator, $value);
+
+	}
+
+
+}

@@ -1,0 +1,29 @@
+/**
+*
+* CSS styles for the Commercial ProcessWire Module Dynamic Selects (Process)
+*
+* @author Francis Otieno (Kongondo) <kongondo@gmail.com>
+*
+* Copyright (C) 2016 by Francis Otieno
+*
+*/
+
+/** html **/
+/*## Prevent "jump" on shorter pages ##*/
+html {overflow-y:scroll;}
+
+
+/** span **/
+span.limit-select {float: right;}
+span.highlight {color: red;}/* for highlighting some text */
+
+/** button **/
+button#ds_save, button#ds_save_exit {float: left;}
+ol#ds_include_exclude_notes li{margin-top: 0; margin-bottom: 0.175em;}
+
+/**##
+ * Don't show the save buttons when on the delete tab *
+ * This works because WireTabs adds class names equal to the ID of the selected tab to the tab target container
+ *
+ ##*/
+.ProcessDynamicSelectsDelete button#ds_save, .ProcessDynamicSelectsDelete button#ds_save_exit {display: none;}
