@@ -24,7 +24,7 @@ if (isset($_GET['pageno'])) {
 }
 $no_of_records_per_page = 21;
 $offset = ($pageno-1) * $no_of_records_per_page;
-echo "Marque is: "  . $page->marque->title;
+// echo "Marque is: "  . $page->marque->title;
 if ($page->marque != ''){
   $manuf = strtoupper($page->marque->title);
 }
