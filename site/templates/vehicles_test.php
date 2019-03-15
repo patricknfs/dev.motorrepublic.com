@@ -79,6 +79,6 @@ $result = $conn->query($query) or die(mysqli_error($conn));
 // unset($manuf);
 // unset($mdl);
 ob_start();
-include('views/vehicles_main.php');
+include('views/vehicles_test_main.php');
 $page->main = ob_get_clean();
 include("./main.php");
