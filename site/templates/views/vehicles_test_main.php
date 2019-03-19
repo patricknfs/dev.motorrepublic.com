@@ -1,7 +1,3 @@
-<?php
-$ds = $page->manufacturers;
-echo $ds->manufacturer;
-?>
 <section id="vehicles">
 	<div class="grid-container">
 		<!-- <div class="grid-x">
