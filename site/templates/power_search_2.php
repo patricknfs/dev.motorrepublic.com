@@ -32,7 +32,8 @@ ob_start();
       </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct2" name="slct2">Model (choose manufacturer first)</select>
+      <select id="slct2" name="slct2"></select>
+      <option>Model (choose manufacturer first)</option>
     </div>
     <div class="cell small-12 medium-2">
       <select id="slct3" name="slct3">Price range</select>
