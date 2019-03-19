@@ -72,7 +72,7 @@ if($page->id !== 1043){
         echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicles'){
-        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic" . ($input->slct1?' - ' . $input->slct1:'');
       }
       elseif($page->template->name == 'vehicle'){
         echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
