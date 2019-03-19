@@ -82,6 +82,7 @@ if($page->id !== 1043){
       }
       ?>"
     />
+    />
     <script>
       window['_fs_debug'] = false;
       window['_fs_host'] = 'fullstory.com';
@@ -107,10 +108,10 @@ if($page->id !== 1043){
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81524203-1"></script>
     <script>
-Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
-Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
-Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
-Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
       gtag('config', 'UA-81524203-1');
     </script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
