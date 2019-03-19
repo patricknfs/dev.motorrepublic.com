@@ -5,7 +5,7 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 if($page->id !== 1043){
-  include "power_search.php";
+  include "power_search_2.php";
 }
 ?>
 <!DOCTYPE html>
@@ -120,6 +120,105 @@ if($page->id !== 1043){
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
+    
+    <script type="text/javascript">
+      function ajaxFunction(choice){
+        var httpxml;
+        try {
+          // Firefox, Opera 8.0+, Safari
+          httpxml=new XMLHttpRequest();
+        }
+        catch (e){
+          // Internet Explorer
+          try{
+            httpxml=new ActiveXObject("Msxml2.XMLHTTP");
+          }
+          catch (e){
+            try {
+              httpxml=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch (e){
+              alert("Your browser does not support AJAX!");
+              return false;
+            }
+          }
+        }
+
+        function stateChanged() {
+          if(httpxml.readyState==4){
+            //alert(httpxml.responseText);
+            var myObject = JSON.parse(httpxml.responseText);
+
+            for(j=document.myForm.state.options.length-1;j>=0;j--){
+              document.myForm.state.remove(j);
+            }
+
+            var state1=myObject.value.state1;
+
+            var optn = document.createElement("OPTION");
+            optn.text = 'Select State';
+            optn.value = '';
+            document.myForm.state.options.add(optn);
+            for (i=0;i<myObject.state.length;i++){
+              var optn = document.createElement("OPTION");
+              optn.text = myObject.state[i];
+              optn.value = myObject.state[i];
+              document.myForm.state.options.add(optn);
+
+              if(optn.value==state1){
+                var k= i+1;
+                document.myForm.state.options[k].selected=true;
+              }
+            } 
+
+            //////////////////////////
+            for(j=document.myForm.city.options.length-1;j>=0;j--){
+              document.myForm.city.remove(j);
+            }
+            var city1=myObject.value.city1;
+            //alert(city1);
+            for (i=0;i<myObject.city.length;i++){
+              var optn = document.createElement("OPTION");
+              optn.text = myObject.city[i];
+              optn.value = myObject.city[i];
+              document.myForm.city.options.add(optn);
+              if(optn.value==city1){
+                document.myForm.city.options[i].selected=true;
+              }
+            } 
+
+            ///////////////////////////
+            document.getElementById("txtHint").style.background='#00f040';
+            document.getElementById("txtHint").innerHTML='done';
+            //setTimeout("document.getElementById('txtHint').style.display='none'",3000)
+          }
+        }
+
+        var url="ajax-dd3ck.php";
+        var country=myForm.country.value;
+        if(choice != 's1'){
+          var state=myForm.state.value;
+          var city=myForm.city.value;
+        }
+        else{
+          var state='';
+          var city='';
+        }
+        url=url+"?country="+country;
+        url=url+"&state="+state;
+        url=url+"&city="+city;
+        url=url+"&id="+Math.random();
+        myForm.st.value=state;
+        //alert(url);
+        document.getElementById("txtHint2").innerHTML=url;
+        httpxml.onreadystatechange=stateChanged;
+        httpxml.open("GET",url,true);
+        httpxml.send(null);
+        document.getElementById("txtHint").innerHTML="Please Wait....";
+        document.getElementById("txtHint").style.background='#f1f1f1';
+      }
+    </script>
+    
     <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
