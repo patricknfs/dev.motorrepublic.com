@@ -1,6 +1,5 @@
 <?php
 $ds = $page->manufacturers;
-
 echo $ds->manufacturer;
 ?>
 <section id="vehicles">
