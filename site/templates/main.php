@@ -56,7 +56,7 @@ if($page->id !== 1043){
         echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
       elseif($page->name == 'car-leasing'){
-        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic" . ($input->slct1?' - ' . $input->slct1:'');
       }
       elseif($page->name == 'van-leasing-hgv'){
         echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -72,7 +72,7 @@ if($page->id !== 1043){
         echo "Car leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicles'){
-        echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
+        echo "Car & Van Leasing. Business & Personal Contract Hire - Motor Republic" . ($input->slct1?' - ' . $input->slct1:'');
       }
       elseif($page->template->name == 'vehicle'){
         echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
@@ -81,6 +81,7 @@ if($page->id !== 1043){
         echo $page->get("title");
       }
       ?>"
+    />
     />
     <script>
       window['_fs_debug'] = false;
@@ -113,7 +114,6 @@ if($page->id !== 1043){
 
       gtag('config', 'UA-81524203-1');
     </script>
-    <link rel="alternate" href="https://motorrepublic.com" hreflang="en-gb" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>

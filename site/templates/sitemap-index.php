@@ -8,7 +8,7 @@
 	$limit = 200;
 
 	$pageNum = ceil($key/ $limit);
-	$post = $pages->get("template=sitemap-xml");
+	$post = wire('pages')->get("template=sitemap-xml");
 
 	$i = 1;
 
