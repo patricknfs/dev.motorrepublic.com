@@ -35,13 +35,13 @@ ob_start();
       <select id="slct2" name="slct2">>Model (choose manufacturer first)</select>
     </div>
     <div class="cell small-12 medium-2">
-      
+      <select id="slct3" name="slct3">Price range</select>
     </div>
     <div class="cell small-12 medium-2">
-      
+      <select id="slct4" name="slct4">Body Type</select>
     </div>
     <div class="cell small-12 medium-2">
-      
+      <select id="slct5" name="slct5">Price range</select>
     </div>
     <div class="cell small-12 medium-2">
       <input type="submit" class="button" value="Find Your Deal">
