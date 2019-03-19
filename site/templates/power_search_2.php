@@ -19,7 +19,7 @@ ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
   <div class="grid-x grid-margin-x">
-    <div class="cell small-12 medium-3">
+    <div class="cell small-12 medium-2">
       <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
         <option value="">Manufacturer</option>
         <?php
