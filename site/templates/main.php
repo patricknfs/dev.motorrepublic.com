@@ -56,7 +56,7 @@ if($page->id !== 1043){
         echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
       elseif($page->name == 'car-leasing'){
-        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
+        echo "Car Leasing. Business & Personal Contract Hire - Motor Republic" . ($input->slct1?$input->slct1:'');
       }
       elseif($page->name == 'van-leasing-hgv'){
         echo "Van Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -107,10 +107,10 @@ if($page->id !== 1043){
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81524203-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
+Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
+Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
+Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
+Centre 3615/DN combines excellent paper handling with a long list of MFP features, making it a great choice for a small to mid-size o
       gtag('config', 'UA-81524203-1');
     </script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
