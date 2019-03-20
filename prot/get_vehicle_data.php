@@ -12,7 +12,7 @@ function get_data()
   $marque_data = array();
   while ($row = mysqli_fetch_array($result)) {
     $marque_data[] = array(
-      'id' => $row["id"];
+      'id' => $row["id"],
       'manufacturer' => $row["manufacturer"]
     );
   }
