@@ -7,7 +7,7 @@ function get_data()
   require_once "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php";
   require_once MR_PATH . "/inc/conn.php";
   require_once MR_PATH . "/inc/functions.php";
-  $query = "SELECT id, DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
+  $query = "SELECT `id`, DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
   $result = mysqli_query($conn, $query);
   $marque_data = array();
   while ($row = mysqli_fetch_array($result)) {
