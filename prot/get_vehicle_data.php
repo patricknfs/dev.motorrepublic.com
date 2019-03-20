@@ -14,9 +14,8 @@ function get_data()
     $marque_data[] = array(
       'manufacturer' => $row["manufacturer"]
     );
-  
-    return json_encode($marque_data);
   }
+  return json_encode($marque_data);
 }
 
 echo "<pre>";
