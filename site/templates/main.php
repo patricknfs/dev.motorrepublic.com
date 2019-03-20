@@ -208,18 +208,18 @@ print_r($_GET);
                 </select>
               </div>
               <div class="cell small-12 medium-2">
-                <select id="slct3" name="slct3">Price range
-                  <option value="">Less than 200</option>
+                <select id="slct3" name="slct3">
+                  <option value="">Select Range</option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
-                <select id="slct4" name="slct4">Body Type
-                  <option value="">Coupe</option>
+                <select id="slct4" name="slct4">
+                  <option value="">Select Body Style</option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
-                <select id="slct5" name="slct5">Other
-                  <option value="">CO2</option>
+                <select id="slct5" name="slct5">
+                  <option value=""></option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
