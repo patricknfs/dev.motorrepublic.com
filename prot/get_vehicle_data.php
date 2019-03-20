@@ -6,7 +6,6 @@ require_once(MR_PATH . "/inc/functions.php");
 
 function get_data()
 {
-  mysqli_query($conn, 'SET CHARACTER SET utf8');
   $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
   $result = mysqli_query($conn, $query);
   $marque_data = array();
