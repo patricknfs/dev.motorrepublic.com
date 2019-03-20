@@ -38,12 +38,15 @@ ob_start();
     </div>
     <div class="cell small-12 medium-2">
       <select id="slct3" name="slct3">Price range</select>
+      <option value="<200">Less than 200</option>
     </div>
     <div class="cell small-12 medium-2">
       <select id="slct4" name="slct4">Body Type</select>
+      <option value="Coupe">Coupe</option>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct5" name="slct5">Price range</select>
+      <select id="slct5" name="slct5">Other</select>
+      <option value="CO2">CO2/option>
     </div>
     <div class="cell small-12 medium-2">
       <input type="submit" class="button" value="Find Your Deal">
