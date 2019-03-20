@@ -5,9 +5,9 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 print_r($_GET);
-if($page->id !== 1043){
-  include "power_search_2.php";
-}
+// if($page->id !== 1043){
+//   include "power_search_2.php";
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -122,103 +122,7 @@ if($page->id !== 1043){
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
     
-    <script type="text/javascript">
-      function ajaxFunction(choice){
-        var httpxml;
-        try {
-          // Firefox, Opera 8.0+, Safari
-          httpxml=new XMLHttpRequest();
-        }
-        catch (e){
-          // Internet Explorer
-          try{
-            httpxml=new ActiveXObject("Msxml2.XMLHTTP");
-          }
-          catch (e){
-            try {
-              httpxml=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            catch (e){
-              alert("Your browser does not support AJAX!");
-              return false;
-            }
-          }
-        }
 
-        function stateChanged() {
-          if(httpxml.readyState==4){
-            //alert(httpxml.responseText);
-            var myObject = JSON.parse(httpxml.responseText);
-
-            for(j=document.myForm.state.options.length-1;j>=0;j--){
-              document.myForm.state.remove(j);
-            }
-
-            var state1=myObject.value.state1;
-
-            var optn = document.createElement("OPTION");
-            optn.text = 'Select State';
-            optn.value = '';
-            document.myForm.state.options.add(optn);
-            for (i=0;i<myObject.state.length;i++){
-              var optn = document.createElement("OPTION");
-              optn.text = myObject.state[i];
-              optn.value = myObject.state[i];
-              document.myForm.state.options.add(optn);
-
-              if(optn.value==state1){
-                var k= i+1;
-                document.myForm.state.options[k].selected=true;
-              }
-            } 
-
-            //////////////////////////
-            for(j=document.myForm.city.options.length-1;j>=0;j--){
-              document.myForm.city.remove(j);
-            }
-            var city1=myObject.value.city1;
-            //alert(city1);
-            for (i=0;i<myObject.city.length;i++){
-              var optn = document.createElement("OPTION");
-              optn.text = myObject.city[i];
-              optn.value = myObject.city[i];
-              document.myForm.city.options.add(optn);
-              if(optn.value==city1){
-                document.myForm.city.options[i].selected=true;
-              }
-            } 
-
-            ///////////////////////////
-            document.getElementById("txtHint").style.background='#00f040';
-            document.getElementById("txtHint").innerHTML='done';
-            //setTimeout("document.getElementById('txtHint').style.display='none'",3000)
-          }
-        }
-
-        var url="ajax-dd3ck.php";
-        var country=myForm.country.value;
-        if(choice != 's1'){
-          var state=myForm.state.value;
-          var city=myForm.city.value;
-        }
-        else{
-          var state='';
-          var city='';
-        }
-        url=url+"?country="+country;
-        url=url+"&state="+state;
-        url=url+"&city="+city;
-        url=url+"&id="+Math.random();
-        myForm.st.value=state;
-        //alert(url);
-        document.getElementById("txtHint2").innerHTML=url;
-        httpxml.onreadystatechange=stateChanged;
-        httpxml.open("GET",url,true);
-        httpxml.send(null);
-        document.getElementById("txtHint").innerHTML="Please Wait....";
-        document.getElementById("txtHint").style.background='#f1f1f1';
-      }
-    </script>
     
     <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
@@ -291,7 +195,38 @@ if($page->id !== 1043){
         <?php
         if($page->id !== 1043){
           ?>
-          <div class="grid-container"><?=$form_out?></div>
+          <form action="<?=$pages->get($selector)->url;?>" method="GET">
+            <div class="grid-x grid-margin-x">
+              <div class="cell small-12 medium-2">
+                <select id="slct1" name="slct1">
+                  <option value="">Manufacturer</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="slct2" name="slct2">
+                  <option value="">Model (choose manufacturer first)</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="slct3" name="slct3">Price range
+                  <option value="">Less than 200</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="slct4" name="slct4">Body Type
+                  <option value="">Coupe</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="slct5" name="slct5">Other
+                  <option value="">CO2</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <input type="submit" class="button" value="Find Your Deal">
+              </div>
+            </form>
+          </div>
           <?php
         }
         ?>
@@ -407,6 +342,11 @@ if($page->id !== 1043){
     }
   ?>
   <script>
+    $.(document).ready(function(){
+      
+    });
+  </script>
+  <!-- <script>
     function populate(s1,s2){
       var s1 = document.getElementById(s1);
       var s2 = document.getElementById(s2);
@@ -441,5 +381,5 @@ if($page->id !== 1043){
         s2.options.add(newOption);
       }
     }
-  </script>
+  </script> -->
 </html>
