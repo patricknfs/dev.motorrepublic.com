@@ -11,7 +11,7 @@ function get_data()
   $marque_data = array();
   while ($row = mysqli_fetch_assoc($result)) {
     $marque_data[] = array(
-      'manufacturer' = $row["manufacturer"]
+      'manufacturer' => $row["manufacturer"]
     );
   
     return json_encode($marque_data);
