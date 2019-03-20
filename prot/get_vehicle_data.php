@@ -10,7 +10,7 @@ function get_data()
   $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
   $result = mysqli_query($conn, $query);
   $marque_data = array();
-  while ($row = mysqli_fetch_row($result)) {
+  while ($row = mysqli_fetch_array($result)) {
     $marque_data[] = array(
       'manufacturer' => $row["manufacturer"]
     );
