@@ -37,16 +37,19 @@ ob_start();
       </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct3" name="slct3">Price range</select>
-      <option value="<200">Less than 200</option>
+      <select id="slct3" name="slct3">Price range
+        <option value="<200">Less than 200</option>
+      </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct4" name="slct4">Body Type</select>
-      <option value="Coupe">Coupe</option>
+      <select id="slct4" name="slct4">Body Type
+        <option value="Coupe">Coupe</option>
+      </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct5" name="slct5">Other</select>
-      <option value="CO2">CO2/option>
+      <select id="slct5" name="slct5">Other
+        <option value="CO2">CO2/option>
+      </select>
     </div>
     <div class="cell small-12 medium-2">
       <input type="submit" class="button" value="Find Your Deal">
