@@ -347,7 +347,7 @@ print_r($_GET);
       function load_json_data(id, parent_id)
       {
         var html_code = '';
-        $.getJSON('country_state_city.json', function(data){
+        $.getJSON('vehicle.json', function(data){
           html_code += '<option value="">Select '+id+'</option>';
           $.each(data, function(key, value){
             if(id == 'country')
