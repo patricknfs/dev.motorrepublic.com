@@ -48,7 +48,7 @@ ob_start();
     </div>
     <div class="cell small-12 medium-2">
       <select id="slct5" name="slct5">Other
-        <option value="CO2">CO2/option>
+        <option value="CO2">CO2</option>
       </select>
     </div>
     <div class="cell small-12 medium-2">
