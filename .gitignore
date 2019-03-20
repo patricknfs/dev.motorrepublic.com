@@ -6,3 +6,5 @@ htaccess.old
 site/templates/styles_old/
 .gitignore
 archive/
+site/templates/package-lock.json
+site/templates/package.json
