@@ -103,4 +103,8 @@ if($data['special'] == 1)
 </section>
 <?php
 }
+else
+{
+	echo "This offer is no longer available";
+}
 ?>
