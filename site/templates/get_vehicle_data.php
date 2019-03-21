@@ -17,7 +17,6 @@ function get_data()
   }
   $query = "SELECT `id`, `manufacturer`, `model` FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `manufacturer` ORDER BY `manufacturer` ASC";
   $result = mysqli_query($conn, $query);
-  $marque_data = array();
   while ($row = mysqli_fetch_array($result)) {
     array_push($marque_data, array(
       'id' => $row["id"],
