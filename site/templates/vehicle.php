@@ -29,7 +29,8 @@ try
     // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
-  
+    echo "Special is: " . $data['special'];
+    
     if($data['special'] == 1){
       $bch_rental = number_format($data['rental'], 2, '.', ',');
       $bch_rental = explode(".",$bch_rental);
