@@ -15,7 +15,7 @@ function get_data()
       'parent_id' => 0
     );
   }
-  return json_encode($marque_data);
+  return json_encode($marque_data, JSON_PRETTY_PRINT);
 }
 
 // echo "<pre>";
