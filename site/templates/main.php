@@ -129,7 +129,7 @@ print_r($_GET);
       function load_json_data(id, parent_id)
       {
         var html_code = '';
-        $.getJSON('vehicle.json', function(data){
+        $.getJSON('<?=$config->url->templates?>/vehicle.json', function(data){
           html_code += '<option value="">Select '+id+'</option>';
           $.each(data, function(key, value){
             if(id == 'marque')
