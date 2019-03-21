@@ -26,7 +26,7 @@ try
 
   if(null !== $input->urlSegment()) {
     $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`,min(`rental`) AS `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`,`lcv`,`upfront`, `special`, `special_upfront`, `website_deal_notes`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `cap_id` = " . $input->urlSegment() . " AND `special` = 1 ORDER BY `rental` ASC LIMIT 1";
-    echo $query;
+    // echo $query;
     $result = $conn->query($query) or die(mysqli_error($conn));
     $data = $result->fetch_assoc();
   
@@ -40,16 +40,16 @@ try
         $pch_initial = (($data['special_upfront'] > 0)?number_format(($data['special_upfront'] * 1.2), 2, '.', ','):number_format((($data['rental'] * $data['upfront'])*1.2), 2, '.', ','));
       }
     }
-    // else {
-    //   $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
-    //   $bch_rental = explode(".",$bch_rental);
-    //   $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
-    //   if($data['biz_only'] == 0){
-    //     $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
-    //     $pch_rental = explode(".",$pch_rental);
-    //     $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
-    //   }
-    // }
+    else {
+      $bch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)), 2, '.', ',');
+      $bch_rental = explode(".",$bch_rental);
+      $bch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8))*9), 2, '.', ',');
+      if($data['biz_only'] == 0){
+        $pch_rental = number_format(((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2), 2, '.', ',');
+        $pch_rental = explode(".",$pch_rental);
+        $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
+      }
+    }
 
     // $bch_rental = explode(".",$bch_rental);
     // $pch_rental = explode(".",$pch_rental);
@@ -98,7 +98,9 @@ $xml2 = str_replace(array("diffgr:","msdata:"),'', trim($data2));
 $data2 = new SimpleXMLElement($xml2);
 $groups2 = array_unique($data2->xpath('//Tech/Dc_Description'));
 $tech_data = $data2->xpath('//Tech');
+if(){
 
+}
 ob_start();
 include('views/vehicle_main.php');
 $page->main = ob_get_clean();
