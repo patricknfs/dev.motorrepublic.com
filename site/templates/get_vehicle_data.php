@@ -15,6 +15,16 @@ function get_data()
       'parent_id' => 0
     );
   }
+  $query = "SELECT `id`, `manufacturer`, `model` FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `manufacturer` ORDER BY `manufacturer` ASC";
+  $result = mysqli_query($conn, $query);
+  $marque_data = array();
+  while ($row = mysqli_fetch_array($result)) {
+    $marque_data[] .= array(
+      'id' => $row["id"],
+      'name' => $row["model"],
+      'parent_id' => 1
+    );
+  }
   return json_encode($marque_data, JSON_PRETTY_PRINT);
 }
 
