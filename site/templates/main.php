@@ -343,7 +343,6 @@ print_r($_GET);
   ?>
   <script>
     $(document).ready(function(){
-      load_json_data('marque');
       function load_json_data(id, parent_id)
       {
         var html_code = '';
