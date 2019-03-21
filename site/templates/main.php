@@ -397,40 +397,4 @@ print_r($_GET);
       });
     });
   </script>
-  <!-- <script>
-    function populate(s1,s2){
-      var s1 = document.getElementById(s1);
-      var s2 = document.getElementById(s2);
-      s2.innerHTML = "";
-      if(s1.value == "Choose Manufacturer First"){
-        var optionArray = ["|"];
-      }
-      <?php
-      // $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
-      // $result = mysqli_query($conn, $query);
-      // // echo $query;
-      // while ($row = mysqli_fetch_assoc($result)) {
-      //   echo " else if(s1.value == '" . $row['manufacturer'] . "'){
-      //     var optionArray = ['|',";
-      //     $query2 = "SELECT DISTINCT(`model`), `lcv` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' AND `special` = 1 ORDER BY `model` ASC";
-      //     // echo $query2;
-      //     $result2 = mysqli_query($conn, $query2);
-      //     while ($row2 = mysqli_fetch_array($result2)) {
-      //       echo "'" . $row2['model'] . "|" . $row2['model'] . "|" . $row2['lcv'] . "',";
-      //     }
-      //   echo "]}";
-      // }
-      // mysqli_free_result($result2);
-      // mysqli_free_result($result);
-      // mysqli_close($conn);
-      ?> 
-      for(var option in optionArray){
-        var pair = optionArray[option].split("|");
-        var newOption = document.createElement("option");
-        newOption.value = pair[0]+ "-" + pair[2];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-      }
-    }
-  </script> -->
 </html>
