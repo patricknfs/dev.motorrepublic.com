@@ -26,7 +26,7 @@ function get_data()
 $vehicle_file = MR_PATH . "vehicle.json";
 if(file_put_contents($vehicle_file, get_data()))
 {
-  echo $vehicle_file . " file created";
+  echo "file created";
 }
 else
 {
