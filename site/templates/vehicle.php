@@ -49,7 +49,7 @@ try
     //     $pch_rental = explode(".",$pch_rental);
     //     $pch_initial = number_format((((($data['rental'] * $data['term']) + 300) / ($data['term']+8)*1.2)*9), 2, '.', ',');
     //   }
-    }
+    // }
 
     // $bch_rental = explode(".",$bch_rental);
     // $pch_rental = explode(".",$pch_rental);
