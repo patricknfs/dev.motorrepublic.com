@@ -19,6 +19,16 @@ function get_data()
   return json_encode($marque_data);
 }
 
-echo "<pre>";
-print_r(get_data());
-echo "</pre>";
+// echo "<pre>";
+// print_r(get_data());
+// echo "</pre>";
+
+$vehicle_file = MR_PATH . "vehicle.json";
+if(file_put_contents($vehicle_file, get_data()))
+{
+  echo $vehicle_file . " file created";
+}
+else
+{
+  echo "There is an error of some sort";
+}
