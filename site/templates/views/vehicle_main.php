@@ -106,7 +106,7 @@
 		{
 			echo "<h1 class='text-center'>This offer is no longer available</h1>";
 			echo "<p class='text-center'>We may have the same vehicle available at a great price!</p>";
-			echo "<p class='text-center'>Just call us on <a href="tel:00441217949073">0121 794 9073</a> or e-mail <a href="mail:sales@motorrepublic.com">sales@motorrepublic.com</a> to talk to one of our experts</p>";
+			echo "<p class='text-center'>Just call us on <a href='tel:00441217949073'>0121 794 9073</a> or e-mail <a href='mail:sales@motorrepublic.com'>sales@motorrepublic.com</a> to talk to one of our experts</p>";
 		}
 		?>
 	</div>
