@@ -198,7 +198,7 @@ print_r($_GET);
           <form action="<?=$pages->get($selector)->url;?>" method="GET">
             <div class="grid-x grid-margin-x">
               <div class="cell small-12 medium-2">
-                <select id="slct1" name="slct1">
+                <select id="marque" name="marque">
                   <option value="">Manufacturer</option>
                 </select>
               </div>
