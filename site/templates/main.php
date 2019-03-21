@@ -369,30 +369,30 @@ print_r($_GET);
         });
       }
 
-      $(document).on('change', '#marque', function(){
-        var marque_id = $(this).val();
-        if(marque_id != '')
-        {
-          load_json_data('state', country_id);
-        }
-        else
-        {
-          $('#state').html('<option value="">Select state</option>');
-          $('#city').html('<option value="">Select city</option>');
-        }
-      });
+      // $(document).on('change', '#marque', function(){
+      //   var marque_id = $(this).val();
+      //   if(marque_id != '')
+      //   {
+      //     load_json_data('state', country_id);
+      //   }
+      //   else
+      //   {
+      //     $('#state').html('<option value="">Select state</option>');
+      //     $('#city').html('<option value="">Select city</option>');
+      //   }
+      // });
 
-      $(document).on('change', '#state', function(){
-        var state_id = $(this).val();
-        if(state_id != '')
-        {
-          load_json_data('city', state_id);
-        }
-        else
-        {
-          $('#city').html('<option value="">Select city</option>');
-        }
-      });
+      // $(document).on('change', '#state', function(){
+      //   var state_id = $(this).val();
+      //   if(state_id != '')
+      //   {
+      //     load_json_data('city', state_id);
+      //   }
+      //   else
+      //   {
+      //     $('#city').html('<option value="">Select city</option>');
+      //   }
+      // });
     });
   </script>
   <!-- <script>
