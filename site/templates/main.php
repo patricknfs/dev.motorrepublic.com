@@ -356,13 +356,13 @@ print_r($_GET);
                 html_code += '<option value="'+value.id+'">'+value.manufacturer+'</option>';
               }
             }
-            else
-            {
-              if(value.parent_id == parent_id)
-              {
-                html_code += '<option value="'+value.id+'">'+value.manufacturer+'</option>';
-              }
-            }
+            // else
+            // {
+            //   if(value.parent_id == parent_id)
+            //   {
+            //     html_code += '<option value="'+value.id+'">'+value.manufacturer+'</option>';
+            //   }
+            // }
           });
           $('#'+id).html(html_code);
         });
