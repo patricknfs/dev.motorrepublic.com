@@ -1,10 +1,15 @@
+
 <section id="vehicle">
 	<div class="grid-container">
+		<?php
+		if($special == 1)
+		{
+		?>
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12 medium-8 small-order-2 medium-order-1">
 				<img class="large_vehicle_image" src="https://soap.cap.co.uk/images/vehicleimage.aspx?SUBID=173210&HASHCODE=<?=$hashcode?>&DB=<?=$vehicle_type?>&CAPID=<?=$input->urlSegment1;?>&DATE=2018/09/11&WIDTH=800&HEIGHT=600&IMAGETEXT=&VIEWPOINT=" alt="<?=$manufacturer?> <?=$model?> - <?=$input->urlSegment1?>" />
 				<section id="vehicle_details">
-		<!--<div class="grid-container"> -->
+					<!--<div class="grid-container"> -->
 						<div class="grid-x">
 							<div class="cell small-12">
 								<ul class="tabs" data-tabs id="example-tabs">
@@ -95,6 +100,14 @@
 				</div>
 			</div>
 		</div>
+		<?php
+		}
+		else
+		{
+			echo "<h1 class='text-center'>This offer is no longer available</h1>";
+			echo "<p class='text-center'>We may have the same vehicle available at a great price!</p>";
+			echo "<p class='text-center'>Just call us on <a href='tel:00441217949073'>0121 794 9073</a> or e-mail <a href='mail:sales@motorrepublic.com'>sales@motorrepublic.com</a> to talk to one of our experts</p>";
+		}
+		?>
 	</div>
-
 </section>
