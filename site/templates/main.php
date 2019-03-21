@@ -343,14 +343,14 @@ print_r($_GET);
   ?>
   <script>
     $(document).ready(function(){
-      load_json_data('country');
+      load_json_data('marque');
       function load_json_data(id, parent_id)
       {
         var html_code = '';
         $.getJSON('vehicle.json', function(data){
           html_code += '<option value="">Select '+id+'</option>';
           $.each(data, function(key, value){
-            if(id == 'country')
+            if(id == 'marque')
             {
               if(value.parent_id == '0')
               {
@@ -369,9 +369,9 @@ print_r($_GET);
         });
       }
 
-      $(document).on('change', '#country', function(){
-        var country_id = $(this).val();
-        if(country_id != '')
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        if(marque_id != '')
         {
           load_json_data('state', country_id);
         }
