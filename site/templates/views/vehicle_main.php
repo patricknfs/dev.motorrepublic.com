@@ -1,5 +1,5 @@
 <?php
-if($data['special'] === 1)
+if($special == 1)
 {
 ?>
 <section id="vehicle">
