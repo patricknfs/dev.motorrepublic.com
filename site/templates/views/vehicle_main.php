@@ -1,8 +1,9 @@
+
+<section id="vehicle">
 <?php
 if($special == 1)
 {
 ?>
-<section id="vehicle">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12 medium-8 small-order-2 medium-order-1">
@@ -100,11 +101,11 @@ if($special == 1)
 			</div>
 		</div>
 	</div>
-</section>
-<?php
+	<?php
 }
 else
 {
 	echo "This offer is no longer available";
 }
 ?>
+</section>
