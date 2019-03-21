@@ -104,7 +104,7 @@
 		}
 		else
 		{
-			echo "This offer is no longer available";
+			echo "<h1 class='text-center'>This offer is no longer available</h1>";
 		}
 		?>
 	</div>
