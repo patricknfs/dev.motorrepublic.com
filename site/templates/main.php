@@ -121,7 +121,62 @@ print_r($_GET);
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
-    
+    <script>
+    $(document).ready(function(){
+
+      load_json_data('marque');
+
+      function load_json_data(id, parent_id)
+      {
+        var html_code = '';
+        $.getJSON('vehicle.json', function(data){
+          html_code += '<option value="">Select '+id+'</option>';
+          $.each(data, function(key, value){
+            if(id == 'marque')
+            {
+              if(value.parent_id == '0')
+              {
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+              }
+            }
+            else
+            {
+              if(value.parent_id == parent_id)
+              {
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+              }
+            }
+          });
+          $('#'+id).html(html_code);
+        });
+      }
+
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        if(marque_id != '')
+        {
+          load_json_data('model', marque_id);
+        }
+        else
+        {
+          $('#model').html('<option value="">Select Model</option>');
+          $('#bodystyle').html('<option value="">Select Body Style</option>');
+        }
+      });
+
+      $(document).on('change', '#model', function(){
+        var model_id = $(this).val();
+        if(model_id != '')
+        {
+          load_json_data('bodystyle', model_id);
+        }
+        else
+        {
+          $('#bodystyle').html('<option value="">Select Body Style</option>');
+        }
+      });
+    });
+  </script>
 
     
     <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
@@ -341,60 +396,4 @@ print_r($_GET);
     <?php
     }
   ?>
-  <script>
-    $(document).ready(function(){
-
-      load_json_data('marque');
-
-      function load_json_data(id, parent_id)
-      {
-        var html_code = '';
-        $.getJSON('vehicle.json', function(data){
-          html_code += '<option value="">Select '+id+'</option>';
-          $.each(data, function(key, value){
-            if(id == 'marque')
-            {
-              if(value.parent_id == '0')
-              {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-              }
-            }
-            else
-            {
-              if(value.parent_id == parent_id)
-              {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-              }
-            }
-          });
-          $('#'+id).html(html_code);
-        });
-      }
-
-      $(document).on('change', '#marque', function(){
-        var marque_id = $(this).val();
-        if(marque_id != '')
-        {
-          load_json_data('model', marque_id);
-        }
-        else
-        {
-          $('#model').html('<option value="">Select Model</option>');
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
-        }
-      });
-
-      $(document).on('change', '#model', function(){
-        var model_id = $(this).val();
-        if(model_id != '')
-        {
-          load_json_data('bodystyle', model_id);
-        }
-        else
-        {
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
-        }
-      });
-    });
-  </script>
 </html>
