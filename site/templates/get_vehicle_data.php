@@ -1,7 +1,5 @@
 <?php
 date_default_timezone_set('CET');
-require_once "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php";
-
 function get_data()
 {
   require_once "/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php";
@@ -23,7 +21,7 @@ function get_data()
 // print_r(get_data());
 // echo "</pre>";
 
-$vehicle_file = MR_PATH . "vehicle.json";
+$vehicle_file = "vehicle.json";
 if(file_put_contents($vehicle_file, get_data()))
 {
   echo "file created";
