@@ -1,4 +1,7 @@
-
+<?php
+if($data['special'] == 1)
+{
+?>
 <section id="vehicle">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
@@ -98,3 +101,6 @@
 		</div>
 	</div>
 </section>
+<?php
+}
+?>
