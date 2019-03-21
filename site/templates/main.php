@@ -203,18 +203,18 @@ print_r($_GET);
                 </select>
               </div>
               <div class="cell small-12 medium-2">
-                <select id="slct2" name="slct2">
+                <select id="model" name="model">
                   <option value="">Model (choose manufacturer first)</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="bodystyle" name="bodystyle">
+                  <option value="">Select Body Style</option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
                 <select id="slct3" name="slct3">
                   <option value="">Select Range</option>
-                </select>
-              </div>
-              <div class="cell small-12 medium-2">
-                <select id="slct4" name="slct4">
-                  <option value="">Select Body Style</option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
@@ -371,30 +371,30 @@ print_r($_GET);
         });
       }
 
-      // $(document).on('change', '#marque', function(){
-      //   var marque_id = $(this).val();
-      //   if(marque_id != '')
-      //   {
-      //     load_json_data('state', country_id);
-      //   }
-      //   else
-      //   {
-      //     $('#state').html('<option value="">Select state</option>');
-      //     $('#city').html('<option value="">Select city</option>');
-      //   }
-      // });
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        if(marque_id != '')
+        {
+          load_json_data('model', marque_id);
+        }
+        else
+        {
+          $('#model').html('<option value="">Select Model</option>');
+          $('#bodystyle').html('<option value="">Select Body Style</option>');
+        }
+      });
 
-      // $(document).on('change', '#state', function(){
-      //   var state_id = $(this).val();
-      //   if(state_id != '')
-      //   {
-      //     load_json_data('city', state_id);
-      //   }
-      //   else
-      //   {
-      //     $('#city').html('<option value="">Select city</option>');
-      //   }
-      // });
+      $(document).on('change', '#model', function(){
+        var model_id = $(this).val();
+        if(model_id != '')
+        {
+          load_json_data('bodystyle', model_id);
+        }
+        else
+        {
+          $('#bodystyle').html('<option value="">Select Body Style</option>');
+        }
+      });
     });
   </script>
   <!-- <script>
