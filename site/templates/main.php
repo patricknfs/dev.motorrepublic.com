@@ -353,16 +353,16 @@ print_r($_GET);
             {
               if(value.parent_id == '0')
               {
-                html_code += '<option value="'+value.id+'">'+value.manufacturer+'</option>';
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
             }
-            // else
-            // {
-            //   if(value.parent_id == parent_id)
-            //   {
-            //     html_code += '<option value="'+value.id+'">'+value.manufacturer+'</option>';
-            //   }
-            // }
+            else
+            {
+              if(value.parent_id == parent_id)
+              {
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+              }
+            }
           });
           $('#'+id).html(html_code);
         });
