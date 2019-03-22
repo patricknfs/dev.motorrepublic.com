@@ -33,7 +33,7 @@ function get_data()
     while ($row3 = mysqli_fetch_array($result3)) {
       echo $row['id'] . "<br />";
       array_push($marque_data, array(
-        'id' => $row3["cap_id"],
+        'id' => $row3["cap_id"] . "-2",
         'name' => $row3["bodystyle"],
         'parent_id' => $row["id"]
       ));
