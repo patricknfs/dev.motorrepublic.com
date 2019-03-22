@@ -12,10 +12,13 @@ try
   $client = get_soap_client_2();
 
   $query = "SELECT * FROM `team`.`vehicles`";
-  if ($result = $conn->query($query)) {
+  if ($result = $conn->query($query)) 
+  {
     printf("Select returned %d rows.\n", $result->num_rows);
     $result = $conn->query($query) or die(mysqli_error($conn));
-    foreach($result AS $vehicle) {
+    $row = 0;
+    foreach($result AS $vehicle) 
+    {
       $cap_id = $vehicle['cap_id'];
       $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $cap_id, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
       $client->GetBulkTechnicalData($params);
@@ -37,6 +40,8 @@ try
       $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "' WHERE `cap_id` = '" . $cap_id . "'"; 
       // echo $query2;
       $result2 = $conn->query($query2) or die(mysqli_error($conn));
+      echo "row number: " . $row;
+      $row++;
     }
     /* free result set */
     $result->close();

@@ -83,6 +83,7 @@
       "scroller": true,
       "select": true
 		});
+
     // Add event listener for opening and closing details
     $('#mr_rates tbody').on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
@@ -125,7 +126,6 @@
           .removeClass( 'loading' );
         }
       } );
-  
       return div;
     }
 	});
