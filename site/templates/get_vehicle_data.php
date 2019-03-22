@@ -35,7 +35,7 @@ function get_data()
       array_push($marque_data, array(
         'id' => $row3["cap_id"],
         'name' => $row3["bodystyle"],
-        'parent_id' => $row["row_id"]
+        'parent_id' => $row["id"]
       ));
     }
   }
