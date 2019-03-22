@@ -153,7 +153,7 @@ print_r($_GET);
 
       $(document).on('change', '#marque', function(){
         var marque_id = $(this).val();
-        document.write('marque_id');
+        document.write(marque_id);
         if(marque_id != '')
         {
           load_json_data('model', marque_id);
