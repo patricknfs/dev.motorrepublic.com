@@ -275,7 +275,7 @@ print_r($_GET);
                   <option value="300">£200-£300 per month</option>
                   <option value="400">£300-£400 per month</option>
                   <option value="500">£400-£500 per month</option>
-                  <option value="500">< £500 per month</option>
+                  <option value="500">> £500 per month</option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
