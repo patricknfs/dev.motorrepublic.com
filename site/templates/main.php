@@ -157,6 +157,7 @@ print_r($_GET);
         if(marque_id != '')
         {
           load_json_data('model', marque_id);
+          load_json_data('bodystyle', marque_id);
         }
         else
         {
@@ -165,18 +166,18 @@ print_r($_GET);
         }
       });
 
-      $(document).on('change', '#marque', function(){
-        var model_id = $(this).val();
-        if(model_id != '')
-        {
-          load_json_data('bodystyle', model_id);
-        }
-        else
-        {
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
-        }
-      });
-    });
+    //   $(document).on('change', '#marque', function(){
+    //     var model_id = $(this).val();
+    //     if(model_id != '')
+    //     {
+    //       load_json_data('bodystyle', model_id);
+    //     }
+    //     else
+    //     {
+    //       $('#bodystyle').html('<option value="">Select Body Style</option>');
+    //     }
+    //   });
+    // });
   </script>
 
     
