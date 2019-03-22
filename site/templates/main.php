@@ -161,7 +161,6 @@ print_r($_GET);
         else
         {
           $('#model').html('<option value="">Select Model</option>');
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
         }
       });
 
