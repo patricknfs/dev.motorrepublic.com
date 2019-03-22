@@ -14,16 +14,17 @@ function get_data()
       'name' => $row["manufacturer"],
       'parent_id' => 0
     );
+    $query2 = "SELECT `id`, `manufacturer`, `model` FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `manufacturer` ORDER BY `manufacturer` ASC";
+    $result2 = mysqli_query($conn, $query2);
+    while ($row = mysqli_fetch_array($result2)) {
+      array_push($marque_data, array(
+        'id' => $row2["id"],
+        'name' => $row2["model"],
+        'parent_id' => $row['id']
+      ));
+    }
   }
-  $query = "SELECT `id`, `manufacturer`, `model` FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `manufacturer` ORDER BY `manufacturer` ASC";
-  $result = mysqli_query($conn, $query);
-  while ($row = mysqli_fetch_array($result)) {
-    array_push($marque_data, array(
-      'id' => $row["id"],
-      'name' => $row["model"],
-      'parent_id' => 1
-    ));
-  }
+  
   return json_encode($marque_data, JSON_PRETTY_PRINT);
 }
 
