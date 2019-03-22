@@ -19,7 +19,7 @@ function get_data()
     while ($row2 = mysqli_fetch_array($result2)) {
       echo $row['id'] . "<br />";
       array_push($marque_data, array(
-        'id' => $row2["id"],
+        'id' => $row2["cap_id"],
         'name' => $row2["model"],
         'parent_id' => $row['id']
       ));
