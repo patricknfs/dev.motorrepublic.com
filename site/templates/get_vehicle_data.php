@@ -25,7 +25,7 @@ function get_data()
       ));
     }
 
-    $query3 = "SELECT t2.cap_id, DISTINCT t2.bodystyle
+    $query3 = "SELECT t2.cap_id, DISTINCT(t2.bodystyle)
     FROM (
       SELECT cap_id FROM team.rates_combined_terse WHERE special = 1 AND `manufacturer` = '" . $row['manufacturer'] . "'
     ) as t1 INNER JOIN team.vehicles AS t2 ON t1.cap_id = t2.cap_id
