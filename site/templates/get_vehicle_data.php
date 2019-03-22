@@ -17,7 +17,6 @@ function get_data()
     $query2 = "SELECT `cap_id`, `model`, `manufacturer` FROM `team`.`rates_combined_terse` WHERE `special` = 1 AND `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `manufacturer` ASC";
     $result2 = mysqli_query($conn, $query2);
     while ($row2 = mysqli_fetch_array($result2)) {
-      echo $row['id'] . "<br />";
       array_push($marque_data, array(
         'id' => $row2["cap_id"],
         'name' => $row2["model"],
@@ -32,6 +31,7 @@ function get_data()
     GROUP BY t2.cap_id ORDER BY t2.manufacturer ASC";
     $result3 = mysqli_query($conn, $query3);
     while ($row3 = mysqli_fetch_array($result3)) {
+      echo $row['id'] . "<br />";
       array_push($marque_data, array(
         'id' => $row3["cap_id"],
         'name' => $row3["bodystyle"],
