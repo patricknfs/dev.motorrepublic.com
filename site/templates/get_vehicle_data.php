@@ -14,7 +14,7 @@ function get_data()
       'name' => $row["manufacturer"],
       'parent_id' => 0
     );
-    $query2 = "SELECT `cap_id`, `manufacturer`, `model` FROM `team`.`rates_combined_terse` WHERE `special` = 1 GROUP BY `manufacturer` ORDER BY `manufacturer` ASC";
+    $query2 = "SELECT `cap_id`, `model`, `manufacturer` FROM `team`.`rates_combined_terse` WHERE `special` = 1 AND `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `manufacturer` ASC";
     $result2 = mysqli_query($conn, $query2);
     while ($row2 = mysqli_fetch_array($result2)) {
       echo $row['id'] . "<br />";
