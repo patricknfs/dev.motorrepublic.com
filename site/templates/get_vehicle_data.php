@@ -32,10 +32,9 @@ function get_data()
     GROUP BY t2.cap_id ORDER BY t2.manufacturer ASC";
     $result3 = mysqli_query($conn, $query3);
     while ($row3 = mysqli_fetch_array($result3)) {
-      echo $row['id'] . "<br />";
       array_push($marque_data, array(
         'id' => $row3["cap_id"],
-        'name' => $row3["model"],
+        'name' => $row3["bodystyle"],
         'parent_id' => $row['cap_id']
       ));
     }
