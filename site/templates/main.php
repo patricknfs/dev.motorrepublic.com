@@ -269,6 +269,7 @@ print_r($_GET);
               </div>
               <div class="cell small-12 medium-2">
                 <select id="rate_range" name="rate_range">
+                  <option value="">Select Rate Range</option>
                   <option value="150">< £150 per month</option>
                   <option value="200">£150-£200 per month</option>
                   <option value="300">£200-£300 per month</option>
