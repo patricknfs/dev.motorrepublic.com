@@ -165,10 +165,10 @@ print_r($_GET);
       });
 
       $(document).on('change', '#marque', function(){
-        var model_id = $(this).val();
-        if(model_id != '')
+        var marque_id = $(this).val();
+        if(marque_id != '')
         {
-          load_json_data('bodystyle', model_id);
+          load_json_data('bodystyle', marque_id);
         }
         else
         {
@@ -268,8 +268,13 @@ print_r($_GET);
                 </select>
               </div>
               <div class="cell small-12 medium-2">
-                <select id="slct3" name="slct3">
-                  <option value="">Select Range</option>
+                <select id="rate_range" name="rate_range">
+                  <option value="150">< £150 per month</option>
+                  <option value="200">£150-£200 per month</option>
+                  <option value="300">£200-£300 per month</option>
+                  <option value="400">£300-£400 per month</option>
+                  <option value="500">£400-£500 per month</option>
+                  <option value="500">< £500 per month</option>
                 </select>
               </div>
               <div class="cell small-12 medium-2">
