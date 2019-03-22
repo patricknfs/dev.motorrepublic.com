@@ -31,7 +31,7 @@ function get_data()
     ) as t1 INNER JOIN team.vehicles AS t2 ON t1.cap_id = t2.cap_id
     GROUP BY t2.cap_id ORDER BY t2.manufacturer ASC";
     $result3 = mysqli_query($conn, $query3);
-    $bodystyle_id = 10000;
+    $bodystyle_id = 50000;
     while ($row3 = mysqli_fetch_array($result3)) {
       echo $row['id'] . "<br />";
       array_push($marque_data, array(
