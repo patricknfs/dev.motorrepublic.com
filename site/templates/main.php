@@ -177,7 +177,7 @@ print_r($_GET);
     //       $('#bodystyle').html('<option value="">Select Body Style</option>');
     //     }
     //   });
-    // });
+    });
   </script>
 
     
