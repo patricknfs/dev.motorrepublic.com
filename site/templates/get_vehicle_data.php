@@ -24,7 +24,7 @@ function get_data()
       ));
       $query3 = "SELECT t2.cap_id, t2.bodystyle
       FROM (
-        SELECT cap_id FROM team.rates_combined_terse WHERE special = 1 AND `manufacturer` = '" . $row['manufacturer'] . "'
+        SELECT cap_id FROM team.rates_combined_terse WHERE special = 1 AND `cap_id` = '" . $row2['cap_id'] . "'
       ) as t1 INNER JOIN team.vehicles AS t2 ON t1.cap_id = t2.cap_id
       GROUP BY t2.cap_id ORDER BY t2.manufacturer ASC";
       $result3 = mysqli_query($conn, $query3);
