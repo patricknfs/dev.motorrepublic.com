@@ -23,15 +23,17 @@ try
   while ($data = mysqli_fetch_array($result)) 
   {
     $capidset[] = $data['cap_id'];
-    // $capidset = array_chunk($capidset,1000);
     $specdateset[] = '2019/03/24';
-    // $specdatelist = array_chunk($specdateset, 1000);
   }
-  $capidList = implode(",", array_chunk($capidset, 1000));
-  $specdatelist = implode(",",array_chunk($specdateset,1000));
-
-  print_r($capidList[0]);
-  print_r($specdatelist[0]);
+  // $capidList = implode(",", array_chunk($capidset, 1000));
+  // $specdatelist = implode(",",array_chunk($specdateset,1000));
+  $capidlist = array_chunk($capidset, 1000);
+  foreach($capidlist AS $capidchunk)
+  {
+    print_r($capidchunk);
+  }
+  print_r($capidList);
+  print_r($specdatelist);
 
   $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $capidList, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
   $client->GetBulkTechnicalData($params);
