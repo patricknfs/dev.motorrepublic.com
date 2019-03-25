@@ -13,12 +13,18 @@ try
 
   $query = "SELECT * FROM `team`.`vehicles`";
   $result = $conn->query($query) or die(mysqli_error($conn));
-  $prefix = $cap_ids = '';
-  foreach($result AS $vehicle) 
+  // $prefix = $cap_ids = '';
+  // foreach($result AS $vehicle) 
+  // {
+  //   $capidList .= $prefix . '"' . $vehicle . '"';
+  //   $prefix = ', ';
+  // }
+  $resultset = array();
+  while ($data = db_fetch_array($result)) 
   {
-    $capidList .= $prefix . '"' . $vehicle . '"';
-    $prefix = ', ';
+    $resultset[] = $data;
   }
+  $capidList = implode(",", $resultset);
 
   print_r($capidList);
 
