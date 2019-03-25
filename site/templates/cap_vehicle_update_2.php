@@ -19,6 +19,7 @@ try
   //   $capidList .= $prefix . '"' . $vehicle . '"';
   //   $prefix = ', ';
   // }
+  echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@";
   $capidset = array();
   while ($data = mysqli_fetch_array($result)) 
   {
