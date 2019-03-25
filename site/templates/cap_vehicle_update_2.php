@@ -41,6 +41,7 @@ try
   // $groups = array_unique($data->xpath('//SE/Dc_Description'));
   // $equipment = $data->xpath('//SE');
   $cc = $data->xpath('//CC');
+  print_r($cc);
   $co2 = $data->xpath('//CO2');
   $enginepower_ps = $data->xpath('//ENGINEPOWER_PS');
   $mpg_combined = $data->xpath('//MPG_COMBINED');
