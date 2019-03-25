@@ -48,7 +48,7 @@ try
   $standardmanwarranty_years = $data->xpath('//STANDARDMANWARRANTY_YEARS');
   $bodystyle = $data->xpath('//BodyStyle');
 
-  $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "' WHERE `cap_id` = '" . $cap_id . "'"; 
+  $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "'"; 
   echo $query2;
 
   // if ($result = $conn->query($query)) 
