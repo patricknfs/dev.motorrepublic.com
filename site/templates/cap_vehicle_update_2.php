@@ -37,7 +37,7 @@ try
   $data_x = $client->__getLastResponse();
   $xml = str_replace(array("diffgr:","msdata:"),'', trim($data_x));
   $data = new SimpleXMLElement($xml);
-  print_r($data);
+  print_r($xml);
   // $groups = array_unique($data->xpath('//SE/Dc_Description'));
   // $equipment = $data->xpath('//SE');
   $cc = $data->xpath('//CC');
