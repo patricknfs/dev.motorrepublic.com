@@ -29,6 +29,7 @@ try
   $capidlist = array_chunk($capidset, 1000);
   $specdatelist = str_repeat("2019/03/24,");
   $specdatelist = rtrim($specdatelist,',');
+  echo $specdatelist;
   foreach($capidlist AS $capidchunk)
   {
     print_r($capidchunk);
