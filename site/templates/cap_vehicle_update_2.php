@@ -23,16 +23,15 @@ try
   while ($data = mysqli_fetch_array($result)) 
   {
     $capidset[] = $data['cap_id'];
-    $specdataset[] = '2019/03/24'; 
+    $specdateset[] = '2019/03/24'; 
   }
   $capidList = implode(",", $capidset);
-  $specdatalist = implode(",",$specdataset);
+  $specdatelist = implode(",",$specdateset);
 
   print_r($capidList);
-  print_r($specdatalist);
+  print_r($specdatelist);
 
-  $cap_id = $vehicle['cap_id'];
-  $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $cap_id, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
+  $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $capidList, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
   $client->GetBulkTechnicalData($params);
   // echo "Response:\n" . $client->__getLastResponse() . "\n";
   $data_x = $client->__getLastResponse();
