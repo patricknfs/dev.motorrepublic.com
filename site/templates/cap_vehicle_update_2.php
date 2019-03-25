@@ -20,7 +20,7 @@ try
   //   $prefix = ', ';
   // }
   $resultset = array();
-  while ($data = mysqli_fetch_array($result)) 
+  while ($data = mysqli_fetch_result($result)) 
   {
     $resultset[] = $data;
   }
