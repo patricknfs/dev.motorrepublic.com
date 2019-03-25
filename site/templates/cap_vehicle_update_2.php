@@ -33,10 +33,11 @@ try
 
   $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $capidList, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
   $client->GetBulkTechnicalData($params);
-  echo "Response:\n" . $client->__getLastResponse() . "\n";
+  // echo "Response:\n" . $client->__getLastResponse() . "\n";
   $data_x = $client->__getLastResponse();
   $xml = str_replace(array("diffgr:","msdata:"),'', trim($data_x));
   $data = new SimpleXMLElement($xml);
+  print_r($data);
   // $groups = array_unique($data->xpath('//SE/Dc_Description'));
   // $equipment = $data->xpath('//SE');
   $cc = $data->xpath('//CC');
