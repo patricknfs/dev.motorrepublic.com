@@ -20,9 +20,9 @@ try
   //   $prefix = ', ';
   // }
   $resultset = array();
-  while ($data = mysqli_fetch_result($result)) 
+  while ($data = mysqli_fetch_array($result)) 
   {
-    $resultset[] = $data;
+    $resultset[] = $data['cap_id'];
   }
   $capidList = implode(",", $resultset);
 
