@@ -25,8 +25,8 @@ try
   {
     $capidset[] = $data['cap_id'];
   }
-  $capidlist = array_chunk($capidset, 1000);
-  $specdatelist = str_repeat("2019/03/24,",1000);
+  $capidlist = array_chunk($capidset, 700);
+  $specdatelist = str_repeat("2019/03/24,",700);
   $specdatelist = rtrim($specdatelist,',');
   foreach($capidlist AS $capidchunk)
   {
