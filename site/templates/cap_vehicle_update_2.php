@@ -30,8 +30,8 @@ try
   $capidList = implode(",", array_chunk($capidset, 1000));
   $specdatelist = implode(",",array_chunk($specdateset,1000));
 
-  print_r($capidList);
-  print_r($specdatelist);
+  print_r($capidList[0]);
+  print_r($specdatelist[0]);
 
   $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $capidList, 'specDateList' => $date, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
   $client->GetBulkTechnicalData($params);
