@@ -23,12 +23,12 @@ try
   while ($data = mysqli_fetch_array($result)) 
   {
     $capidset[] = $data['cap_id'];
-    $capidset = array_chunk($capidset,1000);
+    // $capidset = array_chunk($capidset,1000);
     $specdateset[] = '2019/03/24';
-    $specdatelist = array_chunk($specdateset, 1000);
+    // $specdatelist = array_chunk($specdateset, 1000);
   }
-  $capidList = implode(",", $capidset);
-  $specdatelist = implode(",",$specdateset);
+  $capidList = implode(",", array_chunk($capidset, 1000));
+  $specdatelist = implode(",",array_chunk($specdateset,1000));
 
   print_r($capidList);
   print_r($specdatelist);
