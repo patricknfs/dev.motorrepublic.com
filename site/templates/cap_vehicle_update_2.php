@@ -19,14 +19,17 @@ try
   //   $capidList .= $prefix . '"' . $vehicle . '"';
   //   $prefix = ', ';
   // }
-  $resultset = array();
+  $capidset = array();
   while ($data = mysqli_fetch_array($result)) 
   {
-    $resultset[] = $data['cap_id'];
+    $capidset[] = $data['cap_id'];
+    $specdataset[] = '2019/03/24'; 
   }
-  $capidList = implode(",", $resultset);
+  $capidList = implode(",", $capidset);
+  $specdatalist = implode(",",$specdataset);
 
   print_r($capidList);
+  print_r($specdatalist);
 
   // if ($result = $conn->query($query)) 
   // {
