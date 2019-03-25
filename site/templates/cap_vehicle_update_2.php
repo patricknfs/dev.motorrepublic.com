@@ -23,7 +23,9 @@ try
   while ($data = mysqli_fetch_array($result)) 
   {
     $capidset[] = $data['cap_id'];
-    $specdateset[] = '2019/03/24'; 
+    $capidset = array_chunk($capidset,1000);
+    $specdateset[] = '2019/03/24';
+    $specdatelist = array_chunk($specdateset, 1000);
   }
   $capidList = implode(",", $capidset);
   $specdatelist = implode(",",$specdateset);
