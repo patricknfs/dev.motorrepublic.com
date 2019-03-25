@@ -24,15 +24,11 @@ try
   {
     $capidset[] = $data['cap_id'];
   }
-  // $capidList = implode(",", array_chunk($capidset, 1000));
-  // $specdatelist = implode(",",array_chunk($specdateset,1000));
   $capidlist = array_chunk($capidset, 1000);
   $specdatelist = str_repeat("2019/03/24,",1000);
   $specdatelist = rtrim($specdatelist,',');
   foreach($capidlist AS $capidchunk)
   {
-    // print_r($capidchunk);
-    // echo $specdatelist;
     implode(",",$capidchunk);
     $params = array('subscriberId' => $username, 'password' => $password, 'database' => 'car', 'capidList' => $capidchunk, 'specDateList' => $specdatelist, 'techDataList' => 'CC,ENGINEPOWER_PS,CO2,MPG_COMBINED,INSURANCEGROUP1-50,STANDARDMANWARRANTY_MILEAGE,STANDARDMANWARRANTY_YEARS', 'returnVehicleDescription' => true, 'returnCaPcodeTechnicalItems' => true,  'returnCostNew' => true ); //define your parameters here
     $client->GetBulkTechnicalData($params);
