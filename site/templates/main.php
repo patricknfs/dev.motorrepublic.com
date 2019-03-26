@@ -124,7 +124,7 @@ if($page->id !== 1043){
     <script>
     $(document).ready(function(){
 
-      load_json_data('manufacturer');
+      load_json_data('marque');
 
       function load_json_data(id, parent_id)
       {
@@ -132,7 +132,7 @@ if($page->id !== 1043){
         $.getJSON('<?=$config->urls->templates?>vehicle.json', function(data){
           html_code += '<option value="">Select '+id+'</option>';
           $.each(data, function(key, value){
-            if(id == 'manufacturer')
+            if(id == 'marque')
             {
               if(value.parent_id == '0')
               {
@@ -158,12 +158,12 @@ if($page->id !== 1043){
         });
       }
 
-      $(document).on('change', '#manufacturer', function(){
-        var manufacturer_id = $(this).val();
-        // document.write(manufacturer_id);
-        if(manufacturer_id != '')
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        // document.write(marque_id);
+        if(marque_id != '')
         {
-          load_json_data('model', manufacturer_id);
+          load_json_data('model', marque_id);
         }
         else
         {
@@ -171,11 +171,11 @@ if($page->id !== 1043){
         }
       });
 
-      $(document).on('change', '#manufacturer', function(){
-        var manufacturer_id = $(this).val();
-        if(manufacturer_id != '')
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        if(marque_id != '')
         {
-          load_json_data('bodystyle', manufacturer_id);
+          load_json_data('bodystyle', marque_id);
         }
         else
         {
