@@ -21,7 +21,7 @@ ob_start();
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-2">
-      <select id="marque" name="marque">
+      <select id="manufacturer" name="manufacturer">
         <option value="">Manufacturer</option>
       </select>
     </div>
