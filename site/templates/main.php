@@ -139,15 +139,16 @@ print_r($_GET);
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
             }
-            else
+            else if (id == 'bodystyle')
             {
-
-              document.write(value.id);
-              if(value.parent_id == parent_id && value.id >= 500000)
+              if(value.parent_id == parent_id)
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
-              else if (value.parent_id == parent_id)
+            }
+            else
+            {
+              if(value.parent_id == parent_id)
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
@@ -159,6 +160,7 @@ print_r($_GET);
 
       $(document).on('change', '#marque', function(){
         var marque_id = $(this).val();
+        // document.write(marque_id);
         if(marque_id != '')
         {
           load_json_data('model', marque_id);
