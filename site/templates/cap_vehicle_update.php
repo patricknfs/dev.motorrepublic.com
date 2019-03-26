@@ -11,9 +11,9 @@ try
   $date = date('Y/m/d');
   $client = get_soap_client_2();
 
-  $yesterday = new DateTime();
-  $yesterday->sub(new DateInterval('P1D'));
-  $yesterday->format('Y/m/d') . "\n";
+  $date = new DateTime();
+  $date->sub(new DateInterval('P1D'));
+  $yesterday = $date->format('Y/m/d') . "\n";
 
   $query = "SELECT * FROM `team`.`vehicles`";
   $result = $conn->query($query) or die(mysqli_error($conn));
