@@ -41,6 +41,7 @@ try
     $xml_root = $data->xpath('//Tech_Table');
     foreach($xml_root AS $vehicle)
     {
+      $capid = $vehicle->CAPID;
       $cc = $vehicle->CC;
       $co2 = $vehicle->CO2;
       $enginepower_ps = $vehicle->ENGINEPOWER_PS;
@@ -50,7 +51,7 @@ try
       $standardmanwarranty_years = $vehicle->STANDARDMANWARRANTY_YEARS;
       $bodystyle = $vehicle->BodyStyle;
 
-      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "'"; 
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "' WHERE `cap_id` = '" . $capid . "'"; 
       echo $query2;
       $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
