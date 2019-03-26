@@ -13,7 +13,7 @@ try
   $query = "SELECT * FROM `team`.`vehicles`";
   $result = $conn->query($query) or die(mysqli_error($conn));
 
-  $yesterday = date('d.m.Y',strtotime("-1 days")) . ",";
+  $yesterday = date('Y/m/d',strtotime("-1 days")) . ",";
 
   $capidset = array();
   while ($data = mysqli_fetch_array($result)) 
@@ -21,7 +21,7 @@ try
     $capidset[] = $data['cap_id'];
   }
   $capidlist = array_chunk($capidset, 700);
-  $specdatelist = str_repeat("2019/03/24,",700);
+  $specdatelist = str_repeat($yesterday,700);
   $specdatelist = rtrim($specdatelist,',');
   foreach($capidlist AS $capidchunk)
   {
