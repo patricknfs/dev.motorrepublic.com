@@ -11,10 +11,6 @@ try
   $date = date('Y/m/d');
   $client = get_soap_client_2();
 
-  $date = new DateTime();
-  $date->sub(new DateInterval('P1D'));
-  $yesterday = $date->format('Y/m/d') . "\n";
-
   $query = "SELECT * FROM `team`.`vehicles`";
   $result = $conn->query($query) or die(mysqli_error($conn));
 
@@ -24,7 +20,7 @@ try
     $capidset[] = $data['cap_id'];
   }
   $capidlist = array_chunk($capidset, 700);
-  $specdatelist = str_repeat("$yesterday,",700);
+  $specdatelist = str_repeat("2019/03/24,",700);
   $specdatelist = rtrim($specdatelist,',');
   foreach($capidlist AS $capidchunk)
   {
