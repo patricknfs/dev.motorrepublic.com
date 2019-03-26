@@ -58,8 +58,13 @@ try
 
       $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "'"; 
       echo $query2;
+      $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
+    /* free result set */
+    $result->close();
+    $result2->close();
   }
+
   // print_r($capidList);
   // print_r($specdatelist);
 
