@@ -45,6 +45,7 @@ try
     foreach($xml_root AS $vehicle)
     {
       echo $vehicle->CAPID . "\n";
+      echo $vehicle->Manufacturer . "\n";
     }
     // $cc = $data->xpath('//CC');
     // $co2 = $data->xpath('//CO2');
