@@ -4,6 +4,7 @@ date_default_timezone_set('CET');
 
 // manufacturer query
 $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
+echo $query;
 $result = mysqli_query($conn, $query);
 
 $man = array();
