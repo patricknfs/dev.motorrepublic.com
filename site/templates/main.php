@@ -139,9 +139,9 @@ print_r($_GET);
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
             }
-            else if
+            else if (value.id >= 500000 )
             {
-              if(value.parent_id == parent_id && id >= 500000)
+              if(value.parent_id == parent_id)
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
