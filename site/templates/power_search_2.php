@@ -20,41 +20,41 @@ ob_start();
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12 medium-2">
-      <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+      <select id="marque" name="marque">
         <option value="">Manufacturer</option>
-        <?php
-        foreach ($man as $manufacturer) {
-          ?>
-          <option value="<?=$manufacturer?>"><?=$manufacturer?></option>
-          <?php
-        }
-        ?>
       </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct2" name="slct2">
-        <option>Model (choose manufacturer first)</option>
+      <select id="model" name="model">
+        <option value="">Model (choose manufacturer first)</option>
       </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct3" name="slct3">Price range
-        <option value="<200">Less than 200</option>
+      <select id="bodystyle" name="bodystyle">
+        <option value="">Select Body Style</option>
       </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct4" name="slct4">Body Type
-        <option value="Coupe">Coupe</option>
+      <select id="rate_range" name="rate_range">
+        <option value="">Select Rate Range</option>
+        <option value="150">< £150 per month</option>
+        <option value="200">£150-£200 per month</option>
+        <option value="300">£200-£300 per month</option>
+        <option value="400">£300-£400 per month</option>
+        <option value="500">£400-£500 per month</option>
+        <option value="500">> £500 per month</option>
       </select>
     </div>
     <div class="cell small-12 medium-2">
-      <select id="slct5" name="slct5">Other
-        <option value="CO2">CO2</option>
+      <select id="slct5" name="slct5">
+        <option value=""></option>
       </select>
     </div>
     <div class="cell small-12 medium-2">
       <input type="submit" class="button" value="Find Your Deal">
     </div>
-  </form>
+  </div>
+</form>
 </div>
 <?php
 $form_out = ob_get_clean();
