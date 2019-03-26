@@ -55,9 +55,7 @@ try
       echo $query2;
       $result2 = $conn->query($query2) or die(mysqli_error($conn));
     }
-    $result2->close();
   }
-  $result->close();
 }
 catch(SoapFault $e){ 
   echo $e->getCode(). '<br />'. $e->getMessage();
