@@ -37,14 +37,14 @@ try
     $data_x = $client->__getLastResponse();
     $xml = str_replace(array("diffgr:","msdata:"),'', trim($data_x));
     $data = new SimpleXMLElement($xml);
-    print_r($xml);
+    // print_r($xml);
     // $groups = array_unique($data->xpath('//SE/Dc_Description'));
     // $equipment = $data->xpath('//SE');
 
-    $capid = $data->xpath('//CAPID');
-    foreach($capid AS $vehicle)
+    $xml_root = $data->xpath('//Tech_Table');
+    foreach($xml_root AS $vehicle)
     {
-      echo $vehicle . "\n";
+      echo $vehicle->CAPID . "\n";
     }
     // $cc = $data->xpath('//CC');
     // $co2 = $data->xpath('//CO2');
