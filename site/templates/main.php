@@ -141,7 +141,7 @@ print_r($_GET);
             }
             else if (id == 'bodystyle')
             {
-              if(value.parent_id == parent_id)
+              if(value.id >= 500000)
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
