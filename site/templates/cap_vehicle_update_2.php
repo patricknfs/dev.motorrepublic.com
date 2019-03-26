@@ -44,20 +44,22 @@ try
     $xml_root = $data->xpath('//Tech_Table');
     foreach($xml_root AS $vehicle)
     {
-      echo $vehicle->CAPID . "\n";
-      echo $vehicle->Manufacturer . "\n";
-    }
-    // $cc = $data->xpath('//CC');
-    // $co2 = $data->xpath('//CO2');
-    // $enginepower_ps = $data->xpath('//ENGINEPOWER_PS');
-    // $mpg_combined = $data->xpath('//MPG_COMBINED');
-    // $insurancegroup150 = $data->xpath('//INSURANCEGROUP150');
-    // $standardmanwarranty_mileage = $data->xpath('//STANDARDMANWARRANTY_MILEAGE');
-    // $standardmanwarranty_years = $data->xpath('//STANDARDMANWARRANTY_YEARS');
-    // $bodystyle = $data->xpath('//BodyStyle');
+      // echo $vehicle->CAPID . "\n";
+      // echo $vehicle->Manufacturer . "\n";
+    
+      $cc = $vehicle->CC;
+      $co2 = $vehicle->CO2;
+      $enginepower_ps = $vehicle->ENGINEPOWER_PS;
+      $mpg_combined = $vehicle->MPG_COMBINED;
+      $insurancegroup150 = $vehicle->INSURANCEGROUP150;
+      $standardmanwarranty_mileage = $vehicle->STANDARDMANWARRANTY_MILEAGE;
+      $standardmanwarranty_years = $vehicle->STANDARDMANWARRANTY_YEARS;
+      $bodystyle = $vehicle->BodyStyle;
 
-    // $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "'"; 
-    // echo $query2;
+      $query2 = "UPDATE `team`.`vehicles` SET `cc` = '" . trim($cc[0]) . "', `co2` = '" . trim($co2[0]) . "', `enginepower_ps` = '" . trim($enginepower_ps[0]) . "', `mpg_combined` = '" . trim($mpg_combined[0]) . "', `insurancegroup1-50` = '" . trim($insurancegroup150[0]) ."', `standardmanwarranty_mileage` = '" . trim($standardmanwarranty_mileage[0]) . "', `standardmanwarranty_years` = '" . trim($standardmanwarranty_years[0]) . "', `bodystyle` = '" . trim($bodystyle[0]) . "'"; 
+      echo $query2;
+    }
+    
   }
   // print_r($capidList);
   // print_r($specdatelist);
