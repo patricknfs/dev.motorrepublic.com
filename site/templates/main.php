@@ -136,7 +136,7 @@ if($page->id !== 1043){
             {
               if(value.parent_id == '0')
               {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+                html_code += '<option value="'+value.name+'">'+value.name+'</option>';
               }
             }
             else if (id == 'bodystyle')
