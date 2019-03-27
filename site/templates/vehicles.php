@@ -92,34 +92,23 @@ else
 }
 
 if(!empty($manuf)) {
-  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `bodystyle` LIKE '%" . $bodystyle . "%' AND `lcv` = '0' AND `special` = 1");
-  // echo "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1";
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1");
   $total_rows = $total_pages_sql->fetch_row();
-  // print_r($total_rows);
-  // echo "total rows: " . $total_rows[0];
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
-  // echo "total_pages: " . $total_pages;
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   echo $query;
 }
 elseif(!empty($bodystyle)) {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `bodystyle` LIKE '%" . $bodystyle . "%'  AND `lcv` = '0' AND `special` = 1");
-  // echo "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1";
   $total_rows = $total_pages_sql->fetch_row();
-  // print_r($total_rows);
-  // echo "total rows: " . $total_rows[0];
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
-  // echo "total_pages: " . $total_pages;
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   echo $query;
 }
 else {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1");
   $total_rows = $total_pages_sql->fetch_row();
-  // print_r($total_rows);
-  // echo "total rows: " . $total_rows[0];
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
-  // echo "total_pages: " . $total_pages;
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   echo $query;
 }
