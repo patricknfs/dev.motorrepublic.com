@@ -31,7 +31,7 @@ if ($page->marque->title != ''){
 else {
   $manufs = $sanitizer->text($input->get->marque);
   $query_man = "SELECT `manufacturer` FROM team.vehicles WHERE `id` = '" . $manufs . "' LIMIT 1";
-  if ($result = $mysqli->query($query)) {
+  if ($result = $conn->query($query)) {
     while ($row = $result->fetch_assoc()) {
         $manuf = $row["manufacturer"];
     }
