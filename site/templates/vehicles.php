@@ -29,16 +29,6 @@ if ($page->marque->title != ''){
   $manuf = strtoupper($page->marque->title);
 }
 else {
-  // Read JSON file
-$json = file_get_contents('vehicle.json');
-
-//Decode JSON
-$json_data = json_decode($json,true);
-
-//Print data
-print_r($json_data);
-
-
   $manufs = $sanitizer->text($input->get->marque);
   $query_man = "SELECT `manufacturer` FROM team.vehicles WHERE `id` = '" . $manufs . "' LIMIT 1";
   echo $query_man;
