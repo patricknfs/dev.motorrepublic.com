@@ -34,8 +34,10 @@ else {
     $manufs = $sanitizer->text($input->get->marque);
     $query_man = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $manufs . "' LIMIT 1";
     echo $query_man;
-    if ($result = $conn->query($query_man)) {
-      while ($row = $result->fetch_assoc()) {
+    if ($result = $conn->query($query_man)) 
+    {
+      while ($row = $result->fetch_assoc()) 
+      {
           $manuf = $row["name"];
           echo "manuf is: " . $manuf;
       }
@@ -51,50 +53,43 @@ else {
 
 if($input->get->model)
 {
-  $mdllcv = $sanitizer->text($input->get->model);
-  $lcv = "";
-  $mdl = "";
-  if(!empty($mdllcv))
+  $mods = $sanitizer->text($input->get->model);
+  $query_mod = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $mods . "' LIMIT 1";
+  echo $query_mod;
+  if ($result = $conn->query($query_mod)) 
   {
-    $mdllcv = explode("-", $mdllcv);
-    $mdl = $mdllcv[0];
-    if($manuf)
+    while ($row = $result->fetch_assoc()) 
     {
-      $lcv = $mdllcv[1];
+        $mdl = $row["name"];
+        echo "mod is: " . $mod;
     }
+    $result->free();
   }
-}
-
-if($page->id == 1023) 
-{
-  $lcv2 = 1;
 }
 else
 {
-  $lcv2 = 0;
+  $mod = $sanitizer->text($input->get->model);
 }
-// echo "lcv2 is: " . $lcv2;
-// echo $mdl;
 
 if( !empty($manuf) ) {
-  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '0' AND `special` = 1");
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%'  AND `lcv` = '0' AND `special` = 1");
   // echo "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1";
   $total_rows = $total_pages_sql->fetch_row();
   // print_r($total_rows);
   // echo "total rows: " . $total_rows[0];
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   // echo "total_pages: " . $total_pages;
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%' AND `lcv` = '" . $lcv . "' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   echo $query;
 }
 else {
-  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `lcv` = '" . $lcv2 . "' AND `special` = 1");
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1");
   $total_rows = $total_pages_sql->fetch_row();
   // print_r($total_rows);
   // echo "total rows: " . $total_rows[0];
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   // echo "total_pages: " . $total_pages;
-  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `lcv` = '" . $lcv2 . "' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
   echo $query;
 }
 
