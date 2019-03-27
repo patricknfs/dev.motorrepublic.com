@@ -49,21 +49,28 @@ else {
 
 }
 
-$mdllcv = $sanitizer->text($input->get->model);
-$lcv = "";
-$mdl = "";
-if(!empty($mdllcv)){
-  $mdllcv = explode("-", $mdllcv);
-  $mdl = $mdllcv[0];
-  if($manuf){
-    $lcv = $mdllcv[1];
+if($input->get->model)
+{
+  $mdllcv = $sanitizer->text($input->get->model);
+  $lcv = "";
+  $mdl = "";
+  if(!empty($mdllcv))
+  {
+    $mdllcv = explode("-", $mdllcv);
+    $mdl = $mdllcv[0];
+    if($manuf)
+    {
+      $lcv = $mdllcv[1];
+    }
   }
 }
 
-if($page->id == 1023) {
+if($page->id == 1023) 
+{
   $lcv2 = 1;
 }
-else{
+else
+{
   $lcv2 = 0;
 }
 // echo "lcv2 is: " . $lcv2;
