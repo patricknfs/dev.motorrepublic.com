@@ -143,14 +143,14 @@ if($page->id !== 1043){
             {
               if(value.parent_id == parent_id && value.id >= 500000)
               {
-                html_code += '<option value="'+value.name+'">'+value.name+'</option>';
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
             }
             else
             {
               if(value.parent_id == parent_id && value.id < 500000)
               {
-                html_code += '<option value="'+value.name+'">'+value.name+'</option>';
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
             }
           });
