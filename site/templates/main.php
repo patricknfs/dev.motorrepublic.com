@@ -22,7 +22,7 @@ if($page->id !== 1043){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['marque']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
       elseif($page->template->name == 'vehicles'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
@@ -41,7 +41,7 @@ if($page->id !== 1043){
         echo "Motor Republic Car, Van & HGV Leasing";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['marque']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
@@ -54,7 +54,7 @@ if($page->id !== 1043){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic";
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['marque']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
       elseif($page->name == 'car-leasing'){
         echo "Car Leasing. Business & Personal Contract Hire - Motor Republic" . ($input->slct1?' - ' . $input->slct1:'');
@@ -76,7 +76,7 @@ if($page->id !== 1043){
         echo "Car & Van Leasing. Business & Personal Contract Hire - Motor Republic" . ($input->slct1?' - ' . $input->slct1:'');
       }
       elseif($page->template->name == 'vehicle'){
-        echo $_GET['marque']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
+        echo $_GET['manufacturer']  . " " . $model . " Leasing Offer – Motor Republic - " . $input->urlSegment();
       }
       else {
         echo $page->get("title");
@@ -124,7 +124,7 @@ if($page->id !== 1043){
     <script>
     $(document).ready(function(){
 
-      load_json_data('marque');
+      load_json_data('manufacturer');
 
       function load_json_data(id, parent_id)
       {
@@ -132,7 +132,7 @@ if($page->id !== 1043){
         $.getJSON('<?=$config->urls->templates?>vehicle.json', function(data){
           html_code += '<option value="">Select '+id+'</option>';
           $.each(data, function(key, value){
-            if(id == 'marque')
+            if(id == 'manufacturer')
             {
               if(value.parent_id == '0')
               {
@@ -141,7 +141,7 @@ if($page->id !== 1043){
             }
             else if (id == 'bodystyle')
             {
-              if(value.parent_id == parent_id)
+              if(value.parent_id == parent_id && value.id >= 500000)
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
@@ -158,12 +158,12 @@ if($page->id !== 1043){
         });
       }
 
-      $(document).on('change', '#marque', function(){
-        var marque_id = $(this).val();
-        // document.write(marque_id);
-        if(marque_id != '')
+      $(document).on('change', '#manufacturer', function(){
+        var manufacturer_id = $(this).val();
+        // document.write(manufacturer_id);
+        if(manufacturer_id != '')
         {
-          load_json_data('model', marque_id);
+          load_json_data('model', manufacturer_id);
         }
         else
         {
@@ -171,11 +171,11 @@ if($page->id !== 1043){
         }
       });
 
-      $(document).on('change', '#marque', function(){
-        var marque_id = $(this).val();
-        if(marque_id != '')
+      $(document).on('change', '#manufacturer', function(){
+        var manufacturer_id = $(this).val();
+        if(manufacturer_id != '')
         {
-          load_json_data('bodystyle', marque_id);
+          load_json_data('bodystyle', manufacturer_id);
         }
         else
         {
