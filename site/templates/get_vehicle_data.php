@@ -15,7 +15,7 @@ function get_data()
       'parent_id' => 0
     );
 
-    $query2 = "SELECT `cap_id`, `model`, `manufacturer` FROM `team`.`rates_combined_terse` WHERE `special` = 1 AND `manufacturer` = '" . $row['manufacturer'] . "' ORDER BY `manufacturer` ASC";
+    $query2 = "SELECT `cap_id`, `model`, `manufacturer` FROM `team`.`rates_combined_terse` WHERE `special` = 1 AND `manufacturer` = '" . $row['manufacturer'] . "' AND `lcv` = 0 ORDER BY `manufacturer` ASC";
     $result2 = mysqli_query($conn, $query2);
     while ($row2 = mysqli_fetch_array($result2)) {
       array_push($marque_data, array(
@@ -27,7 +27,7 @@ function get_data()
 
     $query3 = "SELECT DISTINCT t2.bodystyle
     FROM (
-      SELECT cap_id FROM team.rates_combined_terse WHERE special = 1 AND `manufacturer` = '" . $row['manufacturer'] . "'
+      SELECT cap_id FROM team.rates_combined_terse WHERE special = 1 AND `manufacturer` = '" . $row['manufacturer'] . "' AND `lcv` = 0
     ) as t1 INNER JOIN team.vehicles AS t2 ON t1.cap_id = t2.cap_id
     GROUP BY t2.cap_id ORDER BY t2.manufacturer ASC";
     $result3 = mysqli_query($conn, $query3);
