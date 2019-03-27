@@ -56,11 +56,11 @@ if($input->get->model)
   $mods = $sanitizer->text($input->get->model);
   $query_mod = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $mods . "' LIMIT 1";
   echo $query_mod;
-  if ($result = $conn->query($query_mod)) 
+  if ($result_mod = $conn->query($query_mod)) 
   {
-    while ($row = $result->fetch_assoc()) 
+    while ($row_mod = $result_mod->fetch_assoc()) 
     {
-        $mdl = $row["name"];
+        $mdl = $row_mod["name"];
         echo "mod is: " . $mod;
     }
     $result->free();
