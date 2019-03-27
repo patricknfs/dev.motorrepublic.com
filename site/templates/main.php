@@ -5,9 +5,9 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 print_r($_GET);
-if($page->id !== 1043){
-  include "power_search_2.php";
-}
+// if($page->id !== 1043){
+//   include "power_search_2.php";
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +124,7 @@ if($page->id !== 1043){
     <script>
     $(document).ready(function(){
 
-      load_json_data('manufacturer');
+      load_json_data('marque');
 
       function load_json_data(id, parent_id)
       {
@@ -132,11 +132,11 @@ if($page->id !== 1043){
         $.getJSON('<?=$config->urls->templates?>vehicle.json', function(data){
           html_code += '<option value="">Select '+id+'</option>';
           $.each(data, function(key, value){
-            if(id == 'manufacturer')
+            if(id == 'marque')
             {
               if(value.parent_id == '0')
               {
-                html_code += '<option value="'+value.name+'">'+value.name+'</option>';
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
             }
             else if (id == 'bodystyle')
@@ -158,12 +158,12 @@ if($page->id !== 1043){
         });
       }
 
-      $(document).on('change', '#manufacturer', function(){
-        var manufacturer_id = $(this).val();
-        // document.write(manufacturer_id);
-        if(manufacturer_id != '')
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        // document.write(marque_id);
+        if(marque_id != '')
         {
-          load_json_data('model', manufacturer_id);
+          load_json_data('model', marque_id);
         }
         else
         {
@@ -171,11 +171,11 @@ if($page->id !== 1043){
         }
       });
 
-      $(document).on('change', '#manufacturer', function(){
-        var manufacturer_id = $(this).val();
-        if(manufacturer_id != '')
+      $(document).on('change', '#marque', function(){
+        var marque_id = $(this).val();
+        if(marque_id != '')
         {
-          load_json_data('bodystyle', manufacturer_id);
+          load_json_data('bodystyle', marque_id);
         }
         else
         {
@@ -257,7 +257,44 @@ if($page->id !== 1043){
         <?php
         if($page->id !== 1043){
           ?>
-          <div class="grid-container"><?=$form_out?></div>
+          <form action="<?=$pages->get($selector)->url;?>" method="GET">
+            <div class="grid-x grid-margin-x">
+              <div class="cell small-12 medium-2">
+                <select id="marque" name="marque">
+                  <option value="">Manufacturer</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="model" name="model">
+                  <option value="">Model (choose manufacturer first)</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="bodystyle" name="bodystyle">
+                  <option value="">Select Body Style</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="rate_range" name="rate_range">
+                  <option value="">Select Rate Range</option>
+                  <option value="150">< £150 per month</option>
+                  <option value="200">£150-£200 per month</option>
+                  <option value="300">£200-£300 per month</option>
+                  <option value="400">£300-£400 per month</option>
+                  <option value="500">£400-£500 per month</option>
+                  <option value="500">> £500 per month</option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <select id="slct5" name="slct5">
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="cell small-12 medium-2">
+                <input type="submit" class="button" value="Find Your Deal">
+              </div>
+            </form>
+          </div>
           <?php
         }
         ?>
