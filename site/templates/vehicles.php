@@ -29,7 +29,7 @@ if ($page->marque->title != ''){
   $manuf = strtoupper($page->marque->title);
 }
 else {
-  $manuf = $sanitizer->text($input->get->manufacturer);
+  $manuf = $sanitizer->text($input->get->marque);
 }
 
 // echo "Manuf is: " . $manuf;
