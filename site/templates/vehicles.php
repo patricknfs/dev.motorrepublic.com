@@ -44,7 +44,7 @@ else {
   }
   else
   {
-    $manufs = $sanitizer->text($input->get->manufacturer);
+    $manuf = $sanitizer->text($input->get->manufacturer);
   }
 
 }
