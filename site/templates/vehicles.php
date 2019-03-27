@@ -83,7 +83,7 @@ if($input->get->bodystyle)
       $bodystyle = $row_bs["name"];
       echo "bodystyle is: " . $bodystyle;
     }
-    $result->free();
+    $result_bs->free();
   }
 }
 else
