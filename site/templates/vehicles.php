@@ -60,8 +60,8 @@ if($input->get->model)
   {
     while ($row_mod = $result_mod->fetch_assoc()) 
     {
-        $mod = $row_mod["name"];
-        echo "mod is: " . $mod;
+      $mod = $row_mod["name"];
+      echo "mod is: " . $mod;
     }
     $result->free();
   }
@@ -71,8 +71,39 @@ else
   $mod = $sanitizer->text($input->get->model);
 }
 
-if( !empty($manuf) ) {
-  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%'  AND `lcv` = '0' AND `special` = 1");
+if($input->get->bodystyle)
+{
+  $bodystyles = $sanitizer->text($input->get->bodystyle);
+  $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' LIMIT 1";
+  echo $query_bs;
+  if ($result_bs = $conn->query($query_bs)) 
+  {
+    while ($row_bs = $result_bs->fetch_assoc()) 
+    {
+      $bodystyle = $row_bs["name"];
+      echo "bodystyle is: " . $bodystyle;
+    }
+    $result->free();
+  }
+}
+else
+{
+  $bodystyle = $sanitizer->text($input->get->bodystyle);
+}
+
+if(!empty($manuf)) {
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `bodystyle` LIKE '%" . $bodystyle . "%' AND `lcv` = '0' AND `special` = 1");
+  // echo "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1";
+  $total_rows = $total_pages_sql->fetch_row();
+  // print_r($total_rows);
+  // echo "total rows: " . $total_rows[0];
+  $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
+  // echo "total_pages: " . $total_pages;
+  $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
+  echo $query;
+}
+elseif(!empty($bodystyle)) {
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `bodystyle` LIKE '%" . $bodystyle . "%'  AND `lcv` = '0' AND `special` = 1");
   // echo "SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mdl . "%'  AND `lcv` = '" . $lcv . "' AND `special` = 1";
   $total_rows = $total_pages_sql->fetch_row();
   // print_r($total_rows);
