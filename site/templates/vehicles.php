@@ -29,16 +29,24 @@ if ($page->marque->title != ''){
   $manuf = strtoupper($page->marque->title);
 }
 else {
-  $manufs = $sanitizer->text($input->get->marque);
-  $query_man = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $manufs . "' LIMIT 1";
-  echo $query_man;
-  if ($result = $conn->query($query_man)) {
-    while ($row = $result->fetch_assoc()) {
-        $manuf = $row["name"];
-        echo "manuf is: " . $manuf;
+  if($input->get->marque)
+  {
+    $manufs = $sanitizer->text($input->get->marque);
+    $query_man = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $manufs . "' LIMIT 1";
+    echo $query_man;
+    if ($result = $conn->query($query_man)) {
+      while ($row = $result->fetch_assoc()) {
+          $manuf = $row["name"];
+          echo "manuf is: " . $manuf;
+      }
+      $result->free();
     }
-    $result->free();
   }
+  else
+  {
+    $manufs = $sanitizer->text($input->get->manufacturer);
+  }
+
 }
 
 $mdllcv = $sanitizer->text($input->get->model);

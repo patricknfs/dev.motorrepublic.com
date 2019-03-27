@@ -34,13 +34,13 @@
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-6 grid-margin-y">
 				<div class="cell small-12">
-					<a href="/car-leasing/?marque=BMW&model=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" /></a>
+					<a href="/car-leasing/?manufacturer=BMW&model=-undefined"><img src="<?=$config->urls->assets?>graphics/bmw_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-					<a href="/car-leasing/?marque=MERCEDES&model=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" /></a>
+					<a href="/car-leasing/?manufacturer=MERCEDES&model=-undefined"><img src="<?=$config->urls->assets?>graphics/mercedes_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
-					<a href="/car-leasing/?marque=LAND+ROVER&model=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
+					<a href="/car-leasing/?manufacturer=LAND+ROVER&model=-undefined"><img src="<?=$config->urls->assets?>graphics/landrover_specials_600.png" /></a>
 				</div>
 				<div class="cell small-12 medium-6">
 
