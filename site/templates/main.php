@@ -5,9 +5,9 @@ date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
 print_r($_GET);
-// if($page->id !== 1043){
-//   include "power_search_2.php";
-// }
+if($page->id !== 1043){
+  include "power_search_2.php";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -257,44 +257,7 @@ print_r($_GET);
         <?php
         if($page->id !== 1043){
           ?>
-          <form action="<?=$pages->get($selector)->url;?>" method="GET">
-            <div class="grid-x grid-margin-x">
-              <div class="cell small-12 medium-2">
-                <select id="marque" name="marque">
-                  <option value="">Manufacturer</option>
-                </select>
-              </div>
-              <div class="cell small-12 medium-2">
-                <select id="model" name="model">
-                  <option value="">Model (choose manufacturer first)</option>
-                </select>
-              </div>
-              <div class="cell small-12 medium-2">
-                <select id="bodystyle" name="bodystyle">
-                  <option value="">Select Body Style</option>
-                </select>
-              </div>
-              <div class="cell small-12 medium-2">
-                <select id="rate_range" name="rate_range">
-                  <option value="">Select Rate Range</option>
-                  <option value="150">< £150 per month</option>
-                  <option value="200">£150-£200 per month</option>
-                  <option value="300">£200-£300 per month</option>
-                  <option value="400">£300-£400 per month</option>
-                  <option value="500">£400-£500 per month</option>
-                  <option value="500">> £500 per month</option>
-                </select>
-              </div>
-              <div class="cell small-12 medium-2">
-                <select id="slct5" name="slct5">
-                  <option value=""></option>
-                </select>
-              </div>
-              <div class="cell small-12 medium-2">
-                <input type="submit" class="button" value="Find Your Deal">
-              </div>
-            </form>
-          </div>
+          <div class="grid-container"><?=$form_out?></div>
           <?php
         }
         ?>
