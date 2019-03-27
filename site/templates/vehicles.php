@@ -63,7 +63,7 @@ if($input->get->model)
       $mod = $row_mod["name"];
       echo "mod is: " . $mod;
     }
-    $result->free();
+    $result_mod->free();
   }
 }
 else
