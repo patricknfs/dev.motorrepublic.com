@@ -10,6 +10,6 @@ $json_data = json_decode($json,true);
 
 foreach($json_data AS $vehicle_json)
 {
-  $query = "INSERT INTO team.vehicle_json (`id`,`json_id`,`name`,`parent_id`) VALUES ('$vehicle_json[id]','$vehicle_json[name]','$vehicle_json[parent_id]')";
+  $query = "INSERT INTO team.vehicle_json (`json_id`,`name`,`parent_id`) VALUES ('$vehicle_json[id]','$vehicle_json[name]','$vehicle_json[parent_id]')";
   $result = $conn->query($query);
 }
