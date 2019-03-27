@@ -3,7 +3,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once MR_PATH . "/inc/conn.php";
 
 // Read JSON file
-$json = file_get_contents('./student_data.json');
+$json = file_get_contents('vehicle.json');
 
 //Decode JSON
 $json_data = json_decode($json,true);
