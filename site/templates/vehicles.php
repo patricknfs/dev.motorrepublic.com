@@ -29,7 +29,14 @@ if ($page->marque->title != ''){
   $manuf = strtoupper($page->marque->title);
 }
 else {
-  $manuf = $sanitizer->text($input->get->marque);
+  $manufs = $sanitizer->text($input->get->marque);
+  $query_man = "SELECT `manufacturer` FROM team.vehicles WHERE `id` = '" . $manufs . "' LIMIT 1";
+  if ($result = $mysqli->query($query)) {
+    while ($row = $result->fetch_assoc()) {
+        $manuf = $row["manufacturer"];
+    }
+    $result->free();
+  }
 }
 
 // echo "Manuf is: " . $manuf;
