@@ -34,7 +34,7 @@ else {
   echo $query_man;
   if ($result = $conn->query($query_man)) {
     while ($row = $result->fetch_assoc()) {
-        $manuf = $row["manufacturer"];
+        $manuf = $row["name"];
         echo "manuf is: " . $manuf;
     }
     $result->free();
