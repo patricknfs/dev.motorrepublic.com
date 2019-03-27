@@ -41,8 +41,7 @@ else {
   }
 }
 
-// echo "Manuf is: " . $manuf;
-$mdllcv = $sanitizer->text($input->get->slct2);
+$mdllcv = $sanitizer->text($input->get->model);
 $lcv = "";
 $mdl = "";
 if(!empty($mdllcv)){
