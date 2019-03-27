@@ -55,7 +55,6 @@ ob_start();
     </div>
   </div>
 </form>
-</div>
 <?php
 $form_out = ob_get_clean();
 ?>
