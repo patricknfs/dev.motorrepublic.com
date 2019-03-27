@@ -60,7 +60,7 @@ if($input->get->model)
   {
     while ($row_mod = $result_mod->fetch_assoc()) 
     {
-        $mdl = $row_mod["name"];
+        $mod = $row_mod["name"];
         echo "mod is: " . $mod;
     }
     $result->free();
