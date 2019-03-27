@@ -141,7 +141,7 @@ if($page->id !== 1043){
             }
             else if (id == 'bodystyle')
             {
-              if(value.parent_id == parent_id && value.id >= 500000)
+              if(value.parent_id == parent_id)
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
