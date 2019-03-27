@@ -39,7 +39,7 @@ else {
       while ($row = $result->fetch_assoc()) 
       {
           $manuf = $row["name"];
-          echo "manuf is: " . $manuf;
+          // echo "manuf is: " . $manuf;
       }
       $result->free();
     }
