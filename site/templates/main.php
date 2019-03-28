@@ -257,7 +257,7 @@ if($page->id !== 1043){
         <?php
         if($page->id !== 1043){
           ?>
-          <div class="grid-container"><?=$form_out?></div>
+          <div class="grid-container fluid"><?=$form_out?></div>
           <?php
         }
         ?>
