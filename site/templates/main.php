@@ -145,10 +145,6 @@ if($page->id !== 1043){
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
-              else
-              {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-              }
             }
             else
             {
@@ -183,7 +179,14 @@ if($page->id !== 1043){
         }
         else
         {
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
+          $('#bodystyle').html(
+          '
+            <option value="">Select Body Style</option>
+            <option value="">Select Body Style</option>
+            <option value="">Select Body Style</option>
+            <option value="">Select Body Style</option>
+          '
+          );
         }
       });
     });
