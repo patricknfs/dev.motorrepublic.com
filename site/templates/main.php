@@ -145,6 +145,10 @@ if($page->id !== 1043){
               {
                 html_code += '<option value="'+value.id+'">'+value.name+'</option>';
               }
+              else
+              {
+                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+              }
             }
             else
             {
