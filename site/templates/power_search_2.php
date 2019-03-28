@@ -18,7 +18,7 @@ $selector = (($lcv==1)?"name=van-leasing-hgv":"name=car-leasing");
 ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
-  <div class="grid-x grid-margin-x">
+  <div class="grid-x grid-margin-x  align-center">
     <!-- <div class="select">
       <select id="ex_custom_select">
         <option>Option 1</option>
