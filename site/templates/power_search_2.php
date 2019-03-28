@@ -41,7 +41,7 @@ ob_start();
         <option value="">Select Body Style</option>
       </select>
     </div>
-    <div class="cell small-12 medium-2">
+    <!-- <div class="cell small-12 medium-2">
       <select id="rate_range" name="rate_range">
         <option value="">Select Rate Range</option>
         <option value="150">< £150 per month</option>
@@ -56,7 +56,7 @@ ob_start();
       <select id="slct5" name="slct5">
         <option value=""></option>
       </select>
-    </div>
+    </div> -->
     <div class="cell small-12 medium-2">
       <input type="submit" class="button" value="Find Your Deal">
     </div>
