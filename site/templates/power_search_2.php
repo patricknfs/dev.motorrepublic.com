@@ -33,12 +33,15 @@ ob_start();
     </div>
     <div class="cell small-12 medium-2">
       <select id="model" name="model">
-        <option value="">Model (choose manufacturer first)</option>
+        <option value="">Model (choose manufacturer)</option>
       </select>
     </div>
     <div class="cell small-12 medium-2">
       <select id="bodystyle" name="bodystyle">
         <option value="">Select Body Style</option>
+        <option value="">test 1</option>
+        <option value="">test 2</option>
+
       </select>
     </div>
     <!-- <div class="cell small-12 medium-2">
