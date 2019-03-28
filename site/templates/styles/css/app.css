@@ -12008,6 +12008,10 @@ nav {
   }
 }
 
+.select {
+  background-color: #007bb5;
+}
+
 .special {
   background-color: #cc0000;
   color: #fff;

@@ -77,7 +77,7 @@
 						}
 						if($website_deal_notes){
 							echo "<br /><br /><h6>Additional Information</h6>";
-							echo "<small>$website_deal_notes</small>";	
+							echo "<small>" . $website_deal_notes . "</small>";	
 						}
 						?>
 					</div>

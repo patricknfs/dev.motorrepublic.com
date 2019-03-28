@@ -19,7 +19,14 @@ ob_start();
 ?>
 <form action="<?=$pages->get($selector)->url;?>" method="GET">
   <div class="grid-x grid-margin-x">
-    <div class="cell small-12 medium-2">
+    <!-- <div class="select">
+      <select id="ex_custom_select">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+    </div> -->
+    <div class="cell small-12 medium-2 select">
       <select id="marque" name="marque">
         <option value="">Manufacturer</option>
       </select>
