@@ -179,8 +179,7 @@ if($page->id !== 1043){
         }
         else
         {
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
+          $('#bodystyle').html('<option value="">Select Body Style</option><option value="">test</option>');
         }
       });
     });
