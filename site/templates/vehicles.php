@@ -33,7 +33,7 @@ else {
   {
     $manufs = $sanitizer->text($input->get->marque);
     $query_man = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $manufs . "' LIMIT 1";
-    echo $query_man;
+    // echo $query_man;
     if ($result = $conn->query($query_man)) {
       while ($row = $result->fetch_assoc()) {
           $manuf = $row["name"];
