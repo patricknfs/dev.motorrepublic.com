@@ -4,7 +4,6 @@ ERROR_REPORTING(E_ALL);
 date_default_timezone_set('CET');
 require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templates/inc/config.php';
 require_once(MR_PATH . "/inc/conn.php");
-// print_r($_GET);
 if($page->id !== 1043){
   include "power_search.php";
 }
@@ -121,71 +120,6 @@ if($page->id !== 1043){
     <script type="text/javascript" src="https://cdn.datatables.net/v/zf/dt-1.10.18/b-1.5.2/b-colvis-1.5.1/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script type="text/javascript" src="<?=$config->urls->templates?>scripts/megamenu.js" ></script>
-    <script>
-    $(document).ready(function(){
-
-      load_json_data('marque');
-
-      function load_json_data(id, parent_id)
-      {
-        var html_code = '';
-        $.getJSON('<?=$config->urls->templates?>vehicle.json', function(data){
-          html_code += '<option value="">Select '+id+'</option>';
-          $.each(data, function(key, value){
-            if(id == 'marque')
-            {
-              if(value.parent_id == '0')
-              {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-              }
-            }
-            else if (id == 'bodystyle')
-            {
-              if(value.parent_id == parent_id && value.id >= 500000)
-              {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-              }
-            }
-            else
-            {
-              if(value.parent_id == parent_id && value.id < 500000)
-              {
-                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
-              }
-            }
-          });
-          $('#'+id).html(html_code);
-        });
-      }
-
-      $(document).on('change', '#marque', function(){
-        var marque_id = $(this).val();
-        // document.write(marque_id);
-        if(marque_id != '')
-        {
-          load_json_data('model', marque_id);
-        }
-        else
-        {
-          $('#model').html('<option value="">Select Model</option>');
-        }
-      });
-
-      $(document).on('change', '#marque', function(){
-        var marque_id = $(this).val();
-        if(marque_id != '')
-        {
-          load_json_data('bodystyle', marque_id);
-        }
-        else
-        {
-          $('#bodystyle').html('<option value="">Select Body Style</option>');
-        }
-      });
-    });
-  </script>
-
-    
     <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?=$config->urls->templates?>styles/css/app.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300|Open+Sans:400" />
@@ -372,4 +306,40 @@ if($page->id !== 1043){
     <?php
     }
   ?>
+  <script>
+    function populate(s1,s2){
+      var s1 = document.getElementById(s1);
+      var s2 = document.getElementById(s2);
+      s2.innerHTML = "";
+      if(s1.value == "Choose Manufacturer First"){
+        var optionArray = ["|"];
+      }
+      <?php
+      $query = "SELECT DISTINCT(`manufacturer`) FROM `team`.`rates_combined_terse` WHERE `special` = 1 ORDER BY `manufacturer` ASC";
+      $result = mysqli_query($conn, $query);
+      // echo $query;
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo " else if(s1.value == '" . $row['manufacturer'] . "'){
+          var optionArray = ['|',";
+          $query2 = "SELECT DISTINCT(`model`), `lcv` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $row['manufacturer'] . "' AND `special` = 1 ORDER BY `model` ASC";
+          // echo $query2;
+          $result2 = mysqli_query($conn, $query2);
+          while ($row2 = mysqli_fetch_array($result2)) {
+            echo "'" . $row2['model'] . "|" . $row2['model'] . "|" . $row2['lcv'] . "',";
+          }
+        echo "]}";
+      }
+      mysqli_free_result($result2);
+      mysqli_free_result($result);
+      mysqli_close($conn);
+      ?> 
+      for(var option in optionArray){
+        var pair = optionArray[option].split("|");
+        var newOption = document.createElement("option");
+        newOption.value = pair[0]+ "-" + pair[2];
+        newOption.innerHTML = pair[1];
+        s2.options.add(newOption);
+      }
+    }
+  </script>
 </html>
