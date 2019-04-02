@@ -73,7 +73,18 @@ else {
 if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
-  $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' AND `parent_id` = '" . $manufs . "'";
+  $query_bs = "SELECT 
+  t1.*, t2.bodystyle
+  FROM
+    `team`.`rates_combined_terse` AS t1
+  INNER JOIN
+  `team`.`vehicles` AS t2
+  ON t1.cap_id = t2.cap_id
+  WHERE
+    t1.lcv = '0'
+        AND t1.special = 1 
+        AND t2.bodystyle LIKE '%" . $bodystyle . "%'
+  GROUP BY t1.cap_id";
   echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
   {
@@ -91,18 +102,7 @@ else
 }
 
 if(!empty($manuf)) {
-  $total_pages_sql = $conn->query("SELECT 
-  t1.*, t2.bodystyle
-  FROM
-    `team`.`rates_combined_terse` AS t1
-  INNER JOIN
-  `team`.`vehicles` AS t2
-  ON t1.cap_id = t2.cap_id
-  WHERE
-    t1.lcv = '0'
-        AND t1.special = 1 
-        AND t2.bodystyle LIKE '%" . $bodystyle . "%'
-  GROUP BY t1.cap_id");
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1");
   $total_rows = $total_pages_sql->fetch_row();
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   // $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `manufacturer` = '" . $manuf . "' AND `model` LIKE '%" . $mod . "%' AND `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
