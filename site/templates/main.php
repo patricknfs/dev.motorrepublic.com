@@ -6,7 +6,7 @@ require_once '/var/www/vhosts/motorrepublic.com/dev.motorrepublic.com/site/templ
 require_once(MR_PATH . "/inc/conn.php");
 print_r($_GET);
 if($page->id !== 1043){
-  include "power_search_2.php";
+  include "power_search.php";
 }
 ?>
 <!DOCTYPE html>
