@@ -125,6 +125,7 @@ if(!empty($manuf)) {
   // echo $query;
 }
 elseif(!empty($bodystyle)) {
+<<<<<<< HEAD
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM
   `team`.`rates_combined_terse` AS t1
 INNER JOIN
@@ -136,6 +137,9 @@ WHERE
       AND t2.bodystyle LIKE '%" . $bodystyle . "%'
 GROUP BY t1.cap_id
 ORDER BY t1.special DESC , t1.rental ASC");
+=======
+  $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `bodystyle` LIKE '%" . $bodystyle . "%'  AND `lcv` = '0' AND `special` = 1");
+>>>>>>> parent of dac27349... styling selects
   $total_rows = $total_pages_sql->fetch_row();
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   $query = "SELECT 
