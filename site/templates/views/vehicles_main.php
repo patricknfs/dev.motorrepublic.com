@@ -1,12 +1,12 @@
 <section id="vehicles">
 	<div class="grid-container">
-		<!-- <div class="grid-x">
+		<div class="grid-x">
 			<div class="cell small-12">
 				<div class="text-center">
 					<?=$form_out?>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<div class="grid-x align-center">
 			<nav aria-label="Pagination">
 				<ul class="pagination text-center">
