@@ -83,7 +83,7 @@ if($input->get->bodystyle)
   WHERE
     t1.lcv = '0'
         AND t1.special = 1 
-        AND t2.bodystyle LIKE '%" . $bodystyle . "%'
+        AND t2.bodystyle LIKE '%" . $bodystyles . "%'
   GROUP BY t1.cap_id";
   echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
