@@ -83,7 +83,7 @@ if($input->get->bodystyle)
   WHERE
         t1.lcv = '0'
         AND t1.special = 1 
-        AND t2.bodystyle LIKE '%" . $bodystyle . "%'
+        AND t2.bodystyle LIKE '%" . $bodystyles . "%'
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
   LIMIT $offset, $no_of_records_per_page";
