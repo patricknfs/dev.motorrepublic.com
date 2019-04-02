@@ -54,7 +54,7 @@ if($input->get->model)
 {
   $mods = $sanitizer->text($input->get->model);
   $query_mod = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $mods . "' LIMIT 1";
-  echo $query_mod;
+  // echo $query_mod;
   if ($result_mod = $conn->query($query_mod)) 
   {
     while ($row_mod = $result_mod->fetch_assoc()) 
