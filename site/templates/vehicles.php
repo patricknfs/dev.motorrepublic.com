@@ -73,7 +73,7 @@ else
 if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
-  $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' AND `parent_id` = '" . $manufs . "' LIMIT 1";
+  $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' AND `parent_id` = '" . $manufs . "'";
   echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
   {
