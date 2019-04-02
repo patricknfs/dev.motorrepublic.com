@@ -73,7 +73,20 @@ else
 if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
-  $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `bodystyles` = '" . $bodystyles . "' AND `parent_id` = '" . $manufs . "' LIMIT 1";
+  $query_bs = "SELECT 
+  t1.*, t2.bodystyle
+  FROM
+    `team`.`rates_combined_terse` AS t1
+  INNER JOIN
+  `team`.`vehicles` AS t2
+  ON t1.cap_id = t2.cap_id
+  WHERE
+        t1.lcv = '0'
+        AND t1.special = 1 
+        AND t2.bodystyle LIKE '%" . $bodystyle . "%'
+  GROUP BY t1.cap_id
+  ORDER BY t1.special DESC , t1.rental ASC
+  LIMIT $offset, $no_of_records_per_page";
   echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
   {
