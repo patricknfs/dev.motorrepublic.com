@@ -70,7 +70,7 @@ else
   $mod = $sanitizer->text($input->get->model);
 }
 
-if($input->get->bodystyle && $manufs)
+if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
   $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' AND `parent_id` = '" . $manufs . "' LIMIT 1";
