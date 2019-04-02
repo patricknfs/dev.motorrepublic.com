@@ -39,10 +39,11 @@ ob_start();
     <div class="cell small-12 medium-2">
       <select id="bodystyle" name="bodystyle">
         <option value="">Select Body Style</option>
-        <option value="Saloon">Saloon</option>
         <option value="Coupe">Coupe</option>
         <option value="Estate">Estate</option>
         <option value="Hatchback">Hatchback</option>
+        <option value="MPV">MPV</option>
+        <option value="Saloon">Saloon</option>
 
       </select>
     </div>
