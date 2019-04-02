@@ -143,7 +143,7 @@ elseif(!empty($bodystyle)) {
         AND t2.bodystyle LIKE '%" . $bodystyle . "%'
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
-  LIMIT $offset, $no_of_records_per_page";";
+  LIMIT $offset, $no_of_records_per_page";
   echo $query;
 }
 else {
