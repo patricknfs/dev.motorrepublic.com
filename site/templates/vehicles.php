@@ -85,13 +85,13 @@ if($input->get->bodystyle)
         AND t1.special = 1 
         AND t2.bodystyle LIKE '%" . $bodystyles . "%'
   GROUP BY t1.cap_id";
-  echo $query_bs;
+  // echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
   {
     while ($row_bs = $result_bs->fetch_assoc()) 
     {
       $bodystyle = $row_bs["bodystyle"];
-      echo "bodystyle is: " . $bodystyle;
+      // echo "bodystyle is: " . $bodystyle;
     }
     $result_bs->free();
   }
@@ -122,7 +122,7 @@ if(!empty($manuf)) {
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
   LIMIT $offset, $no_of_records_per_page";
-  echo $query;
+  // echo $query;
 }
 elseif(!empty($bodystyle)) {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM
@@ -152,14 +152,14 @@ ORDER BY t1.special DESC , t1.rental ASC");
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
   LIMIT $offset, $no_of_records_per_page";
-  echo $query;
+  // echo $query;
 }
 else {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1");
   $total_rows = $total_pages_sql->fetch_row();
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
-  echo $query;
+  // echo $query
 }
 // echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
