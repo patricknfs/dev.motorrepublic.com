@@ -1,5 +1,4 @@
 <?php
-$form_out = '';
 // power_search.php
 date_default_timezone_set('CET');
 
