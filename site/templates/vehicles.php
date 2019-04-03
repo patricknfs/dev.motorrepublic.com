@@ -142,7 +142,7 @@ ORDER BY t1.special DESC , t1.rental ASC");
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
   LIMIT $offset, $no_of_records_per_page";
-  echo $query;
+  echo "bodystyle query is:" . $query;
 }
 else {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1");
