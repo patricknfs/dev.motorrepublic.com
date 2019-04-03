@@ -73,6 +73,7 @@ else
 if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
+  echo "bodystyles is: " . $bodystyles;
   $query_bs = "SELECT 
   t1.*, t2.bodystyle
   FROM
