@@ -124,7 +124,7 @@ if($page->id !== 1043){
     <script>
     $(document).ready(function(){
 
-      load_json_data('marque');
+      load_json_data('manufacturer');
 
       function load_json_data(id, parent_id)
       {
@@ -132,7 +132,7 @@ if($page->id !== 1043){
         $.getJSON('<?=$config->urls->templates?>vehicle.json', function(data){
           html_code += '<option value="">'+id+'</option>';
           $.each(data, function(key, value){
-            if(id == 'marque')
+            if(id == 'manufacturer')
             {
               if(value.parent_id == '0')
               {
@@ -158,7 +158,7 @@ if($page->id !== 1043){
         });
       }
 
-      $(document).on('change', '#marque', function(){
+      $(document).on('change', '#manufacturer', function(){
         var marque_id = $(this).val();
         // document.write(marque_id);
         if(marque_id != '')
@@ -171,7 +171,7 @@ if($page->id !== 1043){
         }
       });
 
-      $(document).on('change', '#marque', function(){
+      $(document).on('change', '#manufacturer', function(){
         var marque_id = $(this).val();
         if(marque_id != '')
         {

@@ -29,9 +29,9 @@ if ($page->marque->title != ''){
   $manuf = strtoupper($page->marque->title);
 }
 else {
-  if($input->get->marque)
+  if($input->get->manufacturer)
   {
-    $manufs = $sanitizer->text($input->get->marque);
+    $manufs = $sanitizer->text($input->get->manufacturer);
     $query_man = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $manufs . "' LIMIT 1";
     // echo $query_man;
     if ($result = $conn->query($query_man)) 

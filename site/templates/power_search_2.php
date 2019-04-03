@@ -27,7 +27,7 @@ ob_start();
       </select>
     </div> -->
     <div class="cell small-12 medium-2 custom-select" width="200px">
-      <select id="marque" name="marque">
+      <select id="manufacturer" name="manufacturer">
         <option value="">Manufacturer</option>
       </select>
     </div>
