@@ -115,7 +115,7 @@ if(!empty($manuf)) {
   LIMIT $offset, $no_of_records_per_page";
   echo "manuf query is: " . $query;
 }
-elseif(!empty($bodystyle)) {
+elseif(!empty($bodystyles)) {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM
   `team`.`rates_combined_terse` AS t1
 INNER JOIN
@@ -124,7 +124,7 @@ ON t1.cap_id = t2.cap_id
 WHERE
   t1.lcv = '0'
       AND t1.special = 1 
-      AND t2.bodystyle LIKE '%" . $bodystyle . "%'
+      AND t2.bodystyle LIKE '%" . $bodystyles . "%'
 GROUP BY t1.cap_id
 ORDER BY t1.special DESC , t1.rental ASC");
   $total_rows = $total_pages_sql->fetch_row();
