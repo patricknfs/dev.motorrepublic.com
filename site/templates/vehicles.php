@@ -112,7 +112,7 @@ if(!empty($manuf)) {
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
   LIMIT $offset, $no_of_records_per_page";
-  // echo $query;
+  echo "manuf query is: " . $query;
 }
 elseif(!empty($bodystyle)) {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM
