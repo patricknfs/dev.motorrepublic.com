@@ -65,6 +65,7 @@
 				<ul>
 			</nav>
 		</div>
+		<div class="grid-container">
 		<div class="grid-x grid-padding-x small-up-1 medium-up-3">
 			<?php
 			if($total_rows > 0){
