@@ -150,7 +150,7 @@ else {
   $total_rows = $total_pages_sql->fetch_row();
   $total_pages = ceil($total_rows[0] / $no_of_records_per_page);
   $query = "SELECT `id`,`cap_id`,`cap_code`,`src`,`manufacturer`,`model`,`descr`,`term`,`mileage`, `rental`,`vehicle_list_price`,`vehicle_otr_price`,`p11d_price`,`CO2`, `lcv`, `special`, `biz_only` FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1 GROUP BY `cap_id` ORDER BY `special` DESC, `rental` ASC LIMIT $offset, $no_of_records_per_page";
-  echo "else query is: " . $query
+  echo "else query is: " . $query;
 }
 // echo $query;
 $result = $conn->query($query) or die(mysqli_error($conn));
