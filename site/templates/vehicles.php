@@ -73,7 +73,7 @@ else
 if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
-  echo "bodystyles is: " . $bodystyles;
+  // echo "bodystyles is: " . $bodystyles;
   $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' LIMIT 1";
   // echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
@@ -81,7 +81,7 @@ if($input->get->bodystyle)
     while ($row_bs = $result_bs->fetch_assoc()) 
     {
       $bodystyle = $row_bs["name"];
-      echo "bodystyle is: " . $bodystyle;
+      // echo "bodystyle is: " . $bodystyle;
     }
     $result_bs->free();
   }
@@ -142,7 +142,7 @@ ORDER BY t1.special DESC , t1.rental ASC");
   GROUP BY t1.cap_id
   ORDER BY t1.special DESC , t1.rental ASC
   LIMIT $offset, $no_of_records_per_page";
-  // echo $query;
+  echo $query;
 }
 else {
   $total_pages_sql = $conn->query("SELECT COUNT(*) FROM `team`.`rates_combined_terse` WHERE `lcv` = '0' AND `special` = 1");
