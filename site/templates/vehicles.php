@@ -74,25 +74,14 @@ if($input->get->bodystyle)
 {
   $bodystyles = $sanitizer->text($input->get->bodystyle);
   echo "bodystyles is: " . $bodystyles;
-  $query_bs = "SELECT 
-  t1.*, t2.bodystyle
-  FROM
-    `team`.`rates_combined_terse` AS t1
-  INNER JOIN
-  `team`.`vehicles` AS t2
-  ON t1.cap_id = t2.cap_id
-  WHERE
-    t1.lcv = '0'
-        AND t1.special = 1 
-        AND t2.bodystyle LIKE '%" . $bodystyles . "%'
-  GROUP BY t1.cap_id";
+  $query_bs = "SELECT `name` FROM team.vehicle_json WHERE `json_id` = '" . $bodystyles . "' LIMIT 1";
   // echo $query_bs;
   if ($result_bs = $conn->query($query_bs)) 
   {
     while ($row_bs = $result_bs->fetch_assoc()) 
     {
       $bodystyle = $row_bs["bodystyle"];
-      // echo "bodystyle is: " . $bodystyle;
+      echo "bodystyle is: " . $bodystyle;
     }
     $result_bs->free();
   }
