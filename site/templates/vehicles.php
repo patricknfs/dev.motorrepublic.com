@@ -80,7 +80,7 @@ if($input->get->bodystyle)
   {
     while ($row_bs = $result_bs->fetch_assoc()) 
     {
-      $bodystyle = $row_bs["bodystyle"];
+      $bodystyle = $row_bs["name"];
       echo "bodystyle is: " . $bodystyle;
     }
     $result_bs->free();
