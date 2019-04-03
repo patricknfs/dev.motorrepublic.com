@@ -130,7 +130,8 @@ if($page->id !== 1043){
       {
         var html_code = '';
         $.getJSON('<?=$config->urls->templates?>vehicle.json', function(data){
-          html_code += '<option value="">'+id+'</option>';
+          html_code += '<option value="">'+id.charAt(0).toUpperCase() + id.slice(1)+'</option>';
+          // name.charAt(0).toUpperCase() + name.slice(1)
           $.each(data, function(key, value){
             if(id == 'manufacturer')
             {
